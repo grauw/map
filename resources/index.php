@@ -56,7 +56,7 @@
 	  <li class="map"><a href="/resources/z80instr.php">Z80 instruction set overview</a></li>
       <li><a href="http://www.zilog.com/docs/z80/um0080.pdf">ZiLOG Z80 user's manual</a></li>
       <li><a href="http://www.myquest.nl/z80undocumented/z80-documented.pdf">The Undocumented Z80 Documented</a> · by Sean Young (now maintained by Jan Wilmans)</li>
-      <li><a href="http://www.funet.fi/pub/msx/mirrors/msx2.com/zaks/index-nf.htm">Programming the Z80</a> · by Rodnay Zaks (book, partially)</li>
+      <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/zaks/index-nf.htm">Programming the Z80</a> · by Rodnay Zaks (book, partially)</li>
       </ul>
     </li>
     <li id="z180">Z180
@@ -77,26 +77,26 @@
     <ul>
     <li id="tms9918">TMS9918A / TMS9928A / MSX1 VDP
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/video/texasinstruments_tms9918.pdf">Texas Instruments TMS9918A application manual</a></li>
+      <li><a href="/resources/video/texasinstruments_tms9918.pdf">Texas Instruments TMS9918A application manual</a></li>
       </ul>
     </li>
     <li id="v9938">v9938 / MSX2 VDP
       <ul>
       <li class="map"><a href="/resources/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(work in progress)</em></li>
-      <li><a href="http://ftp.funet.fi/pub/msx/docs/datasheets/v9938.pdf">Yamaha v9938 Application Manual</a></li>
+      <li><a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">Yamaha v9938 Application Manual</a></li>
       </ul>
     </li>
     <li id="v9958">v9958 / MSX2+ / turboR VDP
       <ul>
       <li class="map">Yamaha v9958 Application Manual · transscribed <em>(work in progress)</em></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/video/yamaha_v9958.pdf">Yamaha v9958 Application Manual</a></li>
+      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha v9958 Application Manual</a></li>
       </ul>
     </li>
     <li id="v9990">v9990 / Graphics9000 (by Sunrise)
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/video/yamaha_v9990.pdf">Yamaha v9990 application manual</a></li>
+      <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha v9990 application manual</a></li>
       <li><a href="http://msxbanzai.tni.nl/v9990/manual.html">Yamaha V9990 E-VDP-III Programmers Manual</a> · by MSX Banzai! (unofficial)</li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/video/v9manual.pdf">Sunrise Video9000 application manual</a></li>
+      <li><a href="/resources/video/v9manual.pdf">Sunrise Video9000 application manual</a></li>
       </ul>
     </li>
     </ul>
@@ -105,8 +105,8 @@
     <ul>
     <li id="psg">AY3-8910 / PSG (MSX standard)
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG)</a> (PSG clone)</li>
+      <li><a href="/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG)</a> (PSG clone)</li>
       </ul>
     </li>
     <li id="scc">SCC (custom sound chip by Konami)
@@ -118,22 +118,22 @@
     <li id="opll">OPLL / MSX-Music / FM-PAC (MSX turboR standard)
       <ul>
       <li><a href="http://www.smspower.org/maxim/forumstuff/ym2413am/">Yamaha YM2413 (OPLL) application manual</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
       <li>Yamaha YM2413B (OPLL) datasheet</li>
       </ul>
     </li>
     <li id="opl1">OPL1 / MSX-Audio / Music Module
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
+      <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
       </ul>
     </li>
     <li id="opl4">OPL4 / MoonSound (by Sunrise)
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_opl4.pdf">Yamaha OPL4 application manual</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_ymf278b.pdf">Yamaha OPL4 datasheet</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha OPL4 application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha OPL4 datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>
     <li id="dd_snd_other">Other
@@ -146,8 +146,8 @@
   </li>
   <li id="msxengine">MSX Engine
     <ul>
-    <li><a href="http://www.xs4all.nl/~ronholst/map/resources/engine/yamaha_s3527.pdf">Yamaha S3527 MSX-System application manual</a> (Japanese)</li>
-    <li><a href="http://www.xs4all.nl/~ronholst/map/resources/engine/yamaha_s1985.pdf">Yamaha S1985 MSX-System II application manual</a></li>
+    <li><a href="/resources/engine/yamaha_s3527.pdf">Yamaha S3527 MSX-System application manual</a> (Japanese)</li>
+    <li><a href="/resources/engine/yamaha_s1985.pdf">Yamaha S1985 MSX-System II application manual</a></li>
     <li>T9769B · engine of several MSX2+ computers</li>
 	  <ul>
 	  <li class="map"><a href="/resources/engine/t9769b/">T9769B general notes</a></li>
@@ -158,11 +158,11 @@
   </li>
   <li id="diskctl">Disk controllers
     <ul>
-    <li><a href="http://www.xs4all.nl/~ronholst/map/resources/disk/westerndigital_wd279x02.pdf">Western Digital WD2793-02 FDC</a> · used in most MSX2's</li>
-    <li><a href="http://www.xs4all.nl/~ronholst/map/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a>  · used in Panasonic MSX computers</li>
+    <li><a href="/resources/disk/westerndigital_wd279x02.pdf">Western Digital WD2793-02 FDC</a> · used in most MSX2's</li>
+    <li><a href="/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a>  · used in Panasonic MSX computers</li>
     <li><a href="/viewer.php?f=/resources/disk/IDETECH.TXT">Sunrise IDE interface technical information</a> · 17/11/1998 version <i>(<a href="/resources/disk/IDETECH.TXT">plain text</a>)</i></li>
     <li><a href="/viewer.php?f=/resources/disk/IDESYS.TXT">Sunrise IDE interface technical system documentation</a> · 26/07/2000 version <i>(<a href="/resources/disk/IDESYS.TXT">plain text</a>)</i></li>
-    <li><a href="http://www.xs4all.nl/~ronholst/map/resources/disk/novaxis-scsi.pdf">Novaxis SCSI interface manual</a></li>
+    <li><a href="/resources/disk/novaxis-scsi.pdf">Novaxis SCSI interface manual</a></li>
     </ul>
   </li>
   <li id="communication">Communication
@@ -180,13 +180,13 @@
     <li id="ppi">PPI / i8255 / Programmable Peripheral Interface
       <ul>
       <li>Note: doesn't seem to apply to MSX directly. Will write a better doc someday.</li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/ppi/intel_82c55a.pdf">Intel 82C55A CHMOS PPI</a></li>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/ppi/chipsi8255.pdf">i8255 introduction</a></li>
+      <li><a href="/resources/ppi/intel_82c55a.pdf">Intel 82C55A CHMOS PPI</a></li>
+      <li><a href="/resources/ppi/chipsi8255.pdf">i8255 introduction</a></li>
       </ul>
     </li>
     <li id="rtc">RTC / MSX2 Clock Chip
       <ul>
-      <li><a href="http://www.xs4all.nl/~ronholst/map/resources/rtc/ricoh_rp5c01.pdf">Ricoh RP/RF5C01A application manual</a></li>
+      <li><a href="/resources/rtc/ricoh_rp5c01.pdf">Ricoh RP/RF5C01A application manual</a></li>
       </ul>
     </li>
     </ul>

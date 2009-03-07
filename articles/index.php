@@ -88,7 +88,7 @@
   </li>
   <li id="ext_marmsx">MARMSX (<a href="http://www.marmsx.cjb.net/">link</a>)
     <ul>
-	<li><a href="http://www.geocities.com/marmsx/marmsx/19268/english.html">19268 colors on MSX 2+</a></li>
+	<li><a href="http://www.eng.uerj.br/~marcelo/msx/artigos/sc12en.pdf">19268 colors on MSX 2+</a></li>
     </ul>
   </li>
   </ul>

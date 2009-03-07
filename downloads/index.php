@@ -64,7 +64,7 @@
     <ul>
     <li id="gfx_editors">Editors
       <ul>
-      <li><a href="http://grauw.blehq.org/download/dd-graph.lzh">DD-Graph (AGE)</a> &middot; <i>(<a href="http://grauw.blehq.org/download/dd-graph.html">description</a>)</i></li>
+      <li><a href="http://datax.grauw.nl/download/dd-graph.lzh">DD-Graph (AGE)</a> &middot; <i>(<a href="http://datax.grauw.nl/download/dd-graph.html">description</a>)</i></li>
       </ul>
     </li>
     <li id="gfx_viewers">Viewers

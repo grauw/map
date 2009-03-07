@@ -48,7 +48,7 @@ Added info about the #6F register for the Gfx9000’s v7040 chip (<a href="/reso
 </div>
 
 
-<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the ultimate source of information for the <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or programmer-to-be. The main target is assembly language, because that’s what the maintainers’ preferred programming language is, but most information will be useful to users of other languages as well. The MAP is currently maintained by <a href="http://www.tni.nl/"><abbr title="The New Image">TNI</abbr></a> members <a href="/main/about/grauw.php">Grauw</a>, <a href="/main/about/bifi.php">BiFi</a> and GuyveR800.</p>
+<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the ultimate source of information for the <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or programmer-to-be. The main target is assembly language, because that’s what the maintainers’ preferred programming language is, but most information will be useful to users of other languages as well. The MAP is currently maintained by <a href="/main/about/grauw.php">Grauw</a>, <a href="/main/about/bifi.php">BiFi</a> and GuyveR800.</p>
 
 
 <h2>Where to start</h2>
@@ -73,9 +73,9 @@ The <a href="/articles.php">Articles</a> section contains several articles about
 
 <h2>Comments / Submit</h2>
 
-<p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well, preferrably in clean <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> Strict layout because that will save us some time. For more details, just take a look at the source of one of the pages.</p>
+<p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <em>map&#64;tni.nl</em>.</p>
 
-<p>And if you feel like you could contribute something more to this site, like write articles about a certain subject on a more regular base, or digitize some documents, we’d really appreciate it. You can email us at <em>map&#64;tni.nl</em>.</p>
+<p>If you want to contribute more directly to the map, like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it. The <a href="/main/contributing.php">Contributing</a> page explains how to get started with the source code.</p>
 
 
 <br />

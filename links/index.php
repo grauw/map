@@ -76,15 +76,6 @@
   </li>
   </ul>
 </li>
-<li id="special">Special mention
-  <ul>
-  <li>We are hosted by:
-    <ul>
-    <li><a href="http://www.tni.nl/">tni.nl</a></li>
-    </ul>
-  </li>
-  </ul>
-</li>
 </ul>
 
 

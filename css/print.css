@@ -1,0 +1,8 @@
+/* Remove menu from printed page */
+
+#menu {	display: none !important; }
+
+.toc a:link, .toc a:active, .toc a:visited, .toc a:hover {
+	color: black;
+	underline: none;
+}

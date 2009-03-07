@@ -1,0 +1,274 @@
+;==============================================================================
+; Joystick network cable tester
+;
+; V0.1 - Aug 1998
+; Maarten ter Huurne (Kryten/Mayhem)
+; mth@stack.nl
+;
+; Code is not optimized at all, this way it's easyer to read.
+
+
+PORT:	equ	0	;joystick port (0/1)
+
+; System routines:
+BDOS:	equ	#F37D
+
+; BDOS function IDs:
+BDOS_CONOUT:	equ	#02
+BDOS_STROUT:	equ	#09
+
+	org	#C000
+
+BIN_START:
+BIN_EXEC:
+
+;==============================================================================
+; Main routine.
+
+main:
+	ld	hl,TextWelcome
+	call	printString
+
+	; check no signal
+	ld	a,%0000 0111
+	ld	c,PORT
+	call	check
+
+	; check D0
+	ld	a,%0000 0110
+	ld	c,PORT
+	call	check
+
+	; check D1
+	ld	a,%0000 0101
+	ld	c,PORT
+	call	check
+
+	; check ACK
+	ld	a,%0000 0011
+	ld	c,PORT
+	call	check
+
+	ret
+
+TextWelcome:
+	db	#0D,#0A
+	db	"Joystick network cable tester V0.1",#0D,#0A
+	db	"Maarten ter Huurne (Kryten/Mayhem)",#0D,#0A
+	db	#0D,#0A
+	db	"Testing feedback loop in port 1...",#0D,#0A
+	db	#0D,#0A
+	db	"$"
+
+;==============================================================================
+; Check cable with data pattern.
+; Check is performed by first writing the pattern and then reading it back.
+; Results of check are printed to the screen.
+;
+; In:  A = data (bit7-3=0 bit2=ACK, bit1=D1, bit0=D0)
+;      C = port (0/1)
+
+check:
+	push	bc	;port
+	; encode port in bit4 of data
+	bit	1,c
+	jr	z,check_skip
+	set	4,a
+check_skip:
+
+	; print what data will be written
+	push	af	;port + data
+	ld	hl,TextWriting
+	call	printString
+	pop	af	;port + data
+	push	af
+	call	printData
+	ld	hl,TextNewline
+	call	printString
+
+	; interrupts must be off, because BIOS interrupt routine
+	; tampers with joystick output bits
+	di
+
+	; write data
+	pop	af	;port + data
+	call	write
+
+	; wait a while
+	call	wait
+
+	; read data
+	pop	bc
+	ld	a,c	;port
+	call	read
+	push	af
+
+	; I/O done, interrupts can come back now
+	ei
+
+	; print data that was read
+	ld	hl,TextReading
+	call	printString
+	pop	af	;data
+	call	printData
+	ld	hl,TextNewline
+	call	printString
+
+	; end of check
+	ld	hl,TextNewline
+	call	printString
+	ret
+
+TextWriting:	db	"Writing:","$"
+TextReading:	db	"Reading:","$"
+TextNewline:	db	#0D,#0A,"$"
+
+;==============================================================================
+; Print string like this: " ACK=? D1=? D0=?".
+;
+; In:  A = data (bit2=ACK, bit1=D1, bit0=D0)
+
+printData:
+	push	af
+
+	ld	hl,TextAck
+	call	printString
+	pop	af
+	push	af
+	and	%0000 0100
+	call	printBit
+
+	ld	hl,TextD1
+	call	printString
+	pop	af
+	push	af
+	and	%0000 0010
+	call	printBit
+
+	ld	hl,TextD0
+	call	printString
+	pop	af
+	and	%0000 0001
+	call	printBit
+
+	ret
+
+TextAck:	db	"  ACK = ","$"
+TextD1:	db	"  D1 = ","$"
+TextD0:	db	"  D0 = ","$"
+
+;==============================================================================
+; Print "$"-terminated string.
+;
+; In:  HL = pointer to string
+
+printString:
+	ex	de,hl
+	ld	c,BDOS_STROUT
+	jp	BDOS
+
+;==============================================================================
+; Print bit string.
+; If A=0 then "0" is printed, if A<>0 then "1" is printed.
+;
+; In:  A = data (see description)
+
+printBit:
+	or	a
+	ld	e,"0"
+	jr	z,printBit_skip
+	ld	e,"1"
+printBit_skip:
+	ld	c,BDOS_CONOUT
+	jp	BDOS
+
+;==============================================================================
+; Write data.
+;
+; In:   A = data (bit3=port, bit2=ACK, bit1=D1, bit0=D0)
+; Out:  -
+
+write:
+	; calculate address in table
+	ld	c,a
+	ld	b,0
+	ld	hl,WriteTab
+	add	hl,bc
+
+	ld	a,15
+	out	(#A0),a
+	in	a,(#A2)
+	and	%1100 0000	;save upper 2 bits
+	or	(hl)	;mix with value from table
+	out	(#A1),a
+	ret
+
+WriteTab:
+	db	%0010 1100	;port=0 ACK=0 D1=0 D0=0
+	db	%0010 1101	;port=0 ACK=0 D1=0 D0=1
+	db	%0010 1110	;port=0 ACK=0 D1=1 D0=0
+	db	%0010 1111	;port=0 ACK=0 D1=1 D0=1
+	db	%0011 1100	;port=0 ACK=1 D1=0 D0=0
+	db	%0011 1101	;port=0 ACK=1 D1=0 D0=1
+	db	%0011 1110	;port=0 ACK=1 D1=1 D0=0
+	db	%0011 1111	;port=0 ACK=1 D1=1 D0=1
+	db	%0001 0011	;port=1 ACK=0 D1=0 D0=0
+	db	%0001 0111	;port=1 ACK=0 D1=0 D0=1
+	db	%0001 1011	;port=1 ACK=0 D1=1 D0=0
+	db	%0001 1111	;port=1 ACK=0 D1=1 D0=1
+	db	%0011 0011	;port=1 ACK=1 D1=0 D0=0
+	db	%0011 0111	;port=1 ACK=1 D1=0 D0=1
+	db	%0011 1011	;port=1 ACK=1 D1=1 D0=0
+	db	%0011 1111	;port=1 ACK=1 D1=1 D0=1
+
+
+;==============================================================================
+; Read data.
+;
+; In:  A = port (0/1)
+; Out: A = data (bit2=ACK, bit1=D1, bit0=D0)
+
+read:
+	or	a
+	ld	c,%0000 0000	;port0
+	jr	z,read_skip
+	ld	c,%0100 0000	;port1
+read_skip:
+
+	; set port
+	ld	a,15
+	out	(#A0),a
+	in	a,(#A2)
+	and	%1011 1111
+	or	c
+	out	(#A1),a
+
+	; read value
+	ld	a,14
+	out	(#A0),a
+	in	a,(#A2)
+	and	%0000 0111
+	ret
+
+;==============================================================================
+; Wait some time.
+; Gives the cable and the joystick logic enough time to propagate the signal.
+; The wait length is probably way too much, but speed is not an issue now.
+;
+; In:  -
+; Out: -
+
+wait:
+	xor	a
+wait_lp:
+	inc	a
+	jr	nz,wait_lp
+
+	ret
+
+;==============================================================================
+
+BIN_END:
+	nop
+	end
+

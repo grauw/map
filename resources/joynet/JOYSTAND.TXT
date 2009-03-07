@@ -1,0 +1,100 @@
+Een STANDAARD voor JOYSTICK-COMMUNICATIE...
+===========================================
+
+  Op de MSX-mailinglist was er een discussie gaande over hoe 
+je kon communiceren tussen twee MSX'en en een MSX en een PC. 
+Hierbij ging  het er  ook over dat een multiplayer-mogelijkú 
+heid  op twee  verschillende MSX'en ook verschrikkelijk leuk 
+is. Daarvoor kan de Joystick-poort het best gebruikt worden, 
+alleen is  daarvoor tot  nog toe  nog geen 'standaard' voor, 
+waardoor  je op  een gegeven  moment met  een heleboel  verú 
+schillende kabels  komt te  zitten die elk ook nog eens geld 
+kosten.
+
+  Nu heb ik een soort 'standaard' bedacht, die ik verder zal 
+gaan  ontwikkelen en  aan iedereen zal doorgeven, dus via de 
+mailinglist,  mijn  homepage  en  (disk)magazines  etcetera. 
+Alles inclusief  schema's, uitleg  en een  universele driver 
+dus voor iedereen makkelijk te gebruiken. Deze is dan bruikú 
+baar voor spelletjes maar ook wanneer je data wilt overbrenú 
+gen  naar andere MSX'en of misschien zelfs wel om de ene MSX 
+met de andere te besturen (alhoewel k dat niet ga maken).
+
+  Als  je enige idee‰n of verbeteringen kan bedenken, of mij 
+de schema's  van andere  joystick-link-connectors kan geven, 
+bel, email of stuur dan een kaartje naar mij toe, mijn adres 
+kan je vinden in de colofon.
+
+  Het huidige  plan zendt  de data  over in zes stappen, inú 
+clusief checksum-data.
+
+  Kijk er maar naar en laat me weten of je het hier mee eens 
+bent en bereid dit te 'aanvaarden' als een standaard.
+
+
+Mijn idee was om de poorten z¢ met elkaar te verbinden:
+=======================================================
+pin 6 : 1   (trig1 > fwd)
+pin 7 : 2   (trig2 > back)
+pin 8 : 3   (output > left)
+
+
+  En  dit is de manier waarop de joystick-verbinding dan zou 
+moeten  werken...  Beide computers  moeten dezelfde  routine 
+gebruiken:
+=====================
+Data
+- input: pins 1 and 2 (2=MSb)
+- output: pins 6 and 7 (7=MSb)
+- Transfer Ready (TR) input=pin 3  /  TR output=pin 8
+- RQ=set pin 7 als je een byte wilt verzenden.
+- Checksum (parity):  standaard vlag  van de  Z80. Wordt geú 
+  bruikt als  een checksum  om te  testen of alle bytes goed 
+  zijn  doorgezonden. Als het aantal enen in het byte oneven 
+  is,  dan zal  de P-vlag  0 zijn. Is het aantal bytes even, 
+  dan zal de Parity 1 worden.
+
+=== Hoofd 'routine'.
+Initialisatie
+- Test  of er twee computers zijn aangesloten en zo ja, maak 
+  dan een  verbinding en laat de computers onderling beslisú 
+  sen welke de master is en welke de slave.
+
+=== Loop  dit totdat er geen bytes om te verzenden / ontvanú
+=== gen meer over zijn.
+Wacht op de Transfer Ready-vlag en lees de status-bytes.
+- Complementeer het bit TR-output en stel het RQ-bit en (als 
+  RQ is geset) het Checksum-bit in.
+- Wacht  totdat  de TR-input  ook wordt  gecomplementeerd en 
+  lees RQ en het checksum in.
+
+- Als  RQ input=1 lees dan een byte in. Als RQ output=1 zend 
+- dan  een byte.  Als beide computers RQ hebben geset mag de 
+- 'master' het eerst zenden.
+
+:Zend een byte...
+:- Zend 2 bits van het byte en complementeer TR-output.
+:- Wacht totdat TR-input zijn complement wordt.
+:- Herhaal dit 4 keer.
+:- Wacht totdat TR-input weer wordt gecomplementeerd en test 
+:  vervolgens of  de inputbits erbij 11 zijn. Zo ja, dan was 
+:  er  een checksum-error  en moet  de byte overnieuw worden 
+:  gezonden.
+:
+:<<<--------------------- OF OF OF --------------------->>>
+:
+:Lees een byte...
+:- Wacht totdat TR-input zijn complement wordt.
+:- Lees 2 bits van het byte en complementeer TR-output.
+:- Herhaal dit 4 keer.
+;- Test het byte (AND A gebruikend en het checksum vergelijú 
+;  kend  met het Parity-bit in het F-register). Als het niet 
+;  klopt, zet  dan beide outputbits op 1. Als het klopt, zet 
+;  dan beide outputbits op 0.
+;- Complementeer TR opnieuw
+
+- Loop
+
+
+~Grauw
+

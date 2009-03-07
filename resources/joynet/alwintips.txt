@@ -1,0 +1,87 @@
+Hi all,
+
+For anyone going to make software/drivers/applications using this 
+JoyNet, or any other serial system (I'm not going to, though), I have 
+some tips:
+
+In some UART (Universal Asynchronous Receiver/Transmitter) 
+datasheets, I read something once, that might make such transfer 
+routines a bit more error-proof:
+
+It's about the exact time(s) of sampling the bit values of the main 
+(RxD/TxD) signal. In asynchronous communications, this is based upon 
+a fixed time for a single bit, determined by the baudrate. Common way 
+is, to detect a 1-to-0 or 0-to-1 transition in a 'start bit', then 
+wait 1/2 bit time (or 1 and 1/2, I don't know), and sample the 1st 
+bit (which would then be halfway). Then 1 bit-time later (1 and 1/2, 
+or 2 and a half, bittime after this first detected transition) the 
+next bit, and so on. And last, repeat this for a clearly limited 
+number of bits (like 10-20), after which the start of a new set of 
+bits has to be detected again. This is to avoid having a limited 
+precision in the baudrate (1 % for instance) having an impact on the 
+exact times that bits are sampled.
+
+
+I might imagine, that most MSX programmers might do it that way, and 
+every bit would be read exactly 1 time. I read about an improvement 
+on this: divide the bittime in somewhat smaller slices, say 8 or 16 
+parts, and for each bit, take 3 samples, somewhere in the middle of 
+that bit (timed on the smaller time-slices). For instance at 3/8, 
+4/8, and 5/8 bit-time, or at 7/16, 8/16, and 9/16-th bit-time.
+
+That always gives an odd number of samples. If it's 0, 0, 0: must be 
+zero. If it's 0,0,1: probably zero (same as 0,1,0 or 1,0,0). If it's 
+1,1,0: probably 1 (same as 1,0,1 or 0,1,1). If it's 1,1,1: must be 
+one.
+
+Of course, a bit more trouble for the programmer. But hey, that's why 
+they're there for, to stick their noses into these kinds of trouble. 
+Advantage here is, that every bit doesn't get sampled only once, but 
+3 times, giving you a great commercial slogan as well: "now with 3 
+times digital oversampling included!". The result is an improved 
+in-sensitivity to noise (don't ask me how much), if the bit-signal 
+reads out wrong one time because of such noise, and it reads out 
+right the other 2 times, you still get the correct bit value. Hint: 
+one might expect that many UARTs might use this trick.
+
+
+In any application, I would STRONGLY suggest (call it almost 
+obligated, if you want to make a 'solid' piece of software) using 
+some DECENT type of error-detection mechanism, so that you can 
+re-transfer a data block, if it fails the error checking. For 
+instance a 32-bit CRC (Cyclic Redundancy Check), not something like 
+"adding all bytes, modulo 2^16" for a 16-bit checksum.
+
+When tranferring large amounts of data over cables, there's BOUND to 
+be some errors. If you don't have any error-detection mechanism, or a 
+too simple one, there might well be hundreds of bits be modified, if 
+10s or 100s of MB.'s were transferred. And as computer users, you 
+know that would be too much. So some kind of proper error-detection 
+is really needed for this.
+
+And if it's for transferring data (for instance MSX -> PC), some 
+extra overhead is really a don't care, if you got 50 MB's to 
+transfer, who cares whether that takes 20, or 22 hours or so?
+
+If that time DOES matter (for instance on real-time networkgame 
+applications) then you MIGHT forget it, as long as it wouldn't have 
+too great an impact (for games, this might even introduce a nice 
+'random' element!).
+
+
+And you can include all of these things in a set of standard-routines 
+that go with any JoyNet application, and might be updated any time. 
+An application programmer could just take this standard set of 
+routines, and build his/her application around it, not worrying about 
+the internals of these standard routines. Like with drivers for 
+equipment, you could have updates of these drivers later on, and 
+application software would be easily modified (maybe not even) to 
+include these newer versions, whenever these become available.
+
+And hey, you'll have to put together some of these standard-routines 
+at some time, how are you gonna call this a standard otherwise?
+
+
+
+Alwin Henseler
+

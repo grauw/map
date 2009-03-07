@@ -1,0 +1,252 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+<BASE HREF="http://mercury.spaceports.com/~coreclub/english/joyneten.htm">
+
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (Win95; I) [Netscape]">
+   <meta name="Author" content="Werner Augusto Roder Kai">
+   <meta name="Description" content="Information About Joynet">
+   <meta name="KeyWords" content="information,joynet,standard">
+   <title>MSX Core Club - The JoyNet Standard</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="../img/graycore.gif" nosave>
+
+<center><font size=+4>JoyNet</font>
+<br><font size=+1>The MSX Joystick Network</font>
+<br>
+<hr><font size=+2>General Information</font>
+<p>JoyNet <font size=+0>is the cheapest way to connect two or more MSX
+computers.</font>
+<br><font size=+0>The JoyNet standard is the result of a recent discussion
+in the MSX International Mailing List. Some people that contributed for
+it were: </font><i>Alex Wulms, Jeroen Smael, Laurens Holst, Maarten ter
+Huurne, Maico Arts, Patrick Lina, Sean Young and Werner Augusto Roder Kai
+(me).</i>
+<br><font size=+0>It all started during a thread about "connecting PC-MSX",
+when I posted a message to the mailinglist telling about some interesting
+experiences that me and my brother (<i>Weber Estevan Roder Kai</i>) were
+doing with two MSX computers and a cable built by us to play both games
+"F-16 Fighting Falcon" and "F1 Spirit 3D Special".</font>
+<br><font size=+0>You can use JoyNet to play multi-player games, transfer
+data beetween MSX computers forming a Local Area Network (LAN), or make
+a stunning multi-MSX megademo, with several MSX computers working synchronized
+! Now there is also the possibility of connect an MSX to PC, for transfering
+data or playing JoyNet games with an emulated MSX.</font>
+<br><font size=+0>JoyNet links MSX computers in a ring network. Thus, you
+will need one JoyNet cable to each computer you want to link.</font>
+<br>
+<hr WIDTH="100%"><font size=+2>Hardware:</font>
+<br><b><font size=+1>Standard JoyNet cable for MSX</font></b>
+<br>(to link two or more MSX computers)
+<p><font size=+0>To build your standard JoyNet cable you will need the
+following parts, that surely will not cost you more than US$ 10:</font></center>
+
+<ul>
+<center>
+<li>
+<font size=+0>One DB-9 female connector</font></li></center>
+
+<center>
+<li>
+<font size=+0>One DIN-5 180 female connector</font></li></center>
+
+<center>
+<li>
+<font size=+0>One DIN-5 180 male connector</font></li></center>
+
+<center>
+<li>
+<font size=+0>Eight pieces of flexible insulated thin wire</font></li></center>
+
+<p>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<p><font size=+0>A good length for the cable is 4m, so you will need eight
+pieces of wire with the lenght of 2m each.</font>
+<br><font size=+0>Notice that if you want to link two MSX computers with
+standard JoyNet cables, you will need two cables.</font></center>
+</ul>
+
+<center><pre>SEND (DIN-5 180/m)&nbsp;&nbsp; RECV (DIN-5 180/f)
+1 --------------+&nbsp;&nbsp;&nbsp;&nbsp; +---------------1
+2 ------------+ |&nbsp;&nbsp;&nbsp;&nbsp; | +-------------2
+3 ----------+ | |&nbsp;&nbsp;&nbsp;&nbsp; | | +-----------3
+5 ----------|-|-|-----|-|-|---+-------5
+&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp; |
+&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp; |
+&nbsp;&nbsp;&nbsp; 3 7 6&nbsp;&nbsp;&nbsp;&nbsp; 1 2 8&nbsp;&nbsp; 9
+&nbsp;&nbsp;&nbsp;&nbsp; MSX(DB9 /f)</pre></center>
+
+<center><b><font size=+1>Alternative JoyNet cable for MSX</font></b>
+<br>(to link only two MSX computers)
+<p>If you want to build an alternative cable to link always just two MSX
+computers, you can make a cable like the one used by F1 Spirit 3D Special:</center>
+
+<center><pre>(DB-9 /f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (DB-9 /f)
+1 --------------- 6
+2 --------------- 7
+3 --------------- 8
+6 --------------- 1
+7 --------------- 2
+8 --------------- 3
+9 --------------- 9</pre></center>
+
+<center>But if you can, prefer to build two standard Joynet cables, so
+futurely you will be able to connect more than two MSX computers, for example
+in the MSX meetings and everytime you gather with another MSX users.
+<p><b><font size=+1>Standard JoyNet cable for PC</font></b>
+<br>(to link a PC with one or more MSX computers)
+<p>You can build this cable to connect the MSX joystick port to PC parallel
+port, inserting a PC in a JoyNet network.</center>
+
+<center><pre>SEND (DIN-5 180/m)&nbsp;&nbsp;&nbsp; RECV (DIN-5 180/f)
+1 ---------------+&nbsp;&nbsp;&nbsp; +--------------- 1
+2 -----------+&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; +----------- 2
+3 -------+&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; +------- 3
+5 -------|---|---|----|---|---|----+---5
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |
+&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp; 3&nbsp;&nbsp; 2&nbsp;&nbsp; 13&nbsp; 12&nbsp;&nbsp; 4&nbsp; 18~25
+PC (DB-25 /m)</pre></center>
+
+<center><b><font size=+1>Alternative JoyNet cable for PC</font></b>
+<br>(to link a PC with only one MSX)
+<p>If you have just one PC and one MSX, you can build this:</center>
+
+<center><pre>(DB-9 female)&nbsp;&nbsp; (DB-25 male)
+1 ------------- 2&nbsp;
+2 ------------- 3&nbsp;
+3 ------------- 4&nbsp;
+6 ------------- 13
+7 ------------- 12
+8 ------------- 10
+&nbsp;&nbsp; 9 ------------- 18~25</pre></center>
+
+<center>
+<hr WIDTH="100%"><font size=+2>Software:</font>
+<br><b><font size=+1>F-16 Fighting Falcon (1984)</font></b>
+<p><a href="../img/f16cart.jpg">[cartridge label]</a> - <a href="../img/f16front.jpg">[box
+front]</a> - <a href="../img/f16back.jpg">[box back]</a>
+<br><a href="../img/f16man1.gif">[page 1]</a> - <a href="../img/f16man2.gif">[page
+2]</a> - <a href="../img/f16man3.gif">[page 3]</a> - <a href="../img/f16man4.gif">[page
+4]</a> - <a href="../img/f16man5.gif">[page 5]</a> - <a href="../img/f16man67.gif">[pages
+6 and 7]</a> - <a href="../img/f16man8.gif">[page 8]</a>
+<p><font size=+0>&nbsp;This is a combat flight simulator for MSX 1 presented
+as a 16 Kb ROM cartridge.</font>
+<br><font size=+0>To start the game you must press F1 or F2.</font>
+<br><font size=+0>If you press F1 you select one player game (play against
+computer), and then you can select the level with left and right and space
+(or joystick at port 1).</font>
+<br><font size=+0>If you press F2 you select two players game, to play
+against an human opponent, and then you will need two MSX computers and
+a JoyNet connection at the joystick port 2 of both MSX computers.</font>
+<p><b><font size=+1>Connect (1990)</font></b>
+<p><a href="../lzh/connect1.zip">[download files of disk 1 - 21 kb ]</a>
+- <a href="../lzh/connect2.zip">[download files of disk 2 - 48 kb]</a>
+<p>Connect is a software made to link only two MSX computers. One MSX computer
+works as 'master' and the other as 'slave'. It enables to the 'master'
+computer to acess the disk drives of the 'slave' computer. It was made
+to enlarge the database of a MSX-based BBS from two up to four floppy disks,
+because if you remember, at that time we didn't have HD interfaces for
+MSX. It was made by Ries Vriend. To run 'Connect' you will need a JoyNet
+connection at the joystick port 2 of both MSX computers. But I didn't tested
+it yet because it's all in Dutch... And I can't understand Dutch...
+<p><b><font size=+1>F1 Spirit 3D Special (1991)</font></b>
+<p><font size=+0>This is a formula one (F1) race game for MSX 2+ presented
+in two disks by Konami.</font>
+<br><font size=+0>You can play against computer in just a single race or
+in a complete season, or select the combat mode to play against a human
+opponent.</font>
+<br><font size=+0>To play in "combat mode" you will need two MSX2+ computers
+and a JoyNet connection at the joystick port 2 of both MSX computers.</font>
+<br><a href="../pic/jau98pn.jpg">[picture of people at MSX Ja&uacute; 98+
+meeting playing it in battle mode]</a>
+<p><b><font size=+1>Triplex (199?)</font></b>
+<br>Triplex is a multiplayer Tetris game made for up to 15 players linked
+through the MIDI interface of the Philips Music Module Cartridge (MSX Audio).
+We beg to the programmers to change the communication routines, converting
+it to the JoyNet standard.
+<p><b><font size=+1>Magical Labyrinth (1995)</font></b>
+<br>Magical Labyrinth is a labyrinth game for up to 4 players made by Gigamix.
+It is played in only one MSX with the screen splited into 4 parts, and
+it needs an external hardware called "Ninja Tap Extended" to connect up
+to 4 joysticks multiplexed into only one joystick port. It would be nice
+if the programmers from Gigamix could make a JoyNet version of this game
+for up to 4 MSX computers, but with full screen playing.
+<p><b><font size=+1>Snafu (1998)</font></b>
+<p><font size=+0><a href="../lzh/snafu.zip">Download game with manual in
+English</a> - snafu.zip - 5 Kb</font>
+<p>This is a game like "Tron" or "Laserbikes" made by us. The name "Snafu"
+is because we first knew it from Intellivision.
+<br><font size=+0>We made the first version specially for the MSX JA&Uacute;
+'98 meeting (may 23,24). It was presented working just with two computers,
+originally linked with two cables in both joystick ports, like the ones
+used for F1 Spirit 3D Special. This first version is in BASIC with only
+the communication routines in Assembly. <a href="../pic/joynet1.jpg">[picture]</a></font>
+<br><font size=+0>For the MSX JA&Uacute; '98+ (october 30, november 1,
+2) we made a new version 100% in Assembly (except for the loader in BASIC...),
+and we could test it with 4 MSX computers. <a href="../pic/jau98pp.jpg">[picture]</a></font>
+<br><font size=+0>We repeated the presentation with 4 MSX computers at
+the MSX Ja&uacute; 99 meeting </font><a href="../pic/jau99-29.jpg">[picture]</a><font size=+0>,
+and at the ExpoSAlt 2000 meeting we presented the game with 3 MSX computers.
+[picture]</font>
+<br><font size=+0>Both versions support from 2 up to 14 MSX computers,
+and only work in MSX computers with 3.58 Mhz clock.</font>
+<br>
+<hr WIDTH="100%">
+<br><b><font size=+1>Joywave (1999)</font></b>
+<p><font size=+0><a href="http://www.lsi.usp.br/~ricardo/msx/JOYWAVE.ZIP">[Download]</a>
+- joywave.zip - 30 Kb</font>
+<p>If you want to play big ".WAV" files on your MSX Turbo-R, but you don't
+have a hard disk, then this program is for you.
+<br>Using JoyWave, you can load a ".WAV" file directly from a PC connected
+to your MSX through a Joynet cable.
+<br>Made by Ricardo Bittencourt, the author of <a href="http://www.lsi.usp.br/~ricardo/brmsx.htm">BRMSX</a>.
+<br>
+<hr WIDTH="100%"><font size=+2>Programming</font>
+<p><font size=+0>There are several ways to stablish communication between
+two computers, and although the JoyNet software is not standarized, there
+are some guidelines that should be followed by any communication protocol:</font></center>
+
+<ul>
+<li>
+Detecting the connection and other computers (and how many of them are
+available) is a task of the software.</li>
+
+<li>
+The protocol <b>MUST</b> be able to use Joystick-port 1 as well as port
+2, for else some computers with problems on one of the joystick-ports won't
+be able to use the software and JoyNet.</li>
+
+<li>
+The protocol should not hang the computer when the cable is disconnected.
+There are two possible solutions:</li>
+
+<ol>
+<li>
+The protocol gives a timeout when it has to wait too long for response.</li>
+
+<li>
+The user can quit the protocol/network game by pressing ESC.</li>
+</ol>
+</ul>
+
+<center>
+<hr WIDTH="100%"><font size=+2>Other JoyNet and related pages:</font>
+<p><font size=+2><a href="http://213.46.24.233/~grauw/joynet/joynet.html">The
+Official JoyNet homepage</a> at Datax site by Laurens Holst</font>
+<br>(with information about transfer speeds and comunnication protocols)
+<p><font size=+2><a href="http://www.stack.nl/~mth/msx/joynet/">The hardware
+section</a> at Maarten Ter Huurne's site</font>
+<br>(from there you can download a program to test JoyNet cables)
+<p><font size=+2><a href="http://www.msxnet.org/konami/cable/">The "F1
+Spirit 3D Special" cable section</a> at Sean Young's site</font>
+<br>
+<hr><font size=+2><a href="indexeng.htm">Back to Index</a></font></center>
+
+</body>
+</html>

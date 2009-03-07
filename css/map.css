@@ -1,0 +1,114 @@
+﻿q::before {				/* nice quotation marks... */
+	content: '“';
+}
+q::after {
+	content: '”';
+}
+q:lang(ja)::before {
+	content: '『';
+}
+q:lang(ja)::after {
+	content: '』';
+}
+
+
+.inv {					/* shows overline (inverse / negate) */
+	text-decoration: overline;
+}
+
+.map {					/* Indicator for MAP-authored files */
+	list-style-image: url("mapbullet.gif");
+}
+
+.func {					/* To render function descriptions */
+	font-weight: bold;
+}
+
+.box {					/* render a box around the block */
+	border: thin solid black;
+}
+
+.signed {				/* Use for the author at the end of an introduction */
+	margin-top: 3em;
+}
+.signed::before {
+	content: "\2014\A0"
+}
+
+.toc {
+	width: 100%;			/* erm... ble */
+	padding: 0;
+	border: 0;
+}
+
+.page {
+	color: #888;			/* To indicate a page boundary */
+	text-align: center;		/* like <p class="page">23</p> */
+	font-style: italic;
+	border-bottom: thin solid gray;
+	margin: 2em;
+}
+
+.floatleft {
+	float: left;
+	margin: .5em;
+	margin-top: 0;
+}
+
+.floatright {
+	float: right;
+	margin: .5em;
+	margin-top: 0;
+}
+
+
+/* Index 'definitions' layout */
+
+.index dt {
+	display: block;
+	font-size: larger;
+	margin-top: 1em;
+}
+.index dd {
+	display: block;
+	margin-left: 2em;
+}
+.indexpage {
+	float: right;
+}
+
+
+
+/* Matrix table layout */
+
+.matrix {
+	border-collapse: collapse;
+	empty-cells: show;
+}
+.matrix th,
+.matrix td {
+	text-align: center;
+	border: solid gray 1px;
+}
+
+/* Table with loads of cell space */
+
+.spacycells td {
+	padding: 1em 3em;
+}
+
+
+/* show non-html link file types */
+
+a[href$=".pdf"]:after {
+	content: " «PDF»";
+}
+a[href$=".lzh"]:after {
+	content: " «LZH»";
+}
+
+
+a[hreflang]:after {
+	color: gray;
+	content: " [" attr(hreflang) "]";
+}

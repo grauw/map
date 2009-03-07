@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<BASE HREF="http://www.stack.nl/~mth/msx/joynet/">
+
+<TITLE>JoyNet: MSX joystick network</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1>JoyNet: MSX joystick network</H1>
+
+<HR SIZE=3><BR>
+
+<h2>JoyNet homepage</h2>
+
+The
+<a href="http://datax.cjb.net/joynet/joynet.html">JoyNet homepage</a>
+is maintained by Laurens Holst.
+It contains instructions on how to build the cable, as well as other useful info.
+
+<h2>JoyNet Tetris</h2>
+
+My first game for JoyNet.
+It's not finished yet, but you can download test versions and comment on it.
+<p>
+<b><i>02-09-1999: version 0.1</i></b>
+<p>
+Two player using split screen. No JoyNet support yet.<br>
+<a href="joytris1.lzh">Download it!</a> [LZH, 3K]
+
+<h2>Cable tester</h2>
+
+If you have soldered a cable, you probably want to know if you did it right.
+That's what the cable test program is for.
+<p>
+To use it, download the BIN file and load it in BASIC:<br>
+<tt>BLOAD "NETTEST1.BIN",R</tt><br>
+The cable should be connected to joystick port 1 and the DIN5 plugs should
+be plugged into one another, creating a loop.
+<p>
+If your cable is good, every read will give the same bits as the write before
+it. If you get a mismatch, the bits that are wrong can tell you something
+about the problem.
+<p>
+That's about everything... Now just
+<a href="nettest1.bin">download the BIN file</a>.
+<p>
+The source is also available.
+It's in ASCII format and was written in Compass, but it should be easy to
+adapt to another assembler.
+It contains a lot of comments, so it can probably help you understand how
+the joystick network works.
+Enough talking, simply
+<a href="nettest1.txt">download the assembly file</a>
+if you want it.
+
+<HR SIZE=3>
+
+<H3>
+<A HREF="../"><IMG ALIGN=BOTTOM SRC="/~mth/recycl.gif" WIDTH=20 HEIGHT=20 BORDER=0 ALT=""></A>
+You can <A HREF="../">go back</A>
+to my MSX page.</H3>
+
+<ADDRESS>Comments, questions, whatever.....
+Mail me at <A HREF="mailto:M.K.t.Huurne@stud.tue.nl">
+M.K.t.Huurne@stud.tue.nl</A>
+</ADDRESS>
+
+</BODY>
+
+</HTML>

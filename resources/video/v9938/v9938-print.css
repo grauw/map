@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6 {
+	page-break-after: avoid;
+}
+li:first-child {
+	page-break-after: avoid;
+}
+h1 {
+	page-break-before: always;
+}
+.head > h1:first-child {
+	page-break-before: auto;
+}
+pre, table {
+	page-break-inside: avoid;
+}
+
+/***** PAGE STYLING *****/
+@page {
+	size: A4 portrait;
+	margin: 2cm;
+}
+@page :left {
+  @bottom-left {
+    content: counter(page);
+  }
+}
+@page :right {
+  @bottom-right {
+    content: counter(page);
+  }
+}
+@page :first {
+  @bottom-right {
+    content: normal;
+  }
+}
+@string chapter {
+	page-policy: first;
+}
+@page { 
+    @top {
+		content: string(chapter);
+	}
+}
+h1 {
+	string-set: chapter contents;
+}
+
+
+/***** TOC STYLING *****/
+
+/* style toc links */
+.toc ol a:after {
+	content: leader('.') target-counter(attr(href), page);
+}
+.toc ol a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/* always page break before toc section headings */
+.toc .part2 h3, .toc .appendix h3 {
+	page-break-before: always;
+}
+

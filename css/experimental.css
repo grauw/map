@@ -1,0 +1,121 @@
+@import url('classic.css');
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	min-height: 100%;
+}
+* html body {
+	height: 100%;			/* IE hack */
+}
+
+
+
+
+/* Menu layout */
+
+#menu ul {
+	display: block;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	font-size: larger;
+	padding: 0;
+	border: 0;
+	margin: auto 0;
+	linefeed-treatment: ignore;	/* CSS3 to remove annoying spaces */
+	white-space-treatment: ignore;	/* (not supported though) */
+}
+
+#menu ul li {
+	position: relative;
+}
+
+#menu a:hover, #menu li:hover {
+	color: #22F;
+	background: #CCF;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#menu ul ul {
+	display: none;
+	position: absolute;
+	top: 1em;
+}
+
+#menu li:hover > ul {
+	left: 0;
+	width: auto;
+	display: block;
+	background: black;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #EEF;
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+#menu li li {
+	display: block;
+	font-size: small;
+	font-weight: normal;
+}
+#menu li li a {
+	display: block;
+	color: #DDF;
+}
+#menu li li a:hover, #menu li li:hover {
+	background: #444;
+	color: #DDF;
+}
+
+:target {
+	-moz-outline: 1px dotted #88D;
+	outline: 1px dotted #88D;
+}
+
+
+
+/* Footer layout */
+
+#foot {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+#content {
+	padding-bottom: 2em;
+}
+
+
+/* Updates layout */
+
+.updates {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.updates h2 {
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-border-bottom-right-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* */
+
+tr:hover {
+	background: #EEF;
+}
+.matrix tr:first-child th:first-child {
+	background: gray;
+	color: white;
+}
+

@@ -1,0 +1,192 @@
+body {
+	color: white;
+	background-color: green;
+	font: small Verdana, sans-serif;
+	margin: 0em;
+	border: 0em;
+	padding: 0em;
+	text-align: right;
+}
+
+/* Header layout */
+
+#head {
+	color: white;
+	background: blue;
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	border-top: medium dotted red;
+	border-bottom: thick dashed red;
+	width: auto;
+	padding: .5em;
+	margin: 0;
+}
+
+/* Menu layout */
+
+#menu ul {
+	display: block;
+	color: black;
+	font-weight: 100;
+	text-align: center;
+	font-size: larger;
+	border-bottom: thin solid red;
+	padding: 0;
+	border: 0;
+	margin: auto 0;
+	linefeed-treatment: ignore;	/* CSS3 to remove annoying spaces */
+	white-space-treatment: ignore;	/* (not supported though) */
+}
+
+#menu ul ul {
+	display: none;
+}
+
+#menu ul li {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	white-space: normal;
+}
+
+#menu a {
+	color: yellow;
+	text-decoration: none;
+	padding: 0em 1em;
+	width: 15%;
+}
+
+#menu a:hover {
+	color: #F70;
+	background: white;
+}
+
+
+
+/* Body layout */
+
+#content	{
+	padding: .75em;
+}
+#content a {
+	color: #CCF;
+	font-style: italic;
+	text-decoration: none;
+}
+#content a:hover {
+	color: #EEF;
+	text-decoration: overline underline;
+}
+
+
+
+/* Footer layout */
+
+#foot {
+	color: #666;
+	background: #DDF;
+	text-align: center;
+	font-style: italic;
+	width: auto;
+	padding: 0em;
+	margin-top: 2em;
+	clear: both;
+}
+
+#foot a {
+	color: #444;
+	text-decoration: none;
+}
+#foot a:hover {
+	color: #D50;
+}
+
+
+
+/* */
+
+pre, code {
+	font-size: 100%; }		/* render fixed-font items full-sized */
+
+h1 {
+	font: x-large serif;
+	color: white;
+	text-align: center;
+	font-style: italic;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-top: medium solid black;
+	border-bottom: medium solid black;
+	padding: .1em 0em;
+}
+
+h2 {
+	font: x-large serif;
+	color: #F70;
+}
+h3 {
+	font: large serif;
+	font-weight: 300;
+	color: yellow;
+}
+
+em {
+	font-style: italic;
+	color: #F88;
+}
+
+dt {
+	font-weight: bold;		/* render definitions bold */
+}
+table {
+	empty-cells: show;		/* don't hide empty cells */
+	border-color: #EEF;		/* show seperators */
+	border-style: solid;
+	border-width: 4px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, th{
+	padding: 0em .5em;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #EEF;		/* ensure enough space between cells */
+}
+th {
+	background: #DDF;		/* give headers nice background color */
+	color: black;
+}
+
+
+
+/* Updates layout */
+
+.updates {
+	float: right;
+	width: 35%;
+	border: solid 3px #DDF;
+	margin-left: .4em;
+	margin-bottom: .4em;
+}
+.updates p {
+	margin: .5em;
+}
+.updates h2 {
+	font: x-large serif;
+	color: white;
+	text-align: center;
+	font-style: italic;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-top: medium solid black;
+	border-bottom: medium solid black;
+	padding: .1em 0em;
+	margin-top: 0em;
+	margin-bottom: .5em;
+}
+

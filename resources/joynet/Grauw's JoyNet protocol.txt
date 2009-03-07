@@ -1,0 +1,86 @@
+Grauw's protocol
+================
+My protocol can only be used with 2 MSX-computers connected via JoyNet. 
+When you want to use more computers in a network, you will have to use 
+Maarten ter Huurne's protocol. The advantage of only connecting 2 MSX 
+computers is that the protocol can be 2-bits and bidirectional. Because 
+of that this protocol can be two to four times as fast as the 
+network-protocol of Maarten ter Huurne.
+
+Keep in mind that the protocol below is not fully correct. It is only 
+an indication about how it works. If you program this in Assembly it 
+will need some more conditional jumps to prevent congestions (or 
+whatever it is called). Also, it can be improved on some places, it is 
+for example possible to combine the last acknowledge in the Send_Byte 
+and Recv_Byte-routines with the Main_Loop. And finally, it needs some 
+timeout checks to prevent the computer from locking up when an error 
+occurs or then the cable is disconnected.
+
+
+Some definitions:
+=================
+- The datalines you can transfer through are called D0, D1 and ACK.
+- The checksum consists of a mirror of the standard V-flag of the MSX.
+- Request indicates if the (opposite) computer wants to send.
+
+
+It works like this:
+===================
+;Run this only the first time
+;
+Initialisation:
+  Check if the network-ring is closed
+  Check if the nr. of computers is 2. If not, abort the protocol.
+  Determine which computer is master/slave.
+
+
+;Call with HL pointing to the send-buffer, the nr. of bytes to send in BC, and
+;DE pointing to the recieve-buffer.
+;It returns the nr. of bytes recieved in BC.
+;
+Main_loop:
+  Wait until ACK flips, and when it does, read Request=D0 and Checksum=D1.
+  Flip ACK and set D0 if more bytes to send, and if you do, set D1 to the checksum.
+  If only the input-Request is set, jump to Recv_Byte.
+  If only the output-Request is set, jump to Send_Byte.
+  If both input- and output-Request are set, jump to SendRecv_Byte.
+  Return
+
+
+Send_Byte:
+  D0=bit 0, D1=bit 1, flip ACK-output
+  Wait until ACK-input gets flipped
+  D0=bit 2, D1=bit 3, flip ACK-output
+  Wait until ACK-input gets flipped
+  D0=bit 4, D1=bit 5, flip ACK-output
+  Wait until ACK-input gets flipped
+  D0=bit 6, D1=bit 7, flip ACK-output
+  Wait until ACK-input gets flipped
+  Return to Main_Loop
+
+
+Recv_Byte:
+  Wait until ACK-input gets flipped, then bit 0=D0, bit 1=D1
+  Flip ACK-output
+  Wait until ACK-input gets flipped, then bit 2=D0, bit 3=D1
+  Flip ACK-output
+  Wait until ACK-input gets flipped, then bit 4=D0, bit 5=D1
+  Flip ACK-output
+  Wait until ACK-input gets flipped, then bit 6=D0, bit 7=D1
+  Flip ACK-output
+  Return to Main_Loop
+
+
+;(in case of Master)
+;
+SendRecv_Byte:
+  D0=bit 0, D1=bit 1, flip ACK-output
+  Wait until ACK-input gets flipped, then bit 0=D0, bit 1=D1
+  D0=bit 0, D1=bit 1, flip ACK-output
+  Wait until ACK-input gets flipped, then bit 0=D0, bit 1=D1
+  D0=bit 0, D1=bit 1, flip ACK-output
+  Wait until ACK-input gets flipped, then bit 0=D0, bit 1=D1
+  D0=bit 0, D1=bit 1, flip ACK-output
+  Wait until ACK-input gets flipped, then bit 0=D0, bit 1=D1
+  Return to Main_Loop
+

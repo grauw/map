@@ -1,0 +1,260 @@
+@namespace g url("http://www.grauw.nl/doc");
+
+/* basic styling */
+
+@media screen {
+	body {
+		max-width: 40em;
+	}
+	html {
+		position: relative;
+	}
+	head {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 41em;
+		right: 0;
+/*		background: red; */
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, sans-serif;
+	margin-top: 1.5em;
+}
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+	margin-top: 1em;
+}
+
+pre {
+	font-size: 11pt;
+}
+ol {
+    counter-reset: list-item;
+}
+li {
+    counter-increment: list-item;
+}
+ul, ol {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+li ul, li ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+table + table {
+	margin-top: 1em;
+}
+
+
+.reglist td, .reglist th {
+	vertical-align: top;
+	padding-left: .3em;
+	padding-right: .3em;
+}
+.reglist tr:nth-child(even) {
+	background: #eee;
+}
+.reglist th {
+	background: #ddd;
+}
+
+
+
+/* custom tag to denote inversion */
+g|inv {
+	text-decoration: overline;
+}
+g|noinv {
+	display: none;
+}
+/* legacy style method for namespaces */
+g\:inv {
+	text-decoration: overline;
+}
+g\:noinv {
+	display: none;
+}
+
+
+/***** PAGE STYLING *****/
+
+
+
+
+
+
+
+/***** TOC STYLING *****/
+
+/* part1 specific styling */
+.toc .part1 li {
+	list-style: none;
+	text-transform: uppercase;
+}
+.toc .part1 ol ol {
+    counter-reset: list-item-pt1;
+}
+.toc .part1 li li {
+    counter-increment: list-item-pt1;
+    list-style: decimal;
+	text-transform: none;
+}
+.toc .part1 li li::marker {
+	content: counter(list-item-pt1, decimal) ".";
+}
+.toc .part1 li li li::marker {
+	content: counters(list-item-pt1, ".", decimal);
+}
+
+
+/* part2 specific styling */
+.toc .part2 li li::marker {
+	content: counters(list-item, "-", decimal);
+}
+.toc .part2 li li li {
+	list-style: none;
+}
+
+
+/* give top and secondary level list items some space */
+.toc li, .toc ol {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.toc li li li {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+
+/* Style for tables of 'type 1' - without horizontal borders in tbody */
+table.type1 {
+	border-collapse: collapse;
+}
+table.type1 {
+	border: 1px solid black;
+}
+table.type1 thead th {
+	border: 1px solid black;
+	text-align: left;
+}
+table.type1 th,
+table.type1 td {
+	padding: 0 .5em;
+	vertical-align: top;
+}
+table.type1 tbody td {
+	border-style: solid;
+	border-color: black;
+	border-width: 0 1px;
+}
+table.type1.command td:not(:first-child) {
+	text-align: center;
+}
+
+
+/* Style for tables presenting lists (use thead for heading) */
+
+table.list td,
+table.list th {
+	vertical-align: top;
+	padding-left: .3em;
+	padding-right: .3em;
+}
+table.list tr:nth-child(even) {
+	background: #eee;
+}
+table.list th {
+	background: #ddd;
+}
+
+
+/* Style for register tables */
+
+table.reglayout {
+	border-collapse: collapse;
+}
+table.reglayout th,
+table.reglayout td {
+	font-weight: normal;
+	padding: .2em .3em;
+	border: 1px solid black;
+	width: 2em;
+	text-align: center;
+}
+table.reglayout tr:first-child > *,
+table.reglayout tr > :first-child, 
+table.reglayout tr > :last-child,
+table.reglayout tr.details > * {
+	border: none;
+	width: auto;
+}
+table.reglayout tr:first-child > :first-child {
+	text-align: right;
+}
+table.reglayout tr > :last-child,
+table.reglayout tr > :first-child,
+table.reglayout tr.details td.details {
+	text-align: left;
+}
+table.reglayout tr:not(:first-child) > :first-child {
+/*	padding-right: 3em; */
+	width: 9em;
+}
+table.reglayout tr:not(:first-child) > :last-child {
+	padding-left: 1em;
+}
+table.reglayout tr.details td.details {
+	padding-left: 1.1em;
+}
+table.reglayout tr.details > * {
+	text-align: center;
+	padding: .05em .3em;
+}
+
+
+/* */
+table.type2 {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+table.type2 td {
+	border: 1px solid black;
+	text-align: right;
+}
+table.type2 td,
+table.type2 th {
+	width: 2em;
+	padding: .2em .3em;
+}
+table.type2 td:empty {
+	border: none;
+}
+table.type2 td:empty:before,
+table.type2 th:empty:before {
+	content: "...";
+}
+table.type2 td:empty,
+table.type2 th:empty {
+	text-align: center;
+}
+table.type2 tr:first-child th:first-child:before {
+	content: "";
+}
+
+
+/* */
+
+table.type1a td,
+table.type1a th {
+	padding: 0 1.5em;
+	text-align: center;
+}
+

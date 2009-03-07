@@ -1,0 +1,84 @@
+<?php include $_SERVER['DOCUMENT_ROOT'].'/scripts/functions.php'; addHTTPHeader(); ?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>MSX Assembly Page</title>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <?php addStyles(); ?>
+</head>
+<body id="msxasm">
+<?php addHeader(); ?>
+
+
+
+<!--[if IE]>
+<style type="text/css">
+/*** Use proprietary conditional IE comment to filter out this illegal tag...
+     (http://msdn.microsoft.com/workshop/author/dhtml/overview/ccomment_ovw.asp) ***/
+pre {word-wrap: break-word;}
+</style>
+<![endif]-->
+
+
+
+<?php
+
+if (!function_exists("file_get_contents")) {
+    function file_get_contents($filename, $use_include_path = 0) {
+	$data = ""; // just to be safe. Dunno, if this is really needed
+	$file = @fopen($filename, "rb", $use_include_path);
+	if ($file) {
+	    while (!feof($file)) $data .= fread($file, 1024);
+	    fclose($file);
+	}
+	return $data;
+    }
+}
+
+
+if ($_REQUEST["f"]) {
+    $file = $_REQUEST["f"];
+
+    // prevent hacking stuff...
+    $file = str_replace('\\\\', '/', $file);
+    $file = str_replace('\\', '/', $file);
+    $file = str_replace('../', '', $file);
+    $file = str_replace(':', '', $file);
+
+    // remove heading slashes...
+    while ($file{0} == '/') {
+	$file = substr($file, 1);
+    }
+
+    if (stristr($file, '.txt')) {
+	if (file_exists($file)) {
+	    $filecont = file_get_contents($file);
+	    $filecont = htmlspecialchars($filecont, ENT_NOQUOTES);
+
+	    echo '<h1>' . basename($file) . "</h1>\n\n";
+	    echo '<pre style="white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: pre-wrap;">';
+	    echo $filecont;
+	    echo '</pre>';
+	} else {
+	    echo '<p><b>Error:</b> File not found...</p>';
+	    echo "<p>($file)</p>";
+	}
+    } else {
+	echo '<p><b>Error:</b> Not a supported file format...</p>';
+	echo "<p>($file)</p>";
+    }
+} else {
+    echo '<p><b>Error:</b> No filename specified...</p>';
+}
+
+?>
+
+
+
+
+<?php addFooter(); ?>
+</body>
+</html>

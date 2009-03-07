@@ -1,0 +1,234 @@
+File: IDESYS.TXT - 26/07/2000
+Subject: Sunrise MSX ATA/IDE Bios 1.9x/2.xx system documentation
+By: Jon De Schrijder (jon@msx.ch)
+
+IDESYS.TXT history list:
+************************
+
+*26/07/2000
+-IMPORTANT NOTICES FOR IDE SOFTWARE DEVELOPERS
+-!!! new definition of IDE system workarea !!!
+*18/06/2000
+-info concerning bios 2.xx added
+-locking bit is not used for FAT16 driver
+*14/05/2000
+-new diskrom entry #7FBF description (since bios 1.92)
+-new bit5 (locked) in devicecodebyte
+-More accurate info on interrupt/registerchanges
+*12/04/1999
+added more info about the ROM IDENTIFICATION
+added more info about the device codebyte (bit 3,4)
+*26/03/1999
+correction: 'additional partition info' bit 7 and 6 were swapped
+*21/03/1999
+release first version
+
+Actual document starts here:
+
+THE ROM IDENTIFICATION
+----------------------
+
+All IDE biosses have the following 3 characters at address #7F80/1/2:
+ID#
+
+Since IDE bios 1.8, also the bios version number can be obtained. It is situated at address #7FB6/7/8:
+Examples: #01 #80 #00 =version 1.80=version 1.8
+          #01 #80 #04 =version 1.80beta4
+          #01 #91 #00 =version 1.91
+
+Older biosses have #FF #FF #FF.
+
+The following piece of code can be used to see if the bios is at least version #1.80:
+
+	...
+	LD	HL,(#7FB5)	;#7FB6 to H
+	LD	A,(#7FB7)
+	LD	L,A		;#7FB7 to L
+	INC	HL		;!!! if it is #FFFF, it will turn to #0000
+	LD	DE,#0180+1	;when comparing also #0180 should be increased by 1
+	OR	A		;clear carry
+	SBC	HL,DE		;compare
+	JR	C,too_old
+	...
+
+THE WORKSPACE
+-------------
+
+During the bootprocess the IDE interface allocates approx. 74 bytes of workspace in page 3 to store its system variables. The address of the first byte can be found in the SLTWRK (#FD09) table. The element corresponding with the slot the IDE is in, will contain the start address of the IDE workspace. For easy programming, this address can be also be obtained by calling the 'get Drivefield address' entry at #7FBF with A=0. (see below)
+
+* IDE workspace consists of:
+-6 Drivefields of X bytes, related to the max. 6 possible driveletters used by the interface
+ The first Drivefield corresponds with local drive 0
+ The second Drivefield corresponds with local drive 1, ... 
+ The 'local drive number' is the one that is used for DISKIO
+ For more info on 'MSX drive numbers' read the text DRIVENUM.TXT
+ X=8 for bios 1.9x and 2.xx, X>8 for bios 3.xx and higher
+-a number of Y device info bytes (Y=6 for bios 1.9x and 2.xx)
+-18 bytes free space (internally used for ATAPI command packets)
+
+IMPORTANT NOTICE FOR IDE SOFTWARE DEVELOPERS:
+The startaddresses of these 8 fields (6 drivefields, device info and free space) MUST BE OBTAINED BY CALLING THE 'get Drivefield address' entry. It must *not* be assumed that the Drivefields are 8 bytes in length because this is likely to change in version 3.00 of the IDE bios. It must *not* be assumed that the 6 Drivefields are stored behind each other in memory. IDE utilities which rely on the successive 8-bytesized drivefields, should be modified in order to be compatible with the IDE bios in future.
+
+All IDEbiosses 1.9x and 2.xx only support 24 bit sector numbers: this means maximum 8 GB harddisks. You can also use bigger harddisks, but only the first 8 GB can be accessed.
+
+IDE harddisks can use maximum 28 bit sector numbers (=128 GB) and this will be supported by IDE bios 3.xx in future. This requires some extra bytes in the drivefields and that means that also IDE software that makes use of these system variables have to be changed. The changes are rather small. Without changes the software will still work with bios 2.xx, but not in the future with bios 3.xx.
+
+* Drivefield consists of:
++0    :device codebyte
++1/2/3:partition start (24 bit absolute sector number)
++4/5/6:partition length minus 1 (24 bit sector count)
++7    :additional partition info
+since bios 3.00 and up:
++8    :partition start (bit 24-31)
++9    :partition length minus 1 (bit 24-31)
+The last two bytes should be used when bios 3.xx or higher is detected.
+
+* Device codebyte consists of:
+bit 0: 0=this partition is located on the Master device
+       1=this partition is located on the Slave device
+
+bit 21:
+    00=this partition is located on an ATA device (=harddisk)
+    10=this partition is located on an ATAPI direct access device
+    11=this partition is located on an ATAPI CDROM
+
+bit 3: 0=the medium of this partition has been changed
+       1=the medium of this partition has not been changed
+
+bit 4: 0=this partition is in use
+       1=this partition is not in use/disabled (see note)
+
+bit 5: 0=this drive is not 'locked'
+       1=this drive is locked by an external program
+       This locking info is used by IDEPAR: if the locking bit is set,
+       you can't change the settings for that drive.
+       The locking bit is set by devicehandlers like IDECDEX.
+
+bit 6/7: not used yet, don't alter them
+         You can NOT assume these bits to be 0, nor to be 1.
+
+notes:
+-bit 2 indicates if it is an ATAPI device
+-ATAPI direct access devices: Iomega ZIP, LS120SuperDisk, ...
+-Bit 3 is used as disk-changed-flag for DOS2
+-When bit 4=1 and bit 3=1: unexisting drive, not in use
+-When bit 4=1 and bit 3=0: no medium present in drive
+
+* Additional partition info consists of:
+bit 0: 0=this partition is disabled during boot
+       1=this partition is enabled during boot
+bit 1..5: not used yet, don't alter them
+bit 6: 0=this partition is the boot partition (not used yet)
+       1=this partition is not the boot partition (not used yet)
+bit 7: 0=this partition is logically write-protected
+       1=this partition is not logically write-protected
+
+* device info bytes consist of:
++0: number of heads Master (in case of ATA device)
++1: number of heads Slave  (in case of ATA device)
++2: number of sectors/cylinder Master (in case of ATA device)
++3: number of sectors/cylinder Slave  (in case of ATA device)
++4: devicetype codebyte Master device
++5: devicetype codebyte Slave device
++6...: undefined yet, don't use them
+
+*Devicetype codebyte consists of:
+bit 0: 1=this device is an ATA device (harddisk)
+bit 1: 1=this device in an ATAPI device (CDROM, ZIP, LS120, ...)
+bit 2: 0=this device uses only CHS addressing
+       1=this device supports also LBA addressing
+bit 43:
+    00=this device is a direct-access device (harddisk, ZIP, ...)
+    01=this device is a CDROM
+    10=reserved
+    11=reserved
+
+bit 765: not used yet, don't alter them
+
+
+SOME USEFUL ROUTINES
+--------------------
+
+The following addresses are entries to some useful routines when doing tests with the IDE.
+ALL ENTRIES BELOW CHANGE THE IX REGISTER.
+
+7F89: absolute sector read
+      input: A=device codebyte (see above for description)
+             CDE=24 bit sector number (E=lowbyte)
+             B=number of sectors to read
+             HL=destination address
+      output: Carry=error, errorcode in A register (same as DISKIO)
+      changes: all, interrupt is left unchanged or set to DI
+      Notes: - can also be used to read CDROM sectors (2048 bytes/sector)
+             - routines for 32 bit sectornumbers are not defined yet
+
+7F8C: absolute sector write
+      input: A=device codebyte (see above for description)
+             CDE=24 bit sector number (E=lowbyte)
+             B=number of sectors to write
+             HL=source address
+      output: Carry=error, errorcode in A register (same as DISKIO)
+      changes: all, interrupt is left unchanged or set to DI
+      Notes: - routines for 32 bit sectornumbers are not defined yet
+
+*If data is transferred in page 0 or 1, this can only be in the primary mapper ramslot: DOS hook #F36E and buffer #F34D should be available. (is the case in MSX-DOS environment, not in BASIC environment, but in BASIC you don't need transfers in page 0 or 1)
+*For the absolute sector read/write routines it is necessary that the IDE bios is installed during the MSX boot process. If a medium changed condition is encountered, all necessary flags of the appropriate devicecodebytes are set automatically.
+
+7FB9: select device: selects the Master or Slave device for ATAPIpacket
+      input: bit0 of A register: 0=Master 1=Slave
+      output: Carry if controller time-out error
+      changes: A,BC,IX, interrupt is left unchanged (bios 1.9x)
+               interrupt will automatically be DI (bios 2.xx)
+      Notes: if you want to issue several ATAPI packets to the same
+             device, you only need to call this routine once. When
+             using bios 1.9x you have to set DI yourself before calling
+             select device. This to prevent interrupt driven TSR's from
+             changing the selected device. (like a CD audio player)
+
+7FBC: issue ATAPI packet (packet is sent to the selected device)
+      input: HL=pointer to 12-byte ATAPI command packet (not in page1!)
+             DE=transfer address for data (if any) (page 1 allowed)
+      output: NC=succesful
+              C+NZ=error, A contains IDE errorregister contents
+              C+Z=error, controller time-out
+      changes: all, interrupt is left unchanged or set to DI
+
+Notes:
+*If data is transferred in page 0 or 1, this can only be in the primary mapper ramslot: DOS hook #F36E and buffer #F34D should be available. (is the case in MSX-DOS environment, not in BASIC environment, but in BASIC you don't need transfers in page 0 or 1)
+*If the ATAPI packet routine returns with a 'Unit Attention' error condition, then you have to set the 'medium changed flags' (in the devicecodebytes) yourselves to ensure that the system keeps track of medium changes: so you need to check the 6 devicecodebytes, look for bit 0 to see if they are located on the device you've just tried to access and was changed, and then set bit 4 and bit 3 as follows:
+bit43:
+00: change to 10
+01: change to 10
+10: leave it 10
+11: don't change anything, unused drive
+
+The next time DISKIO is called, appropriate system variables for the new medium will automatically be loaded. (for example if an unpartitioned ZIP disk is replaced by a partitioned one, the unused IDE drives will be set in use to represent the new partitions)
+
+*Example of the use of ATAPI command packet:
+	ld	a,1
+	call 	selectdevice	;select slave device
+	ld	hl,open
+	call	packet		;this will open your CDROM tray!
+	...
+open	db	#1b,0,0,0,#02,0,0,0,0,0,0,0
+
+More info about ATAPI command packets can be found on the Internet. A very good place of the complete IDE and ATAPI docs can be found on the following anonymous FTP server: ftp://fission.dt.wdc.com
+
+7FBF: get Drivefield address (available since bios 1.92)
+      input: A=Drivefield number (0,1,2,3,4,5) or 6 or 7
+      output: HL=address
+      changes: IX,BC,DE,HL,AF, interrupt is left unchanged
+
+Note: Use A=0 to obtain the start of the IDE workspace (since this is the same as Drivefield 0). Use A=6 to obtain the address of the Y device infobytes. Use A=7 to obtain the address of the 18 bytes free space.
+
+
+NEW FUNCTIONALITY SINCE BIOS 2.00
+---------------------------------
+
+In order to support a FAT16 driver, the standard DISKIO entry (#4010) was expanded to support 23 bit sector numbers. If bit 7 of the C register is 1, then DISKIO works like usual: a MediaType devicecode is passed in the C register. The IDE bios only checks if this code is >= #F0. So you can always use #F0. Values #80..#EF will return with an error condition.
+
+You can use 23 bit sector numbers if bit 7 of the C register is 0. Bit 0..6 of the C register must contain bit 16..22 of the 23 bit sector number. DE contains bit 0..15 (like usual).
+
+
+Have fun with your IDE !
+Jon

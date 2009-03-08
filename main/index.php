@@ -55,7 +55,7 @@ Added info about the #6F register for the Gfx9000’s v7040 chip (<a href="/reso
 
 <p>The site is divided into several sections, which you can select from at the top. 
 
-The <a href="/articles.php">Articles</a> section contains several articles about several topics, ranging from tutorials for beginners to advanced programming techniques. <a href="/resources.php">Resources</a> contains a number of of technical references and datasheets. The <a href="/sources.php">Sources</a> section contains our collection of source code. This includes both short, common routines, which you might want to use in your program, aswell as the sources of several big well-known programs. In the <a href="/downloads.php">Download</a> section you will find several useful, even necessary, tools which are programming related. And finally, there is the <a href="/links.php">Links</a> section, with links to other development-related sites. Furthermore, if you have any MSX programming or MAP site related questions, you can ask them at the <a href="http://msxbanzai.tni.nl/dev/#msxdev">#msxdev @ Rizon IRC channel</a>.</p>
+The <a href="/articles/">Articles</a> section contains several articles about several topics, ranging from tutorials for beginners to advanced programming techniques. <a href="/resources/">Resources</a> contains a number of of technical references and datasheets. The <a href="/sources/">Sources</a> section contains our collection of source code. This includes both short, common routines, which you might want to use in your program, aswell as the sources of several big well-known programs. In the <a href="/downloads/">Download</a> section you will find several useful, even necessary, tools which are programming related. And finally, there are the <a href="/links/">Links</a> section, with links to other development-related sites, and the <a href="/contributing/">Contributing</a> section for those who want to help improve the MAP. Furthermore, if you have any MSX programming or MAP site related questions, you can ask them at the <a href="http://msxbanzai.tni.nl/dev/#msxdev">#msxdev @ Rizon IRC channel</a>.</p>
 
 <p>Please note that <em>nothing of this page its content may be reproduced by any means without the prior permission of the MSX Assembly Page or the original author</em>. We have put a lot of effort in collecting all this information and also wrote a large number of the articles ourselves (being the ones marked with a <img src="/css/mapbullet.gif" alt="MAP bullet" /> bullet), and we ask everyone to respect our efforts and author’s rights. Ofcourse linking to us is always allowed. For more legal information read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
 
@@ -71,7 +71,7 @@ The <a href="/articles.php">Articles</a> section contains several articles about
 </ul>
 
 
-<h2>Comments / Submit</h2>
+<h2>Comments</h2>
 
 <p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <em>map&#64;tni.nl</em>.</p>
 

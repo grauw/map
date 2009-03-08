@@ -14,11 +14,11 @@
 
 
 
-<h1>MSX Assembly Page article tutorial</h1>
+<h1>MAP document authoring tutorial</h1>
 
-<p>On this page I’ll try to explain the structure of a document. Check <a href="http://hg.grauw.nl/map/file/d0d63d87ed2b/main/tutorial.php">the source on Mercurial</a> to see how everything is done in this (and other) pages’ source code.</p>
+<p>On this page I’ll try to explain some guidelines for authoring a document for the MAP. Check <a href="http://hg.grauw.nl/map/file/d0d63d87ed2b/main/tutorial.php">the source on Mercurial</a> to see how everything is done in this (and other) pages’ source code.</p>
 
-<p>Let’s sum up some guidelines for working on the MAP. You can go ahead and get the source code from the <a href="http://hg.grauw.nl/map">MAP Mercurial repository</a>. From there, You can start a new article or add a new resource, or modify an existing one. But keep in mind the social aspect of editing documents, that every article is made and thus ‘owned’ by someone. So although corrections are fine, you probably shouldn’t push significant modifications onto the server without consulting with the author first. Also, if you want to make changes to the style sheet or site structure, drop me (Grauw) a line first :).</p>
+<p>You can go ahead and get the source code from the <a href="http://hg.grauw.nl/map">MAP Mercurial repository</a>. From there, You can start a new article or add a new resource, or modify an existing one. But keep in mind the social aspect of editing documents, that every article is made and thus ‘owned’ by someone. So although corrections are fine, you probably shouldn’t push significant modifications onto the server without consulting with the author first. Also, if you want to make changes to the style sheet or site structure, drop me (Grauw) a line first :).</p>
 
 <p>If you have push rights to the server, keep in mind that everything you push will be live immediately. Generally speaking, it’s also always useful if someone reviews your changes before they are pushed to the server. Of course, this review can also happen after things are pushed, but because we use Mercurial, if you are unsure about whether something is correct or using the right tags or correctly spelled or whatever, you can easily draft some changes and send them to someone else for review.</p>
 
@@ -32,6 +32,8 @@
 <p>Let’s get started with the layout tags you should use. Every page on this site is made from a combination of XHTML, CSS, and Unicode (UTF-8). Here are links to the <a href="http://www.w3.org/TR/html4">HTML documentation</a>, the <a href="http://www.w3.org/TR/xhtml1/">XHTML documentation</a>, and the <a href="http://www.w3.org/TR/CSS21/">CSS 2.1 documentation</a>. The HTML and CSS docs are quite easy to use once you know how they’re structured.</p>
 
 <p>XHTML Strict basically works as follows: it is largely the same as HTML Strict (meaning HTML without any of the tags marked Deprecated), but then written in XML, so every tag has to have an end-tag. If you write a <code>&lt;li&gt;</code>, always close it with a <code>&lt;/li&gt;</code>, and the same goes for <code>&lt;p&gt;</code>. Also, don’t write <code>&lt;img src="image.jpg"&gt;</code> and <code>&lt;br&gt;</code> but add a closing <code>/</code> at the end like so: <code>&lt;img src="image.jpg" /&gt;</code> and <code>&lt;br /&gt;</code>. The space before the / in singleton tags is important for HTML compatibility. Another requirement of XHTML is that all tags shoult be lowercase. And on a sidenote, don’t forget that <code>img</code> tags always need an <code>alt="description"</code> attribute. You can check the correctness of your text by running it through the <a href="http://validator.w3.org/">W3C MarkUp Validation Service</a>.</p>
+
+<p>Note that on most browsers, the pages are served as XML and will thus not work if you make syntax errors, so be sure to verify your changes pages in a browser that is not Internet Explorer.</p>
 
 <p>As for a good editor, my preference is <a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a>.</p>
 

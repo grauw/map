@@ -60,16 +60,17 @@ body {
 	-moz-opacity: 0.75;
 	opacity: 0.75;
 }
-#menu li li {
+#menu ul ul li {
 	display: block;
 	font-size: small;
 	font-weight: normal;
+	padding: 2px 0;
 }
-#menu li li a {
+#menu ul ul li a {
 	display: block;
 	color: #DDF;
 }
-#menu li li a:hover, #menu li li:hover {
+#menu ul ul li a:hover, #menu li li:hover {
 	background: #444;
 	color: #DDF;
 }

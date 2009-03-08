@@ -137,6 +137,7 @@ function addMenu() {
   <li><a href="/links/#special">Special mention</a></li>
   </ul>
 </li>
+<li><a href="/contributing/">Contributing</a></li>
 </ul>
 </div>
 <?php

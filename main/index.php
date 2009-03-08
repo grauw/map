@@ -75,7 +75,7 @@ The <a href="/articles.php">Articles</a> section contains several articles about
 
 <p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <em>map&#64;tni.nl</em>.</p>
 
-<p>If you want to contribute more directly to the map, like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it. The <a href="/main/contributing.php">Contributing</a> page explains how to get started with the source code.</p>
+<p>If you want to contribute more directly to the map, like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it. The <a href="/contributing/">Contributing</a> section explains how to get started with the source code.</p>
 
 
 <br />

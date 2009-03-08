@@ -12,15 +12,7 @@
 <body id="msxasm">
 <?php addHeader(); ?>
 
-<h1>Contributing to the MAP</h1>
-
-<p>If you want to contribute more directly to the MAP like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it.</p>
-
-<p>Below you can find information on how to get the sources and start making changes.</p>
-
-<p>Additionally, there is <a href="/main/tutorial.php">a tutorial</a> on the document format and conventions used on the MAP. Note that on most browsers, the pages are served as XML, so be sure to verify your changes pages in a browser that is not Internet Explorer.</p>
-
-<h2>The MAP repository</h2>
+<h1>The MAP repository</h1>
 
 <p>The MSX Assembly Page source code is stored in a Mercurial revision control repository, which you can find here:</p>
 

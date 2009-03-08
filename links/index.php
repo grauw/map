@@ -36,7 +36,7 @@
     <li><a href="http://www.hansotten.com/">MSX Info Pages</a></li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/">msxnet.org Sean Young’s technical MSX info</a></li>
     <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
-    <li><a href="http://web.inter.nl.net/users/A.P.Wulms/">Alex Wulm’s The MSX Plaza</a></li>
+    <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s The MSX Plaza</a></li>
     <li><a href="http://www.mccm.hetlab.tk/millennium/milc/index.htm">MCCM’s MiLC (mainly Dutch)</a></li>
     <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
     <li><a href="http://www.smspower.org/maxim/smschecker/docs.htm">Maxim’s SMS/Meka Documents</a></li>

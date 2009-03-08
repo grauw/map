@@ -16,12 +16,14 @@
 
 <h1>Scrolling on MSX</h1>
 
-<div class="updates" style="display:none;">
+<!--
+<div class="updates">
 <h2>Latest updates:</h2>
 
 <p><em>yyyy-mm-dd</em><br />
 ...</p>
 </div>
+-->
 
 <p>Scrolling is a feature that is an essential part of many games, however due to hardware limitations it is not a trivial thing to do on MSX. Even for experienced programmers, depending on the requirements of course, it may grow into quite a complex problem.</p>
 
@@ -99,7 +101,7 @@ You will usually want to scroll through multiple screens worth of images. Storin
 
 <h4 id="hardware-v9990">v9990 – Graphics9000</h4>
 
-<p>The v9990 has the best hardware for scrolling. It has registers to scroll both horizontally and vertical accross multiple pages (r#17 to r#24), and in P1 mode even offers multilayer scrolling with 2 layers. In case your requirements are even higher, e.g. you want to scroll using more layers, software scrolling with the v9990’s copy commands is very fast as well.</p>
+<p>The v9990 has the best hardware for scrolling. It has registers to scroll both horizontally and vertical accross multiple pages (r#17 to r#24), and in P1 mode even offers multilayer scrolling with 2 layers. Also, the P1 and P2 modes are tile-based modes. In case your requirements are even higher, e.g. you want to scroll using more layers, software scrolling with the v9990’s copy commands is very fast as well.</p>
 
 
 <h3 id="software">Software scrolling</h3>
@@ -122,7 +124,9 @@ The most important technique to optimise a software scroll, is to do a <dfn>sele
 
 <p>Optimisation can also be found in performing larger copies, because <a href="/articles/vdp_commands_speed.php#smaller">smaller copies are slower</a>. A simple means to get bigger copies is to base your scroll routine on 16×16 tiles instead of 8×8 ones. More advanced techniques could involve sequence detection or caching.</p>
 
-<p>Examples of these optimising methods are the Falcom <em>Ys</em> games, and Cas Cremer’s <em>Akin</em> and <em>Core Dump promo</em>. They are excellent examples of what kinds of performance can be achieved, even on a plain MSX2 without hardware-accelerated horizontal scrolling capability.</p>
+<p>If you use sprites, you could turn them off temporarily while scrolling, which significantly improves VDP copy speed. If you only use a sprite for e.g. a mouse cursor, this should be an acceptable trade-off.</p>
+
+<p>Examples of some of these optimising methods are the Falcom <em>Ys</em> games, and Cas Cremer’s <em>Akin</em> and <em>Core Dump promo</em>. They are excellent examples of what kinds of performance can be achieved, even on a plain MSX2 without hardware-accelerated horizontal scrolling capability.</p>
 
 
 <h2 id="examples">Some examples</h2>
@@ -131,7 +135,7 @@ The most important technique to optimise a software scroll, is to do a <dfn>sele
 
 <p><em>Scenario:</em> a game has a player walking around a field which spans multiple screens. We want to be able to scroll smoothly in 4 directions. One step by the player corresponds to 8 pixels. The size of the tiles is 8×8. The used hardware is a v9958.</p>
 
-<p></p>
+<p>(more to come)</p>
 
 
 

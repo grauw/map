@@ -16,42 +16,41 @@
 
 <h1>MSX Assembly Page article tutorial</h1>
 
-<p>On this page I'll try to explain the structure of a document. Check <a href="tutorial.html">this</a> link for the plain document, without any added headers and footers. You can see how everything is done in this (and other) page's source code.</p>
+<p>On this page I’ll try to explain the structure of a document. Check <a href="http://hg.grauw.nl/map/file/d0d63d87ed2b/main/tutorial.php">the source on Mercurial</a> to see how everything is done in this (and other) pages’ source code.</p>
 
-<p>Well then, let's sum up the 'rules' you have to stick to when you are working on the MAP on a somewhat regular basis (as in, you're a member of the MAP team :)). These are here to avoid that two people work on the same file at the same time, creating inconsistency. First of all, the <i>main.html</i>, <i>planned.html</i> and other section files should be downloaded, edited and uploaded as fast as possible, to avoid conflicts. Aside from those and the articles which are yours or of which you indicated that you're working on it, everything else is off-limits, so no tampering with the style sheet index script, or someone else's article. If you want to do such things, for example because you'd like to see an addition to the style sheet, please consult me (Grauw) first.</p>
+<p>Let’s sum up some guidelines for working on the MAP. You can go ahead and get the source code from the <a href="http://hg.grauw.nl/map">MAP Mercurial repository</a>. From there, You can start a new article or add a new resource, or modify an existing one. But keep in mind the social aspect of editing documents, that every article is made and thus ‘owned’ by someone. So although corrections are fine, you probably shouldn’t push significant modifications onto the server without consulting with the author first. Also, if you want to make changes to the style sheet or site structure, drop me (Grauw) a line first :).</p>
 
-<p>There is a file called <i>planned.html</i> in the root directory, everything which is being worked on or will be worked on in the future should be put in there. If you have an idea for an article (which you not necessarily have to write yourself), put it in that file, if you need an idea for an article, check out that file. If you are working or are going to work on a certain item, add your name behind the specific article between &lt;em&gt;<em>emphasis</em>&lt;/em&gt; tags to 'allocate' it for yourself. You can optionally include some additional info like a progress indication. Feel free to add new subsections when needed. You can optionally use the 'wip' directory for saving work-in-progress texts, and for testing the layout.</p>
+<p>If you have push rights to the server, keep in mind that everything you push will be live immediately. Generally speaking, it’s also always useful if someone reviews your changes before they are pushed to the server. Of course, this review can also happen after things are pushed, but because we use Mercurial, if you are unsure about whether something is correct or using the right tags or correctly spelled or whatever, you can easily draft some changes and send them to someone else for review.</p>
 
-<p>Once an article is more or less done, and fit for publishing, you can remove it from <i>planned.html</i>, and put it online on the site. Think of an appropriate section and category within the site structure, and if it isn't there yet, add it. Try to keep the organization as logical as possible. Then upload your file into the directory of the section you've chosen, and add a link to it in the section overview file (like for example <i>articles.html</i>). If you've written the article yourself, or put a large effort in it like translating or transscribing, don't forget to add a 'MAP' bullet by changing the &lt;li&gt; tag into &lt;li class="map"&gt;, so that people can see that it is authored by us and can exclusively be found on the MAP.</p>
+<p>Once an article is more or less done, and fit for publishing, think of an appropriate section and category within the site structure, and if one isn’t there yet, add it. Try to keep the organization as logical as possible. Then upload your file into the directory of the section you’ve chosen, and add a link to it in the section overview file (the <i>index.php</i> file in each section directory). If you’ve written the article yourself, or put a large effort in it like translating or transscribing, don’t forget to put your name at the bottom and add a ‘MAP bullet’ by changing the <code>&lt;li&gt;</code> tag into <code>&lt;li class="map"&gt;</code>, so that people can see that it is authored by us and can exclusively be found on the MAP.</p>
 
-<p>Furthermore, if you publish or update a text (unless it's a really minor update), you need to add it to the Last Updates section in <i>main.html</i> so that people can easily see what's been done recently, and also to keep ourselves informed about what the rest has been doing. The updates block is present right after the document title, and if you take a short look at the code, the method of adding an entry should be self-explanatory. Don't forget to change the date, by the way. If the list becomes too long, you can comment out one or two of the latest updates to make it a little shorter again. You can also put update blocks in your texts, which can be quite useful aswell. A block inside your text can hold details about the more minor updates not mentioned of the mainpage, and gives a quick overview of the recent changes of that article only. The method of adding such a block is explained in the example updates block below.</p>
+<p>Furthermore, if you publish or update a text (unless it’s a really minor update), please add it to the Last Updates section in <i>main/index.php</i> so that people can easily see what’s been done recently, and also to keep ourselves informed about what the rest has been doing. The updates block is present right after the document title, and if you take a short look at the code, the method of adding an entry should be self-explanatory. Don’t forget to change the date, by the way. If the list becomes too long, you can move a couple of the oldest updates to <i>main/updates-old.php</i> to make it a little shorter. You can also put update blocks in your texts, which can be quite useful aswell. A block inside your text can hold details about the more minor updates not mentioned of the mainpage, and gives a quick overview of the recent changes of that article only. The method of adding such a block is explained in the example updates block below.</p>
 
 
-<h2>Let's get started...</h2>
+<h2>Document syntax and formatting</h2>
 
-<p>...with the layout tags you should use. Every page on this site is made from a combination of XHTML, CSS2, and Unicode (UTF-8). Here are links to the <a href="http://www.w3.org/TR/html4">HTML documentation</a>, the <a href="http://www.w3.org/TR/xhtml11/">XHTML documentation</a>, and the <a href="http://www.w3.org/TR/REC-CSS2">CSS2 documentation</a>. The HTML and CSS2 docs are quite easy to use once you know how they're structured.</p>
+<p>Let’s get started with the layout tags you should use. Every page on this site is made from a combination of XHTML, CSS, and Unicode (UTF-8). Here are links to the <a href="http://www.w3.org/TR/html4">HTML documentation</a>, the <a href="http://www.w3.org/TR/xhtml1/">XHTML documentation</a>, and the <a href="http://www.w3.org/TR/CSS21/">CSS 2.1 documentation</a>. The HTML and CSS docs are quite easy to use once you know how they’re structured.</p>
 
-<p>XHTML Strict basically works as follows: it is largely the same as HTML Strict (meaning HTML without any of the tags marked Deprecated), with the difference that every tag has to be terminated with a slash (/). So if you write down a &lt;li&gt;, always close it with a &lt;/li&gt;, and the same goes for &lt;p&gt;. Also, don't write &lt;img src="image.jpg"&gt; and &lt;br&gt; but &lt;img src="image.jpg" /&gt; and &lt;br /&gt;. The space before the / in single tags is important for HTML compatibility. Another requirement of XHTML is that all tags shoult be lowercase. And on a sidenote, don't forget that img tags always need an alt="description" property. You can check the correctness of your text by putting it online (in the wip directory), and running it through the <a href="http://validator.w3.org/">W3C MarkUp Validation Service</a>.</p>
+<p>XHTML Strict basically works as follows: it is largely the same as HTML Strict (meaning HTML without any of the tags marked Deprecated), but then written in XML, so every tag has to have an end-tag. If you write a <code>&lt;li&gt;</code>, always close it with a <code>&lt;/li&gt;</code>, and the same goes for <code>&lt;p&gt;</code>. Also, don’t write <code>&lt;img src="image.jpg"&gt;</code> and <code>&lt;br&gt;</code> but add a closing <code>/</code> at the end like so: <code>&lt;img src="image.jpg" /&gt;</code> and <code>&lt;br /&gt;</code>. The space before the / in singleton tags is important for HTML compatibility. Another requirement of XHTML is that all tags shoult be lowercase. And on a sidenote, don’t forget that <code>img</code> tags always need an <code>alt="description"</code> attribute. You can check the correctness of your text by running it through the <a href="http://validator.w3.org/">W3C MarkUp Validation Service</a>.</p>
 
-<p>P.S. For HTML file editing purposes Notepad suits me just fine, but I can imagine getting tired of typing tags sometimes, especially if you need to do some major editing job with lots of search/replace stuff and all. In that case I can recommend the HTML editor 'HTML Kit', I have good experiences with 
-it.</p>
+<p>As for a good editor, my preference is <a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a>.</p>
 
 <p>Well then, here goes the layout tags explanation:</p>
 
 
-<h1>&lt;h1&gt;Main topic&lt;/h1&gt;</h1>
+<h1><code>&lt;h1&gt;</code>Main topic<code>&lt;/h1&gt;</code></h1>
 
 <div class="updates">
 <h1>Latest updates:</h1>
 
-<p><em>4/1/1900</em><br />
-If you update an article, you can add an 'updates' block to your code. Just use the same code as is used here, and place it right after your first heading. By the way, the time notation format is day/month/year.</p>
+<p><em>1900-01-04</em><br />
+If you update an article, you can add an ‘updates’ block to your code. Just use the same code as is used here, and place it right after your first heading. By the way, the time notation format is year-month-day (ISO 8601 time notation).</p>
 
-<p><em>3/1/1900</em><br />
-Also, when you update an article (if it's a really tiny update this isn't really necessary), place a notification in the <i>main.html</i> file, so that people who visit the page can see that it has been changed.</p>
+<p><em>1900-01-03</em><br />
+Also, when you update an article and it is an update worthwhile of mentioning on the front page, place a notification in the <i>main/index.php</i> file, so that people who visit the page can see that it has been changed.</p>
 
-<p><em>2/1/1900</em><br />
-You should outdated updates between &lt;!-- comments --&gt;, so that they can still be viewed in the code for reference (updates usually become 'outdated' when the updates list is getting too long).</p>
+<p><em>1900-01-02</em><br />
+You can put outdated updates between <code>&lt;!-- comments --&gt;</code>, so that they can still be viewed in the code for reference. Updates usually become ‘outdated’ when the updates list is getting too long :). On the main page, outdated updates should be moved into the <i>main/updates-old.php</i> file.</p>
 
 <!--
 <p><em>1/1/1900</em><br />
@@ -61,15 +60,15 @@ outdated</p>
 
 <p>You should put the main topic on the first line of your article, and you can also use it later on to indicate different chapters for example.</p>
 
-<h2>&lt;h2&gt;Sub head&lt;/h2&gt;</h2>
+<h2><code>&lt;h2&gt;</code>Sub head<code>&lt;/h2&gt;</code></h2>
 
-<h3>&lt;h3&gt;Sub sub head ;p&lt;/h3&gt;</h3>
+<h3><code>&lt;h3&gt;</code>Sub sub head<code>&lt;/h3&gt;</code></h3>
 
-<p>&lt;p&gt;&lt;b&gt;<b>Paragraph</b>&lt;/b&gt; blablablablabla blabla blablabla blablablablablablabla bla bla blabla. The word &lt;i&gt;<i>italics</i>&lt;/i&gt; is rather difficult, and &lt;em&gt;<em>emphasis</em>&lt;/em&gt; might need some er, emphasis :). blablablabla bla blabla blablablablablablablablablablabla blablablabla bla blablablabla &lt;a href=""&gt;<a href="">link</a>&lt;/a&gt; end of paragraph.&lt;/p&gt;</p>
+<p><code>&lt;p&gt;</code>Paragraph with something <code>&lt;em&gt;</code><em>that needs emphasis</em><code>&lt;/em&gt;</code>, or even <code>&lt;strong&gt;</code><strong>strong emphasis</strong><code>&lt;/strong&gt;</code>. Some abbreviation for <code>&lt;abbr title="Disk Operating System"&gt;</code><abbr title="Disk Operating System">DOS</abbr><code>&lt;/abbr&gt;</code>, and <code>&lt;dfn&gt;</code><dfn>defenestrate</dfn><code>&lt;/dfn&gt;</code> is a new term that needs to be defined. You can use <code>&lt;i&gt;</code><i>italics</i><code>&lt;/i&gt;</code> to highlight e.g. file names. And finally <code>&lt;a href=""&gt;</code><a href="">a link</a><code>&lt;/a&gt;</code> at the end of the paragraph.<code>&lt;/p&gt;</code></p>
 
 <h2>Some more tags (look at the code)</h2>
 
-<p>Let's display an unordered list of items now...</p>
+<p>Let’s display an unordered list of items now...</p>
 
 <ul>
 <li>first item</li>
@@ -102,6 +101,8 @@ outdated</p>
 Label:	cpl
 	jp Label
 </pre>
+
+<p>Put inline code fragments between <code>&lt;code&gt;</code> and <code>&lt;/code&gt;</code> tags.</p>
 
 
 <p>And tables must only be used if you want to display a table...</p>
@@ -141,32 +142,29 @@ Label:	cpl
 <p>Also, a list of definitions (if you ever need it); Japanese lesson no. 1:</p>
 <dl>
    <dt>Ittadakimasu</dt>
-   <dd>Japese say this when they are about to start dinner. In English, it can be somewhat translated like 'thank you for the food' (they don't really have a way of saying this, how impolite!). In Dutch it is simply 'Smakelijk eten'.</dd>
+   <dd>Japese say this when they are about to start dinner. In English, it can be somewhat translated like ‘thank you for the food’ (they don’t really have a way of saying this, how impolite!). In Dutch it is simply ‘Smakelijk eten’.</dd>
 </dl>
+
+
 
 
 <h2>Use unicode!</h2>
 
-<p>If you save your documents as Unicode (UTF-8), then you don't need to use HTML character entity tags (those annoying ones starting with an &amp; and ending with a ;, they can make your texts a bitch to read :)) for special characters like ë, ×, 日本語, ©, ½, etc. In notepad this can easily be done by selecting UTF-8 as the codepage in the Save As dialog. However, saving as ASCII is fine too, just as long as you don't use any special characters then.</p>
+<p>If you save your documents as Unicode (UTF-8), then you don’t need to use HTML character entity tags (those <code>&amp;something;</code> tags, please don’t use them) for special characters like ë, ×, 日本語, ©, ½, etc. In notepad this can easily be done by selecting UTF-8 as the codepage in the Save As dialog. However, saving as ASCII is fine too, as long as you don’t use any special characters.</p>
 
-<p>However you'll still need to use &amp;amp;, &amp;lt; and &amp;gt; for &amp;, &lt; and &gt;, because in HTML they are escape characters. They also need to be used inside preformatted (&lt;pre&gt;) tags.</p>
+<p>However you’ll still need to use <code>&amp;amp;</code>, <code>&amp;lt;</code> and <code>&amp;gt;</code> for <code>&amp;</code>, <code>&lt;</code> and <code>&gt;</code>, because in HTML they are escape characters. They also need to be used inside preformatted (<code>&lt;pre&gt;</code>) tags.</p>
 
 
 <h2>Custom styles</h2>
 
-<p>You can also add custom styles to them to either block-level tags like &lt;div&gt; and &lt;p&gt; (p adds an empty line while div does not), or inline tags like &lt;span&gt; and &lt;i&gt; (generally you'll want to use the span tag). This can be done with a class="" or a style="" identifier. The former refers to predefined classes in the style sheet, while you can specify any CSS2 style in the latter.</p>
+<p>You can also add custom styles to them to either block-level tags like <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> (<code>p</code> adds an empty line while <code>div</code> does not), or inline tags like <code>&lt;span&gt;</code> and <code>&lt;i&gt;</code> (generally you’ll want to use the span tag). This can be done with a <code>class=""</code> or a <code>style=""</code> identifier. The former refers to predefined classes in the style sheet, while you can specify any CSS2 style in the latter.</p>
 
 <ul>
-<li>Example 1: &lt;span class="inv"&gt;<span class="inv">negative logic (invert)</span>&lt;/span&gt; is an overline usually used for indicating negative logic.</li>
-<li>Example 2: &lt;span style="color: rgb(255,0,0)"&gt;<span style="color: rgb(255,0,0)">red color</span>&lt;/span&gt;, if you must... you really shouldn't do colors, actually :), it is just an example of how to do a custom style. You can btw also use color: red, but that on a sidenote.</li>
+<li>Example 1: <code>&lt;span class="inv"&gt;</code><span class="inv">negative logic (invert)</span><code>&lt;/span&gt;</code> is an overline usually used for indicating negative logic.</li>
+<li>Example 2: <code>&lt;span style="color: rgb(255,0,0)"&gt;</code><span style="color: rgb(255,0,0)">red colour</span><code>&lt;/span&gt;</code>, if you must… you really shouldn't do colors, actually :), it is just an example of how to do a custom style. You can also use named colours like <code>color: red</code>.</li>
 </ul>
 
-<p>Some more examples (note how they are not separated by an empty line because I use &lt;div&gt; instead of &lt;p&gt;) (although you'll generally want to use &lt;br /&gt; for common line breaks):</p>
-
-<div style="text-align: right">&lt;div style="text-align: right"&gt;right-aligned&lt;/div&gt;</div>
-<div style="text-align: center">&lt;div style="text-align: center"&gt;centered&lt;/div&gt;</div>
-
-<h3 style="clear:none">XHTML Conformance</h3>
+<h3>XHTML Conformance</h3>
 
 <p>Finally, here is an extract of a <a href="http://www.mozilla.org/projects/mathml/authoring.html">Mozilla.org document about MathML</a>, which gives a pretty good explanation of the XHTML basics compared to HTML.</p>
 
@@ -213,7 +211,6 @@ documents that will work with Mozilla:</p>
       <tr> 
         <td width="50%" valign="top"> <b> 
           <pre>
-
 &lt;p&gt;MathML
   &lt;ul&gt;
     &lt;li&gt;Presentation markup
@@ -223,13 +220,11 @@ documents that will work with Mozilla:</p>
           </b> </td>
         <td width="50%" valign="top"> <b> 
           <pre>
-
 &lt;p&gt;MathML
   &lt;ul&gt;
     &lt;li&gt;Presentation markup<font color="red">&lt;/li&gt;</font>
     &lt;li&gt;Content markup<font color="red">&lt;/li&gt;</font>
   &lt;/ul&gt;
-
 <font color="red">&lt;/p&gt;</font>
             </pre>
           </b></td>
@@ -239,7 +234,6 @@ documents that will work with Mozilla:</p>
   </li>
   <li><b>Empty elements must include a trailing slash (/)</b> 
     <table border="1" width="75%">
-
       <tr> 
         <td width="50%" align="center"> 
           <p><b>HTML</b></p>
@@ -264,7 +258,6 @@ documents that will work with Mozilla:</p>
         <td width="50%"> 
           <p><b><code>&lt;br <font color="red">/</font>&gt;</code></b></p>
         </td>
-
       </tr>
       <tr> 
         <td width="50%"> 
@@ -275,7 +268,6 @@ documents that will work with Mozilla:</p>
         </td>
       </tr>
     </table>
-
     <br />
   </li>
   <li><b>All attribute values must be quoted</b></li>
@@ -287,7 +279,6 @@ documents that will work with Mozilla:</p>
       <td width="50%" align="center"> 
         <p><b>XHTML</b></p>
       </td>
-
     </tr>
     <tr> 
       <td width="50%"> 
@@ -298,7 +289,6 @@ documents that will work with Mozilla:</p>
       </td>
     </tr>
   </table>
-
   <br />
   <li><b>Attribute-value pairs must be written in full</b></li>
   <table border="1" width="75%">
@@ -309,7 +299,6 @@ documents that will work with Mozilla:</p>
       <td width="50%" align="center"> 
         <p><b>XHTML</b></p>
       </td>
-
     </tr>
     <tr> 
       <td width="50%"> 
@@ -319,7 +308,6 @@ documents that will work with Mozilla:</p>
         <p><b><code>&lt;td nowrap<font color="red">=&quot;nowrap&quot;</font>&gt;</code></b></p>
       </td>
     </tr>
-
   </table>
   <br />
   <li>The root element of the document must be <code>&lt;html&gt;</code> and must designate 

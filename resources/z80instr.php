@@ -1508,10 +1508,10 @@ table.instrset td+td+td+td {
 		</tr>
 		<tr>
 			<td>LD HL,(nn)</td>
-			<td>20</td>
+			<td>16</td>
 			<td>5</td>
 			<td>2A nn nn</td>
-			<td>3</td>
+			<td>5</td>
 		</tr>
 		<tr>
 			<td>LD HL,nn</td>

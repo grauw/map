@@ -82,7 +82,7 @@
     </li>
     <li id="v9938">v9938 / MSX2 VDP
       <ul>
-      <li class="map"><a href="/resources/video/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(work in progress)</em></li>
+      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(work in progress)</em></li>
       <li><a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">Yamaha v9938 Application Manual</a></li>
       </ul>
     </li>

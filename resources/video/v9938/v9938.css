@@ -158,6 +158,10 @@ table.type1.command td:not(:first-child) {
 	text-align: center;
 }
 
+table.stripes tbody td {
+	border-width: 1px;
+}
+
 
 /* Style for tables presenting lists (use thead for heading) */
 

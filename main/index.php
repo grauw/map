@@ -19,29 +19,32 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2009-03-09</em><br />
+The MSX Assembly Page’s address has changed to <a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now accessible in a <a href="http://hg.grauw.nl/map">public repository</a>, and introducing a <a href="/contributing/">Contributing</a> section.</p>
+
 <p><em>2007-06-29</em><br />
-Moved JoyNet documentation to the MAP, and cleaned up, updated and merged text (<a href="/resources/joynet/">link</a>). Updated Funet links, added MSX mailinglist archive links.</p>
+Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist archive links.</p>
 
 <p><em>2006-12-07</em><br />
-Added Tanni’s ‘A taste of VHDL’ tutorial (<a href="/articles/taste_of_vhdl.php">link</a>).</p>
+Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
 
 <p><em>2005-06-01</em><br />
-Added information to the PSG samples article about its logarithmic volume scale, and how to play 8-bit samples on the PSG (<a href="/articles/psg_sample.php">link</a>). Thanks go to Arturo Ragozini for pointing this out.</p>
+Added information to the PSG samples article about its logarithmic volume scale, and how to play <a href="/articles/psg_sample.php">8-bit samples on the PSG</a>. Thanks go to Arturo Ragozini for pointing this out.</p>
 
 <p><em>2005-05-12</em><br />
-Fixed cut-off values in some timings in the Z80 instruction set overview, and added undocumented and R800 instructions and timings (<a href="/resources/z80instr.php">link</a>). Also optimized the Div16 routine, thanks to Flyguille (<a href="/articles/mult_div_shifts.php">link</a>).</p>
+Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added undocumented and R800 instructions and timings. Also optimized the <a href="/articles/mult_div_shifts.php">Div16</a> routine, thanks to Flyguille.</p>
 
 <p><em>2005-03-18</em><br />
-Added information about memory mapper, PPI and subslot select register to I/O ports overview (<a href="/resources/msx_io_ports.php">link</a>).</p>
+Added information about memory mapper, PPI and subslot select register to <a href="/resources/msx_io_ports.php">I/O ports overview</a>.</p>
 
 <p><em>2005-02-10</em><br />
-Added stub article with MSX Basic tips &amp; tricks (<a href="/articles/basic_tips_tricks.php">link</a>).</p>
+Added stub article with <a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a>.</p>
 
 <p><em>2005-01-03</em><br />
-Added code of method to call SUBROM from MSX-DOS (<a href="/sources/callbios.php">link</a>). Additionally, added some slot-management related addresses to the System Variables overview (<a href="/resources/msxsystemvars.php">link</a>).</p>
+Added code of method to <a href="/sources/callbios.php">call SUBROM from MSX-DOS</a>. Additionally, added some slot-management related addresses to the <a href="/resources/msxsystemvars.php">System Variables overview</a>.</p>
 
 <p><em>2004-10-15</em><br />
-Added info about the #6F register for the Gfx9000’s v7040 chip (<a href="/resources/msx_io_ports.php#gfx9000">link</a>).</p>
+Added info about the #6F register for the <a href="/resources/msx_io_ports.php#gfx9000">Gfx9000’s v7040 chip</a>.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

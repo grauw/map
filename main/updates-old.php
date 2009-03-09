@@ -17,76 +17,76 @@
 <h1>Older Updates</h1>
 
 <p><em>2004-09-12</em><br />
-Added Z80 instruction set reference (<a href="/resources/z80instr.php">link</a>). Also, linked to Funet source code repositories, and linkified <acronym title="(MSX-) Disk Operating System version 2">DOS2</acronym> reference table of contents.</p>
+Added <a href="/resources/z80instr.php">Z80 instruction set reference</a>. Also, linked to Funet source code repositories, and linkified <abbr title="(MSX-) Disk Operating System version 2">DOS2</abbr> reference table of contents.</p>
 
 <p><em>2004-07-25</em><br />
-Fixed Mult32 routine (<a href="/articles/mult_div_shifts.php">link</a>).</p>
+Fixed <a href="/articles/mult_div_shifts.php">Mult32 routine</a>.</p>
 
 <p><em>2004-06-23</em><br />
-Added log functions with more detailed <abbr title="User Agent">UA</abbr> stats (<a href="/logs/">link</a>).</p>
+Added <a href="/logs/">log functions</a> with more detailed <abbr title="User Agent">UA</abbr> stats.</p>
 
 <p><em>2004-05-26</em><br />
-Updated key matrices article again (<a href="/articles/keymatrix.php">link</a>), and updated the I/O ports overview with <abbr title="Programmable Sound Generator">PSG</abbr> ports (<a href="/resources/msx_io_ports.php">link</a>).</p>
+Updated <a href="/articles/keymatrix.php">key matrices article</a> again, and updated the <a href="/resources/msx_io_ports.php">I/O ports overview</a> with <abbr title="Programmable Sound Generator">PSG</abbr> ports.</p>
 
 <p><em>2004-05-25</em><br />
-Hosting all resources ourselves now, amongst others because unfortunately many of the documentation files on funet are broken. Also updated key matrices article (<a href="/articles/keymatrix.php">link</a>).</p>
+Hosting all resources ourselves now, amongst others because unfortunately many of the documentation files on funet are broken. Also updated <a href="/articles/keymatrix.php">key matrices article</a>.</p>
 
 <p><em>2004-05-24</em><br />
-Added a stub article about the T9769B (<a href="/resources/engine/t9769b/">link</a>).</p>
+Added a stub article about <a href="/resources/engine/t9769b/">the T9769B</a>.</p>
 
 <p><em>2004-04-21</em><br />
-Added MARMSX's 19268 colors on <abbr title="Machines with Software eXchangeability">MSX</abbr> 2+ article to external articles (<a href="/articles/#extarticles">link</a>).</p>
+Added MARMSX's 19268 colors on <abbr title="Machines with Software eXchangeability">MSX</abbr> 2+ article to <a href="/articles/#extarticles">external articles</a>.</p>
 
 <p><em>2004-04-09</em><br />
-Redesigned site structure somewhat. If you linked or bookmarked one of the section indices, please update your links. Also added a style changer (<a href="/main/styles.php">link</a>).</p>
+Redesigned site structure somewhat. If you linked or bookmarked one of the section indices, please update your links. Also added a <a href="/main/styles.php">style changer</a>.</p>
 
 <p><em>2004-03-03</em><br />
-On capable browsers (Firefox), the <acronym title="MSX Assembly Page">MAP</acronym> is now using true <abbr title="eXtensible HyperText Markup Language">XHTML</abbr>.</p>
+On capable browsers (Firefox), the <abbr title="MSX Assembly Page">MAP</abbr> is now using true <abbr title="eXtensible HyperText Markup Language">XHTML</abbr>.</p>
 
 <p><em>2004-02-17</em><br />
-Added Panasonic FS-A1FM's Modem <acronym title="Read Only Memory">ROM</acronym> info in I/O ports overview (<a href="/resources/msx_io_ports.php">link</a>). Also added link to MARMSX tools.</p>
+Added Panasonic FS-A1FM's Modem <abbr title="Read Only Memory">ROM</abbr> info in <a href="/resources/msx_io_ports.php">I/O ports overview</a>. Also added link to MARMSX tools.</p>
 
 <p><em>2004-02-09</em><br />
-Got rid of the ?p= style linking. This should improve the indexing of the <acronym title="MSX Assembly Page">MAP</acronym> by search engines such as <a href="http://www.google.com/">Google</a>.</p>
+Got rid of the ?p= style linking. This should improve the indexing of the <abbr title="MSX Assembly Page">MAP</abbr> by search engines such as <a href="http://www.google.com/">Google</a>.</p>
 
 <p><em>2004-02-06</em><br />
-In the 'Multiplications and divisions using shifts' article (<a href="/articles/mult_div_shifts.php">link</a>), replaced the square root routine with a new (faster) one, thanks to Ricardo Bittencourt. Also added a link to the <abbr title="Machines with Software eXchangeability">MSX</abbr> Banzai <abbr title="Graphics 9000">Gfx9000</abbr> programmer's manual and Development <acronym title="Frequently Asked Questions">FAQ</acronym> in the external articles section. Finally, added the 'Z80 Bits' article kindly provided by Petr Petyovsky from the Sinclair scene, also in the external articles section.</p>
+In the <a href="/articles/mult_div_shifts.php">Multiplications and divisions article</a>, replaced the square root routine with a new (faster) one, thanks to Ricardo Bittencourt. Also added a link to the <abbr title="Machines with Software eXchangeability">MSX</abbr> Banzai <abbr title="Graphics 9000">Gfx9000</abbr> programmer's manual and Development <abbr title="Frequently Asked Questions">FAQ</abbr> in the external articles section. Finally, added the ‘Z80 Bits’ article kindly provided by Petr Petyovsky from the Sinclair scene, also in the external articles section.</p>
 
 <p><em>2004-02-01</em><br />
-Updated the 'Multiplications and divisions using shifts' article (<a href="/articles/mult_div_shifts.php">link</a>) with the following: fixed bugs in Div16 and renamed it to Div15 because the divider could only be 15 bits max; there is a new Div16 available offering support for all 16 bits. Also changed Mult12 unrolled version's routine name to Mult12U, and optimized the ld l,0 here aswell. Furthermore, added a square root Sqr16 routine by Arjan Bakker (based on the one published in <abbr title="MSX Computer &amp; Club Magazine">MCCM</abbr>). And finally, re-calculated all timing figures to include M1 wait states</p>
+Updated the <a href="/articles/mult_div_shifts.php">Multiplications and divisions article</a> with the following: fixed bugs in Div16 and renamed it to Div15 because the divider could only be 15 bits max; there is a new Div16 available offering support for all 16 bits. Also changed Mult12 unrolled version's routine name to Mult12U, and optimized the ld l,0 here aswell. Furthermore, added a square root Sqr16 routine by Arjan Bakker (based on the one published in <abbr title="MSX Computer &amp; Club Magazine">MCCM</abbr>). And finally, re-calculated all timing figures to include M1 wait states</p>
 
 <p><em>2004-01-19</em><br />
-Applied gamma correction to the screen 8 palette from yesterday's update, to make it <abbr title="Standard Red Green &amp; Blue">sRGB</abbr>, and updated the article again (<a href="/articles/vdp_guide.php#screen8col">link</a>). Thanks to Maarten ter Huurne.</p>
+Applied gamma correction to the <a href="/articles/vdp_guide.php#screen8col">screen 8 palette</a> from yesterday’s update, to make it <abbr title="Standard Red Green &amp; Blue">sRGB</abbr>, and updated the article again. Thanks to Maarten ter Huurne.</p>
 
 <p><em>2004-01-18</em><br />
-Replaced the screen 8 palette file with one with the 'proper' colours for Blue. Also wrote a little explanation why in the <abbr title="Video Display Processor">VDP</abbr> programming guide article (<a href="/articles/vdp_guide.php#screen8col">link</a>). Updated the downloads section aswell with some new tools.</p>
+Replaced the screen 8 palette file with one with the ‘proper’ colours for Blue. Also wrote a little explanation why in the <a href="/articles/vdp_guide.php#screen8col"><abbr title="Video Display Processor">VDP</abbr> programming guide</a>. Updated the downloads section aswell with some new tools.</p>
 
 <p><em>2003-10-04</em><br />
-Added the Japanese keyboard layout (<a href="/articles/keymatrix.php#jap">link</a>). Thanks to Manuel Bilderbeek.</p>
+Added the <a href="/articles/keymatrix.php#jap">Japanese keyboard layout</a>. Thanks to Manuel Bilderbeek.</p>
 
 <p><em>2003-08-27</em><br />
-Updated the keyboard matrices article, and added the Russian keyboard layout (<a href="/articles/keymatrix.php">link</a>). For that, many thanks to Stanislav Borutsky.</p>
+Updated the <a href="/articles/keymatrix.php">keyboard matrices article</a>, and added the Russian keyboard layout. For that, many thanks to Stanislav Borutsky.</p>
 
 <p><em>2003-08-05</em><br />
-Added an 'external articles' section and put up a couple of links to amongst others interesting articles on <abbr title="MCCM Web">MCCW</abbr>.</p>
+Added an ‘external articles’ section and put up a couple of links to amongst others interesting articles on <abbr title="MCCM Web">MCCW</abbr>.</p>
 
 <p><em>2003-07-15</em><br />
-Wrote a resource about I/O ports on <abbr title="Machines with Software eXchangeability">MSX</abbr> (<a href="/resources/msx_io_ports.php">link</a>). Updated the resources section with a fair number of new documentation and added mirrors. Linked to a couple more sites in the links section. Also made the tables look a little prettier.</p>
+Wrote a <a href="/resources/msx_io_ports.php">resource about I/O ports</a> on <abbr title="Machines with Software eXchangeability">MSX</abbr>. Updated the resources section with a fair number of new documentation and added mirrors. Linked to a couple more sites in the links section. Also made the tables look a little prettier.</p>
 
 <p><em>2003-04-24</em><br />
-Updated the fast loops article (<a href="/articles/fast_loops.php">link</a>), added notice to the screensplit programming guide (<a href="/articles/split_guide.php">link</a>).</p>
+Updated the <a href="/articles/fast_loops.php">fast loops article</a>, added notice to the <a href="/articles/split_guide.php">screensplit programming guide</a>.</p>
 
 <p><em>2003-04-23</em><br />
 Official release of the <abbr title="Machines with Software eXchangeability">MSX</abbr> Assembly Page. Also removed the inactive forum section and replaced it with a new links section.</p>
 
 <p><em>2003-04-05</em><br />
-Did some work on the downloads section, introduced '<acronym title="MSX Assembly Page">MAP</acronym>' bullets (<img src="/css/mapbullet.gif" alt="MAP bullet"/>) to indicate MAP-authored documents.</p>
+Did some work on the downloads section, introduced ‘<abbr title="MSX Assembly Page">MAP</abbr> bullets’ (<img src="/css/mapbullet.gif" alt="MAP bullet"/>) to indicate MAP-authored documents.</p>
 
 <p><em>2003-02-18</em><br />
 Added article about playing samples on the PSG.</p>
 
 <p><em>2003-02-03</em><br />
-Added <abbr title="Machines with Software eXchangeability">MSX</abbr>-<acronym title="Disk Operating System">DOS</acronym>2 documentation. Updated <abbr title="Video Display Processor">VDP</abbr> commands speed test article.</p>
+Added <abbr title="Machines with Software eXchangeability">MSX</abbr>-<abbr title="Disk Operating System">DOS</abbr>2 documentation. Updated <abbr title="Video Display Processor">VDP</abbr> commands speed test article.</p>
 
 <p><em>2003-01-22</em><br />
 Updated the <abbr title="Video Display Processor">VDP</abbr> commands speed tests article, added downloads section.</p>

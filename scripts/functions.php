@@ -9,8 +9,6 @@ ini_set('arg_separator.output','&amp;');
 
 // Set globals
 $xhtml = strpos($_SERVER['HTTP_ACCEPT'],'application/xhtml+xml') ? true : false;
-// Update logs
-//doLog();
 
 // gzip pages...
 ob_start("ob_gzhandler");

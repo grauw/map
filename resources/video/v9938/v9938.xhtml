@@ -25,7 +25,7 @@
 
 <address>Mail me at lholst&lt;AT&gt;students.cs.uu.nl if you discover any errors.
 Get the latest version off the MSX Assembly Page (MAP) - 
-<a href="http://map.tni.nl/">http://map.tni.nl/</a></address>
+<a href="http://map.tni.nl/">http://map.grauw.nl/</a></address>
 
 <p>Original scanned by Sean Young</p>
 
@@ -819,9 +819,9 @@ background screen colors as well as blinking, etc.</p>
 
 <pre>
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   R#7    |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-          +---+---+---+---+---+---+---+---+ color register
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7    │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+          └───┴───┴───┴───┴───┴───┴───┴───┘ color register
 
             TC3 to TC0:  Specifies the text color according to TEXT 1
                          and TEXT 2 modes.
@@ -962,23 +962,23 @@ the sprites are disabled will result in a corrupted byte)</p>
 <pre>
                  VRAM (Line)
 
-          TOP  +------------+ 0
-               |            |
-               | CRT Screen |
-               |            |
-        BOTTOM +------------+ 192 or 212   R#23 = 0
-               |            |
-               +------------+ 255
+          TOP  ┌────────────┐ 0
+               │            │
+               │ CRT Screen │
+               │            │
+        BOTTOM ├────────────┤ 192 or 212   R#23 = 0
+               │            │
+               └────────────┘ 255
 
-               +------------+ 0
-               |            |
-               | CRT Screen |
-               |            |
-        BOTTOM +------------+ 136 or 156   R#23 = 200
-               |            |
-          TOP  +------------+ 200
-               | CRT Screen |
-               +------------+ 255
+               ┌────────────┐ 0
+               │            │
+               │ CRT Screen │
+               │            │
+        BOTTOM ├────────────┤ 136 or 156   R#23 = 200
+               │            │
+          TOP  ├────────────┤ 200
+               │ CRT Screen │
+               └────────────┘ 255
 </pre>
 
 
@@ -1094,40 +1094,40 @@ presented in a later chapter.</p>
 
 <pre>
     MSB  7   6   5   4   3   2   1   0  LSB
-       +---+---+---+---+---+---+---+---+
-  R#32 |SX7|SX6|SX5|SX4|SX3|SX2|SX1|SX0| Source X low register
-       +===+===+===+===+===+===+===+===+
-  R#33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |SX8| Source X high register
-       +===+===+===+===+===+===+===+===+
-  R#34 |SY7|SY6|SY5|SY4|SY3|SY2|SY1|SY0| Source Y low register
-       +===+===+===+===+===+===+===+===+
-  R#35 | 0 | 0 | 0 | 0 | 0 | 0 |SY9|SY8| Source Y high register
-       +---+---+---+---+---+---+---+---+
-       +---+---+---+---+---+---+---+---+
-  R#36 |DX7|DX6|DX5|DX4|DX3|DX2|DX1|DX0| Destination X low register
-       +===+===+===+===+===+===+===+===+
-  R#37 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |DX8| Destination X high register
-       +===+===+===+===+===+===+===+===+
-  R#38 |DY7|DY6|DY5|DY4|DY3|DY2|DY1|DY0| Destination Y low register
-       +===+===+===+===+===+===+===+===+
-  R#39 | 0 | 0 | 0 | 0 | 0 | 0 |DY9|DY8| Destination Y high register
-       +---+---+---+---+---+---+---+---+
-       +---+---+---+---+---+---+---+---+
-  R#40 |NX7|NX6|NX5|NX4|NX3|NX2|NX1|NX0| Number of dots X low register
-       +===+===+===+===+===+===+===+===+
-  R#41 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |NX8| Number of dots X high register
-       +===+===+===+===+===+===+===+===+
-  R#42 |NY7|NY6|NY5|NY4|NY3|NY2|NY1|NY0| Number of dots Y low register
-       +===+===+===+===+===+===+===+===+
-  R#43 | 0 | 0 | 0 | 0 | 0 | 0 |NY9|NY8| Number of dots Y high register
-       +---+---+---+---+---+---+---+---+
-       +---+---+---+---+---+---+---+---+
-  R#44 |CH3|CH2|CH1|CH0|CL3|CL2|CL1|CL0| Color register
-       +===+===+===+===+===+===+===+===+
-  R#45 | 0 |MXC|MXD|MXS|DIY|DIX|EQ |MAJ| Argument register
-       +===+===+===+===+===+===+===+===+
-  R#46 |CM3|CM2|CM1|CM0|LO3|LO2|LO1|LO0| Command register
-       +---+---+---+---+---+---+---+---+
+       ┌───┬───┬───┬───┬───┬───┬───┬───┐
+  R#32 │SX7│SX6│SX5│SX4│SX3│SX2│SX1│SX0│ Source X low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#33 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │SX8│ Source X high register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#34 │SY7│SY6│SY5│SY4│SY3│SY2│SY1│SY0│ Source Y low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#35 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │SY9│SY8│ Source Y high register
+       └───┴───┴───┴───┴───┴───┴───┴───┘
+       ┌───┬───┬───┬───┬───┬───┬───┬───┐
+  R#36 │DX7│DX6│DX5│DX4│DX3│DX2│DX1│DX0│ Destination X low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#37 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │DX8│ Destination X high register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#38 │DY7│DY6│DY5│DY4│DY3│DY2│DY1│DY0│ Destination Y low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#39 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │DY9│DY8│ Destination Y high register
+       └───┴───┴───┴───┴───┴───┴───┴───┘
+       ┌───┬───┬───┬───┬───┬───┬───┬───┐
+  R#40 │NX7│NX6│NX5│NX4│NX3│NX2│NX1│NX0│ Number of dots X low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#41 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │NX8│ Number of dots X high register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#42 │NY7│NY6│NY5│NY4│NY3│NY2│NY1│NY0│ Number of dots Y low register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#43 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │NY9│NY8│ Number of dots Y high register
+       └───┴───┴───┴───┴───┴───┴───┴───┘
+       ┌───┬───┬───┬───┬───┬───┬───┬───┐
+  R#44 │CH3│CH2│CH1│CH0│CL3│CL2│CL1│CL0│ Color register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#45 │ 0 │MXC│MXD│MXS│DIY│DIX│EQ │MAJ│ Argument register
+       ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+  R#46 │CM3│CM2│CM1│CM0│LO3│LO2│LO1│LO0│ Command register
+       └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -1141,9 +1141,9 @@ the status when the MSX-VIDEO is read.</p>
 
 <pre>
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#0    | F |5S | C |Fifth sprite number| Status register 0
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#0    │ F │5S │ C │Fifth sprite number│ Status register 0
+          └───┴───┴───┴───┴───┴───┴───┴───┘
      F:   Vertical scanning interrupt flag
           When S#0 is read, this flag is reset.
 
@@ -1158,9 +1158,9 @@ the status when the MSX-VIDEO is read.</p>
           The number of the fifth (or ninth) sprite.
 
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#1    |FL |LPS| Identification #  |FH | Status register 1
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#1    │FL │LPS│ Identification #  │FH │ Status register 1
+          └───┴───┴───┴───┴───┴───┴───┴───┘
      FL:  Lightpen flag (Lightpen flag set)
           If the lightpen is to detect light, this bit as well as the
           IE2 bit must both set in order for an interrupt to be
@@ -1188,9 +1188,9 @@ the status when the MSX-VIDEO is read.</p>
           is read, FH is reset.
 
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#2    |TR |VR |HR |BD | 1 | 1 |EO |CE | Status register 2
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#2    │TR │VR │HR │BD │ 1 │ 1 │EO │CE │ Status register 2
+          └───┴───┴───┴───┴───┴───┴───┴───┘
      TR:  Transfer ready flag
           When the CPU sends commands to the VRAM and other devices,
           the CPU checks this flag while transferring data. When this
@@ -1221,15 +1221,15 @@ the status when the MSX-VIDEO is read.</p>
 
 
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#3    |X7 |X6 |X5 |X4 |X3 |X2 |X1 |X0 | Column register low
-          +===+===+===+===+===+===+===+===+
-   S#4    | 1 | 1 | 1 | 1 | 1 | 1 | 1 |X8 | Column register high
-          +===+===+===+===+===+===+===+===+
-   S#5    |Y7 |Y6 |Y5 |Y4 |Y3 |Y2 |Y1 |Y0 | Row register low
-          +===+===+===+===+===+===+===+===+
-   S#6    | 1 | 1 | 1 | 1 | 1 | 1 |EO |Y8 | Row register high
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#3    │X7 │X6 │X5 │X4 │X3 │X2 │X1 │X0 │ Column register low
+          ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   S#4    │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │X8 │ Column register high
+          ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   S#5    │Y7 │Y6 │Y5 │Y4 │Y3 │Y2 │Y1 │Y0 │ Row register low
+          ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   S#6    │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │EO │Y8 │ Row register high
+          └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 <p>The above registers are set to indicate the collision location of
@@ -1238,9 +1238,9 @@ of the mouse.</p>
 
 <pre>
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#7    |C7 |C6 |C5 |C4 |C3 |C2 |C1 |C0 | Color register
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#7    │C7 │C6 │C5 │C4 │C3 │C2 │C1 │C0 │ Color register
+          └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 <p>The above color register is used when the POINT and VRAM to CPU
@@ -1248,11 +1248,11 @@ commands are executed. The VRAM data is set in this register.</p>
 
 <pre>
        MSB  7   6   5   4   3   2   1   0  LSB
-          +---+---+---+---+---+---+---+---+
-   S#8    |BX7|BX6|BX5|BX4|BX3|BX2|BX1|BX0| Border X register low
-          +===+===+===+===+===+===+===+===+
-   S#9    | 1 | 1 | 1 | 1 | 1 | 1 | 1 |BX8| Border X register high
-          +---+---+---+---+---+---+---+---+
+          ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   S#8    │BX7│BX6│BX5│BX4│BX3│BX2│BX1│BX0│ Border X register low
+          ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   S#9    │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │BX8│ Border X register high
+          └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 <p>When the search command is executed and the border color has been
@@ -1294,15 +1294,15 @@ detected, the X coordinate is set in the above registers.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 0*| 0*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 1*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 1*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in TEXT 1 mode
 ** Indicates negative logic
 All other bits are set accordingly
@@ -1325,9 +1325,9 @@ All other bits are set accordingly
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#4     | 0 | 0 |A16|A15|A14|A13|A12|A11| Pattern generator table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 
@@ -1383,9 +1383,9 @@ All other bits are set accordingly
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15|A14|A13|A12|A11|A10| Pattern name table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 <h4 id="pt1-3-2-3-1">Pattern name table</h4>
@@ -1520,15 +1520,15 @@ All other bits are set accordingly
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 1*| 0*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 1*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 1*│ 0*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 1*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in TEXT 2 mode
 ** Indicates negative logic
 </pre>
@@ -1552,9 +1552,9 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#4     | 0 | 0 |A16|A15|A14|A13|A12|A11| Pattern generator table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 <ul>
@@ -1615,9 +1615,9 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15|A14|A13|A12| 1 | 1 | Pattern name table
-           +---+---+---+---+---+---+---+---+  base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│A14│A13│A12│ 1 │ 1 │ Pattern name table
+           └───┴───┴───┴───┴───┴───┴───┴───┘  base address register
 </pre>
 
 
@@ -1666,11 +1666,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#3     |A13|A12|A11|A10|A9 | 1 | 1 | 1 | Color table
-           +===+===+===+===+===+===+===+===+
-   R#10    | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| base address registers
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#3     │A13│A12│A11│A10│A9 │ 1 │ 1 │ 1 │ Color table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#10    │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│A14│ base address registers
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -1705,9 +1705,9 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-           +---+---+---+---+---+---+---+---+ color register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+           └───┴───┴───┴───┴───┴───┴───┴───┘ color register
 </pre>
 
 <ul>
@@ -1718,9 +1718,9 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#12    |T23|T22|T21|T20|BC3|BC2|BC1|BC0| Text color/Back color
-           +---+---+---+---+---+---+---+---+ register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#12    │T23│T22│T21│T20│BC3│BC2│BC1│BC0│ Text color/Back color
+           └───┴───┴───┴───┴───┴───┴───┴───┘ register
 </pre>
 
 
@@ -1933,15 +1933,15 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 0*| 0*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 1*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 1*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in MULTICOLOR mode
 ** Indicates negative logic
 </pre>
@@ -2176,14 +2176,14 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10|A9 |A8 |A7 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+ base address register
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15|
-           +---+---+---+---+---+---+---+---+
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+  table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘  table base address
                                               register
 </pre>
 
@@ -2273,15 +2273,15 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 0*| 0*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 1 mode
 ** Indicates negative logic
 </pre>
@@ -2302,9 +2302,9 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#4     | 0 | 0 |A16|A15|A14|A13|A12|A11| Pattern generator table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 
@@ -2358,9 +2358,9 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15|A14|A13|A12|A11|A10| Pattern name table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 
@@ -2399,12 +2399,12 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop color
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ register
-             |   |   |   |   |   |   |   |
-             |   |   |   |   +---+---+---+-- Specifies backdrop color
-             +---+---+---+------------------ Ignored
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ register
+             │   │   │   │   │   │   │   │
+             │   │   │   │   └───┴───┴───┴── Specifies backdrop color
+             └───┴───┴───┴────────────────── Ignored
 </pre>
 
 
@@ -2424,30 +2424,30 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#3     |A13|A12|A11|A10|A9 |A8 |A7 |A6 | Color table
-           +===+===+===+===+===+===+===+===+
-   R#10    | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| base address register
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#3     │A13│A12│A11│A10│A9 │A8 │A7 │A6 │ Color table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#10    │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│A14│ base address register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 <h4 id="pt1-6-3-5-1">Color table</h4>
 
 <pre>
-             +---+---+---+------------------ Color code for part 1
-             |   |   |   |   +---+---+---+-- Color code for part 0
-             |   |   |   |   |   |   |   |
+             ┌───┬───┬───┬────────────────── Color code for part 1
+             │   │   │   │   ┌───┬───┬───┬── Color code for part 0
+             │   │   │   │   │   │   │   │
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+ Base address
-     0     |FC3|FC2|FC1|FC0|BC3|BC2|BC1|BC0| Pattern Nos. 0 to 7
-           +---+---+---+---+---+---+---+---+
-     1     |FC3|FC2|FC1|FC0|BC3|BC2|BC1|BC0| Pattern Nos. 8 to 15
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐ Base address
+     0     │FC3│FC2│FC1│FC0│BC3│BC2│BC1│BC0│ Pattern Nos. 0 to 7
+           ├───┼───┼───┼───┼───┼───┼───┼───┤
+     1     │FC3│FC2│FC1│FC0│BC3│BC2│BC1│BC0│ Pattern Nos. 8 to 15
+           ├───┼───┼───┼───┼───┼───┼───┼───┤
      .     . . . . . . . . . . . . . . . . .    .     .   .  . .
      .     . . . . . . . . . . . . . . . . .    .     .   .  . .
-           +---+---+---+---+---+---+---+---+
-    31     |FC3|FC2|FC1|FC0|BC3|BC2|BC1|BC0| Pattern Nos. 248 to 255
-           +---+---+---+---+---+---+---+---+
+           ├───┼───┼───┼───┼───┼───┼───┼───┤
+    31     │FC3│FC2│FC1│FC0│BC3│BC2│BC1│BC0│ Pattern Nos. 248 to 255
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -2462,14 +2462,14 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10|A9 |A8 |A7 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+ base address register
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15|
-           +---+---+---+---+---+---+---+---+
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+  table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘  table base address
                                               register
 </pre>
 
@@ -2481,44 +2481,44 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 
 <pre>
-00000H  +----------+
-        | Sprite   |
-        | Generator|
-        | Table    |
-        |  (1024   |
-        |   bytes) |
-00400H  +----------+
-        | Pattern  |
-        | Name     |    .+----------+ 00700H
-        | Table    |   . | Sprite   |
-        |  (768    |  .  | attribute|
-        |   bytes) | .   | table    |
-00700H  +----------+.    |  (128    |
-        |          |     |   bytes) |
-        |          |     +----------+ 00780H
-00800H  +----------+     | Color    |
-        |          |.    | table    |
-        |          | .   +(32 bytes)+ 007A0H
-        |          |  .  |          |
-        |          |   . |          |
-        |          |    .+----------+ 00800H
-        |          |
-        | Pattern  |
-00C00H  | Generator|
-        | Table    |
-        |  (2048   |
-        |   bytes) |
-        |          |
-        |          |
-        |          |
-01000H  +----------+
+00000H  ┌──────────┐
+        │ Sprite   │
+        │ Generator│
+        │ Table    │
+        │  (1024   │
+        │   bytes) │
+00400H  ├──────────┤
+        │ Pattern  │
+        │ Name     │    .┌──────────┐ 00700H
+        │ Table    │   . │ Sprite   │
+        │  (768    │  .  │ attribute│
+        │   bytes) │ .   │ table    │
+00700H  ├──────────┤.    │  (128    │
+        │          │     │   bytes) │
+        │          │     ├──────────┤ 00780H
+00800H  ├──────────┤     │ Color    │
+        │          │.    │ table    │
+        │          │ .   ├(32 bytes)┤ 007A0H
+        │          │  .  │          │
+        │          │   . │          │
+        │          │    .└──────────┘ 00800H
+        │          │
+        │ Pattern  │
+00C00H  │ Generator│
+        │ Table    │
+        │  (2048   │
+        │   bytes) │
+        │          │
+        │          │
+        │          │
+01000H  ├──────────┤
         .          .
         .          .        A maximum of 32 pages may be allocated in
-        .          .        the same manner (using a 128K-byte VRAM).
+        .          .        the same manner (using a 128K─byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+
+        │          │
+        │          │
+1FFFFH  └──────────┘
 </pre>
 
 
@@ -2563,18 +2563,18 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 0*| 0*| 0 | Mode register 0
-           +---+---+---+---+---+-+-+-+-+---+
-                                 |   +------ 0, 1 for GRAPHIC 2 mode
-                                 +---------- 1, 0 for GRAPHIC 3 mode
-           +---+---+---+---+---+---+---+---+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
+           └───┴───┴───┴───┴───┴─┬─┴─┬─┴───┘
+                                 │   └────── 0, 1 for GRAPHIC 2 mode
+                                 └────────── 1, 0 for GRAPHIC 3 mode
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 2 mode or GRAPHIC 3 mode
 ** Indicates negative logic
 </pre>
@@ -2597,9 +2597,9 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#4     | 0 | 0 |A16|A15|A14|A13| 1 | 1 | Pattern generator table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#4     │ 0 │ 0 │A16│A15│A14│A13│ 1 │ 1 │ Pattern generator table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 
@@ -2616,11 +2616,11 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#3     |A13| 1 | 1 | 1 | 1 | 1 | 1 | 1 | Color table address
-           +===+===+===+===+===+===+===+===+
-   R#10    | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| register
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#3     │A13│ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ Color table address
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#10    │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│A14│ register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -2629,12 +2629,12 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop color
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ register
-             |   |   |   |   |   |   |   |
-             |   |   |   |   +---+---+---+-- Specifies backdrop color
-             +---+---+---+------------------ Ignored
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ register
+             │   │   │   │   │   │   │   │
+             │   │   │   │   └───┴───┴───┴── Specifies backdrop color
+             └───┴───┴───┴────────────────── Ignored
 </pre>
 
 
@@ -2646,62 +2646,62 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <pre>
 (X=1, O=0)
                             MSB 76543210 LSB      MSB 76543210 LSB
-                      +-----   0 OOXXXOOO              OOOOOOOO
-                      |        1 OXOOOXOO              OOOOOOOO
-                      |        2 XOOOOOXO              OOOOOOOO
-Pattern number 0   ---+        3 XOOOOOXO              OOOOOOOO
-                      |        4 XXXXXXXO              OOOOOOOO
-                      |        5 XOOOOOXO              OOOOOOOO
-                      |        6 XOOOOOXO              OOOOOOOO
-                      +-----   7 OOOOOOOO              OOOOOOOO
-                      +-----   8 XXXXXXOO              OOOOOOOO
-                      |        9 XOOOOOXO              OOOOOOOO
-                      |       10 XOOOOOXO              OOOOOOOO
-Pattern number 0   ---+       11 XXXXXXOO              OOOOOOOO
-                      |       12 XOOOOOXO              OOOOOOOO
-                      |       13 XOOOOOXO              OOOOOOOO
-                      |       14 XXXXXXOO              OOOOOOOO
-                      +-----  15 OOOOOOOO              OOOOOOOO
+                      ┌─────   0 OOXXXOOO              OOOOOOOO
+                      │        1 OXOOOXOO              OOOOOOOO
+                      │        2 XOOOOOXO              OOOOOOOO
+Pattern number 0   ───┤        3 XOOOOOXO              OOOOOOOO
+                      │        4 XXXXXXXO              OOOOOOOO
+                      │        5 XOOOOOXO              OOOOOOOO
+                      │        6 XOOOOOXO              OOOOOOOO
+                      └─────   7 OOOOOOOO              OOOOOOOO
+                      ┌─────   8 XXXXXXOO              OOOOOOOO
+                      │        9 XOOOOOXO              OOOOOOOO
+                      │       10 XOOOOOXO              OOOOOOOO
+Pattern number 0   ───┤       11 XXXXXXOO              OOOOOOOO
+                      │       12 XOOOOOXO              OOOOOOOO
+                      │       13 XOOOOOXO              OOOOOOOO
+                      │       14 XXXXXXOO              OOOOOOOO
+                      └─────  15 OOOOOOOO              OOOOOOOO
                          .     .      .                    .
                          .     .      .                    .
                          .     .      .                    .
-                      +-----2040 XOXOXOXO              OOOOOOOO
-                      |     2041 OXOXOXOX              OOOOOOOO
-                      |     2042 XOXOXOXO              OOOOOOOO
-Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
-                      |     2044 XOXOXOXO              OOOOOOOO
-                      |     2045 OXOXOXOX              OOOOOOOO
-                      |     2046 XOXOXOXO              OOOOOOOO
-                      +-----2047 OXOXOXOX              OOOOOOOO
-                                                       |  ||  |
-                            Color pattern 1 -----------+--+|  |
-                            Color pattern 0 ---------------+--+
+                      ┌─────2040 XOXOXOXO              OOOOOOOO
+                      │     2041 OXOXOXOX              OOOOOOOO
+                      │     2042 XOXOXOXO              OOOOOOOO
+Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
+                      │     2044 XOXOXOXO              OOOOOOOO
+                      │     2045 OXOXOXOX              OOOOOOOO
+                      │     2046 XOXOXOXO              OOOOOOOO
+                      └─────2047 OXOXOXOX              OOOOOOOO
+                                                       │  ││  │
+                            Color pattern 1 ───────────┴──┘│  │
+                            Color pattern 0 ───────────────┴──┘
 
 
      Pattern generator       Color table
            table
 
-   0 |             |       |             |
-     +-------------+       +-------------+ -+
-     | 256 patterns|       | 256 colors  |  |
-     | for upper   |       | for upper   |  |
-     | third of    |       | third of    |  |. 
-     | screen      |       | screen      |  | ..  +-----------------+
-     | (2048 bytes)|       | (2048 bytes)|  |   ..|     Upper       |
-2048 +-------------+       +-------------+ -+     |     Third       |
-     | 256 patterns|       | 256 colors  |  |     +-----------------+
-     | for middle  |       | for middle  |  |.....|     Middle      |
-     | third of    |       | third of    |  |     |     Third       |
-     | screen      |       | screen      |  |     +-----------------+
-     | (2048 bytes)|       | (2048 bytes)|  |     |     Lower       |
-4096 +-------------+       +-------------+ -+    .|     Third       |
-     | 256 patterns|       | 256 colors  |  |   . +-----------------+
-     | for lower   |       | for lower   |  | ..     Display screen
-     | third of    |       | third of    |  |.
-     | screen      |       | screen      |  |
-     | (2048 bytes)|       | (2048 bytes)|  |
-6144 +-------------+       +-------------+ -+
-     |             |       |             |
+   0 │             │       │             │
+     ├─────────────┤       ├─────────────┤ ─┐
+     │ 256 patterns│       │ 256 colors  │  │
+     │ for upper   │       │ for upper   │  │
+     │ third of    │       │ third of    │  │. 
+     │ screen      │       │ screen      │  │ ..  ┌─────────────────┐
+     │ (2048 bytes)│       │ (2048 bytes)│  │   ..│     Upper       │
+2048 ├─────────────┤       ├─────────────┤ ─┤     │     Third       │
+     │ 256 patterns│       │ 256 colors  │  │     ├─────────────────┤
+     │ for middle  │       │ for middle  │  │.....│     Middle      │
+     │ third of    │       │ third of    │  │     │     Third       │
+     │ screen      │       │ screen      │  │     ├─────────────────┤
+     │ (2048 bytes)│       │ (2048 bytes)│  │     │     Lower       │
+4096 ├─────────────┤       ├─────────────┤ ─┤    .│     Third       │
+     │ 256 patterns│       │ 256 colors  │  │   . └─────────────────┘
+     │ for lower   │       │ for lower   │  │ ..     Display screen
+     │ third of    │       │ third of    │  │.
+     │ screen      │       │ screen      │  │
+     │ (2048 bytes)│       │ (2048 bytes)│  │
+6144 ├─────────────┤       ├─────────────┤ ─┘
+     │             │       │             │
 </pre>
 
 
@@ -2721,19 +2721,19 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 <h4 id="pt1-7-3-5-1">Pattern name table</h4>
 
 <pre>
-     +------------------------------------------------------+
-     | ( 0, 0)    Pattern display area for upper    (31, 0) |
-     |              third of screen (256 bytes)             |
-     | ( 0, 7)                                      (31, 7) |
-     +------------------------------------------------------+
-     | ( 0, 8)    Pattern display area for middle   (31, 8) |
-     |              third of screen (256 bytes)             |
-     | ( 0,15)                                      (31,15) |
-     +------------------------------------------------------+
-     | ( 0,16)    Pattern display area for lower    (31,16) |
-     |              third of screen (256 bytes)             |
-     | ( 0,23)                                      (31,23) |
-     +------------------------------------------------------+
+     ┌──────────────────────────────────────────────────────┐
+     │ ( 0, 0)    Pattern display area for upper    (31, 0) │
+     │              third of screen (256 bytes)             │
+     │ ( 0, 7)                                      (31, 7) │
+     ├──────────────────────────────────────────────────────┤
+     │ ( 0, 8)    Pattern display area for middle   (31, 8) │
+     │              third of screen (256 bytes)             │
+     │ ( 0,15)                                      (31,15) │
+     ├──────────────────────────────────────────────────────┤
+     │ ( 0,16)    Pattern display area for lower    (31,16) │
+     │              third of screen (256 bytes)             │
+     │ ( 0,23)                                      (31,23) │
+     └──────────────────────────────────────────────────────┘
 </pre>
 
 
@@ -2744,9 +2744,9 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15|A14|A13|A12|A11|A10| Pattern name table
-           +---+---+---+---+---+---+---+---+ base address register
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
+           └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
 </pre>
 
 
@@ -2754,28 +2754,28 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 
 <pre>
-     |         |
-     +---------+ Base address  --------------+
-     | ( 0, 0) |   0                         |
-     +---------+                             |
-     | ( 1, 0) |   1                         +-- For upper third
-     +---------+                             |    of screen
-     .         .   .                         |
-     +---------+                             |
-     | (31, 7) |  255                        |
-     +---------+         --------------------+
-     | ( 0, 8) |  256                        |
-     +---------+                             +-- For middle third
-     .         .   .                         |    of screen
-     +---------+                             |
-     | (31,15) |  511                        |
-     +---------+         --------------------+
-     | ( 0,16) |  512                        |
-     +---------+                             +-- For lower third
-     .         .   .                         |    of screen
-     +---------+                             |
-     | (31,23) | 767 (byte)                  |
-     +---------+         --------------------+
+     │         │
+     ├─────────┤ Base address  ──────────────┐
+     │ ( 0, 0) │   0                         │
+     ├─────────┤                             │
+     │ ( 1, 0) │   1                         ├── For upper third
+     ├─────────┤                             │    of screen
+     .         .   .                         │
+     ├─────────┤                             │
+     │ (31, 7) │  255                        │
+     ├─────────┤         ────────────────────┤
+     │ ( 0, 8) │  256                        │
+     ├─────────┤                             ├── For middle third
+     .         .   .                         │    of screen
+     ├─────────┤                             │
+     │ (31,15) │  511                        │
+     ├─────────┤         ────────────────────┤
+     │ ( 0,16) │  512                        │
+     ├─────────┤                             ├── For lower third
+     .         .   .                         │    of screen
+     ├─────────┤                             │
+     │ (31,23) │ 767 (byte)                  │
+     ├─────────┤         ────────────────────┘
 </pre>
 
 
@@ -2795,14 +2795,14 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10|A9 |A8 |A7 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+ base address register
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15|
-           +---+---+---+---+---+---+---+---+
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+  table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘  table base address
                                               register
 </pre>
 
@@ -2814,53 +2814,53 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 
 <pre>
-00000H  +----------+
-        | Pattern  |
-        | Generator|
-        | Table    |
-        | Upper    |
-00800H  +----------+
-        | Pattern  |
-        | Generator|
-        | Table    |
-        | Middle   |
-01000H  +----------+
-        | Pattern  |    .+----------+ 01C00H
-        | Generator|   . | Sprite   |
-        | Table    |  .  | generator|
-        | Lower    | .   | table    |
-01800H  +----------+.    |          |
-        |          |     |          |
-        |          |     +----------+ 01C00H
-02000H  +----------+     | Sprite   |
-        | Color    |.    | attribute|
-        | Table    | .   | table    |
-        | Upper    |  .  +----------+ 01C80H
-02800H  +----------+  .  |          |
-        | Color    |   . |          |
-        | Table    |    .|          |
-        | Middle   |     +----------+ 02000H
-        +----------+
-03000H  | Color    |
-        | Table    |
-        | Lower    |
-03800H  +----------+
-        | Pattern  |
-        | Name     |
-        | Table    |
-03B00H  +----------+
-        | Table    |
-04000H  +----------+
-        |          |
-        |          |
-        |          |
+00000H  ┌──────────┐
+        │ Pattern  │
+        │ Generator│
+        │ Table    │
+        │ Upper    │
+00800H  ├──────────┤
+        │ Pattern  │
+        │ Generator│
+        │ Table    │
+        │ Middle   │
+01000H  ├──────────┤
+        │ Pattern  │    .┌──────────┐ 01C00H
+        │ Generator│   . │ Sprite   │
+        │ Table    │  .  │ generator│
+        │ Lower    │ .   │ table    │
+01800H  ├──────────┤.    │          │
+        │          │     │          │
+        │          │     ├──────────┤ 01C00H
+02000H  ├──────────┤     │ Sprite   │
+        │ Color    │.    │ attribute│
+        │ Table    │ .   │ table    │
+        │ Upper    │  .  ├──────────┤ 01C80H
+02800H  ├──────────┤  .  │          │
+        │ Color    │   . │          │
+        │ Table    │    .│          │
+        │ Middle   │     └──────────┘ 02000H
+        ├──────────┤
+03000H  │ Color    │
+        │ Table    │
+        │ Lower    │
+03800H  ├──────────┤
+        │ Pattern  │
+        │ Name     │
+        │ Table    │
+03B00H  ├──────────┤
+        │ Table    │
+04000H  ├──────────┤
+        │          │
+        │          │
+        │          │
         .          .
         .          .        A maximum of 8 pages may be allocated in
         .          .        the same manner (using a 128K-byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+
+        │          │
+        │          │
+1FFFFH  └──────────┘
 </pre>
 
 
@@ -2871,53 +2871,53 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 
 <pre>
-00000H  +----------+
-        | Pattern  |
-        | Generator|
-        | Table    |
-        | Upper    |
-00800H  +----------+
-        | Pattern  |
-        | Generator|
-        | Table    |
-        | Middle   |
-01000H  +----------+
-        | Pattern  |    .+----------+ 01C00H
-        | Generator|   . | Sprite   |
-        | Table    |  .  | generator|
-        | Lower    | .   | table    |
-01800H  +----------+.    |          |
-        |          |     |          |
-        |          |     +----------+ 01C00H
-02000H  +----------+     | Sprite   |
-        | Color    |.    | color    |
-        | Table    |.    | table    |
-        | Upper    | .   +----------+ 01E00H
-02800H  +----------+ .   | Sprite   |
-        | Color    |  .  | attribute|
-        | Table    |  .  | table    |
-        | Middle   |   . +----------+ 01E80H
-        +----------+   . |          |
-03000H  | Color    |    .|          |
-        | Table    |    .+----------+ 02000H
-        | Lower    |
-03800H  +----------+
-        | Pattern  |
-        | Name     |
-        | Table    |
-03B00H  +----------+
-        | Table    |
-04000H  +----------+
-        |          |
-        |          |
-        |          |
+00000H  ┌──────────┐
+        │ Pattern  │
+        │ Generator│
+        │ Table    │
+        │ Upper    │
+00800H  ├──────────┤
+        │ Pattern  │
+        │ Generator│
+        │ Table    │
+        │ Middle   │
+01000H  ├──────────┤
+        │ Pattern  │    .┌──────────┐ 01C00H
+        │ Generator│   . │ Sprite   │
+        │ Table    │  .  │ generator│
+        │ Lower    │ .   │ table    │
+01800H  ├──────────┤.    │          │
+        │          │     │          │
+        │          │     ├──────────┤ 01C00H
+02000H  ├──────────┤     │ Sprite   │
+        │ Color    │.    │ color    │
+        │ Table    │.    │ table    │
+        │ Upper    │ .   ├──────────┤ 01E00H
+02800H  ├──────────┤ .   │ Sprite   │
+        │ Color    │  .  │ attribute│
+        │ Table    │  .  │ table    │
+        │ Middle   │   . ├──────────┤ 01E80H
+        ├──────────┤   . │          │
+03000H  │ Color    │    .│          │
+        │ Table    │    .└──────────┘ 02000H
+        │ Lower    │
+03800H  ├──────────┤
+        │ Pattern  │
+        │ Name     │
+        │ Table    │
+03B00H  ├──────────┤
+        │ Table    │
+04000H  ├──────────┤
+        │          │
+        │          │
+        │          │
         .          .
         .          .        A maximum of 8 pages may be allocated in
         .          .        the same manner (using a 128K-byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+
+        │          │
+        │          │
+1FFFFH  └──────────┘
 </pre>
 
 
@@ -2954,15 +2954,15 @@ Pattern number 255 ---+     2043 OXOXOXOX              OOOOOOOO
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 0*| 1*| 1*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 0*│ 1*│ 1*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 4 mode
 ** Indicates negative logic
 </pre>
@@ -2985,28 +2985,28 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-  +----> X
-  |  +-------+-------+..................+---------+---------+
-  |  |(0,  0)|(1,  0)|                  |(254,  0)|(255,  0)|
-  v  +-------+-------+                  +---------+---------+
-  Y  |(0,  1)|                                    |(255,  1)|
-     +-------+            +---------+             +---------+
-     |                    |  (X,Y)  |                       |
-     .                    +---------+                       .
+  ┌────> X
+  │  ┌───────┬───────┬..................┬─────────┬─────────┐
+  │  │(0,  0)│(1,  0)│                  │(254,  0)│(255,  0)│
+  ˅  ├───────┼───────┘                  └─────────┼─────────┤
+  Y  │(0,  1)│                                    │(255,  1)│
+     ├───────┘            ┌─────────┐             └─────────┤
+     │                    │  (X,Y)  │                       │
+     .                    └─────────┘                       .
      .                                                      .
      .                                                      .
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,191)|                                    |(255,191)|
-     +-------+------------------------------------+---------+   LN = 0
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,191)│                                    │(255,191)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 0
 
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,211)|                                    |(255,211)|
-     +-------+------------------------------------+---------+   LN = 1
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,211)│                                    │(255,211)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 1
 </pre>
 
 
@@ -3018,11 +3018,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15| 1 | 1 | 1 | 1 | 1 | Pattern name table
-           +---+-+-+-+-+---+---+---+---+---+ base address register
-                 |   |
-                 +---+---------------------- These two bits specify
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
+           └───┴─┬─┴─┬─┴───┴───┴───┴───┴───┘ base address register
+                 │   │
+                 └───┴────────────────────── These two bits specify
                                              the page to display
 </pre>
 
@@ -3035,27 +3035,27 @@ All other bits are set accordingly.</p>
 
 <pre>
   MSB     7   6   5   4   3   2   1   0    LSB
-       +----+---+---+---+---+---+---+---+
-    1  |    (  0,  0)   |   (  1,  0)   |  Base address
-       +----+---+---+---+---+---+---+---+
-    2  |    (  2,  0)   |   (  3,  0)   |  Set the color code for each
-       +----+---+---+---+---+---+---+---+  dot in this table
+       ┌────┬───┬───┬───┬───┬───┬───┬───┐
+    1  │    (  0,  0)   │   (  1,  0)   │  Base address
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+    2  │    (  2,  0)   │   (  3,  0)   │  Set the color code for each
+       ├────┴───┴───┴───┴───┴───┴───┴───┤  dot in this table
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-  127  |    (254,  0)   |   (255,  0)   |
-       +----+---+---+---+---+---+---+---+
-  128  |    (  0,  1)   |   (  1,  1)   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+  127  │    (254,  0)   │   (255,  0)   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+  128  │    (  0,  1)   │   (  1,  1)   │
+       ├────┴───┴───┴───┴───┴───┴───┴───┤
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-27134  |    (252,211)   |   (253,211)   |
-       +----+---+---+---+---+---+---+---+
-27135  |    (254,211)   |   (255,211)   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+27134  │    (252,211)   │   (253,211)   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+27135  │    (254,211)   │   (255,211)   │
+       └────┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -3065,13 +3065,13 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ color register
-             |   |   |   |   |   |   |   |
-             |   |   |   |   +---+---+---+-- Specifies backdrop color
-             |   |   |   |                   code
-             +---+---+---+------------------ Ignored
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
+             │   │   │   │   │   │   │   │
+             │   │   │   │   └───┴───┴───┴── Specifies backdrop color
+             │   │   │   │                   code
+             └───┴───┴───┴────────────────── Ignored
 </pre>
 
 
@@ -3089,15 +3089,14 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10| 1 | 1 | 1 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15| base address register
-           +---+---+---+---+---+---+---+---+
-
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+ table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│ base address register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘ table base address
                                              register
 </pre>
 
@@ -3106,44 +3105,44 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-00000H  +----------+
-        |          |
-        |          |
-        |          |
-02000H  | Pattern  |
-        |  name    |
-        |  table   |
-        |          |
-04000H  |          |
-        |          |
-        |          |
-        | 192 lines|
-06000H  +----------+
-        |          |    .+----------+ 07000H
-        |          |   . | Sprite   |
-        | 212 lines| .-  | generator|
-06A00H  +----------+.    | table    |
-        |          |     |  (2048   |
-07000H  +----------+     |   bytes) |
-        |          |     +----------+ 07800H
-        |          |     | Sprite   |
-        |          |     | color    |
-        |          |     | table    |
-        |          |     |  (512    |
-        |          |     |   bytes) |
-        |          |     +----------+ 07A00H
-        |          |     | Sprite   |
-        |          |     | attribute|
-        |          |     | table    |
-08000H  +----------+.    |  (128    |
-        .          . .   |   bytes  |
-        .          .  .  +----------+ 07A80H
-        .          .   . |          |
-        .          .    .+----------+ 08000H
+00000H  ┌──────────┐
+        │          │
+        │          │
+        │          │
+02000H  │ Pattern  │
+        │  name    │
+        │  table   │
+        │          │
+04000H  │          │
+        │          │
+        │          │
+        │ 192 lines│
+06000H  ├──────────┤
+        │          │    .┌──────────┐ 07000H
+        │          │   . │ Sprite   │
+        │ 212 lines│ ..  │ generator│
+06A00H  ├──────────┤.    │ table    │
+        │          │     │  (2048   │
+07000H  ├──────────┤     │   bytes) │
+        │          │     ├──────────┤ 07800H
+        │          │     │ Sprite   │
+        │          │     │ color    │
+        │          │     │ table    │
+        │          │     │  (512    │
+        │          │     │   bytes) │
+        │          │     ├──────────┤ 07A00H
+        │          │     │ Sprite   │
+        │          │     │ attribute│
+        │          │     │ table    │
+08000H  ├──────────┤.    │  (128    │
+        .          . .   │   bytes  │
+        .          .  .  ├──────────┤ 07A80H
+        .          .   . │          │
+        .          .    .└──────────┘ 08000H
         .          .
-        |          |
-        |          |        A maximum of 4 pages may be allocated in
-1FFFFH  +----------+        the same manner (using a 128K-byte VRAM).
+        │          │
+        │          │        A maximum of 4 pages may be allocated in
+1FFFFH  └──────────┘        the same manner (using a 128K-byte VRAM).
 </pre>
 
 
@@ -3181,15 +3180,15 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 1*| 0*| 0*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 1*│ 0*│ 0*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 4 mode
 ** Indicates negative logic
 </pre>
@@ -3211,28 +3210,28 @@ All other bits are set accordingly.</p>
 </ul>
 
 <pre>
-  +----> X
-  |  +-------+-------+..................+---------+---------+
-  |  |(0,  0)|(1,  0)|                  |(510,  0)|(511,  0)|
-  v  +-------+-------+                  +---------+---------+
-  Y  |(0,  1)|                                    |(511,  1)|
-     +-------+            +---------+             +---------+
-     |                    |  (X,Y)  |                       |
-     .                    +---------+                       .
+  ┌────> X
+  │  ┌───────┬───────┬..................┬─────────┬─────────┐
+  │  │(0,  0)│(1,  0)│                  │(510,  0)│(511,  0)│
+  ˅  ├───────┼───────┘                  └─────────┼─────────┤
+  Y  │(0,  1)│                                    │(511,  1)│
+     ├───────┘            ┌─────────┐             └─────────┤
+     │                    │  (X,Y)  │                       │
+     .                    └─────────┘                       .
      .                                                      .
      .                                                      .
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,191)|                                    |(511,191)|
-     +-------+------------------------------------+---------+   LN = 0
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,191)│                                    │(511,191)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 0
 
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,211)|                                    |(511,211)|
-     +-------+------------------------------------+---------+   LN = 1
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,211)│                                    │(511,211)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 1
 </pre>
 
 
@@ -3244,11 +3243,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 |A16|A15| 1 | 1 | 1 | 1 | 1 | Pattern name table
-           +---+-+-+-+-+---+---+---+---+---+ base address register
-                 |   |
-                 +---+---------------------- These two bits specify
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │A16│A15│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
+           └───┴─┬─┴─┬─┴───┴───┴───┴───┴───┘ base address register
+                 │   │
+                 └───┴────────────────────── These two bits specify
                                              the page to display
 </pre>
 
@@ -3260,25 +3259,25 @@ All other bits are set accordingly.</p>
 
 <pre>
   MSB     7   6   5   4   3   2   1   0    LSB
-       +----+---+---+---+---+---+---+---+
-    1  | ( 0, 0)|( 1, 0)|( 2, 0)|( 3, 0)|  Base address
-       +----+---+---+---+---+---+---+---+
-    2  | ( 4, 0)|( 5, 0)|( 6, 0)|( 7, 0)|  Set the color code for each
-       +----+---+---+---+---+---+---+---+  dot in this table
+       ┌────┬───┬───┬───┬───┬───┬───┬───┐
+    1  │ ( 0, 0)│( 1, 0)│( 2, 0)│( 3, 0)│  Base address
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+    2  │ ( 4, 0)│( 5, 0)│( 6, 0)│( 7, 0)│  Set the color code for each
+       ├────┴───┴───┴───┴───┴───┴───┴───┤  dot in this table
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-  127  | (508,0)|(509,0)|(510,0)|(511,0)|
-       +----+---+---+---+---+---+---+---+
-  128  | ( 0, 1)|( 1, 1)|( 2, 1)|( 3, 1)|
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+  127  │ (508,0)│(509,0)│(510,0)│(511,0)│
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+  128  │ ( 0, 1)│( 1, 1)│( 2, 1)│( 3, 1)│
+       ├────┴───┴───┴───┴───┴───┴───┴───┤
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-27135  |    |   |   |   |   |  (511,211)|
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+27135  │    │   │   │   │   │  (511,211)│
+       └────┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -3288,13 +3287,13 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ color register
-             |   |   |   |   |   |   |   |
-             |   |   |   |   +---+---+---+-- Specifies backdrop color
-             |   |   |   |                   code
-             +---+---+---+------------------ Ignored
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
+             │   │   │   │   │   │   │   │
+             │   │   │   │   └───┴───┴───┴── Specifies backdrop color
+             │   │   │   │                   code
+             └───┴───┴───┴────────────────── Ignored
 </pre>
 
 
@@ -3309,15 +3308,14 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10| 1 | 1 | 1 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15| base address register
-           +---+---+---+---+---+---+---+---+
-
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+ table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│ base address register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘ table base address
                                              register
 </pre>
 
@@ -3342,26 +3340,26 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-           +-------- Even dots (0, 2, . . . 510)
-           |    +--- Odd dots  (1, 3, . . . 511)
-           |    |
-          ++--+-+-+
-          |   |   |  Two graphics dots
-          +---+---+
+           ┌──────── Even dots (0, 2, . . . 510)
+           │    ┌─── Odd dots  (1, 3, . . . 511)
+           │    │
+          ┌┴──┬─┴─┐
+          │   │   │  Two graphics dots
+          └───┴───┘
 
-          +-------+
-          |       |  A sprite dot
-          +-------+
+          ┌───────┐
+          │       │  A sprite dot
+          └───────┘
 
-          +---+---+
-          |   |XXX|
-          ++--++--+
-           |   |
-           +-+ +-+
-           | | | |
-          +-+-+-+-+
-     MSB  |/|/|/|/|  LSB   Bit specifying sprite colors (4 bits)
-          +-+-+-+-+
+          ┌───┬───┐
+          │   │XXX│
+          └┬──┴┬──┘
+           │   │
+           ├─┐ ├─┐
+           │ │ │ │
+          ┌┴┬┴┬┴┬┴┐
+     MSB  │/│/│/│/│  LSB   Bit specifying sprite colors (4 bits)
+          └─┴─┴─┴─┘
 </pre>
 
 
@@ -3372,48 +3370,48 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-00000H  +----------+
-        |          |
-        | Pattern  |
-        |  name    |
-02000H  | table    |
-        |          |
-        |          |
-        |          |
-04000H  |          |
-        |          |
-        |          |
-        | 192 lines|
-06000H  +----------+
-        |          |    .+----------+ 07000H
-        |          |   . | Sprite   |
-        | 212 lines| .-  | generator|
-06A00H  +----------+.    | table    |
-        |          |     |  (2048   |
-07000H  +----------+     |   bytes) |
-        |          |     +----------+ 07800H
-        |          |     | Sprite   |
-        |          |     | color    |
-        |          |     | table    |
-        |          |     |  (512    |
-        |          |     |   bytes) |
-        |          |     +----------+ 07A00H
-        |          |     | Sprite   |
-        |          |     | attribute|
-        |          |     | table    |
-        |          |     |  (128    |
-        |          |     |   bytes  |
-        |          |     +----------+ 07A80H
-        |          |     |          |
-08000H  +----------+.....+----------+ 08000H
+00000H  ┌──────────┐
+        │          │
+        │ Pattern  │
+        │  name    │
+02000H  │ table    │
+        │          │
+        │          │
+        │          │
+04000H  │          │
+        │          │
+        │          │
+        │ 192 lines│
+06000H  ├──────────┤
+        │          │    .┌──────────┐ 07000H
+        │          │   . │ Sprite   │
+        │ 212 lines│ ..  │ generator│
+06A00H  ├──────────┤.    │ table    │
+        │          │     │  (2048   │
+07000H  ├──────────┤     │   bytes) │
+        │          │     ├──────────┤ 07800H
+        │          │     │ Sprite   │
+        │          │     │ color    │
+        │          │     │ table    │
+        │          │     │  (512    │
+        │          │     │   bytes) │
+        │          │     ├──────────┤ 07A00H
+        │          │     │ Sprite   │
+        │          │     │ attribute│
+        │          │     │ table    │
+        │          │     │  (128    │
+        │          │     │   bytes  │
+        │          │     ├──────────┤ 07A80H
+        │          │     │          │
+08000H  ├──────────┤.....└──────────┘ 08000H
         .          .
         .          .
         .          .        A maximum of 4 pages may be allocated in
         .          .        the same manner (using a 128K-byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+ 
+        │          │
+        │          │
+1FFFFH  └──────────┘ 
 </pre>
 
 
@@ -3454,15 +3452,15 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 1*| 0*| 1*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 1*│ 0*│ 1*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 4 mode
 ** Indicates negative logic
 </pre>
@@ -3484,28 +3482,28 @@ All other bits are set accordingly.</p>
 </ul>
 
 <pre>
-  +----> X
-  |  +-------+-------+..................+---------+---------+
-  |  |(0,  0)|(1,  0)|                  |(510,  0)|(511,  0)|
-  v  +-------+-------+                  +---------+---------+
-  Y  |(0,  1)|                                    |(511,  1)|
-     +-------+            +---------+             +---------+
-     |                    |  (X,Y)  |                       |
-     .                    +---------+                       .
+  ┌────> X
+  │  ┌───────┬───────┬..................┬─────────┬─────────┐
+  │  │(0,  0)│(1,  0)│                  │(510,  0)│(511,  0)│
+  ˅  ├───────┼───────┘                  └─────────┼─────────┤
+  Y  │(0,  1)│                                    │(511,  1)│
+     ├───────┘            ┌─────────┐             └─────────┤
+     │                    │  (X,Y)  │                       │
+     .                    └─────────┘                       .
      .                                                      .
      .                                                      .
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,191)|                                    |(511,191)|
-     +-------+------------------------------------+---------+   LN = 0
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,191)│                                    │(511,191)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 0
 
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,211)|                                    |(511,211)|
-     +-------+------------------------------------+---------+   LN = 1
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,211)│                                    │(511,211)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 1
 </pre>
 
 
@@ -3517,11 +3515,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 | 0 |A16| 1 | 1 | 1 | 1 | 1 | Pattern name table
-           +---+-+-+-+-+---+---+---+---+---+ base address register
-                     |
-                     +------- Specifies the page to display (In G6 and
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │ 0 │A16│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
+           └───┴───┴─┬─┴───┴───┴───┴───┴───┘ base address register
+                     │
+                     └─────── Specifies the page to display (In G6 and
                               G7 modes, the position of A16 differs).
 </pre>
 
@@ -3533,27 +3531,27 @@ All other bits are set accordingly.</p>
 
 <pre>
   MSB     7   6   5   4   3   2   1   0    LSB
-       +----+---+---+---+---+---+---+---+
-    1  |    (  0,  0)   |   (  1,  0)   |  Base address
-       +----+---+---+---+---+---+---+---+
-    2  |    (  2,  0)   |   (  3,  0)   |  Set the color code for each
-       +----+---+---+---+---+---+---+---+  dot in this table
+       ┌────┬───┬───┬───┬───┬───┬───┬───┐
+    1  │    (  0,  0)   │   (  1,  0)   │  Base address
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+    2  │    (  2,  0)   │   (  3,  0)   │  Set the color code for each
+       ├────┴───┴───┴───┴───┴───┴───┴───┤  dot in this table
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-  255  |    (510,  0)   |   (511,  0)   |
-       +----+---+---+---+---+---+---+---+
-  256  |    (  0,  1)   |   (  1,  1)   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+  255  │    (510,  0)   │   (511,  0)   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+  256  │    (  0,  1)   │   (  1,  1)   │
+       ├────┴───┴───┴───┴───┴───┴───┴───┤
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-54270  |    (508,211)   |   (509,211)   |
-       +----+---+---+---+---+---+---+---+
-54271  |    (510,211)   |   (511,211)   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+54270  │    (508,211)   │   (509,211)   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+54271  │    (510,211)   │   (511,211)   │
+       └────┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -3561,13 +3559,13 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ color register
-             |   |   |   |   |   |   |   |
-             |   |   |   |   +---+---+---+-- Specifies backdrop color
-             |   |   |   |                   code
-             +---+---+---+------------------ Ignored
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
+             │   │   │   │   │   │   │   │
+             │   │   │   │   └───┴───┴───┴── Specifies backdrop color
+             │   │   │   │                   code
+             └───┴───┴───┴────────────────── Ignored
 </pre>
 
 
@@ -3582,15 +3580,15 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10| 1 | 1 | 1 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15| base address register
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│ base address register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+ table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘ table base address
                                              register
 </pre>
 
@@ -3602,51 +3600,51 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-00000H  +----------+
-        |          |
-        | Pattern  |
-        | Name     |
-        | table    |
-        |          |
-        |          |
-        |          |
-04000H  |          |
-        |          |
-        |          |
-        |          |
-        |          |
-        |          |
-08000H  |          |
-        |          |
-        |          |     +----------+ 0F000H
-        |          |    .| Sprite   |
-        | 192 line |    .| generator|
-0C000H  +----------+    .| table    |
-        | 212 line |   . |  (2048   |
-0D400H  +----------+   . |   bytes) |
-        |          |   . +----------+ 0F800H
-        |          |   . | Sprite   |
-        |          |  .  | color    |
-        |          |  .  | table    |
-        |          |  .  |  (512    |
-        |          | .   |   bytes) |
-        |          | .   +----------+ 0FA00H
-        |          | .   | Sprite   |
-        |          | .   | attribute|
-        |          |.    | table    |
-        |          |.    |  (128    |
-        |          |.    |   bytes  |
-0F000H  +----------+     +----------+ 0FA80H
-        |          |     |          |
-08000H  +----------+.....+----------+ 10000H
+00000H  ┌──────────┐
+        │          │
+        │ Pattern  │
+        │ Name     │
+        │ table    │
+        │          │
+        │          │
+        │          │
+04000H  │          │
+        │          │
+        │          │
+        │          │
+        │          │
+        │          │
+08000H  │          │
+        │          │
+        │          │     ┌──────────┐ 0F000H
+        │          │    .│ Sprite   │
+        │ 192 line │    .│ generator│
+0C000H  ├──────────┤    .│ table    │
+        │ 212 line │   . │  (2048   │
+0D400H  ├──────────┤   . │   bytes) │
+        │          │   . ├──────────┤ 0F800H
+        │          │   . │ Sprite   │
+        │          │  .  │ color    │
+        │          │  .  │ table    │
+        │          │  .  │  (512    │
+        │          │ .   │   bytes) │
+        │          │ .   ├──────────┤ 0FA00H
+        │          │ .   │ Sprite   │
+        │          │ .   │ attribute│
+        │          │.    │ table    │
+        │          │.    │  (128    │
+        │          │.    │   bytes  │
+0F000H  ├──────────┤     ├──────────┤ 0FA80H
+        │          │     │          │
+08000H  ├──────────┤.....└──────────┘ 10000H
         .          .
         .          .
         .          .        A maximum of 2 pages may be allocated in
         .          .        the same manner (using a 128K-byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+
+        │          │
+        │          │
+1FFFFH  └──────────┘
 </pre>
 
 
@@ -3685,15 +3683,15 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#0     | 0 |DG |IE2|IE1| 1*| 1*| 1*| 0 | Mode register 0
-           +===+===+===+===+===+===+===+===+
-   R#1     | 0 |BL |IE0| 0*| 0*| 0 |SI |MAG| Mode register 1
-           +===+===+===+===+===+===+===+===+
-   R#8     |MS |LP |TP |CB |VR | 0 |SPD|BW | Mode register 2
-           +===+===+===+===+===+===+===+===+
-   R#9     |LN | 0 |S1 |S0 |IL |EO **NT|DC | Mode register 3
-           +---+---+---+---+---+---+---+---+
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#0     │ 0 │DG │IE2│IE1│ 1*│ 1*│ 1*│ 0 │ Mode register 0
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#1     │ 0 │BL │IE0│ 0*│ 0*│ 0 │SI │MAG│ Mode register 1
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#8     │MS │LP │TP │CB │VR │ 0 │SPD│BW │ Mode register 2
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#9     │LN │ 0 │S1 │S0 │IL │EO **NT│DC │ Mode register 3
+           └───┴───┴───┴───┴───┴───┴───┴───┘
 *  Examples of settings in GRAPHIC 4 mode
 ** Indicates negative logic
 </pre>
@@ -3715,28 +3713,28 @@ All other bits are set accordingly.</p>
 </ul>
 
 <pre>
-  +----> X
-  |  +-------+-------+..................+---------+---------+
-  |  |(0,  0)|(1,  0)|                  |(254,  0)|(255,  0)|
-  v  +-------+-------+                  +---------+---------+
-  Y  |(0,  1)|                                    |(255,  1)|
-     +-------+            +---------+             +---------+
-     |                    |  (X,Y)  |                       |
-     .                    +---------+                       .
+  ┌────> X
+  │  ┌───────┬───────┬..................┬─────────┬─────────┐
+  │  │(0,  0)│(1,  0)│                  │(254,  0)│(255,  0)│
+  ˅  ├───────┼───────┘                  └─────────┼─────────┤
+  Y  │(0,  1)│                                    │(255,  1)│
+     ├───────┘            ┌─────────┐             └─────────┤
+     │                    │  (X,Y)  │                       │
+     .                    └─────────┘                       .
      .                                                      .
      .                                                      .
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,191)|                                    |(255,191)|
-     +-------+------------------------------------+---------+   LN = 0
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,191)│                                    │(255,191)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 0
 
-     |                                                      |
-     +-------+                                    +---------+
-     |(0,211)|                                    |(255,211)|
-     +-------+------------------------------------+---------+   LN = 1
+     │                                                      │
+     ├───────┐                                    ┌─────────┤
+     │(0,211)│                                    │(255,211)│
+     └───────┴────────────────────────────────────┴─────────┘   LN = 1
 </pre>
 
 
@@ -3748,11 +3746,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#2     | 0 | 0 |A16| 1 | 1 | 1 | 1 | 1 | Pattern name table
-           +---+-+-+-+-+---+---+---+---+---+ base address register
-                     |
-                     +---- Specifies the page to display; in the G6
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#2     │ 0 │ 0 │A16│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
+           └───┴───┴─┬─┴───┴───┴───┴───┴───┘ base address register
+                     │
+                     └──── Specifies the page to display; in the G6
                            and G7 modes only, the location of the A16
                            bit differs.
 </pre>
@@ -3765,29 +3763,29 @@ All other bits are set accordingly.</p>
 
 <pre>
   MSB     7   6   5   4   3   2   1   0    LSB
-       +----+---+---+---+---+---+---+---+
-    1  |    |   | (   0,   0)   |   |   |  Base address
-       +----+---+---+---+---+---+---+---+
-    2  |    |   | (   1,   0)   |   |   |  Set the color code for each
-       +----+---+---+---+---+---+---+---+  dot in this table
+       ┌────┬───┬───┬───┬───┬───┬───┬───┐
+    1  │    │   │ (   0,   0)   │   │   │  Base address
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+    2  │    │   │ (   1,   0)   │   │   │  Set the color code for each
+       ├────┴───┴───┴───┴───┴───┴───┴───┤  dot in this table
        .                                .
-       +----+---+---+---+---+---+---+---+
-       |   GREEN    |    RED    | BLUE  |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+       │   GREEN    │    RED    │ BLUE  │
+       ├────┴───┴───┴───┴───┴───┴───┴───┤
        .                                .
-       +----+---+---+---+---+---+---+---+
-  255  |    |   | ( 255,   0)   |   |   |
-       +----+---+---+---+---+---+---+---+
-  256  |    |   | (   0,   1)   |   |   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+  255  │    │   │ ( 255,   0)   │   │   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+  256  │    │   │ (   0,   1)   │   │   │
+       ├────┴───┴───┴───┴───┴───┴───┴───┤
        .                                .
        .                                .
        .                                .
-       +----+---+---+---+---+---+---+---+
-54270  |    |   | ( 254, 211)   |   |   |
-       +----+---+---+---+---+---+---+---+
-54271  |    |   | ( 255, 211)   |   |   |
-       +----+---+---+---+---+---+---+---+
+       ├────┬───┬───┬───┬───┬───┬───┬───┤
+54270  │    │   │ ( 254, 211)   │   │   │
+       ├────┼───┼───┼───┼───┼───┼───┼───┤
+54271  │    │   │ ( 255, 211)   │   │   │
+       └────┴───┴───┴───┴───┴───┴───┴───┘
 </pre>
 
 
@@ -3795,11 +3793,11 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0   LSB
-           +---+---+---+---+---+---+---+---+
-   R#7     |TC3|TC2|TC1|TC0|BD3|BD2|BD1|BD0| Text color/Back drop
-           +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ color register
-             |   |   |   |   |   |   |   |
-             +---+---+---+---+---+---+---+-- Specifies backdrop color
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
+           └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
+             │   │   │   │   │   │   │   │
+             └───┴───┴───┴───┴───┴───┴───┴── Specifies backdrop color
                                              code
 </pre>
 
@@ -3815,15 +3813,14 @@ All other bits are set accordingly.</p>
 
 <pre>
         MSB  7   6   5   4   3   2   1   0  LSB
-           +---+---+---+---+---+---+---+---+
-   R#5     |A14|A13|A12|A11|A10| 1 | 1 | 1 | Sprite attribute table
-           +===+===+===+===+===+===+===+===+
-   R#11    | 0 | 0 | 0 | 0 | 0 | 0 |A16|A15| base address register
-           +---+---+---+---+---+---+---+---+
-
-           +---+---+---+---+---+---+---+---+
-   R#6     | 0 | 0 |A16|A15|A14|A13|A12|A11| Sprite pattern generator
-           +---+---+---+---+---+---+---+---+ table base address
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
+           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
+   R#11    │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │A16│A15│ base address register
+           └───┴───┴───┴───┴───┴───┴───┴───┘
+           ┌───┬───┬───┬───┬───┬───┬───┬───┐
+   R#6     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Sprite pattern generator
+           └───┴───┴───┴───┴───┴───┴───┴───┘ table base address
                                              register
 </pre>
 
@@ -3835,51 +3832,51 @@ All other bits are set accordingly.</p>
 
 
 <pre>
-00000H  +----------+
-        |          |
-        | Pattern  |
-        | Name     |
-        | table    |
-        |          |
-        |          |
-        |          |
-04000H  |          |
-        |          |
-        |          |
-        |          |
-        |          |
-        |          |
-08000H  |          |
-        |          |
-        |          |     +----------+ 0F000H
-        |          |    .| Sprite   |
-        | 192 line |    .| generator|
-0C000H  +----------+    .| table    |
-        | 212 line |   . |  (2048   |
-0D400H  +----------+   . |   bytes) |
-        |          |   . +----------+ 0F800H
-        |          |   . | Sprite   |
-        |          |  .  | color    |
-        |          |  .  | table    |
-        |          |  .  |  (512    |
-        |          | .   |   bytes) |
-        |          | .   +----------+ 0FA00H
-        |          | .   | Sprite   |
-        |          | .   | attribute|
-        |          |.    | table    |
-        |          |.    |  (128    |
-        |          |.    |   bytes  |
-0F000H  +----------+     +----------+ 0FA80H
-        |          |     |          |
-08000H  +----------+.....+----------+ 10000H
+00000H  ┌──────────┐
+        │          │
+        │ Pattern  │
+        │ Name     │
+        │ table    │
+        │          │
+        │          │
+        │          │
+04000H  │          │
+        │          │
+        │          │
+        │          │
+        │          │
+        │          │
+08000H  │          │
+        │          │
+        │          │     ┌──────────┐ 0F000H
+        │          │    .│ Sprite   │
+        │ 192 line │    .│ generator│
+0C000H  ├──────────┤    .│ table    │
+        │ 212 line │   . │  (2048   │
+0D400H  ├──────────┤   . │   bytes) │
+        │          │   . ├──────────┤ 0F800H
+        │          │   . │ Sprite   │
+        │          │  .  │ color    │
+        │          │  .  │ table    │
+        │          │  .  │  (512    │
+        │          │ .   │   bytes) │
+        │          │ .   ├──────────┤ 0FA00H
+        │          │ .   │ Sprite   │
+        │          │ .   │ attribute│
+        │          │.    │ table    │
+        │          │.    │  (128    │
+        │          │.    │   bytes  │
+0F000H  ├──────────┤     ├──────────┤ 0FA80H
+        │          │     │          │
+08000H  ├──────────┤.....└──────────┘ 10000H
         .          .
         .          .
         .          .        A maximum of 2 pages may be allocated in
         .          .        the same manner (using a 128K-byte VRAM).
         .          .
-        |          |
-        |          |
-1FFFFH  +----------+ 
+        │          │
+        │          │
+1FFFFH  └──────────┘ 
 </pre>
 
 
@@ -4424,16 +4421,16 @@ is a limitation, according to the display mode, on the value for x.</p>
 
 <pre><![CDATA[
           Video or Expansion RAM
-   +--------------------------------------+
-   |                                      |
-   |   (DX,DY)                            |     +-----+      +-----+
-   |      +-----------+   -> DIX          |     |     |      |     |
-   |      |     NX    |                   |     |MSX- |      | CPU |
-   |      |NY         | <-----------------+-----+VIDEO| <--- |     |
-   |      +-----------+                   |     |     |      |     |
-   |      |                               |     +-----+      +-----+
-   |      v                               |
-   +--------------------------------------+
+   ┌──────────────────────────────────────┐
+   │                                      │
+   │   (DX,DY)                            │     ┌─────┐      ┌─────┐
+   │      ┌───────────┐   ─> DIX          │     │     │      │     │
+   │      │     NX    │                   │     │MSX- │      │ CPU │
+   │      │NY         │ <─────────────────┼─────┤VIDEO│ <─── │     │
+   │      ├───────────┘                   │     │     │      │     │
+   │      │                               │     └─────┘      └─────┘
+   │      ˅                               │
+   └──────────────────────────────────────┘
 ]]></pre>
 
 

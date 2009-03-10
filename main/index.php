@@ -12,7 +12,7 @@
   <?php addStyles(); ?>
   <script type="text/javascript" src="/js/email.js"></script>
 </head>
-<body id="msxasm" onload="putEmail();">
+<body onload="putEmail();">
 <?php addHeader(); ?>
 
 <h1>Introduction</h1>

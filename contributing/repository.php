@@ -9,7 +9,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <?php addStyles(); ?>
 </head>
-<body id="msxasm">
+<body>
 <?php addHeader(); ?>
 
 <h1>The MAP repository</h1>

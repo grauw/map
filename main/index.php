@@ -2,7 +2,7 @@
 <!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.1//EN"
      "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
 <head>
   <title>MSX Assembly Page</title>
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
@@ -10,8 +10,9 @@
   <meta name="description" content="The MSX Assembly Page is a central source for MSX programming information in various languages, though mainly assembly. It contains articles on several topics, programming resources, sources, software downloads and links to some other good MSX programming sites." />
   <meta name="keywords" content="MSX, Assembly, Basic, programming, byte, bit, word, ld, jp, fast loop, keyboard, samples, multiplication, division, RAM, ROM, BIOS, SUBROM, MSX-DOS, I/O, Port, Z80, R800, VDP, TMS9918, V9938, V9958, V9990, Graphics9000, Gfx9000, PSG, AY-3-8910, SCC, MSX-Music, FM-PAC, OPLL, YM2413, MSX-Audio, Music Module, OPL1, Y8950, Moonsound, OPL4, MSX Engine, S3527, S1985, S1990, Sunrise, IDE, Novaxis, SCSI, PPI, RTC, MemMan" />
   <?php addStyles(); ?>
+  <script type="text/javascript" src="/js/email.js"></script>
 </head>
-<body id="msxasm">
+<body id="msxasm" onload="putEmail();">
 <?php addHeader(); ?>
 
 <h1>Introduction</h1>
@@ -76,7 +77,7 @@ The <a href="/articles/">Articles</a> section contains several articles about se
 
 <h2>Comments</h2>
 
-<p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <em>map&#64;tni.nl</em>.</p>
+<p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email link)</g:insertMail>.</p>
 
 <p>If you want to contribute more directly to the map, like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it. The <a href="/contributing/">Contributing</a> section explains how to get started with the source code.</p>
 

@@ -33,7 +33,7 @@
     <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
 	<li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a></li>
 	<li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist (archive)</a></li>
-    <li><a href="http://www.hansotten.com/">MSX Info Pages</a></li>
+    <li><a href="http://msx.retro8bits.com/">MSX Info Pages</a></li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/">msxnet.org Sean Young’s technical MSX info</a></li>
     <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
     <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s The MSX Plaza</a></li>

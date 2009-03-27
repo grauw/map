@@ -14,7 +14,7 @@
 
 
 
-<h1>Multiplications and divisions using shifts</h1>
+<h1>Multiplications, divisions and shifts</h1>
 
 <div class="updates">
 <h2>Latest updates:</h2>
@@ -55,16 +55,19 @@ Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it al
 	<li><a href="#8bitmultsh">8-bit multiplications using shifts</a></li>
 	<li><a href="#8bitdivsh">8-bit divisions using shifts</a></li>
 	<li><a href="#16bitsh">16-bit shifts</a></li>
-	<li><a href="#fastgenmultdiv">Fast generic multiplication / division routines</a>
+	<li><a href="#mult">Fast generic multiplication routines</a>
 		<ul>
-			<li><a href="#lrmultr">Left-rotating multiplication routines</a></li>
-			<li><a href="#rrmultr">Right-rotating multiplication routine</a></li>
-			<li><a href="#ulrmultr">Unrolled left-rotating multiplication routine</a></li>
-			<li><a href="#div">Division routines</a></li>
-			<li><a href="#divby9">Division by 9</a></li>
-			<li><a href="#sqrt">Square root routine</a></li>
+			<li><a href="#lrmultr">Left-rotating multiplication</a></li>
+			<li><a href="#rrmultr">Right-rotating multiplication</a></li>
+			<li><a href="#ulrmultr">Unrolled left-rotating multiplication</a></li>
 		</ul>
 	</li>
+	<li><a href="#div">Fast generic division routines</a>
+		<ul>
+			<li><a href="#divby9">Division by 9</a></li>
+		</ul>
+	</li>
+	<li><a href="#sqrt">Square root routine</a></li>
 </ul>
 
 
@@ -166,7 +169,7 @@ Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it al
 <p>So, the best way to multiply 16-bit values is by using register HL in combination with ADD HL,HL instructions.</p>
 
 
-<h2 id="fastgenmultdiv">Fast generic multiplication / division routines</h2>
+<h2 id="mult">Fast generic multiplication routines</h2>
 
 <p>Well, that’s about everything there is to tell about shifting and multiplications / divisions. There are a few more minor tricks, but really all I can say about that is to just be a little creative.</p>
 
@@ -181,11 +184,11 @@ Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it al
 
 <p>Oh, and if you really have very low variable multiplication factors, you might want to use the dreaded multiply-by-adding-x-times-loop method. It’s probably faster.</p>
 
-<h3 id="lrmultr">Left-rotating multiplication routines</h3>
+<h3 id="lrmultr">Left-rotating multiplication</h3>
 
 <p>These are left-rotating multiplication routines. Their speed is basically quite constant, although depending on the number of 1’s in the primary multiplier there may be a slight difference in speed (a 1 usually takes 7 states longer to process than a 0).</p>
 
-<pre id="mult">
+<pre>
 ;
 ;Multiply 8-bit values
 ;In:  Multiply H with E
@@ -267,7 +270,7 @@ Mult32_NoAdd:
 	ret
 </pre>
 
-<h3 id="rrmultr">Right-rotating multiplication routine</h3>
+<h3 id="rrmultr">Right-rotating multiplication</h3>
 
 <p>Right-rotating multiplications are basically not very different from left-rotating multiplications. They use a very similar process, and the number of steps in the calculation is equal. However on the Z80 left-rotating multiplications can be coded much faster and compacter, which is why all the previous routines were using the left rotating variants.</p>
 
@@ -328,7 +331,7 @@ Mult12R_NoAdd:
 	ret
 </pre>
 
-<h3 id="ulrmultr">Unrolled left-rotating multiplication routine</h3>
+<h3 id="ulrmultr">Unrolled left-rotating multiplication</h3>
 
 <p>For completeness’ sake, here also an example of an unrolled left-rotating multiply routine. It takes a little more space, but is significantly faster. Actually it’s still quite compact, only 41 bytes. This one takes 268 T-states on average (M1 waits included). The minimum is 235 states, and the maximum is 301 ticks.</p>
 
@@ -387,7 +390,7 @@ Mult12U_NoAdd6:
 
 
 
-<h3 id="div">Division routines</h3>
+<h2 id="div">Fast generic division routines</h2>
 
 <p>Before we get to the actual division routines, when dividing you don’t necessarily need to use the (slower) division routines. Don’t forget, multiplications and divisions are related. If you want to divide by 2, you can also multiply with 0.5. Translating this to these routines, to divide an 8-bit value by another 8-bit value (like Div8 does), you can call a Mult8 routine with parameter 1 being (1 / the first 8-bit value * 256) and parameter 2 being the other 8-bit value. The resulting word will be a fixed-point hexadecimal value, with the comma laying between the high and the low byte.</p>
 
@@ -519,9 +522,9 @@ DIV9:   INC     HL              ;  7    1
 
 
 
-<h3 id="sqrt">Square root routine</h3>
+<h2 id="sqrt">Square root routine</h2>
 
-<p>This is a faster square root routine than the one previously given, test results say that it’s 26% faster. It is written by Ricardo Bittencourt, so many thanks to him :).</p>
+<p>This is a faster square root routine than the one that was previously here, test results say that it’s 26% faster. It is written by Ricardo Bittencourt, so many thanks to him :).</p>
 
 <pre>
 ;
@@ -551,7 +554,7 @@ Sqr16_Skip:
 </pre>
 
 
-<p>Well, that’s it. Thanks go to mr. Rodnay Zaks (although I somehow really doubt he’ll read this) for writing his book “Programming of the Z80”, which taught me about how to do multiplications on Z80, and has been the inspiration for the routines listed here. If you have any suggestions for speed improvements, or know of another method which might be faster under certain conditions, please let me know.</p>
+<p>Well, that’s it. Thanks go to mr. Rodnay Zaks :), for writing his book “Programming of the Z80”, which taught me about how to do multiplications on Z80, and has been the inspiration for the routines listed here. If you have any suggestions for speed improvements, or know of another method which might be faster under certain conditions, please let me know.</p>
 
 
 <p>~Grauw</p>

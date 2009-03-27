@@ -46,8 +46,8 @@
   <ul>
   <li id="art_asm">Z80 Assembly programming
     <ul>
-    <li class="map"><a href="/articles/fast_loops.php">Fast Loops</a></li>
-    <li class="map"><a href="/articles/mult_div_shifts.php">Multiplications, Divisions and Shifts</a></li>
+    <li class="map"><a href="/articles/fast_loops.php">Fast loops</a></li>
+    <li class="map"><a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts</a></li>
     </ul>
   </li>
   <li id="art_vdp">VDP programming

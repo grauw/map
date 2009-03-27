@@ -191,6 +191,7 @@
     </li>
     <li id="mapper">ROM / RAM memory
       <ul>
+      <li class="map"><a href="/resources/msx_io_ports.php#zemina-memory">Zemina GoldenBox technical info</a></li>
       <li><a href="http://www.hqunix.com/wordpress/?page_id=554">Zemina GoldenBox manual</a> · by <a href="http://hqunix.com/wordpress/">Chronos</a></li>
       </ul>
     </li>

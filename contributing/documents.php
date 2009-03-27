@@ -31,7 +31,7 @@
 
 <p>Let’s get started with the layout tags you should use. Every page on this site is made from a combination of XHTML, CSS, and Unicode (UTF-8). Here are links to the <a href="http://www.w3.org/TR/html4">HTML documentation</a>, the <a href="http://www.w3.org/TR/xhtml1/">XHTML documentation</a>, and the <a href="http://www.w3.org/TR/CSS21/">CSS 2.1 documentation</a>. The HTML and CSS docs are quite easy to use once you know how they’re structured.</p>
 
-<p>XHTML Strict basically works as follows: it is largely the same as HTML Strict (meaning HTML without any of the tags marked Deprecated), but then written in XML, so every tag has to have an end-tag. If you write a <code>&lt;li&gt;</code>, always close it with a <code>&lt;/li&gt;</code>, and the same goes for <code>&lt;p&gt;</code>. Also, don’t write <code>&lt;img src="image.jpg"&gt;</code> and <code>&lt;br&gt;</code> but add a closing <code>/</code> at the end like so: <code>&lt;img src="image.jpg" /&gt;</code> and <code>&lt;br /&gt;</code>. The space before the / in singleton tags is important for HTML compatibility. Another requirement of XHTML is that all tags shoult be lowercase. And on a sidenote, don’t forget that <code>img</code> tags always need an <code>alt="description"</code> attribute. You can check the correctness of your text by running it through the <a href="http://validator.w3.org/">W3C MarkUp Validation Service</a>.</p>
+<p>XHTML Strict basically works as follows: it is largely the same as HTML Strict (meaning HTML without any of the tags marked Deprecated), but then written in XML, so every tag has to have an end-tag. If you write a <code>&lt;li&gt;</code>, always close it with a <code>&lt;/li&gt;</code>, and the same goes for <code>&lt;p&gt;</code>. Also, don’t write <code>&lt;img src="image.jpg"&gt;</code> and <code>&lt;br&gt;</code> but add a closing <code>/</code> at the end like so: <code>&lt;img src="image.jpg" /&gt;</code> and <code>&lt;br /&gt;</code>. The space before the / in singleton tags is important for HTML compatibility. Another requirement of XHTML is that all tags should be lowercase. And on a sidenote, don’t forget that <code>img</code> tags always need an <code>alt="description"</code> attribute. You can check the correctness of your text by running it through the <a href="http://validator.w3.org/">W3C MarkUp Validation Service</a>.</p>
 
 <p>Note that on most browsers, the pages are served as XML and will thus not work if you make syntax errors, so be sure to verify your changes pages in a browser that is not Internet Explorer.</p>
 
@@ -144,7 +144,7 @@ Label:	cpl
 <p>Also, a list of definitions (if you ever need it); Japanese lesson no. 1:</p>
 <dl>
    <dt>Ittadakimasu</dt>
-   <dd>Japese say this when they are about to start dinner. In English, it can be somewhat translated like ‘thank you for the food’ (they don’t really have a way of saying this, how impolite!). In Dutch it is simply ‘Smakelijk eten’.</dd>
+   <dd>The Japanese say this when they are about to start dinner. In English, it can be somewhat translated like ‘thank you for the food’ (they don’t really have a way of saying this, how impolite!). In Dutch it is simply ‘Smakelijk eten’.</dd>
 </dl>
 
 

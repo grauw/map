@@ -19,6 +19,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2009-03-27</em><br />
+Added <a href="#divby9">division by 9</a> routine provided by Ricardo Bittencourt.</p>
+
 <p><em>2005-05-12</em><br />
 Optimized the Div16 routine, it is only a humble 7 T-states faster than it was before, but can now be unrolled to be up to 234 T-states faster! It is also 15 bytes smaller. Thanks go to Flyguille.</p>
 
@@ -57,7 +60,8 @@ Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it al
 			<li><a href="#lrmultr">Left-rotating multiplication routines</a></li>
 			<li><a href="#rrmultr">Right-rotating multiplication routine</a></li>
 			<li><a href="#ulrmultr">Unrolled left-rotating multiplication routine</a></li>
-			<li><a href="#divr">Division routines</a></li>
+			<li><a href="#div">Division routines</a></li>
+			<li><a href="#divby9">Division by 9</a></li>
 			<li><a href="#sqrt">Square root routine</a></li>
 		</ul>
 	</li>
@@ -198,8 +202,9 @@ Mult8_Loop:
 Mult8_NoAdd:
 	djnz Mult8_Loop
 	ret
+</pre>
 
-
+<pre>
 ;
 ;Multiply 8-bit value with a 16-bit value
 ;In: Multiply A with DE
@@ -215,8 +220,9 @@ Mult12_Loop:
 Mult12_NoAdd:
 	djnz Mult12_Loop
 	ret
+</pre>
 
-
+<pre>
 ;
 ;Multiply 16-bit values (with 16-bit result)
 ;In: Multiply BC with DE
@@ -233,8 +239,9 @@ Mult16_Loop:
 Mult16_NoAdd:
 	djnz Mult16_Loop
 	ret
+</pre>
 
-
+<pre>
 ;
 ;Multiply 16-bit values (with 32-bit result)
 ;In: Multiply BC with DE
@@ -380,7 +387,7 @@ Mult12U_NoAdd6:
 
 
 
-<h3 id="divr">Division routines</h3>
+<h3 id="div">Division routines</h3>
 
 <p>Before we get to the actual division routines, when dividing you don’t necessarily need to use the (slower) division routines. Don’t forget, multiplications and divisions are related. If you want to divide by 2, you can also multiply with 0.5. Translating this to these routines, to divide an 8-bit value by another 8-bit value (like Div8 does), you can call a Mult8 routine with parameter 1 being (1 / the first 8-bit value * 256) and parameter 2 being the other 8-bit value. The resulting word will be a fixed-point hexadecimal value, with the comma laying between the high and the low byte.</p>
 
@@ -398,7 +405,7 @@ Output: #528 (#5.28 or 5,15625 decimal)<br />
 
 <p>Anyways. These are the general division routines. Slower than the multiplication routines but still as fast as possible, and probably very useful.</p>
 
-<pre id="div">
+<pre>
 ;
 ;Divide 8-bit values
 ;In: Divide E by divider C
@@ -419,8 +426,9 @@ Div8_NoAdd:
 	rla
 	cpl
 	ret
+</pre>
 
-
+<pre>
 ;
 ;Divide 16-bit values (with 8-bit result)
 ;In: Divide HL by divider D
@@ -440,8 +448,9 @@ Div12_NoAdd:
 	adc hl,hl
 	djnz Div12_Loop
 	ret
+</pre>
 
-
+<pre>
 ;
 ;Divide 16-bit values (with 16-bit result)
 ;In: Divide BC by divider DE
@@ -472,6 +481,42 @@ Div16_NoAdd:
 <p><i>Thanks to Flyguille for the Div16 routine, taken from his MNBIOS source code.</i></p>
 
 <p>The division routines can be unrolled as well to gain a nice speed increase. If you take the Div16 routine for example, it takes 1297 T-states to complete. When unrolled however, it only needs 1070 T-states, that’s an 18% speed increase. The additional cost in bytes is 146 (original routine is 27 bytes).</p>
+
+
+<h3 id="divby9">Division by 9</h3>
+
+<p>Ricardo Bittencourt provided us with a fast routine for division by 9. It is built for
+.dsk or Disk ROM routines. It’s very fast, but only works in the range 0-1440.</p>
+
+<pre>
+;
+; division by nine
+; enter     HL = number from 0 to 1440
+; exit      A = HL/9
+; destroy   HL,DE
+;                                 Z80  R800
+DIV9:   INC     HL              ;  7    1
+        LD      D,H             ;  5    1
+        LD      E,L             ;  5    1
+        ADD     HL,HL           ;  12   1
+        ADD     HL,HL           ;  12   1
+        ADD     HL,HL           ;  12   1
+        SBC     HL,DE           ;  17   2
+        LD      E,0             ;  8    2
+        LD      D,L             ;  5    1
+        LD      A,H             ;  5    1
+        ADD     HL,HL           ;  12   1
+        ADD     HL,HL           ;  12   1
+        ADD     HL,DE           ;  12   1
+        ADC     A,E             ;  5    1
+        XOR     H               ;  5    1
+        AND     03FH            ;  8    2
+        XOR     H               ;  5    1
+        RLCA                    ;  5    1
+        RLCA                    ;  5    1
+        RET            ; total  = 157  22 
+</pre>
+
 
 
 <h3 id="sqrt">Square root routine</h3>

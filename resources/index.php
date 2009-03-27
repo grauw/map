@@ -184,9 +184,14 @@
       <li><a href="/resources/ppi/chipsi8255.pdf">i8255 introduction</a></li>
       </ul>
     </li>
-    <li id="rtc">RTC / MSX2 Clock Chip
+    <li id="rtc">RTC / MSX2 clock chip
       <ul>
       <li><a href="/resources/rtc/ricoh_rp5c01.pdf">Ricoh RP/RF5C01A application manual</a></li>
+      </ul>
+    </li>
+    <li id="mapper">ROM / RAM memory
+      <ul>
+      <li><a href="http://www.hqunix.com/wordpress/?page_id=554">Zemina GoldenBox manual</a> · by <a href="http://hqunix.com/wordpress/">Chronos</a></li>
       </ul>
     </li>
     </ul>

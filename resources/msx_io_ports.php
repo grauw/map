@@ -42,6 +42,10 @@
   <td>Music Module MIDI, input ports</td>
 </tr>
 <tr>
+  <td>#0F</td>
+  <td><a href="#zemina-memory">Zemina memory extensions</a></td>
+</tr>
+<tr>
   <td>#18-#19</td>
   <td>Philips Barcode Reader NMS1170/20</td>
 </tr>
@@ -278,6 +282,57 @@
 
 
 <p><i>Information collected from various sources. Special thanks go to Alex Wulms for the nice overview published in MCCM 75.</i></p>
+
+
+<h2 id="zemina-memory">Zemina memory extensions</h2>
+
+<p>Port #0F is used for the Zemina Golden Box (ZMB-1024, 1Mbit / 128K), Black Box (1Mbit / 128K), Deluxe Box (ZMB-2048, 2Mbit / 256K) and Deluxe IV (4Mbit / 512K) memory extensions.</p>
+
+<p>It uses I/O port #0F for device settings, and address #4000 for page select if the device is in RAM SELECT mode.</p>
+
+<table>
+<tr>
+  <th>Port</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td rowspan="2">#0F</td>
+  <td>Page size select<br />
+      bit 7, 6: 8K (1, 0) or 16K (0, 1)</td>
+</tr>
+<tr>
+  <td>Function of writing to address range #4000-#BFFF<br />
+      bit 5, 4: RAM SELECT (1, 0) or WRITE (0, 1)</td>
+</tr>
+</table>
+
+<p>For a 128K extension, with a page size of 8K there are 16 pages, with a page size of 16K there are 8 pages.</p>
+
+<p>Following are some examples, that assume the Zemina memory extension slot is selected for address range #4000-#7FFF.</p>
+
+<p>To switch RAM page 5 to address #4000-#5FFF (8K page size):</p>
+
+<pre>LD   A,10100000B
+OUT  (0FH),A
+LD   A,5
+LD   (4000H),A
+</pre>
+
+<p>To copy the contents of the MSX main RAM address range #A000-#BFFF to RAM page 3 (8K page size):</p>
+
+<pre>LD   A,10100000B
+OUT  (0FH),A
+LD   A,3
+LD   (4000H),A
+LD   A,10010000B
+OUT  (0FH),A
+LD   HL,0A000H
+LD   DE,4000H
+LD   BC,2000H
+LDIR
+</pre>
+
+<p>See the <a href="http://www.hqunix.com/wordpress/?page_id=554">scanned manual</a> with partial translation for more info.</p>
 
 
 <h2 id="switch_io">Switched I/O ports</h2>

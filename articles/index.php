@@ -67,7 +67,7 @@
 </li>
 <li id="extarticles">External Articles (non-MAP)
   <ul>
-  <li id="ext_mccw">MCCW (MCCM web magazine) (<a href="http://www.mccw.hetlab.tk/">link</a>)
+  <li id="ext_mccw"><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a>
     <ul>
     <li><a href="http://www.mccw.hetlab.tk/91/KANJI-stuff/en.html">MSX-Kanji revealed</a></li>
     <li><a href="http://www.mccw.hetlab.tk/92/Multiplication/en.html">Multiplication on a Z80</a></li>
@@ -75,18 +75,18 @@
     <li><a href="http://www.mccw.hetlab.tk/92/msx1demos2/en.html">23 steps to high resolution on MSX1, part 2</a></li>
     </ul>
   </li>
-  <li id="ext_msxbanzai">MSX Banzai (<a href="http://msxbanzai.tni.nl/">link</a>)
+  <li id="ext_msxbanzai"><a href="http://msxbanzai.tni.nl/">MSX Banzai</a>
     <ul>
     <li><a href="http://msxbanzai.tni.nl/v9990/manual.html">Yamaha V9990 E-VDP-III Programmers Manual</a> (unofficial)</li>
     <li><a href="http://msxbanzai.tni.nl/dev/faq.html">Development FAQ</a></li>
     </ul>
   </li>
-  <li id="ext_davidh">David Heremans (<a href="http://msx.gnu-linux.net/">link</a>)
+  <li id="ext_davidh"><a href="http://msx.gnu-linux.net/">David Heremans</a>
     <ul>
     <li><a href="http://msx.gnu-linux.net/doomlike/doomlike.html">How to program Doom on MSX</a></li>
     </ul>
   </li>
-  <li id="ext_marmsx">MARMSX (<a href="http://www.marmsx.cjb.net/">link</a>)
+  <li id="ext_marmsx"><a href="http://www.marmsx.cjb.net/">MARMSX</a>
     <ul>
 	<li><a href="http://www.eng.uerj.br/~marcelo/msx/artigos/sc12en.pdf">19268 colors on MSX 2+</a></li>
     </ul>

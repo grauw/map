@@ -45,7 +45,7 @@ Wrote a faster DoLDIR routine, corrected speed calculations, uses JP PE for 0-ch
 </ol>
 
 
-<h2 id="fastloops">1. Fast 16-bit loops</h2>
+<h2 id="fastloops">Fast 16-bit loops</h2>
 
 <p>Most often, you see 16-bit loops used like this:</p>
 
@@ -109,7 +109,7 @@ loop:	...			; --- do something ---
 
 
 
-<h2 id="unrolling">2. Unrolling OTIRs and such</h2>
+<h2 id="unrolling">Unrolling OTIRs and such</h2>
 
 <p>When you want to send a block from your memory to a certain port, you can use the OTIR instruction. With this instruction you can specify a number of loops. This is for example used a lot in routines which execute VDP commandos, where the part which actually sends the VDP command usually looks like this:</p>
 

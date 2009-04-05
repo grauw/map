@@ -16,6 +16,18 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2005-03-18</em><br />
+Added information about memory mapper, PPI and subslot select register to <a href="/resources/msx_io_ports.php">I/O ports overview</a>.</p>
+
+<p><em>2005-02-10</em><br />
+Added stub article with <a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a>.</p>
+
+<p><em>2005-01-03</em><br />
+Added code of method to <a href="/sources/callbios.php">call SUBROM from MSX-DOS</a>. Additionally, added some slot-management related addresses to the <a href="/resources/msxsystemvars.php">System Variables overview</a>.</p>
+
+<p><em>2004-10-15</em><br />
+Added info about the #6F register for the <a href="/resources/msx_io_ports.php#gfx9000">Gfx9000’s v7040 chip</a>.</p>
+
 <p><em>2004-09-12</em><br />
 Added <a href="/resources/z80instr.php">Z80 instruction set reference</a>. Also, linked to Funet source code repositories, and linkified <abbr title="(MSX-) Disk Operating System version 2">DOS2</abbr> reference table of contents.</p>
 

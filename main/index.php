@@ -121,8 +121,6 @@ This page is <a href="/main/moz-ff.php">best viewed</a> using Mozilla Firefox<br
 
 </p>
 
-<p style="text-align: center;">MSX is a trademark of <a href="http://www.msxa.org/">MSX Association</a>.</p>
-
 
 
 <?php addFooter(); ?>

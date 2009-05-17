@@ -161,7 +161,7 @@ function addFooter() {
 <div><img src="http://t0.extreme-dm.com/c.g?tag=msxasm&amp;j=n" height="1" width="1" alt="" /></div>
 </noscript>
 
-<div id="foot">&copy; <?php echo date("Y"); ?> MSX Assembly Page / <a href="http://www.tni.nl/">The New Image</a></div>
+<div id="foot">&copy; <?php echo date("Y"); ?> MSX Assembly Page</div>
 <?php
 }
 

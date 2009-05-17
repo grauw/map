@@ -46,7 +46,7 @@ Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z8
 </div>
 
 
-<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the ultimate source of information for the <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or programmer-to-be. The main target is assembly language, because that’s what the maintainers’ preferred programming language is, but most information will be useful to users of other languages as well. The MAP is currently maintained by <a href="/main/about/grauw.php">Grauw</a>, <a href="/main/about/bifi.php">BiFi</a> and GuyveR800.</p>
+<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the ultimate source of information for the <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or programmer-to-be. The main target is assembly language, because that’s what the maintainers’ preferred programming language is, but most information will be useful to users of other languages as well. The MAP is currently maintained by <a href="/main/about/grauw.php">Grauw</a> and <a href="/main/about/bifi.php">BiFi</a>.</p>
 
 
 <h2>Where to start</h2>

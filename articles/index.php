@@ -55,6 +55,7 @@
     <li class="map"><a href="/articles/vdp_guide.php">VDP programming guide</a></li>
     <li class="map"><a href="/articles/split_guide.php">Screensplit programming guide</a></li>
     <li class="map"><a href="/articles/vdp_commands_speed.php">VDP commands ~ speed measurements</a></li>
+    <li class="map"><a href="/articles/scrolling.php">A guide to scrolling game engines on MSX</a></li>
     </ul>
   </li>
   <li id="art_other">Other topics

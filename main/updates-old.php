@@ -16,6 +16,9 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2005-05-12</em><br />
+Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added undocumented and R800 instructions and timings. Also optimized the <a href="/articles/mult_div_shifts.php">Div16</a> routine, thanks to Flyguille.</p>
+
 <p><em>2005-03-18</em><br />
 Added information about memory mapper, PPI and subslot select register to <a href="/resources/msx_io_ports.php">I/O ports overview</a>.</p>
 

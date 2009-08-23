@@ -14,7 +14,7 @@
 
 
 
-<h1>Scrolling on MSX</h1>
+<h1>A guide to scrolling game engines on MSX</h1>
 
 <!--
 <div class="updates">

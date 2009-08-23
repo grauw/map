@@ -20,6 +20,11 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2009-08-23</em><br />
+Added “<a href="/articles/scrolling.php">A guide to scrolling game
+engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit
+division routine</a> 120 T-states faster, thanks to Juha Nurmela.</p>
+
 <p><em>2009-03-27</em><br />
 Added Zemina memory extensions to the <a href="/resources/msx_io_ports.php">I/O ports overview</a> and
 added link to Cronos’s <a href="http://www.hqunix.com/wordpress/?page_id=554">manual scan / translation</a>,
@@ -37,9 +42,6 @@ Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ 
 
 <p><em>2005-06-01</em><br />
 Added information to the PSG samples article about its logarithmic volume scale, and how to play <a href="/articles/psg_sample.php">8-bit samples on the PSG</a>. Thanks go to Arturo Ragozini for pointing this out.</p>
-
-<p><em>2005-05-12</em><br />
-Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added undocumented and R800 instructions and timings. Also optimized the <a href="/articles/mult_div_shifts.php">Div16</a> routine, thanks to Flyguille.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

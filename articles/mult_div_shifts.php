@@ -309,7 +309,7 @@ Mult32_NoAdd:
 </p>
 
 
-<p>So, concluding, if you make a large number of multiplications of which one of the values is primarily smaller than 6 bits, for example if your data is logarithmic, using a right-rotating algorithm would prove worth the effort. To give a real-world usage example, this routine might for example be applicable to calculations on frequency tables within a music replayer, which are set on a logarithmic scale.</p>
+<p>So, concluding, if you make a large number of multiplications of which one of the values is primarily smaller than 6 bits, for example if your data is logarithmic, using a right-rotating algorithm would be the fastest choice. To give a real-world usage example, this routine might for example be applicable to calculations on frequency tables within a music replayer, which are set on a logarithmic scale.</p>
 
 <p>Well, here is the actual routine. Note that it can easily be converted to a Mult8R-routine by inserting an ld d,0 instruction right after the ld hl,0, and also that unrolling this routine will not give you additional speed. Oh, and by the way, although I’ve been talking about right-rotating all the time, this implementation is actually right-shifting ^_^.</p>
 

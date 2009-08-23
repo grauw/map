@@ -288,19 +288,6 @@ draw at 25 or 30 frames/second, or when you make the screen area smaller
 than 256×212.</p>
 
 
-<!--
-<h2 id="examples">Some examples</h2>
-
-<h3>Example 1</h3>
-
-<p><em>Scenario:</em> a game has a player walking around a field which
-spans multiple screens. We want to be able to scroll smoothly in 4
-directions. One step by the player corresponds to 8 pixels. The size of
-the tiles is 8×8. The used hardware is a v9958.</p>
-
-<p>(more to come)</p>
--->
-
 <h2 id="closing">Closing thoughts</h2>
 
 <p>I’d say the key to high-performance scrolling on MSX is to either use

@@ -19,6 +19,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2009-08-23</em><br />
+Made <a href="#div">16-bit division</a> routine 120 T-states faster, thanks to Juha Nurmela.</p>
+
 <p><em>2009-03-27</em><br />
 Added <a href="#divby9">division by 9</a> routine provided by Ricardo Bittencourt.</p>
 
@@ -461,23 +464,35 @@ Div12_NoAdd:
 ;
 Div16:	ld hl,0
 	ld a,b
-	ld b,16
-Div16_Loop:
-	rl c
+	ld b,8
+Div16_Loop1:
 	rla
 	adc hl,hl
 	sbc hl,de
-	jr nc,Div16_NoAdd
+	jr nc,Div16_NoAdd1
 	add hl,de
-Div16_NoAdd:
-	djnz Div16_Loop
-	rl c
+Div16_NoAdd1:
+	djnz Div16_Loop1
+	ld b,a
+	ld a,c
+	ld c,b
+	ld b,8
+Div16_Loop2:
+	rla
+	adc hl,hl
+	sbc hl,de
+	jr nc,Div16_NoAdd2
+	add hl,de
+Div16_NoAdd2:
+	djnz Div16_Loop2
 	rla
 	cpl
 	ld b,a
 	ld a,c
+	ld c,b
+	rla
 	cpl
-	ld c,a
+	ld b,a
 	ret
 </pre>
 

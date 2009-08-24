@@ -20,7 +20,7 @@
 <h2>Latest updates:</h2>
 
 <p><em>2009-08-23</em><br />
-Made <a href="#div">16-bit division</a> routine 120 T-states faster, thanks to Juha Nurmela.</p>
+Made <a href="#div">16-bit division</a> routine 120 T-states faster, thanks to Juha N.</p>
 
 <p><em>2009-03-27</em><br />
 Added <a href="#divby9">division by 9</a> routine provided by Ricardo Bittencourt.</p>

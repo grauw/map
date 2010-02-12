@@ -8,7 +8,7 @@ ini_set('arg_separator.input','&amp;');
 ini_set('arg_separator.output','&amp;');
 
 // Set globals
-$xhtml = strpos($_SERVER['HTTP_ACCEPT'],'application/xhtml+xml') ? true : false;
+$xhtml = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/xhtml+xml');
 
 // gzip pages...
 ob_start("ob_gzhandler");

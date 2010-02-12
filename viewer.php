@@ -14,16 +14,6 @@
 
 
 
-<!--[if IE]>
-<style type="text/css">
-/*** Use proprietary conditional IE comment to filter out this illegal tag...
-     (http://msdn.microsoft.com/workshop/author/dhtml/overview/ccomment_ovw.asp) ***/
-pre {word-wrap: break-word;}
-</style>
-<![endif]-->
-
-
-
 <?php
 
 if (!function_exists("file_get_contents")) {
@@ -55,7 +45,7 @@ if ($_REQUEST["f"]) {
 	    $filecont = htmlspecialchars($filecont, ENT_NOQUOTES);
 
 	    echo '<h1>' . basename($file) . "</h1>\n\n";
-	    echo '<pre style="white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: pre-wrap;">';
+	    echo '<pre style="white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: pre-wrap; word-wrap: break-word;">';
 	    echo $filecont;
 	    echo '</pre>';
 	} else {

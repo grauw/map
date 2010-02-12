@@ -42,11 +42,10 @@ if ($_REQUEST["f"]) {
 		
 	if (file_exists($file)) {
 	    $filecont = file_get_contents($file);
-	    $filecont = htmlspecialchars($filecont, ENT_NOQUOTES);
 
 	    echo '<h1>' . basename($file) . "</h1>\n\n";
 	    echo '<pre style="white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: pre-wrap; word-wrap: break-word;">';
-	    echo $filecont;
+	    echo htmlspecialchars($filecont, ENT_NOQUOTES);
 	    echo '</pre>';
 	} else {
 	    echo '<p><b>Error:</b> File not found.</p>';

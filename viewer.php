@@ -42,18 +42,14 @@ if (!function_exists("file_get_contents")) {
 if ($_REQUEST["f"]) {
     $file = $_REQUEST["f"];
 
-    // prevent hacking stuff...
-    $file = str_replace('\\\\', '/', $file);
-    $file = str_replace('\\', '/', $file);
-    $file = str_replace('../', '', $file);
-    $file = str_replace(':', '', $file);
-
-    // remove heading slashes...
-    while ($file{0} == '/') {
-	$file = substr($file, 1);
-    }
-
-    if (stristr($file, '.txt')) {
+    // limit allowed paths to prevent hacking stuff...
+    if (preg_match('/^[\w\-\/]*\.txt$/i', $file)) {
+    
+	// remove preceding slashes...
+	while ($file{0} == '/') {
+	    $file = substr($file, 1);
+	}
+		
 	if (file_exists($file)) {
 	    $filecont = file_get_contents($file);
 	    $filecont = htmlspecialchars($filecont, ENT_NOQUOTES);
@@ -63,15 +59,15 @@ if ($_REQUEST["f"]) {
 	    echo $filecont;
 	    echo '</pre>';
 	} else {
-	    echo '<p><b>Error:</b> File not found...</p>';
+	    echo '<p><b>Error:</b> File not found.</p>';
 	    echo "<p>($file)</p>";
 	}
     } else {
-	echo '<p><b>Error:</b> Not a supported file format...</p>';
+	echo '<p><b>Error:</b> Path contains illegal characters.</p>';
 	echo "<p>($file)</p>";
     }
 } else {
-    echo '<p><b>Error:</b> No filename specified...</p>';
+    echo '<p><b>Error:</b> No filename specified.</p>';
 }
 
 ?>

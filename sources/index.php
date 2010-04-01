@@ -58,7 +58,7 @@
   <ul>
   <li id="ext_other">Misc
     <ul>
-    <li><a href="/sources/external/z80bits.html">Z80 Bits</a> &middot; collection of Z80 routines (<a href="http://zilog.sh.cvut.cz/~baze/misc/z80bits.html">original link</a>)</li>
+    <li><a href="http://baze.au.com/misc/z80bits.html">Z80 Bits</a> &middot; collection of Z80 routines (<a href="/sources/external/z80bits.html">mirror</a>)</li>
     </ul>
   </li>
   </ul>

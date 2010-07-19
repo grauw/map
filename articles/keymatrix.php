@@ -761,7 +761,7 @@ Main_ReadKeys:
 </tr>
 </table>
 
-<p>Note: with GRAPH you can invoke a couple of common Japanese characters such as ‘year’ for GRAPH-Y, ‘second’ for GRAPH-S, and similarly ‘hour’ and ‘minute’. The characters at GRAPH-1 to 7 are the days of the week, while GRAPH-8, 9 and 0 have the characters for 100, 1000 and 10000. GRAPH-&lt; has the character for ‘small’, &gt; has ‘big’ and GRAPH-L which is physically more or less inbetween &lt; and &gt; has the kanji for ‘middle’. And finally, GRAPH-¥ is the Yen kanji, and GRAPH-P is Pi ^_^.</p>
+<p>Note: with GRAPH you can enter a couple of common Japanese characters; GRAPH-Y for ‘year’, GRAPH-S for ‘second’, and similarly ‘hour’ and ‘minute’. The characters at GRAPH-1 to 7 are the days of the week, and GRAPH-8, 9 and 0 have the characters for 100, 1000 and 10000. GRAPH-&lt; has the character for ‘small’, &gt; has ‘big’ and GRAPH-L which is physically more or less inbetween &lt; and &gt; has the kanji for ‘middle’. And finally, GRAPH-¥ is the Yen kanji, and GRAPH-P is Pi ^_^.</p>
 
 
 <h3 id="uk">UK key matrix</h3>

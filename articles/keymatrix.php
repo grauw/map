@@ -19,6 +19,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2010-07-19</em><br />
+Added more information on models with Yes/No keys and Pioneer PX-7 keys, thanks Manuel Bilderbeek.</p>
+
 <p><em>2004-05-31</em><br />
 Updated Spanish / Argentinian keyboard layout and added a keyboard version no. 6 (again thanks to Flyguille).</p>
 
@@ -103,6 +106,8 @@ Divided the article in sections, added the section about key ghosting, and added
     <td>bit 6: Keyboard layout (1=JIS, 0=ANSI) </td>
   </tr>
 </table>
+
+
 <h2 id="ghosting">Key Ghosting</h2>
 
 <p>There is a limitation in most if not all MSX keyboards, which causes the effect known as ‘key ghosting’. This means that sometimes the matrix indicates a key you didn’t actually press as being pressed. If you for example try pressing SHIFT+S+X, there is a good chance that it will cause F1 to get ‘pressed’ aswell. Likewise, C+D+SPACE will also cause HOME to be pressed. The cause for this does not lay in a flaw in the MSX hardware, but rather in the keyboard itself. One could strongly reduce the happening of key ghosting by adding a series of diodes to the keyboard, however for some reason most, if not all, MSX manufacturers decided not to do so. Probably because it would require a fair number of added diodes :).</p>
@@ -450,7 +455,7 @@ Main_ReadKeys:
   <td>F3</td>
   <td>F2</td>
   <td>F1</td>
-  <td>かな</td>
+  <td>かな¹</td>
   <td>CAPS</td>
   <td>GRAPH</td>
   <td>CTRL</td>
@@ -501,7 +506,7 @@ Main_ReadKeys:
   <td>NUM5</td>
 </tr>
 <tr>
-  <th>row 11<br/>(turboR)</th>
+  <th>row 11²</th>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
   <td>&nbsp;</td>
@@ -513,7 +518,11 @@ Main_ReadKeys:
 </tr>
 </table>
 
-<p>Note: かな is Japanese writing for KANA. Unlike CODE, it is a toggle.</p>
+<p>Notes:</p>
+
+<p>¹ かな is Japanese writing for KANA. Unlike CODE, it is a toggle.</p>
+
+<p>² Used by Panasonic turboR, FS-A1WX and FS-A1WSX.</p>
 
 <p>As said, Japanese computers have two kinds of kana key layouts, JIS and ANSI. Amongst others the Panasonic FS-A1FX and Sanyo Wavy 70FD have the JIS-layout:</p>
 
@@ -762,6 +771,36 @@ Main_ReadKeys:
 </table>
 
 <p>Note: with GRAPH you can enter a couple of common Japanese characters; GRAPH-Y for ‘year’, GRAPH-S for ‘second’, and similarly ‘hour’ and ‘minute’. The characters at GRAPH-1 to 7 are the days of the week, and GRAPH-8, 9 and 0 have the characters for 100, 1000 and 10000. GRAPH-&lt; has the character for ‘small’, &gt; has ‘big’ and GRAPH-L which is physically more or less inbetween &lt; and &gt; has the kanji for ‘middle’. And finally, GRAPH-¥ is the Yen kanji, and GRAPH-P is Pi ^_^.</p>
+
+
+<h3 id="px-7">Pioneer PX-7 key matrix</h3>
+
+<p>The Pioneer MSX with laser-disc player has no num-pad, but does have some extra special-purpose keys. Thanks to Manuel Bilderbeek for the info.</p>
+
+<table class="matrix">
+<tr>
+  <th></th>
+  <th>bit 7</th>
+  <th>bit 6</th>
+  <th>bit 5</th>
+  <th>bit 4</th>
+  <th>bit 3</th>
+  <th>bit 2</th>
+  <th>bit 1</th>
+  <th>bit 0</th>
+</tr>
+<tr>
+  <th>row 9</th>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>super-impose</td>
+  <td>video</td>
+  <td>computer</td>
+</tr>
+</table>
 
 
 <h3 id="uk">UK key matrix</h3>

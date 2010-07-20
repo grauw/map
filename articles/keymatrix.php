@@ -20,7 +20,7 @@
 <h2>Latest updates:</h2>
 
 <p><em>2010-07-19</em><br />
-Added more information on models with Yes/No keys and Pioneer PX-7 keys, thanks Manuel Bilderbeek.</p>
+Added more information on models with Yes/No keys and Pioneer PX-7 keys, thanks Manuel Bilderbeek and Sean Young.</p>
 
 <p><em>2004-05-31</em><br />
 Updated Spanish / Argentinian keyboard layout and added a keyboard version no. 6 (again thanks to Flyguille).</p>
@@ -775,7 +775,7 @@ Main_ReadKeys:
 
 <h3 id="px-7">Pioneer PX-7 key matrix</h3>
 
-<p>The Pioneer MSX with laser-disc player has no num-pad, but does have some extra special-purpose keys. Thanks to Manuel Bilderbeek for the info.</p>
+<p>The Pioneer MSX with laser-disc player has no num-pad, but does have some extra special-purpose keys. Thanks to Sean Young and Manuel Bilderbeek for the info.</p>
 
 <table class="matrix">
 <tr>

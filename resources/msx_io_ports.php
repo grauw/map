@@ -107,11 +107,11 @@
 </tr>
 <tr>
   <td>#80-#83</td>
-  <td>RS232C UART / 8251 <em>(only Spectravideo?)</em></td>
+  <td>RS232C UART / 8251<em> (Spectravideo, and Sony (if enabled))</em></td>
 </tr>
 <tr>
   <td>#84-#87</td>
-  <td>RS232C programmable timer / 8253 <em>(only Spectravideo?)</em></td>
+  <td>RS232C programmable timer / 8253<em> (Spectravideo, and Sony (if enabled))</em></td>
 </tr>
 <tr>
   <td>#88-#8B</td>

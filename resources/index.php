@@ -177,7 +177,7 @@ information, feel free to send us an email.</p>
     </li>
     <li id="midi">MIDI
       <ul>
-      <li><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> (Datapack Vol. 3 Section 5, English)</li>
+      <li><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> (MSX Datapack Vol. 3 Section 5, English)</li>
       </ul>
     </li>
     </ul>

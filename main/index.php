@@ -75,14 +75,13 @@ section links to other development-related sites. And finally, there is the
 <a href="/contributing/">Contributing</a> section for those who want to help
 improve the MAP.</p>
 
-<p>Please note that <em>this site’s content may not be redistributed by any
-means without the permission of the MSX Assembly Page or the original
-author</em>. We have put a lot of effort in collecting all this information and
-also wrote a large number of the articles ourselves (being the ones marked with
-a <img src="/css/mapbullet.gif" alt="MAP" /> bullet), and we ask everyone
-to respect our efforts and author’s rights. Ofcourse linking to us is always
-allowed. For more legal information read the
-<a href="/main/disclaimer.php">Disclaimer</a>.</p>
+<p>Please note that <em>this site’s content may not be redistributed without the
+permission of the MSX Assembly Page or the original author</em>. We have put a
+lot of effort in collecting all this information and also wrote a large number
+of the articles ourselves (the ones marked with a <img src="/css/mapbullet.gif"
+alt="MAP" /> bullet), and we ask everyone to respect our efforts and author’s
+rights. Of course linking to us is always allowed. For more legal information
+read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
 
 <p>The following documents be found in this section:</p>
 

@@ -100,7 +100,7 @@
   <td></td>
   <td>#002E</td>
   <td>1</td>
-  <td>Bit 0: if 1 then MSX-MIDI is present internally (MSX&nbsp;turbo&nbsp;R only)</td>
+  <td>Bit 0: if 1 then MSX-MIDI is present internally (MSX&#160;turbo&#160;R only)</td>
 </tr>
 
 <tr>
@@ -138,8 +138,8 @@
   <td></td>
   <td>#0002</td>
   <td>2</td>
-  <td>Execution address for the startup screen on MSX&nbsp;2, MSX&nbsp;2+
-      or MSX&nbsp;turbo&nbsp;R. This is unofficial and undocumented.</td>
+  <td>Execution address for the startup screen on MSX&#160;2, MSX&#160;2+
+      or MSX&#160;turbo&#160;R. This is unofficial and undocumented.</td>
 </tr>
 </table>
 

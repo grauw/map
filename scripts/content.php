@@ -153,7 +153,7 @@ function addFooter() {
 ?>
 </div>
 
-<div id="foot">&copy; <?php echo date("Y"); ?> MSX Assembly Page</div>
+<div id="foot">© <?php echo date("Y"); ?> MSX Assembly Page</div>
 <?php
 }
 

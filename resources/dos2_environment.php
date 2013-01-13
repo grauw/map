@@ -16,7 +16,7 @@
 
 <h1>MSX-DOS version 2 - environment reference</h1>
 
-<p style="text-align:center">M S X -- D O S&nbsp;&nbsp;&nbsp;v e r s i o n&nbsp;&nbsp;&nbsp; 2</p>
+<p style="text-align:center">M S X -- D O S&#160;&#160;&#160;v e r s i o n&#160;&#160;&#160; 2</p>
 
 <p style="text-align:center">The advanced disk operating system</p>
 

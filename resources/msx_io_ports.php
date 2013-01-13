@@ -583,7 +583,7 @@ So you can check if certain extensions are available and ready to be accessed by
   <tr>
     <td>7</td>
     <td>Cassette input signal</td>
-  <td>&nbsp;</td>
+  <td></td>
   </tr>
 </table>
 

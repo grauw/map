@@ -1718,21 +1718,21 @@ table.instrset td+td+td+td {
 		</tr>
 		<tr>
 			<td>MULUB A,r </td>
-			<td>&nbsp;</td>
+			<td></td>
 			<td>14</td>
 			<td>ED C1+8*r </td>
 			<td>2</td>
 		</tr>
 		<tr>
 			<td>MULUW HL,BC</td>
-			<td>&nbsp;</td>
+			<td></td>
 			<td>36</td>
 			<td>ED C3 </td>
 			<td>2</td>
 		</tr>
 		<tr>
 			<td>MULUW HL,SP</td>
-			<td>&nbsp;</td>
+			<td></td>
 			<td>36</td>
 			<td>ED F3 </td>
 			<td>2</td>

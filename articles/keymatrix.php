@@ -507,14 +507,14 @@ Main_ReadKeys:
 </tr>
 <tr>
   <th>row 11²</th>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
   <td>No</td>
-  <td>&nbsp;</td>
+  <td></td>
   <td>Yes</td>
-  <td>&nbsp;</td>
+  <td></td>
 </tr>
 </table>
 

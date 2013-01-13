@@ -1,7 +1,8 @@
 body {
 	color: black;
 	background-color: white;
-	font: small Verdana, Arial, "Arial Unicode MS", sans-serif, "Lucida Sans Unicode";
+	font-family: Verdana, Arial, "Arial Unicode MS", sans-serif, "Lucida Sans Unicode";
+	font-size: 15px;
 	margin: 0;
 	border: 0;
 	padding: 0;
@@ -13,7 +14,7 @@ body {
 	color: black;
 	background: #CCF;
 	text-align: center;
-	font-size: large;
+	font-size: 20px;
 	font-weight: bold;
 	border-top: thin solid black;
 	border-bottom: thin solid black;
@@ -29,7 +30,7 @@ body {
 	color: black;
 	font-weight: 600;
 	text-align: center;
-	font-size: larger;
+	font-size: 16px;
 	padding: 0;
 	border: 0;
 	margin: auto 0;
@@ -119,7 +120,7 @@ body {
 	color: white;
 	background: #BBF;
 	text-align: center;
-	font-size: medium;
+	font-size: 18px;
 	font-weight: bold;
 	width: 100%;
 	padding: .25em 0em;
@@ -146,17 +147,17 @@ h1 {
 	color: white;
 	background: #BBF;
 	text-align: center;
-	font-size: medium;
+	font-size: 20px;
 	font-weight: bold;
 	width: 100%;
 	padding: .25em 0em;
 }
 
 h2 {
-	font-size: large;
+	font-size: 22px;
 }
 h3 {
-	font-size: medium;
+	font-size: 18px;
 }
 
 em {
@@ -180,6 +181,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 td, th {
 	padding: 0em .5em;
 	border-width: 2px;

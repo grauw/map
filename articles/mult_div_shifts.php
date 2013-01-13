@@ -35,7 +35,7 @@ Optimized the Mult32 routine, it is now 96 T-states faster and three bytes small
 Fixed the Mult32, thanks to Nyyrikki for pointing me to a bit that didn’t make sense.</p>
 
 <p><em>2005-02-06</em><br />
-Put a new (faster) square root routine online, by Ricardo Bittencourt. Also, added the <a href="http://map.tni.nl/sources/external/z80bits.html">Z80 Bits</a> article kindly provided by Petr Petyovsky from the Sinclair scene, which has some very nice routines as well. I will see if I can improve these multiplication and division routines a little more with those in the future.</p>
+Put a new (faster) square root routine online, by Ricardo Bittencourt. Also, added the <a href="/sources/external/z80bits.html">Z80 Bits</a> article kindly provided by Petr Petyovsky from the Sinclair scene, which has some very nice routines as well. I will see if I can improve these multiplication and division routines a little more with those in the future.</p>
 
 <p><em>2005-02-01</em><br />
 - Did some Div16 bug hunting, fixed two bugs. It should be error-free now. Another thing, the divider of the Div16 routine had to be a 15-bit value, so changed the name to Div15, and added some additional Div16 code.<br />

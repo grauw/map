@@ -30,7 +30,7 @@ Call_Slot:   ld     iy,(EXPTBL-1)       ;BIOS slot in iyh
 
 <h2>The SUBROM</h2>
 
-<p>You can’t call the SUBROM from MSX-DOS as you would normally, the reason for this is that both <a href="http://map.tni.nl/resources/msxbios.php#EXTROM">EXTROM</a> and <a href="http://map.tni.nl/resources/msxbios.php#CALSLT">CALSLT</a> use the IX register to pass parameters. Calling directly to the SUBROM doesn’t work either, because using an interslot call to call the SUBROM is not allowed per the MSX2 standard. The reason for this, according to Alex Wulms in MCM 48, is that some DiskROMs couldn’t handle the the SUBROM being in page 0.</p>
+<p>You can’t call the SUBROM from MSX-DOS as you would normally, the reason for this is that both <a href="/resources/msxbios.php#EXTROM">EXTROM</a> and <a href="/resources/msxbios.php#CALSLT">CALSLT</a> use the IX register to pass parameters. Calling directly to the SUBROM doesn’t work either, because using an interslot call to call the SUBROM is not allowed per the MSX2 standard. The reason for this, according to Alex Wulms in MCM 48, is that some DiskROMs couldn’t handle the the SUBROM being in page 0.</p>
 
 <p>The official means to call the SUBROM from MSX-DOS is by using the following routine, provided by ASCII:</p>
 

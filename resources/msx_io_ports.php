@@ -902,7 +902,7 @@ So you can check if certain extensions are available and ready to be accessed by
 
 <p>Detecting the amount of available memory can be done by writing a unique value into all mapper pages and iterating through them until you see repetition. If the repetition e.g. occurs after 8 pages, there is 128k of RAM available. Usually, you will want to do this with interrupts disabled and also want to restore the original values.</p>
 
-<p>Note about DOS2: MSX-DOS2 provides a set of <a href="http://map.tni.nl/resources/dos2_environment.php#c5">convenient memory management routines</a>. In a DOS2 environment, you should <strong>not</strong> access the mapper registers directly, as this will cause various problems. The routines DOS2 offers are very fast, and there should be no reason not to use them.</p>
+<p>Note about DOS2: MSX-DOS2 provides a set of <a href="/resources/dos2_environment.php#c5">convenient memory management routines</a>. In a DOS2 environment, you should <strong>not</strong> access the mapper registers directly, as this will cause various problems. The routines DOS2 offers are very fast, and there should be no reason not to use them.</p>
 
 
 

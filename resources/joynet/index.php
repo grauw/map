@@ -25,7 +25,7 @@
 	The JoyNet standard has moved to the MSX Assembly Page and has been cleaned up thoroughly. An effort was made to restore broken links. I also merged in text from MSX Core Club’s JoyNet page, which is no longer available on the internet.</p>
 </div>
 
-<p>The official specification page is <a href="http://map.tni.nl/resources/joynet/">http://map.tni.nl/resources/joynet/</a>.</p>
+<p>The official specification page is <a href="http://map.grauw.nl/resources/joynet/">http://map.grauw.nl/resources/joynet/</a>.</p>
 
 <p>JoyNet is a joystick port-based ring network standard that was created collaboratively on the <a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a> in 1999 (<a href="http://www.mail-archive.com/msx@stack.nl/info.html">archives</a>). It is compatible with the <a href="http://bifi.msxnet.org/msxnet/konami/cable/">F1-Spirit 3D Special network cable</a> when two computers are connected…</p>
 

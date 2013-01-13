@@ -139,10 +139,6 @@ h1, h1 + h2, h2 + h3 {
 	margin-top: 0.8em;
 }
 
-pre, code {
-	font-size: 100%;		/* render fixed-font items full-sized */
-}
-
 h1 {
 	color: white;
 	background: #BBF;

@@ -98,7 +98,6 @@ allowed. For more legal information read the
   <li><a href="/main/planned.php">Planned articles</a></li>
   <li><a href="/main/styles.php">Style sheet selector</a></li>
   <!--<li><a href="/logs/">Statistics page</a></li>-->
-  <li><a href="/main/moz-ff.php">Recommended browser: Firefox</a></li>
 </ul>
 
 
@@ -117,41 +116,6 @@ a certain subject, or digitize some documents, or making editorial changes
 yourself (which usually expedites the process of getting it online :)), we’d
 really appreciate it. The <a href="/contributing/">Contributing</a> section
 explains how to get started with the source code.</p>
-
-
-<br />
-<p style="text-align: center">
-  <!-- XHTML 1.1 compliance logo -->
-  <a href="http://validator.w3.org/check/referer">
-  <img style="border: 0;"
-       src="http://www.w3.org/Icons/valid-xhtml11"
-       width="88" height="31" alt="Valid XHTML 1.1!" /></a>
-
-  <!-- Extreme Tracking logo -->
-  <a href="http://t.extreme-dm.com/?login=msxasm">
-  <img style="border: 0;"
-       src="http://t1.extreme-dm.com/i.gif"
-       width="41" height="38" alt="Extreme Tracker" /></a>
-
-  <!-- CSS 2.1 compliance logo -->
-  <a href="http://jigsaw.w3.org/css-validator/">
-  <img style="border: 0;"
-       src="http://jigsaw.w3.org/css-validator/images/vcss" 
-       width="88" height="31" alt="Valid CSS!" />
-  </a>
-  <br />
-
-This page is <a href="/main/moz-ff.php">best viewed</a> using Mozilla Firefox<br />
-
-	<!-- Mozilla Firefox logo -->
-	<a href="http://spreadfirefox.com/community/?q=affiliates&amp;id=341&amp;t=85">
-	<img alt="Get Firefox!" title="Get Firefox!"
-		style="border: 0; margin: 0.3em;" width="80" height="15"
-		src="http://www.spreadfirefox.com/community/images/affiliates/Buttons/80x15/firefox_80x15.png"/>
-	</a>
-
-</p>
-
 
 
 <?php addFooter(); ?>

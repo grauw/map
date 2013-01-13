@@ -165,6 +165,10 @@ em {
 	color: #44C;
 }
 
+img {
+	max-width: 100%;
+}
+
 img.illustration {
 	margin: 0 0 .7em .7em;
 	float: right;

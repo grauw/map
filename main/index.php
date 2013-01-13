@@ -65,27 +65,24 @@ useful to users of other languages as well. The MAP is currently maintained by
 <h2>Where to start</h2>
 
 <p>The site is divided into several sections, which you can select from at the
-top. The <a href="/articles/">Articles</a> section contains several articles
-about several topics, ranging from tutorials for beginners to advanced
-programming techniques. <a href="/resources/">Resources</a> contains a number of
-of technical references and datasheets. The <a href="/sources/">Sources</a>
-section contains our collection of source code. This includes both short, common
-routines, which you might want to use in your program, aswell as the sources of
-several big well-known programs. In the <a href="/downloads/">Download</a>
-section you will find several useful, even necessary, tools which are
-programming related. And finally, there are the <a href="/links/">Links</a>
-section, with links to other development-related sites, and the
-<a href="/contributing/">Contributing</a> section for those who want to help
-improve the MAP. Furthermore, if you have any MSX programming or MAP site
-related questions, you can ask them at the
-<a href="http://msxbanzai.tni.nl/dev/#msxdev">#msxdev @ Rizon IRC channel</a>.
-</p>
+top.</p>
 
-<p>Please note that <em>nothing of this page its content may be reproduced by
-any means without the prior permission of the MSX Assembly Page or the original
+<p>The <a href="/articles/">Articles</a> section contains articles about
+topics ranging from tutorials for beginners to advanced programming techniques.
+<a href="/resources/">Resources</a> contains technical references and
+datasheets. The <a href="/sources/">Sources</a> section contains both short
+and common reusable routines, as well as the sources of several big well-known
+programs. In the <a href="/downloads/">Download</a> section you will find
+several useful programming-related tools, and the <a href="/links/">Links</a>
+section links to other development-related sites. And finally, there is the
+<a href="/contributing/">Contributing</a> section for those who want to help
+improve the MAP.</p>
+
+<p>Please note that <em>this site’s content may not be redistributed by any
+means without the permission of the MSX Assembly Page or the original
 author</em>. We have put a lot of effort in collecting all this information and
 also wrote a large number of the articles ourselves (being the ones marked with
-a <img src="/css/mapbullet.gif" alt="MAP bullet" /> bullet), and we ask everyone
+a <img src="/css/mapbullet.gif" alt="MAP" /> bullet), and we ask everyone
 to respect our efforts and author’s rights. Ofcourse linking to us is always
 allowed. For more legal information read the
 <a href="/main/disclaimer.php">Disclaimer</a>.</p>

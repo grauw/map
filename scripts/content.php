@@ -153,14 +153,6 @@ function addFooter() {
 ?>
 </div>
 
-<!-- tracker script -->
-<div id="tracker">
-<script type="text/javascript" src="/tracker.js"></script>
-</div>
-<noscript>
-<div><img src="http://t0.extreme-dm.com/c.g?tag=msxasm&amp;j=n" height="1" width="1" alt="" /></div>
-</noscript>
-
 <div id="foot">&copy; <?php echo date("Y"); ?> MSX Assembly Page</div>
 <?php
 }

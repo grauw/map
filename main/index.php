@@ -42,9 +42,6 @@ Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and clea
 <p><em>2006-12-07</em><br />
 Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
 
-<p><em>2005-06-01</em><br />
-Added information to the PSG samples article about its logarithmic volume scale, and how to play <a href="/articles/psg_sample.php">8-bit samples on the PSG</a>. Thanks go to Arturo Ragozini for pointing this out.</p>
-
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->
 </div>

@@ -14,6 +14,9 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2005-06-01</em><br />
+Added information to the PSG samples article about its logarithmic volume scale, and how to play <a href="/articles/psg_sample.php">8-bit samples on the PSG</a>. Thanks go to Arturo Ragozini for pointing this out.</p>
+
 <p><em>2005-05-12</em><br />
 Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added undocumented and R800 instructions and timings. Also optimized the <a href="/articles/mult_div_shifts.php">Div16</a> routine, thanks to Flyguille.</p>
 

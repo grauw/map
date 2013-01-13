@@ -44,9 +44,6 @@ Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and
 cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist
 archive links.</p>
 
-<p><em>2006-12-07</em><br />
-Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
-
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->
 </div>

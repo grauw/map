@@ -34,10 +34,15 @@ thanks to Manuel Bilderbeek. Also added a <a href="/articles/mult_div_shifts.php
 routine, thanks to Ricardo Bittencourt.</p>
 
 <p><em>2009-03-09</em><br />
-The MSX Assembly Page’s address has changed to <a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now accessible in a <a href="http://hg.grauw.nl/map">public repository</a>, and introducing a <a href="/contributing/">Contributing</a> section.</p>
+The MSX Assembly Page’s address has changed to
+<a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now
+accessible in a <a href="http://hg.grauw.nl/map">public repository</a>, and
+introducing a <a href="/contributing/">Contributing</a> section.</p>
 
 <p><em>2007-06-29</em><br />
-Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist archive links.</p>
+Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and
+cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist
+archive links.</p>
 
 <p><em>2006-12-07</em><br />
 Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
@@ -47,16 +52,43 @@ Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ 
 </div>
 
 
-<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the ultimate source of information for the <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or programmer-to-be. The main target is assembly language, because that’s what the maintainers’ preferred programming language is, but most information will be useful to users of other languages as well. The MAP is currently maintained by <a href="/main/about/grauw.php">Grauw</a> and <a href="/main/about/bifi.php">BiFi</a>.</p>
+<p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the
+ultimate source of information for the
+<abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or
+programmer-to-be. The main target is assembly language, because that’s what the
+maintainers’ preferred programming language is, but most information will be
+useful to users of other languages as well. The MAP is currently maintained by
+<a href="/main/about/grauw.php">Grauw</a> and
+<a href="/main/about/bifi.php">BiFi</a>.</p>
 
 
 <h2>Where to start</h2>
 
-<p>The site is divided into several sections, which you can select from at the top. 
+<p>The site is divided into several sections, which you can select from at the
+top. The <a href="/articles/">Articles</a> section contains several articles
+about several topics, ranging from tutorials for beginners to advanced
+programming techniques. <a href="/resources/">Resources</a> contains a number of
+of technical references and datasheets. The <a href="/sources/">Sources</a>
+section contains our collection of source code. This includes both short, common
+routines, which you might want to use in your program, aswell as the sources of
+several big well-known programs. In the <a href="/downloads/">Download</a>
+section you will find several useful, even necessary, tools which are
+programming related. And finally, there are the <a href="/links/">Links</a>
+section, with links to other development-related sites, and the
+<a href="/contributing/">Contributing</a> section for those who want to help
+improve the MAP. Furthermore, if you have any MSX programming or MAP site
+related questions, you can ask them at the
+<a href="http://msxbanzai.tni.nl/dev/#msxdev">#msxdev @ Rizon IRC channel</a>.
+</p>
 
-The <a href="/articles/">Articles</a> section contains several articles about several topics, ranging from tutorials for beginners to advanced programming techniques. <a href="/resources/">Resources</a> contains a number of of technical references and datasheets. The <a href="/sources/">Sources</a> section contains our collection of source code. This includes both short, common routines, which you might want to use in your program, aswell as the sources of several big well-known programs. In the <a href="/downloads/">Download</a> section you will find several useful, even necessary, tools which are programming related. And finally, there are the <a href="/links/">Links</a> section, with links to other development-related sites, and the <a href="/contributing/">Contributing</a> section for those who want to help improve the MAP. Furthermore, if you have any MSX programming or MAP site related questions, you can ask them at the <a href="http://msxbanzai.tni.nl/dev/#msxdev">#msxdev @ Rizon IRC channel</a>.</p>
-
-<p>Please note that <em>nothing of this page its content may be reproduced by any means without the prior permission of the MSX Assembly Page or the original author</em>. We have put a lot of effort in collecting all this information and also wrote a large number of the articles ourselves (being the ones marked with a <img src="/css/mapbullet.gif" alt="MAP bullet" /> bullet), and we ask everyone to respect our efforts and author’s rights. Ofcourse linking to us is always allowed. For more legal information read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
+<p>Please note that <em>nothing of this page its content may be reproduced by
+any means without the prior permission of the MSX Assembly Page or the original
+author</em>. We have put a lot of effort in collecting all this information and
+also wrote a large number of the articles ourselves (being the ones marked with
+a <img src="/css/mapbullet.gif" alt="MAP bullet" /> bullet), and we ask everyone
+to respect our efforts and author’s rights. Ofcourse linking to us is always
+allowed. For more legal information read the
+<a href="/main/disclaimer.php">Disclaimer</a>.</p>
 
 <p>The following documents be found in this section:</p>
 
@@ -72,9 +104,19 @@ The <a href="/articles/">Articles</a> section contains several articles about se
 
 <h2>Comments</h2>
 
-<p>If you would like to see something added to this site, or if you have any comments about the content, feel free to email us about it! It is a tough job to do this all by ourselves, and we can make mistakes, and we don’t always know what’s best either. If you want to submit something for publication on this site, you can email it to us as well. Our contact address is <g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email link)</g:insertMail>.</p>
+<p>If you would like to see something added to this site, or if you have any
+comments about the content, feel free to email us about it! It is a tough job to
+do this all by ourselves, and we can make mistakes, and we don’t always know
+what’s best either. If you want to submit something for publication on this
+site, you can email it to us as well. Our contact address is
+<g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email
+link)</g:insertMail>.</p>
 
-<p>If you want to contribute more directly to the map, like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it. The <a href="/contributing/">Contributing</a> section explains how to get started with the source code.</p>
+<p>If you want to contribute more directly to the map, like write articles about
+a certain subject, or digitize some documents, or making editorial changes
+yourself (which usually expedites the process of getting it online :)), we’d
+really appreciate it. The <a href="/contributing/">Contributing</a> section
+explains how to get started with the source code.</p>
 
 
 <br />

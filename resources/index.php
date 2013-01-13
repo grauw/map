@@ -14,7 +14,11 @@
 
 <h1>Resources</h1>
 
-<p>This is our collection of online MSX resources. Some are authored, translated or transcribed by the MAP maintainers, and can only be found here exclusively. Therefore, please do not spread those without our permission, but link to the MAP instead. If you have something not listed here which contains new information, feel free to send us an email.</p>
+<p>This is our collection of online MSX resources. Some are authored, translated
+or transcribed by the MAP maintainers, and can only be found here exclusively.
+Therefore, please do not spread those without our permission, but link to the
+MAP instead. If you have something not listed here which contains new
+information, feel free to send us an email.</p>
 
 <ul>
 <li id="osdocs">OS documentation

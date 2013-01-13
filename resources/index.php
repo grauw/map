@@ -171,6 +171,11 @@
       <li><a href="/resources/joynet/">JoyNet standard documentation</a></li>
       </ul>
     </li>
+    <li id="midi">MIDI
+      <ul>
+      <li><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> (Datapack Vol. 3 Section 5, English)</li>
+      </ul>
+    </li>
     </ul>
   </li>
   <li id="dd_other">Other

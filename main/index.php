@@ -18,6 +18,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2013-01-13</em><br />
+Added an English translation of the MSX Datapack Vol. 3’s
+<a href="/resources/midi/msx-midi.php">MSX-MIDI</a> documentation.</p>
+
 <p><em>2009-08-23</em><br />
 Added “<a href="/articles/scrolling.php">A guide to scrolling game
 engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit

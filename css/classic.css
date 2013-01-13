@@ -160,6 +160,10 @@ h3 {
 	font-size: 18px;
 }
 
+p {
+	margin: 1em 0;
+}
+
 em {
 	font-style: italic;
 	color: #44C;

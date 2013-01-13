@@ -33,12 +33,6 @@ program, it is required to name the original author in the product, with
 recognition of his right as author. Also, mentioning the MSX Assembly Page would
 be nice ^_^.</p>
 
-<p>If the MSX Assembly Page group discovers or is informed of any form of misuse
-of our service, and the offender fails to cease the abuse after repeated
-warnings, steps will be taken to prevent the abuse in the future. Also, by wide
-publication on the current MSX information channels the misuse will be made
-known to the MSX community and the authors.</p>
-
 <p>The members of the MSX Assembly Page have the obligation to make the
 information available on Internet for long-term. When the group can no longer
 guarantee the availability of the information by itself, for example because the

@@ -538,9 +538,8 @@ So you can check if certain extensions are available and ready to be accessed by
 <h3 id="psgioports">Additional PSG I/O ports A &amp; B</h3>
 <p>The PSG has two additional I/O ports in registers 14 and 15. They are used by the MSX standard for several device I/O related tasks, comparable with the PPI and working more or less in conjunction with it. These are the functions:</p>
 
-<p>PSG I/O port A (r#14) – <em>read-only</em></p>
-
 <table>
+  <caption>PSG I/O port A (r#14) – <em>read-only</em></caption>
   <tr>
     <th>Bit</th>
     <th>Description</th>
@@ -588,9 +587,8 @@ So you can check if certain extensions are available and ready to be accessed by
   </tr>
 </table>
 
-<p>PSG I/O port B (r#15) – <em>write/read</em></p>
-
 <table>
+  <caption>PSG I/O port B (r#15) – <em>write/read</em></caption>
   <tr>
     <th>Bit</th>
     <th>Description</th>

@@ -16,7 +16,7 @@
 
 <p>If you want to contribute more directly to the MAP like write articles about a certain subject, or digitize some documents, or making editorial changes yourself (which usually expedites the process of getting it online :)), we’d really appreciate it.</p>
 
-<p>The <a href="http://hg.grauw.nl/map">MAP source code</a> is stored in a <a href="http://www.selenic.com/mercurial/">Mercurial</a> repository. There is <a href="/contributing/repository.php">a tutorial</a> explaining how to get the sources and start making changes.</p>
+<p>The <a href="https://bitbucket.org/grauw/map">MAP source code</a> is stored in a <a href="http://www.selenic.com/mercurial/">Mercurial</a> repository. There is <a href="/contributing/repository.php">a tutorial</a> explaining how to get the sources and start making changes.</p>
 
 <p>Additionally, there is <a href="/contributing/documents.php">a tutorial</a> on the document format and conventions used on the MAP. Note that on most browsers, the pages are served as XML, so be sure to verify your changes pages in a browser that is not Internet Explorer.</p>
 

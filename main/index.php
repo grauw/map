@@ -36,7 +36,7 @@ routine, thanks to Ricardo Bittencourt.</p>
 <p><em>2009-03-09</em><br />
 The MSX Assembly Page’s address has changed to
 <a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now
-accessible in a <a href="http://hg.grauw.nl/map">public repository</a>, and
+accessible in a <a href="https://bitbucket.org/grauw/map">public repository</a>, and
 introducing a <a href="/contributing/">Contributing</a> section.</p>
 
 <p><em>2007-06-29</em><br />

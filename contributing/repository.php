@@ -14,7 +14,7 @@
 
 <p>The MSX Assembly Page source code is stored in a Mercurial revision control repository, which you can find here:</p>
 
-<p><a href="http://hg.grauw.nl/map">http://hg.grauw.nl/map</a></p>
+<p><a href="https://bitbucket.org/grauw/map">https://bitbucket.org/grauw/map</a></p>
 
 <p>Below you will find short instructions on how to work with Mercurial.</p>
 
@@ -28,7 +28,7 @@
 
 <p>You start by cloning the main repository on your local system:</p>
 
-<pre>hg clone http://hg.grauw.nl/map</pre>
+<pre>hg clone https://bitbucket.org/grauw/map</pre>
 
 <p>Now you can start making changes. Every time you make a unit of related changes, you can commit them into your local repository:</p>
 
@@ -48,7 +48,7 @@
 
 <p>Once your changes are ready for publication, you can push all the changes that you committed locally into the main repository, and they will automatically appear on the website. Note that in order to push, you need to use HTTPS. You can configure a <a href="http://www.selenic.com/mercurial/wiki/index.cgi/TipsAndTricks#head-903d2da677af8b40172345b98072b4b2826bad22">default push location</a> in Mercurial so that it will remember it.</p>
 
-<pre>hg push https://hg.grauw.nl/map</pre>
+<pre>hg push https://bitbucket.org/grauw/map</pre>
 
 <p>In order to be able to push changes directly into the repository you need push rights, so if you do not have those then instead you can send your changes to the MAP by email using an ‘email-bundle’. You can do this easily from TortoiseHg, to use it from the command-line you need to first enable the <a href="http://www.selenic.com/mercurial/wiki/index.cgi/PatchbombExtension">Patchbomb extension</a> that is bundled with Mercurial.</p>
 

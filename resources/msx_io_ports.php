@@ -105,11 +105,11 @@
 </tr>
 <tr>
   <td>#80-#83</td>
-  <td>RS232C UART / 8251 <em>(Spectravideo, and Sony (if enabled))</em></td>
+  <td><a href="#rs232">RS232C UART / 8251</a> <em>(Spectravideo, and Sony (if enabled))</em></td>
 </tr>
 <tr>
   <td>#84-#87</td>
-  <td>RS232C programmable timer / 8253 <em>(Spectravideo, and Sony (if enabled))</em></td>
+  <td><a href="#rs232">RS232C programmable timer / 8253</a> <em>(Spectravideo, and Sony (if enabled))</em></td>
 </tr>
 <tr>
   <td>#88-#8B</td>
@@ -442,6 +442,48 @@ So you can check if certain extensions are available and ready to be accessed by
 
 <p>Refer to the <a href="/resources/#v9990">Video9000 manual</a>, page 13, for more (Video9000-specific) details about the v7040 chip.</p>
 
+
+<h2 id="rs232">RS232C UART (8251) / timer (8253)</h2>
+
+<p>These are the functions of the I/O registers:</p>
+<table>
+  <tr>
+    <th>Port</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>#80<td>
+    <td>i-8251 data transmission</td>
+  </tr>
+  <tr>
+    <td>#81<td>
+    <td>i-8251 command / status register</td>
+  </tr>
+  <tr>
+    <td>#82 (read)<td>
+    <td>i-8251 connection state</td>
+  </tr>
+  <tr>
+    <td>#83 (write)<td>
+    <td>i-8251 interrupt mask</td>
+  </tr>
+  <tr>
+    <td>#84<td>
+    <td>i-8253 counter 0</td>
+  </tr>
+  <tr>
+    <td>#85<td>
+    <td>i-8253 counter 1</td>
+  </tr>
+  <tr>
+    <td>#86<td>
+    <td>i-8253 counter 2</td>
+  </tr>
+  <tr>
+    <td>#87 (write)<td>
+    <td>i-8253 control register</td>
+  </tr>
+</table>
 
 <h2 id="vdp">VDP / Video Display Processor / TMS9918A / v9938 / v9958</h2>
 

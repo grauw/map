@@ -452,35 +452,35 @@ So you can check if certain extensions are available and ready to be accessed by
     <th>Description</th>
   </tr>
   <tr>
-    <td>#80<td>
+    <td>#80</td>
     <td>i-8251 data transmission</td>
   </tr>
   <tr>
-    <td>#81<td>
+    <td>#81</td>
     <td>i-8251 command / status register</td>
   </tr>
   <tr>
-    <td>#82 (read)<td>
+    <td>#82 (read)</td>
     <td>i-8251 connection state</td>
   </tr>
   <tr>
-    <td>#83 (write)<td>
+    <td>#83 (write)</td>
     <td>i-8251 interrupt mask</td>
   </tr>
   <tr>
-    <td>#84<td>
+    <td>#84</td>
     <td>i-8253 counter 0</td>
   </tr>
   <tr>
-    <td>#85<td>
+    <td>#85</td>
     <td>i-8253 counter 1</td>
   </tr>
   <tr>
-    <td>#86<td>
+    <td>#86</td>
     <td>i-8253 counter 2</td>
   </tr>
   <tr>
-    <td>#87 (write)<td>
+    <td>#87 (write)</td>
     <td>i-8253 control register</td>
   </tr>
 </table>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
 <head>
-  <title>MSX Assembly Page</title>
+  <title>Z80 instruction set</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <script type="text/javascript" src="/js/tablesort.js" defer="defer"></script>

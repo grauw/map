@@ -262,8 +262,8 @@ When writing to the command / mode register continuously, please insert a wait t
 </p>
 
 <p>
-<span title="8251はI/Oポートの0E9Hに00H、00H、00H、04Hを書き込むと、リセットされます。">
-By writing 00H, 00H, 00H, 04H to I/O port 0E9H, the 8251 is reset.</span>
+<span title="8251はI/Oポートの0E9Hに00H、00H、00H、40Hを書き込むと、リセットされます。">
+By writing 00H, 00H, 00H, 40H to I/O port 0E9H, the 8251 is reset.</span>
 <span title="モードに誤った値を設定すると、MIDIとして機能しなくなるので、リセット後は必ず特定の値を設定します。">
 It will no longer function as MIDI if an incorrect mode value is configured, so after a reset always set it to a specific value.</span>
 <span title="詳細は、添付のサンプルプログラム (「THRU.MAC」) を参照して下さい。">

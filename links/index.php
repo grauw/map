@@ -53,6 +53,7 @@
     <li><a href="http://users.pandora.be/jon/msx/ctng.html">Compass</a> (Compjoetania)</li>
     <li><a href="http://tniasm.tni.nl/">tniASM</a> (TNI)</li>
     <li><a href="http://ca3.cjb.net/">Chaos Assembler</a> (<a href="http://teddywarez.cjb.net/">TeddyWareZ</a>)</li>
+    <li><a href="https://bitbucket.org/grauw/glass">Glass</a> (Laurens Holst)</li>
     </ul>
   </li>
   </ul>

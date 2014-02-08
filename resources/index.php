@@ -91,8 +91,7 @@ information, feel free to send us an email.</p>
     </li>
     <li id="v9958">v9958 / MSX2+ / turboR VDP
       <ul>
-      <li class="map">Yamaha v9958 Application Manual · transscribed <em>(work in progress)</em></li>
-      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha v9958 Application Manual</a></li>
+      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha v9958 Application Manual</a> · scans</li>
       </ul>
     </li>
     <li id="v9990">v9990 / Graphics9000 (by Sunrise)

@@ -63,7 +63,7 @@
   <ul>
   <li>Devices / peripherals
     <ul>
-    <li><a href="http://www.msx.ch/sunformsx/">Sunrise Foundation</a> (sells MoonSound, Gfx9000, etc.) (NL, Swiss)</li>
+    <li><a href="http://sunriseformsx.nl/">Sunrise Foundation</a> (sells MoonSound, Gfx9000, etc.) (<a href="http://www.msx.ch/sunformsx/">old site</a>)</li>
     <li><a href="http://www.msxinfo.com/">MSX-INFO</a> (sells Padial’s Z380, etc.) (NL)</li>
     <li><a href="http://msx4ever.xs4all.nl/">MSX NBNO</a> (sells printed application manuals) (NL)</li>
     </ul>

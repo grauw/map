@@ -58,7 +58,7 @@ information, feel free to send us an email.</p>
 	  <li class="map"><a href="/resources/z80instr.php">Z80 instruction set overview</a></li>
       <li><a href="http://www.zilog.com/docs/z80/um0080.pdf">ZiLOG Z80 user's manual</a></li>
       <li><a href="http://www.myquest.nl/z80undocumented/z80-documented.pdf">The Undocumented Z80 Documented</a> · by Sean Young (now maintained by Jan Wilmans)</li>
-      <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/zaks/index-nf.htm">Programming the Z80</a> · by Rodnay Zaks (book, partially)</li>
+      <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
       </ul>
     </li>
     <li id="z180">Z180

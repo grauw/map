@@ -21,7 +21,8 @@
   <ul>
   <li>IRC channels
     <ul>
-    <li>Join the #msxdev channel at irc.rizon.net (<a href="http://msxbanzai.tni.nl/dev/#msxdev">homepage</a>)</li>
+    <li>#msxdev on irc.rizon.net (<a href="http://msxbanzai.tni.nl/dev/#msxdev">homepage</a>)</li>
+    <li>#openmsx on irc.freenode.net (<a href="http://openmsx.sourceforge.net/contact.php">homepage</a>)</li>
     </ul>
   </li>
   <li>Sites

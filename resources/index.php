@@ -28,7 +28,7 @@ information, feel free to send us an email.</p>
     <li class="map"><a href="/resources/msxbios.php">MSX BIOS calls</a></li>
     <li class="map"><a href="/resources/subrom.php">MSX SUBROM BIOS calls</a></li>
     <li class="map"><a href="/resources/msxsystemvars.php">System variables</a> <em>(work in progress)</em></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">MSX2 Technical Handbook appendices</a> · by Nestor Soriano (Konami Man)</li>
+    <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">MSX2 Technical Handbook appendices</a> · by Nestor Soriano (Konamiman)</li>
     </ul>
   </li>
   <li id="dos2">DOS2 documentation
@@ -42,7 +42,7 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konami Man)</li>
+  <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
   </ul>
 </li>
 <li id="devicedocs">Device documentation

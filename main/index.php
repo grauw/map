@@ -19,12 +19,12 @@
 <h2>Latest updates:</h2>
 
 <p><em>2014-04-03</em><br />
-Add links to Nestor Soriano’s great
+Added links to Nestor Soriano’s great
 <a href="http://map.grauw.nl/resources/#msxbios">MSX2 Technical Handbook
 transscription</a>, and some clean-up.</p>
 
 <p><em>2014-02-08</em><br />
-Add link to Eugeny Brychkov’s excellent
+Added link to Eugeny Brychkov’s excellent
 <a href="http://map.grauw.nl/resources/#v9938">v9938 application manual
 transscription</a>.</p>
 

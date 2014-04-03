@@ -69,9 +69,8 @@ topics ranging from tutorials for beginners to advanced programming techniques.
 <a href="/resources/">Resources</a> contains technical references and
 datasheets. The <a href="/sources/">Sources</a> section contains both short
 and common reusable routines, as well as the sources of several big well-known
-programs. In the <a href="/downloads/">Download</a> section you will find
-several useful programming-related tools, and the <a href="/links/">Links</a>
-section links to other development-related sites. And finally, there is the
+programs. In the <a href="/links/">Links</a> section you will find links to
+other development-related sites and tools. And finally, there is the
 <a href="/contributing/">Contributing</a> section for those who want to help
 improve the MAP.</p>
 

@@ -1,1 +1,1 @@
-<?php header ('Location: /downloads/'); ?>
+<?php header ('Location: /links/'); ?>

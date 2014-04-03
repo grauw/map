@@ -122,19 +122,11 @@ function addMenu() {
   <li><a href="/sources/#extsources">External sources</a></li>
   </ul>
 </li>
-<li><a href="/downloads/">Downloads</a>
-  <ul>
-  <li><a href="/downloads/#programming">Assemblers, compilers, etc.</a></li>
-  <li><a href="/downloads/#tools">Tools</a></li>
-  <li><a href="/downloads/#article">Article downloads</a></li>
-  </ul>
-</li>
 <li><a href="/links/">Links</a>
   <ul>
-  <li><a href="/links/#dev-comm">Development communities</a></li>
-  <li><a href="/links/#software">Software</a></li>
-  <li><a href="/links/#hardware">Hardware</a></li>
-  <li><a href="/links/#special">Special mention</a></li>
+  <li><a href="/links/#communities">Development communities</a></li>
+  <li><a href="/links/#resources">Documentation resources</a></li>
+  <li><a href="/links/#tools">Programming tools</a></li>
   </ul>
 </li>
 <li><a href="/contributing/">Contributing</a></li>

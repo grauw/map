@@ -17,7 +17,7 @@
 <p>This is a collection of links related to MSX programming. If you have a new link for us, or perhaps you've discovered an error or something, then send us an email! The list is still far from complete, so every addition is appreciated.</p>
 
 <ul>
-<li id="dev-comm">Development Communities
+<li id="communities">Development communities
   <ul>
   <li>IRC channels
     <ul>
@@ -27,21 +27,51 @@
   </li>
   <li>Sites
     <ul>
-    <li><a href="http://msxbanzai.tni.nl/">MSX Banzai!</a></li>
-    <li><a href="http://www.msxarchive.nl/pub/msx/docs/">Funet FTP MSX documentation section</a></li>
-    <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
-	<li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a></li>
-	<li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist (archive)</a></li>
-    <li><a href="http://msx.hansotten.com/">MSX Info Pages</a></li>
-    <li><a href="http://bifi.msxnet.org/msxnet/tech/">msxnet.org Sean Young’s technical MSX info</a></li>
-    <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
-    <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s The MSX Plaza</a></li>
-    <li><a href="http://www.mccm.hetlab.tk/millennium/milc/index.htm">MCCM’s MiLC (mainly Dutch)</a></li>
-    <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
-    <li><a href="http://www.zilog.com/products/searchdocs.asp">ZiLOG documentation search</a></li>
-    <li><a href="http://nocash.emubase.de/portar.htm">NoCash MSX programming specs</a></li>
-    <li><a href="http://msx4ever.xs4all.nl/">MSX NBNO</a></li>
+	<li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a> (<a href="http://www.mail-archive.com/msx@stack.nl/info.html">archive</a>)</li>
     <li><a href="http://www.msx.org/">MSX Resource Center</a></li>
+    </ul>
+  </li>
+  </ul>
+</li>
+<li id="resources">Documentation resources
+  <ul>
+  <li><a href="http://www.msx.org/wiki">MSX Resource Center wiki</a></li>
+  <li><a href="http://msxbanzai.tni.nl/">MSX Banzai!</a></li>
+  <li><a href="http://bifi.msxnet.org/msxnet/tech/">msxnet.org Sean Young’s technical MSX info</a></li>
+  <li><a href="http://msx.hansotten.com/">MSX Info Pages</a></li>
+  <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
+  <li><a href="http://www.mccm.hetlab.tk/millennium/milc/index.htm">MCCM’s MiLC (mainly Dutch)</a></li>
+  <li><a href="http://nocash.emubase.de/portar.htm">NoCash MSX programming specs</a></li>
+  <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s MSX Plaza</a> · MCCM articles in Dutch and English</li>
+  <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
+  <li><a href="http://www.msxarchive.nl/pub/msx/docs/">Funet FTP MSX documentation section</a></li>
+  <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
+  <li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist archive</a></li>
+  </ul>
+</li>
+<li id="tools">Programming tools
+  <ul>
+  <li id="assemblers">MSX Assemblers
+    <ul>
+    <li><a href="http://home.scarlet.be/~dhran/compass-info/">Compass</a> · Compjoetania TNG</li>
+    <li><a href="http://wbsoft.home.xs4all.nl/msx/">WBASS2</a> · <i>(<a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2.zip">download</a>, <a href="http://www.msxarchive.nl/pub/msx/programming/asm/wbass2.zip">no logo version</a>, <a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2-handleiding.txt">manual (Dutch)</a>)</i></li>
+    </ul>
+  </li>
+  <li id="crossasm">PC Crossassemblers (for Z80)
+    <ul>
+    <li><a href="https://bitbucket.org/grauw/glass">Glass</a></li>
+    <li><a href="http://pasmo.speccy.org/">Pasmo</a></li>
+    <li><a href="http://tniasm.tni.nl/">tniASM</a></li>
+    <li><a href="http://home.wanadoo.nl/smastijn/sjasm.html">Sjasm</a></li>
+    </ul>
+  </li>
+  <li id="misc">Miscellaneous
+    <ul>
+    <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s MSX Plaza</a> · SEE, XSA, etc.</li>
+    <li><a href="http://home.kabelfoon.nl/~vincentd/">Vincent van Dam’s MSX Software</a> · dsk2rom, list, wbass2txt, midi, etc.</li>
+    <li><a href="http://www.teambomba.net/bombaman/download.html">Team Bomba tools & sources</a> · viewge5, bitbuster, etc.</li>
+    <li><a href="http://www5d.biglobe.ne.jp/~hra/software/">HRA’s software</a> · bmp2msx, etc.</li>
+    <li><a href="http://marmsx.msxall.com/english.php">MARMSX Develop</a> · MSX Viewer, SLOT View, etc.</li>
     </ul>
   </li>
   </ul>

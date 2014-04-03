@@ -72,8 +72,8 @@ other development-related sites and tools. And finally, there is the
 <a href="/contributing/">Contributing</a> section for those who want to help
 improve the MAP.</p>
 
-<p>Please note that <em>this site’s content may not be redistributed without the
-permission of the MSX Assembly Page or the original author</em>. We have put a
+<p><em>Please note that this site’s content may not be redistributed without the
+permission of the MSX Assembly Page or the original author.</em> We have put a
 lot of effort in collecting all this information and also wrote a large number
 of the articles ourselves (the ones marked with a <img src="/css/mapbullet.gif"
 alt="MAP" /> bullet), and we ask everyone to respect our efforts and author’s

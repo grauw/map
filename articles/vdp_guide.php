@@ -62,7 +62,7 @@ Wrote a little explanation about what the proper values for Blue colours are in 
 
 <p>Another issue is that although the voltages the VDP outputs increase linearly, the actual intensity of the colours displayed has an exponential curve (thanks to Maarten ter Huurne, btw). To cope for this, you have to apply gamma correction to the colours. A television or an MSX monitor generally has a gamma of 2.5, while on a PC the usual colourspace is sRGB nowadays, with a gamma of 2.2. So, in order to get the correct colors displayed on your PC, you’ll have to apply a gamma correction of 2.2 / 2.5 = 0.88 to the palette. Paint Shop Pro can do this fairly easily.</p>
 
-<p>Many who designed or converted graphics on the PC have probably not considered these two ‘complications’, and instead used a gliding blue scale and no gamma correction, which would yield somewhat inaccurate results. I have however put a <a href="downloads/articles/sc8_palette_srgb.zip">proper palette</a> online for your convenience in the <a href="/downloads.php#graphics">download area</a>. It used to be a ‘wrong’ one too, so if you downloaded it before, do it again.</p>
+<p>Many who designed or converted graphics on the PC have probably not considered these two ‘complications’, and instead used a gliding blue scale and no gamma correction, which would yield somewhat inaccurate results. I have however put a <a href="downloads/articles/sc8_palette_srgb.zip">proper palette</a> online for your convenience. It used to be a ‘wrong’ one too, so if you downloaded it before, do it again.</p>
 
 <pre>
 10 SCREEN 8:SETPAGE 1,1:LINE (0,0)-(255,211),&amp;B11111111,BF

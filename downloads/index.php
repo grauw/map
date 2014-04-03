@@ -77,11 +77,6 @@
       <li><a href="http://marmsx.msxall.com/msxvw/msxvw5/msxvwe.php">MARMSX's MSX Viewer &amp; tools</a> · by MARMSX <i>(<a href="http://marmsx.msxall.com/english.php">homepage</a>)</i></li>
       </ul>
     </li>
-    <li id="gfx_misc">Misc
-      <ul>
-      <li><a href="articles/sc8_palette_srgb.zip">Screen 8 palette file (proper, sRGB)</a> · for Photoshop and PSP <i>(<a href="/articles/vdp_guide.php#screen8col">article</a>)</i></li>
-      </ul>
-    </li>
     </ul>
   </li>
   <li id="compression">(De)compression
@@ -95,12 +90,6 @@
     <li><a href="http://msxbanzai.tni.nl/dev/lha-pma.zip">LHA-PMA</a> · Win32, <a href="http://www.msxarchive.nl/pub/msx/decompression_tools/lha-pma-2.tar.gz">Linux</a>, LZH &amp; PMA format <i>(<a href="http://www.msxarchive.nl/pub/msx/decompression_tools/lha-pma.exe">mirror</a>)</i></li>
     </ul>
   </li>
-  </ul>
-</li>
-<li id="article">Article downloads
-  <ul>
-  <li><a href="articles/splittests.lzh">Screen split accuracy test cases</a> · <i>(<a href="/articles/split_guide.php">article</a>)</i></li>
-  <li><a href="articles/testcopy.lzh">VDP command speed test tool</a> · <i>(<a href="/articles/vdp_commands_speed.php">article</a>)</i></li>
   </ul>
 </li>
 </ul>

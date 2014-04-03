@@ -34,7 +34,7 @@ information, feel free to send us an email.</p>
     <ul>
     <li><a href="/resources/dos2info.lzh">ASCII MSX-DOS2 documentation</a>
       <ul>
-      <li>MSX-DOS2 commands reference · (not programming-related)</li>
+      <li>MSX-DOS2 commands reference · not programming-related</li>
       <li><a href="/resources/dos2_environment.php">MSX-DOS2 environment reference</a></li>
       <li><a href="/resources/dos2_functioncalls.php">MSX-DOS2 function call reference</a></li>
       </ul>
@@ -85,7 +85,7 @@ information, feel free to send us an email.</p>
     <li id="v9938">v9938 / MSX2 VDP
       <ul>
       <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha v9938 Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
-      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(work in progress)</em></li>
+      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(incomplete)</em></li>
       <li><a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">Yamaha v9938 Application Manual</a> · scans</li>
       </ul>
     </li>
@@ -184,7 +184,6 @@ information, feel free to send us an email.</p>
     <ul>
     <li id="ppi">PPI / i8255 / Programmable Peripheral Interface
       <ul>
-      <li>Note: doesn't seem to apply to MSX directly. Will write a better doc someday.</li>
       <li><a href="/resources/ppi/intel_82c55a.pdf">Intel 82C55A CHMOS PPI</a></li>
       <li><a href="/resources/ppi/chipsi8255.pdf">i8255 introduction</a></li>
       </ul>

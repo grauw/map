@@ -19,7 +19,7 @@
 <h2>Latest updates:</h2>
 
 <p><em>2014-04-03</em><br />
-Added links to Nestor Soriano’s great
+Added links to Nestor Soriano (Konamiman)’s great
 <a href="http://map.grauw.nl/resources/#msxbios">MSX2 Technical Handbook
 transscription</a>, and some clean-up.</p>
 

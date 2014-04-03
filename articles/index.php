@@ -69,9 +69,13 @@
   <li id="ext_mccw"><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a>
     <ul>
     <li><a href="http://www.mccw.hetlab.tk/91/KANJI-stuff/en.html">MSX-Kanji revealed</a></li>
-    <li><a href="http://www.mccw.hetlab.tk/92/Multiplication/en.html">Multiplication on a Z80</a></li>
     <li><a href="http://www.mccw.hetlab.tk/91/msx1demos1/en.html">23 steps to high resolution on MSX1, part 1</a></li>
     <li><a href="http://www.mccw.hetlab.tk/92/msx1demos2/en.html">23 steps to high resolution on MSX1, part 2</a></li>
+    <li><a href="http://www.mccw.hetlab.tk/92/Multiplication/en.html">Multiplication on a Z80</a></li>
+    <li><a href="http://www.mccw.hetlab.tk/93/trmidi/en.html">MIDI interface of the GT</a></li>
+    <li><a href="http://www.mccw.hetlab.tk/93/assemblyline1/en.html">Assembly Line</a></li>
+    <li><a href="http://www.mccw.hetlab.tk/93/nestor/en.html">NestorTIPS for NestorBASIC</a></li>
+    <li><a href="http://www.mccw.hetlab.tk/93/rotator/en.html">The zooming rotator</a></li>
     </ul>
   </li>
   <li id="ext_msxbanzai"><a href="http://msxbanzai.tni.nl/">MSX Banzai</a>

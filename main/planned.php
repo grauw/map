@@ -37,6 +37,11 @@
     <li>Tricks section with overscan mode, pattern mirroring, etc.</li>
     <li>...</li>
     </ul>
+  <li>Source code</li>
+    <ul>
+    <li>Checksum calculations (CRC-16, CRC-32, FCS)</li>
+    <li>RAM &amp; mapper size detection</li>
+    </ul>
   </ul>
 <li id="resources">Planned resources</li>
   <ul>

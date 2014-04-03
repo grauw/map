@@ -34,20 +34,12 @@
     <ul>
     <li class="map"><a href="/articles/mult_div_shifts.php#mult">Multiplications</a></li>
     <li class="map"><a href="/articles/mult_div_shifts.php#div">Divisions</a></li>
-    <li id="code_checksum">Checksum calculations
-      <ul>
-      <li>CRC-16 calculation</li>
-      <li>CRC-32 calculation</li>
-      <li>FCS calculation</li>
-      </ul>
-    </li>
     </ul>
   </li>
   <li id="code_slot">Slot/mapper routines
     <ul>
     <li class="map"><a href="/sources/raminpage1.php">Switch RAM/ROM in page 1</a></li>
     <li class="map"><a href="/sources/callbios.php">Calling the BIOS from MSX-DOS</a></li>
-    <li>Mapper RAM detection</li>
     </ul>
   </li>
   </ul>

@@ -32,7 +32,10 @@
   </li>
   <li id="crossasm">PC Crossassemblers (for Z80)
     <ul>
+    <li><a href="https://bitbucket.org/grauw/glass">Glass</a></li>
+    <li><a href="http://pasmo.speccy.org/">Pasmo</a></li>
     <li><a href="http://tniasm.tni.nl/">tniASM</a></li>
+    <li><a href="http://home.wanadoo.nl/smastijn/sjasm.html">Sjasm</a></li>
     </ul>
   </li>
   <li id="c_comp">C compilers

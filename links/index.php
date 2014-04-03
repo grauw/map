@@ -40,35 +40,8 @@
     <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
     <li><a href="http://www.zilog.com/products/searchdocs.asp">ZiLOG documentation search</a></li>
     <li><a href="http://nocash.emubase.de/portar.htm">NoCash MSX programming specs</a></li>
+    <li><a href="http://msx4ever.xs4all.nl/">MSX NBNO</a></li>
     <li><a href="http://www.msx.org/">MSX Resource Center</a></li>
-    </ul>
-  </li>
-  </ul>
-</li>
-<li id="software">Software
-  <ul>
-  <li>Assemblers
-    <ul>
-    <li><a href="http://www.xs4all.nl/~wbsoft/msx/">WBASS2</a></li>
-    <li><a href="http://home.scarlet.be/~dhran/compass-info/">Compass</a> (Compjoetania)</li>
-    <li><a href="http://tniasm.tni.nl/">tniASM</a> (TNI)</li>
-    <li><a href="https://bitbucket.org/grauw/glass">Glass</a> (Laurens Holst)</li>
-    </ul>
-  </li>
-  </ul>
-</li>
-<li id="hardware">Hardware
-  <ul>
-  <li>Devices / peripherals
-    <ul>
-    <li><a href="http://sunriseformsx.nl/">Sunrise Foundation</a> (sells MoonSound, Gfx9000, etc.) (<a href="http://www.msx.ch/sunformsx/">old site</a>)</li>
-    <li><a href="http://www.msxinfo.com/">MSX-INFO</a> (sells Padial’s Z380, etc.) (NL)</li>
-    <li><a href="http://msx4ever.xs4all.nl/">MSX NBNO</a> (sells printed application manuals) (NL)</li>
-    </ul>
-  </li>
-  <li>MSX repairs
-    <ul>
-    <li><a href="http://www.bas-ditta.info/">Bas Kornalijnslijper</a> (NL)</li>
     </ul>
   </li>
   </ul>

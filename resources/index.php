@@ -49,7 +49,7 @@ information, feel free to send us an email.</p>
   <ul>
   <li id="dd_general">General
     <ul>
-    <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a> <em>(work in progress)</em></li>
+    <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
     </ul>
   </li>
   <li id="processors">Processors

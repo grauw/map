@@ -87,7 +87,6 @@ read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
 <ul>
   <li><a href="/main/disclaimer.php">Disclaimer</a></li>
   <li><a href="/main/updates-old.php">Old updates</a></li>
-  <li><a href="/main/planned.php">Planned articles</a></li>
   <li><a href="/main/styles.php">Style sheet selector</a></li>
 </ul>
 

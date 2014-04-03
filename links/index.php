@@ -69,7 +69,7 @@
     <ul>
     <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s MSX Plaza</a> · SEE, XSA, etc.</li>
     <li><a href="http://home.kabelfoon.nl/~vincentd/">Vincent van Dam’s MSX Software</a> · dsk2rom, list, wbass2txt, midi, etc.</li>
-    <li><a href="http://www.teambomba.net/bombaman/download.html">Team Bomba tools & sources</a> · viewge5, bitbuster, etc.</li>
+    <li><a href="http://www.teambomba.net/bombaman/download.html">Team Bomba tools &amp; sources</a> · viewge5, bitbuster, etc.</li>
     <li><a href="http://www5d.biglobe.ne.jp/~hra/software/">HRA’s software</a> · bmp2msx, etc.</li>
     <li><a href="http://marmsx.msxall.com/english.php">MARMSX Develop</a> · MSX Viewer, SLOT View, etc.</li>
     </ul>

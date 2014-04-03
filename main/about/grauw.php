@@ -31,7 +31,7 @@ keeping the MSX spirit alive with some programming and writing an article once
 in a while.</p>
 
 <p>I worked on quite some projects which I never finished, such as a bunch of
-games and a tcp/ip stack. From the things that were finished, you might remember
+games and a tcp/ip stack. Of the things that were finished, you might remember
 the disk magazine Track and a couple of music disks by the Dutch group Datax
 and Belgian group Kenda. Also I used to organise the MSX fair in Bussum.</p>
 

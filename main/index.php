@@ -54,8 +54,7 @@ ultimate source of information for the
 programmer-to-be. The main target is assembly language, because that’s what the
 maintainers’ preferred programming language is, but most information will be
 useful to users of other languages as well. The MAP is currently maintained by
-<a href="/main/about/grauw.php">Grauw</a> and
-<a href="/main/about/bifi.php">BiFi</a>.</p>
+<a href="/main/about/grauw.php">Grauw</a>.</p>
 
 
 <h2>Where to start</h2>

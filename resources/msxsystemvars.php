@@ -923,6 +923,9 @@
 
 </table>
 
+<p class="signed">BiFi</p>
+
+
 
 
 <?php addFooter(); ?>

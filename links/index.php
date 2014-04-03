@@ -19,16 +19,16 @@
 <ul>
 <li id="communities">Development communities
   <ul>
+  <li>Sites
+    <ul>
+    <li><a href="http://www.msx.org/">MSX Resource Center</a></li>
+    <li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a> (<a href="http://www.mail-archive.com/msx@stack.nl/info.html">archive</a>)</li>
+    </ul>
+  </li>
   <li>IRC channels
     <ul>
     <li>#msxdev on irc.rizon.net (<a href="http://msxbanzai.tni.nl/dev/#msxdev">homepage</a>)</li>
     <li>#openmsx on irc.freenode.net (<a href="http://openmsx.sourceforge.net/contact.php">homepage</a>)</li>
-    </ul>
-  </li>
-  <li>Sites
-    <ul>
-	<li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a> (<a href="http://www.mail-archive.com/msx@stack.nl/info.html">archive</a>)</li>
-    <li><a href="http://www.msx.org/">MSX Resource Center</a></li>
     </ul>
   </li>
   </ul>

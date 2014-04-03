@@ -42,18 +42,7 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konami Man)
-    <ul>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-1.txt">Chapter 1: MSX System Overview</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-2.txt">Chapter 2: BASIC</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-3.txt">Chapter 3: MSX-DOS</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-4a.txt">Chapter 4: VDP and display screen (parts 1-5)</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-4b.txt">Chapter 4: VDP and display screen (part 6)</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-5a.txt">Chapter 5: Access to peripherals through BIOS (parts 1-6)</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-5b.txt">Chapter 5: Access to peripherals through BIOS (part 7)</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">Appendices: BIOS reference, system variables, VRAM, I/O, etc.</a></li>
-    </ul>
-  </li>
+  <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konami Man)</li>
   </ul>
 </li>
 <li id="devicedocs">Device documentation

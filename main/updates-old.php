@@ -14,6 +14,17 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2009-03-09</em><br />
+The MSX Assembly Page’s address has changed to
+<a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now
+accessible in a <a href="https://bitbucket.org/grauw/map">public repository</a>, and
+introducing a <a href="/contributing/">Contributing</a> section.</p>
+
+<p><em>2007-06-29</em><br />
+Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and
+cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist
+archive links.</p>
+
 <p><em>2006-12-07</em><br />
 Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
 

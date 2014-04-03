@@ -18,6 +18,16 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-04-03</em><br />
+Add links to Nestor Soriano’s great
+<a href="http://map.grauw.nl/resources/#msxbios">MSX2 Technical Handbook
+transscription</a>, and some clean-up.</p>
+
+<p><em>2014-02-08</em><br />
+Add link to Eugeny Brychkov’s excellent
+<a href="http://map.grauw.nl/resources/#v9938">v9938 application manual
+transscription</a>.</p>
+
 <p><em>2013-01-13</em><br />
 Added an English translation of the MSX Datapack Vol. 3’s
 <a href="/resources/midi/msx-midi.php">MSX-MIDI</a> documentation.</p>
@@ -32,17 +42,6 @@ Added Zemina memory extensions to the <a href="/resources/msx_io_ports.php">I/O 
 added link to Cronos’s <a href="http://www.hqunix.com/wordpress/?page_id=554">manual scan / translation</a>,
 thanks to Manuel Bilderbeek. Also added a <a href="/articles/mult_div_shifts.php#divby9">division by 9</a>
 routine, thanks to Ricardo Bittencourt.</p>
-
-<p><em>2009-03-09</em><br />
-The MSX Assembly Page’s address has changed to
-<a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now
-accessible in a <a href="https://bitbucket.org/grauw/map">public repository</a>, and
-introducing a <a href="/contributing/">Contributing</a> section.</p>
-
-<p><em>2007-06-29</em><br />
-Moved <a href="/resources/joynet/">JoyNet documentation</a> to the MAP, and
-cleaned up, updated and merged text. Updated Funet links, added MSX mailinglist
-archive links.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

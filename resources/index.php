@@ -121,7 +121,6 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
-      <li>Yamaha YM2413B (OPLL) datasheet</li>
       </ul>
     </li>
     <li id="opl1">OPL1 / MSX-Audio / Music Module

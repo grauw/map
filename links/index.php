@@ -32,15 +32,14 @@
     <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
 	<li><a href="http://lists.stack.nl/mailman/listinfo/msx">MSX Mailinglist</a></li>
 	<li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist (archive)</a></li>
-    <li><a href="http://msx.retro8bits.com/">MSX Info Pages</a></li>
+    <li><a href="http://msx.hansotten.com/">MSX Info Pages</a></li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/">msxnet.org Sean Young’s technical MSX info</a></li>
     <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
     <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s The MSX Plaza</a></li>
     <li><a href="http://www.mccm.hetlab.tk/millennium/milc/index.htm">MCCM’s MiLC (mainly Dutch)</a></li>
     <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
-    <li><a href="http://www.smspower.org/maxim/smschecker/docs.htm">Maxim’s SMS/Meka Documents</a></li>
     <li><a href="http://www.zilog.com/products/searchdocs.asp">ZiLOG documentation search</a></li>
-    <li><a href="http://www.work.de/nocash/portar.htm">NoCash MSX programming specs</a></li>
+    <li><a href="http://nocash.emubase.de/portar.htm">NoCash MSX programming specs</a></li>
     <li><a href="http://www.msx.org/">MSX Resource Center</a></li>
     </ul>
   </li>
@@ -51,9 +50,8 @@
   <li>Assemblers
     <ul>
     <li><a href="http://www.xs4all.nl/~wbsoft/msx/">WBASS2</a></li>
-    <li><a href="http://users.pandora.be/jon/msx/ctng.html">Compass</a> (Compjoetania)</li>
+    <li><a href="http://home.scarlet.be/~dhran/compass-info/">Compass</a> (Compjoetania)</li>
     <li><a href="http://tniasm.tni.nl/">tniASM</a> (TNI)</li>
-    <li><a href="http://ca3.cjb.net/">Chaos Assembler</a> (<a href="http://teddywarez.cjb.net/">TeddyWareZ</a>)</li>
     <li><a href="https://bitbucket.org/grauw/glass">Glass</a> (Laurens Holst)</li>
     </ul>
   </li>
@@ -70,7 +68,6 @@
   </li>
   <li>MSX repairs
     <ul>
-    <li><a href="http://www.hansoranje.demon.nl/">MSX Hardware Pagina</a> (Hans Oranje) (NL)</li>
     <li><a href="http://www.bas-ditta.info/">Bas Kornalijnslijper</a> (NL)</li>
     </ul>
   </li>

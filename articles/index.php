@@ -85,9 +85,9 @@
     <li><a href="http://msx.gnu-linux.net/doomlike/doomlike.html">How to program Doom on MSX</a></li>
     </ul>
   </li>
-  <li id="ext_marmsx"><a href="http://www.marmsx.cjb.net/">MARMSX</a>
+  <li id="ext_marmsx"><a href="http://marmsx.msxall.com/english.php">MARMSX</a>
     <ul>
-	<li><a href="http://www.eng.uerj.br/~marcelo/msx/artigos/sc12en.pdf">19268 colors on MSX 2+</a></li>
+	<li><a href="http://marmsx.msxall.com/artigos/sc12en.pdf">19268 colors on MSX 2+</a></li>
     </ul>
   </li>
   </ul>

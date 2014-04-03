@@ -119,7 +119,6 @@ information, feel free to send us an email.</p>
     </li>
     <li id="opll">OPLL / MSX-Music / FM-PAC (MSX turboR standard)
       <ul>
-      <li><a href="http://www.smspower.org/maxim/forumstuff/ym2413am/">Yamaha YM2413 (OPLL) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
       <li>Yamaha YM2413B (OPLL) datasheet</li>

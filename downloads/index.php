@@ -24,8 +24,8 @@
   <ul>
   <li id="assemblers">MSX Assemblers
     <ul>
-    <li>Compass · order at <a href="http://users.pandora.be/jon/msx/ctng.html">Compjoetania TNG</a></li>
-    <li><a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2.zip">WBASS2</a> · <i>(<a href="http://www.msxarchive.nl/pub/msx/programming/asm/wbass2.zip">no logo version</a>, <a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2-handleiding.txt">manual (Dutch)</a>, <a href="http://www.xs4all.nl/~wbsoft/msx/">homepage</a>)</i></li>
+    <li>Compass · order at <a href="http://home.scarlet.be/~dhran/compass-info/">Compjoetania TNG</a></li>
+    <li><a href="http://wbsoft.home.xs4all.nl/msx/">WBASS2</a> · <i>(<a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2.zip">download</a>, <a href="http://www.msxarchive.nl/pub/msx/programming/asm/wbass2.zip">no logo version</a>, <a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2-handleiding.txt">manual (Dutch)</a>)</i></li>
     <li>Devpac / Gen80</li>
     <li>M80</li>
     </ul>
@@ -33,8 +33,6 @@
   <li id="crossasm">PC Crossassemblers (for Z80)
     <ul>
     <li><a href="http://tniasm.tni.nl/">tniASM</a></li>
-    <li><a href="http://ca3.cjb.net/">Chaos Assembler</a> · order at <a href="http://teddywarez.cjb.net/">TeddyWareZ</a></li>
-    <li>tASM</li>
     </ul>
   </li>
   <li id="c_comp">C compilers
@@ -67,15 +65,13 @@
     </li>
     <li id="gfx_viewers">Viewers
       <ul>
-      <li><a href="http://bombaman.net/download/viewge5.zip">Team Bomba's ViewGE5</a> · GE5 viewer for Windows <i>(<a href="http://bombaman.net/download.php?ACT=ShowDownloads&amp;catID=5">description</a>, <a href="http://bombaman.net/">homepage</a>)</i></li>
+      <li><a href="http://www.teambomba.net/bombaman/download/viewge5.zip">Team Bomba's ViewGE5</a> · GE5 viewer for Windows <i>(<a href="http://www.teambomba.net/bombaman/downloadd26a.html">download page</a>)</i></li>
       </ul>
     </li>
     <li id="gfx_conv">File format conversion
       <ul>
       <li><a href="http://www5d.biglobe.ne.jp/~hra/software/bmptomsx/files/BMPMSX_50211_E.zip">BMP to MSX converter</a> · by HRA <i>(<a href="http://www5d.biglobe.ne.jp/~hra/software/bmptomsx/index.htm" hreflang="ja">description</a>, <a href="http://www5d.biglobe.ne.jp/~hra/" hreflang="ja">homepage</a>)</i></li>
-      <li><a href="http://www.imasy.or.jp/~hra/program/Download/sc25.lzh">Screen 2 to screen 5 converter</a> · by HRA <i>(<a href="http://www.imasy.or.jp/~hra/program/sc25.htm">description</a>, <a href="http://www5d.biglobe.ne.jp/~hra/">homepage</a>)</i></li>
-      <li><a href="http://www.imasy.or.jp/~hra/program/Download/sc52.lzh">Screen 5 to screen 2 converter</a> · by HRA <i>(<a href="http://www.imasy.or.jp/~hra/program/sc52.htm">description</a>, <a href="http://www5d.biglobe.ne.jp/~hra/">homepage</a>)</i></li>
-      <li><a href="http://www.eng.uerj.br/~marcelo/msx/msxvw/msxvwe.html">MARMSX's MSX Viewer &amp; tools</a> · by MARMSX <i>(<a href="http://www.marmsx.cjb.net/">homepage</a>)</i></li>
+      <li><a href="http://marmsx.msxall.com/msxvw/msxvw5/msxvwe.php">MARMSX's MSX Viewer &amp; tools</a> · by MARMSX <i>(<a href="http://marmsx.msxall.com/english.php">homepage</a>)</i></li>
       </ul>
     </li>
     <li id="gfx_misc">Misc
@@ -87,14 +83,13 @@
   </li>
   <li id="compression">(De)compression
     <ul>
-    <li><a href="http://bombaman.net/download/bitbuster1_2.zip">Team Bomba's BitBuster</a> · fast opensource compression kit <i>(<a href="http://bombaman.net/download.php?ACT=ShowDownloads&amp;catID=5">description</a>, <a href="http://bombaman.net/">homepage</a>)</i></li>
+    <li><a href="http://www.teambomba.net/bombaman/download/bitbuster1_2.zip">Team Bomba's BitBuster</a> · fast opensource compression kit <i>(<a href="http://www.teambomba.net/bombaman/downloadd26a.html">download page</a>)</i></li>
     <li><a href="http://www.msxarchive.nl/pub/msx/archive/lzhpack.zip">LHEXT</a> · MSX, LZH format</li>
     <li><a href="http://www.msxarchive.nl/pub/msx/archive/pmext.com">PMEXT</a> · MSX, PMA format</li>
     <li><a href="http://www.msxarchive.nl/pub/msx/archive/unarj.pma">UNARJ</a> · MSX, ARJ format</li>
     <li><a href="http://www.rarlab.com">WinRAR</a> · PC, LZH/ARJ/ZIP formats (free trial version)</li>
     <li><a href="http://www.msxarchive.nl/pub/msx/archive/pmext4pc.arj">PMEXT4PC</a> · DOS, LZH &amp; PMA format (uses small CP/M emulator)</li>
     <li><a href="http://msxbanzai.tni.nl/dev/lha-pma.zip">LHA-PMA</a> · Win32, <a href="http://www.msxarchive.nl/pub/msx/decompression_tools/lha-pma-2.tar.gz">Linux</a>, LZH &amp; PMA format <i>(<a href="http://www.msxarchive.nl/pub/msx/decompression_tools/lha-pma.exe">mirror</a>)</i></li>
-
     </ul>
   </li>
   </ul>

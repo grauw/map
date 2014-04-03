@@ -11,4 +11,5 @@ By contributing content such as articles, source code and programs to the MSX
 Assembly Page the author gives permission to publish it on the website and in
 other publications by the MAP group.
 
-Please see the disclaimer (main/disclaimer.php) for the full text.
+Please see the [disclaimer](http://map.grauw.nl/main/disclaimer.php) for the
+full text.

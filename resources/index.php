@@ -107,7 +107,7 @@ information, feel free to send us an email.</p>
   </li>
   <li id="soundchips">Sound Chips
     <ul>
-    <li id="psg">AY3-8910 / PSG (MSX standard)
+    <li id="psg">PSG (MSX standard)
       <ul>
       <li><a href="/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG)</a> (PSG clone)</li>

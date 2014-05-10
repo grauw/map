@@ -58,6 +58,18 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Second setting Miniware M4000 modem</td>
 </tr>
 <tr>
+  <td>#2A-#2B</td>
+  <td>PlaySoniq SID chip / settings</td>
+</tr>
+<tr>
+  <td>#2C</td>
+  <td>PlaySoniq 8-bit DAC</td>
+</tr>
+<tr>
+  <td>#2D</td>
+  <td>PlaySoniq joypad / temporary data</td>
+</tr>
+<tr>
   <td>#28-#2F</td>
   <td>Second setting Philips NMS1210 RS232 interface</td>
 </tr>

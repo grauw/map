@@ -516,6 +516,9 @@ So you can check if certain extensions are available and ready to be accessed by
   </tr>
 </table>
 
+<p>See the <a href="/resources/#video">TMS9918, v9938 and v9958 application manuals</a>
+for more details.</p>
+
 
 <h2 id="psg">PSG / AY-3-8910</h2>
 
@@ -574,6 +577,9 @@ So you can check if certain extensions are available and ready to be accessed by
     <td>I/O ports A &amp; B</td>
   </tr>
 </table>
+
+<p>See the <a href="/resources/#psg">AY-3-8910 and YM2149 application manuals</a>
+for more details.</p>
 
 <h3 id="psgioports">Additional PSG I/O ports A &amp; B</h3>
 

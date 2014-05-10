@@ -137,7 +137,7 @@
 </tr>
 <tr>
   <td>#A0-#A3</td>
-  <td><a href="#psg">PSG / AY-3-8910</a> - <a href="#psgioports">PSG I/O ports</a></td>
+  <td><a href="#psg">PSG / AY-3-8910</a>, <a href="#psgioports">I/O ports A &amp; B</a></td>
 </tr>
 <tr>
   <td>#A4-#A5</td>
@@ -576,7 +576,10 @@ So you can check if certain extensions are available and ready to be accessed by
 </table>
 
 <h3 id="psgioports">Additional PSG I/O ports A &amp; B</h3>
-<p>The PSG has two additional I/O ports in registers 14 and 15. They are used by the MSX standard for several device I/O related tasks, comparable with the PPI and working more or less in conjunction with it. These are the functions:</p>
+
+<p>The PSG has two additional I/O ports in registers 14 and 15. They are used by
+the MSX standard for several device I/O related tasks, comparable with the PPI
+and working more or less in conjunction with it. These are the functions:</p>
 
 <table>
   <caption>PSG I/O port A (r#14) – <em>read-only</em></caption>

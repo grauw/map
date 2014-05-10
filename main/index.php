@@ -18,6 +18,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-05-10</em><br />
+Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>
+
 <p><em>2014-04-03</em><br />
 Added links to Nestor Soriano (Konamiman)’s great
 <a href="http://map.grauw.nl/resources/#msxbios">MSX2 Technical Handbook

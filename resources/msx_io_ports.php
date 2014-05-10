@@ -137,7 +137,7 @@
 </tr>
 <tr>
   <td>#A0-#A3</td>
-  <td><a href="#psg">PSG / AY-3-8910</a>, <a href="#psgioports">I/O ports A &amp; B</a></td>
+  <td><a href="#psg">PSG / AY-3-8910 / YM2149</a>, <a href="#psgioports">I/O ports A &amp; B</a></td>
 </tr>
 <tr>
   <td>#A4-#A5</td>
@@ -520,7 +520,7 @@ So you can check if certain extensions are available and ready to be accessed by
 for more details.</p>
 
 
-<h2 id="psg">PSG / AY-3-8910</h2>
+<h2 id="psg">PSG / AY-3-8910 / YM2149</h2>
 
 <p>These are the I/O registers for accessing the MSX PSG (Programmable Sound Generator):</p>
 

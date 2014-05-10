@@ -137,7 +137,8 @@
 </tr>
 <tr>
   <td>#A0-#A3</td>
-  <td><a href="#psg">PSG / AY-3-8910 / YM2149</a>, <a href="#psgioports">I/O ports A &amp; B</a></td>
+  <td><a href="#psg">PSG / AY-3-8910 / YM2149</a><br />
+      <a href="#psgioports">PSG I/O ports A &amp; B</a></td>
 </tr>
 <tr>
   <td>#A4-#A5</td>

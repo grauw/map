@@ -98,6 +98,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#switch_io">Switched I/O ports</a></td>
 </tr>
 <tr>
+  <td>#48-#49</td>
+  <td>Franky PSG (SN76489) / VDP H/V counters</td>
+</tr>
+<tr>
   <td>#60-#6F</td>
   <td><a href="#gfx9000">Graphics9000 / v9990</a></td>
 </tr>
@@ -128,6 +132,10 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#88-#8B</td>
   <td>Alternate VDP v9938 ports for MSX1 to MSX2 adapter</td>
+</tr>
+<tr>
+  <td>#88-#89</td>
+  <td>Franky VDP (315-5124 / 315-5246)</td>
 </tr>
 <tr>
   <td>#8C-#8D</td>

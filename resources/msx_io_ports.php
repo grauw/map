@@ -46,6 +46,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#zemina-memory">Zemina memory extensions</a></td>
 </tr>
 <tr>
+  <td>#10-#12</td>
+  <td>MegaFlashROM PSG (AY-3-8910 clone)</td>
+</tr>
+<tr>
   <td>#18-#19</td>
   <td>Philips Barcode Reader NMS1170/20</td>
 </tr>

@@ -14,9 +14,11 @@
 
 <h1>MSX I/O ports overview</h1>
 
-<p>Here’s an overview of all used I/O ports on MSX as far as I could find out at the moment. Some entries will contain a link to a more specific description on how to use those ports.</p>
+<p>Here’s an overview of I/O ports on the MSX. Some entries will link to a
+description on how to use those ports.</p>
 
-<p><em>More detailed port descriptions will be added later when I have more time. And a request: if you have more details about devices where I put a note, or if you see an error, then please mail us (email address can be found on the main page).</em></p>
+<p><em>Note that this list, though comprehensive, is most certainly incomplete.
+If you have additions or see an error, please let us know.</em></p>
 
 <table>
 <tr>

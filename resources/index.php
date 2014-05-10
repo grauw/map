@@ -105,7 +105,7 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  <li id="soundchips">Sound Chips
+  <li id="sound">Sound Chips
     <ul>
     <li id="psg">PSG (MSX standard)
       <ul>

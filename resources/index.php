@@ -138,6 +138,11 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>
+    <li id="sn76489">SN76489 (Franky / PlaySoniq)
+      <ul>
+      <li><a href="/resources/sound/texas_instruments_sn76489an.pdf">Texas Instruments SN76489 application manual</a></li>
+      </ul>
+    </li>
     <li id="dd_snd_other">Other
       <ul>
       <li>SiMPL / Covox · printer port DAC</li>

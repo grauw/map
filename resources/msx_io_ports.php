@@ -113,7 +113,7 @@
 </tr>
 <tr>
   <td>#88-#8B</td>
-  <td>Alternate VDP v9938 ports for MSX1 to MSX2 adaptor</td>
+  <td>Alternate VDP v9938 ports for MSX1 to MSX2 adapter</td>
 </tr>
 <tr>
   <td>#8C-#8D</td>

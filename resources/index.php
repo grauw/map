@@ -143,12 +143,6 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/texas_instruments_sn76489an.pdf">Texas Instruments SN76489 application manual</a></li>
       </ul>
     </li>
-    <li id="dd_snd_other">Other
-      <ul>
-      <li>SiMPL / Covox · printer port DAC</li>
-      <li>Key click</li>
-      </ul>
-    </li>
     </ul>
   </li>
   <li id="msxengine">MSX Engine

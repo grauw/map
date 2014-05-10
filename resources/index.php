@@ -110,7 +110,7 @@ information, feel free to send us an email.</p>
     <li id="psg">PSG (MSX standard)
       <ul>
       <li><a href="/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
-      <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG)</a> (PSG clone)</li>
+      <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG) application manual</a> (PSG clone)</li>
       </ul>
     </li>
     <li id="scc">SCC (custom sound chip by Konami)

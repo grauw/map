@@ -25,8 +25,8 @@ MSXDOS 1 or 2</p>
 
 <p style="text-align:center">Original by MSX Software Team (MST)<br />
 Original provided and scanned by BiFi<br />
-Converted to PDF by HansO, 2002<br />
-Translated and transcribed by Grauw, 2002</p>
+Converted to PDF by HansO<br />
+Translated and transcribed by Laurens Holst</p>
 
 
 <p class="page"></p>
@@ -35,24 +35,40 @@ Translated and transcribed by Grauw, 2002</p>
 <h1>Changes in MemMan 2.3 compared to 2.2</h1>
 
 <ul>
-<li>The function XTsrCall (61) was added. This function works just like TsrCall (63), however the Tsr-ID is expected in register IX instead of BC. This will free register BC to be used as an input parameter. Disadvantage is that this function can no longer be called from the MemMan hook, it can only be called directly.</li>
-<li>By using the function Info (50) the address on which XTsrCall can be directly called can be obtained.</li>
-<li>The function status (31) has been improved. The total amount of usable memory in the computer is now reported correctly, also in MSX-DOS 2 environment.</li>
-<li>The Alloc (10) function now also recognizes memory that becomes available when the DOS2 RAMdisk is removed or resized! It won’t matter anymore if the RAMdisk is created before or after MemMan was installed.</li>
-<li>The internal stack of MemMan, which is used to process function calls is enlarged to 240 bytes instead of 160. In practice, MemMan 2.2’s function stack appeared to be too small to process nested "tsrCalls".</li>
+<li>The function XTsrCall (61) was added. This function works just like TsrCall
+(63), however the Tsr-ID is expected to be passed in register IX instead of BC.
+This frees up register BC for use as an input parameter. Disadvantage is that
+this function can not called via the MemMan hook, it can only be invoked
+directly.</li>
+<li>Using the Info (50) function, the address on which XTsrCall can be called
+directly can be obtained.</li>
+<li>The status (31) function has been improved. The computer’s total amount of
+usable memory is now reported correctly, also in MSX-DOS 2 environment.</li>
+<li>The Alloc (10) function now also recognizes memory that becomes available
+when the DOS2 RAMdisk is removed or resized! It does not matter anymore if the
+RAMdisk is created before or after MemMan was installed.</li>
+<li>The internal stack of MemMan, used to process function calls, has been
+enlarged from 160 to 240 bytes. MemMan 2.2’s function stack turned out to be too
+small to process nested “tsrCalls”.</li>
 </ul>
 
 <pre class="func">
 Name:     XTsrCall
 Number:   61
-Function: Call the driver-entry of a TSR
-In:       IX = ID code of the to be called TSR
-          AF, BC, DE, HL will be passed to the TSR
-Out:      AF, BC, DE, HL will be returned from the TSR
+Function: Invoke the driver entry of a TSR
+In:       IX = ID code of the TSR to call
+          AF, BC, DE, HL are passed to the TSR
+Out:      AF, BC, DE, HL are returned from the TSR
 </pre>
 
-<p>This function is an improved version of the function TsrCall (63). Because this function can pass all main registers to the TSR, it is advised to use this function instead of function 63.
-Remark: This function may not be called through the EXTBIO hook, because when calling through EXTBIO, the IX register is maimed. Therefor, call this function directly, or use the MemMan function handling routine. The addresses on which these routines can be called, can be obtained through the info function (50).</p>
+<p>This is an improved version of the TsrCall (63) function. Because it can pass
+all main registers to the TSR, it is advised to use this function instead of
+function 63.</p>
+
+<p>Note: This function can not be called through the EXTBIO hook, because the
+EXTBIO call modifies the IX register. Therefore, invoke this function directly,
+or use the MemMan function handling routine. The addresses at which these
+routines can be called can be obtained through the info function (50).</p>
 
 <pre class="func">
 Name:     Info
@@ -63,7 +79,9 @@ In:       B = Information number (0..8)
 Out:      HL = Information
 </pre>
 
-<p>Information number overview. The corresponding MemMan function codes are between brackets.</p>
+<p>Information number overview, with the corresponding MemMan function codes
+between brackets:</p>
+
 <ol type="1">
 <li value="0">Entry address of FastUse0 (function 0)</li>
 <li value="1">Entry address of FastUse1 (function 1)</li>
@@ -72,7 +90,7 @@ Out:      HL = Information
 <li value="4">Entry address of BasicCall</li>
 <li value="5">Entry address of FastCurSeg (function 32)</li>
 <li value="6">Entry address of MemMan’s function handler</li>
-<li value="7">MemMan’s version number, format: version #H.L</li>
+<li value="7">MemMan version number, format: version #H.L</li>
 <li value="8">Entry address of XTsrCall (function 61)</li>
 </ol>
 
@@ -80,62 +98,89 @@ Out:      HL = Information
 <p class="page">I</p>
 
 
-<p>The abovementioned function addresses may be directly called by an application or a TSR. All entry addresses are guaranteed to be in page 3.</p>
+<p>The above function addresses can be called directly by an application or TSR.
+All entry addresses are guaranteed to be in page 3.</p>
 
-<p>The functions will be executed swiftly because the MemMan CALL to the EXTBIO hook is left out, and because the function codes in registers D and E won’t have to be examined. Another advantage is that parameters can also be passed through the DE register, which is mainly of importance for the TsrCall and BasicCall functions.</p>
+<p>The functions will be executed swiftly because the MemMan CALL to the EXTBIO
+hook is omitted, and because the function codes in registers D and E won’t have
+to be examined. Another advantage is that parameters can be passed in the DE
+register, mostly useful for the TsrCall and BasicCall functions.</p>
 
-<p>For example, the initialization routine of a TSR can request the necessary function entry addresses through the INFO function and subsequently store those for later use in the TSR’s code, which will improve the TSR’s speed significantly.</p>
+<p>For example, the initialization routine of a TSR can request the necessary
+function entry addresses through the INFO function and store those for later use
+in the TSR’s code, which will improve the TSR program’s speed significantly.</p>
 
-<p>An exact description of the above functions can be found at the MemMan function of which the number is given between the brackets.<br />
-Keep in mind however that the ‘fast’ functions differ from the ‘normal’ MemMan functions on the following points:</p>
+<p>An exact description of the above functions can be found at the MemMan
+function whose number is listed between parentheses.</p>
+
+<p>Keep in mind however that the ‘fast’ functions differ from the ‘normal’
+MemMan functions in the following ways:</p>
 
 <dl>
 <dt>fastUse0-2:</dt>
-<dd>Selects a segment into a certain memory page. See the description at the MemMan ‘Use’ functions.</dd>
+<dd>Selects a segment into a certain memory page. See the description at the
+MemMan ‘Use’ functions.</dd>
 
 <dt>tsrCall:</dt>
-<dd>Register [DE] will be passed to the TSR unchanged. This in contrary to the function 63 (TsrCall), register DE is in that case already occupied to pass the MemMan function number.</dd>
+<dd>Register [DE] will be passed to the TSR unchanged. This is different form
+function 63 (TsrCall), where register DE is already used to pass the MemMan
+function number.</dd>
 
 <dt>FastCurSeg:</dt>
-<dd>No valid value will be returned in register [A]. The MemMan CurSeg function (32) will indicate if it is an FSEG or a PSEG.</dd>
+<dd>No valid value will be returned in register [A]. The MemMan CurSeg function
+(32) will indicate if it is an FSEG or a PSEG.</dd>
 
 <dt>xTsrCall</dt>
-<dd>All main registers (AF, BC, DE, HL) will be passed unchanged to the TSR. The TSR-ID code is to be placed in register IX.</dd>
+<dd>All main registers (AF, BC, DE, HL) will be passed to the TSR unchanged.
+The TSR-ID code has to be passed in the IX register.</dd>
 </dl>
 
 <pre class="func">
 basicCall: Has no function number (address must be obtained through info)
-Function:  Call a routine in the BASIC ROM.
+Function:  Invoke a routine in the BASIC ROM.
 In:        IX = Call address in page 0 or 1
            AF, BC, DE, HL are passed to the BASIC ROM
 Out:       AF, BC, DE, HL are received from the BASIC ROM
-           Interrupts are diabled
+           Interrupts are disabled
 </pre>
 
-<p>Through this function TSR’s can call a routine which is in page 0 or 1 of the BASIC ROM. The bios must already be enabled in page 0. In page 1 the BASIC ROM will be enabled by MemMan.<br />
-This is for example necessary to be able to call the math-pack routines which are situated in page 0 of the BASIC ROM, but which also call a few routines in page 1 inbetween. The H.STKE (stack error) hook will be bent, so that after an eventual BASIC error the internal MemMan stacks can be reset.</p>
+<p>Through this function a TSR can call routines in page 0 or 1 of the BASIC
+ROM. The BIOS must already be enabled in page 0. The BASIC ROM in page 1 will be
+enabled by MemMan.</p>
+
+<p>This is for example needed to be able to call the math-pack routines which
+are located in page 0 of the BASIC ROM, but which themselves also call a few
+routines in page 1. The H.STKE (stack error) hook will be bent, so that if a
+BASIC error occurs the internal MemMan stacks can be reset.</p>
 
 <pre class="func">
 memMan:   Has no MemMan function number (address must be obtained through info)
-Function: Directly call a MemMan function
+Function: Directly invoke a MemMan function
 In:       E = Memman function number
           AF, BC, HL are passed to the function
 Out:      AF, BC, DE, HL are received from the function
 </pre>
 
-<p>A call to this routine will have the same effect as calling a MemMan function through the EXTBIO hook. However, because the call to the EXTBIO hook is skipped, the other expansions which are linked to this hook won’t be called. Because of this, the stack usage will be limited, and the processing speed will be increased.</p>
+<p>Invoking this routine will have the same effect as calling a MemMan function
+through the EXTBIO hook. However because the call to the EXTBIO hook is skipped,
+the other expansions which are linked to this hook won’t be called. This limits
+stack usage and increases processing speed.</p>
 
 
 <p class="page">II</p>
 
 
-<h1>MemMan 2.3 BASIC-statements</h1>
+<h1>MemMan 2.3 BASIC statements</h1>
 
-<p>From version 2.3 on MemMan contains a couple of statements and functions which can be executed from MSX-BASIC. Therefor MemMan is equipped with a system TSR, with the ID-name "MST TsrUtils". This TSR has sequence number 0 and can not be removed by TSR-Kill. A description of the available BASIC-instruction follows. The meaning of the used symbols is as follows:</p>
+<p>Since version 2.3 on MemMan contains a couple of statements and functions
+which can be invoked from MSX-BASIC. For this purpose MemMan comes with a system
+TSR, with the ID-name "MST TsrUtils". This TSR has sequence number 0 and can not
+be removed by TSR-Kill. Below is a description of the available BASIC
+instructions. The meaning of the used symbols is as follows:</p>
 
-[] Everything between square brackets may be left out
-&lt;&gt; Descriptions of parameters are between pointed brackets
-() Round brackets must be entered, just like marks and comma’s.
+<p>[] Everything between square brackets may be omitted.<br />
+&lt;&gt; Parameter descriptions are between angle brackets.<br />
+() Parentheses must be entered, as well as punctuation and comma’s.</p>
 
 <pre class="func">
 Command:  TSR-Load
@@ -143,13 +188,15 @@ Syntax:   CMD TL("&lt;filename&gt;",[T],[A$],[&lt;F&gt;])
 Type:     Statement
 Example:  CMD TL("PB")
           CMD TL("ALARM",T,,A)
-Function: Load a TSR-file
+Function: Loads a TSR file into memory
 </pre>
 
-<p>&lt;filename&gt; = name of the TSR-file. In MSX-DOS2 environment a subdirectory may be specified.<br />
+<p>&lt;filename&gt; = name of the TSR file. In MSX-DOS2 environment a
+subdirectory may be specified.<br />
 T = Show the TSR’s intro text<br />
 A$ = Name of a string variable in which the TSR ID-name will be stored<br />
-&lt;F&gt; = Variable in which an error code will be stored. In case this variable is left out, a load error will produce a standard BASIC-error. The error codes are as follows:</p>
+&lt;F&gt; = Variable in which an error code will be stored. If this variable is
+omitted load errors will produce a standard BASIC error. The error codes are:</p>
 <ol>
 <li value="0">TSR loaded successfully</li>
 <li value="1">TSR installation aborted</li>
@@ -157,7 +204,7 @@ A$ = Name of a string variable in which the TSR ID-name will be stored<br />
 <li value="3">TSR table is full</li>
 <li value="4">Hook table is full</li>
 <li value="5">No free MemMan segment</li>
-<li value="6">Too little BASIC work memory</li>
+<li value="6">Not enough BASIC work memory</li>
 </ol>
 
 <pre class="func">
@@ -168,14 +215,15 @@ Example:  CMD TK("MJV printbuf")
 Function: Removes a TSR from memory
 </pre>
 
-<p>&lt;TSR ID-name&gt; = Identification name of the to be removed TSR. This name can be retrieved by means of TSR-View or Find-TSR.</p>
+<p>&lt;TSR ID-name&gt; = Identification name of the TSR to remove. This name can
+be retrieved by means of TSR-View or Find-TSR.</p>
 
 
 <pre class="func">
 Command:  TSR-View
 Syntax:   CMD TV
 Type:     Statement
-Function: Show an overview of the ID-names of all active TSRs.
+Function: Shows an overview of the ID-names of all active TSRs.
 </pre>
 
 
@@ -187,17 +235,18 @@ Command:  Find-TSR name
 Syntax:   ATTR$ FT("&lt;TSR ID-name&gt;")
 Type:     Function
 Example:  IF ATTR$ FT("CAPS") THEN CMD TK("CAPS")
-Function: Returns the value -1 if the specified TSR is installed, otherwise 0.
+Function: Returns -1 if the specified TSR is installed, otherwise 0.
 </pre>
+
+<p>&lt;TSR ID-name&gt; = Identification name of the TSR.</p>
 
 <pre class="func">
 Command:  Find-TSR number
 Syntax:   ATTR$ FT(&lt;TSR sequence number&gt;)
 Type:     Function
 Example:  N$ = ATTR$ FT(0)
-Function: Returns the ID-name of the TSR with the specified
-          sequence number. In case the sequence number is
-          larger than the number of active TSRs, an empty
+Function: Returns the ID-name of the TSR with the specified sequence number.
+          If the sequence number exceeds the number of active TSRs, an empty
           string with length 0 will be returned.
 </pre>
 
@@ -207,20 +256,26 @@ Function: Returns the ID-name of the TSR with the specified
 
 <h1>Patches MemMan 2.3 (version 2.30 to 2.31)</h1>
 
-<p>The first error which was found concerned TL.COM. It appeared that it wasn’t able to load TSRs under MSXDOS 1. The patch was published in MSX Computer Magazine 49 and MSX Club Magazine 38.</p>
+<p>The first error which was found concerned TL.COM. It turned out that it
+wasn’t able to load TSRs in MSXDOS 1. The patch was published in MSX Computer
+Magazine 49 and MSX Club Magazine 38.</p>
 
 <p class="box"><code>
 10 'Update TL.COM from version 1.30 to 1.31<br />
-20 OPEN "TL.COM" AS #1 LEN = 1: FIELD #1,1 AS A$: GET #1,1637: IF A$&lt;&gt;"0" THEN PRINT "Not TL.COM version 1.30": CLOSE: END<br />
+20 OPEN "TL.COM" AS #1 LEN=1: FIELD #1,1 AS A$: GET #1,1637: IF A$&lt;&gt;"0" THEN PRINT "Not TL.COM version 1.30": CLOSE: END<br />
 30 READ A: IF A=-2 THEN CLOSE: PRINT "TL.COM version 1.31 created": END ELSE IF A=-1 THEN READ B,A<br />
 40 LSET A$=CHR$(A): PUT #1,B: B=B+1: GOTO 30<br />
 50 DATA -1,70,68,10,-1,497,183,32,238,-1,1637,49,-1,2373,33,128,0,84,94,25,35,11,6,195,253,6,-2<br />
 </code></p>
 
-<p>The second error was more serious, TSRs which switch memory in page 2 screwed up, fortunately at that moment that was only the printerbuffer PB.TSR, and it only failed if people worked under DOS 1 and CMD TL was used to load the TSR. The patch was published in MSX Computer Magazine 52, and probably too in MSX Club Magazine 40, which is not out yet at the moment of writing.</p>
+<p>The second error was more serious. It affected TSRs that switched memory in
+page 2, fortunately at that moment only the printerbuffer PB.TSR did this,
+and it only failed if people used DOS 1 and CMD TL was used to load the TSR.
+The patch was published in MSX Computer Magazine 52, and probably in MSX Club
+Magazine 40 as well, which is not out yet at the moment of writing.</p>
 
 <p class="box"><code>
-10 PRINT "Update MEMMAN.BIN and/or MEMMAN.COM from version 2.30 to version 2.31": PRINT "1 Patch MEMMAN.BIN": PRINT "2 Patch MEMMAN.COM": PRINT "3 Patch both": PRINT "4 Stop": Print "Choice: ";: I=VAL(INPUT$(1)): PRINT I: PRINT<br />
+10 PRINT "Update MEMMAN.BIN and/or MEMMAN.COM from version 2.30 to version 2.31": PRINT "1 Patch MEMMAN.BIN": PRINT "2 Patch MEMMAN.COM": PRINT "3 Patch both": PRINT "4 Stop": Print "Choice: ";: I=VAL(INPUT$(1)): PRINT I$: PRINT<br />
 20 IF (IAND1)=1 THEN RESTORE 80: F$="MEMMAN.BIN": C=174: GOSUB 50<br />
 30 IF (IAND2)=1 THEN RESTORE 90: F$="MEMMAN.COM": C=267: GOSUB 50<br />
 40 IF I=4 THEN END ELSE PRINT: GOTO 10<br />
@@ -281,7 +336,7 @@ Function: Returns the ID-name of the TSR with the specified
 <dd><span class="indexpage">26</span>
     Processing of hook-calls</dd>
 <dd><span class="indexpage">30</span>
-    Processing of TSR-calls through TsrCall</dd>
+    Processing of TSR calls through TsrCall</dd>
 <dd><span class="indexpage">31</span>
     Function calls by TSRs</dd>
 <dd><span class="indexpage">31</span>
@@ -329,7 +384,7 @@ TSR programs are placed in memory segments controlled by MemMan, and if possible
 
 <p>The largest part of the MemMan code is located in a memory segment outside of the common DOS and Basic memory. Only a few routines are installed in page 3, to safe DOS memory. The TSRs, too, are placed in separate segments, and if possible one segments is shared between multiple TSRs. The space left in the MemMan-segment can also be used by TSRs.</p>
 
-<p>Bending the hooks in the system memory is entirely handled by MemMan, the TSR-code will only have to specify the address of the to-be-bent hooks. The way applications can call the TSRs is also standardized.</p>
+<p>Bending the hooks in the system memory is entirely handled by MemMan, the TSR code will only have to specify the address of the to-be-bent hooks. The way applications can call the TSRs is also standardized.</p>
 
 <p>TSRs can be developed with every assembler which can create relocatable files. These files are consecutively joined together by MST’s own linker - LinkTsr - into a TSR file.</p>
 
@@ -356,8 +411,8 @@ TSR programs are placed in memory segments controlled by MemMan, and if possible
 <tr><td> MM2INTRO.TXT </td><td> Yes </td><td> User’s Manual MemMan 2.2 </td></tr>
 <tr><td> MM22SPEC.TXT </td><td> Yes </td><td> Function description MemMan 2.2 </td></tr>
 <tr><td colspan="3"></td></tr>
-<tr><td> TSRFRAME.GEN </td><td> No </td><td> Framework of a TSR-listing, for the GEN80 assembler </td></tr>
-<tr><td> TSRFRAME.MAC </td><td> No </td><td> Framework of a TSR-listing, for the M80 assembler </td></tr>
+<tr><td> TSRFRAME.GEN </td><td> No </td><td> Framework of a TSR listing, for the GEN80 assembler </td></tr>
+<tr><td> TSRFRAME.MAC </td><td> No </td><td> Framework of a TSR listing, for the M80 assembler </td></tr>
 <tr><td> GTSR.BAT </td><td> No </td><td> Batchfile for assembling/linking a TSR, GEN80 version </td></tr>
 <tr><td> MTSR.BAT </td><td> No </td><td> Batchfile for assembling/linking a TSR, M80 version </td></tr>
 <tr><td colspan="3"></td></tr>
@@ -467,7 +522,7 @@ For example, to load the demonstration TSR ‘CAPS’ - which on a sidenote does
 
 <p><kbd>TL CAPS</kbd></p>
 
-<p>TL is short for TSR-Load, the program which loads the TSR and places it into the memory. Unfortunately TSR-Load at this moment only work under MSX-DOS. From Basic it is not yet possible to load TSR-programs.<br />
+<p>TL is short for TSR-Load, the program which loads the TSR and places it into the memory. Unfortunately TSR-Load at this moment only work under MSX-DOS. From Basic it is not yet possible to load TSR programs.<br />
 As soon as TL has loaded the TSR in memory the program will become active. In abovementioned example that means that the CAPS led will start blinking and that at every keypress the casette relais will be switched on or off.<br />
 TL is a smart program. As long as there is still space left in the MemMan segment for TSRs that’s where they’ll be put. Only if it is really necessary a new segment is used, which will be made unapproachable for other applications. That for example happens when an extremely large TSR program is being load. If next another small one is loaded TL will first search through all existing TSR segments to see if there might be space somewhere else. The order in which TSRs are loaded will therefor not be of influence on the memory usage.</p>
 
@@ -532,7 +587,7 @@ The TSR-ID is with these functions passed in register BC instead of register IX.
 <ul>
 <li>MemMan’s function processing routine can be called directly. This routine its address can be acquired through the info function (50).</li>
 <li>MemMan’s version number can be obtained through the info function. Because of this programs can determine which version of MemMan is installed, without having to call the IniChk function.</li>
-<li>Bug removed concerning TSR-management on a system with multiple memory mappers</li>
+<li>Bug removed concerning TSR management on a system with multiple memory mappers</li>
 <li>Bug removed concerning the DeAlloc (20) functions, when freeing PSEGs.</li>
 </ul>
 
@@ -966,22 +1021,22 @@ INIT:    LD SP,#100
 
 <h1>Calling TSRs using MemMan 2</h1>
 
-<p>MemMan places TSR programs in memory segments which fall outside of the standard 64kB working memory of MSX-DOS. The calling of the TSRs therefor always happens through MemMan. The TSR-calls can be devided into two categories: calling from hooks, and calling by applications.</p>
+<p>MemMan places TSR programs in memory segments which fall outside of the standard 64kB working memory of MSX-DOS. The calling of the TSRs therefor always happens through MemMan. The TSR calls can be devided into two categories: calling from hooks, and calling by applications.</p>
 
-<p>In the hook-table of the TSR-file is specified to which routines in the TSR the hooks should be bent. At the moment one of the bent hooks is called, MemMan will enable the segment in which the TSR is resident. Next, the routine which processes the hook-call will be called.</p>
+<p>In the hook-table of the TSR file is specified to which routines in the TSR the hooks should be bent. At the moment one of the bent hooks is called, MemMan will enable the segment in which the TSR is resident. Next, the routine which processes the hook-call will be called.</p>
 
 
 <h2>Processing of hook-calls</h2>
 
 <p>When writing routines which process a hook-call the following has to be taken into account.</p>
 
-<p>TSRs are always called with the interrupts disabled. The interrupts should preferrably be enabled again as quickly as possible. That is why it is advised to start TSR-routines with an EI-instruction.</p>
+<p>TSRs are always called with the interrupts disabled. The interrupts should preferrably be enabled again as quickly as possible. That is why it is advised to start TSR routines with an EI-instruction.</p>
 
 <p>MemMan only passes the registers AF, BC, DE and HL to the TSR unchanged.</p>
 
 <p>The segment-layout of memory pages 0, 2 and 3 stays unchanged when calling the TSR. In page 1 the TSR’s segment is switched. TSRs may use the (fast-) CurSeg and Use functions to temporarily switch a segment in page 2.</p>
 
-<p>The TSR-manager places exactly one returnaddress on the stack. Directly below that the stack which was active at the moment the hook was called is situated, and the eventual registers which have been pushed on the stack by the BIOS.<br />
+<p>The TSR manager places exactly one returnaddress on the stack. Directly below that the stack which was active at the moment the hook was called is situated, and the eventual registers which have been pushed on the stack by the BIOS.<br />
 Note that hooks can also be bent by normal DOS-programs. When these programs bend the hook by using a JP instruction, there won’t be placed any additional return addresses. When the program sustains a copy of the hook and calls that subsequently, the stack will on entry of the TSR look exactly like described in the above alinea.<br />
 Some programs however bend the hooks by using an RST 30H instruction, in other words, an interslot call. The interslot call routine places several data on the stack. When the program subsequently calls the hook which was installed by MemMan, the stack will be polluted by the interslot call with which the application was called. Such programs can’t be used in combination with TSRs which require a ‘clean’ stack.</p>
 
@@ -989,7 +1044,7 @@ Some programs however bend the hooks by using an RST 30H instruction, in other w
 <p class="page">26</p>
 
 
-<p>A TSR may only be left by jumping back to the TSR-manager. Upon return to the manager after a hook-call a value needs to be placed in the shadow-register A'. The function of this is as follows:</p>
+<p>A TSR may only be left by jumping back to the TSR manager. Upon return to the manager after a hook-call a value needs to be placed in the shadow-register A'. The function of this is as follows:</p>
 
 <pre>
 Bit   Name      Function
@@ -1005,7 +1060,7 @@ In case the TSR however DID recognize and process the statement, the text-pointe
 
 <p>Example 1:</p>
 
-<p>Say for exemple a TSR-routine is linked to the interrupt-hook H.TIMI. This routine’s function is to increase a counter every interrupt. It could look like this:</p>
+<p>Say for exemple a TSR routine is linked to the interrupt-hook H.TIMI. This routine’s function is to increase a counter every interrupt. It could look like this:</p>
 
 <pre>
 INTTSR:  EI              ;This is the routine which increases
@@ -1015,7 +1070,7 @@ INTTSR:  EI              ;This is the routine which increases
          EX AF,AF'       ;Save register AF
          SUB A           ;Set quitHook flag and reset the other bits
          EX AF,AF'       ;Flag to A', restore AF
-         RET             ;Return to TSR-Manager
+         RET             ;Return to TsrManager
 </pre>
 
 
@@ -1038,7 +1093,7 @@ CHPUT:   PUSH HL         ;Save data registers
 <p>When the H.CHPU hook is called, the stack which MemMan passes to the TSR will look as follows:</p>
 
 <pre>
-	(SP+0) = Return address to the TSR-Manager
+	(SP+0) = Return address to the TsrManager
 	(SP+2) = Return address to the BIOS
 	(SP+4) = AF
 	(SP+6) = BC
@@ -1079,15 +1134,15 @@ CHARTSR: EI             ;This is the routine processing the H.CHPU call
 <p class="page">29</p>
 
 
-<h2>Processing of TSR-calls through TsrCall</h2>
+<h2>Processing of TSR calls through TsrCall</h2>
 
 <p>The second way in which TSRs can be called is through the MemMan function TsrCall (63). By using this function applications can let the TSR execute certain actions and exchange data with the TSR.</p>
 
-<p>The header-table of the TSR-file must contain the address of the routine which processes the TsrCall calls. For more info on this, see the chapter about the way stucture of TSR files. In case the TSR won’t be called through TsrCall, the routine must contain a simple RET instruction.</p>
+<p>The header-table of the TSR file must contain the address of the routine which processes the TsrCall calls. For more info on this, see the chapter about the way stucture of TSR files. In case the TSR won’t be called through TsrCall, the routine must contain a simple RET instruction.</p>
 
 <p>When writing routines which can be called through the MemMan TsrCall function, the following points have to be taken into consideration:</p>
 
-<p>TSRs are always called with the interrupts diabled. The interrupts must preferrably be enabled as fast as possible. Therefor, it is advisable to start TSR-routines with an EI instruction.</p>
+<p>TSRs are always called with the interrupts diabled. The interrupts must preferrably be enabled as fast as possible. Therefore, it is advisable to start TSR routines with an EI instruction.</p>
 
 <p>MemMan only passes the registers AF, BC, DE and HL are uchanged to the TSR. Note here that register BC is used to indicate the TsrID of the TSR, hence register BC can’t be used for input.</p>
 
@@ -1095,7 +1150,7 @@ CHARTSR: EI             ;This is the routine processing the H.CHPU call
 
 <p>At the moment the TSR is called via TsrCall one of MemMan’s internal stacks becomes active. This stack is situated in page 3 and is 160 bytes in size. This will be sufficient for most applications. Note however that this stack is also used during the execution of MemMan functions and eventual occurring interrupts. The available stack space is therefor always less than 160 bytes.</p>
 
-<p>The TSR may only be left by jumping back to the TSR-Manager. The return-address to the manager is situated at the top of the stack, so executing a RET instruction will in most cases suffice. No flag-values need to be passed to the manager, only the registers AF, BC, DE and HL are passed back unchanged to the program which executed TsrCall.</p>
+<p>The TSR may only be left by jumping back to the TSR manager. The return-address to the manager is situated at the top of the stack, so executing a RET instruction will in most cases suffice. No flag-values need to be passed to the manager, only the registers AF, BC, DE and HL are passed back unchanged to the program which executed TsrCall.</p>
 
 
 <p class="page">30</p>
@@ -1105,7 +1160,7 @@ CHARTSR: EI             ;This is the routine processing the H.CHPU call
 
 <p>MemMan functions can be called in three ways. Through the EXTBIO hook (address #FFCA), through the function handler in page 3, and by directly calling one of the so-called ‘fast’ routines. It is strongly advised to avoid calls through the EXTBIO hook as much as possible. A call to EXTBIO can - when a lot of extensions are linked to the hook - uses a lot of stack space and is processed rather slow. Also, when calling EXTBIO the stack is required to be in page 3. When calling MemMan functions through the function handler it is also permitted for the stack to be in page 2.<br />
 It is strongly advised to request the function handler’s address in the TSR’s initialization routine. This can be done by calling the Info (50) function through the EXTBIO hook. The other MemMan function calls can then be called from the function handler, instead of through the EXTBIO hook.<br />
-TSR-programs may never use the function IniChk (30). Not during initialization, not during a call via a hook or the function TsrCall.</p>
+TSR programs may never use the function IniChk (30). Not during initialization, not during a call via a hook or the function TsrCall.</p>
 
 
 <h2>Calls to the Main-ROM</h2>
@@ -1130,18 +1185,18 @@ The specifications of the BasicCall function can be found in the function specif
 
 <h2>REL-Tabel</h2>
 
-<p>The TSRs can be loaded by TsrLoad on every random place in page 1 (address range #4000 to #7FFF). To do that, the TSR-loaded uses a table with all program-relative addresses. This table is automatically placed into the TSR-file by the program LinkTsr.</p>
+<p>The TSRs can be loaded by TsrLoad on every random place in page 1 (address range #4000 to #7FFF). To do that, the TSR loaded uses a table with all program-relative addresses. This table is automatically placed into the TSR file by the program LinkTsr.</p>
 
 <p>The necessary information to be able to load machinecode on a random address is derived from a so-called relocatable file. TSRs must therefor be programmed with an assembler which can create ‘relocatable’ files, ‘.REL’-files. Assemblers which can do this are amongst others GEN80 from HiSoft’s DEVPAC2 packet and M80 from Ascii’s MSX-DOS tools.</p>
 
 <p>A linker is usually used to link several REL files to one COM-file which must be started from a fixed address. All information concerning the necessary changes within the code is at that moment used by the linker and won’t be available in the COM-file.</p>
 
-<p>In order to retain that information MST created the abovementioned TSR-linker: LinkTsr or LT.COM. This linker links several REL-files, just like a normal linker would do. The TSR-linker however stores all program-relative addresses and places these in a separate table within the final TSR-file. Creating the REL-table is done entirely automatically, the exact structure and position of the REL-table is of no importance.</p>
+<p>In order to retain that information MST created the abovementioned TSR linker: LinkTsr or LT.COM. This linker links several REL-files, just like a normal linker would do. The TSR linker however stores all program-relative addresses and places these in a separate table within the final TSR file. Creating the REL-table is done entirely automatically, the exact structure and position of the REL-table is of no importance.</p>
 
 
 <h2>Initialization code</h2>
 
-<p>Every program has a piece of initialization code, and so have most TSRs. This code is only used once and is pretty much obsolete after that. In order to be able to easily remove the initialization code after usage the TSR-loader uses a trick. The initialization code is always placed at the end of the TSR-program. Right before the TsrLoader connects the TSR to the hooks, the initialization code is being called. After executing that code, the memory which was occupied by it will be freed again to be used in other TSRs. The necessary amount of memory will that way be limited to a minimum.</p>
+<p>Every program has a piece of initialization code, and so have most TSRs. This code is only used once and is pretty much obsolete after that. In order to be able to easily remove the initialization code after usage the TSR loader uses a trick. The initialization code is always placed at the end of the TSR program. Right before the TsrLoader connects the TSR to the hooks, the initialization code is being called. After executing that code, the memory which was occupied by it will be freed again to be used in other TSRs. The necessary amount of memory will that way be limited to a minimum.</p>
 
 
 <p class="page">32</p>
@@ -1149,7 +1204,7 @@ The specifications of the BasicCall function can be found in the function specif
 
 <h2>Hook-table</h2>
 
-<p>The TSRs can be linked to the hooks in the system memory. Within the TSR-file a table must be put in which it mentions which hooks are used by the TSR and to which routine it should jump if one of those hooks is called. Just like the REL-table the hook-table is used by the Loader during the TSR’s installation. These tables won’t be contained in the TSR’s final code and therefor won’t use any memory in the TSR program segment. It is not possible to bend additional hooks after the TSR installation.</p>
+<p>The TSRs can be linked to the hooks in the system memory. Within the TSR file a table must be put in which it mentions which hooks are used by the TSR and to which routine it should jump if one of those hooks is called. Just like the REL-table the hook-table is used by the Loader during the TSR’s installation. These tables won’t be contained in the TSR’s final code and therefor won’t use any memory in the TSR program segment. It is not possible to bend additional hooks after the TSR installation.</p>
 
 <p>The hook-table starts with two bytes which indicate the table’s length. Then determining the table length these two bytes are also counted in. The hook-bending data is placed after the length word. Every element in the hook table is four bytes long. The first two bytes of the element indicate the address of the to-be-bent hook, and the next two bytes indicate the address of the routine which should be called when the hook is called.</p>
 
@@ -1158,7 +1213,7 @@ The specifications of the BasicCall function can be found in the function specif
 
 <p>Every TSR starts with a special table: the so-called file header. Depending on this header the TsrLoader can determine the position of the TSR’s program code and the tables in the file.</p>
 
-<p>Every TSR-listing is therefor supposed to start with the header table. The contents of this table is as follows:</p>
+<p>Every TSR listing is therefor supposed to start with the header table. The contents of this table is as follows:</p>
 
 <pre>
 	defb 'MST TSR',13,10	;TSR file ID
@@ -1169,15 +1224,15 @@ The specifications of the BasicCall function can be found in the function specif
 	defw init		;Start initialization code
 	defw kill		;Destruction code
 	defw talk		;Interaction code
-	defw tsrLen		;Length of TSR-code
-	defw iniLen		;Length of init-code
+	defw tsrLen		;Length of TSR code
+	defw iniLen		;Length of init code
 </pre>
 
 <p>The meaning of the elements in the header table is as follows:</p>
 
 <ul>
 <li><b>MST TSR file ID, 9 bytes</b><br />
-This identification text lets TsrLoad recognize if it is handling a TSR file. Hence, this string may not freely be chosen by the TSR-programmer.</li>
+This identification text lets TsrLoad recognize if it is handling a TSR file. Hence, this string may not freely be chosen by the TSR programmer.</li>
 
 <li><b>TSR name, 12 bytes</b><br />
 An as unique as possible ID-text chosen by the programmer. Applications can communicate with the TSR by using this name. Unused positions must be filled with spaces.</li>
@@ -1191,8 +1246,8 @@ An as unique as possible ID-text chosen by the programmer. Applications can comm
 <li><b>End of text mark, 1 byte</b><br />
 Finally there should always be Control-Z (^Z), in case the TYPE commando is let loose on the TSR program code.</li>
 
-<li><b>Required TSR-Loader version number, 2 bytes</b><br />
-The loader checks this number to avoid an older loader reading a file which has a noncompatible structure. The TSR-loader is upwards compatible, so that TSRs of a previous MemMan version can also be installed. Users can then suffice with replacing the loader and keep using the same TSRs.<br />
+<li><b>Mandatory TSR-Loader version number, 2 bytes</b><br />
+The loader checks this number to avoid an older loader reading a file which has a noncompatible structure. The TSR loader is upwards compatible, so that TSRs of a previous MemMan version can also be installed. Users can then suffice with replacing the loader and keep using the same TSRs.<br />
 The version numer is 0001 in case the TSR only calls MemMan 2.1 functions. In case it also uses the specific MemMan 2.2. functions, the version number 0002 has to be placed in the header.</li>
 
 <li><b>TSR program code base address, 2 bytes</b><br />
@@ -1230,7 +1285,7 @@ Is called by the program TsrKill when removing the TSR. This routine is supposed
 Is called by applications, through MemMan’s TsrCall function</li>
 
 <li><b>TSR code length, 2 bytes</b><br />
-This length concerns the TSR-program code, without the initialization routine</li>
+This length concerns the TSR program code, without the initialization routine</li>
 
 <li><b>Initialization routine length, 2 bytes</b><br />
 The initialization routine is located at the very end of the TSR, and will upon initialization of the TSR be put in the same segment as the TSR code itself. The space the initialization routine occupies will be freed afterwards.</li>
@@ -1239,7 +1294,8 @@ The initialization routine is located at the very end of the TSR, and will upon 
 
 <h2>File Structure</h2>
 
-<p>Every TSR program has got parts which all have to be placed in a fixed position in the source file. These parts are:</p>
+<p>Every TSR program consists of parts which all have to be placed in a fixed
+position in the source file. These parts are:</p>
 
 <ul>
 <li>Header table</li>
@@ -1248,9 +1304,16 @@ The initialization routine is located at the very end of the TSR, and will upon 
 <li>Hook table</li>
 </ul>
 
-<p>This order has to be followed strictly. In most cases the entire TSR will only consist of one REL-file which is linked in one run. In that case the programmer will only have to pay attention the elements are located in the right order in the source listing. In case the TSR is created from several REL files, the order are loaded and linked in the specified order, the TSR-linker does not check for this.</p>
+<p>This order has to be followed strictly. In most cases the entire TSR will
+only consist of one REL-file which is linked in one pass. In that case the
+programmer only has to take care that the elements are placed in the right order
+in the source listing. In case the TSR is built from multiple REL files, they
+are loaded and linked in the specified order, the TSR linker does not check for
+this.</p>
 
-<p>The file TSRFRAME.GEN on the tsr development disk contains the framework of a TSR-listing. If you use this framework as a basis when writing a new TSR it is easy to retain the correct structure.</p>
+<p>The file TSRFRAME.GEN on the TSR development disk contains the framework of a
+TSR listing. If you use this framework as a basis when writing a new TSR it is
+easy to retain the correct structure.</p>
 
 
 <p class="page">35</p>

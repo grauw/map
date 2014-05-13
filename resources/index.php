@@ -219,7 +219,7 @@ information, feel free to send us an email.</p>
     <ul>
     <li id="memman">MemMan (by MST)
       <ul>
-      <li class="map"><a href="/resources/tsrdev_en.php">MemMan v2.32 TSR Development Kit</a> <em>(work in progress)</em></li>
+      <li class="map"><a href="/resources/tsrdev_en.php">MemMan v2.32 TSR Development Kit</a></li>
       </ul>
     </li>
     </ul>

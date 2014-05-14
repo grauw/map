@@ -12,12 +12,16 @@
 
 
 
-<h1>Interrupts — MSX Computer Magazine 51</h1>
+<h1>Interrupts</h1>
 
 <p><strong>Many machine language programmers will have written a program that needed to
 be called from the interrupt routine. Sometimes such a program does not work
 well, or at all, for some vague reason. Time to shine some light on those shady
 interrupts.</strong></p>
+
+<p>Author: Ramon van der Winkel<br />
+Published in: MSX Computer Magazine 51<br />
+Translated by: Laurens Holst</p>
 
 <p>An extension of the BIOS interrupt routine has to be attached to one of the
 two interrupt hooks. A choice has to be made between the hooks H.KEYI and

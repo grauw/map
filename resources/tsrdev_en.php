@@ -356,7 +356,7 @@ Magazine 40 as well, which is not out yet at the moment of writing.</p>
     <a href="#filestructure">File structure</a></dd>
 
 <dt><span class="indexpage">36</span>
-    Interrupts</dt>
+    <a href="#interrupts">Interrupts</a></dt>
 
 <dt><span class="indexpage">40</span>
     Source listings</dt>
@@ -1318,6 +1318,11 @@ easy to retain the correct structure.</p>
 
 
 <p class="page">35</p>
+
+
+<h2 id="interrupts">Interrupts</h2>
+
+<p>See <a href="/articles/interrupts.php">Interrupts — MSX Computer Magazine 51</a>.</p>
 
 
 

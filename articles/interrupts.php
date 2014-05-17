@@ -23,14 +23,14 @@ interrupts.</strong></p>
 Published in: MSX Computer Magazine 51<br />
 Translated by: Laurens Holst</p>
 
-<p>An extension of the BIOS interrupt routine has to be attached to one of the
-two interrupt hooks. A choice has to be made between the hooks H.KEYI and
-H.TIMI. Both are called by the interrupt routine, however there are
+<p>To extend the BIOS interrupt routine, the extension has to be attached to one
+of the two interrupt hooks. A choice has to be made between the hooks H.KEYI and
+H.TIMI. Both are invoked by the interrupt routine, however there are
 differences.</p>
 
 <p>The H.KEYI hook is invoked every interrupt, while the H.TIMI hook is invoked
-at regular intervals. 50 or 60 times per second, to be precise. So a background
-song for example should be attached to H.TIMI, because the playback speed has
+at regular intervals. 50 or 60 times per second, to be precise. For example, a
+background song should be attached to H.TIMI, because the playback speed has
 to be regular.</p>
 
 <p>An interrupt is — simply put — a notification from a device to the processor.
@@ -59,7 +59,7 @@ the hook returns the BIOS uses the contents of this register.</p>
 <p>One of the devices that generate interrupts in the MSX is the video
 processor. It generates and interrupt at the moment the last line of the active
 area of the screen — where the text and graphics can appear — is displayed.
-Because this happens 50 times per second, this means the each second there are
+Because this happens 50 times per second, this means that each second there are
 50 interrupts coming from the VDP. If the VDP is set to 60Hz, the interrupts
 will also be generated 60 times per second.</p>
 
@@ -139,7 +139,7 @@ with an instruction to execute. The most used interrupt mode on MSX is IM 1. In
 this mode the processor always calls a fixed address: 0038h. At this address
 every MSX BIOS has a jump to the interrupt routine.</p>
 
-<p>The other interrupt mode that is used is IM 2, on the MSX it is used by CP/M.
+<p>The other interrupt mode in use is IM 2, on the MSX it is used by CP/M.
 In this mode the address that is called is determined by combining the I
 register and a byte from the device. The I register can be set by the program
 and contains the high part of the address. The low part is provided by the
@@ -152,8 +152,8 @@ different interrupt routines can be called. The device determines which.</p>
 that all interrupts will end up at the same routine. Just to be sure, CP/M’s
 authors also had the interrupt routine start at an address where the high and
 low parts of the address are identical. In case an interrupt would occur where
-the device provides a value with bit 0 set, it will still end up with the
-correct address. Ad address with bit 0 set can occur if the device does not
+the device provides a value with bit 0 set, it will still end up at the
+correct address. An address with bit 0 set can occur if the device does not
 provide a specific value at all, because it expects interrupt mode 1 to be
 active.</p>
 
@@ -176,9 +176,9 @@ Interrupt or NMI. An NMI is processed similar to an interrupt in interrupt mode
 interrupts do not normally occur on MSX computers, the MSX BIOS does have a NMI
 interrupt handling routine at that address.</p>
 
-<p>MSX-DOS just provides a handler for ‘normal’ interrupts. This routine enables
+<p>MSX-DOS only provides a handler for ‘normal’ interrupts. This routine enables
 the BIOS in page 0 and invokes its interrupt routine. Afterwards it re-enables
-RAM in page 0. So Non Maskable Interrupts can not occur in MSX-DOS because there
+RAM in page 0. Non Maskable Interrupts can not occur in MSX-DOS because there
 is no handling routine for it. Address 0066h is right in the middle of MSX-DOS’s
 first FCB — File Control Block — buffer, which starts at address 005Ch.</p>
 
@@ -210,12 +210,12 @@ program continues. In other words, the interrupt routine is executed as if the
 main program executes a CALL to a subroutine, in this case the interrupt
 routine.</p>
 
-<p>To prevent nesting the CPU itself resets the IFF1 and IFF2 flags (DI). Before
-calling an NMI routine IFF1 is copied into IFF2 and only IFF1 is reset, so that
-the state of IFF1 can be restored at the end of the NMI routine.</p>
+<p>To prevent nesting the CPU automatically resets the IFF1 and IFF2 flags (DI).
+Before calling an NMI routine IFF1 is copied into IFF2 and only IFF1 is reset,
+so that the state of IFF1 can be restored at the end of the NMI routine.</p>
 
 <p>Just like normal routines, interrupt routines can be terminated with a RET
-instruction. However the CPU has two special instructions to end interrupt
+instruction. However, the CPU has two special instructions to end interrupt
 routines: RETurn from Interrupt (RETI) and RETurn from Non maskable interrupt
 (RETN).</p>
 
@@ -241,19 +241,19 @@ automatically reset, preventing the CPU from handling further interrupts.</p>
 register S#0 is read. So if the interrupt routine executes an EI instruction to
 re-enable interrupts while S#0 has not been read yet, the CPU will immediately
 recognise the interrupt from the VDP again (it was still active after all) and
-proceed to execute the interrupt routine again, even the previous call hadn’t
-even ended yet.</p>
+proceed to execute the interrupt routine again, even though the previous call
+hadn’t ended yet.</p>
 
 <p>The result is probably clear: an infinite loop where the CPU places a new
-return addres on the stack at every new interrupt. This will in no-time cause
+return address on the stack at every new interrupt. This will in no-time cause
 the entire memory to fill up with return addresses, overwriting program code and
-most likely cause the computer to crash.</p>
+most likely causing the computer to crash.</p>
 
 <p>Besides the interrupt the VDP generates when the active area has been
-displayed, the VDP can also generate another interrupt. The precise moment can
-be set by the software in VDP register R#19. In this register a Y-coordinate can
-be specified. While the VDP is displaying the screen, the moment the it reaches
-this line an interrupt is generated.</p>
+displayed, the VDP can also generate another interrupt. The moment that the VDP
+should do this can be set by the software in VDP register R#19. In this register
+a Y-coordinate can be specified. While the VDP is displaying the screen, the
+moment the it reaches this line an interrupt is generated.</p>
 
 <h2>Programming tips</h2>
 
@@ -265,7 +265,7 @@ enable interrupts, but has to preserve the contents of register A.</p>
 
 <p>The BIOS interrupt routine reads the VDP status register S#0 by directly
 reading the VDP’s command port, rather than first selecting the appropriate
-status register via register R#15 and only reading the port after that. For
+status register via register R#15 before reading the port. For
 this reason programs must always keep register R#15 set to 0 when the interrupts
 are enabled. If the program needs to read another status register, it has to
 disable the interrupts before doing so.</p>
@@ -287,7 +287,7 @@ instructions in an interrupt routine are always:</p>
 RETI
 </pre>
 
-<p>You can not use DI and EI instructions in an NMI-routine, because these also
+<p>An NMI-routine should not use DI and EI instructions, because these also
 change the IFF2 flag. This flag needs to be preserved because IFF2 contains a
 copy of IFF1 while the NMI routine is executing, which needs to be restored
 when the NMI ends.</p>
@@ -303,8 +303,8 @@ routines that during their execution page 0 will no longer contain the RAM with
 the new routine at address 0038h. In stead when an interrupt occurs the BIOS’s
 interrupt routine will become active. To prevent this, take care to always keep
 the IFF1 flag reset with a DI instruction. Also keep in mind that some BIOS
-routines re-enable interrupts. This is most certainly done but the SUBROM, since
-every entry in the jump table contains an EI instruction!</p>
+routines re-enable interrupts. This is certainly done by the SUBROM, since every
+entry in the jump table contains an EI instruction!</p>
 
 <p>[Translator’s note: For this reason, it may be preferable to use IM 2 for
 custom interrupt routines. Note; I would recommend to use the hooks and avoid

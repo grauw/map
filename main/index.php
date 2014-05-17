@@ -18,6 +18,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-05-14</em><br />
+Translated <a href="/resources/#opm">interrupts article</a> by Ramon van der Winkel.</p>
+
 <p><em>2014-05-10</em><br />
 Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>
 
@@ -39,12 +42,6 @@ Added an English translation of the MSX Datapack Vol. 3’s
 Added “<a href="/articles/scrolling.php">A guide to scrolling game
 engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit
 division routine</a> 120 T-states faster, thanks to Juha N.</p>
-
-<p><em>2009-03-27</em><br />
-Added Zemina memory extensions to the <a href="/resources/msx_io_ports.php">I/O ports overview</a> and
-added link to Cronos’s <a href="http://www.hqunix.com/wordpress/?page_id=554">manual scan / translation</a>,
-thanks to Manuel Bilderbeek. Also added a <a href="/articles/mult_div_shifts.php#divby9">division by 9</a>
-routine, thanks to Ricardo Bittencourt.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

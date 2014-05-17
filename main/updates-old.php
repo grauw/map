@@ -14,6 +14,12 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2009-03-27</em><br />
+Added Zemina memory extensions to the <a href="/resources/msx_io_ports.php">I/O ports overview</a> and
+added link to Cronos’s <a href="http://www.hqunix.com/wordpress/?page_id=554">manual scan / translation</a>,
+thanks to Manuel Bilderbeek. Also added a <a href="/articles/mult_div_shifts.php#divby9">division by 9</a>
+routine, thanks to Ricardo Bittencourt.</p>
+
 <p><em>2009-03-09</em><br />
 The MSX Assembly Page’s address has changed to
 <a href="http://map.grauw.nl/">http://map.grauw.nl/</a>. Source is now

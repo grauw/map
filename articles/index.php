@@ -17,37 +17,27 @@
 <p>This is a collection of articles about MSX programming. Most are written by us, the MAP maintainers, and can only be found here exclusively. Those are marked with a <img src="/css/mapbullet.gif" alt="MAP bullet"/> bullet. Please do not spread them without our permission but instead link to the MAP. If you have comments of any kind, perhaps you’ve discovered an error or you came up with an improvement for one of the routines / algorithms, or perhaps you want to submit an article of your own, then send us an email!</p>
 
 <ul>
-<li id="tutorials">Tutorials
+<li id="articles">Articles
   <ul>
-  <li id="tut_asm">Assembly programming
+  <li id="art_asm">Z80 assembly programming
     <ul>
-    <li class="map"><a href="/articles/vdp_tut.php">VDP programming tutorial</a></li>
+    <li class="map"><a href="/articles/fast_loops.php">Fast loops</a></li>
+    <li class="map"><a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts</a></li>
     </ul>
   </li>
   <li id="tut_basic">Basic programming
     <ul>
-	  <li class="map"><a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a></li>
-	</ul>
+    <li class="map"><a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a></li>
+    </ul>
   </li>
   <li id="tut_vhdl"><abbr title="VHSIC Hardware Description Language">VHDL</abbr> programming
     <ul>
     <li><a href="/articles/taste_of_vhdl.php">A taste of <abbr>VHDL</abbr></a></li>
     </ul>
   </li>
-  <li id="tut_cpp">C(++) programming</li>
-  <li id="tut_tp">Turbo Pascal programming</li>
-  </ul>
-</li>
-<li id="articles">Articles
-  <ul>
-  <li id="art_asm">Z80 Assembly programming
+  <li id="art_vdp"><abbr title="Video Display Processor">VDP</abbr> programming
     <ul>
-    <li class="map"><a href="/articles/fast_loops.php">Fast loops</a></li>
-    <li class="map"><a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts</a></li>
-    </ul>
-  </li>
-  <li id="art_vdp">VDP programming
-    <ul>
+    <li class="map"><a href="/articles/vdp_tut.php">VDP programming tutorial</a></li>
     <li class="map"><a href="/articles/vdp_guide.php">VDP programming guide</a></li>
     <li class="map"><a href="/articles/split_guide.php">Screensplit programming guide</a></li>
     <li class="map"><a href="/articles/vdp_commands_speed.php">VDP commands ~ speed measurements</a></li>

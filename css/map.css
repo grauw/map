@@ -102,7 +102,7 @@ q:lang(ja)::after {
 /* show non-html link file types */
 
 a[hreflang]:after {
-	content: " [" attr(hreflang) "]";
+	content: " «" attr(hreflang) "»";
 }
 
 a[href$=".pdf"]:after {
@@ -114,9 +114,9 @@ a[href$=".lzh"]:after {
 }
 
 a[hreflang][href$=".pdf"]:after {
-	content: " [" attr(hreflang) "] «PDF»";
+	content: " «" attr(hreflang) ", PDF»";
 }
 
 a[hreflang][href$=".lzh"]:after {
-	content: " [" attr(hreflang) "] «LZH»";
+	content: " «" attr(hreflang) ", LZH»";
 }

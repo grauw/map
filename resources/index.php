@@ -77,6 +77,7 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/video/texasinstruments_tms9918.pdf">Texas Instruments TMS9918A application manual</a></li>
       <li><a href="/resources/video/ti-vdp-programmers-guide.pdf">Texas Instruments VDP Programmer’s Guide</a></li>
+      <li><a href="http://bifi.msxnet.org/msxnet/tech/tms9918a.txt">Sean Young’s TMS9918A documentation</a> · on msxnet</li>
       </ul>
     </li>
     <li id="v9938">V9938 / MSX2 VDP

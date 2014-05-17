@@ -21,8 +21,6 @@ MAP instead. If you have something not listed here which contains new
 information, feel free to send us an email.</p>
 
 <ul>
-<li id="osdocs">OS documentation
-  <ul>
   <li id="msxbios">MSX BIOS documentation
     <ul>
     <li class="map"><a href="/resources/msxbios.php">MSX BIOS calls</a></li>
@@ -42,14 +40,10 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
-  </ul>
-</li>
-<li id="devicedocs">Device documentation
-  <ul>
-  <li id="dd_general">General
+  <li id="system">System documentation
     <ul>
     <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
+    <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
     </ul>
   </li>
   <li id="processors">Processors
@@ -209,13 +203,7 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  </ul>
-</li>
-<li id="swdocs">Software documentation
-  <ul>
-  <li id="assemblers">Assemblers</li>
-  <li id="compilers">Compilers</li>
-  <li id="swd_other">Other Software
+  <li id="software">Software documentation
     <ul>
     <li id="memman">MemMan (by MST)
       <ul>
@@ -224,8 +212,6 @@ information, feel free to send us an email.</p>
     </li>
     </ul>
   </li>
-  </ul>
-</li>
 </ul>
 
 

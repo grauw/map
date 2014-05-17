@@ -76,6 +76,7 @@ information, feel free to send us an email.</p>
     <li id="tms9918">TMS9918A / TMS9928A / MSX1 VDP
       <ul>
       <li><a href="/resources/video/texasinstruments_tms9918.pdf">Texas Instruments TMS9918A application manual</a></li>
+      <li><a href="/resources/video/ti-vdp-programmers-guide.pdf">Texas Instruments VDP Programmer’s Guide</a></li>
       </ul>
     </li>
     <li id="v9938">v9938 / MSX2 VDP

@@ -112,8 +112,8 @@ information, feel free to send us an email.</p>
     </li>
     <li id="scc">SCC (custom sound chip by Konami)
       <ul>
-      <li><a href="http://www.msxnet.org/tech/scc">Sean Young’s msxnet.org SCC section</a></li>
-      <li><a href="http://www.msxnet.org/tech/soundcartridge">Sean Young’s msxnet.org SCC+ section</a></li>
+      <li><a href="http://www.msxnet.org/tech/scc">Sean Young’s msxnet.org SCC section</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
+      <li><a href="http://www.msxnet.org/tech/soundcartridge">Sean Young’s msxnet.org SCC+ section</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
       </ul>
     </li>
     <li id="opll">OPLL / MSX-Music / FM-PAC (MSX turboR standard)

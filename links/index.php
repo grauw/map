@@ -42,7 +42,7 @@
   <li><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a></li>
   <li><a href="http://www.mccm.hetlab.tk/millennium/milc/index.htm">MCCM’s MiLC (mainly Dutch)</a></li>
   <li><a href="http://www.konamiman.com/msx/msx-e.html">Konamiman’s MSX page</a></li>
-  <li><a href="http://nocash.emubase.de/portar.htm">NoCash MSX programming specs</a></li>
+  <li><a href="http://nocash.emubase.de/portar.htm">Portar MSX technical documentation</a></li>
   <li><a href="http://www.msx-plaza.eu/">Alex Wulm’s MSX Plaza</a> · MCCM articles in Dutch and English</li>
   <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
   <li><a href="http://www.msxarchive.nl/pub/msx/docs/">Funet FTP MSX documentation section</a></li>

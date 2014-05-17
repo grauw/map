@@ -26,6 +26,7 @@ q:lang(ja)::after {
 
 .box {					/* render a box around the block */
 	border: thin solid black;
+	padding: 0 .2em;
 }
 
 .signed {				/* Use for the author at the end of an introduction */

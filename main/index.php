@@ -19,7 +19,7 @@
 <h2>Latest updates:</h2>
 
 <p><em>2014-05-14</em><br />
-Translated <a href="/resources/#opm">interrupts article</a> by Ramon van der Winkel.</p>
+Translated <a href="/articles/interrupts.php">interrupts article</a> by Ramon van der Winkel.</p>
 
 <p><em>2014-05-10</em><br />
 Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>

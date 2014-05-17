@@ -225,16 +225,3 @@ blockquote[cite] > a.citelink:hover {
 blockquote[cite]:hover > a.citelink {
 	display: block;
 }
-
-
-
-/* non-html link styling */
-
-a[href$=".pdf"]:after {
-	color: #44C;
-}
-a[href$=".lzh"]:after {
-	color: #44C;
-}
-
-

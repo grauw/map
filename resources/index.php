@@ -52,21 +52,21 @@ information, feel free to send us an email.</p>
     <li id="z80">Z80
       <ul>
 	  <li class="map"><a href="/resources/z80instr.php">Z80 instruction set overview</a></li>
-      <li><a href="/resources/cpu/z80.pdf">ZiLOG Z80 user's manual</a></li>
+      <li><a href="/resources/cpu/z80.pdf">Zilog Z80 user's manual</a></li>
       <li><a href="http://www.myquest.nl/z80undocumented/z80-documented.pdf">The Undocumented Z80 Documented</a> · by Sean Young, Jan Wilmans</li>
       <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
       </ul>
     </li>
     <li id="z180">Z180
       <ul>
-      <li><a href="/resources/cpu/z8018x.pdf">ZiLOG Z180 user's manual</a></li>
+      <li><a href="/resources/cpu/z8018x.pdf">Zilog Z180 user's manual</a></li>
       </ul>
     </li>
     <li id="z380">Z380
       <ul>
-      <li><a href="/resources/cpu/z380.pdf">ZiLOG Z380 product specification</a></li>
-      <li><a href="/resources/cpu/z380um.pdf">ZiLOG Z380 user's manual</a></li>
-      <li><a href="/resources/cpu/z380qa.pdf">ZiLOG Z380 questions and answers</a></li>
+      <li><a href="/resources/cpu/z380.pdf">Zilog Z380 product specification</a></li>
+      <li><a href="/resources/cpu/z380um.pdf">Zilog Z380 user's manual</a></li>
+      <li><a href="/resources/cpu/z380qa.pdf">Zilog Z380 questions and answers</a></li>
       </ul>
     </li>
     </ul>

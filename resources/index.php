@@ -79,21 +79,21 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/video/ti-vdp-programmers-guide.pdf">Texas Instruments VDP Programmer’s Guide</a></li>
       </ul>
     </li>
-    <li id="v9938">v9938 / MSX2 VDP
+    <li id="v9938">V9938 / MSX2 VDP
       <ul>
-      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha v9938 Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
-      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha v9938 Application Manual</a> · transscribed <em>(incomplete)</em></li>
-      <li><a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">Yamaha v9938 Application Manual</a> · scans</li>
+      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
+      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 Application Manual</a> · transscribed <em>(incomplete)</em></li>
+      <li><a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">Yamaha V9938 Application Manual</a> · scans</li>
       </ul>
     </li>
-    <li id="v9958">v9958 / MSX2+ / turboR VDP
+    <li id="v9958">V9958 / MSX2+ / turboR VDP
       <ul>
-      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha v9958 Application Manual</a> · scans</li>
+      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha V9958 Application Manual</a> · scans</li>
       </ul>
     </li>
-    <li id="v9990">v9990 / Graphics9000 (by Sunrise)
+    <li id="v9990">V9990 / Graphics9000 (by Sunrise)
       <ul>
-      <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha v9990 application manual</a></li>
+      <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha V9990 application manual</a></li>
       <li><a href="http://msxbanzai.tni.nl/v9990/manual.html">Yamaha V9990 E-VDP-III Programmers Manual</a> · by MSX Banzai! (unofficial)</li>
       <li><a href="/resources/video/v9manual.pdf">Sunrise Video9000 application manual</a></li>
       </ul>

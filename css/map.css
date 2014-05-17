@@ -106,17 +106,17 @@ a[hreflang]:after {
 }
 
 a[href$=".pdf"]:after {
-	content: " «PDF»";
+	content: " «pdf»";
 }
 
 a[href$=".lzh"]:after {
-	content: " «LZH»";
+	content: " «lzh»";
 }
 
 a[hreflang][href$=".pdf"]:after {
-	content: " «" attr(hreflang) ", PDF»";
+	content: " «" attr(hreflang) ", pdf»";
 }
 
 a[hreflang][href$=".lzh"]:after {
-	content: " «" attr(hreflang) ", LZH»";
+	content: " «" attr(hreflang) ", lzh»";
 }

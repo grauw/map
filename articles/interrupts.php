@@ -20,7 +20,7 @@ well, or at all, for some vague reason. Time to shine some light on those shady
 interrupts.</strong></p>
 
 <p>Author: Ramon van der Winkel<br />
-Published in: MSX Computer Magazine 51<br />
+Published in: MSX Computer Magazine 51 / MemMan TDK<br />
 Translated by: Laurens Holst</p>
 
 <p>To extend the BIOS interrupt routine, the extension has to be attached to one
@@ -346,7 +346,7 @@ im2:          di                     ;No interrupts during switch
 
               ei                     ;Now interrupts are permitted again
 
-loop:         jp loop                ;Back to MSX-DOS
+loop:         jp loop                ;Endless loop
 
 intRoutHere:  equ $                  ;Code is now here
 
@@ -373,7 +373,7 @@ notFromVDP:   pop af                 ;Restore modified registers
 
 counterIM2:   defw 1                 ;Nr. of interrupts counter
 
-intRoutLen:   equ $ - intRoutIM2     ;Length of routine code
+intRoutLen:   equ $-intRoutIM2       ;Length of routine code
 
               end                    ;im2.gen
 </pre>

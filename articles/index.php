@@ -17,8 +17,6 @@
 <p>This is a collection of articles about MSX programming. Most are written by us, the MAP maintainers, and can only be found here exclusively. Those are marked with a <img src="/css/mapbullet.gif" alt="MAP bullet"/> bullet. Please do not spread them without our permission but instead link to the MAP. If you have comments of any kind, perhaps you’ve discovered an error or you came up with an improvement for one of the routines / algorithms, or perhaps you want to submit an article of your own, then send us an email!</p>
 
 <ul>
-<li id="articles">Articles
-  <ul>
   <li id="art_asm">Z80 assembly programming
     <ul>
     <li class="map"><a href="/articles/fast_loops.php">Fast loops</a></li>
@@ -51,9 +49,7 @@
     <li class="map"><a href="/articles/psg_sample.php">Playing samples on the PSG</a></li>
     </ul>
   </li>
-  </ul>
-</li>
-<li id="extarticles">External Articles (non-MAP)
+<li id="extarticles">External articles (non-MAP)
   <ul>
   <li id="ext_mccw"><a href="http://www.mccw.hetlab.tk/">MCCW (MCCM web magazine)</a>
     <ul>

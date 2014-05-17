@@ -43,7 +43,7 @@ information, feel free to send us an email.</p>
   <li id="system">System documentation
     <ul>
     <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
-    <li id="msx2th"><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
+    <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
     </ul>
   </li>
   <li id="processors">Processors

@@ -104,46 +104,46 @@ information, feel free to send us an email.</p>
   </li>
   <li id="sound">Sound Chips
     <ul>
-    <li id="psg">PSG (MSX standard)
+    <li id="psg">PSG
       <ul>
       <li><a href="/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG) application manual</a> (PSG clone)</li>
       </ul>
     </li>
-    <li id="scc">SCC (custom sound chip by Konami)
+    <li id="scc">Konami SCC
       <ul>
       <li><a href="http://www.msxnet.org/tech/scc">Sean Young’s msxnet.org SCC section</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
       <li><a href="http://www.msxnet.org/tech/soundcartridge">Sean Young’s msxnet.org SCC+ section</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
       </ul>
     </li>
-    <li id="opll">OPLL / MSX-Music / FM-PAC (MSX turboR standard)
+    <li id="opll">MSX-Music / FM-PAC
       <ul>
       <li><a href="/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
       </ul>
     </li>
-    <li id="opl1">OPL1 / MSX-Audio / Music Module
+    <li id="opl1">MSX-Audio / Music Module
       <ul>
       <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
       <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
       <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 (OPL) datasheet</a></li>
       </ul>
     </li>
-    <li id="opl4">OPL4 / MoonSound (by Sunrise)
+    <li id="opl4">MoonSound
       <ul>
       <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha YMF278B (OPL4) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha YMF278B (OPL4) datasheet</a></li>
       <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>
-    <li id="opm">OPM / SFG-01 / SFG-05 (Yamaha CX5M’s FM sound unit)
+    <li id="opm">SFG-01 / SFG-05 (Yamaha CX5M’s FM sound unit)
       <ul>
       <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 (OPM) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 (OPM) datasheet</a></li>
       <li><a href="http://www.cx5m.net/hardware/">More info at CX5M.net</a></li>
       </ul>
     </li>
-    <li id="sn76489">SN76489 (Franky / PlaySoniq)
+    <li id="sn76489">Franky / PlaySoniq
       <ul>
       <li><a href="/resources/sound/texas_instruments_sn76489an.pdf">Texas Instruments SN76489 application manual</a></li>
       </ul>

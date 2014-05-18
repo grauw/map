@@ -109,6 +109,11 @@ a[href$=".pdf"]:after {
 	content: " ‹pdf›";
 }
 
+a[href$=".txt"]:after,
+a[href$=".TXT"]:after {
+	content: " ‹txt›";
+}
+
 a[href$=".lzh"]:after {
 	content: " ‹lzh›";
 }
@@ -119,6 +124,11 @@ a[href$=".zip"]:after {
 
 a[hreflang][href$=".pdf"]:after {
 	content: " ‹" attr(hreflang) ", pdf›";
+}
+
+a[hreflang][href$=".txt"]:after,
+a[hreflang][href$=".TXT"]:after {
+	content: " ‹" attr(hreflang) ", txt›";
 }
 
 a[hreflang][href$=".lzh"]:after {

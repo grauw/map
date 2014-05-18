@@ -126,6 +126,7 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
       <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 (OPL) datasheet</a></li>
       </ul>
     </li>
     <li id="opl4">OPL4 / MoonSound (by Sunrise)

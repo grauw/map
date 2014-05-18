@@ -47,6 +47,7 @@
   <li><a href="http://www.myquest.nl/z80undocumented/">Jan Wilmans’ Z80 undocumented page</a></li>
   <li><a href="http://www.msxarchive.nl/pub/msx/docs/">Funet FTP MSX documentation section</a></li>
   <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
+  <li><a href="http://cdn.preterhuman.net/texts/computing/msx/">Higher Intellect MSX archive</a></li>
   <li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist archive</a></li>
   </ul>
 </li>

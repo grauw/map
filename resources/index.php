@@ -130,8 +130,8 @@ information, feel free to send us an email.</p>
     </li>
     <li id="opl4">OPL4 / MoonSound (by Sunrise)
       <ul>
-      <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha OPL4 application manual</a></li>
-      <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha OPL4 datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha YMF278B (OPL4) application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha YMF278B (OPL4) datasheet</a></li>
       <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>

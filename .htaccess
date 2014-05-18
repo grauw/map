@@ -14,4 +14,7 @@ RewriteCond %{QUERY_STRING} ^p\=(.*)\.html$
 RewriteRule ^$ /%1.php? [L,R=301]
 
 RewriteCond %{QUERY_STRING} ^p\=(.*\.[tT][xX][tT])$
-RewriteRule ^$ /viewer.php?f=%1 [L,R=301]
+RewriteRule ^$ /%1 [L,R=301]
+
+RewriteCond %{QUERY_STRING} ^f\=(.*\.[tT][xX][tT])$
+RewriteRule ^viewer.php$ /%1 [L,R=301]

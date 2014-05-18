@@ -166,8 +166,8 @@ information, feel free to send us an email.</p>
     <ul>
     <li><a href="/resources/disk/westerndigital_wd279x02.pdf">Western Digital WD2793-02 FDC</a> · used in most MSX2’s</li>
     <li><a href="/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a>  · used in Panasonic MSX computers</li>
-    <li><a href="/viewer.php?f=/resources/disk/IDETECH.TXT">Sunrise IDE interface technical information</a> · 17/11/1998 version <i>(<a href="/resources/disk/IDETECH.TXT">plain text</a>)</i></li>
-    <li><a href="/viewer.php?f=/resources/disk/IDESYS.TXT">Sunrise IDE interface technical system documentation</a> · 26/07/2000 version <i>(<a href="/resources/disk/IDESYS.TXT">plain text</a>)</i></li>
+    <li><a href="/resources/disk/IDETECH.TXT">Sunrise IDE interface technical information</a></li>
+    <li><a href="/resources/disk/IDESYS.TXT">Sunrise IDE interface technical system documentation</a></li>
     <li><a href="/resources/disk/novaxis-scsi.pdf">Novaxis SCSI interface manual</a></li>
     </ul>
   </li>

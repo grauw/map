@@ -151,7 +151,7 @@ information, feel free to send us an email.</p>
   </li>
   <li id="msxengine">MSX Engine
     <ul>
-    <li><a href="/resources/engine/yamaha_s3527.pdf">Yamaha S3527 MSX-System application manual</a> (Japanese)</li>
+    <li><a href="/resources/engine/yamaha_s3527.pdf" hreflang="ja">Yamaha S3527 MSX-System application manual</a> (Japanese)</li>
     <li><a href="/resources/engine/yamaha_s1985.pdf">Yamaha S1985 MSX-System II application manual</a></li>
     <li>T9769B · engine of several MSX2+ computers</li>
 	  <ul>

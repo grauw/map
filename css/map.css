@@ -113,10 +113,18 @@ a[href$=".lzh"]:after {
 	content: " ‹lzh›";
 }
 
+a[href$=".zip"]:after {
+	content: " ‹zip›";
+}
+
 a[hreflang][href$=".pdf"]:after {
 	content: " ‹" attr(hreflang) ", pdf›";
 }
 
 a[hreflang][href$=".lzh"]:after {
 	content: " ‹" attr(hreflang) ", lzh›";
+}
+
+a[hreflang][href$=".zip"]:after {
+	content: " ‹" attr(hreflang) ", zip›";
 }

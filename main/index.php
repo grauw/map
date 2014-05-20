@@ -18,6 +18,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-05-20</em><br />
+Translated <a href="/articles/dos-error-handling.php">DOS 1 error handling article</a> by Ramon van der Winkel.</p>
+
 <p><em>2014-05-14</em><br />
 Translated <a href="/articles/interrupts.php">interrupts article</a> by Ramon van der Winkel.</p>
 

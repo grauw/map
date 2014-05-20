@@ -22,7 +22,7 @@
 Translated <a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling article</a> by Ramon van der Winkel.</p>
 
 <p><em>2014-05-14</em><br />
-Translated <a href="/articles/interrupts.php">interrupts article</a> by Ramon van der Winkel.</p>
+Translated <a href="/articles/interrupts.php">Interrupts article</a> by Ramon van der Winkel.</p>
 
 <p><em>2014-05-10</em><br />
 Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>
@@ -34,7 +34,7 @@ transscription</a>, and some clean-up.</p>
 
 <p><em>2014-02-08</em><br />
 Added link to Eugeny Brychkov’s excellent
-<a href="/resources/#v9938">v9938 application manual
+<a href="/resources/#v9938">V9938 application manual
 transscription</a>.</p>
 
 <p><em>2013-01-13</em><br />

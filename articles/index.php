@@ -47,6 +47,7 @@
     <li class="map"><a href="/articles/keymatrix.php">Keyboard matrices</a></li>
     <li class="map"><a href="/articles/psg_sample.php">Playing samples on the PSG</a></li>
     <li class="map"><a href="/articles/interrupts.php">Interrupts</a> · MSX Computer Magazine 51 (<a href="http://www.msxcomputermagazine.nl/archief/bladen/msx_computer_magazine_51.pdf" hreflang="nl">read</a>)</li>
+    <li class="map"><a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a></li>
     </ul>
   </li>
 <li id="external">External articles (non-MAP)

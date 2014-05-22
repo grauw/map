@@ -44,11 +44,6 @@ transscription</a>.</p>
 Added an English translation of the MSX Datapack Vol. 3’s
 <a href="/resources/midi/msx-midi.php">MSX-MIDI</a> documentation.</p>
 
-<p><em>2009-08-23</em><br />
-Added “<a href="/articles/scrolling.php">A guide to scrolling game
-engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit
-division routine</a> 120 T-states faster, thanks to Juha N.</p>
-
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->
 </div>

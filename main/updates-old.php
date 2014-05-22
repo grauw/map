@@ -14,6 +14,11 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2009-08-23</em><br />
+Added “<a href="/articles/scrolling.php">A guide to scrolling game
+engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit
+division routine</a> 120 T-states faster, thanks to Juha N.</p>
+
 <p><em>2009-03-27</em><br />
 Added Zemina memory extensions to the <a href="/resources/msx_io_ports.php">I/O ports overview</a> and
 added link to Cronos’s <a href="http://www.hqunix.com/wordpress/?page_id=554">manual scan / translation</a>,

@@ -46,7 +46,7 @@ VDP_GetVersion:
     ret
 </pre>
 
-<p>The TMS9918A has no VDP ID, so we use a different way to detect it:</p>
+<p>The TMS9918A has no VDP ID, so we use a different way to detect it…</p>
 
 <pre>;
 ; Test if the VDP is a TMS9918A.
@@ -82,8 +82,8 @@ VDP_IsTMS9918A:
     ret
 </pre>
 
-<p>Another version that’s faster on the V9938 because it doesn’t need to wait
-for the vblank interrupt:</p>
+<p>Another version of that previous routine. It’s faster on the V99X8 because
+it doesn’t need to wait for the vertical blanking interrupt.</p>
 
 <pre>;
 ; Test if the VDP is a TMS9918A.

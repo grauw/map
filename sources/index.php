@@ -22,6 +22,7 @@
   <li id="code_vdp">VDP routines
     <ul>
     <li class="map"><a href="/sources/docopy.php">Execute a VDP command</a></li>
+    <li class="map"><a href="/sources/vdp_detection.php">Detect VDP version</a></li>
     <li class="map"><a href="/sources/vdp_rout.php">A shitload of VDP routines</a></li>
     </ul>
   </li>

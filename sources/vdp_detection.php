@@ -19,7 +19,7 @@
 <pre>;
 ; Detect VDP version
 ;
-; a <- 0: TMS9918A, 1: V9938, 2: V9958, x: VDP ID
+; a &lt;- 0: TMS9918A, 1: V9938, 2: V9958, x: VDP ID
 ;
 VDP_GetVersion:
     call VDP_IsTMS9918A
@@ -57,7 +57,7 @@ VDP_GetVersion:
 ; (VR, vertical retrace flag) to be set as well. The TMS9918A has only one
 ; status register, so bit 6 (5S, 5th sprite flag) will return 0 in stead.
 ;
-; f <- z: TMS9918A, nz: V99X8
+; f &lt;- z: TMS9918A, nz: V99X8
 ;
 VDP_IsTMS9918A:
     di
@@ -97,7 +97,7 @@ for the vblank interrupt:</p>
 ; high, which is the vertical blanking interrupt flag on the TMS9918A and the
 ; TR flag on the V9938 which will remain 0 after we’ve reset it.
 ;
-; f <- z: TMS9918A, nz: V99X8
+; f &lt;- z: TMS9918A, nz: V99X8
 ;
 VDP_IsTMS9918A: PROC
     ld a,7

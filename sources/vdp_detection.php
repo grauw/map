@@ -22,27 +22,27 @@
 ; a &lt;- 0: TMS9918A, 1: V9938, 2: V9958, x: VDP ID
 ;
 VDP_GetVersion:
-    call VDP_IsTMS9918A
+    call VDP_IsTMS9918A  ; use a different way to detect TMS9918A
     ret z
-    ld a,1
+    ld a,1               ; select s#1
     di
     out (99H),a
     ld a,15 + 128
     out (99H),a
     nop
     nop
-    in a,(99H)
-    and 00111110B
+    in a,(99H)           ; read s#1
+    and 00111110B        ; get VDP ID
     rrca
     ex af,af'
-    xor a
+    xor a                ; select s#0 as required by BIOS
     out (99H),a
     ld a,15 + 128
     ei
     out (99H),a
     ex af,af'
-    ret nz
-    inc a
+    ret nz               ; return VDP ID for V9958 or higher
+    inc a                ; return 1 for V9938
     ret
 </pre>
 
@@ -61,24 +61,24 @@ VDP_GetVersion:
 ;
 VDP_IsTMS9918A:
     di
-    in a,(99H)
+    in a,(99H)           ; read s#0
     and a
-    jp p,VDP_IsTMS9918A
-    ld a,2
+    jp p,VDP_IsTMS9918A  ; wait until interrupt flag is set
+    ld a,2               ; select s#2 on V9938
     out (99H),a
     ld a,15 + 128
     out (99H),a
     nop
     nop
-    in a,(99H)
+    in a,(99H)           ; read s#2 / s#0
     ex af,af'
-    xor a
+    xor a                ; select s#0 as required by BIOS
     out (99H),a
     ld a,15 + 128
     ei
     out (99H),a
     ex af,af'
-    and 01000000B
+    and 01000000B        ; check if bit 6 was 0 (s#0 5S) or 1 (s#2 VR)
     ret
 </pre>
 
@@ -101,29 +101,29 @@ checks the horizontal blanking flag as well.</p>
 ; f &lt;- z: TMS9918A, nz: V99X8
 ;
 VDP_IsTMS9918A: PROC
-    ld a,7
+    ld a,7               ; select s#7 on V9938
     di
     out (99H),a
     ld a,15 + 128
     out (99H),a
     nop
     nop
-    in a,(99H)  ; reset TR flag if it was set
-    ld a,2
+    in a,(99H)           ; reset TR flag if it was set
+    ld a,2               ; select s#2 on V9938
     out (99H),a
     ld a,15 + 128
     out (99H),a
     nop
     nop
 VDP_IsTMS9918A_Loop:
-    in a,(99H)
+    in a,(99H)           ; read s#2 / s#0
     and 11100000B
     add a,a
-    jp nz,VDP_IsTMS9918A_Done
-    jp nc,VDP_IsTMS9918A_Loop
+    jp nz,VDP_IsTMS9918A_Done  ; bits 5 or 6: s#2 VR or HR flags
+    jp nc,VDP_IsTMS9918A_Loop  ; bit 7: s#0 interrupt flag
 VDP_IsTMS9918A_Done:
     ex af,af'
-    xor a
+    xor a                ; select s#0 as required by BIOS
     out (99H),a
     ld a,15 + 128
     ei

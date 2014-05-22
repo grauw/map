@@ -82,8 +82,9 @@ VDP_IsTMS9918A:
     ret
 </pre>
 
-<p>Another version of that previous routine. It’s faster on the V99X8 because
-it doesn’t need to wait for the vertical blanking interrupt.</p>
+<p>Another version of that previous routine. This one’s faster on the V9938 and
+V9958 because it doesn’t need to wait for the vertical blanking interrupt, and
+checks the horizontal blanking flag as well.</p>
 
 <pre>;
 ; Test if the VDP is a TMS9918A.

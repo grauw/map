@@ -82,56 +82,6 @@ VDP_IsTMS9918A:
     ret
 </pre>
 
-<p>Another version of that previous routine. This one’s faster on the V9938 and
-V9958 because it doesn’t need to wait for the vertical blanking interrupt, and
-checks the horizontal blanking flag as well.</p>
-
-<pre>;
-; Test if the VDP is a TMS9918A.
-;
-; The VDP ID number was only introduced in the V9938, so we have to use a
-; different method to detect the TMS9918A. In V9938 status register 2, bits 5
-; and 6 (HR and VR) get set periodically, whereas the TMS9918A has only one
-; status register whose bits 5 and 6 (5S and C) remain zero as long as we don’t
-; show any sprites. So, we simply wait for bits 5 or 6 to go high and we know
-; the VDP is a V9938 or higher. To not wait forever, we stop when bit 7 goes
-; high, which is the vertical blanking interrupt flag on the TMS9918A and the
-; TR flag on the V9938 which will remain 0 after we’ve reset it.
-;
-; f &lt;- z: TMS9918A, nz: V99X8
-;
-VDP_IsTMS9918A: PROC
-    ld a,7               ; select s#7 on V9938
-    di
-    out (99H),a
-    ld a,15 + 128
-    out (99H),a
-    nop
-    nop
-    in a,(99H)           ; reset TR flag if it was set
-    ld a,2               ; select s#2 on V9938
-    out (99H),a
-    ld a,15 + 128
-    out (99H),a
-    nop
-    nop
-VDP_IsTMS9918A_Loop:
-    in a,(99H)           ; read s#2 / s#0
-    and 11100000B
-    add a,a
-    jp nz,VDP_IsTMS9918A_Done  ; bits 5 or 6: s#2 VR or HR flags
-    jp nc,VDP_IsTMS9918A_Loop  ; bit 7: s#0 interrupt flag
-VDP_IsTMS9918A_Done:
-    ex af,af'
-    xor a                ; select s#0 as required by BIOS
-    out (99H),a
-    ld a,15 + 128
-    ei
-    out (99H),a
-    ex af,af'
-    ret
-</pre>
-
 
 
 

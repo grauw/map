@@ -165,7 +165,9 @@ information, feel free to send us an email.</p>
   <li id="diskctl">Disk controllers
     <ul>
     <li><a href="/resources/disk/westerndigital_wd279x02.pdf">Western Digital WD2793-02 FDC</a> · used in most MSX2’s</li>
-    <li><a href="/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a>  · used in Panasonic MSX computers</li>
+    <li><a href="/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a> · used in Panasonic MSX computers</li>
+    <li><a href="/resources/disk/mitsubishi_m5w1793-02p.pdf">Mitsubishi M5W1793-02P</a> · used in Yamaha FD-051</li>
+    <li><a href="/resources/disk/fujitsu_mb8876a.pdf">Fujitsu MB8877A</a> · used in Sanyo MFD-001, Victor HC90-HC95, SVI, compatible with 1793-02</li>
     <li><a href="/resources/disk/IDETECH.TXT">Sunrise IDE interface technical information</a></li>
     <li><a href="/resources/disk/IDESYS.TXT">Sunrise IDE interface technical system documentation</a></li>
     <li><a href="/resources/disk/novaxis-scsi.pdf">Novaxis SCSI interface manual</a></li>

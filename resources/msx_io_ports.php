@@ -264,7 +264,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#F5</td>
-  <td>System control</td>
+  <td>System control (for Kanji ROM selection, see <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td>
 </tr>
 <tr>
   <td>#F6</td>

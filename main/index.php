@@ -18,6 +18,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-05-29</em><br />
+Added <a href="/resources/hbi55.php">Sony HBI-55 / Yamaha UDC-01</a> 4kB SRAM
+data cartridge documentation.</p>
+
 <p><em>2014-05-22</em><br />
 Added <a href="/sources/vdp_detection.php">VDP version detection</a> source code.</p>
 

@@ -34,20 +34,20 @@ The HBI-55 has a PPI of its own to access the SRAM at I/O ports 0B0H-0B3H.</p>
 <p>Here’s a little block diagram:</p>
 
 <pre>   IRQ and A2-A7    A0-A1 RD/WR  D0-D7
-  ┌─────────────┐    | |   | |  ||||||||
-  |Adresdecoding├─┐  | |   | |  ||||||||
-  └─────────────┘ |  | |   | |  ||||||||
+  ┌─────────────┐    │ │   │ │  ││││││││
+  │Adresdecoding├─┐  │ │   │ │  ││││││││
+  └─────────────┘ │  │ │   │ │  ││││││││
   ┌───────────────┴──┴─┴───┴─┴──┴┴┴┴┴┴┴┴─┐
-  |8255 Programmable Peripheral Interface|
+  │8255 Programmable Peripheral Interface│
   └───┬┬┬┬┬┬┬┬────┬┬┬┬┬┬┬┬────┬┬┬┬┬┬┬┬───┘
-     C||||||||   B||  ||||   A||||||||
-      ||||||||    ||  |||└───┐||||||||
-      ||||||||    ||  ||└───┐|||||||||
-      ||||||||    ||  |└───┐||||||||||
-      ||||||||    ||  └───┐|||||||||||
+     C││││││││   B││  ││││   A││││││││
+      ││││││││    ││  │││└───┐││││││││
+      ││││││││    ││  ││└───┐│││││││││
+      ││││││││    ││  │└───┐││││││││││
+      ││││││││    ││  └───┐│││││││││││
     ┌─┴┴┴┴┴┴┴┴────┴┴──────┴┴┴┴┴┴┴┴┴┴┴┴─┐
-    |  D0-D7   W/R  EN        A0-A11   |
-    |       4 Kilobyte static RAM      |
+    │  D0-D7   W/R  EN        A0-A11   │
+    │       4 Kilobyte static RAM      │
     └──────────────────────────────────┘</pre>
 
 <p>The PPI’s three ports and control register are set up as follows:</p>

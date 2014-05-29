@@ -184,7 +184,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#B0-B3</td>
-  <td>Sony HBI-55 data cartridge (4kB SRAM) <em>(‘External memory’? 8255??)</em></td>
+  <td><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01
+      Data Memory</a> (4kB SRAM, 8255 PPI)</td>
 </tr>
 <tr>
   <td>#B4-B5</td>

@@ -107,6 +107,8 @@ write again, this time you’re instructing the SRAM itself.</p>
 260 PRINT "Data: &amp;H"+HEX$(DT)
 270 END</pre>
 
+<p class="signed">Grauw</p>
+
 
 
 

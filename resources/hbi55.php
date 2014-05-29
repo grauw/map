@@ -65,18 +65,17 @@ bit 6: Set to 1<br />bit 7: Read (0) or write (1)</td></tr>
 </tbody>
 </table>
 
-<p>First, write a value to the control register at port 0B3H to configure the
-PPI for reading or for writing. Output 80H to write, or 89H to read. For more
-details about what this does exactly, consult the <a href="/resources/#ppi">PPI
-documentation</a>.</p>
+<p>First, configure the PPI for reading or for writing using the control
+register (0B3H). Output 89H to read, or 80H to write. For more details about
+these values, consult the <a href="/resources/#ppi">PPI documentation</a>.</p>
 
 <p>Next, set the 12-bit address. Write the lowest eight address bits to port
-0B0H, and the highest four address bits to bits 0-3 of port 0B1H. Additionally
-set bit 6 of the second value to 1, and set bit 7 to indicate whether to read
-(1) or to write (0). That’s right, you need to indicate whether to read or write
-again, this time you’re instructing the SRAM itself.</p>
+A (0B0H), and the highest four address bits to bits 0-3 of port B (0B1H).
+Additionally, set bit 6 of port B to 1, and set bit 7 to indicate whether to
+read (1) or to write (0). That’s right, you need to indicate whether to read or
+write again, this time you’re instructing the SRAM itself.</p>
 
-<p>Finally, read or write the value through port 0B2H.</p>
+<p>Finally, read or write the value through port C (0B2H).</p>
 
 <p>Here’s some example BASIC code:</p>
 

@@ -57,14 +57,11 @@ The HBI-55 has a PPI of its own to access the SRAM at I/O ports 0B0H-0B3H.</p>
 <tr><th>Port</th><th>Register</th><th>Value</th></tr>
 </thead>
 <tbody>
-<tr><td>0B0H</td><td>Port A</td><td>Address bits 0-7</td>
+<tr><td>0B0H</td><td>Port A</td><td>Address bits 0-7</td></tr>
 <tr><td>0B1H</td><td>Port B</td><td>bit 0-3: Address bits 8-11<br />
-bit 6: Set to 1<br />
-bit 7: Read (0) or write (1)</td>
-<tr><td>0B2H</td><td>Port C</td><td>Data read / write</td>
-<tr><td>0B3H</td><td>Control</td><td>
-89H: Read<br />
-80H: Write</td>
+bit 6: Set to 1<br />bit 7: Read (0) or write (1)</td></tr>
+<tr><td>0B2H</td><td>Port C</td><td>Data read / write</td></tr>
+<tr><td>0B3H</td><td>Control</td><td>89H: Read<br />80H: Write</td></tr>
 </tbody>
 </table>
 

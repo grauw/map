@@ -185,7 +185,7 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#B0-B3</td>
   <td><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01
-      Data Memory</a> (4kB SRAM, 8255 PPI)</td>
+      Data Memory</a> (4kB SRAM)</td>
 </tr>
 <tr>
   <td>#B4-B5</td>

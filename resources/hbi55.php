@@ -88,24 +88,24 @@ again, this time you’re instructing the SRAM itself.</p>
 60 INPUT "Adress";AD
 70 INPUT "Data";DT
 80 ' Control register
-90 OUT &HB3,&H80
+90 OUT &amp;HB3,&amp;H80
 100 ' Adress low
-110 OUT &HB0,AD AND &B11111111
+110 OUT &amp;HB0,AD AND &amp;B11111111
 120 ' Adress high
-130 OUT &HB1,(AD\256) OR &B01000000
+130 OUT &amp;HB1,(AD\256) OR &amp;B01000000
 140 ' Data
-150 OUT &HB2,DT
+150 OUT &amp;HB2,DT
 160 ' Reading
 170 INPUT "Adress";AD
 180 ' Control register
-190 OUT &HB3,&H89
+190 OUT &amp;HB3,&amp;H89
 200 ' Adress low
-210 OUT &HB0,AD AND &B11111111
+210 OUT &amp;HB0,AD AND &amp;B11111111
 220 ' Adress high
-230 OUT &HB1,(AD\256) OR &B11000000
+230 OUT &amp;HB1,(AD\256) OR &amp;B11000000
 240 ' Read data
-250 DT=INP(&HB2)
-260 PRINT "Data: &H"+HEX$(DT)
+250 DT=INP(&amp;HB2)
+260 PRINT "Data: &amp;H"+HEX$(DT)
 270 END</pre>
 
 

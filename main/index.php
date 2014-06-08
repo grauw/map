@@ -97,9 +97,9 @@ read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
 <h2>Comments</h2>
 
 <p>If you would like to see something added to this site, or if you have any
-comments about the content, feel free to email us about it! It is a tough job to
-do this all by ourselves, and we can make mistakes, and we don’t always know
-what’s best either. If you want to submit something for publication on this
+comments about the content, feel free to email us about it! We can make
+mistakes, and we don’t always know what’s best either, so any feedback is
+appreciated. If you want to submit something for publication on this
 site, you can email it to us as well. Our contact address is
 <g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email
 link)</g:insertMail>.</p>

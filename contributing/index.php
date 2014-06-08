@@ -1,6 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/scripts/functions.php'; addHTTPHeader(); ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
 <head>
   <title>Contributing to the MAP - MSX Assembly Page</title>
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />

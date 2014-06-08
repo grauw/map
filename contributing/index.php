@@ -8,16 +8,25 @@
   <meta name="description" content="The MSX Assembly Page is a central source for MSX programming information in various languages, though mainly assembly. It contains articles on several topics, programming resources, sources, software downloads and links to some other good MSX programming sites." />
   <meta name="keywords" content="MSX, Assembly, Basic, programming, byte, bit, word, ld, jp, fast loop, keyboard, samples, multiplication, division, RAM, ROM, BIOS, SUBROM, MSX-DOS, I/O, Port, Z80, R800, VDP, TMS9918, V9938, V9958, V9990, Graphics9000, Gfx9000, PSG, AY-3-8910, SCC, MSX-Music, FM-PAC, OPLL, YM2413, MSX-Audio, Music Module, OPL1, Y8950, Moonsound, OPL4, MSX Engine, S3527, S1985, S1990, Sunrise, IDE, Novaxis, SCSI, PPI, RTC, MemMan" />
   <?php addStyles(); ?>
+  <script type="text/javascript" src="/js/email.js"></script>
 </head>
 <body>
 <?php addHeader(); ?>
 
 <h1>Contributing to the MAP</h1>
 
+<p>If you would like to see something added to this site, or if you have any
+comments about the content, feel free to email us about it! We can make
+mistakes, and we don’t always know what’s best either, so any feedback is
+appreciated. If you want to submit something for publication on this
+site, you can email it to us as well. Our contact address is
+<g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email
+link)</g:insertMail>.</p>
+
 <p>If you want to contribute more directly to the MAP like write articles about
 a certain subject, or digitize some documents, or making editorial changes
-yourself (which usually expedites the process of getting it online :)), we’d
-really appreciate it.</p>
+yourself, we’d really appreciate it. Submitting changes to the MAP’s source code
+usually expedites the process of getting things online :).</p>
 
 <p>The <a href="https://bitbucket.org/grauw/map">MAP source code</a> is stored
 in a <a href="http://www.selenic.com/mercurial/">Mercurial</a> repository. There

@@ -10,7 +10,7 @@
   <?php addStyles(); ?>
   <script type="text/javascript" src="/js/email.js"></script>
 </head>
-<body>
+<body onload="putEmail();">
 <?php addHeader(); ?>
 
 <h1>Contributing to the MAP</h1>

@@ -470,7 +470,7 @@ Registers: All
 <pre>
 Address  : #009C
 Function : Tests the status of the keyboard buffer
-Output   : Z-flag set if buffer is filled
+Output   : Z-flag set if buffer is empty, otherwise not set
 Registers: AF
 </pre>
 

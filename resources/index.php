@@ -186,6 +186,7 @@ information, feel free to send us an email.</p>
     <li id="midi">MIDI
       <ul>
       <li class="map"><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> · MSX Datapack Vol. 3 Section 5, English</li>
+      <li class="map"><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · SFG-05 MIDI UART</li>
       </ul>
     </li>
     </ul>

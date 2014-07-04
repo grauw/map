@@ -10,7 +10,7 @@
 <body>
 <?php addHeader(); ?>
 
-<h1>Yamaha YM2148, SFG-05 MIDI UART</h1>
+<h1>Yamaha YM2148, SFG-05 MIDI interface</h1>
 
 <p>The Yamaha YM2148 is used as the MIDI UART for the SFG-05 sound module. In
 this module it works in tandem with the YM2151 “OPM” sound chip. The YM2148 and

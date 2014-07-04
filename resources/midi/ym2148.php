@@ -164,7 +164,7 @@ details.</p>
 
 <p>So, do not feel obliged to use the IM2 mode with the SFG-05 just because it has
 the capability to do it. For first-time users, I would recommend to start with
-normal IM0 mode interrupt handling, and only move to IM2 mode when there is a
+normal IM1 mode interrupt handling, and only move to IM2 mode when there is a
 need for it.</p>
 
 

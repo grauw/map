@@ -14,6 +14,15 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2014-02-08</em><br />
+Added link to Eugeny Brychkov’s excellent
+<a href="/resources/#v9938">V9938 application manual
+transscription</a>.</p>
+
+<p><em>2013-01-13</em><br />
+Added an English translation of the MSX Datapack Vol. 3’s
+<a href="/resources/midi/msx-midi.php">MSX-MIDI</a> documentation.</p>
+
 <p><em>2009-08-23</em><br />
 Added “<a href="/articles/scrolling.php">A guide to scrolling game
 engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit

@@ -94,7 +94,7 @@ value so that you can only change the bits you need to change.</p>
 
 <h2 id="detection">Detecting the SFG-05</h2>
 
-<p>When inserted in the special expansion module slot in Yamaha’s CX5M and
+<p>When inserted in the special side expansion slot in Yamaha’s CX5 and
 YIS503-series computers, the SFG-05 will always be present in slot 3-3. However,
 the SFG-05 can also be inserted into regular cartridge slots with the
 Yamaha UCN-01 Unit Connector adapter, so you should not make any assumptions

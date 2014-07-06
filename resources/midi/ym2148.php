@@ -95,7 +95,8 @@ documentation</a>.</p>
 
 <p>Note that some bits act as commands when they are set (notably, bit 4),
 but others are regular flags. Therefore, you will want to mirror the current
-value so that you can only change the bits you need to change.</p>
+value so that you can only change the bits you need to change. You need to
+mirror it because you can’t read back the value you’ve written.</p>
 
 
 <h2 id="detection">Detecting the SFG-01 and SFG-05</h2>

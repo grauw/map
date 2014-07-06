@@ -186,7 +186,7 @@ information, feel free to send us an email.</p>
     <li id="midi">MIDI
       <ul>
       <li class="map"><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> · MSX Datapack Vol. 3 Section 5, English</li>
-      <li class="map"><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · SFG-01 / SFG-05 MIDI interface</li>
+      <li class="map"><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · FM Sound Synthesizer Unit MIDI interface</li>
       </ul>
     </li>
     </ul>

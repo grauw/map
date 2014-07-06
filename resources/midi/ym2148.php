@@ -140,6 +140,12 @@ flag is set, it means something went wrong during transmission of the value.
 If one of these errors occur, you can clear the flags by setting the clear error
 flags bit in the command register (beware to keep the other bits intact).</p>
 
+<p>Note that the error flags themselves do not raise interrupts, so clearing
+them is not necessary. You could even choose to ignore them entirely. When an
+overflow error occurs, the buffer will contain the new byte. When a framing
+error occurs, the badly received byte will most likely not be placed in the
+buffer (needs to be confirmed).</p>
+
 <p>The YM2148 can also be configured to generate interrupts when a value has
 been received or when it’s ready to send.</p>
 

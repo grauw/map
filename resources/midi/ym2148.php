@@ -14,8 +14,8 @@
 
 <p>The Yamaha YM2148 is used as the MIDI UART for the SFG-01 and SFG-05 FM Sound
 Synthesizer Unit modules. In these modules it works in tandem with the YM2151
-“OPM” sound chip. The YM2148 and YM2151 are accessed through memory mapped I/O
-at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
+“OPM” sound chip. The YM2148 and YM2151 are accessed through <em>memory mapped
+I/O</em> at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
 
 <table>
 <thead>
@@ -33,6 +33,12 @@ at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
 <tr><td>3FF6H</td><td>W</td><td>MIDI UART command register</td></tr>
 </tbody>
 </table>
+
+<p>Note that these are not regular memory locations; the values you read and
+write are not stored. They are dynamic and behave like I/O ports do. Reading an
+address can access a different function than writing to it. For example writing
+to 3FF6H configures the UART, but reading from 3FF6H will not give you the
+current configuration; in stead it gives status information.</p>
 
 <p>In this document we will focus on the YM2148 MIDI UART’s registers. For more
 information about the FM registers, refer to the <a href="/resources/#opm">OPM

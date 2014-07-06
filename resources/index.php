@@ -136,7 +136,7 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>
-    <li id="opm">SFG-01 / SFG-05 (Yamaha CX5M’s FM sound unit)
+    <li id="opm">SFG-01 / SFG-05 (Yamaha FM Sound Synthesizer Unit)
       <ul>
       <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 (OPM) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 (OPM) datasheet</a></li>

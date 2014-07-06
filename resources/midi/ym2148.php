@@ -81,6 +81,8 @@ documentation</a>.</p>
 <tr><td>bit 5</td><td>Framing error flag (1 = error occurred)</td></tr>
 </table>
 
+<p>The error flags only apply to incoming data.</p>
+
 
 <h3 id="command_register">Command register (3FF6H, write)</h3>
 

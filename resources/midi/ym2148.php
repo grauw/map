@@ -67,7 +67,7 @@ documentation</a>.</p>
 <p>Data buffer read / write port.</p>
 
 <p>There are separate buffers for reading and writing. The buffer size is
-1 byte. <em>Note: this needs confirmation.</em></p>
+1 byte.</p>
 
 
 <h3 id="status_register">Status register (3FF6H, read)</h3>

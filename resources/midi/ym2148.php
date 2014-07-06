@@ -87,9 +87,9 @@ documentation</a>.</p>
 <p>Configures the UART.</p>
 
 <table>
-<tr><td>bit 0</td><td>Must be set to 1</td></tr>
+<tr><td>bit 0</td><td>Tx enable (1 = enabled)</td></tr>
 <tr><td>bit 1</td><td>TxRDY interrupt enable (1 = enabled)</td></tr>
-<tr><td>bit 2</td><td>Must be set to 1</td></tr>
+<tr><td>bit 2</td><td>Rx enable (1 = enabled)</td></tr>
 <tr><td>bit 3</td><td>RxRDY interrupt enable (1 = enabled)</td></tr>
 <tr><td>bit 4</td><td>Clear error flags command (1 = clear)</td></tr>
 <tr><td>bit 5</td><td>Unknown</td></tr>

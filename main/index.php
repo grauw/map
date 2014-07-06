@@ -20,7 +20,7 @@
 
 <p><em>2014-07-04</em><br />
 Added <a href="/resources/midi/ym2148.php">Yamaha YM2148</a> documentation. This
-is the SFG-05’s MIDI interface.</p>
+is the Yamaha FM Sound Synthesizer Unit’s MIDI interface.</p>
 
 <p><em>2014-05-29</em><br />
 Added <a href="/resources/hbi55.php">Sony HBI-55 / Yamaha UDC-01</a> 4kB SRAM

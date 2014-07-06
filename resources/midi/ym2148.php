@@ -10,12 +10,12 @@
 <body>
 <?php addHeader(); ?>
 
-<h1>Yamaha YM2148, SFG-05 MIDI interface</h1>
+<h1>Yamaha YM2148, SFG-01 and SFG-05 MIDI interface</h1>
 
-<p>The Yamaha YM2148 is used as the MIDI UART for the SFG-05 sound module. In
-this module it works in tandem with the YM2151 “OPM” sound chip. The YM2148 and
-YM2151 are accessed through memory mapped I/O at address 3FF0H-3FF6H of the
-SFG-05 ROM. More specifically:</p>
+<p>The Yamaha YM2148 is used as the MIDI UART for the SFG-01 and SFG-05 FM Sound
+Synthesizer Unit modules. In these modules it works in tandem with the YM2151
+“OPM” sound chip. The YM2148 and YM2151 are accessed through memory mapped I/O
+at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
 
 <table>
 <thead>
@@ -37,7 +37,7 @@ SFG-05 ROM. More specifically:</p>
 <p>In this document we will focus on the YM2148 MIDI UART’s registers. For more
 information about the FM registers, refer to the <a href="/resources/#opm">OPM
 documentation</a>. For more information about the Yamaha external keyboard I/O
-register, refer to <a href="http://www.cx5m.net/fmunit.htm">NYYRIKKI’s SFG-05
+register, refer to <a href="http://www.cx5m.net/fmunit.htm">NYYRIKKI’s
 documentation</a>.</p>
 
 <h2 id="registers">Register overview</h2>
@@ -92,23 +92,21 @@ but others are regular flags. Therefore, you will want to mirror the current
 value so that you can only change the bits you need to change.</p>
 
 
-<h2 id="detection">Detecting the SFG-05</h2>
+<h2 id="detection">Detecting the SFG-01 and SFG-05</h2>
 
 <p>When inserted in the special side expansion slot in Yamaha MSX computers,
-the SFG-05 will always be present in slot 3-3. However,
-the SFG-05 can also be inserted into regular cartridge slots with the
+the SFG-01/05 will always be present in slot 3-3. However,
+it can also be inserted into regular cartridge slots with the
 Yamaha UCN-01 Unit Connector adapter, so you should not make any assumptions
 about the slot it is in. In stead, you need to search for it.</p>
 
 <p>Like any search routine, you need to iterate through all slots and subslots
-when they’re expanded, and look for the identification string. For the SFG-05,
-this is the string “MCHFM0” at address 80H. When found, check addres 88H for
-a value of 10H or higher to confirm it is an SFG-05 rather than an SFG-01.
-Consult the <a href="/resources/sound/yamaha_sfg05_mbios.pdf">MBIOS
+when they’re expanded, and look for the identification string “MCHFM0” at
+address 80H. Consult the <a href="/resources/sound/yamaha_sfg05_mbios.pdf">MBIOS
 documentation</a> section 1-5 for more details.</p>
 
-<p><a href="http://www.cx5m.net/fmunit.htm">NYYRIKKI’s SFG-05 documentation</a>
-provides an example detection routine.</p> 
+<p><a href="http://www.cx5m.net/fmunit.htm">NYYRIKKI’s FM-Sound Synthesizer Unit
+documentation</a> provides an example detection routine.</p>
 
 
 <h2 id="usage">Initialising and using the YM2148 MIDI UART</h2>
@@ -162,10 +160,9 @@ documentation is likely incomplete; it seems that command register bits 5 and 6
 are involved, but some further investigation is needed to figure out the
 details.</p>
 
-<p>So, do not feel obliged to use the IM2 mode with the SFG-05 just because it has
-the capability to do it. For first-time users, I would recommend to start with
-normal IM1 mode interrupt handling, and only move to IM2 mode when there is a
-need for it.</p>
+<p>So, do not feel obliged to use the IM2 mode just because it supports it.
+For first-time users, I would recommend to start with normal IM1 mode interrupt
+handling, and only move to IM2 mode when there is a need for it.</p>
 
 
 <p class="signed">Grauw</p>

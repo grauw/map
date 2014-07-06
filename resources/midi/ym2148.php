@@ -72,6 +72,8 @@ documentation</a>.</p>
 
 <h3 id="status_register">Status register (3FF6H, read)</h3>
 
+<p>Returns UART status information.</p>
+
 <table>
 <tr><td>bit 0</td><td>TxRDY (1 = Tx ready)</td></tr>
 <tr><td>bit 1</td><td>RxRDY (1 = Rx ready)</td></tr>
@@ -81,6 +83,8 @@ documentation</a>.</p>
 
 
 <h3 id="command_register">Command register (3FF6H, write)</h3>
+
+<p>Configures the UART.</p>
 
 <table>
 <tr><td>bit 0</td><td>Must be set to 1</td></tr>

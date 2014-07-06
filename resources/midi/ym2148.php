@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>Yamaha YM2148</title>
+  <title>Yamaha YM2148 MIDI interface</title>
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <?php addStyles(); ?>
@@ -10,7 +10,7 @@
 <body>
 <?php addHeader(); ?>
 
-<h1>Yamaha YM2148, SFG-01 and SFG-05 MIDI interface</h1>
+<h1>Yamaha YM2148, FM Sound Synthesizer Unit MIDI interface</h1>
 
 <p>The Yamaha YM2148 is used as the MIDI UART for the SFG-01 and SFG-05 FM Sound
 Synthesizer Unit modules. In these modules it works in tandem with the YM2151

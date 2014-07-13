@@ -8,10 +8,20 @@
   <script type="text/javascript" src="/js/tablesort.js" defer="defer"></script>
   <?php addStyles(); ?>
   <style type="text/css">
-table.instrset td:nth-child(5) {
+table#instrset td:nth-child(5) {
 	font-family: "Courier New", Courier, mono;
 }
   </style>
+  <script type="text/javascript">
+function filter(query) {
+	var upperQuery = query.toUpperCase();
+	var rows = document.getElementById("instrset").rows;
+	for (var i = 1; i &lt; rows.length; i++) {
+		var match = rows[i].textContent.toUpperCase().indexOf(upperQuery) != -1;
+		rows[i].style.display = match ? "table-row" : "none";
+	}
+}
+  </script>
 </head>
 <body id="msxasm" onload="registerSort();">
 <?php addHeader(); ?>
@@ -54,7 +64,9 @@ waits are inserted like this:</p>
 
 <p>Well, here's the list:</p>
 
-<table class="instrset">
+<p>Filter: <input onkeyup="filter(this.value)" onchange="filter(this.value)"/></p>
+
+<table id="instrset">
 	<thead>
 		<tr>
 			<th g:sort="yes">Instruction</th>

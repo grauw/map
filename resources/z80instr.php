@@ -2581,6 +2581,7 @@ table.instrset td+td+td+td {
 		</tr>
 	</tbody>
 </table>
+
 <p>In this overview, the following variables were used:</p>
 
 <dl>

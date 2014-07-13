@@ -30,6 +30,7 @@ table.instrset td+td+td+td {
 </ul>
 
 <p>Examples:</p>
+
 <ul>
 <li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes 5 (one more).</li>
 <li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it takes 14 (two more).</li>
@@ -37,13 +38,16 @@ table.instrset td+td+td+td {
 </ul>
 
 <p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
+
 <ul>
-	<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
+<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
 <li>In external RAM, 2 wait states are inserted.</li>
 <li>In ROM, 3 wait states are inserted.</li>
 <li>For every far memory fetch, additional wait states are inserted depending on the memory type.</li>
 </ul>
+
 <p>Well, here's the list:</p>
+
 <table class="instrset">
 	<thead>
 		<tr>

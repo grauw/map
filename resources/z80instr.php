@@ -32,37 +32,18 @@ function filter(query) {
 
 <p>This is an overview of the Z80 instruction set. Undocumented instructions are included (note that Sean Young wrote an <a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about them), and the R800 instructions MULUB and MULUW as well as R800 timing information.</p>
 
-<p><strong>Important note:</strong> the MSX standard requires so-called <dfn>M1
-wait cycles</dfn>. What happens is that the MSX engine adds one additional wait
-state to every M1 cycle (the first or first two cycles of an instruction). This
-is an important trait to know about if you want to do speed calculations. The M1
-waits are inserted like this:</p>
+<p>For Z80 timing calculations on MSX, you should refer to the Z80+M1 column
+which includes the M1 waits. For more information on additional waits, see the
+<a href="#waits">wait cycles</a> topic.</p>
 
 <ul>
-<li>Every instruction has 1 additional M1 wait state</li>
-<li>Instructions starting with a CB, DD, ED, FD, DDCB or DDFD opcode have two additional M1 wait states</li>
+	<li><a href="#instructionset">Instruction set</a></li>
+	<li><a href="#legend">Legend</a></li>
+	<li><a href="#waits">Wait cycles</a></li>
 </ul>
 
-<p>Examples:</p>
 
-<ul>
-<li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes 5 (one more).</li>
-<li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it takes 14 (two more).</li>
-<li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
-</ul>
-
-<p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
-
-<p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
-
-<ul>
-<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
-<li>In external RAM, 2 wait states are inserted.</li>
-<li>In ROM, 3 wait states are inserted.</li>
-<li>For every far memory fetch, additional wait states are inserted depending on the memory type.</li>
-</ul>
-
-<p>Well, here's the list:</p>
+<h2 id="instructionset">Instruction set</h2>
 
 <p>Filter: <input onkeyup="filter(this.value)" onchange="filter(this.value)"/></p>
 
@@ -2961,7 +2942,7 @@ waits are inserted like this:</p>
 	</tbody>
 </table>
 
-<p>In this overview, the following variables were used:</p>
+<h2 id="legend">Legend</h2>
 
 <dl>
 <dt>b</dt>
@@ -3088,6 +3069,39 @@ waits are inserted like this:</p>
 </table>
 </dd>
 </dl>
+
+
+<h2 id="waits">Wait cycles</h2>
+
+<p><strong>Important note:</strong> the MSX standard requires so-called <dfn>M1
+wait cycles</dfn>. What happens is that the MSX engine adds one additional wait
+state to every M1 cycle (the first or first two cycles of an instruction). This
+is an important trait to know about if you want to do speed calculations. The M1
+waits are inserted like this:</p>
+
+<ul>
+<li>Every instruction has 1 additional M1 wait state</li>
+<li>Instructions starting with a CB, DD, ED, FD, DDCB or DDFD opcode have two additional M1 wait states</li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+<li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes 5 (one more).</li>
+<li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it takes 14 (two more).</li>
+<li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
+</ul>
+
+<p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
+
+<p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
+
+<ul>
+<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
+<li>In external RAM, 2 wait states are inserted.</li>
+<li>In ROM, 3 wait states are inserted.</li>
+<li>For every far memory fetch, additional wait states are inserted depending on the memory type.</li>
+</ul>
 
 
 <p class="signed">Grauw</p>

@@ -15,7 +15,7 @@ table#instrset td:nth-child(5) {
   <script type="text/javascript">
 function filter(query) {
 	var upperQuery = query.toUpperCase();
-	var rows = document.getElementById("instrset").rows;
+	var rows = document.getElementById("instructiontable").rows;
 	for (var i = 1; i &lt; rows.length; i++) {
 		var match = rows[i].textContent.toUpperCase().indexOf(upperQuery) != -1;
 		rows[i].style.display = match ? "table-row" : "none";
@@ -66,7 +66,7 @@ waits are inserted like this:</p>
 
 <p>Filter: <input onkeyup="filter(this.value)" onchange="filter(this.value)"/></p>
 
-<table id="instrset">
+<table id="instructiontable">
 	<thead>
 		<tr>
 			<th g:sort="yes">Instruction</th>

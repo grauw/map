@@ -8,7 +8,7 @@
   <script type="text/javascript" src="/js/tablesort.js" defer="defer"></script>
   <?php addStyles(); ?>
   <style type="text/css">
-table.instrset td+td+td+td {
+table.instrset td:nth-child(5) {
 	font-family: "Courier New", Courier, mono;
 }
   </style>

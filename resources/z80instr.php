@@ -22,7 +22,11 @@ table.instrset td+td+td+td {
 
 <p>This is an overview of the Z80 instruction set. Undocumented instructions are included (note that Sean Young wrote an <a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about them), and the R800 instructions MULUB and MULUW as well as R800 timing information.</p>
 
-<p><strong>Important note:</strong> the timings in this list are <em>excluding</em> the so-called <dfn>M1 waits</dfn> specific to the MSX. What happens is that the MSX engine adds one additional wait state to every M1 cycle (the first or first two cycles of an instruction). This is an important trait to know about if you want to do speed calculations, for example. The M1 waits are inserted like this:</p>
+<p><strong>Important note:</strong> the MSX standard requires so-called <dfn>M1
+wait cycles</dfn>. What happens is that the MSX engine adds one additional wait
+state to every M1 cycle (the first or first two cycles of an instruction). This
+is an important trait to know about if you want to do speed calculations. The M1
+waits are inserted like this:</p>
 
 <ul>
 <li>Every instruction has 1 additional M1 wait state</li>
@@ -36,6 +40,8 @@ table.instrset td+td+td+td {
 <li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it takes 14 (two more).</li>
 <li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
 </ul>
+
+<p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
 
 <p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
 
@@ -53,6 +59,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<th g:sort="yes">Instruction</th>
 			<th g:sort="yes">Timing<br />Z80</th>
+			<th g:sort="yes">Timing<br />Z80+M1</th>
 			<th g:sort="yes">Timing<br />R800</th>
 			<th g:sort="yes">Opcode</th>
 			<th g:sort="yes">Size</th>
@@ -62,6 +69,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>8E</td>
 			<td>1</td>
@@ -69,6 +77,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 8E oo</td>
 			<td>3</td>
@@ -76,6 +85,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 8E oo</td>
 			<td>3</td>
@@ -83,6 +93,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>CE nn</td>
 			<td>2</td>
@@ -90,6 +101,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>88+r</td>
 			<td>1</td>
@@ -97,6 +109,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 88+p</td>
 			<td>2</td>
@@ -104,6 +117,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC A,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 88+q</td>
 			<td>2</td>
@@ -111,6 +125,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC HL,BC</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 4A</td>
 			<td>2</td>
@@ -118,6 +133,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC HL,DE</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 5A</td>
 			<td>2</td>
@@ -125,6 +141,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC HL,HL</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 6A</td>
 			<td>2</td>
@@ -132,6 +149,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADC HL,SP</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 7A</td>
 			<td>2</td>
@@ -139,6 +157,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>86</td>
 			<td>1</td>
@@ -146,6 +165,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 86 oo</td>
 			<td>3</td>
@@ -153,6 +173,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 86 oo</td>
 			<td>3</td>
@@ -160,6 +181,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>C6 nn</td>
 			<td>2</td>
@@ -167,6 +189,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>80+r</td>
 			<td>1</td>
@@ -174,6 +197,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 80+p</td>
 			<td>2</td>
@@ -181,6 +205,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD A,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 80+q</td>
 			<td>2</td>
@@ -188,6 +213,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD HL,BC</td>
 			<td>11</td>
+			<td>12</td>
 			<td>1</td>
 			<td>09</td>
 			<td>1</td>
@@ -195,6 +221,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD HL,DE</td>
 			<td>11</td>
+			<td>12</td>
 			<td>1</td>
 			<td>19</td>
 			<td>1</td>
@@ -202,6 +229,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD HL,HL</td>
 			<td>11</td>
+			<td>12</td>
 			<td>1</td>
 			<td>29</td>
 			<td>1</td>
@@ -209,6 +237,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD HL,SP</td>
 			<td>11</td>
+			<td>12</td>
 			<td>1</td>
 			<td>39</td>
 			<td>1</td>
@@ -216,6 +245,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IX,BC</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>DD 09</td>
 			<td>2</td>
@@ -223,6 +253,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IX,DE</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>DD 19</td>
 			<td>2</td>
@@ -230,6 +261,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IX,IX</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>DD 29</td>
 			<td>2</td>
@@ -237,6 +269,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IX,SP</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>DD 39</td>
 			<td>2</td>
@@ -244,6 +277,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IY,BC</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>FD 09</td>
 			<td>2</td>
@@ -251,6 +285,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IY,DE</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>FD 19</td>
 			<td>2</td>
@@ -258,6 +293,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IY,IY</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>FD 29</td>
 			<td>2</td>
@@ -265,6 +301,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>ADD IY,SP</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>FD 39</td>
 			<td>2</td>
@@ -272,6 +309,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND (HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>A6</td>
 			<td>1</td>
@@ -279,6 +317,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND (IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD A6 oo</td>
 			<td>3</td>
@@ -286,6 +325,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND (IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD A6 oo</td>
 			<td>3</td>
@@ -293,6 +333,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>E6 nn</td>
 			<td>2</td>
@@ -300,6 +341,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>A0+r</td>
 			<td>1</td>
@@ -307,6 +349,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD A0+p</td>
 			<td>2</td>
@@ -314,6 +357,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>AND IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD A0+q</td>
 			<td>2</td>
@@ -321,6 +365,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>BIT b,(HL)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>CB 46+8*b</td>
 			<td>2</td>
@@ -328,6 +373,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>BIT b,(IX+o)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>5</td>
 			<td>DD CB oo 46+8*b</td>
 			<td>4</td>
@@ -335,6 +381,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>BIT b,(IY+o)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>5</td>
 			<td>FD CB oo 46+8*b</td>
 			<td>4</td>
@@ -342,6 +389,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>BIT b,r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 40+8*b+r</td>
 			<td>2</td>
@@ -349,6 +397,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL nn</td>
 			<td>17</td>
+			<td>18</td>
 			<td>5</td>
 			<td>CD nn nn</td>
 			<td>3</td>
@@ -356,6 +405,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL C,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>DC nn nn</td>
 			<td>3</td>
@@ -363,6 +413,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL M,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>FC nn nn</td>
 			<td>3</td>
@@ -370,6 +421,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL NC,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>D4 nn nn</td>
 			<td>3</td>
@@ -377,6 +429,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL NZ,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>C4 nn nn</td>
 			<td>3</td>
@@ -384,6 +437,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL P,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>F4 nn nn</td>
 			<td>3</td>
@@ -391,6 +445,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL PE,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>EC nn nn</td>
 			<td>3</td>
@@ -398,6 +453,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL PO,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>E4 nn nn</td>
 			<td>3</td>
@@ -405,6 +461,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CALL Z,nn</td>
 			<td>17/10</td>
+			<td>18/11</td>
 			<td>5/3</td>
 			<td>CC nn nn</td>
 			<td>3</td>
@@ -412,6 +469,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CCF</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>3F</td>
 			<td>1</td>
@@ -419,6 +477,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP (HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>BE</td>
 			<td>1</td>
@@ -426,6 +485,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP (IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD BE oo</td>
 			<td>3</td>
@@ -433,6 +493,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP (IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD BE oo</td>
 			<td>3</td>
@@ -440,6 +501,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>FE nn</td>
 			<td>2</td>
@@ -447,6 +509,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>B8+r</td>
 			<td>1</td>
@@ -454,6 +517,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD B8+p</td>
 			<td>2</td>
@@ -461,6 +525,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CP IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD B8+q</td>
 			<td>2</td>
@@ -468,6 +533,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CPD</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A9</td>
 			<td>2</td>
@@ -475,6 +541,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CPDR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4</td>
 			<td>ED B9</td>
 			<td>2</td>
@@ -482,6 +549,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CPI</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A1</td>
 			<td>2</td>
@@ -489,6 +557,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CPIR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4</td>
 			<td>ED B1</td>
 			<td>2</td>
@@ -496,6 +565,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>CPL</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>2F</td>
 			<td>1</td>
@@ -503,6 +573,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DAA</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>27</td>
 			<td>1</td>
@@ -510,6 +581,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC (HL)</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>35</td>
 			<td>1</td>
@@ -517,6 +589,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD 35 oo</td>
 			<td>3</td>
@@ -524,6 +597,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD 35 oo</td>
 			<td>3</td>
@@ -531,6 +605,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC A</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>3D</td>
 			<td>1</td>
@@ -538,6 +613,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC B</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>05</td>
 			<td>1</td>
@@ -545,6 +621,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC BC</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>0B</td>
 			<td>1</td>
@@ -552,6 +629,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC C</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>0D</td>
 			<td>1</td>
@@ -559,6 +637,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC D</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>15</td>
 			<td>1</td>
@@ -566,6 +645,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC DE</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>1B</td>
 			<td>1</td>
@@ -573,6 +653,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC E</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>1D</td>
 			<td>1</td>
@@ -580,6 +661,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC H</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>25</td>
 			<td>1</td>
@@ -587,6 +669,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC HL</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>2B</td>
 			<td>1</td>
@@ -594,6 +677,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC IX</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>DD 2B</td>
 			<td>2</td>
@@ -601,6 +685,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC IY</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>FD 2B</td>
 			<td>2</td>
@@ -608,6 +693,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 05+8*p</td>
 			<td>2</td>
@@ -615,6 +701,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 05+8*q</td>
 			<td>2</td>
@@ -622,6 +709,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC L</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>2D</td>
 			<td>2</td>
@@ -629,6 +717,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DEC SP</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>3B</td>
 			<td>1</td>
@@ -636,6 +725,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DI</td>
 			<td>4</td>
+			<td>5</td>
 			<td>2</td>
 			<td>F3</td>
 			<td>1</td>
@@ -643,6 +733,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>DJNZ o</td>
 			<td>13/8</td>
+			<td>14/9</td>
 			<td>2</td>
 			<td>10 oo</td>
 			<td>2</td>
@@ -650,6 +741,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EI</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>FB</td>
 			<td>1</td>
@@ -657,6 +749,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EX (SP),HL</td>
 			<td>19</td>
+			<td>20</td>
 			<td>5</td>
 			<td>E3</td>
 			<td>1</td>
@@ -664,6 +757,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EX (SP),IX</td>
 			<td>23</td>
+			<td>25</td>
 			<td>6</td>
 			<td>DD E3</td>
 			<td>2</td>
@@ -671,6 +765,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EX (SP),IY</td>
 			<td>23</td>
+			<td>25</td>
 			<td>6</td>
 			<td>FD E3</td>
 			<td>2</td>
@@ -678,6 +773,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EX AF,AF'</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>08</td>
 			<td>1</td>
@@ -685,6 +781,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EX DE,HL</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>EB</td>
 			<td>1</td>
@@ -692,6 +789,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>EXX</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>D9</td>
 			<td>1</td>
@@ -699,6 +797,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>HALT</td>
 			<td>4</td>
+			<td>5</td>
 			<td>2</td>
 			<td>76</td>
 			<td>1</td>
@@ -706,6 +805,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IM 0</td>
 			<td>8</td>
+			<td>10</td>
 			<td>3</td>
 			<td>ED 46</td>
 			<td>2</td>
@@ -713,6 +813,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IM 1</td>
 			<td>8</td>
+			<td>10</td>
 			<td>3</td>
 			<td>ED 56</td>
 			<td>2</td>
@@ -720,6 +821,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IM 2</td>
 			<td>8</td>
+			<td>10</td>
 			<td>3</td>
 			<td>ED 5E</td>
 			<td>2</td>
@@ -727,6 +829,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN A,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 78</td>
 			<td>2</td>
@@ -734,6 +837,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN A,(n)</td>
 			<td>11</td>
+			<td>12</td>
 			<td>3</td>
 			<td>DB nn</td>
 			<td>2</td>
@@ -741,6 +845,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN B,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 40</td>
 			<td>2</td>
@@ -748,6 +853,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN C,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 48</td>
 			<td>2</td>
@@ -755,6 +861,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN D,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 50</td>
 			<td>2</td>
@@ -762,6 +869,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN E,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 58</td>
 			<td>2</td>
@@ -769,6 +877,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN H,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 60</td>
 			<td>2</td>
@@ -776,6 +885,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN L,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 68</td>
 			<td>2</td>
@@ -783,6 +893,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IN F,(C)</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 70</td>
 			<td>3</td>
@@ -790,6 +901,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC (HL)</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>34</td>
 			<td>1</td>
@@ -797,6 +909,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD 34 oo</td>
 			<td>3</td>
@@ -804,6 +917,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD 34 oo</td>
 			<td>3</td>
@@ -811,6 +925,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC A</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>3C</td>
 			<td>1</td>
@@ -818,6 +933,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC B</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>04</td>
 			<td>1</td>
@@ -825,6 +941,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC BC</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>03</td>
 			<td>1</td>
@@ -832,6 +949,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC C</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>0C</td>
 			<td>1</td>
@@ -839,6 +957,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC D</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>14</td>
 			<td>1</td>
@@ -846,6 +965,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC DE</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>13</td>
 			<td>1</td>
@@ -853,6 +973,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC E</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>1C</td>
 			<td>1</td>
@@ -860,6 +981,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC H</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>24</td>
 			<td>1</td>
@@ -867,6 +989,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC HL</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>23</td>
 			<td>1</td>
@@ -874,6 +997,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC IX</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>DD 23</td>
 			<td>2</td>
@@ -881,6 +1005,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC IY</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>FD 23</td>
 			<td>2</td>
@@ -888,6 +1013,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 04+8*p</td>
 			<td>2</td>
@@ -895,6 +1021,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 04+8*q</td>
 			<td>2</td>
@@ -902,6 +1029,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC L</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>2C</td>
 			<td>1</td>
@@ -909,6 +1037,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INC SP</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>33</td>
 			<td>1</td>
@@ -916,6 +1045,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>IND</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED AA</td>
 			<td>2</td>
@@ -923,6 +1053,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INDR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4/3</td>
 			<td>ED BA</td>
 			<td>2</td>
@@ -930,6 +1061,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INI</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A2</td>
 			<td>2</td>
@@ -937,6 +1069,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>INIR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4/3</td>
 			<td>ED B2</td>
 			<td>2</td>
@@ -944,6 +1077,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>C3 nn nn</td>
 			<td>3</td>
@@ -951,6 +1085,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP (HL)</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>E9</td>
 			<td>1</td>
@@ -958,6 +1093,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP (IX)</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD E9</td>
 			<td>2</td>
@@ -965,6 +1101,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP (IY)</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD E9</td>
 			<td>2</td>
@@ -972,6 +1109,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP C,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>DA nn nn</td>
 			<td>3</td>
@@ -979,6 +1117,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP M,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>FA nn nn</td>
 			<td>3</td>
@@ -986,6 +1125,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP NC,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>D2 nn nn</td>
 			<td>3</td>
@@ -993,6 +1133,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP NZ,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>C2 nn nn</td>
 			<td>3</td>
@@ -1000,6 +1141,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP P,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>F2 nn nn</td>
 			<td>3</td>
@@ -1007,6 +1149,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP PE,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>EA nn nn</td>
 			<td>3</td>
@@ -1014,6 +1157,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP PO,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>E2 nn nn</td>
 			<td>3</td>
@@ -1021,6 +1165,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JP Z,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>CA nn nn</td>
 			<td>3</td>
@@ -1028,6 +1173,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JR o</td>
 			<td>12</td>
+			<td>13</td>
 			<td>3</td>
 			<td>18 oo</td>
 			<td>2</td>
@@ -1035,6 +1181,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JR C,o</td>
 			<td>12/7</td>
+			<td>13/8</td>
 			<td>3/2</td>
 			<td>38 oo</td>
 			<td>2</td>
@@ -1042,6 +1189,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JR NC,o</td>
 			<td>12/7</td>
+			<td>13/8</td>
 			<td>3/2</td>
 			<td>30 oo</td>
 			<td>2</td>
@@ -1049,6 +1197,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JR NZ,o</td>
 			<td>12/7</td>
+			<td>13/8</td>
 			<td>3/2</td>
 			<td>20 oo</td>
 			<td>2</td>
@@ -1056,6 +1205,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>JR Z,o</td>
 			<td>12/7</td>
+			<td>13/8</td>
 			<td>3/2</td>
 			<td>28 oo</td>
 			<td>2</td>
@@ -1063,6 +1213,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (BC),A</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>02</td>
 			<td>1</td>
@@ -1070,6 +1221,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (DE),A</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>12</td>
 			<td>1</td>
@@ -1077,6 +1229,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (HL),n</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>36 nn</td>
 			<td>2</td>
@@ -1084,6 +1237,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (HL),r</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>70+r</td>
 			<td>1</td>
@@ -1091,6 +1245,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (IX+o),n</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 36 oo nn</td>
 			<td>4</td>
@@ -1098,6 +1253,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (IX+o),r</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 70+r oo</td>
 			<td>3</td>
@@ -1105,6 +1261,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (IY+o),n</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 36 oo nn</td>
 			<td>4</td>
@@ -1112,6 +1269,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (IY+o),r</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 70+r oo</td>
 			<td>3</td>
@@ -1119,6 +1277,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),A</td>
 			<td>13</td>
+			<td>14</td>
 			<td>4</td>
 			<td>32 nn nn</td>
 			<td>3</td>
@@ -1126,6 +1285,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),BC</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 43 nn nn</td>
 			<td>4</td>
@@ -1133,6 +1293,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),DE</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 53 nn nn</td>
 			<td>4</td>
@@ -1140,6 +1301,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),HL</td>
 			<td>16</td>
+			<td>17</td>
 			<td>5</td>
 			<td>22 nn nn</td>
 			<td>3</td>
@@ -1147,6 +1309,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),IX</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>DD 22 nn nn</td>
 			<td>4</td>
@@ -1154,6 +1317,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),IY</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>FD 22 nn nn</td>
 			<td>4</td>
@@ -1161,6 +1325,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD (nn),SP</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 73 nn nn</td>
 			<td>4</td>
@@ -1168,6 +1333,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(BC)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>0A</td>
 			<td>1</td>
@@ -1175,6 +1341,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(DE)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>1A</td>
 			<td>1</td>
@@ -1182,6 +1349,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>7E</td>
 			<td>1</td>
@@ -1189,6 +1357,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 7E oo</td>
 			<td>3</td>
@@ -1196,6 +1365,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>1</td>
 			<td>FD 7E oo</td>
 			<td>3</td>
@@ -1203,6 +1373,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,(nn)</td>
 			<td>13</td>
+			<td>14</td>
 			<td>4</td>
 			<td>3A nn nn</td>
 			<td>3</td>
@@ -1210,6 +1381,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>3E nn</td>
 			<td>2</td>
@@ -1217,6 +1389,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>78+r</td>
 			<td>1</td>
@@ -1224,6 +1397,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 78+p</td>
 			<td>2</td>
@@ -1231,6 +1405,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 78+q</td>
 			<td>2</td>
@@ -1238,6 +1413,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,I</td>
 			<td>9</td>
+			<td>11</td>
 			<td>2</td>
 			<td>ED 57</td>
 			<td>2</td>
@@ -1245,6 +1421,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD A,R</td>
 			<td>9</td>
+			<td>11</td>
 			<td>2</td>
 			<td>ED 5F</td>
 			<td>2</td>
@@ -1252,6 +1429,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>46</td>
 			<td>1</td>
@@ -1259,6 +1437,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 46 oo</td>
 			<td>3</td>
@@ -1266,6 +1445,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 46 oo</td>
 			<td>3</td>
@@ -1273,6 +1453,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>06 nn</td>
 			<td>2</td>
@@ -1280,6 +1461,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>40+r</td>
 			<td>1</td>
@@ -1287,6 +1469,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 40+p</td>
 			<td>2</td>
@@ -1294,6 +1477,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD B,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 40+q</td>
 			<td>2</td>
@@ -1301,6 +1485,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD BC,(nn)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 4B nn nn</td>
 			<td>4</td>
@@ -1308,6 +1493,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD BC,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>01 nn nn</td>
 			<td>3</td>
@@ -1315,6 +1501,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>4E</td>
 			<td>1</td>
@@ -1322,6 +1509,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 4E oo</td>
 			<td>3</td>
@@ -1329,6 +1517,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 4E oo</td>
 			<td>3</td>
@@ -1336,6 +1525,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>0E nn</td>
 			<td>2</td>
@@ -1343,6 +1533,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>48+r</td>
 			<td>1</td>
@@ -1350,6 +1541,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 48+p</td>
 			<td>2</td>
@@ -1357,6 +1549,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD C,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 48+q</td>
 			<td>2</td>
@@ -1364,6 +1557,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>56</td>
 			<td>1</td>
@@ -1371,6 +1565,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 56 oo</td>
 			<td>3</td>
@@ -1378,6 +1573,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 56 oo</td>
 			<td>3</td>
@@ -1385,6 +1581,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>16 nn</td>
 			<td>2</td>
@@ -1392,6 +1589,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>50+r</td>
 			<td>1</td>
@@ -1399,6 +1597,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 50+p</td>
 			<td>2</td>
@@ -1406,6 +1605,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD D,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 50+q</td>
 			<td>2</td>
@@ -1413,6 +1613,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD DE,(nn)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 5B nn nn</td>
 			<td>4</td>
@@ -1420,6 +1621,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD DE,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>11 nn nn</td>
 			<td>3</td>
@@ -1427,6 +1629,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>5E</td>
 			<td>1</td>
@@ -1434,6 +1637,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 5E oo</td>
 			<td>3</td>
@@ -1441,6 +1645,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 5E oo</td>
 			<td>3</td>
@@ -1448,6 +1653,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>1E nn</td>
 			<td>2</td>
@@ -1455,6 +1661,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>58+r</td>
 			<td>1</td>
@@ -1462,6 +1669,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 58+p</td>
 			<td>2</td>
@@ -1469,6 +1677,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD E,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 58+q</td>
 			<td>2</td>
@@ -1476,6 +1685,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD H,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>66</td>
 			<td>1</td>
@@ -1483,6 +1693,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD H,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 66 oo</td>
 			<td>3</td>
@@ -1490,6 +1701,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD H,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 66 oo</td>
 			<td>3</td>
@@ -1497,6 +1709,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD H,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>26 nn</td>
 			<td>2</td>
@@ -1504,6 +1717,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD H,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>60+r</td>
 			<td>1</td>
@@ -1511,6 +1725,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD HL,(nn)</td>
 			<td>16</td>
+			<td>17</td>
 			<td>5</td>
 			<td>2A nn nn</td>
 			<td>5</td>
@@ -1518,6 +1733,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD HL,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>21 nn nn</td>
 			<td>3</td>
@@ -1525,6 +1741,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD I,A</td>
 			<td>9</td>
+			<td>11</td>
 			<td>2</td>
 			<td>ED 47</td>
 			<td>2</td>
@@ -1532,6 +1749,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IX,(nn)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>DD 2A nn nn</td>
 			<td>4</td>
@@ -1539,6 +1757,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IX,nn</td>
 			<td>14</td>
+			<td>16</td>
 			<td>4</td>
 			<td>DD 21 nn nn</td>
 			<td>4</td>
@@ -1546,6 +1765,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IXh,n</td>
 			<td>11</td>
+			<td>13</td>
 			<td>3</td>
 			<td>DD 26 nn </td>
 			<td>2</td>
@@ -1553,6 +1773,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IXh,p</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 60+p</td>
 			<td>2</td>
@@ -1560,6 +1781,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IXl,n</td>
 			<td>11</td>
+			<td>13</td>
 			<td>3</td>
 			<td>DD 2E nn </td>
 			<td>2</td>
@@ -1567,6 +1789,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IXl,p</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 68+p</td>
 			<td>2</td>
@@ -1574,6 +1797,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IY,(nn)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>FD 2A nn nn</td>
 			<td>4</td>
@@ -1581,6 +1805,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IY,nn</td>
 			<td>14</td>
+			<td>16</td>
 			<td>4</td>
 			<td>FD 21 nn nn</td>
 			<td>4</td>
@@ -1588,6 +1813,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IYh,n</td>
 			<td>11</td>
+			<td>13</td>
 			<td>3</td>
 			<td>FD 26 nn </td>
 			<td>2</td>
@@ -1595,6 +1821,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IYh,q</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 60+q</td>
 			<td>2</td>
@@ -1602,6 +1829,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IYl,n</td>
 			<td>11</td>
+			<td>13</td>
 			<td>3</td>
 			<td>FD 2E nn </td>
 			<td>2</td>
@@ -1609,6 +1837,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD IYl,q</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 68+q</td>
 			<td>2</td>
@@ -1616,6 +1845,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD L,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>6E</td>
 			<td>1</td>
@@ -1623,6 +1853,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD L,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 6E oo</td>
 			<td>3</td>
@@ -1630,6 +1861,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD L,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 6E oo</td>
 			<td>3</td>
@@ -1637,6 +1869,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD L,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>2E nn</td>
 			<td>2</td>
@@ -1644,6 +1877,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD L,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>68+r</td>
 			<td>1</td>
@@ -1651,6 +1885,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD R,A</td>
 			<td>9</td>
+			<td>11</td>
 			<td>2</td>
 			<td>ED 4F</td>
 			<td>2</td>
@@ -1658,6 +1893,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD SP,(nn)</td>
 			<td>20</td>
+			<td>22</td>
 			<td>6</td>
 			<td>ED 7B nn nn</td>
 			<td>4</td>
@@ -1665,6 +1901,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD SP,HL</td>
 			<td>6</td>
+			<td>7</td>
 			<td>1</td>
 			<td>F9</td>
 			<td>1</td>
@@ -1672,6 +1909,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD SP,IX</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>DD F9</td>
 			<td>2</td>
@@ -1679,6 +1917,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD SP,IY</td>
 			<td>10</td>
+			<td>12</td>
 			<td>2</td>
 			<td>FD F9</td>
 			<td>2</td>
@@ -1686,6 +1925,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LD SP,nn</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>31 nn nn</td>
 			<td>3</td>
@@ -1693,6 +1933,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LDD</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A8</td>
 			<td>2</td>
@@ -1700,6 +1941,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LDDR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4</td>
 			<td>ED B8</td>
 			<td>2</td>
@@ -1707,6 +1949,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LDI</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A0</td>
 			<td>2</td>
@@ -1714,12 +1957,14 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>LDIR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4</td>
 			<td>ED B0</td>
 			<td>2</td>
 		</tr>
 		<tr>
 			<td>MULUB A,r </td>
+			<td></td>
 			<td></td>
 			<td>14</td>
 			<td>ED C1+8*r </td>
@@ -1728,12 +1973,14 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>MULUW HL,BC</td>
 			<td></td>
+			<td></td>
 			<td>36</td>
 			<td>ED C3 </td>
 			<td>2</td>
 		</tr>
 		<tr>
 			<td>MULUW HL,SP</td>
+			<td></td>
 			<td></td>
 			<td>36</td>
 			<td>ED F3 </td>
@@ -1742,6 +1989,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>NEG</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>ED 44</td>
 			<td>2</td>
@@ -1749,6 +1997,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>NOP</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>00</td>
 			<td>1</td>
@@ -1756,6 +2005,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR (HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>B6</td>
 			<td>1</td>
@@ -1763,6 +2013,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR (IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD B6 oo</td>
 			<td>3</td>
@@ -1770,6 +2021,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR (IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD B6 oo</td>
 			<td>3</td>
@@ -1777,6 +2029,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>F6 nn</td>
 			<td>2</td>
@@ -1784,6 +2037,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>B0+r</td>
 			<td>1</td>
@@ -1791,6 +2045,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD B0+p</td>
 			<td>2</td>
@@ -1798,6 +2053,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OR IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD B0+q</td>
 			<td>2</td>
@@ -1805,6 +2061,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OTDR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4/3</td>
 			<td>ED BB</td>
 			<td>2</td>
@@ -1812,6 +2069,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OTIR</td>
 			<td>21/16</td>
+			<td>23/18</td>
 			<td>4/3</td>
 			<td>ED B3</td>
 			<td>2</td>
@@ -1819,6 +2077,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),A</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 79</td>
 			<td>2</td>
@@ -1826,6 +2085,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),B</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 41</td>
 			<td>2</td>
@@ -1833,6 +2093,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),C</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 49</td>
 			<td>2</td>
@@ -1840,6 +2101,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),D</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 51</td>
 			<td>2</td>
@@ -1847,6 +2109,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),E</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 59</td>
 			<td>2</td>
@@ -1854,6 +2117,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),H</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 61</td>
 			<td>2</td>
@@ -1861,6 +2125,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (C),L</td>
 			<td>12</td>
+			<td>14</td>
 			<td>3</td>
 			<td>ED 69</td>
 			<td>2</td>
@@ -1868,6 +2133,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUT (n),A</td>
 			<td>11</td>
+			<td>12</td>
 			<td>3</td>
 			<td>D3 nn</td>
 			<td>2</td>
@@ -1875,6 +2141,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUTD</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED AB</td>
 			<td>2</td>
@@ -1882,6 +2149,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>OUTI</td>
 			<td>16</td>
+			<td>18</td>
 			<td>4</td>
 			<td>ED A3</td>
 			<td>2</td>
@@ -1889,6 +2157,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP AF</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>F1</td>
 			<td>1</td>
@@ -1896,6 +2165,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP BC</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>C1</td>
 			<td>1</td>
@@ -1903,6 +2173,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP DE</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>D1</td>
 			<td>1</td>
@@ -1910,6 +2181,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP HL</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>E1</td>
 			<td>1</td>
@@ -1917,6 +2189,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP IX</td>
 			<td>14</td>
+			<td>16</td>
 			<td>4</td>
 			<td>DD E1</td>
 			<td>2</td>
@@ -1924,6 +2197,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>POP IY</td>
 			<td>14</td>
+			<td>16</td>
 			<td>4</td>
 			<td>FD E1</td>
 			<td>2</td>
@@ -1931,6 +2205,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH AF</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>F5</td>
 			<td>1</td>
@@ -1938,6 +2213,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH BC</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>C5</td>
 			<td>1</td>
@@ -1945,6 +2221,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH DE</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>D5</td>
 			<td>1</td>
@@ -1952,6 +2229,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH HL</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>E5</td>
 			<td>1</td>
@@ -1959,6 +2237,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH IX</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>DD E5</td>
 			<td>2</td>
@@ -1966,6 +2245,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>PUSH IY</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>FD E5</td>
 			<td>2</td>
@@ -1973,6 +2253,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RES b,(HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 86+8*b</td>
 			<td>2</td>
@@ -1980,6 +2261,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RES b,(IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 86+8*b</td>
 			<td>4</td>
@@ -1987,6 +2269,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RES b,(IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 86+8*b</td>
 			<td>4</td>
@@ -1994,6 +2277,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RES b,r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 80+8*b+r</td>
 			<td>2</td>
@@ -2001,6 +2285,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET</td>
 			<td>10</td>
+			<td>11</td>
 			<td>3</td>
 			<td>C9</td>
 			<td>1</td>
@@ -2008,6 +2293,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET C</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>D8</td>
 			<td>1</td>
@@ -2015,6 +2301,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET M</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>F8</td>
 			<td>1</td>
@@ -2022,6 +2309,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET NC</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>D0</td>
 			<td>1</td>
@@ -2029,6 +2317,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET NZ</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>C0</td>
 			<td>1</td>
@@ -2036,6 +2325,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET P</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>F0</td>
 			<td>1</td>
@@ -2043,6 +2333,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET PE</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>E8</td>
 			<td>1</td>
@@ -2050,6 +2341,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET PO</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>E0</td>
 			<td>1</td>
@@ -2057,6 +2349,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RET Z</td>
 			<td>11/5</td>
+			<td>12/6</td>
 			<td>3/1</td>
 			<td>C8</td>
 			<td>1</td>
@@ -2064,6 +2357,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RETI</td>
 			<td>14</td>
+			<td>16</td>
 			<td>5</td>
 			<td>ED 4D</td>
 			<td>2</td>
@@ -2071,6 +2365,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RETN</td>
 			<td>14</td>
+			<td>16</td>
 			<td>5</td>
 			<td>ED 45</td>
 			<td>2</td>
@@ -2078,6 +2373,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RL (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 16</td>
 			<td>2</td>
@@ -2085,6 +2381,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RL (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 16</td>
 			<td>4</td>
@@ -2092,6 +2389,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RL (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 16</td>
 			<td>4</td>
@@ -2099,6 +2397,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RL r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 10+r</td>
 			<td>2</td>
@@ -2106,6 +2405,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLA</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>17</td>
 			<td>1</td>
@@ -2113,6 +2413,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLC (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 06</td>
 			<td>2</td>
@@ -2120,6 +2421,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLC (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 06</td>
 			<td>4</td>
@@ -2127,6 +2429,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLC (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 06</td>
 			<td>4</td>
@@ -2134,6 +2437,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLC r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 00+r</td>
 			<td>2</td>
@@ -2141,6 +2445,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLCA</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>07</td>
 			<td>1</td>
@@ -2148,6 +2453,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RLD</td>
 			<td>18</td>
+			<td>20</td>
 			<td>5</td>
 			<td>ED 6F</td>
 			<td>2</td>
@@ -2155,6 +2461,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RR (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 1E</td>
 			<td>2</td>
@@ -2162,6 +2469,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RR (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 1E</td>
 			<td>4</td>
@@ -2169,6 +2477,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RR (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 1E</td>
 			<td>4</td>
@@ -2176,6 +2485,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RR r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 18+r</td>
 			<td>2</td>
@@ -2183,6 +2493,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRA</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>1F</td>
 			<td>1</td>
@@ -2190,6 +2501,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRC (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 0E</td>
 			<td>2</td>
@@ -2197,6 +2509,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRC (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 0E</td>
 			<td>4</td>
@@ -2204,6 +2517,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRC (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 0E</td>
 			<td>4</td>
@@ -2211,6 +2525,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRC r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 08+r</td>
 			<td>2</td>
@@ -2218,6 +2533,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRCA</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>0F</td>
 			<td>1</td>
@@ -2225,6 +2541,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RRD</td>
 			<td>18</td>
+			<td>20</td>
 			<td>5</td>
 			<td>ED 67</td>
 			<td>2</td>
@@ -2232,6 +2549,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 0</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>C7</td>
 			<td>1</td>
@@ -2239,6 +2557,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 8H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>CF</td>
 			<td>1</td>
@@ -2246,6 +2565,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 10H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>D7</td>
 			<td>1</td>
@@ -2253,6 +2573,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 18H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>DF</td>
 			<td>1</td>
@@ -2260,6 +2581,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 20H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>E7</td>
 			<td>1</td>
@@ -2267,6 +2589,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 28H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>EF</td>
 			<td>1</td>
@@ -2274,6 +2597,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 30H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>F7</td>
 			<td>1</td>
@@ -2281,6 +2605,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>RST 38H</td>
 			<td>11</td>
+			<td>12</td>
 			<td>4</td>
 			<td>FF</td>
 			<td>1</td>
@@ -2288,6 +2613,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,(HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>9E</td>
 			<td>1</td>
@@ -2295,6 +2621,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,(IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 9E oo</td>
 			<td>3</td>
@@ -2302,6 +2629,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,(IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 9E oo</td>
 			<td>3</td>
@@ -2309,6 +2637,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>DE nn</td>
 			<td>2</td>
@@ -2316,6 +2645,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>98+r</td>
 			<td>1</td>
@@ -2323,6 +2653,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 98+p</td>
 			<td>2</td>
@@ -2330,6 +2661,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC A,IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 98+q</td>
 			<td>2</td>
@@ -2337,6 +2669,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC HL,BC</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 42</td>
 			<td>2</td>
@@ -2344,6 +2677,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC HL,DE</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 52</td>
 			<td>2</td>
@@ -2351,6 +2685,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC HL,HL</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 62</td>
 			<td>2</td>
@@ -2358,6 +2693,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SBC HL,SP</td>
 			<td>15</td>
+			<td>17</td>
 			<td>2</td>
 			<td>ED 72</td>
 			<td>2</td>
@@ -2365,6 +2701,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SCF</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>37</td>
 			<td>1</td>
@@ -2372,6 +2709,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SET b,(HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB C6+8*b</td>
 			<td>2</td>
@@ -2379,6 +2717,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SET b,(IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo C6+8*b</td>
 			<td>4</td>
@@ -2386,6 +2725,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SET b,(IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo C6+8*b</td>
 			<td>4</td>
@@ -2393,6 +2733,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SET b,r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB C0+8*b+r</td>
 			<td>2</td>
@@ -2400,6 +2741,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SLA (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 26</td>
 			<td>2</td>
@@ -2407,6 +2749,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SLA (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 26</td>
 			<td>4</td>
@@ -2414,6 +2757,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SLA (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 26</td>
 			<td>4</td>
@@ -2421,6 +2765,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SLA r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 20+r</td>
 			<td>2</td>
@@ -2428,6 +2773,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRA (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 2E</td>
 			<td>2</td>
@@ -2435,6 +2781,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRA (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 2E</td>
 			<td>4</td>
@@ -2442,6 +2789,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRA (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 2E</td>
 			<td>4</td>
@@ -2449,6 +2797,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRA r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 28+r</td>
 			<td>2</td>
@@ -2456,6 +2805,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRL (HL)</td>
 			<td>15</td>
+			<td>17</td>
 			<td>5</td>
 			<td>CB 3E</td>
 			<td>2</td>
@@ -2463,6 +2813,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRL (IX+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>DD CB oo 3E</td>
 			<td>4</td>
@@ -2470,6 +2821,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRL (IY+o)</td>
 			<td>23</td>
+			<td>25</td>
 			<td>7</td>
 			<td>FD CB oo 3E</td>
 			<td>4</td>
@@ -2477,6 +2829,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SRL r</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>CB 38+r</td>
 			<td>2</td>
@@ -2484,6 +2837,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB (HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>96</td>
 			<td>1</td>
@@ -2491,6 +2845,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB (IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD 96 oo</td>
 			<td>3</td>
@@ -2498,6 +2853,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB (IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD 96 oo</td>
 			<td>3</td>
@@ -2505,6 +2861,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>D6 nn</td>
 			<td>2</td>
@@ -2512,6 +2869,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>90+r</td>
 			<td>1</td>
@@ -2519,6 +2877,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD 90+p</td>
 			<td>2</td>
@@ -2526,6 +2885,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>SUB IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD 90+q</td>
 			<td>2</td>
@@ -2533,6 +2893,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR (HL)</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>AE</td>
 			<td>1</td>
@@ -2540,6 +2901,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR (IX+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>DD AE oo</td>
 			<td>3</td>
@@ -2547,6 +2909,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR (IY+o)</td>
 			<td>19</td>
+			<td>21</td>
 			<td>5</td>
 			<td>FD AE oo</td>
 			<td>3</td>
@@ -2554,6 +2917,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR n</td>
 			<td>7</td>
+			<td>8</td>
 			<td>2</td>
 			<td>EE nn</td>
 			<td>2</td>
@@ -2561,6 +2925,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR r</td>
 			<td>4</td>
+			<td>5</td>
 			<td>1</td>
 			<td>A8+r</td>
 			<td>1</td>
@@ -2568,6 +2933,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR IXp</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>DD A8+p</td>
 			<td>2</td>
@@ -2575,6 +2941,7 @@ table.instrset td+td+td+td {
 		<tr>
 			<td>XOR IYq</td>
 			<td>8</td>
+			<td>10</td>
 			<td>2</td>
 			<td>FD A8+q</td>
 			<td>2</td>

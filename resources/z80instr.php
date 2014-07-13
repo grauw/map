@@ -30,7 +30,11 @@ function filter(query) {
 
 <h1>Z80 instruction set</h1>
 
-<p>This is an overview of the Z80 instruction set. Undocumented instructions are included (note that Sean Young wrote an <a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about them), and the R800 instructions MULUB and MULUW as well as R800 timing information.</p>
+<p>This is an overview of the Z80 instruction set. Undocumented instructions are
+included (note that Sean Young wrote an
+<a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about
+them), and the R800 instructions MULUB and MULUW as well as R800 timing
+information.</p>
 
 <p>For Z80 timing calculations on MSX, refer to the Z80+M1 column which includes
 the M1 waits. For more information, see the <a href="#waits">wait cycles</a>
@@ -2954,7 +2958,8 @@ section.</p>
 <dt>o</dt>
 <dd>8-bit offset (2-complement)</dd>
 <dt>r</dt>
-<dd>Register. This can be A, B, C, D, E, H, L or (HL). Add the following value to the last byte of the opcode:
+<dd>Register. This can be A, B, C, D, E, H, L or (HL). Add the following value
+    to the last byte of the opcode:
 <table>
 	<tr>
 		<th>Register</th>
@@ -2995,7 +3000,8 @@ section.</p>
 </table>
 </dd>
 <dt>p, IXp</dt>
-<dd>Denotes the high or low part of the IX register: IXh or IXl. Add the following value to the last byte of the opcode:
+<dd>Denotes the high or low part of the IX register: IXh or IXl. Add the
+    following value to the last byte of the opcode:
 <table>
 	<tr>
 		<th>Register</th>
@@ -3032,7 +3038,8 @@ section.</p>
 </table>
 </dd>
 <dt>q, IYq</dt>
-<dd>Denotes the high or low part of the IY register: IYh or IYl. Add the following value to the last byte of the opcode:
+<dd>Denotes the high or low part of the IY register: IYh or IYl. Add the
+    following value to the last byte of the opcode:
 <table>
 	<tr>
 		<th>Register</th>
@@ -3081,26 +3088,33 @@ waits are inserted like this:</p>
 
 <ul>
 <li>Every instruction has 1 additional M1 wait state</li>
-<li>Instructions starting with a CB, DD, ED, FD, DDCB or DDFD opcode have two additional M1 wait states</li>
+<li>Instructions starting with a CB, DD, ED, FD, DDCB or DDFD opcode have two
+    additional M1 wait states</li>
 </ul>
 
 <p>Examples:</p>
 
 <ul>
-<li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes 5 (one more).</li>
-<li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it takes 14 (two more).</li>
-<li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
+<li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes
+    5 (one more).</li>
+<li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it
+    takes 14 (two more).</li>
+<li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states.
+    On MSX, it takes 25 (two more).</li>
 </ul>
 
 <p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
 
-<p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
+<p>For the R800, it is an even more complex story <em>(Warning: this is
+preliminary information.)</em>:</p>
 
 <ul>
-<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
+<li>In internal RAM, 0 wait states are inserted, and an additional wait state
+    for every memory access where the MSB changes (<dfn>far</dfn>).</li>
 <li>In external RAM, 2 wait states are inserted.</li>
 <li>In ROM, 3 wait states are inserted.</li>
-<li>For every far memory fetch, additional wait states are inserted depending on the memory type.</li>
+<li>For every far memory fetch, additional wait states are inserted depending on
+    the memory type.</li>
 </ul>
 
 

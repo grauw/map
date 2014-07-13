@@ -54,7 +54,7 @@ information, feel free to send us an email.</p>
       <ul>
 	  <li class="map"><a href="/resources/z80instr.php">Z80 instruction set overview</a></li>
       <li><a href="/resources/cpu/z80.pdf">Zilog Z80 user’s manual</a></li>
-      <li><a href="http://www.myquest.nl/z80undocumented/z80-documented.pdf">The Undocumented Z80 Documented</a> · by Sean Young, Jan Wilmans</li>
+      <li><a href="http://www.myquest.nl/z80undocumented/z80-documented-v0.91.pdf">The Undocumented Z80 Documented</a> · by Sean Young, Jan Wilmans (<a href="http://www.myquest.nl/z80undocumented/">site</a>)</li>
       <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
       </ul>
     </li>

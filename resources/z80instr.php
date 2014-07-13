@@ -36,7 +36,7 @@ table.instrset td+td+td+td {
 <li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
 </ul>
 
-<p>For the R800, it is an even more complex story <em>(Warning: preliminary info! To be frank, this is just a guess/indication. I need to verify!)</em>:</p>
+<p>For the R800, it is an even more complex story <em>(Warning: this is preliminary information.)</em>:</p>
 <ul>
 	<li>In internal RAM, 0 wait states are inserted, and an additional wait state for every memory access where the MSB changes (<dfn>far</dfn>).</li>
 <li>In external RAM, 2 wait states are inserted.</li>

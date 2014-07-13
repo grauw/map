@@ -32,9 +32,9 @@ function filter(query) {
 
 <p>This is an overview of the Z80 instruction set. Undocumented instructions are included (note that Sean Young wrote an <a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about them), and the R800 instructions MULUB and MULUW as well as R800 timing information.</p>
 
-<p>For Z80 timing calculations on MSX, you should refer to the Z80+M1 column
-which includes the M1 waits. For more information on additional waits, see the
-<a href="#waits">wait cycles</a> topic.</p>
+<p>For Z80 timing calculations on MSX, refer to the Z80+M1 column which includes
+the M1 waits. For more information, see the <a href="#waits">wait cycles</a>
+section.</p>
 
 <ul>
 	<li><a href="#instructionset">Instruction set</a></li>

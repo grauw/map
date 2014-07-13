@@ -77,11 +77,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>ADC A,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>CE nn</td>
-        	<td>2</td>
+			<td>ADC A,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>CE nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>ADC A,r</td>
@@ -154,11 +154,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>ADD A,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>C6 nn</td>
-        	<td>2</td>
+			<td>ADD A,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>C6 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>ADD A,r</td>
@@ -168,18 +168,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>ADD A,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 80+p</td>
-        	<td>2</td>
+			<td>ADD A,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 80+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>ADD A,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 80+q</td>
-        	<td>2</td>
+			<td>ADD A,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 80+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>ADD HL,BC</td>
@@ -287,11 +287,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>AND n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>E6 nn</td>
-        	<td>2</td>
+			<td>AND n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>E6 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>AND r</td>
@@ -301,18 +301,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>AND IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD A0+p</td>
-        	<td>2</td>
+			<td>AND IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD A0+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>AND IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD A0+q</td>
-        	<td>2</td>
+			<td>AND IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD A0+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>BIT b,(HL)</td>
@@ -434,11 +434,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>CP n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>FE nn</td>
-        	<td>2</td>
+			<td>CP n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>FE nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>CP r</td>
@@ -448,18 +448,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>CP IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD B8+p</td>
-        	<td>2</td>
+			<td>CP IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD B8+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>CP IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD B8+q</td>
-        	<td>2</td>
+			<td>CP IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD B8+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>CPD</td>
@@ -602,18 +602,18 @@ table.instrset td+td+td+td {
 			<td>2</td>
 		</tr>
 		<tr>
-        	<td>DEC IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 05+8*p</td>
-        	<td>2</td>
+			<td>DEC IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 05+8*p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>DEC IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 05+8*q</td>
-        	<td>2</td>
+			<td>DEC IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 05+8*q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>DEC L</td>
@@ -882,18 +882,18 @@ table.instrset td+td+td+td {
 			<td>2</td>
 		</tr>
 		<tr>
-        	<td>INC IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 04+8*p</td>
-        	<td>2</td>
+			<td>INC IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 04+8*p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>INC IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 04+8*q</td>
-        	<td>2</td>
+			<td>INC IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 04+8*q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>INC L</td>
@@ -1071,11 +1071,11 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD (HL),n</td>
-        	<td>10</td>
-        	<td>3</td>
-        	<td>36 nn</td>
-        	<td>2</td>
+			<td>LD (HL),n</td>
+			<td>10</td>
+			<td>3</td>
+			<td>36 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD (HL),r</td>
@@ -1085,11 +1085,11 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD (IX+o),n</td>
-        	<td>19</td>
-        	<td>5</td>
-        	<td>DD 36 oo nn</td>
-        	<td>4</td>
+			<td>LD (IX+o),n</td>
+			<td>19</td>
+			<td>5</td>
+			<td>DD 36 oo nn</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td>LD (IX+o),r</td>
@@ -1099,11 +1099,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD (IY+o),n</td>
-        	<td>19</td>
-        	<td>5</td>
-        	<td>FD 36 oo nn</td>
-        	<td>4</td>
+			<td>LD (IY+o),n</td>
+			<td>19</td>
+			<td>5</td>
+			<td>FD 36 oo nn</td>
+			<td>4</td>
 		</tr>
 		<tr>
 			<td>LD (IY+o),r</td>
@@ -1204,11 +1204,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD A,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>3E nn</td>
-        	<td>2</td>
+			<td>LD A,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>3E nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD A,r</td>
@@ -1218,18 +1218,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD A,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 78+p</td>
-        	<td>2</td>
+			<td>LD A,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 78+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD A,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 78+q</td>
-        	<td>2</td>
+			<td>LD A,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 78+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD A,I</td>
@@ -1267,11 +1267,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD B,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>06 nn</td>
-        	<td>2</td>
+			<td>LD B,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>06 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD B,r</td>
@@ -1281,18 +1281,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD B,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 40+p</td>
-        	<td>2</td>
+			<td>LD B,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 40+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD B,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 40+q</td>
-        	<td>2</td>
+			<td>LD B,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 40+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD BC,(nn)</td>
@@ -1330,11 +1330,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD C,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>0E nn</td>
-        	<td>2</td>
+			<td>LD C,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>0E nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD C,r</td>
@@ -1344,18 +1344,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD C,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 48+p</td>
-        	<td>2</td>
+			<td>LD C,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 48+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD C,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 48+q</td>
-        	<td>2</td>
+			<td>LD C,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 48+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD D,(HL)</td>
@@ -1379,11 +1379,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD D,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>16 nn</td>
-        	<td>2</td>
+			<td>LD D,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>16 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD D,r</td>
@@ -1393,18 +1393,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD D,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 50+p</td>
-        	<td>2</td>
+			<td>LD D,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 50+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD D,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 50+q</td>
-        	<td>2</td>
+			<td>LD D,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 50+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD DE,(nn)</td>
@@ -1442,11 +1442,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD E,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>1E nn</td>
-        	<td>2</td>
+			<td>LD E,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>1E nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD E,r</td>
@@ -1456,18 +1456,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>LD E,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 58+p</td>
-        	<td>2</td>
+			<td>LD E,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 58+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD E,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 58+q</td>
-        	<td>2</td>
+			<td>LD E,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 58+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD H,(HL)</td>
@@ -1491,11 +1491,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD H,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>26 nn</td>
-        	<td>2</td>
+			<td>LD H,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>26 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD H,r</td>
@@ -1540,32 +1540,32 @@ table.instrset td+td+td+td {
 			<td>4</td>
 		</tr>
 		<tr>
-        	<td>LD IXh,n</td>
-        	<td>11</td>
-        	<td>3</td>
-        	<td>DD 26 nn </td>
-        	<td>2</td>
+			<td>LD IXh,n</td>
+			<td>11</td>
+			<td>3</td>
+			<td>DD 26 nn </td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IXh,p</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 60+p</td>
-        	<td>2</td>
+			<td>LD IXh,p</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 60+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IXl,n</td>
-        	<td>11</td>
-        	<td>3</td>
-        	<td>DD 2E nn </td>
-        	<td>2</td>
+			<td>LD IXl,n</td>
+			<td>11</td>
+			<td>3</td>
+			<td>DD 2E nn </td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IXl,p</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 68+p</td>
-        	<td>2</td>
+			<td>LD IXl,p</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 68+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD IY,(nn)</td>
@@ -1582,32 +1582,32 @@ table.instrset td+td+td+td {
 			<td>4</td>
 		</tr>
 		<tr>
-        	<td>LD IYh,n</td>
-        	<td>11</td>
-        	<td>3</td>
-        	<td>FD 26 nn </td>
-        	<td>2</td>
+			<td>LD IYh,n</td>
+			<td>11</td>
+			<td>3</td>
+			<td>FD 26 nn </td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IYh,q</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 60+q</td>
-        	<td>2</td>
+			<td>LD IYh,q</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 60+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IYl,n</td>
-        	<td>11</td>
-        	<td>3</td>
-        	<td>FD 2E nn </td>
-        	<td>2</td>
+			<td>LD IYl,n</td>
+			<td>11</td>
+			<td>3</td>
+			<td>FD 2E nn </td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>LD IYl,q</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 68+q</td>
-        	<td>2</td>
+			<td>LD IYl,q</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 68+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD L,(HL)</td>
@@ -1631,11 +1631,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>LD L,n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>2E nn</td>
-        	<td>2</td>
+			<td>LD L,n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>2E nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>LD L,r</td>
@@ -1771,11 +1771,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>OR n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>F6 nn</td>
-        	<td>2</td>
+			<td>OR n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>F6 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>OR r</td>
@@ -1785,18 +1785,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>OR IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD B0+p</td>
-        	<td>2</td>
+			<td>OR IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD B0+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>OR IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD B0+q</td>
-        	<td>2</td>
+			<td>OR IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD B0+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>OTDR</td>
@@ -2093,11 +2093,11 @@ table.instrset td+td+td+td {
 			<td>4</td>
 		</tr>
 		<tr>
-        	<td>RL r</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>CB 10+r</td>
-        	<td>2</td>
+			<td>RL r</td>
+			<td>8</td>
+			<td>2</td>
+			<td>CB 10+r</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>RLA</td>
@@ -2170,11 +2170,11 @@ table.instrset td+td+td+td {
 			<td>4</td>
 		</tr>
 		<tr>
-        	<td>RR r</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>CB 18+r</td>
-        	<td>2</td>
+			<td>RR r</td>
+			<td>8</td>
+			<td>2</td>
+			<td>CB 18+r</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>RRA</td>
@@ -2317,18 +2317,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>SBC A,IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 98+p</td>
-        	<td>2</td>
+			<td>SBC A,IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 98+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>SBC A,IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 98+q</td>
-        	<td>2</td>
+			<td>SBC A,IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 98+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>SBC HL,BC</td>
@@ -2499,11 +2499,11 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>SUB n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>D6 nn</td>
-        	<td>2</td>
+			<td>SUB n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>D6 nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>SUB r</td>
@@ -2513,18 +2513,18 @@ table.instrset td+td+td+td {
 			<td>1</td>
 		</tr>
 		<tr>
-        	<td>SUB IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD 90+p</td>
-        	<td>2</td>
+			<td>SUB IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD 90+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>SUB IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD 90+q</td>
-        	<td>2</td>
+			<td>SUB IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD 90+q</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>XOR (HL)</td>
@@ -2548,32 +2548,32 @@ table.instrset td+td+td+td {
 			<td>3</td>
 		</tr>
 		<tr>
-        	<td>XOR n</td>
-        	<td>7</td>
-        	<td>2</td>
-        	<td>EE nn</td>
-        	<td>2</td>
+			<td>XOR n</td>
+			<td>7</td>
+			<td>2</td>
+			<td>EE nn</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>XOR r</td>
-        	<td>4</td>
-        	<td>1</td>
-        	<td>A8+r</td>
-        	<td>1</td>
+			<td>XOR r</td>
+			<td>4</td>
+			<td>1</td>
+			<td>A8+r</td>
+			<td>1</td>
 		</tr>
 		<tr>
-        	<td>XOR IXp</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>DD A8+p</td>
-        	<td>2</td>
+			<td>XOR IXp</td>
+			<td>8</td>
+			<td>2</td>
+			<td>DD A8+p</td>
+			<td>2</td>
 		</tr>
 		<tr>
-        	<td>XOR IYq</td>
-        	<td>8</td>
-        	<td>2</td>
-        	<td>FD A8+q</td>
-        	<td>2</td>
+			<td>XOR IYq</td>
+			<td>8</td>
+			<td>2</td>
+			<td>FD A8+q</td>
+			<td>2</td>
 		</tr>
 	</tbody>
 </table>

@@ -30,11 +30,12 @@ function filter(query) {
 
 <h1>Z80 instruction set</h1>
 
-<p>This is an overview of the Z80 instruction set. Undocumented instructions are
-included (note that Sean Young wrote an
-<a href="http://www.myquest.nl/z80undocumented/">extensive document</a> about
-them), and the R800 instructions MULUB and MULUW as well as R800 timing
-information.</p>
+<p>This is an overview of the Z80 instruction set, including undocumented
+instructions and the R800 MULUB and MULUW instructions. Refer to the
+<a href="/resources/cpu/z80.pdf">Z80 user manual</a> for a detailed explanation
+of the instruction set. For more information on undocument instructions, refer
+to Sean Young’s extensive <a href="http://www.myquest.nl/z80undocumented/">The
+Undocumented Z80 Documented</a>.</p>
 
 <p>For Z80 timing calculations on MSX, refer to the Z80+M1 column which includes
 the M1 waits. For more information, see the <a href="#waits">wait cycles</a>

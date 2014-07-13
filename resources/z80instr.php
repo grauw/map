@@ -34,8 +34,10 @@ function filter(query) {
 instructions and the R800 MULUB and MULUW instructions. Refer to the
 <a href="/resources/cpu/z80.pdf">Z80 user manual</a> for a detailed explanation
 of the instruction set. For more information on undocument instructions, refer
-to Sean Young’s extensive <a href="http://www.myquest.nl/z80undocumented/">The
-Undocumented Z80 Documented</a>.</p>
+to Sean Young’s extensive
+<a href="http://www.myquest.nl/z80undocumented/z80-documented-v0.91.pdf">The
+Undocumented Z80 Documented</a>
+(<a href="http://www.myquest.nl/z80undocumented/">site</a>).</p>
 
 <p>For Z80 timing calculations on MSX, refer to the Z80+M1 column which includes
 the M1 waits. For more information, see the <a href="#waits">wait cycles</a>

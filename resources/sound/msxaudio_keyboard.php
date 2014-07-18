@@ -64,8 +64,8 @@ support this, but for this article we will assume the standard ports.</p>
 </tbody>
 </table>
 
-<p>See the <a href="/resources/sound/yamaha_y8950.pdf">MSX-AUDIO application
-manual</a> for more details.</p>
+<p>Refer to the <a href="/resources/sound/yamaha_y8950.pdf">MSX-AUDIO
+application manual</a> for more details on writing / reading register data.</p>
 
 <p>The key matrix is as follows:</p>
 

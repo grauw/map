@@ -75,10 +75,10 @@ documentation</a>.</p>
 <p>Returns UART status information.</p>
 
 <table>
-<tr><td>bit 0</td><td>TxRDY</td><td>Transmitter ready (1 = ready)</td></tr>
-<tr><td>bit 1</td><td>RxRDY</td><td>Receiver ready (1 = ready)</td></tr>
-<tr><td>bit 4</td><td>OE</td><td>Overrun error (1 = error occurred)</td></tr>
-<tr><td>bit 5</td><td>FE</td><td>Framing error (1 = error occurred)</td></tr>
+<tr><td>bit 0</td><td>TxRDY</td><td>Transmitter ready</td><td>(1 = ready)</td></tr>
+<tr><td>bit 1</td><td>RxRDY</td><td>Receiver ready</td><td>(1 = ready)</td></tr>
+<tr><td>bit 4</td><td>OE</td><td>Overrun error</td><td>(1 = error occurred)</td></tr>
+<tr><td>bit 5</td><td>FE</td><td>Framing error</td><td>(1 = error occurred)</td></tr>
 </table>
 
 <p>The error flags only apply to incoming data.</p>
@@ -89,14 +89,14 @@ documentation</a>.</p>
 <p>Configures the UART.</p>
 
 <table>
-<tr><td>bit 0</td><td>TxEN</td><td>Transmit enable (1 = enabled)</td></tr>
-<tr><td>bit 1</td><td>TxIE</td><td>TxRDY interrupt enable (1 = enabled)</td></tr>
-<tr><td>bit 2</td><td>RxEN</td><td>Receive enable (1 = enabled)</td></tr>
-<tr><td>bit 3</td><td>RxIE</td><td>RxRDY interrupt enable (1 = enabled)</td></tr>
-<tr><td>bit 4</td><td>ER</td><td>Error reset command (1 = reset error flags)</td></tr>
-<tr><td>bit 5</td><td></td><td>Unknown</td></tr>
-<tr><td>bit 6</td><td></td><td>Unknown</td></tr>
-<tr><td>bit 7</td><td>IR</td><td>Internal reset command (1 = reset UART, other bits should be 0)</td></tr>
+<tr><td>bit 0</td><td>TxEN</td><td>Transmit enable</td><td>(1 = enabled)</td></tr>
+<tr><td>bit 1</td><td>TxIE</td><td>TxRDY interrupt enable</td><td>(1 = enabled)</td></tr>
+<tr><td>bit 2</td><td>RxEN</td><td>Receive enable</td><td>(1 = enabled)</td></tr>
+<tr><td>bit 3</td><td>RxIE</td><td>RxRDY interrupt enable</td><td>(1 = enabled)</td></tr>
+<tr><td>bit 4</td><td>ER</td><td>Error reset command</td><td>(1 = reset error flags)</td></tr>
+<tr><td>bit 5</td><td></td><td>Unknown</td><td></td></tr>
+<tr><td>bit 6</td><td></td><td>Unknown</td><td></td></tr>
+<tr><td>bit 7</td><td>IR</td><td>Internal reset command</td><td>(1 = reset UART, other bits should be 0)</td></tr>
 </table>
 
 <p>Note that some bits act as commands when they are set (notably, bit 4),

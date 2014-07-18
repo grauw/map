@@ -18,6 +18,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-07-18</em><br />
+Added <a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music
+keyboard</a> documentation.</p>
+
 <p><em>2014-07-04</em><br />
 Added <a href="/resources/midi/ym2148.php">Yamaha YM2148</a> documentation. This
 is the Yamaha FM Sound Synthesizer Unit’s MIDI interface.</p>

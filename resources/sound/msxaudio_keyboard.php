@@ -14,30 +14,28 @@
 
 <h1>MSX-AUDIO music keyboard</h1>
 
-<p>The MSX-AUDIO Y8950 sound chip has a function to an external keyboard. All
+<p>The MSX-AUDIO Y8950 sound chip has a function for an external keyboard. All
 three MSX-AUDIO modules, the Philips NMS-1205 Music Module, the Toshiba HX-MU900
 MSX Music System and the Panasonic FS-CA1 MSX-Audio have a connector for these.
 The Toshiba and Panasonic’s connectors are compatible; the Philips connector
 differs from the others.</p>
 
-<p>There keyboard available for the Toshiba and Panasonic modules is the 49-key
-Toshiba HX-MU901.</p>
-
-<p>For their Music Module Philips offered a 61-key music keyboard, the NMS-1160.
-A modified Commodore keyboard is also often used. As said, this one is not
-compatible with the other modules, even though the connector fits the pins are
-connected differently.</p>
+<p>The keyboard available for the Toshiba and Panasonic modules is the 49-key
+Toshiba HX-MU901. For their Music Module Philips offered a 61-key music
+keyboard, the NMS-1160. As said, this one is not compatible with the other
+modules, even though the connector fits the pins are connected differently.
+Modified Commodore keyboards are also often used.</p>
 
 
-<h2>Reading the keyboard</h2>
+<h2 id="reading">Reading the keyboard</h2>
 
 <p>The keys can be read in a matrix structure of 8x8 bits, which is accessed
-through the MSX-AUDIO’s registers at I/O ports 0C0H (address) and 0C1H (data).
+through the MSX-AUDIO registers at I/O ports 0C0H (address) and 0C1H (data).
 The address port is write-only, the data port can be read or written to
-depending on the selected register. After all address and data writes, there
-must be a 12 cycle wait (at 3.58 Mhz).</p>
+depending on the selected register. A 12 cycle wait (at 3.58 Mhz) is required
+after all address and data writes.</p>
 
-<p>Note that the Panasonic module has a switch which lets it listen to 0C2H and
+<p>Note that the Panasonic module has a switch which lets it listen at 0C2H and
 0C3H, allowing two modules to be connected at the same time; the Philips and
 Toshiba modules can also be modified to provide such a switch. You may want to
 support this, but for this article we will assume the standard ports.</p>
@@ -72,7 +70,7 @@ manual</a> for more details.</p>
 <p>The key matrix is as follows:</p>
 
 <table>
-<caption>Toshiba HX-MU901</caption>
+<caption>Toshiba HX-MU901 matrix</caption>
 <thead>
 	<tr><th>Bit</th><th>7</th><th>6</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th><th>0</th></tr>
 </thead>
@@ -89,7 +87,7 @@ manual</a> for more details.</p>
 </table>
 
 <table>
-<caption>Philips NMS-1160</caption>
+<caption>Philips NMS-1160 matrix</caption>
 <thead>
 	<tr><th>Bit</th><th>7</th><th>6</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th><th>0</th></tr>
 </thead>
@@ -109,8 +107,8 @@ manual</a> for more details.</p>
 are the keyboard matrices. This means that in order to support both, you have to
 provide a means of selecting which keyboard to use. This can be done in a menu,
 but can also be done by asking Toshiba users to press the highest note on their
-keyboard (C6). This bit is not available on the Philips, so if this bit gets
-flagged the software can recognise it is a Toshiba and switch automatically.</p>
+keyboard (C6). This bit is not available on the Philips, so if it gets flagged
+the software can recognise it is a Toshiba and switch automatically.</p>
 
 <p>Who did it right? Neither. The MSX-AUDIO standard actually describes yet
 another matrix, similar to the Toshiba one but with bits 4-7 shifted one bit to
@@ -124,14 +122,14 @@ selected the pressed notes will overlap each other. This can be used to do a
 quick check if any notes are pressed at all, and if not, skip the remaining
 processing.</p>
 
-<h2>Reading the Toshiba Multi Sensor</h2>
+<h2 id="multisensor">The Toshiba HX-MU901’s Multi Sensor</h2>
 
 <p>Above the keybed, Toshiba also has a “Multi Sensor” with a capacitive ribbon
 control and two capacitive ENTER and STOP buttons. You might have pressed these
 and noticed that 8 keys will be flagged at a time. This is because these
 controls are on two additional rows, which are selected by default.</p>
 
-<p>On the Toshiba rows are controlled through the MSX-AUDIO’s “general purpose
+<p>These two rows are controlled through the MSX-AUDIO’s “general purpose
 I/O ports”. These aren’t Z80 I/O ports but rather four additional I/O bits which
 can be accessed through MSX-AUDIO registers 18H and 19H. Toshiba uses bits 0 and
 1 to select rows 8 and 9, which can then be read from register 05H.</p>

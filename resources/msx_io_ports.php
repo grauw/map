@@ -625,37 +625,37 @@ and working more or less in conjunction with it. These are the functions:</p>
   <tr>
     <td>0</td>
     <td>Input joystick pin 1</td>
-  <td>(up)</td>
+  <td>0 = up</td>
   </tr>
   <tr>
     <td>1</td>
     <td>Input joystick pin 2</td>
-  <td>(down)</td>
+  <td>0 = down</td>
   </tr>
   <tr>
     <td>2</td>
     <td>Input joystick pin 3</td>
-  <td>(left)</td>
+  <td>0 = left</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Input joystick pin 4</td>
-  <td>(right)</td>
+  <td>0 = right</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Input joystick pin 6</td>
-  <td>(trigger A) </td>
+  <td>0 = trigger A</td>
   </tr>
   <tr>
     <td>5</td>
     <td>Input joystick pin 7</td>
-  <td>(trigger B) </td>
+  <td>0 = trigger B</td>
   </tr>
   <tr>
     <td>6</td>
     <td>Japanese keyboard layout bit</td>
-  <td>(1=JIS, 0=ANSI/AIUEO/50on) </td>
+  <td>1 = JIS, 0 = ANSI/AIUEO/50on</td>
   </tr>
   <tr>
     <td>7</td>
@@ -674,22 +674,22 @@ and working more or less in conjunction with it. These are the functions:</p>
   <tr>
     <td>0</td>
     <td>Output joystick port 1, pin 6</td>
-  <td>(set 1 for input)</td>
+  <td>Set to 1 to allow input</td>
   </tr>
   <tr>
     <td>1</td>
     <td>Output joystick port 1, pin 7</td>
-  <td>(set 1 for input)</td>
+  <td>Set to 1 to allow input</td>
   </tr>
   <tr>
     <td>2</td>
     <td>Output joystick port 2, pin 6</td>
-  <td>(set 1 for input)</td>
+  <td>Set to 1 to allow input</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Output joystick port 2, pin 7</td>
-  <td>(set 1 for input)</td>
+  <td>Set to 1 to allow input</td>
   </tr>
   <tr>
     <td>4</td>
@@ -704,12 +704,12 @@ and working more or less in conjunction with it. These are the functions:</p>
   <tr>
     <td>6</td>
     <td>Joystick input selection, for r#14 inputs</td>
-  <td>(1=port 2)</td>
+  <td>1 = port 2</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Kana led control</td>
-  <td>(1=off)</td>
+  <td>1 = off</td>
   </tr>
 </table>
 

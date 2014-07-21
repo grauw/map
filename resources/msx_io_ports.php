@@ -655,7 +655,7 @@ and working more or less in conjunction with it. These are the functions:</p>
   <tr>
     <td>6</td>
     <td>Japanese keyboard layout bit</td>
-  <td>(1=JIS, 0=ANSI) </td>
+  <td>(1=JIS, 0=ANSI/AIUEO/50on) </td>
   </tr>
   <tr>
     <td>7</td>

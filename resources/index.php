@@ -130,6 +130,11 @@ information, feel free to send us an email.</p>
       <li class="map"><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a></li>
       </ul>
     </li>
+    <li id="opl3">OPL3
+      <ul>
+      <li><a href="/resources/sound/yamaha_ymf262.pdf">Yamaha YMF262 (OPL3) application manual</a></li>
+      </ul>
+    </li>
     <li id="opl4">MoonSound
       <ul>
       <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha YMF278B (OPL4) application manual</a></li>

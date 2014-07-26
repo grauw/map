@@ -14,6 +14,11 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2014-04-03</em><br />
+Added links to Nestor Soriano (Konamiman)’s great
+<a href="/resources/#msxbios">MSX2 Technical Handbook
+transscription</a>, and some clean-up.</p>
+
 <p><em>2014-02-08</em><br />
 Added link to Eugeny Brychkov’s excellent
 <a href="/resources/#v9938">V9938 application manual

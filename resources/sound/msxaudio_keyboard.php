@@ -20,11 +20,12 @@ MSX Music System and the Panasonic FS-CA1 MSX-Audio have a connector for these.
 The Toshiba and Panasonic’s connectors are compatible; the Philips connector
 differs from the others.</p>
 
-<p>The keyboard available for the Toshiba and Panasonic modules is the 49-key
-Toshiba HX-MU901. For their Music Module Philips offered a 61-key music
-keyboard, the NMS-1160. As said, this one is not compatible with the other
-modules, even though the connector fits the pins are connected differently.
-Modified Commodore keyboards are also often used.</p>
+<p>The keyboards available for the Toshiba and Panasonic modules are the 49-key
+Toshiba HX-MU901, the Yamaha YK-10, YK-20 and the YK-01 (44 keys). For their
+Music Module Philips offered a 61-key music keyboard, the NMS-1160. As said,
+this one is not compatible with the other modules, even though the connector
+fits the pins are connected differently. Modified Commodore keyboards are also
+often used.</p>
 
 
 <h2 id="reading">Reading the keyboard</h2>
@@ -70,7 +71,7 @@ application manual</a> for more details on writing / reading register data.</p>
 <p>The key matrix is as follows:</p>
 
 <table>
-<caption>Toshiba HX-MU901 matrix</caption>
+<caption>Toshiba HX-MU901 and Yamaha YK-01/10/20 matrix</caption>
 <thead>
 	<tr><th>Bit</th><th>7</th><th>6</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th><th>0</th></tr>
 </thead>
@@ -106,9 +107,10 @@ application manual</a> for more details on writing / reading register data.</p>
 <p>As you can see, unfortunately not only the connectors are different but so
 are the keyboard matrices. This means that in order to support both, you have to
 provide a means of selecting which keyboard to use. This can be done in a menu,
-but can also be done by asking Toshiba users to press the highest note on their
-keyboard (C6). This bit is not available on the Philips, so if it gets flagged
-the software can recognise it is a Toshiba and switch automatically.</p>
+but can also be done by asking Toshiba and Yamaha keyboard users to press the
+highest note on their keyboard (C6). This bit is not available on the Philips,
+so if it gets flagged the software can recognise it is a Toshiba and switch
+automatically.</p>
 
 <p>Who did it right? According to MSX-Datapack volume 2 section 4.1.4
 (page 281), the Toshiba matrix is the official one. The MSX-AUDIO documentation

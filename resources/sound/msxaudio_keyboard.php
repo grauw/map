@@ -110,12 +110,9 @@ but can also be done by asking Toshiba users to press the highest note on their
 keyboard (C6). This bit is not available on the Philips, so if it gets flagged
 the software can recognise it is a Toshiba and switch automatically.</p>
 
-<p>Who did it right? Neither. The MSX-AUDIO standard actually describes yet
-another matrix, similar to the Toshiba one but with bits 4-7 shifted one bit to
-the right. I am not aware of a keyboard which implements it so I won’t list a
-table for it here, but see page 39 of the
-<a href="/resources/sound/yamaha_y8950.pdf">MSX-AUDIO application manual</a>
-if you’re interested.</p>
+<p>Which one is correct? According to MSX-Datapack volume 2 section 4.1.4
+(page 281), the Toshiba matrix is the official one. The MSX-AUDIO documentation
+describes yet another layout, but this is likely an editorial error.</p>
 
 <p>As an aside, because the row selection is not exclusive, if multiple rows are
 selected the pressed notes will overlap each other. This can be used to do a

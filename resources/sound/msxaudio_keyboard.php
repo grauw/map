@@ -110,7 +110,7 @@ but can also be done by asking Toshiba users to press the highest note on their
 keyboard (C6). This bit is not available on the Philips, so if it gets flagged
 the software can recognise it is a Toshiba and switch automatically.</p>
 
-<p>Which one is correct? According to MSX-Datapack volume 2 section 4.1.4
+<p>Who did it right? According to MSX-Datapack volume 2 section 4.1.4
 (page 281), the Toshiba matrix is the official one. The MSX-AUDIO documentation
 describes yet another layout, but this is likely an editorial error.</p>
 

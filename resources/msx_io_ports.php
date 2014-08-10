@@ -925,8 +925,6 @@ and working more or less in conjunction with it. These are the functions:</p>
 </tr>
 </table>
 
-<p>It is rumoured the turboR R800 mode’s VDP slowdown can be disabled through one of the S1990’s registers. How, however, is still a mystery ^_^.</p>
-
 
 
 <h2 id="sysflags">System flags</h2>

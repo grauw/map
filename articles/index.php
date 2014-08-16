@@ -40,8 +40,8 @@
     <li class="map"><a href="/articles/split_guide.php">Screensplit programming guide</a></li>
     <li class="map"><a href="/articles/vdp_commands_speed.php">VDP commands ~ speed measurements</a></li>
     <li class="map"><a href="/articles/scrolling.php">A guide to scrolling game engines on MSX</a></li>
-    <li><a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 timings analysis</a> · by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team</li>
-    <li><a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 timings analysis, part 2</a> · by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team</li>
+    <li><a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a> · by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team</li>
+    <li><a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings, part II</a> · by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team</li>
     </ul>
   </li>
   <li id="other">Other topics

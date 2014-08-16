@@ -18,10 +18,14 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-08-16</em><br />
+Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings,
+part II</a>.</p>
+
 <p><em>2014-07-26</em><br />
-Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings
-analysis</a> article by the <a href="http://openmsx.sourceforge.net/">openMSX</a>
-team. Highly detailed insights in the inner workings of the VDP.</p>
+Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
+article by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team.
+Highly detailed insights in the inner workings of the VDP.</p>
 
 <p><em>2014-07-18</em><br />
 Added <a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music
@@ -43,9 +47,6 @@ Translated <a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handl
 
 <p><em>2014-05-14</em><br />
 Translated <a href="/articles/interrupts.php">Interrupts</a> article by Ramon van der Winkel.</p>
-
-<p><em>2014-05-10</em><br />
-Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

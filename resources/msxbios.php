@@ -984,10 +984,23 @@ Registers: AF
 <pre>
 Address  : #0144
 Function : Executes I/O for mass-storage media like diskettes
-Input    : B  - Number of sectors
+Input    : A  - Drive number (0 = A:, 1 = B:, etc.)
+           B  - Number of sectors
            C  - Media ID of the disk
            DE - Begin sector
            HL - Begin address in memory
+           F  - Set carry to write, unset carry to read
+Output   : A  - Error code (only when writing)
+                0 = Write protected
+                2 = Not ready
+                4 = Data error
+                6 = Seek error
+                8 = Record not found
+                10 = Write error
+                12 = Bad parameter
+                14 = Out of memory
+                16 = Other error
+           B  - Number of sectors actually written or read
 Registers: All
 Remark   : Before the call is called, the Z-flag must be reset, and the execution
            address which was in HL must be at the last stack address

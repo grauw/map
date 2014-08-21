@@ -60,10 +60,12 @@ VDP_GetVersion:
 ; f &lt;- z: TMS9918A, nz: V99X8
 ;
 VDP_IsTMS9918A:
+    in a,(99H)           ; read s#0, make sure interrupt flag is reset
     di
+VDP_IsTMS9918A_Wait:
     in a,(99H)           ; read s#0
-    and a
-    jp p,VDP_IsTMS9918A  ; wait until interrupt flag is set
+    and a                ; wait until interrupt flag is set
+    jp p,VDP_IsTMS9918A_Wait
     ld a,2               ; select s#2 on V9938
     out (99H),a
     ld a,15 + 128

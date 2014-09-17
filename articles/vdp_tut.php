@@ -225,19 +225,18 @@ counter again all the time. Note however that you can’t mix reads and writes �
 if you wish to change from reading to writing mode or vice versa you need to
 re-set the address with the read/write bit set appropriately.</p>
 
+<p>On the TMS9918 the VRAM address pointer gets modified when you write to a
+register. Therefore, on MSX1 you must keep the interrupts disabled while writing
+to or reading from VRAM. Fortunately the V9938’s VRAM address pointer is not
+affected by register writes, so this restriction does not apply to MSX2.</p>
+
 <p>The <code>OTIR</code> and <code>INIR</code> instructions are particularly fit
 to write or read a large number of bytes, and refer to the
 <a href="/articles/fast_loops.php">Fast Loops</a> article for more details on
 how you can access the VRAM as fast as possible by creating fast 16-bit loops
 and unrolling the <code>OTIR</code>/<code>INIR</code> instructions.</p>
 
-<p>Note that on the TMS9918, the VRAM address pointer gets modified when you
-write to a register. Therefore, on MSX1 you must keep the interrupts disabled
-while writing to or reading from VRAM. Fortunately on the MSX2’s V9938 the VRAM
-address pointer is not affected by register writes, so this restriction does not
-apply.</p>
-
-<p>These are the routines I use to set the VDP for reading/writing the VRAM:</p>
+<p>Here are example routines to set the VDP for reading/writing the VRAM:</p>
 
 <pre>
 ;

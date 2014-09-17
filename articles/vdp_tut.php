@@ -230,11 +230,42 @@ register. Therefore, on MSX1 you must keep the interrupts disabled while writing
 to or reading from VRAM. Fortunately the V9938’s VRAM address pointer is not
 affected by register writes, so this restriction does not apply to MSX2.</p>
 
-<p>The <code>OTIR</code> and <code>INIR</code> instructions are particularly fit
-to write or read a large number of bytes, and refer to the
+<p>It is important to know that there is a speed limit when accessing the VRAM.
+How fast you can write exactly depends on the screen mode you’re in and whether
+you have sprites enabled, etc. The TMS9918 is the slowest, and in the worst case
+requires you to space your reads and writes 29 T-states apart. Notably, this is
+slower than the <code>OTIR</code> and <code>INIR</code> instructions (23
+cycles), so use the following code in stead (exactly 29 cycles):</p>
+
+<pre>OutiToVram:
+	outi
+	jp nz,OutiToVram
+</pre>
+
+<p>The V9938 is quite a bit faster, reads and writes only need to be 15 T-states
+apart. There is one exception: screen 0 requires a 20 T-states wait, both in
+width 40 and 80 modes. Note that the TMS9918 is actually faster in this screen
+mode, so make sure to test screen 0 programs on MSX2 hardware.</p>
+
+<p>What this means is that in MSX2 software you can safely use the
+<code>OTIR</code> and <code>INIR</code> instructions to output bulk data to the
+VRAM. If you’re not in screen 0, you can also safely use <code>OUTI</code>
+and <code>INI</code> instructions, refer to the
 <a href="/articles/fast_loops.php">Fast Loops</a> article for more details on
-how you can access the VRAM as fast as possible by creating fast 16-bit loops
-and unrolling the <code>OTIR</code>/<code>INIR</code> instructions.</p>
+how you can access the VRAM as quickly as possible by creating fast 16-bit loops
+and unrolling the <code>OTIR</code> / <code>INIR</code> instructions.</p>
+
+<p>Finally, during vertical blanking or when the screen is disabled, there is no
+speed limit. This applies to both the TMS9918 and the V9938. When you intend to
+exploit this fact, please be aware that at 60Hz, the vertical blanking period is
+shorter than at 50Hz. Test your code on both European and Japanese machines.</p>
+
+<p>For the exact details of TMS9918 VRAM access speeds, consult section 2.1.5 of
+the <a href="/resources/video/texasinstruments_tms9918.pdf">TMS9918 application
+manual</a>. For details about the V9938 timing consult Maarten ter Huurne’s
+<a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
+(<a href="/articles/vdp-vram-timing/vdp-timing-2.html">part II</a>) articles.
+Finally, note that all V9938 timings also apply to the V9958.</p>
 
 <p>Here are example routines to set the VDP for reading/writing the VRAM:</p>
 

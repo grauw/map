@@ -28,7 +28,7 @@
   <li><a href="#indirect">Indirect register access</a></li>
   <li><a href="#status">Status register access</a></li>
 </ul>
-<li><a href="#vram">Writing to and reading from the VRAM</a></li>
+<li><a href="#vram">Writing and reading the VRAM</a></li>
 <li><a href="#commands">Executing VDP commands</a></li>
 <li><a href="#palette">Setting the palette</a></li>
 <li><a href="#example">Programming example</a></li>
@@ -185,7 +185,7 @@
 
 
 
-<h2 id="vram">Writing to and reading from the VRAM</h2>
+<h2 id="vram">Writing and reading the VRAM</h2>
 
 <p>Now, for the VRAM... It is pretty obvious that the CPU needs a means to write data to it, otherwise it would be quite hard to load an image into the VRAM. Aside from that, the VRAM access is also used a lot to update tables within the VRAM, like for example the sprite tables, and in (tile-based) screen modes 1-4 the pattern and attribute tables aswell. Especially in those screen modes you can pull some really cool effects using this.</p>
 

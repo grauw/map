@@ -191,7 +191,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>Now, for the VRAM... It is pretty obvious that the CPU needs a means to write data to it, otherwise it would be quite hard to load an image into the VRAM. Aside from that, the VRAM access is also used a lot to update tables within the VRAM, like for example the sprite tables, and in (tile-based) screen modes 1-4 the pattern and attribute tables aswell. Especially in those screen modes you can pull some really cool effects using this.</p>
 
-<p>Since the VRAM is not directly connected to the CPU, communication with it needs to be done through the VDP. On MSX2, the process of writing bytes to the VRAM consists of two steps, first one needs to set the VDP’s ‘address counter’ and the mode (read or write access), and then the program can output (or input) a number of bytes to the VDP, which is interfaced with the VRAM. The setting of the address counter has to be done like this:</p>
+<p>Since the VRAM is not directly connected to the CPU, communication with it needs to be done through the VDP. On the MSX, the process of writing bytes to the VRAM consists of two steps, first one needs to set the VDP’s ‘address counter’ and the mode (read or write access), and then the program can output (or input) a number of bytes to the VDP, which is interfaced with the VRAM. The setting of the address counter has to be done like this:</p>
 
 <ol type="1">
 <li>set the address counter bits 14-16 in register 14</li>

@@ -270,7 +270,7 @@ Finally, note that all V9938 timings also apply to the V9958.</p>
 <table>
 <caption>Minimum VRAM access timings in 3.58 MHz Z80 cycles</caption>
 <thead>
-	<tr><th>Screen mode</th><th>TMS9918</th><th>V9938</th></tr>
+	<tr><th>Screen mode</th><th>TMS9918</th><th>V9938 / V9958</th></tr>
 </thead>
 <tbody>
 	<tr><td>screen 0, width 40 (TEXT 1)</td><td>12</td><td>20</td></tr>

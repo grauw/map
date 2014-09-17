@@ -22,12 +22,13 @@
 
 <ul>
 <li><a href="#basics">The VDP basics</a></li>
-<li><a href="#registers">Writing and reading VDP registers</a></li>
+<li><a href="#registers">Writing and reading VDP registers</a>
 <ul>
   <li><a href="#direct">Direct register access</a></li>
   <li><a href="#indirect">Indirect register access</a></li>
   <li><a href="#status">Status register access</a></li>
 </ul>
+</li>
 <li><a href="#vram">Writing and reading the VRAM</a></li>
 <li><a href="#commands">Executing VDP commands</a></li>
 <li><a href="#palette">Setting the palette</a></li>

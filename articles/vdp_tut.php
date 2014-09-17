@@ -14,8 +14,6 @@
 
 <h1>VDP programming tutorial</h1>
 
-<p>Hi all!</p>
-
 <p>This article is meant to be a tutorial for beginning Assembly programmers who want to access the <abbr title="Machines with Software eXchangability">MSX</abbr> <abbr title="Video Display Processor">VDP</abbr>. Knownledge of Z80 assembly is expected. I’ll start out with explaining a little about the three main features of the VDP, then I will go into more detail on how to use them, giving some sample routines inbetween, then I will tell something about the palette, and finally I will give an small example using all addressing methods.</p>
 
 <p>Table of contents:</p>

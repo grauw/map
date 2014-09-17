@@ -27,7 +27,11 @@
   <li><a href="#status">Status register access</a></li>
 </ul>
 </li>
-<li><a href="#vram">Writing and reading the VRAM</a></li>
+<li><a href="#vram">Writing and reading the VRAM</a>
+<ul>
+  <li><a href="#vramtiming">VRAM access timing</a></li>
+</ul>
+</li>
 <li><a href="#commands">Executing VDP commands</a></li>
 <li><a href="#palette">Setting the palette</a></li>
 <li><a href="#example">Programming example</a></li>
@@ -228,6 +232,8 @@ re-set the address with the read/write bit set appropriately.</p>
 register. Therefore, on MSX1 you must keep the interrupts disabled while writing
 to or reading from VRAM. Fortunately the V9938’s VRAM address pointer is not
 affected by register writes, so this restriction does not apply to MSX2.</p>
+
+<h3 id="vramtiming">VRAM access timing</h3>
 
 <p>It is important to know that there is a speed limit when accessing the VRAM.
 How fast you can write exactly depends on the screen mode you’re in and whether

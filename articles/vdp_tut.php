@@ -220,6 +220,12 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>After having done this, you can read or write the data from or to port #98. After each VRAM read/write access, the address counter is automatically increased, so if you use repeated reads/writes you don’t need to set the address counter again all the time. Note however that you can’t mix reads and writes – if you wish to change from reading to writing mode or vice versa you need to re-set the address with the read/write bit set appropriately. The <code>OTIR</code> and <code>INIR</code> instructions are particularly fit to write or read a large number of bytes, and refer to the <a href="/articles/fast_loops.php">Fast Loops</a> article for more details on how you can access the VRAM as fast as possible by creating fast 16-bit loops and unrolling the <code>OTIR</code>/<code>INIR</code> instructions.</p>
 
+<p>Note that on the TMS9918, the VRAM address pointer gets modified when you
+write to a register. Therefore, on MSX1 you must keep the interrupts disabled
+while writing to or reading from VRAM. Fortunately on the MSX2’s V9938 the VRAM
+address pointer is not affected by register writes, so this restriction does not
+apply.</p>
+
 <p>These are the routines I use to set the VDP for reading/writing the VRAM:</p>
 
 <pre>

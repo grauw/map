@@ -267,6 +267,25 @@ manual</a>. For details about the V9938 timing consult Maarten ter Huurne’s
 (<a href="/articles/vdp-vram-timing/vdp-timing-2.html">part II</a>) articles.
 Finally, note that all V9938 timings also apply to the V9958.</p>
 
+<table>
+<caption>Minimum VRAM access timings in 3.58 MHz Z80 cycles</caption>
+<thead>
+	<tr><th>Screen mode</th><th>TMS9918</th><th>V9938</th></tr>
+</thead>
+<tbody>
+	<tr><td>screen 0, width 40 (TEXT 1)</td><td>12</td><td>20</td></tr>
+	<tr><td>screen 0, width 80 (TEXT 2)</td><td></td><td>20</td></tr>
+	<tr><td>screen 1 (GRAPHIC 1)</td><td>29</td><td>15</td></tr>
+	<tr><td>screen 2 (GRAPHIC 2)</td><td>29</td><td>15</td></tr>
+	<tr><td>screen 3 (MULTICOLOR)</td><td>13</td><td>15</td></tr>
+	<tr><td>screen 4 (GRAPHIC 3)</td><td></td><td>15</td></tr>
+	<tr><td>screen 5 (GRAPHIC 4)</td><td></td><td>15</td></tr>
+	<tr><td>screen 6 (GRAPHIC 5)</td><td></td><td>15</td></tr>
+	<tr><td>screen 7 (GRAPHIC 6)</td><td></td><td>15</td></tr>
+	<tr><td>screen 8 (GRAPHIC 7)</td><td></td><td>15</td></tr>
+</tbody>
+</table>
+
 <p>Here are example routines to set the VDP for reading/writing the VRAM:</p>
 
 <pre>

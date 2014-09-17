@@ -270,19 +270,19 @@ Finally, note that all V9938 timings also apply to the V9958.</p>
 <table>
 <caption>Minimum VRAM access timings in 3.58 MHz Z80 cycles</caption>
 <thead>
-	<tr><th>Screen mode</th><th>TMS9918</th><th>V9938 / V9958</th></tr>
+	<tr><th>Screen mode</th><th>VDP mode</th><th>TMS9918</th><th>V9938 / V9958</th></tr>
 </thead>
 <tbody>
-	<tr><td>screen 0, width 40 (TEXT 1)</td><td>12</td><td>20</td></tr>
-	<tr><td>screen 0, width 80 (TEXT 2)</td><td></td><td>20</td></tr>
-	<tr><td>screen 1 (GRAPHIC 1)</td><td>29</td><td>15</td></tr>
-	<tr><td>screen 2 (GRAPHIC 2)</td><td>29</td><td>15</td></tr>
-	<tr><td>screen 3 (MULTICOLOR)</td><td>13</td><td>15</td></tr>
-	<tr><td>screen 4 (GRAPHIC 3)</td><td></td><td>15</td></tr>
-	<tr><td>screen 5 (GRAPHIC 4)</td><td></td><td>15</td></tr>
-	<tr><td>screen 6 (GRAPHIC 5)</td><td></td><td>15</td></tr>
-	<tr><td>screen 7 (GRAPHIC 6)</td><td></td><td>15</td></tr>
-	<tr><td>screen 8 (GRAPHIC 7)</td><td></td><td>15</td></tr>
+	<tr><td>screen 0, width 40</td><td>TEXT 1</td><td>12</td><td>20</td></tr>
+	<tr><td>screen 0, width 80</td><td>TEXT 2</td><td></td><td>20</td></tr>
+	<tr><td>screen 1</td><td>GRAPHIC 1</td><td>29</td><td>15</td></tr>
+	<tr><td>screen 2</td><td>GRAPHIC 2</td><td>29</td><td>15</td></tr>
+	<tr><td>screen 3</td><td>MULTICOLOR</td><td>13</td><td>15</td></tr>
+	<tr><td>screen 4</td><td>GRAPHIC 3</td><td></td><td>15</td></tr>
+	<tr><td>screen 5</td><td>GRAPHIC 4</td><td></td><td>15</td></tr>
+	<tr><td>screen 6</td><td>GRAPHIC 5</td><td></td><td>15</td></tr>
+	<tr><td>screen 7</td><td>GRAPHIC 6</td><td></td><td>15</td></tr>
+	<tr><td>screen 8</td><td>GRAPHIC 7</td><td></td><td>15</td></tr>
 </tbody>
 </table>
 

@@ -171,7 +171,6 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 	out	(#99),a
 	ld	a,15+128
 	out	(#99),a
-	ld	a,(de)		;wait 7 t-states
 	in	a,(#99)
 	ex	af,af'
 	xor	a		;ld a,0

@@ -267,7 +267,7 @@ shorter than at 50Hz. Test your code on both European and Japanese machines.</p>
 
 <p>For the exact details of TMS9918 VRAM access speeds, consult section 2.1.5 of
 the <a href="/resources/video/texasinstruments_tms9918.pdf">TMS9918 application
-manual</a>. For details about the V9938 timing consult Maarten ter Huurne’s
+manual</a>. For details about the V9938 timing consult Wouter Vermaelen’s
 <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
 (<a href="/articles/vdp-vram-timing/vdp-timing-2.html">part II</a>) articles.
 Finally, note that all V9938 timings also apply to the V9958.</p>

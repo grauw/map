@@ -18,7 +18,7 @@
 <h2>Latest updates:</h2>
 
 <p><em>2005-08-11</em><br />
-Optimized DoLDIR routine even more, yet another 5 ticks faster! (thanks Arnold
+Optimized FastLDIR routine even more, yet another 5 ticks faster! (thanks Arnold
 Metselaar).</p>
 
 <p><em>2004-01-22</em><br />
@@ -253,23 +253,23 @@ use ^_^.</p>
 
 <pre>
 ;
-; DoLDIR - About 21% faster alternative for large LDIRs
+; FastLDIR - About 21% faster alternative for large LDIRs
 ;
-DoLDIR:
+FastLDIR:
     xor a
     sub c
     and 16 - 1
     add a,a
     di
-    ld (DoLDIR_SelfM + 1),a
+    ld (FastLDIR_SelfM + 1),a
     ei
-DoLDIR_SelfM:
+FastLDIR_SelfM:  ; self modifying code
     jr nz,$
-DoLDIR_Loop:
+FastLDIR_Loop:
     REPEAT 16
     ldi
     ENDR
-    jp pe,DoLDIR_Loop
+    jp pe,FastLDIR_Loop
     ret
 </pre>
 

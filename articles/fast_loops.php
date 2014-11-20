@@ -260,7 +260,9 @@ DoLDIR:
     sub c
     and 16 - 1
     add a,a
+    di
     ld (DoLDIR_SelfM + 1),a
+    ei
 DoLDIR_SelfM:
     jr nz,$
 DoLDIR_Loop:

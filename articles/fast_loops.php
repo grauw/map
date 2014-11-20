@@ -52,12 +52,12 @@ of different kinds of loops in assembly.</p>
 <p>Most often, you see 16-bit loops used like this:</p>
 
 <pre>
-	ld de,nnnn
-loop:	...			; --- do something ---
-	dec de
-	ld a,d
-	or e
-	jp nz,loop
+    ld de,nnnn
+loop: ...           ; --- do something ---
+    dec de
+    ld a,d
+    or e
+    jp nz,loop
 </pre>
 
 <p>However there’s a much faster way to loop. In fact, you can loop 16 bit loops
@@ -74,12 +74,12 @@ another 256 loops.</p>
 <p>An explaining example (522 loops):</p>
 
 <pre>
-	ld b,10			;The LSB of the loop is 10
-	ld d,3			;The MSB of the loop + the first loop is 3
-loop:	...			; --- do something ---
-	djnz loop
-	dec d
-	jp nz,loop
+    ld b,10         ;The LSB of the loop is 10
+    ld d,3          ;The MSB of the loop + the first loop is 3
+loop: ...           ; --- do something ---
+    djnz loop
+    dec d
+    jp nz,loop
 </pre>
 
 <p>This will loop 522 times. If you want to loop 512 times, use b=0, d=2 and if
@@ -110,10 +110,10 @@ exactly the same, it goes like this (source value is in de, result will be in
 ‘db’):</p>
 
 <pre>
-	dec de			;Mystery fast loop calculus
-	ld b,e
-	inc b
-	inc d
+    dec de          ;Mystery fast loop calculus
+    ld b,e
+    inc b
+    inc d
 </pre>
 
 <p>That’ll only take you like 22 T-states to precalculate the value. And
@@ -123,14 +123,14 @@ or two.</p>
 <p>So, to summarize, a full-fledged fast 16-bit loop looks like this:</p>
 
 <pre>
-	dec de			;Number of loops is in DE
-	ld b,e			;Calculate DB value (destroys B, D and E)
-	inc b
-	inc d
-loop:	...			; --- do something ---
-	djnz loop
-	dec d
-	jp nz,loop
+    dec de          ;Number of loops is in DE
+    ld b,e          ;Calculate DB value (destroys B, D and E)
+    inc b
+    inc d
+loop: ...           ; --- do something ---
+    djnz loop
+    dec d
+    jp nz,loop
 </pre>
 
 
@@ -145,10 +145,10 @@ This is for example used a lot in routines which execute VDP commandos, where
 the part which actually sends the VDP command usually looks like this:</p>
 
 <pre>
-	ld hl,commando		;the address where the VDP-commando is stored
-	ld c,#9B		;the VDP port to write to
-	ld b,15			;the number of loops (yes, ld bc,#0F9b is faster)
-	otir
+    ld hl,commando  ;the address where the VDP-commando is stored
+    ld c,#9B        ;the VDP port to write to
+    ld b,15         ;the number of loops (yes, ld bc,#0F9b is faster)
+    otir
 </pre>
 
 <p>However, if you know in advance how many loops the otir will go through, and
@@ -165,70 +165,71 @@ VDP-commando), which was made faster by using 15 OUTIs instead of an otir:</p>
 ;
 ;DoCopy - Faster by using OUTIs.
 ;
-DoCopy:	ld a,32
-	di
-	out (#99),a
-	ld a,17+128
-	ei
-	out (#99),a
-	ld c,#9B
+DoCopy:
+    ld a,32
+    di
+    out (#99),a
+    ld a,17+128
+    ei
+    out (#99),a
+    ld c,#9B
 VDPready:
-	di
-	ld a,2		;set s#2
-	out (#99),a
-	ld a,15+128
-	out (#99),a
-	ld a,(de)	;waste some time...
-	in a,(#99)
-	rra
-	ld a,0		;set s#0, NO xor because that’ll clear the carry
-	out (#99),a
-	ld a,15+128
-	ei
-	out (#99),a
-	jp c,VDPready
-	outi		;15x OUTI
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	outi
-	ret
+    di
+    ld a,2          ;set s#2
+    out (#99),a
+    ld a,15+128
+    out (#99),a
+    ld a,(de)       ;waste some time...
+    in a,(#99)
+    rra
+    ld a,0          ;set s#0, NO xor because that’ll clear the carry
+    out (#99),a
+    ld a,15+128
+    ei
+    out (#99),a
+    jp c,VDPready
+    outi            ;15x OUTI
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    ret
 </pre>
 
 <p>To make this look a little more compact you can also replace the 15 OUTIs
 with</p>
 
 <pre>
-	DW	#A3ED,#A3ED,#A3ED,#A3ED		;15x OUTI (#ED #A3)
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED
+    DW #A3ED,#A3ED,#A3ED,#A3ED  ;15x OUTI (#ED #A3)
+    DW #A3ED,#A3ED,#A3ED,#A3ED
+    DW #A3ED,#A3ED,#A3ED,#A3ED
+    DW #A3ED,#A3ED,#A3ED
 </pre>
 
 <p>or, if your assembler supports a repeat instruction, something like</p>
 
 <pre>
-	REPEAT 15
-	outi
-	ENDR
+    REPEAT 15
+    outi
+    ENDR
 </pre>
 
 <p>On a sidenote, even though the OUTIs speed up the execution time of this
 routine, this DoCopy is still not the fastest one possible, since you can make
 the wait loop a lot shorter and faster (in other words, improve the response
 time) by using status register 2 as the default, instead of 0. However, to do
-	that you need to use your own interrupt routine, which I won’t explain here
-	^_^.</p>
+that you need to use your own interrupt routine, which I won’t explain here
+^_^.</p>
 
 <h3 id="unrollingldir">Making LDIR 21% faster</h3>
 
@@ -248,11 +249,12 @@ what we can do instead, is expanding only part of the loop. Say, we need to LDIR
 something 256 (#100) times. Instead of LDIR we could then for example write:</p>
 
 <pre>
-	ld bc,256
-Loop:	REPEAT 16	;I’ll use repeat here (non-existant in compass) (yet?)
-	ldi		; to make things a little shorter. It is the same
-	ENDR		; as writing 16x ldi.
-	jp pe,Loop	;Loop until bc = zero
+    ld bc,256
+Loop:
+    REPEAT 16       ;I’ll use repeat here (non-existant in compass) (yet?)
+    ldi             ; to make things a little shorter. It is the same
+    ENDR            ; as writing 16x ldi.
+    jp pe,Loop      ;Loop until bc = zero
 </pre>
 
 <p>This method is almost 21% faster than an LDIR. Relatively seen the JP PE (the
@@ -284,19 +286,20 @@ use ^_^.</p>
 ;
 ;DoLDIR - About 21% faster alternative for large LDIRs
 ;
-DoLDIR:	xor a
-	sub c
-	and 16-1
-	add a,a
-	ld (DoLDIR_SelfM+1),a
+DoLDIR:
+    xor a
+    sub c
+    and 16-1
+    add a,a
+    ld (DoLDIR_SelfM+1),a
 DoLDIR_SelfM:
-	jr nz,$
+    jr nz,$
 DoLDIR_Loop:
-	REPEAT 16
-	ldi
-	ENDR
-	jp pe,DoLDIR_Loop
-	ret
+    REPEAT 16
+    ldi
+    ENDR
+    jp pe,DoLDIR_Loop
+    ret
 </pre>
 
 <p>It first calculates the number of loops modulo the LDI string size, then uses

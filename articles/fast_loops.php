@@ -261,10 +261,10 @@ FastLDIR:
     and 16 - 1
     add a,a
     di
-    ld (FastLDIR_SelfM + 1),a
+    ld (FastLDIR_jumpOffset),a
     ei
-FastLDIR_SelfM:  ; self modifying code
-    jr nz,$
+    jr nz,$  ; self modifying code
+FastLDIR_jumpOffset: equ $ - 1
 FastLDIR_Loop:
     REPEAT 16
     ldi

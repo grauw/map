@@ -53,11 +53,12 @@ of different kinds of loops in assembly.</p>
 
 <pre>
     ld de,nnnn
-loop: ...           ; --- do something ---
+Loop:
+    ; ... do something here
     dec de
     ld a,d
     or e
-    jp nz,loop
+    jp nz,Loop
 </pre>
 
 <p>However there’s a much faster way to loop. In fact, you can loop 16 bit loops
@@ -76,10 +77,11 @@ another 256 loops.</p>
 <pre>
     ld b,10         ; The LSB of the loop is 10
     ld d,3          ; The MSB of the loop + the first loop is 3
-loop: ...           ; --- do something ---
-    djnz loop
+Loop:
+    ; ... do something here
+    djnz Loop
     dec d
-    jp nz,loop
+    jp nz,Loop
 </pre>
 
 <p>This will loop 522 times. If you want to loop 512 times, use b=0, d=2 and if
@@ -98,6 +100,7 @@ than the time a ‘normal’ loop takes: <b>25 T-states</b>.</p>
 <p>Now this example utilizes fixed values. However it doesn’t really make clear
 how often the loop loops. So you should put the actual amount of loops in a
 comment next to it.</p>
+
 
 <h3 id="varlength">Variable length loops</h3>
 
@@ -127,10 +130,11 @@ or two.</p>
     ld b,e          ; Calculate DB value (destroys B, D and E)
     inc b
     inc d
-loop: ...           ; --- do something ---
-    djnz loop
+Loop:
+    ; ... do something here
+    djnz Loop
     dec d
-    jp nz,loop
+    jp nz,Loop
 </pre>
 
 
@@ -146,8 +150,8 @@ the part which actually sends the VDP command usually looks like this:</p>
 
 <pre>
     ld hl,command   ; the address where the VDP command is stored
-    ld c,#9B        ; the VDP port to write to
-    ld b,15         ; the number of loops (yes, ld bc,#0F9b is faster)
+    ld c,9BH        ; the VDP port to write to
+    ld b,15         ; the number of loops (yes, ld bc,0F9BH is faster)
     otir
 </pre>
 
@@ -163,30 +167,30 @@ which was made faster by using 15 OUTIs instead of an otir:</p>
 
 <pre>
 ;
-;DoCopy - Faster by using OUTIs.
+; DoCopy - Faster by using OUTIs.
 ;
 DoCopy:
     ld a,32
     di
-    out (#99),a
+    out (99H),a
     ld a,17 + 128
     ei
-    out (#99),a
-    ld c,#9B
+    out (99H),a
+    ld c,9BH
 VDPready:
     di
     ld a,2          ; set s#2
-    out (#99),a
+    out (99H),a
     ld a,15 + 128
-    out (#99),a
+    out (99H),a
     ld a,(de)       ; waste some time...
-    in a,(#99)
+    in a,(99H)
     rra
     ld a,0          ; set s#0, NO xor because that’ll clear the carry
-    out (#99),a
+    out (99H),a
     ld a,15 + 128
     ei
-    out (#99),a
+    out (99H),a
     jp c,VDPready
     outi            ; 15x OUTI
     outi
@@ -240,7 +244,7 @@ you’ve created a fresh bug).</p>
 <p>In the case of LDIRs however, the number of loops is often too large to
 simply use an LDI that number of times. That would take up too much space. So,
 what we can do instead, is expanding only part of the loop. Say, we need to LDIR
-something 256 (#100) times. Instead of LDIR we could then for example write:</p>
+something 256 (100H) times. Instead of LDIR we could then for example write:</p>
 
 <pre>
     ld bc,256
@@ -278,7 +282,7 @@ use ^_^.</p>
 
 <pre>
 ;
-;DoLDIR - About 21% faster alternative for large LDIRs
+; DoLDIR - About 21% faster alternative for large LDIRs
 ;
 DoLDIR:
     xor a

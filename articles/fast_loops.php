@@ -74,8 +74,8 @@ another 256 loops.</p>
 <p>An explaining example (522 loops):</p>
 
 <pre>
-    ld b,10         ;The LSB of the loop is 10
-    ld d,3          ;The MSB of the loop + the first loop is 3
+    ld b,10         ; The LSB of the loop is 10
+    ld d,3          ; The MSB of the loop + the first loop is 3
 loop: ...           ; --- do something ---
     djnz loop
     dec d
@@ -110,7 +110,7 @@ exactly the same, it goes like this (source value is in de, result will be in
 ‘db’):</p>
 
 <pre>
-    dec de          ;Mystery fast loop calculus
+    dec de          ; Mystery fast loop calculus
     ld b,e
     inc b
     inc d
@@ -123,8 +123,8 @@ or two.</p>
 <p>So, to summarize, a full-fledged fast 16-bit loop looks like this:</p>
 
 <pre>
-    dec de          ;Number of loops is in DE
-    ld b,e          ;Calculate DB value (destroys B, D and E)
+    dec de          ; Number of loops is in DE
+    ld b,e          ; Calculate DB value (destroys B, D and E)
     inc b
     inc d
 loop: ...           ; --- do something ---
@@ -145,9 +145,9 @@ This is for example used a lot in routines which execute VDP commandos, where
 the part which actually sends the VDP command usually looks like this:</p>
 
 <pre>
-    ld hl,commando  ;the address where the VDP-commando is stored
-    ld c,#9B        ;the VDP port to write to
-    ld b,15         ;the number of loops (yes, ld bc,#0F9b is faster)
+    ld hl,commando  ; the address where the VDP-commando is stored
+    ld c,#9B        ; the VDP port to write to
+    ld b,15         ; the number of loops (yes, ld bc,#0F9b is faster)
     otir
 </pre>
 
@@ -169,26 +169,26 @@ DoCopy:
     ld a,32
     di
     out (#99),a
-    ld a,17+128
+    ld a,17 + 128
     ei
     out (#99),a
     ld c,#9B
 VDPready:
     di
-    ld a,2          ;set s#2
+    ld a,2          ; set s#2
     out (#99),a
-    ld a,15+128
+    ld a,15 + 128
     out (#99),a
-    ld a,(de)       ;waste some time...
+    ld a,(de)       ; waste some time...
     in a,(#99)
     rra
-    ld a,0          ;set s#0, NO xor because that’ll clear the carry
+    ld a,0          ; set s#0, NO xor because that’ll clear the carry
     out (#99),a
-    ld a,15+128
+    ld a,15 + 128
     ei
     out (#99),a
     jp c,VDPready
-    outi            ;15x OUTI
+    outi            ; 15x OUTI
     outi
     outi
     outi
@@ -210,7 +210,7 @@ VDPready:
 with</p>
 
 <pre>
-    DW #A3ED,#A3ED,#A3ED,#A3ED  ;15x OUTI (#ED #A3)
+    DW #A3ED,#A3ED,#A3ED,#A3ED  ; 15x OUTI (#ED #A3)
     DW #A3ED,#A3ED,#A3ED,#A3ED
     DW #A3ED,#A3ED,#A3ED,#A3ED
     DW #A3ED,#A3ED,#A3ED
@@ -251,10 +251,10 @@ something 256 (#100) times. Instead of LDIR we could then for example write:</p>
 <pre>
     ld bc,256
 Loop:
-    REPEAT 16       ;I’ll use repeat here (non-existant in compass) (yet?)
+    REPEAT 16       ; I’ll use repeat here (non-existant in compass) (yet?)
     ldi             ; to make things a little shorter. It is the same
     ENDR            ; as writing 16x ldi.
-    jp pe,Loop      ;Loop until bc = zero
+    jp pe,Loop      ; Loop until bc = zero
 </pre>
 
 <p>This method is almost 21% faster than an LDIR. Relatively seen the JP PE (the
@@ -289,9 +289,9 @@ use ^_^.</p>
 DoLDIR:
     xor a
     sub c
-    and 16-1
+    and 16 - 1
     add a,a
-    ld (DoLDIR_SelfM+1),a
+    ld (DoLDIR_SelfM + 1),a
 DoLDIR_SelfM:
     jr nz,$
 DoLDIR_Loop:

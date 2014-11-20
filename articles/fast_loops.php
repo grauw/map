@@ -206,23 +206,17 @@ VDPready:
     ret
 </pre>
 
-<p>To make this look a little more compact you can also replace the 15 OUTIs
-with</p>
-
-<pre>
-    DW #A3ED,#A3ED,#A3ED,#A3ED  ; 15x OUTI (#ED #A3)
-    DW #A3ED,#A3ED,#A3ED,#A3ED
-    DW #A3ED,#A3ED,#A3ED,#A3ED
-    DW #A3ED,#A3ED,#A3ED
-</pre>
-
-<p>or, if your assembler supports a repeat instruction, something like</p>
+<p>To make this look a little more compact, many assemblers supports a repeat
+directive, something like:</p>
 
 <pre>
     REPEAT 15
     outi
     ENDR
 </pre>
+
+<p>Check your assembler’s manual for the precise syntax, it varies and this
+directive is not portable across assemblers.</p>
 
 <p>On a sidenote, even though the OUTIs speed up the execution time of this
 routine, this DoCopy is still not the fastest one possible, since you can make

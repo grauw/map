@@ -141,11 +141,11 @@ loop: ...           ; --- do something ---
 
 <p>When you want to send a block from your memory to a certain port, you can use
 the OTIR instruction. With this instruction you can specify a number of loops.
-This is for example used a lot in routines which execute VDP commandos, where
+This is for example used a lot in routines which execute VDP commands, where
 the part which actually sends the VDP command usually looks like this:</p>
 
 <pre>
-    ld hl,commando  ; the address where the VDP-commando is stored
+    ld hl,command   ; the address where the VDP command is stored
     ld c,#9B        ; the VDP port to write to
     ld b,15         ; the number of loops (yes, ld bc,#0F9b is faster)
     otir
@@ -158,8 +158,8 @@ OTIR instruction. OUTI doesn’t loop automatically, but it does its work in 17
 T-states, 5 T-states faster than OTIR which needs 22 T-states per loop. So if
 you just write the OTIR out using 15 OUTIs, it saves you 5 T-states per loop
 (except for the last one), a grand total of 70 T-states out of 325 (that’s about
-22% faster). As an example, I’ll give you DoCopy (which executes a
-VDP-commando), which was made faster by using 15 OUTIs instead of an otir:</p>
+22% faster). As an example, I’ll give you DoCopy (which executes a VDP-command),
+which was made faster by using 15 OUTIs instead of an otir:</p>
 
 <pre>
 ;

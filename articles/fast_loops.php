@@ -158,11 +158,11 @@ the part which actually sends the VDP command usually looks like this:</p>
 <p>However, if you know in advance how many loops the otir will go through, and
 if this number of loops is a reasonable amount and you don’t care too much about
 wasting a little space, you can also use the OUTI instruction instead of the
-OTIR instruction. OUTI doesn’t loop automatically, but it does its work in 17
-T-states, 5 T-states faster than OTIR which needs 22 T-states per loop. So if
+OTIR instruction. OUTI doesn’t loop automatically, but it does its work in 18
+T-states, 5 T-states faster than OTIR which needs 23 T-states per loop. So if
 you just write the OTIR out using 15 OUTIs, it saves you 5 T-states per loop
-(except for the last one), a grand total of 70 T-states out of 325 (that’s about
-22% faster). As an example, I’ll give you DoCopy (which executes a VDP-command),
+(except for the last one), a grand total of 70 T-states out of 340 (that’s about
+21% faster). As an example, I’ll give you DoCopy (which executes a VDP-command),
 which was made faster by using 15 OUTIs instead of an otir:</p>
 
 <pre>

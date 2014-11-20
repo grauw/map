@@ -162,36 +162,11 @@ OTIR instruction. OUTI doesn’t loop automatically, but it does its work in 18
 T-states, 5 T-states faster than OTIR which needs 23 T-states per loop. So if
 you just write the OTIR out using 15 OUTIs, it saves you 5 T-states per loop
 (except for the last one), a grand total of 70 T-states out of 340 (that’s about
-21% faster). As an example, I’ll give you DoCopy (which executes a VDP-command),
-which was made faster by using 15 OUTIs instead of an otir:</p>
+21% faster). Like so:</p>
 
 <pre>
-;
-; DoCopy - Faster by using OUTIs.
-;
-DoCopy:
-    ld a,32
-    di
-    out (99H),a
-    ld a,17 + 128
-    ei
-    out (99H),a
+    ld hl,command
     ld c,9BH
-VDPready:
-    di
-    ld a,2          ; set s#2
-    out (99H),a
-    ld a,15 + 128
-    out (99H),a
-    ld a,(de)       ; waste some time...
-    in a,(99H)
-    rra
-    ld a,0          ; set s#0, NO xor because that’ll clear the carry
-    out (99H),a
-    ld a,15 + 128
-    ei
-    out (99H),a
-    jp c,VDPready
     outi            ; 15x OUTI
     outi
     outi
@@ -207,7 +182,6 @@ VDPready:
     outi
     outi
     outi
-    ret
 </pre>
 
 <p>To make this look a little more compact, many assemblers supports a repeat
@@ -222,12 +196,9 @@ directive, something like:</p>
 <p>Check your assembler’s manual for the precise syntax, it varies and this
 directive is not portable across assemblers.</p>
 
-<p>On a sidenote, even though the OUTIs speed up the execution time of this
-routine, this DoCopy is still not the fastest one possible, since you can make
-the wait loop a lot shorter and faster (in other words, improve the response
-time) by using status register 2 as the default, instead of 0. However, to do
-that you need to use your own interrupt routine, which I won’t explain here
-^_^.</p>
+<p>See <a href="/sources/docopy.php">this article</a> for a more complete
+example to execute VDP commands.</p>
+
 
 <h3 id="unrollingldir">Making LDIR 21% faster</h3>
 

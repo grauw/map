@@ -101,13 +101,12 @@ overview of T-states for each instruction, check the “Timing Z80+M1” column 
 <a href="/resources/z80instr.php">the instruction set overview</a>.</p>
 
 <p>The common loop in the first example uses 4 instructions to loop, which add
-up to a total of <b>28 T-states</b> per iteration. Looking at the fast loop
-however, the inner loop uses only a DJNZ instruction which takes
-<b>14 T-states</b>, just like a normal 8-bit loop. Once every 256 iterations it
-also executes the outer loop which takes a little longer but still less than the
-common loop: <b>25 T-states</b>. Because the outer loop is executed so
-infrequently, its cost is negligible and overall we can say the fast loop is
-twice as fast as the common one.</p>
+up to a total of 28 T-states per iteration. Looking at the fast loop however,
+the inner loop uses only a DJNZ instruction which takes 14 T-states, just like a
+normal 8-bit loop. Once every 256 iterations it also executes the outer loop
+which takes a little longer but still less than the common loop: 25 T-states.
+Because the outer loop is executed so infrequently, its cost is negligible and
+overall we can say the fast loop is twice as fast as the common one.</p>
 
 <p>The biggest downside of the fast loop is that it is no longer easy to see at
 a glance how many iterations the loop performs. You should probably add a

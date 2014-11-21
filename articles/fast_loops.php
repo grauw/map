@@ -17,6 +17,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-11-20</em><br />
+Corrected some timing calculations, replaced outdated example, disable
+interrupts during self modifying code, and copy editing.</p>
+
 <p><em>2005-08-11</em><br />
 Optimized FastLDIR routine even more, yet another 5 ticks faster! (thanks Arnold
 Metselaar).</p>

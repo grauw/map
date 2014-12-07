@@ -18,6 +18,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2014-11-07</em><br />
+Added <a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a>
+documentation courtesy Dennis Koller and Sander van Nunen.</p>
+
 <p><em>2014-08-16</em><br />
 Added <a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings,
 part II</a> by team <a href="http://openmsx.sourceforge.net/">openMSX</a>.</p>
@@ -41,12 +45,6 @@ data cartridge documentation.</p>
 
 <p><em>2014-05-22</em><br />
 Added <a href="/sources/vdp_detection.php">VDP version detection</a> source code.</p>
-
-<p><em>2014-05-20</em><br />
-Translated <a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> article by Ramon van der Winkel.</p>
-
-<p><em>2014-05-14</em><br />
-Translated <a href="/articles/interrupts.php">Interrupts</a> article by Ramon van der Winkel.</p>
 
 <p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->

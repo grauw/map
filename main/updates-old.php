@@ -14,6 +14,12 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2014-05-20</em><br />
+Translated <a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> article by Ramon van der Winkel.</p>
+
+<p><em>2014-05-14</em><br />
+Translated <a href="/articles/interrupts.php">Interrupts</a> article by Ramon van der Winkel.</p>
+
 <p><em>2014-05-10</em><br />
 Added <a href="/resources/#opm">OPM</a> and <a href="/resources/#sn76489">SN76489</a> resources.</p>
 

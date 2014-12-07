@@ -1050,12 +1050,21 @@
   <td></td>
   <td>#FFFF</td>
   <td>1</td>
-  <td>Secondary slot select register, if the slot is expanded. Reading returns
-      the inverse of the current subslot selection. Values are mirrored in
-      <a href="#SLTTBL">SLTTBL</a> for convenience.<br/>
-      Note that each expanded primary slot has its own register. To access a
-      specific primary slot’s register, you need to select it in page 3 before
-      reading the value.</td>
+  <td>
+    <p>Secondary slot select register, if the slot is expanded.</p>
+<pre>
+7 6 5 4 3 2 1 0
+│ │ │ │ │ │ └─┴── Secondary slot for page 0 (#0000-#3FFF)
+│ │ │ │ └─┴────── Secondary slot for page 1 (#4000-#7FFF)
+│ │ └─┴────────── Secondary slot for page 2 (#8000-#BFFF)
+└─┴────────────── Secondary slot for page 3 (#C000-#FFFF)
+</pre>
+    <p>Reading returns the inverse of the current subslot selection. Values are
+    mirrored in <a href="#SLTTBL">SLTTBL</a> for convenience.</p>
+    <p>Note that each expanded primary slot has its own register. To access a
+    specific primary slot’s register, you need to select it in page 3 before
+    reading the value.</p>
+  </td>
 </tr>
 
 </table>

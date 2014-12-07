@@ -913,6 +913,139 @@
   <td>Mirror of slot 3 secondary slot selection register.</td>
 </tr>
 
+<tr id="RG8SAV">
+  <td>RG8SAV</td>
+  <td>#FFE7</td>
+  <td>1</td>
+  <td>Content of VDP(9) register (R#8)<br/>
+      Note Basic’s VDP register numbers for registers 8-23 are 1 higher.</td>
+</tr>
+
+<tr id="RG9SAV">
+  <td>RG9SAV</td>
+  <td>#FFE8</td>
+  <td>1</td>
+  <td>Content of VDP(10) register (R#9)</td>
+</tr>
+
+<tr id="RG10SAV">
+  <td>RG10SAV</td>
+  <td>#FFE9</td>
+  <td>1</td>
+  <td>Content of VDP(11) register (R#10)</td>
+</tr>
+
+<tr id="RG11SAV">
+  <td>RG11SAV</td>
+  <td>#FFEA</td>
+  <td>1</td>
+  <td>Content of VDP(12) register (R#11)</td>
+</tr>
+
+<tr id="RG12SAV">
+  <td>RG12SAV</td>
+  <td>#FFEB</td>
+  <td>1</td>
+  <td>Content of VDP(13) register (R#12)</td>
+</tr>
+
+<tr id="RG13SAV">
+  <td>RG13SAV</td>
+  <td>#FFEC</td>
+  <td>1</td>
+  <td>Content of VDP(14) register (R#13)</td>
+</tr>
+
+<tr id="RG14SAV">
+  <td>RG14SAV</td>
+  <td>#FFED</td>
+  <td>1</td>
+  <td>Content of VDP(15) register (R#14)</td>
+</tr>
+
+<tr id="RG15SAV">
+  <td>RG15SAV</td>
+  <td>#FFEE</td>
+  <td>1</td>
+  <td>Content of VDP(16) register (R#15)</td>
+</tr>
+
+<tr id="RG16SAV">
+  <td>RG16SAV</td>
+  <td>#FFEF</td>
+  <td>1</td>
+  <td>Content of VDP(17) register (R#16)</td>
+</tr>
+
+<tr id="RG17SAV">
+  <td>RG17SAV</td>
+  <td>#FFF0</td>
+  <td>1</td>
+  <td>Content of VDP(18) register (R#17)</td>
+</tr>
+
+<tr id="RG18SAV">
+  <td>RG18SAV</td>
+  <td>#FFF1</td>
+  <td>1</td>
+  <td>Content of VDP(19) register (R#18)</td>
+</tr>
+
+<tr id="RG19SAV">
+  <td>RG19SAV</td>
+  <td>#FFF2</td>
+  <td>1</td>
+  <td>Content of VDP(20) register (R#19)</td>
+</tr>
+
+<tr id="RG20SAV">
+  <td>RG20SAV</td>
+  <td>#FFF3</td>
+  <td>1</td>
+  <td>Content of VDP(21) register (R#20)</td>
+</tr>
+
+<tr id="RG21SAV">
+  <td>RG21SAV</td>
+  <td>#FFF4</td>
+  <td>1</td>
+  <td>Content of VDP(22) register (R#21)</td>
+</tr>
+
+<tr id="RG22SAV">
+  <td>RG22SAV</td>
+  <td>#FFF5</td>
+  <td>1</td>
+  <td>Content of VDP(23) register (R#22)</td>
+</tr>
+
+<tr id="RG23SAV">
+  <td>RG23SAV</td>
+  <td>#FFF6</td>
+  <td>1</td>
+  <td>Content of VDP(24) register (R#23)</td>
+</tr>
+
+<tr id="RG25SAV">
+  <td>RG25SAV</td>
+  <td>#FFFA</td>
+  <td>1</td>
+  <td>Content of VDP(25) register (R#25)</td>
+</tr>
+
+<tr id="RG26SAV">
+  <td>RG26SAV</td>
+  <td>#FFFB</td>
+  <td>1</td>
+  <td>Content of VDP(26) register (R#26)</td>
+</tr>
+
+<tr id="RG27SAV">
+  <td>RG27SAV</td>
+  <td>#FFFC</td>
+  <td>1</td>
+  <td>Content of VDP(27) register (R#27)</td>
+</tr>
 
 <tr>
   <td></td>

@@ -2961,7 +2961,7 @@ section.</p>
 <dt>o</dt>
 <dd>8-bit offset (2-complement)</dd>
 <dt>r</dt>
-<dd>Register. This can be A, B, C, D, E, H, L or (HL). Add the following value
+<dd>Register. This can be A, B, C, D, E, H or L. Add the following value
     to the last byte of the opcode:
 <table>
 	<tr>
@@ -2995,10 +2995,6 @@ section.</p>
 	<tr>
 		<td>L</td>
 		<td>5</td>
-	</tr>
-	<tr>
-		<td>(HL)</td>
-		<td>6</td>
 	</tr>
 </table>
 </dd>

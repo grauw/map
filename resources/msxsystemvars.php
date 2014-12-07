@@ -59,11 +59,11 @@
   <td>Basic ROM version
 <pre>
 7 6 5 4 3 2 1 0
-| | | | +-+-+-+-- Character set
-| | | |           0 = Japanese, 1 = International, 2=Korean
-| +-+-+---------- Date format
-|                 0 = Y-M-D, 1 = M-D-Y, 2 = D-M-Y
-+---------------- Default interrupt frequency
+│ │ │ │ └─┴─┴─┴── Character set
+│ │ │ │           0 = Japanese, 1 = International, 2=Korean
+│ └─┴─┴────────── Date format
+│                 0 = Y-M-D, 1 = M-D-Y, 2 = D-M-Y
+└──────────────── Default interrupt frequency
                   0 = 60Hz, 1 = 50Hz
 </pre></td>
 </tr>
@@ -75,10 +75,10 @@
   <td>Basic ROM version
 <pre>
 7 6 5 4 3 2 1 0
-| | | | +-+-+-+-- Keyboard type
-| | | |           0 = Japanese, 1 = International
-| | | |           2 = French (AZERTY), 3 = UK, 4 = German (DIN)
-+-+-+-+---------- Basic version
+│ │ │ │ └─┴─┴─┴── Keyboard type
+│ │ │ │           0 = Japanese, 1 = International
+│ │ │ │           2 = French (AZERTY), 3 = UK, 4 = German (DIN)
+└─┴─┴─┴────────── Basic version
                   0 = Japanese, 1 = International
 </pre></td>
 </tr>
@@ -568,11 +568,11 @@
   <td>Information about trigger buttons and space bar state
 <pre>
 7 6 5 4 3 2 1 0
-| | | |       +-- Space bar, trig(0) (0 = pressed)
-| | | +---------- Stick 1, Trigger 1 (0 = pressed)
-| | +------------ Stick 1, Trigger 2 (0 = pressed)
-| +-------------- Stick 2, Trigger 1 (0 = pressed)
-+---------------- Stick 2, Trigger 2 (0 = pressed)
+│ │ │ │       └── Space bar, trig(0) (0 = pressed)
+│ │ │ └────────── Stick 1, Trigger 1 (0 = pressed)
+│ │ └──────────── Stick 1, Trigger 2 (0 = pressed)
+│ └────────────── Stick 2, Trigger 1 (0 = pressed)
+└──────────────── Stick 2, Trigger 2 (0 = pressed)
 </pre></td>
 </tr>
 

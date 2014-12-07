@@ -55,7 +55,7 @@
   <ul>
   <li id="assemblers">MSX Assemblers
     <ul>
-    <li><a href="http://home.scarlet.be/~dhran/compass-info/">Compass</a> · Compjoetania TNG</li>
+    <li><a href="http://home.scarlet.be/~dhran/compass-info/">Compass</a> · Compjoetania TNG (<a href="http://compjoetania.synrg.nl/">demo version</a>)</li>
     <li><a href="http://wbsoft.home.xs4all.nl/msx/">WBASS2</a> · <i>(<a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2.zip">download</a>, <a href="http://www.msxarchive.nl/pub/msx/programming/asm/wbass2.zip">no logo version</a>, <a href="http://www.xs4all.nl/~wbsoft/msx/wbass2/wbass2-handleiding.txt">manual (Dutch)</a>)</i></li>
     </ul>
   </li>

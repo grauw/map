@@ -18,7 +18,7 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
-<p><em>2014-11-07</em><br />
+<p><em>2014-12-07</em><br />
 Added <a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a>
 documentation courtesy Dennis Koller and Sander van Nunen.</p>
 

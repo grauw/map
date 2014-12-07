@@ -2957,7 +2957,7 @@ section.</p>
 <dt>n</dt>
 <dd>8-bit value.</dd>
 <dt>nn</dt>
-<dd>16-bit value, little-endian.</dd>
+<dd>16-bit value, little-endian. E.g. the JP 1234H opcode is C3 34 12.</dd>
 <dt>o</dt>
 <dd>8-bit offset, 2’s complement.</dd>
 <dt>r</dt>

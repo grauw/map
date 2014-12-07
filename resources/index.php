@@ -49,7 +49,6 @@ information, feel free to send us an email.</p>
   </li>
   <li id="processors">Processors
     <ul>
-    <li class="map"><a href="/resources/cpu_comparison.php">Z80/R800/Z180/Z380 comparison</a></li>
     <li id="z80">Z80
       <ul>
 	  <li class="map"><a href="/resources/z80instr.php">Z80 instruction set overview</a></li>
@@ -70,6 +69,7 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/cpu/z380qa.pdf">Zilog Z380 questions and answers</a></li>
       </ul>
     </li>
+    <li class="map"><a href="/resources/cpu_comparison.php">Z80/R800/Z180/Z380 comparison</a></li>
     </ul>
   </li>
   <li id="video">Video Chips

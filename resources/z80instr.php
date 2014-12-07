@@ -2959,7 +2959,7 @@ section.</p>
 <dt>nn</dt>
 <dd>16-bit value, little-endian.</dd>
 <dt>o</dt>
-<dd>8-bit offset, 2-complement.</dd>
+<dd>8-bit offset, 2’s complement.</dd>
 <dt>r</dt>
 <dd>Register. This can be A, B, C, D, E, H or L. Add the following value
     to the last byte of the opcode:

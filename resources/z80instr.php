@@ -2957,7 +2957,7 @@ section.</p>
 <dt>n</dt>
 <dd>8-bit value.</dd>
 <dt>nn</dt>
-<dd>16-bit value.</dd>
+<dd>16-bit value, little-endian.</dd>
 <dt>o</dt>
 <dd>8-bit offset, 2-complement.</dd>
 <dt>r</dt>

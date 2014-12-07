@@ -31,10 +31,10 @@ function filter(query) {
 <h1>Z80 instruction set</h1>
 
 <p>This is an overview of the Z80 instruction set, including undocumented
-instructions and the R800 MULUB and MULUW instructions. Refer to the
-<a href="/resources/cpu/z80.pdf">Z80 user manual</a> for a detailed explanation
-of the instruction set. For more information on undocument instructions, refer
-to Sean Young’s extensive
+instructions and the R800 <code>MULUB</code> and <code>MULUW</code>
+instructions. Refer to the <a href="/resources/cpu/z80.pdf">Z80 user manual</a>
+for a detailed explanation of the instruction set. For more information on
+undocument instructions, refer to Sean Young’s extensive
 <a href="http://www.myquest.nl/z80undocumented/z80-documented-v0.91.pdf">The
 Undocumented Z80 Documented</a>
 (<a href="http://www.myquest.nl/z80undocumented/">site</a>).</p>
@@ -2957,7 +2957,8 @@ section.</p>
 <dt>n</dt>
 <dd>8-bit value.</dd>
 <dt>nn</dt>
-<dd>16-bit value, little-endian. E.g. the JP 1234H opcode is C3 34 12.</dd>
+<dd>16-bit value, little-endian. E.g. the <code>JP 1234H</code> opcode is
+    <code>C3 34 12.</code></dd>
 <dt>o</dt>
 <dd>8-bit offset, 2’s complement.</dd>
 <dt>r</dt>
@@ -3123,19 +3124,20 @@ this:</p>
 
 <ul>
 <li>Every instruction has 1 additional M1 wait state</li>
-<li>Instructions starting with a CB, DD, ED, FD, DDCB or DDFD opcode have two
-    additional M1 wait states</li>
+<li>Instructions starting with a <code>CB</code>, <code>DD</code>,
+    <code>ED</code>, <code>FD</code>, <code>DD CB</code> or <code>DD FD</code>
+    opcode have two additional M1 wait states</li>
 </ul>
 
 <p>Examples:</p>
 
 <ul>
-<li>XOR A has opcode AF and is documented as taking 4 T-states. On MSX, it takes
-    5 (one more).</li>
-<li>BIT 0,A has opcode CB 47 and is documented as taking 12 T-states. On MSX, it
-    takes 14 (two more).</li>
-<li>SRL (IX+0) has opcode DD CB 00 3E and is documented as taking 23 T-states.
-    On MSX, it takes 25 (two more).</li>
+<li><code>XOR A</code> has opcode <code>AF</code> and is documented as taking
+    4 T-states. On MSX, it takes 5 (one more).</li>
+<li><code>BIT 0,A</code> has opcode <code>CB 47</code> and is documented as
+    taking 12 T-states. On MSX, it takes 14 (two more).</li>
+<li><code>SRL (IX+0)</code> has opcode <code>DD CB 00 3E</code> and is
+    documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
 </ul>
 
 <p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>

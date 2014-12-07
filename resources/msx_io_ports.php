@@ -63,7 +63,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#21-#27</td>
-  <td>Sunrise MP3 Player</td>
+  <td><a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a></td>
 </tr>
 <tr>
   <td>#2A-#2B</td>

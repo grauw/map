@@ -155,6 +155,11 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/texas_instruments_sn76489an.pdf">Texas Instruments SN76489 application manual</a></li>
       </ul>
     </li>
+    <li id="mp3player">Sunrise MP3 Player
+      <ul>
+      <li><a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player application manual</a> (<a href="/resources/sound/mp3player.doc">doc</a>)</li>
+      </ul>
+    </li>
     </ul>
   </li>
   <li id="msxengine">MSX Engine

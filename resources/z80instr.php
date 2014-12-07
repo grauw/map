@@ -2998,9 +2998,44 @@ section.</p>
 	</tr>
 </table>
 </dd>
-<dt>p, IXp</dt>
+<dt>IXp</dt>
 <dd>Denotes the high or low part of the IX register: IXh or IXl. Add the
     following value to the last byte of the opcode:
+<table>
+	<tr>
+		<th>Register</th>
+		<th>Register bits value</th>
+	</tr>
+	<tr>
+		<td>IXh</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>IXl</td>
+		<td>5</td>
+	</tr>
+</table>
+</dd>
+<dt>IYq</dt>
+<dd>Denotes the high or low part of the IY register: IYh or IYl. Add the
+    following value to the last byte of the opcode:
+<table>
+	<tr>
+		<th>Register</th>
+		<th>Register bits value</th>
+	</tr>
+	<tr>
+		<td>IYh</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>IYl</td>
+		<td>5</td>
+	</tr>
+</table>
+</dd>
+<dt>p</dt>
+<dd>Register where H and L have been replaced by IXh and IXl:
 <table>
 	<tr>
 		<th>Register</th>
@@ -3036,9 +3071,8 @@ section.</p>
 	</tr>
 </table>
 </dd>
-<dt>q, IYq</dt>
-<dd>Denotes the high or low part of the IY register: IYh or IYl. Add the
-    following value to the last byte of the opcode:
+<dt>q</dt>
+<dd>Register where H and L have been replaced by IYh and IYl:
 <table>
 	<tr>
 		<th>Register</th>

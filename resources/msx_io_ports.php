@@ -62,6 +62,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Second setting Miniware M4000 modem</td>
 </tr>
 <tr>
+  <td>#21-#27</td>
+  <td>Sunrise MP3 Player</td>
+</tr>
+<tr>
   <td>#2A-#2B</td>
   <td>PlaySoniq SID chip / settings</td>
 </tr>

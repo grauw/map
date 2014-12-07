@@ -917,8 +917,7 @@
   <td>RG8SAV</td>
   <td>#FFE7</td>
   <td>1</td>
-  <td>Mirror of VDP register 8 (Basic: <code>VDP(9)</code>)<br/>
-      Note Basic’s VDP register numbers for registers 8-23 are 1 higher.</td>
+  <td>Mirror of VDP register 8 (Basic: <code>VDP(9)</code>, note: +1)</td>
 </tr>
 
 <tr id="RG9SAV">

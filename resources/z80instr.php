@@ -3035,7 +3035,8 @@ section.</p>
 </table>
 </dd>
 <dt>p</dt>
-<dd>Register where H and L have been replaced by IXh and IXl:
+<dd>Register where H and L have been replaced by IXh and IXl. Add the
+    following value to the last byte of the opcode:
 <table>
 	<tr>
 		<th>Register</th>
@@ -3072,7 +3073,8 @@ section.</p>
 </table>
 </dd>
 <dt>q</dt>
-<dd>Register where H and L have been replaced by IYh and IYl:
+<dd>Register where H and L have been replaced by IYh and IYl. Add the
+    following value to the last byte of the opcode:
 <table>
 	<tr>
 		<th>Register</th>

@@ -1048,9 +1048,14 @@
 
 <tr>
   <td></td>
-  <td>#FFFF (all slots)</td>
+  <td>#FFFF</td>
   <td>1</td>
-  <td>Secondary slot select register. Reading returns the inverted previously written value.</td>
+  <td>Secondary slot select register, if the slot is expanded. Reading returns
+      the inverse of the current subslot selection. Values are mirrored in
+      <a href="#SLTTBL">SLTTBL</a> for convenience.<br/>
+      Note that each expanded primary slot has its own register. To access a
+      specific primary slot’s register, you need to select it in page 3 before
+      reading the value.</td>
 </tr>
 
 </table>

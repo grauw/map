@@ -49,6 +49,7 @@
   <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/">Funet msx2.com mirror</a></li>
   <li><a href="http://cdn.preterhuman.net/texts/computing/msx/">Higher Intellect MSX archive</a></li>
   <li><a href="http://www.mail-archive.com/msx@stack.nl/info.html">MSX Mailinglist archive</a></li>
+  <li><a href="http://ngs.no.coocan.jp/doc/wiki.cgi/datapack">MSX Datapack wiki</a> (Japanese)</li>
   </ul>
 </li>
 <li id="tools">Programming tools

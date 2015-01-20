@@ -17,6 +17,9 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2015-01-20</em><br />
+Faster “mystery calculus”, thanks to Urusergi.</p>
+
 <p><em>2014-11-20</em><br />
 Corrected timing calculations, replaced outdated example, disable interrupts in
 FastLDIR, and copy editing.</p>
@@ -127,21 +130,19 @@ which takes the counter value in DE and puts the resulting separated counters in
 D and B:</p>
 
 <pre>
-    dec de          ; Mystery fast loop calculus
-    ld b,e
-    inc b
+    ld b,e          ; Mystery fast loop calculus
+    dec de
     inc d
 </pre>
 
-<p>That’ll take just 22 T-states to precalculate the values, and compared to the
+<p>That’ll take just 17 T-states to precalculate the values, and compared to the
 slow 16-bit loop you’ll regain those after a loop or two.</p>
 
 <p>So, to summarize, a full-fledged fast 16-bit loop looks like this:</p>
 
 <pre>
-    dec de          ; Number of loops is in DE
-    ld b,e          ; Calculate DB value (destroys B, D and E)
-    inc b
+    ld b,e          ; Number of loops is in DE
+    dec de          ; Calculate DB value (destroys B, D and E)
     inc d
 Loop:
     ; ... do something here

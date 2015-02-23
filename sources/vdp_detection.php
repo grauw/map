@@ -20,6 +20,7 @@
 ; Detect VDP version
 ;
 ; a &lt;- 0: TMS9918A, 1: V9938, 2: V9958, x: VDP ID
+; f &lt;- z: TMS9918A, nz: other
 ;
 VDP_GetVersion:
     call VDP_IsTMS9918A  ; use a different way to detect TMS9918A

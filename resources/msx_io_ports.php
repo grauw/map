@@ -399,7 +399,7 @@ LDIR
 <tr><td>8</td><td>Matsushita (Panasonic)</td></tr>
 <tr><td>9</td><td>Mitsubishi</td></tr>
 <tr><td>10</td><td>NEC</td></tr>
-<tr><td>11</td><td>Nippon Gakki</td></tr>
+<tr><td>11</td><td>Nippon Gakki (Yamaha)</td></tr>
 <tr><td>12</td><td>JVC</td></tr>
 <tr><td>13</td><td>Philips</td></tr>
 <tr><td>14</td><td>Pioneer</td></tr>

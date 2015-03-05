@@ -3123,10 +3123,10 @@ about if you want to do speed calculations. The M1 waits are inserted like
 this:</p>
 
 <ul>
-<li>Every instruction has 1 additional M1 wait state</li>
+<li>Every instruction has 1 additional M1 wait</li>
 <li>Instructions starting with a <code>CB</code>, <code>DD</code>,
     <code>ED</code>, <code>FD</code>, <code>DD CB</code> or <code>DD FD</code>
-    opcode have two additional M1 wait states</li>
+    opcode have 2 additional M1 waits</li>
 </ul>
 
 <p>Examples:</p>
@@ -3142,15 +3142,15 @@ this:</p>
 
 <p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
 
-<p>For the R800, it is an even more complex story <em>(Warning: this is
-preliminary information.)</em>:</p>
+<p>For the R800, it is an even more complex story <em>(Warning: preliminary
+information.)</em>:</p>
 
 <ul>
-<li>In internal RAM, 0 wait states are inserted, and an additional wait state
-    for every memory access where the MSB changes (<dfn>far</dfn>).</li>
-<li>In external RAM, 2 wait states are inserted.</li>
-<li>In ROM, 3 wait states are inserted.</li>
-<li>For every far memory fetch, additional wait states are inserted depending on
+<li>In internal RAM, 0 waits are inserted, and 1 additional wait for every
+    memory access where the MSB changes (<dfn>far</dfn>).</li>
+<li>In external RAM, 2 waits are inserted.</li>
+<li>In ROM, 3 waits are inserted.</li>
+<li>For every far memory fetch, additional waits are inserted depending on
     the memory type.</li>
 </ul>
 

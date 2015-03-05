@@ -3142,18 +3142,23 @@ this:</p>
 
 <p>The instruction timing including M1 wait is listed in the Z80+M1 column.</p>
 
-<p>For the R800, it is an even more complex story <em>(Warning: preliminary
-information.)</em>:</p>
+<p>For the R800, it is an even more complex story:</p>
 
 <ul>
-<li>In internal RAM, 0 waits are inserted, and 1 additional wait for every
-    memory access where the MSB changes (<dfn>far</dfn>).</li>
-<li>In internal RAM, 2 waits are inserted for every <code>jp</code>.</li> <!-- confirmed by grauw -->
-<li>In external RAM, 2 waits are inserted.</li>
-<li>In ROM, 3 waits are inserted.</li>
-<li>For every far memory fetch, additional waits are inserted depending on
-    the memory type.</li>
+<li>In internal RAM, 0 waits are inserted, or 1 wait if the instruction crosses
+    a 256-byte memory boundary.</li>
+<li>In internal RAM, 2 waits are inserted for every memory read/write and
+    <code>jp</code>.</li> <!-- confirmed by grauw -->
+<li>In internal ROM, 3 waits are inserted.</li>
+<li>In external RAM, 5 waits are inserted.</li>
+<li>For I/O, 7-8 waits are inserted depending on clock alignment.</li>
 </ul>
+
+<p>Note that the R800 timing is complex and not officially documented, so there
+may be deviations or errors in the above description. For some research, see the
+documents in the
+<a href="https://sourceforge.net/p/openmsx/openmsx/ci/master/tree/doc/internal/">openMSX
+repository</a>.</p>
 
 
 <p class="signed">Grauw</p>

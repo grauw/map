@@ -3148,6 +3148,7 @@ information.)</em>:</p>
 <ul>
 <li>In internal RAM, 0 waits are inserted, and 1 additional wait for every
     memory access where the MSB changes (<dfn>far</dfn>).</li>
+<li>In internal RAM, 2 waits are inserted for every <code>jp</code>.</li> <!-- confirmed by grauw -->
 <li>In external RAM, 2 waits are inserted.</li>
 <li>In ROM, 3 waits are inserted.</li>
 <li>For every far memory fetch, additional waits are inserted depending on

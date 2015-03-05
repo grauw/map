@@ -3152,6 +3152,8 @@ this:</p>
 <li>In internal ROM, 3 waits are inserted.</li>
 <li>In external RAM, 5 waits are inserted.</li>
 <li>For I/O, 7-8 waits are inserted depending on clock alignment.</li>
+<li>For I/O to ports 98H-9BH, ± 50 extra waits are inserted if not enough time
+    has passed since the last access to these ports.</li>
 </ul>
 
 <p>Note that the R800 timing is complex and not officially documented, so there

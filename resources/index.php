@@ -57,11 +57,6 @@ information, feel free to send us an email.</p>
       <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
       </ul>
     </li>
-    <li id="z180">Z180
-      <ul>
-      <li><a href="/resources/cpu/z8018x.pdf">Zilog Z180 user’s manual</a></li>
-      </ul>
-    </li>
     <li id="z380">Z380
       <ul>
       <li><a href="/resources/cpu/z380.pdf">Zilog Z380 product specification</a></li>

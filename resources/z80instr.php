@@ -3311,11 +3311,10 @@ section.</p>
 	</tbody>
 </table>
 
-<p id="r800waitlegend">R800 timing including waits is based on access to
+<p id="r800waitlegend">* R800 timing including waits is based on access to
 the internal RAM. Note that an additional wait is inserted if the instruction
-fetch crosses a 256-byte memory boundary. As R800 timing is complex and absent
-official documentation, information may not be 100% accurate. For more
-information, see the <a href="#r800waits">R800 waits section</a>.</p>
+fetch crosses a 256-byte memory boundary. For more information, see the
+<a href="#r800waits">R800 waits section</a>.</p>
 
 <h2 id="legend">Legend</h2>
 
@@ -3516,7 +3515,7 @@ this:</p>
 <li>In internal RAM, 0 waits are inserted, or 1 wait if the instruction fetch
     crosses a 256-byte memory boundary.</li>
 <li>In internal RAM, 2 waits are inserted for every memory read/write and
-    <code>jp</code>.</li> <!-- confirmed by grauw -->
+    <code>jp</code>.</li>
 <li>In internal ROM, 3 waits are inserted.</li>
 <li>In external RAM, 5 waits are inserted.</li>
 <li>For I/O, 7-8 waits are inserted depending on clock alignment.</li>
@@ -3525,8 +3524,9 @@ this:</p>
 </ul>
 
 <p>Note that the R800 timing is complex and not officially documented, so there
-may be deviations or errors in the above description. For some research, see the
-documents in the
+may be deviations or errors in the above description. The above findings are
+based on research by the openMSX team and verified by Grauw using a different,
+cycle-accurate methodology. For more details see the documents in the
 <a href="https://sourceforge.net/p/openmsx/openmsx/ci/master/tree/doc/internal/">openMSX
 repository</a>.</p>
 

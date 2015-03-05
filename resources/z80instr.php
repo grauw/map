@@ -73,7 +73,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>8E</td>
 			<td>1</td>
 		</tr>
@@ -172,7 +172,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>86</td>
 			<td>1</td>
 		</tr>
@@ -343,7 +343,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>A6</td>
 			<td>1</td>
 		</tr>
@@ -406,7 +406,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>CB 46+8*b</td>
 			<td>2</td>
 		</tr>
@@ -532,7 +532,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>BE</td>
 			<td>1</td>
 		</tr>
@@ -819,8 +819,8 @@ section.</p>
 			<td>DJNZ o</td>
 			<td>13/8</td>
 			<td>14/9</td>
-			<td>2</td>
-			<td></td>
+			<td>3/2</td>
+			<td>3/2</td>
 			<td>10 o</td>
 			<td>2</td>
 		</tr>
@@ -1207,7 +1207,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>C3 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1216,7 +1216,7 @@ section.</p>
 			<td>4</td>
 			<td>5</td>
 			<td>1</td>
-			<td></td>
+			<td>3</td>
 			<td>E9</td>
 			<td>1</td>
 		</tr>
@@ -1225,7 +1225,7 @@ section.</p>
 			<td>8</td>
 			<td>10</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>DD E9</td>
 			<td>2</td>
 		</tr>
@@ -1234,7 +1234,7 @@ section.</p>
 			<td>8</td>
 			<td>10</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>FD E9</td>
 			<td>2</td>
 		</tr>
@@ -1243,7 +1243,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>DA nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1252,7 +1252,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>FA nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1261,7 +1261,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>D2 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1270,7 +1270,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>C2 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1279,7 +1279,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>F2 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1288,7 +1288,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>EA nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1297,7 +1297,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>E2 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1306,7 +1306,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5/3</td>
 			<td>CA nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1315,7 +1315,7 @@ section.</p>
 			<td>12</td>
 			<td>13</td>
 			<td>3</td>
-			<td></td>
+			<td>3</td>
 			<td>18 o</td>
 			<td>2</td>
 		</tr>
@@ -1324,7 +1324,7 @@ section.</p>
 			<td>12/7</td>
 			<td>13/8</td>
 			<td>3/2</td>
-			<td></td>
+			<td>3/2</td>
 			<td>38 o</td>
 			<td>2</td>
 		</tr>
@@ -1333,7 +1333,7 @@ section.</p>
 			<td>12/7</td>
 			<td>13/8</td>
 			<td>3/2</td>
-			<td></td>
+			<td>3/2</td>
 			<td>30 o</td>
 			<td>2</td>
 		</tr>
@@ -1342,7 +1342,7 @@ section.</p>
 			<td>12/7</td>
 			<td>13/8</td>
 			<td>3/2</td>
-			<td></td>
+			<td>3/2</td>
 			<td>20 o</td>
 			<td>2</td>
 		</tr>
@@ -1351,7 +1351,7 @@ section.</p>
 			<td>12/7</td>
 			<td>13/8</td>
 			<td>3/2</td>
-			<td></td>
+			<td>3/2</td>
 			<td>28 o</td>
 			<td>2</td>
 		</tr>
@@ -1360,7 +1360,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>02</td>
 			<td>1</td>
 		</tr>
@@ -1369,7 +1369,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>12</td>
 			<td>1</td>
 		</tr>
@@ -1378,7 +1378,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>36 n</td>
 			<td>2</td>
 		</tr>
@@ -1387,7 +1387,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>70+r</td>
 			<td>1</td>
 		</tr>
@@ -1432,7 +1432,7 @@ section.</p>
 			<td>13</td>
 			<td>14</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>32 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1495,7 +1495,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>0A</td>
 			<td>1</td>
 		</tr>
@@ -1504,7 +1504,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>1A</td>
 			<td>1</td>
 		</tr>
@@ -1513,7 +1513,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>7E</td>
 			<td>1</td>
 		</tr>
@@ -1540,7 +1540,7 @@ section.</p>
 			<td>13</td>
 			<td>14</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>3A nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1603,7 +1603,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>46</td>
 			<td>1</td>
 		</tr>
@@ -1684,7 +1684,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>4E</td>
 			<td>1</td>
 		</tr>
@@ -1747,7 +1747,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>56</td>
 			<td>1</td>
 		</tr>
@@ -1828,7 +1828,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>5E</td>
 			<td>1</td>
 		</tr>
@@ -1891,7 +1891,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>66</td>
 			<td>1</td>
 		</tr>
@@ -2071,7 +2071,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>6E</td>
 			<td>1</td>
 		</tr>
@@ -2251,7 +2251,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>B6</td>
 			<td>1</td>
 		</tr>
@@ -2422,7 +2422,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>F1</td>
 			<td>1</td>
 		</tr>
@@ -2431,7 +2431,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>C1</td>
 			<td>1</td>
 		</tr>
@@ -2440,7 +2440,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>D1</td>
 			<td>1</td>
 		</tr>
@@ -2449,7 +2449,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>E1</td>
 			<td>1</td>
 		</tr>
@@ -2458,7 +2458,7 @@ section.</p>
 			<td>14</td>
 			<td>16</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>DD E1</td>
 			<td>2</td>
 		</tr>
@@ -2467,7 +2467,7 @@ section.</p>
 			<td>14</td>
 			<td>16</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>FD E1</td>
 			<td>2</td>
 		</tr>
@@ -2476,7 +2476,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>F5</td>
 			<td>1</td>
 		</tr>
@@ -2485,7 +2485,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>C5</td>
 			<td>1</td>
 		</tr>
@@ -2494,7 +2494,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>D5</td>
 			<td>1</td>
 		</tr>
@@ -2503,7 +2503,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>E5</td>
 			<td>1</td>
 		</tr>
@@ -2512,7 +2512,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD E5</td>
 			<td>2</td>
 		</tr>
@@ -2521,7 +2521,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD E5</td>
 			<td>2</td>
 		</tr>
@@ -2566,7 +2566,7 @@ section.</p>
 			<td>10</td>
 			<td>11</td>
 			<td>3</td>
-			<td></td>
+			<td>5</td>
 			<td>C9</td>
 			<td>1</td>
 		</tr>
@@ -2575,7 +2575,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>D8</td>
 			<td>1</td>
 		</tr>
@@ -2584,7 +2584,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>F8</td>
 			<td>1</td>
 		</tr>
@@ -2593,7 +2593,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>D0</td>
 			<td>1</td>
 		</tr>
@@ -2602,7 +2602,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>C0</td>
 			<td>1</td>
 		</tr>
@@ -2611,7 +2611,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>F0</td>
 			<td>1</td>
 		</tr>
@@ -2620,7 +2620,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>E8</td>
 			<td>1</td>
 		</tr>
@@ -2629,7 +2629,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>E0</td>
 			<td>1</td>
 		</tr>
@@ -2638,7 +2638,7 @@ section.</p>
 			<td>11/5</td>
 			<td>12/6</td>
 			<td>3/1</td>
-			<td></td>
+			<td>5/1</td>
 			<td>C8</td>
 			<td>1</td>
 		</tr>
@@ -2935,7 +2935,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>9E</td>
 			<td>1</td>
 		</tr>
@@ -3187,7 +3187,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>96</td>
 			<td>1</td>
 		</tr>
@@ -3250,7 +3250,7 @@ section.</p>
 			<td>7</td>
 			<td>8</td>
 			<td>2</td>
-			<td></td>
+			<td>4</td>
 			<td>AE</td>
 			<td>1</td>
 		</tr>

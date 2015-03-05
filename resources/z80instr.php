@@ -595,7 +595,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>ED A9</td>
 			<td>2</td>
 		</tr>
@@ -613,7 +613,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>6</td>
 			<td>ED A1</td>
 			<td>2</td>
 		</tr>

@@ -542,7 +542,7 @@ section.</p>
 			<td>CPDR</td>
 			<td>21/16</td>
 			<td>23/18</td>
-			<td>4</td>
+			<td>5</td>
 			<td>ED B9</td>
 			<td>2</td>
 		</tr>
@@ -558,7 +558,7 @@ section.</p>
 			<td>CPIR</td>
 			<td>21/16</td>
 			<td>23/18</td>
-			<td>4</td>
+			<td>5</td>
 			<td>ED B1</td>
 			<td>2</td>
 		</tr>
@@ -1366,7 +1366,7 @@ section.</p>
 			<td>LD A,(IY+o)</td>
 			<td>19</td>
 			<td>21</td>
-			<td>1</td>
+			<td>5</td>
 			<td>FD 7E o</td>
 			<td>3</td>
 		</tr>

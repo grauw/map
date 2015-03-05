@@ -20,7 +20,7 @@
 
 <p><em>2015-03-05</em><br />
 Added detailed R800 timing information to the
-<a href="/resources/sound/mp3player.pdf">Z80 instruction set overview</a>.</p>
+<a href="/resources/z80instr.php">Z80 instruction set overview</a>.</p>
 
 <p><em>2014-12-07</em><br />
 Added <a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a>

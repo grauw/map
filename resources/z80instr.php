@@ -3043,7 +3043,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td>10</td>
+			<td></td>
 			<td>CB C6+8*b</td>
 			<td>2</td>
 		</tr>
@@ -3061,7 +3061,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o C6+8*b</td>
 			<td>4</td>
 		</tr>

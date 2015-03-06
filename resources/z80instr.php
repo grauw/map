@@ -1441,7 +1441,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 43 nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1450,7 +1450,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 53 nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1459,7 +1459,7 @@ section.</p>
 			<td>16</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>22 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -1468,7 +1468,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>DD 22 nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1477,7 +1477,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>FD 22 nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1486,7 +1486,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 73 nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1666,7 +1666,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 4B nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1810,7 +1810,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 5B nn nn</td>
 			<td>4</td>
 		</tr>
@@ -1936,7 +1936,7 @@ section.</p>
 			<td>16</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>2A nn nn</td>
 			<td>5</td>
 		</tr>
@@ -1963,7 +1963,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>DD 2A nn nn</td>
 			<td>4</td>
 		</tr>
@@ -2017,7 +2017,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>FD 2A nn nn</td>
 			<td>4</td>
 		</tr>
@@ -2125,7 +2125,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 7B nn nn</td>
 			<td>4</td>
 		</tr>
@@ -2530,7 +2530,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 86+8*b</td>
 			<td>2</td>
 		</tr>
@@ -2755,7 +2755,7 @@ section.</p>
 			<td>18</td>
 			<td>20</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 6F</td>
 			<td>2</td>
 		</tr>
@@ -2854,7 +2854,7 @@ section.</p>
 			<td>18</td>
 			<td>20</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>ED 67</td>
 			<td>2</td>
 		</tr>
@@ -3043,7 +3043,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB C6+8*b</td>
 			<td>2</td>
 		</tr>

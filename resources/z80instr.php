@@ -442,7 +442,7 @@ section.</p>
 			<td>17</td>
 			<td>18</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CD nn nn</td>
 			<td>3</td>
 		</tr>
@@ -451,7 +451,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>DC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -460,7 +460,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>FC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -469,7 +469,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>D4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -478,7 +478,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>C4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -487,7 +487,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>F4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -496,7 +496,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>EC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -505,7 +505,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>E4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -514,7 +514,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td></td>
+			<td>8/3</td>
 			<td>CC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -928,7 +928,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 78</td>
 			<td>2</td>
 		</tr>
@@ -937,7 +937,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>DB n</td>
 			<td>2</td>
 		</tr>
@@ -946,7 +946,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 40</td>
 			<td>2</td>
 		</tr>
@@ -955,7 +955,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 48</td>
 			<td>2</td>
 		</tr>
@@ -964,7 +964,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 50</td>
 			<td>2</td>
 		</tr>
@@ -973,7 +973,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 58</td>
 			<td>2</td>
 		</tr>
@@ -982,7 +982,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 60</td>
 			<td>2</td>
 		</tr>
@@ -991,7 +991,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 68</td>
 			<td>2</td>
 		</tr>
@@ -1000,7 +1000,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 70</td>
 			<td>3</td>
 		</tr>
@@ -1171,7 +1171,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>12/11</td>
 			<td>ED AA</td>
 			<td>2</td>
 		</tr>
@@ -1189,7 +1189,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>12/11</td>
 			<td>ED A2</td>
 			<td>2</td>
 		</tr>
@@ -2332,7 +2332,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 79</td>
 			<td>2</td>
 		</tr>
@@ -2341,7 +2341,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 41</td>
 			<td>2</td>
 		</tr>
@@ -2350,7 +2350,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 49</td>
 			<td>2</td>
 		</tr>
@@ -2359,7 +2359,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 51</td>
 			<td>2</td>
 		</tr>
@@ -2368,7 +2368,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 59</td>
 			<td>2</td>
 		</tr>
@@ -2377,7 +2377,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 61</td>
 			<td>2</td>
 		</tr>
@@ -2386,7 +2386,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>ED 69</td>
 			<td>2</td>
 		</tr>
@@ -2395,7 +2395,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>3</td>
-			<td></td>
+			<td>10/9</td>
 			<td>D3 n</td>
 			<td>2</td>
 		</tr>
@@ -2404,7 +2404,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>12/11</td>
 			<td>ED AB</td>
 			<td>2</td>
 		</tr>
@@ -2413,7 +2413,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td></td>
+			<td>12/11</td>
 			<td>ED A3</td>
 			<td>2</td>
 		</tr>
@@ -2647,7 +2647,7 @@ section.</p>
 			<td>14</td>
 			<td>16</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>ED 4D</td>
 			<td>2</td>
 		</tr>
@@ -2656,7 +2656,7 @@ section.</p>
 			<td>14</td>
 			<td>16</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>ED 45</td>
 			<td>2</td>
 		</tr>
@@ -3518,7 +3518,7 @@ this:</p>
     <code>jp</code>.</li>
 <li>In internal ROM, 3 waits are inserted.</li>
 <li>In external RAM, 5 waits are inserted.</li>
-<li>For I/O, 7-8 waits are inserted depending on clock alignment.</li>
+<li>For I/O, 6-7 waits are inserted depending on clock alignment.</li>
 <li>For I/O to ports 98H-9BH, ± 50 extra waits are inserted if not enough time
     has passed since the last access to these ports.</li>
 </ul>

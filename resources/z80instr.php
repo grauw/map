@@ -82,7 +82,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 8E o</td>
 			<td>3</td>
 		</tr>
@@ -91,7 +91,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 8E o</td>
 			<td>3</td>
 		</tr>
@@ -181,7 +181,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 86 o</td>
 			<td>3</td>
 		</tr>
@@ -190,7 +190,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 86 o</td>
 			<td>3</td>
 		</tr>
@@ -352,7 +352,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD A6 o</td>
 			<td>3</td>
 		</tr>
@@ -361,7 +361,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD A6 o</td>
 			<td>3</td>
 		</tr>
@@ -415,7 +415,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD CB o 46+8*b</td>
 			<td>4</td>
 		</tr>
@@ -424,7 +424,7 @@ section.</p>
 			<td>20</td>
 			<td>22</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD CB o 46+8*b</td>
 			<td>4</td>
 		</tr>
@@ -541,7 +541,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD BE o</td>
 			<td>3</td>
 		</tr>
@@ -550,7 +550,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD BE o</td>
 			<td>3</td>
 		</tr>
@@ -649,7 +649,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>7</td>
 			<td>35</td>
 			<td>1</td>
 		</tr>
@@ -658,7 +658,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD 35 o</td>
 			<td>3</td>
 		</tr>
@@ -667,7 +667,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD 35 o</td>
 			<td>3</td>
 		</tr>
@@ -838,7 +838,7 @@ section.</p>
 			<td>19</td>
 			<td>20</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>E3</td>
 			<td>1</td>
 		</tr>
@@ -847,7 +847,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>DD E3</td>
 			<td>2</td>
 		</tr>
@@ -856,7 +856,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>6</td>
-			<td></td>
+			<td>8</td>
 			<td>FD E3</td>
 			<td>2</td>
 		</tr>
@@ -1009,7 +1009,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td></td>
+			<td>7</td>
 			<td>34</td>
 			<td>1</td>
 		</tr>
@@ -1018,7 +1018,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD 34 o</td>
 			<td>3</td>
 		</tr>
@@ -1027,7 +1027,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD 34 o</td>
 			<td>3</td>
 		</tr>
@@ -1396,7 +1396,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 36 o n</td>
 			<td>4</td>
 		</tr>
@@ -1405,7 +1405,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 70+r o</td>
 			<td>3</td>
 		</tr>
@@ -1414,7 +1414,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 36 o n</td>
 			<td>4</td>
 		</tr>
@@ -1423,7 +1423,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 70+r o</td>
 			<td>3</td>
 		</tr>
@@ -1522,7 +1522,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 7E o</td>
 			<td>3</td>
 		</tr>
@@ -1531,7 +1531,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 7E o</td>
 			<td>3</td>
 		</tr>
@@ -1612,7 +1612,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 46 o</td>
 			<td>3</td>
 		</tr>
@@ -1621,7 +1621,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 46 o</td>
 			<td>3</td>
 		</tr>
@@ -1693,7 +1693,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 4E o</td>
 			<td>3</td>
 		</tr>
@@ -1702,7 +1702,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 4E o</td>
 			<td>3</td>
 		</tr>
@@ -1756,7 +1756,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 56 o</td>
 			<td>3</td>
 		</tr>
@@ -1765,7 +1765,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 56 o</td>
 			<td>3</td>
 		</tr>
@@ -1837,7 +1837,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 5E o</td>
 			<td>3</td>
 		</tr>
@@ -1846,7 +1846,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 5E o</td>
 			<td>3</td>
 		</tr>
@@ -1900,7 +1900,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 66 o</td>
 			<td>3</td>
 		</tr>
@@ -1909,7 +1909,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 66 o</td>
 			<td>3</td>
 		</tr>
@@ -2080,7 +2080,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 6E o</td>
 			<td>3</td>
 		</tr>
@@ -2089,7 +2089,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 6E o</td>
 			<td>3</td>
 		</tr>
@@ -2260,7 +2260,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD B6 o</td>
 			<td>3</td>
 		</tr>
@@ -2269,7 +2269,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD B6 o</td>
 			<td>3</td>
 		</tr>
@@ -2539,7 +2539,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 86+8*b</td>
 			<td>4</td>
 		</tr>
@@ -2548,7 +2548,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 86+8*b</td>
 			<td>4</td>
 		</tr>
@@ -2665,7 +2665,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 16</td>
 			<td>2</td>
 		</tr>
@@ -2674,7 +2674,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 16</td>
 			<td>4</td>
 		</tr>
@@ -2683,7 +2683,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 16</td>
 			<td>4</td>
 		</tr>
@@ -2710,7 +2710,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 06</td>
 			<td>2</td>
 		</tr>
@@ -2719,7 +2719,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 06</td>
 			<td>4</td>
 		</tr>
@@ -2728,7 +2728,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 06</td>
 			<td>4</td>
 		</tr>
@@ -2764,7 +2764,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 1E</td>
 			<td>2</td>
 		</tr>
@@ -2773,7 +2773,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 1E</td>
 			<td>4</td>
 		</tr>
@@ -2782,7 +2782,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 1E</td>
 			<td>4</td>
 		</tr>
@@ -2809,7 +2809,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 0E</td>
 			<td>2</td>
 		</tr>
@@ -2818,7 +2818,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 0E</td>
 			<td>4</td>
 		</tr>
@@ -2827,7 +2827,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 0E</td>
 			<td>4</td>
 		</tr>
@@ -2944,7 +2944,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 9E o</td>
 			<td>3</td>
 		</tr>
@@ -2953,7 +2953,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 9E o</td>
 			<td>3</td>
 		</tr>
@@ -3043,7 +3043,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>10</td>
 			<td>CB C6+8*b</td>
 			<td>2</td>
 		</tr>
@@ -3052,7 +3052,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o C6+8*b</td>
 			<td>4</td>
 		</tr>
@@ -3079,7 +3079,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 26</td>
 			<td>2</td>
 		</tr>
@@ -3088,7 +3088,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 26</td>
 			<td>4</td>
 		</tr>
@@ -3097,7 +3097,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 26</td>
 			<td>4</td>
 		</tr>
@@ -3115,7 +3115,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 2E</td>
 			<td>2</td>
 		</tr>
@@ -3124,7 +3124,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 2E</td>
 			<td>4</td>
 		</tr>
@@ -3133,7 +3133,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 2E</td>
 			<td>4</td>
 		</tr>
@@ -3151,7 +3151,7 @@ section.</p>
 			<td>15</td>
 			<td>17</td>
 			<td>5</td>
-			<td></td>
+			<td>8</td>
 			<td>CB 3E</td>
 			<td>2</td>
 		</tr>
@@ -3160,7 +3160,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>DD CB o 3E</td>
 			<td>4</td>
 		</tr>
@@ -3169,7 +3169,7 @@ section.</p>
 			<td>23</td>
 			<td>25</td>
 			<td>7</td>
-			<td></td>
+			<td>10</td>
 			<td>FD CB o 3E</td>
 			<td>4</td>
 		</tr>
@@ -3196,7 +3196,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD 96 o</td>
 			<td>3</td>
 		</tr>
@@ -3205,7 +3205,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD 96 o</td>
 			<td>3</td>
 		</tr>
@@ -3259,7 +3259,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>DD AE o</td>
 			<td>3</td>
 		</tr>
@@ -3268,7 +3268,7 @@ section.</p>
 			<td>19</td>
 			<td>21</td>
 			<td>5</td>
-			<td></td>
+			<td>7</td>
 			<td>FD AE o</td>
 			<td>3</td>
 		</tr>

@@ -3517,7 +3517,7 @@ this:</p>
 <li>In internal RAM, 2 waits are inserted for every memory read/write and
     <code>jp</code>.</li>
 <li>In internal ROM, 3 waits are inserted.</li>
-<li>In external RAM, 5 waits are inserted.</li>
+<li>In external memory, 5 waits are inserted.</li>
 <li>For I/O, 6-7 waits are inserted depending on clock alignment.</li>
 <li>For I/O to ports 98H-9BH, ± 50 extra waits are inserted if not enough time
     has passed since the last access to these ports.</li>

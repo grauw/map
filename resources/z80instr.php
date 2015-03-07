@@ -3313,8 +3313,8 @@ section.</p>
 
 <p id="r800waitnote">¹ R800 timing including waits is based on access to
 the internal RAM. Note that an additional wait is inserted if the instruction
-fetch crosses a 256-byte memory boundary. For more information, see the
-<a href="#r800waits">R800 waits section</a>.</p>
+fetch or a 16-bit memory access crosses a 256-byte memory boundary. For more
+information, see the <a href="#r800waits">R800 waits section</a>.</p>
 
 <p id="callwaitnote">² I have no theory about the underlying logic yet, but testing
 found that a <code>call</code> followed by a series of <code>nop</code>s takes 8

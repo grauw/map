@@ -62,7 +62,7 @@ section.</p>
 			<th g:sort="yes">Timing<br />Z80+M1</th>
 			<th g:sort="yes">Timing<br />R800</th>
 			<th g:sort="yes">Timing<br />R800 +<br/>
-			                 wait<a href="#r800waitlegend">¹</a></th>
+			                 wait<a href="#r800waitnote">¹</a></th>
 			<th g:sort="yes">Opcode</th>
 			<th g:sort="yes">Size</th>
 		</tr>
@@ -3311,7 +3311,7 @@ section.</p>
 	</tbody>
 </table>
 
-<p id="r800waitlegend">¹ R800 timing including waits is based on access to
+<p id="r800waitnote">¹ R800 timing including waits is based on access to
 the internal RAM. Note that an additional wait is inserted if the instruction
 fetch crosses a 256-byte memory boundary. For more information, see the
 <a href="#r800waits">R800 waits section</a>.</p>

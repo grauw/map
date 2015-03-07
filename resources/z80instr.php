@@ -3322,9 +3322,9 @@ cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
 combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /
 <code>pop af</code>).</p>
 
-<p id="iowaitnote">³ As described, I/O instructions get aligned to the bus clock, so
-an extra wait is inserted depending on the alignment. This means that between
-two <code>out</code>s, you can have a 1-cycle instruction for free.</p>
+<p id="iowaitnote">³ As described below, I/O instructions get aligned to the bus
+clock, so an extra wait is inserted depending on the alignment. This means that
+between two <code>out</code>s, you can have a 1-cycle instruction for free.</p>
 
 <h2 id="legend">Legend</h2>
 

@@ -62,7 +62,7 @@ section.</p>
 			<th g:sort="yes">Timing<br />Z80+M1</th>
 			<th g:sort="yes">Timing<br />R800</th>
 			<th g:sort="yes">Timing<br />R800 +<br/>
-			                 wait<a href="#r800waitlegend">*</a></th>
+			                 wait<a href="#r800waitlegend">¹</a></th>
 			<th g:sort="yes">Opcode</th>
 			<th g:sort="yes">Size</th>
 		</tr>
@@ -442,7 +442,7 @@ section.</p>
 			<td>17</td>
 			<td>18</td>
 			<td>5</td>
-			<td>8/7<a href="#callnote">**</a></td>
+			<td>8/7<a href="#callnote">²</a></td>
 			<td>CD nn nn</td>
 			<td>3</td>
 		</tr>
@@ -3311,12 +3311,12 @@ section.</p>
 	</tbody>
 </table>
 
-<p id="r800waitlegend">* R800 timing including waits is based on access to
+<p id="r800waitlegend">¹ R800 timing including waits is based on access to
 the internal RAM. Note that an additional wait is inserted if the instruction
 fetch crosses a 256-byte memory boundary. For more information, see the
 <a href="#r800waits">R800 waits section</a>.</p>
 
-<p id="callnote">** I have no theory about the underlying logic yet, but testing
+<p id="callnote">² I have no theory about the underlying logic yet, but testing
 found that a <code>call</code> followed by a series of <code>nop</code>s takes 8
 cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
 combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /

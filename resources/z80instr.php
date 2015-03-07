@@ -3515,7 +3515,7 @@ this:</p>
 <li>In internal RAM, 0 waits are inserted, or 1 wait if the instruction fetch
     crosses a 256-byte memory page boundary (“page break”).</li>
 <li>In internal RAM, 2 waits are inserted for every memory read/write, or 3 if
-    it does both), regardless of whether it is in the same page or not.</li>
+    it does both, regardless of whether it is in the same page or not.</li>
 <li>In internal RAM, 2 waits are inserted for every <code>jp</code>.</li>
 <li>In internal ROM, 3 waits are inserted.</li>
 <li>In external memory, 4-5 waits are inserted depending on clock alignment.</li>

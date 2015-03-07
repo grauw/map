@@ -16,7 +16,7 @@
 
 <p>This is an overview of the system variables which you can use. They are official, unless mentioned otherwise.</p>
 
-<p>VDP Registers: <a href="#RG0SAV">R#0-R#7</a>, <a href="#RG8SAV">R#8-R#23</a>, <a href="#RG25SAV">R#25-R#27</a>, R#32-R#45 (not mirrored in system ram), <a href="#STATFL">S#0</a>.</p>
+<p>VDP Registers: <a href="#RG0SAV">R#0-R#7</a>, <a href="#RG8SAV">R#8-R#23</a>, <a href="#RG25SA">R#25-R#27</a>, R#32-R#45 (not mirrored in system ram), <a href="#STATFL">S#0</a>.</p>
 
 
 
@@ -945,120 +945,120 @@
   <td>Mirror of VDP register 9 (Basic: <code>VDP(10)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG10SAV">
-  <td>RG10SAV</td>
+<tr id="RG10SA">
+  <td>RG10SA</td>
   <td>#FFE9</td>
   <td>1</td>
   <td>Mirror of VDP register 10 (Basic: <code>VDP(11)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG11SAV">
-  <td>RG11SAV</td>
+<tr id="RG11SA">
+  <td>RG11SA</td>
   <td>#FFEA</td>
   <td>1</td>
   <td>Mirror of VDP register 11 (Basic: <code>VDP(12)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG12SAV">
-  <td>RG12SAV</td>
+<tr id="RG12SA">
+  <td>RG12SA</td>
   <td>#FFEB</td>
   <td>1</td>
   <td>Mirror of VDP register 12 (Basic: <code>VDP(13)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG13SAV">
-  <td>RG13SAV</td>
+<tr id="RG13SA">
+  <td>RG13SA</td>
   <td>#FFEC</td>
   <td>1</td>
   <td>Mirror of VDP register 13 (Basic: <code>VDP(14)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG14SAV">
-  <td>RG14SAV</td>
+<tr id="RG14SA">
+  <td>RG14SA</td>
   <td>#FFED</td>
   <td>1</td>
   <td>Mirror of VDP register 14 (Basic: <code>VDP(15)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG15SAV">
-  <td>RG15SAV</td>
+<tr id="RG15SA">
+  <td>RG15SA</td>
   <td>#FFEE</td>
   <td>1</td>
   <td>Mirror of VDP register 15 (Basic: <code>VDP(16)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG16SAV">
-  <td>RG16SAV</td>
+<tr id="RG16SA">
+  <td>RG16SA</td>
   <td>#FFEF</td>
   <td>1</td>
   <td>Mirror of VDP register 16 (Basic: <code>VDP(17)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG17SAV">
-  <td>RG17SAV</td>
+<tr id="RG17SA">
+  <td>RG17SA</td>
   <td>#FFF0</td>
   <td>1</td>
   <td>Mirror of VDP register 17 (Basic: <code>VDP(18)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG18SAV">
-  <td>RG18SAV</td>
+<tr id="RG18SA">
+  <td>RG18SA</td>
   <td>#FFF1</td>
   <td>1</td>
   <td>Mirror of VDP register 18 (Basic: <code>VDP(19)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG19SAV">
-  <td>RG19SAV</td>
+<tr id="RG19SA">
+  <td>RG19SA</td>
   <td>#FFF2</td>
   <td>1</td>
   <td>Mirror of VDP register 19 (Basic: <code>VDP(20)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG20SAV">
-  <td>RG20SAV</td>
+<tr id="RG20SA">
+  <td>RG20SA</td>
   <td>#FFF3</td>
   <td>1</td>
   <td>Mirror of VDP register 20 (Basic: <code>VDP(21)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG21SAV">
-  <td>RG21SAV</td>
+<tr id="RG21SA">
+  <td>RG21SA</td>
   <td>#FFF4</td>
   <td>1</td>
   <td>Mirror of VDP register 21 (Basic: <code>VDP(22)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG22SAV">
-  <td>RG22SAV</td>
+<tr id="RG22SA">
+  <td>RG22SA</td>
   <td>#FFF5</td>
   <td>1</td>
   <td>Mirror of VDP register 22 (Basic: <code>VDP(23)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG23SAV">
-  <td>RG23SAV</td>
+<tr id="RG23SA">
+  <td>RG23SA</td>
   <td>#FFF6</td>
   <td>1</td>
   <td>Mirror of VDP register 23 (Basic: <code>VDP(24)</code>, note: +1)</td>
 </tr>
 
-<tr id="RG25SAV">
-  <td>RG25SAV</td>
+<tr id="RG25SA">
+  <td>RG25SA</td>
   <td>#FFFA</td>
   <td>1</td>
   <td>Mirror of VDP register 25 (Basic: <code>VDP(25)</code>)</td>
 </tr>
 
-<tr id="RG26SAV">
-  <td>RG26SAV</td>
+<tr id="RG26SA">
+  <td>RG26SA</td>
   <td>#FFFB</td>
   <td>1</td>
   <td>Mirror of VDP register 26 (Basic: <code>VDP(26)</code>)</td>
 </tr>
 
-<tr id="RG27SAV">
-  <td>RG27SAV</td>
+<tr id="RG27SA">
+  <td>RG27SA</td>
   <td>#FFFC</td>
   <td>1</td>
   <td>Mirror of VDP register 27 (Basic: <code>VDP(27)</code>)</td>

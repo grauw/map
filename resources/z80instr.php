@@ -604,7 +604,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>5</td>
-			<td></td>
+			<td>?/8</td>
 			<td>ED B9</td>
 			<td>2</td>
 		</tr>
@@ -622,7 +622,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>5</td>
-			<td></td>
+			<td>?/8</td>
 			<td>ED B1</td>
 			<td>2</td>
 		</tr>
@@ -1180,7 +1180,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td></td>
+			<td>?/12/11</td>
 			<td>ED BA</td>
 			<td>2</td>
 		</tr>
@@ -1198,7 +1198,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td></td>
+			<td>?/12/11</td>
 			<td>ED B2</td>
 			<td>2</td>
 		</tr>
@@ -2179,7 +2179,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4</td>
-			<td></td>
+			<td>?/7</td>
 			<td>ED B8</td>
 			<td>2</td>
 		</tr>
@@ -2197,7 +2197,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4</td>
-			<td></td>
+			<td>?/7</td>
 			<td>ED B0</td>
 			<td>2</td>
 		</tr>
@@ -2314,7 +2314,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td></td>
+			<td>?/12/11</td>
 			<td>ED BB</td>
 			<td>2</td>
 		</tr>
@@ -2323,7 +2323,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td></td>
+			<td>?/12/11</td>
 			<td>ED B3</td>
 			<td>2</td>
 		</tr>

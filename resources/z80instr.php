@@ -928,7 +928,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 78</td>
 			<td>2</td>
 		</tr>
@@ -937,7 +937,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>DB n</td>
 			<td>2</td>
 		</tr>
@@ -946,7 +946,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 40</td>
 			<td>2</td>
 		</tr>
@@ -955,7 +955,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 48</td>
 			<td>2</td>
 		</tr>
@@ -964,7 +964,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 50</td>
 			<td>2</td>
 		</tr>
@@ -973,7 +973,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 58</td>
 			<td>2</td>
 		</tr>
@@ -982,7 +982,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 60</td>
 			<td>2</td>
 		</tr>
@@ -991,7 +991,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 68</td>
 			<td>2</td>
 		</tr>
@@ -1000,7 +1000,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 70</td>
 			<td>3</td>
 		</tr>
@@ -1171,7 +1171,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td>12/11</td>
+			<td>12/11<a href="#ionote">³</a></td>
 			<td>ED AA</td>
 			<td>2</td>
 		</tr>
@@ -1180,7 +1180,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td>?/12/11</td>
+			<td>?/12/11<a href="#ionote">³</a></td>
 			<td>ED BA</td>
 			<td>2</td>
 		</tr>
@@ -1189,7 +1189,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td>12/11</td>
+			<td>12/11<a href="#ionote">³</a></td>
 			<td>ED A2</td>
 			<td>2</td>
 		</tr>
@@ -1198,7 +1198,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td>?/12/11</td>
+			<td>?/12/11<a href="#ionote">³</a></td>
 			<td>ED B2</td>
 			<td>2</td>
 		</tr>
@@ -2314,7 +2314,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td>?/12/11</td>
+			<td>?/12/11<a href="#ionote">³</a></td>
 			<td>ED BB</td>
 			<td>2</td>
 		</tr>
@@ -2323,7 +2323,7 @@ section.</p>
 			<td>21/16</td>
 			<td>23/18</td>
 			<td>4/3</td>
-			<td>?/12/11</td>
+			<td>?/12/11<a href="#ionote">³</a></td>
 			<td>ED B3</td>
 			<td>2</td>
 		</tr>
@@ -2332,7 +2332,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 79</td>
 			<td>2</td>
 		</tr>
@@ -2341,7 +2341,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 41</td>
 			<td>2</td>
 		</tr>
@@ -2350,7 +2350,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 49</td>
 			<td>2</td>
 		</tr>
@@ -2359,7 +2359,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 51</td>
 			<td>2</td>
 		</tr>
@@ -2368,7 +2368,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 59</td>
 			<td>2</td>
 		</tr>
@@ -2377,7 +2377,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 61</td>
 			<td>2</td>
 		</tr>
@@ -2386,7 +2386,7 @@ section.</p>
 			<td>12</td>
 			<td>14</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>ED 69</td>
 			<td>2</td>
 		</tr>
@@ -2395,7 +2395,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>3</td>
-			<td>10/9</td>
+			<td>10/9<a href="#ionote">³</a></td>
 			<td>D3 n</td>
 			<td>2</td>
 		</tr>
@@ -2404,7 +2404,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td>12/11</td>
+			<td>12/11<a href="#ionote">³</a></td>
 			<td>ED AB</td>
 			<td>2</td>
 		</tr>
@@ -2413,7 +2413,7 @@ section.</p>
 			<td>16</td>
 			<td>18</td>
 			<td>4</td>
-			<td>12/11</td>
+			<td>12/11<a href="#ionote">³</a></td>
 			<td>ED A3</td>
 			<td>2</td>
 		</tr>
@@ -3321,6 +3321,10 @@ found that a <code>call</code> followed by a series of <code>nop</code>s takes 8
 cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
 combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /
 <code>pop af</code>).</p>
+
+<p id="iowaitnote">³ As described, I/O instructions get aligned to the bus clock, so
+an extra wait is inserted depending on the alignment. This means that between
+two <code>out</code>s, you can have a 1-cycle instruction for free.</p>
 
 <h2 id="legend">Legend</h2>
 

@@ -451,7 +451,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>DC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -460,7 +460,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>FC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -469,7 +469,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>D4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -478,7 +478,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>C4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -487,7 +487,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>F4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -496,7 +496,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>EC nn nn</td>
 			<td>3</td>
 		</tr>
@@ -505,7 +505,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>E4 nn nn</td>
 			<td>3</td>
 		</tr>
@@ -514,7 +514,7 @@ section.</p>
 			<td>17/10</td>
 			<td>18/11</td>
 			<td>5/3</td>
-			<td>8/7/3</td>
+			<td>8/7/3<a href="#callwaitnote">²</a></td>
 			<td>CC nn nn</td>
 			<td>3</td>
 		</tr>

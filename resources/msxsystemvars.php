@@ -189,7 +189,7 @@
   <td></td>
   <td>#F348</td>
   <td>1</td>
-  <td>Slot address of the main DiskROM</td>
+  <td>Main DiskROM slot address</td>
 </tr>
 </table>
 
@@ -740,7 +740,7 @@
   <td>LPTPOS</td>
   <td>#F415</td>
   <td>1</td>
-  <td>Position of the printer head<br />
+  <td>Printer head position<br />
       Is read by Basic function LPOS and used by LPRINT Basic command</td>
 </tr>
 
@@ -805,15 +805,15 @@
   <td>#F959</td>
   <td>24</td>
   <td><p>Queue-table containing queue information. There are four queues in total,
-      three PLAY queues and one RS232 queue, with 6 byte information blocks per
+      three PLAY queues and one RS232 queue, with 6-byte information blocks per
       queue:</p>
       <table>
       <tbody>
       <tr><td>0</td><td>Queue head offset (for writing).</td></tr>
       <tr><td>1</td><td>Queue tail offset (for reading).</td></tr>
       <tr><td>2</td><td>Flag indicating whether a byte has been returned.</td></tr>
-      <tr><td>3</td><td>Size of the queue.</td></tr>
-      <tr><td>4-5</td><td>Start address of the queue.</td></tr>
+      <tr><td>3</td><td>Queue size.</td></tr>
+      <tr><td>4-5</td><td>Queue start address.</td></tr>
       </tbody>
       </table>
   </td>
@@ -842,7 +842,7 @@
   <td>EXBRSA</td>
   <td>#FAF8</td>
   <td>1</td>
-  <td>Slot address of the SUBROM (EXtended Bios-Rom Slot Address)</td>
+  <td>SUBROM slot address (EXtended Bios-Rom Slot Address)</td>
 </tr>
 
 <tr id="DRVINF">
@@ -891,7 +891,7 @@
   <td rowspan="4">EXPTBL</td>
   <td>#FCC1</td>
   <td>1</td>
-  <td>Slot 0: #80 = expanded, 0 = not expanded. Also slot address of the main BIOS-ROM.</td>
+  <td>Slot 0: #80 = expanded, 0 = not expanded. Also main BIOS-ROM slot address.</td>
 </tr>
 <tr>
   <td>#FCC2</td>

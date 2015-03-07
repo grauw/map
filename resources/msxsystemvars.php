@@ -630,7 +630,7 @@
   <td>QUEUES</td>
   <td>#F3F3</td>
   <td>2</td>
-  <td>Address of the queue table</td>
+  <td>Queue table address, see <a href="#QUETAB">QUETAB</a> (initial value).</td>
 </tr>
 
 <tr id="FRCNEW">
@@ -800,6 +800,24 @@
       it will be filled with #FFFF</td>
 </tr>
 
+<tr id="QUETAB">
+  <td>QUETAB</td>
+  <td>#F959</td>
+  <td>24</td>
+  <td><p>Queue-table containing queue information. There are four queues in total,
+      three PLAY queues and one RS232 queue, with 6 byte information blocks per
+      queue:</p>
+      <table>
+      <tbody>
+      <tr><td>0</td><td>Queue head offset (for writing).</td></tr>
+      <tr><td>1</td><td>Queue tail offset (for reading).</td></tr>
+      <tr><td>2</td><td>Flag indicating whether a byte has been returned.</td></tr>
+      <tr><td>3</td><td>Size of the queue.</td></tr>
+      <tr><td>4-5</td><td>Start address of the queue.</td></tr>
+      </tbody>
+      </table>
+  </td>
+</tr>
 
 
 

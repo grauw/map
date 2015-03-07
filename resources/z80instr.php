@@ -442,7 +442,7 @@ section.</p>
 			<td>17</td>
 			<td>18</td>
 			<td>5</td>
-			<td>8/7</td>
+			<td>8/7<a href="#callnote">**</a></td>
 			<td>CD nn nn</td>
 			<td>3</td>
 		</tr>
@@ -3315,6 +3315,12 @@ section.</p>
 the internal RAM. Note that an additional wait is inserted if the instruction
 fetch crosses a 256-byte memory boundary. For more information, see the
 <a href="#r800waits">R800 waits section</a>.</p>
+
+<p id="callnote">** I have no theory about the underlying logic yet, but testing
+found that a <code>call</code> followed by a series of <code>nop</code>s takes 8
+cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
+combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /
+<code>pop af</code>).</p>
 
 <h2 id="legend">Legend</h2>
 

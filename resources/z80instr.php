@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
 <head>
-  <title>Z80 instruction set</title>
+  <title>Z80 / R800 instruction set</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <script type="text/javascript" src="/js/tablesort.js" defer="defer"></script>
@@ -28,7 +28,7 @@ function filter(query) {
 
 
 
-<h1>Z80 instruction set</h1>
+<h1>Z80 / R800 instruction set</h1>
 
 <p>This is an overview of the Z80 instruction set, including undocumented
 instructions and the R800 <code>MULUB</code> and <code>MULUW</code>

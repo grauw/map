@@ -144,9 +144,12 @@ information, feel free to send us an email.</p>
       <li><a href="http://www.cx5m.net/hardware/">More info at CX5M.net</a></li>
       </ul>
     </li>
-    <li id="sn76489">Franky / PlaySoniq
+    <li id="sn76489">Franky / PlaySoniq / MMM
       <ul>
       <li><a href="/resources/sound/texas_instruments_sn76489an.pdf">Texas Instruments SN76489 application manual</a></li>
+      <li><a href="/resources/sound/franky-9.pdf">Franky user manual</a> (<a href="http://supersoniqs.com/documentation/">website</a>)</li>
+      <li><a href="/resources/sound/playsoniq-user-manual-v1-3.pdf">PlaySoniq user manual</a> (<a href="http://supersoniqs.com/documentation/">website</a>)</li>
+      <li><a href="/resources/sound/musical-memory-mapper.pdf">Musical Memory Mapper application manual</a> (<a href="http://www.ebsoft.fr/shop/en/home/35-musical-memory-mapper.html">website</a>)</li>
       </ul>
     </li>
     <li id="mp3player">Sunrise MP3 Player

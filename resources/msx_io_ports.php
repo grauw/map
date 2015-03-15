@@ -102,6 +102,14 @@ If you have additions or see an error, please let us know.</em></p>
   <td>CD-ROM interface</td>
 </tr>
 <tr>
+  <td>#3C</td>
+  <td>Musical Memory Mapper control</td>
+</tr>
+<tr>
+  <td>#3F</td>
+  <td>Musical Memory Mapper SN76489 DCSG (when enabled)</td>
+</tr>
+<tr>
   <td>#40-#4F</td>
   <td><a href="#switch_io">Switched I/O ports</a></td>
 </tr>

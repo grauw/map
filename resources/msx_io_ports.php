@@ -115,7 +115,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#48-#49</td>
-  <td>Franky PSG (SN76489) / VDP H/V counters</td>
+  <td>Franky SN76489 DCSG / VDP H/V counters</td>
 </tr>
 <tr>
   <td>#60-#6F</td>

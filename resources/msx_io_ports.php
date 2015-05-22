@@ -394,10 +394,10 @@ manual</a> with partial translation for more info.</p>
 so-called ‘switched I/O ports’. With these the limitation of a maximum number of
 256 I/O ports can be overcome, although it does require a little additional
 logic on the hardware’s behalf. The port numbers #41-#4F are the actual switched
-ports, and the device ‘connected’ (e.g. listening to) to those ports is
-determined by the device ID written to port #40. This device ID can be a number
-from 1-254, and when port #40 is read it returns the complement of the current
-device ID.</p>
+ports, and the device addressed via those ports is determined by the device ID
+written to port #40. When port #40 is read it returns the complement of the
+current device ID. Device IDs 0 and 255 can be used to detect the presence of
+switched I/O ports.</p>
 
 <table>
 <tr>

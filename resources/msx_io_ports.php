@@ -276,7 +276,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#F3</td>
-  <td><a href="#vdpdisplaymode">VDP display mode (MSX2+)</a></td>
+  <td><a href="#vdpdisplaymode">VDP display mode</a> (MSX2+)</td>
 </tr>
 <tr>
   <td>#F4</td>

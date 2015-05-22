@@ -34,10 +34,6 @@ If you have additions or see an error, please let us know.</em></p>
   <td>FAC MIDI interface</td>
 </tr>
 <tr>
-  <td>#00-#02</td>
-  <td>MIDI Saurus</td>
-</tr>
-<tr>
   <td>#04-#05</td>
   <td>Music Module MIDI, input ports</td>
 </tr>
@@ -122,12 +118,12 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#gfx9000">Graphics9000 / v9990</a></td>
 </tr>
 <tr>
-  <td>#70</td>
-  <td>MIDI Saurus <em>(wasn’t it on #00-#02 already?)</em></td>
+  <td>#70-73</td>
+  <td>MIDI Saurus</td>
 </tr>
 <tr>
   <td>#7C-#7D</td>
-  <td>MSX-Music / FM-Pac / OPLL</td>
+  <td>MSX-MUSIC / FM-PAC / OPLL</td>
 </tr>
 <tr>
   <td>#7E-#7F</td>
@@ -135,7 +131,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#7E-#7F</td>
-  <td>MoonSound / OPL4 - WAVE-bank</td>
+  <td>MoonSound / OPL4 - Wave-bank</td>
 </tr>
 <tr>
   <td>#80-#83</td>
@@ -173,8 +169,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#98-#9B</td>
-  <td><a href="#vdp">VDP / Video Display Processor / TMS9918A / v9938 /
-      v9958</a></td>
+  <td><a href="#vdp">VDP / Video Display Processor / TMS9918A / V9938 /
+      V9958</a></td>
 </tr>
 <tr>
   <td>#A0-#A3</td>
@@ -195,12 +191,12 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#AC-AF</td>
-  <td>MSX-Engine / S3527 / S1985</td>
+  <td><a href="/resources/#msxengine">MSX-ENGINE</a> (1-chip MSX I/O)</td>
 </tr>
 <tr>
   <td>#B0-B3</td>
   <td><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01
-      Data Memory</a> (4kB SRAM)</td>
+      Data Memory</a> (4kB SRAM) (8255 i/f)</td>
 </tr>
 <tr>
   <td>#B4-B5</td>
@@ -219,11 +215,11 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#BC-BF</td>
-  <td>JVC video controller</td>
+  <td>JVC video controller (8255 i/f)</td>
 </tr>
 <tr>
   <td>#C0-#C1</td>
-  <td>MSX-Audio / Music Module / OPL1</td>
+  <td>MSX-AUDIO / Music Module</td>
 </tr>
 <tr>
   <td>#C0-#C1</td>
@@ -231,7 +227,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#C2-#C3</td>
-  <td>MSX-Audio / Music Module / OPL1 - 2nd cartridge</td>
+  <td>MSX-AUDIO / Music Module - 2nd cartridge</td>
 </tr>
 <tr>
   <td>#C2-#C3</td>
@@ -247,7 +243,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#C8-#CF</td>
-  <td>MSX Interface</td>
+  <td>MSX INTERFACE (asynchronous serial communication interface)</td>
 </tr>
 <tr>
   <td>#D0-#D7</td>
@@ -268,7 +264,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#E0-#E2</td>
-  <td>External MIDI interface (micro pack)</td>
+  <td>External MSX-MIDI interface (µ·pack)</td>
 </tr>
 <tr>
   <td>#E4-#E7</td>
@@ -276,7 +272,11 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#E8-#EF</td>
-  <td>Internal MIDI interface (turboR GT)</td>
+  <td>Internal MSX-MIDI interface (turboR GT)</td>
+</tr>
+<tr>
+  <td>#F3</td>
+  <td><a href="#vdpdisplaymode">VDP display mode (MSX2+)</a></td>
 </tr>
 <tr>
   <td>#F4</td>
@@ -284,20 +284,19 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#F5</td>
-  <td>System control (for Kanji ROM selection, see
-      <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td>
+  <td><a href="#systemcontrol">System control</a></td>
 </tr>
 <tr>
   <td>#F6</td>
-  <td>Reserved for color bus I/O</td>
+  <td>Color bus I/O</td>
 </tr>
 <tr>
   <td>#F7</td>
-  <td>A/V controller</td>
+  <td><a href="#avcontrol">A/V control</a></td>
 </tr>
 <tr>
   <td>#F8</td>
-  <td>Optional A/V controller for PAL version</td>
+  <td>Optional A/V control for PAL version</td>
 </tr>
 <tr>
   <td>#F8-#FB</td>
@@ -1012,28 +1011,92 @@ modify bits 4-7.</p>
 </table>
 
 
-
-<h2 id="sysflags">System flags</h2>
-
-<p>This register is basically a simple memory cell which is preserved after a
-reset. It is used on the MSX2+ to differentiate between a hard boot (power on)
-and a soft boot (reset button) by writing a value to it during the boot routine,
-and check for that value everytime the computer starts. On the turboR, it also
-indicates whether the Z80 or the R800 has to boot.</p>
+<h2 id="vdpdisplaymode">VDP display mode (MSX2+)</h2>
 
 <table>
 <tr>
-  <th>Port range</th>
+  <th>Port</th>
+  <th>Bit</th>
   <th>Description</th>
 </tr>
-<tr>
-  <td>#F4</td>
-  <td>System flags, preserved after reset<br />
-      bit 5: CPU boot mode (1=R800)<br />
-      bit 7: Boot method (1=soft boot, doesn’t show start logo)</td>
-</tr>
+<tr><td rowspan="8">#F5</td>
+    <td>0</td><td>M3</td></tr>
+<tr><td>1</td><td>M4</td></tr>
+<tr><td>2</td><td>M5</td></tr>
+<tr><td>3</td><td>M2</td></tr>
+<tr><td>4</td><td>M1</td></tr>
+<tr><td>5</td><td>TP</td></tr>
+<tr><td>6</td><td>YUV</td></tr>
+<tr><td>7</td><td>YAE</td></tr>
 </table>
 
+
+<h2 id="sysflags">System flags</h2>
+
+<p>This register is a simple memory cell which is preserved after a reset. It is
+used on the MSX2+ to differentiate between a hard boot (power on) and a soft
+boot (reset button) by writing a value to it during the boot routine, and check
+for that value everytime the computer starts. On the turboR, it also indicates
+whether the Z80 or the R800 has to boot.</p>
+
+<table>
+<tr>
+  <th>Port</th>
+  <th>Bit</th>
+  <th>Description</th>
+</tr>
+<tr><td rowspan="2">#F4</td>
+    <td>5</td><td>CPU boot mode (1=R800)</td></tr>
+<tr><td>7</td><td>Boot method (1=soft boot, doesn’t show start logo)</td></tr>
+</table>
+
+
+<h2 id="systemcontrol">System control</h2>
+
+<p>Bits to avoid the collision of internal I/O devices with external cartridges.
+These let the built-in devices be disabled. During the BIOS initialisation, the
+internal device should be enabled if there is no external device. Applications
+should not read or set these values.</p>
+
+<p>Write a 1 to enable.</p>
+
+<table>
+<tr>
+  <th>Port</th>
+  <th>Bit</th>
+  <th>Description</th>
+</tr>
+<tr><td rowspan="8">#F5 (write)</td>
+    <td>0</td><td>Kanji ROM, JIS 1 (see also
+    <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td></tr>
+<tr><td>1</td><td>Kanji ROM, JIS 2</td></tr>
+<tr><td>2</td><td>MSX-AUDIO</td></tr>
+<tr><td>3</td><td>Super impose</td></tr>
+<tr><td>4</td><td>MSX INTERFACE</td></tr>
+<tr><td>5</td><td>RS-232C</td></tr>
+<tr><td>6</td><td>Wait pin</td></tr>
+<tr><td>7</td><td>CLOCK-IC (MSX2, MSX2+ only implementation)</td></tr>
+</table>
+
+
+<h2 id="avcontrol">A/V control</h2>
+
+<table>
+<tr>
+  <th>Port</th>
+  <th>Bit</th>
+  <th colspan="3">Description</th>
+</tr>
+<tr><td rowspan="8">#F5</td>
+    <td>0</td><td>Audio R</td><td>Mixing on</td><td>(Write)</td></tr>
+<tr><td>1</td><td>Audio L</td><td>Mixing off</td><td>(Write)</td></tr>
+<tr><td>2</td><td>Video input selection</td><td>21-pin RGB</td><td>(Write)</td></tr>
+<tr><td>3</td><td>Video input detection</td><td>No input</td><td>(Read)</td></tr>
+<tr><td>4</td><td>AV control</td><td>TV</td><td>(Write)</td></tr>
+<tr><td>5</td><td>Ym control</td><td>TV</td><td>(Write)</td></tr>
+<tr><td>6</td><td>VDP register 9 bit 4 inversion</td><td></td><td>(Write)</td></tr>
+<tr><td>7</td><td>VDP register 9 bit 5 inversion</td><td></td><td>(Write)</td></tr>
+</table>
 
 
 <h2 id="mmapper">Memory Mapper registers</h2>

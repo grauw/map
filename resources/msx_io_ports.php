@@ -300,7 +300,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#F8-#FB</td>
-  <td>Memory Mapper controller (in 16-bit mappers, contains MSB)</td>
+  <td>Memory Mapper segment selection MSB in 16-bit mappers
+      (PlaySoniq, disabled by default)</td>
 </tr>
 <tr>
   <td>#FC-#FF</td>

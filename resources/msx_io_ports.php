@@ -489,10 +489,10 @@ computers:</p>
 	OUT	(041H),A	;and the mode changes to high-speed clock
 </pre>
 
-So you can check if certain extensions are available and ready to be accessed
+<p>So you can check if certain extensions are available and ready to be accessed
 by reading back the value you just wrote to the device ID register. If that
 value is not the complement of what you wrote, then the extensions are not
-present.
+present.</p>
 
 
 

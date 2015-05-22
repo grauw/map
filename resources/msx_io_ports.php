@@ -139,11 +139,13 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#80-#83</td>
-  <td><a href="#rs232">RS232C UART / 8251</a> <em>(Spectravideo, and Sony (if enabled))</em></td>
+  <td><a href="#rs232">RS232C UART / 8251</a> <em>(Spectravideo, and Sony (if
+      enabled))</em></td>
 </tr>
 <tr>
   <td>#84-#87</td>
-  <td><a href="#rs232">RS232C programmable timer / 8253</a> <em>(Spectravideo, and Sony (if enabled))</em></td>
+  <td><a href="#rs232">RS232C programmable timer / 8253</a> <em>(Spectravideo,
+      and Sony (if enabled))</em></td>
 </tr>
 <tr>
   <td>#88-#8B</td>
@@ -171,7 +173,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#98-#9B</td>
-  <td><a href="#vdp">VDP / Video Display Processor / TMS9918A / v9938 / v9958</a></td>
+  <td><a href="#vdp">VDP / Video Display Processor / TMS9918A / v9938 /
+      v9958</a></td>
 </tr>
 <tr>
   <td>#A0-#A3</td>
@@ -205,7 +208,10 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#B8-BB</td>
-  <td>Card Reader <em>(maybe the <a href="http://www.faq.msxnet.org/hardware.html#Electric">Softcard adaptor</a> or <a href="http://www.faq.msxnet.org/hardware.html#Hudson">Bee Pack</a>???)</em></td>
+  <td>Card Reader <em>(maybe the
+  <a href="http://www.faq.msxnet.org/hardware.html#Electric">Softcard
+  adaptor</a> or <a href="http://www.faq.msxnet.org/hardware.html#Hudson">Bee
+  Pack</a>???)</em></td>
 </tr>
 <tr>
   <td>#B8-BB</td>
@@ -277,7 +283,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#F5</td>
-  <td>System control (for Kanji ROM selection, see <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td>
+  <td>System control (for Kanji ROM selection, see
+      <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td>
 </tr>
 <tr>
   <td>#F6</td>
@@ -319,14 +326,18 @@ If you have additions or see an error, please let us know.</em></p>
 </table>
 
 
-<p><i>Information collected from various sources. Special thanks go to Alex Wulms for the nice overview published in MCCM 75.</i></p>
+<p><i>Information collected from various sources. Special thanks go to Alex
+Wulms for the nice overview published in MCCM 75.</i></p>
 
 
 <h2 id="zemina-memory">Zemina memory extensions</h2>
 
-<p>Port #0F is used for the Zemina Golden Box (ZMB-1024, 1Mbit / 128K), Black Box (1Mbit / 128K), Deluxe Box (ZMB-2048, 2Mbit / 256K) and Deluxe IV (4Mbit / 512K) memory extensions.</p>
+<p>Port #0F is used for the Zemina Golden Box (ZMB-1024, 1Mbit / 128K), Black
+Box (1Mbit / 128K), Deluxe Box (ZMB-2048, 2Mbit / 256K) and Deluxe IV (4Mbit /
+512K) memory extensions.</p>
 
-<p>It uses I/O port #0F for device settings, and address #4000 for page select if the device is in RAM SELECT mode.</p>
+<p>It uses I/O port #0F for device settings, and address #4000 for page select
+if the device is in RAM SELECT mode.</p>
 
 <table>
 <tr>
@@ -344,9 +355,11 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 </table>
 
-<p>For a 128K extension, with a page size of 8K there are 16 pages, with a page size of 16K there are 8 pages.</p>
+<p>For a 128K extension, with a page size of 8K there are 16 pages, with a page
+size of 16K there are 8 pages.</p>
 
-<p>Following are some examples, that assume the Zemina memory extension slot is selected for address range #4000-#7FFF.</p>
+<p>Following are some examples, that assume the Zemina memory extension slot is
+selected for address range #4000-#7FFF.</p>
 
 <p>To switch RAM page 5 to address #4000-#5FFF (8K page size):</p>
 
@@ -356,7 +369,8 @@ LD   A,5
 LD   (4000H),A
 </pre>
 
-<p>To copy the contents of the MSX main RAM address range #A000-#BFFF to RAM page 3 (8K page size):</p>
+<p>To copy the contents of the MSX main RAM address range #A000-#BFFF to RAM
+page 3 (8K page size):</p>
 
 <pre>LD   A,10100000B
 OUT  (0FH),A
@@ -370,12 +384,20 @@ LD   BC,2000H
 LDIR
 </pre>
 
-<p>See the <a href="http://www.hqunix.com/wordpress/?page_id=554">scanned manual</a> with partial translation for more info.</p>
+<p>See the <a href="http://www.hqunix.com/wordpress/?page_id=554">scanned
+manual</a> with partial translation for more info.</p>
 
 
 <h2 id="switch_io">Switched I/O ports</h2>
 
-<p>According to the MSX2 Hardware Specification, ports #40-#4F are forming the so-called ‘switched I/O ports’. With these the limitation of a maximum number of 256 I/O ports can be overcome, although it does require a little additional logic on the hardware’s behalf. The port numbers #41-#4F are the actual switched ports, and the device ‘connected’ (e.g. listening to) to those ports is determined by the device ID written to port #40. This device ID can be a number from 1-254, and when port #40 is read it returns the complement of the current device ID.</p>
+<p>According to the MSX2 Hardware Specification, ports #40-#4F are forming the
+so-called ‘switched I/O ports’. With these the limitation of a maximum number of
+256 I/O ports can be overcome, although it does require a little additional
+logic on the hardware’s behalf. The port numbers #41-#4F are the actual switched
+ports, and the device ‘connected’ (e.g. listening to) to those ports is
+determined by the device ID written to port #40. This device ID can be a number
+from 1-254, and when port #40 is read it returns the complement of the current
+device ID.</p>
 
 <table>
 <tr>
@@ -392,7 +414,15 @@ LDIR
 </tr>
 </table>
 
-<p>ID numbers between 1 and 127 are manufacturer ID numbers, and ID numbers 128 to 254 are device IDs. As a basic rule, those devices which are designed specifically for one machine should contain the manufacturer’s company ID, while periperhal devices which can be used on all MSX computers should have a device ID number. Also, the Z80 actually has a 16-bit I/O addressing space so it is recommended to access in 16-bit by decoding the upper 8 bits for those IDs which might be expanded in the future (although I have personally only seen this done in the ADVRAM hardware). Especially for devices which are connected with their make ID it can be expected that they might eventually need more addressing space, and with this it will be future-proofed.</p>
+<p>ID numbers between 1 and 127 are manufacturer ID numbers, and ID numbers 128
+to 254 are device IDs. As a basic rule, those devices which are designed
+specifically for one machine should contain the manufacturer’s company ID, while
+periperhal devices which can be used on all MSX computers should have a device
+ID number. Also, the Z80 actually has a 16-bit I/O addressing space so it is
+recommended to access in 16-bit by decoding the upper 8 bits for those IDs which
+might be expanded in the future. Especially for devices which are connected with
+their make ID it can be expected that they might eventually need more addressing
+space, and with this it will be future-proofed.</p>
 
 <p>List of BIOS extension device ID’s:</p>
 <table>
@@ -427,7 +457,8 @@ LDIR
 <tr><td>254</td><td>MPS2 (ASCII)</td></tr>
 </table>
 
-<p>Some example code, this enables the 6MHz mode on Panasonic FS-A1WX/WSX/FX computers:</p>
+<p>Some example code, this enables the 6MHz mode on Panasonic FS-A1WX/WSX/FX
+computers:</p>
 
 <table>
 <tr><th>Port</th><th>Panasonic extensions</th></tr>
@@ -458,35 +489,52 @@ LDIR
 	OUT	(041H),A	;and the mode changes to high-speed clock
 </pre>
 
-So you can check if certain extensions are available and ready to be accessed by reading back the value you just wrote to the device ID register. If that value is not the complement of what you wrote, then the extensions are not present.
+So you can check if certain extensions are available and ready to be accessed
+by reading back the value you just wrote to the device ID register. If that
+value is not the complement of what you wrote, then the extensions are not
+present.
 
 
 
 <h2 id="gfx9000">Graphics9000 / v9990</h2>
 
-<p>The v9990 has 16 registers in total, covering the range #60-#6F. Only the first eight are used in the Graphics9000, ports #68-#6B are used in combination with an optional Kanji ROM extension, and the rest is left as reserve. In the Graphics9000, port #6F is mapped to the v7040 superimpose chip.</p>
+<p>The v9990 has 16 registers in total, covering the range #60-#6F. Only the
+first eight are used in the Graphics9000, ports #68-#6B are used in combination
+with an optional Kanji ROM extension, and the rest is left as reserve. In the
+Graphics9000, port #6F is mapped to the v7040 superimpose chip.</p>
 
 <table>
-<tr><th>Port range</th> <th>Description</th></tr>
-<tr><td>#60</td> <td>VRAM data port</td></tr>
-<tr><td>#61</td> <td>Palette data port</td></tr>
-<tr><td>#62</td> <td>Command data port</td></tr>
-<tr><td>#63</td> <td>Register data port</td></tr>
-<tr><td>#64</td> <td>Register select port <em>(write only)</em></td></tr>
-<tr><td>#65</td> <td>Status port <em>(read only)</em></td></tr>
-<tr><td>#66</td> <td>Interrupt flag port</td></tr>
-<tr><td>#67</td> <td>System control port <em>(write only)</em></td></tr>
-<tr><td>#68-#69</td> <td>Primary standard Kanji ROM address port <em>(write only) (not used in Gfx9000)</em></td></tr>
-<tr><td>#69</td> <td>Primary standard Kanji ROM data port <em>(read only) (not used in Gfx9000)</em></td></tr>
-<tr><td>#6A-#6B</td> <td>Secondary standard Kanji ROM address port <em>(write only) (not used in Gfx9000)</em></td></tr>
-<tr><td>#6B</td> <td>Secondary standard Kanji ROM data port <em>(read only) (not used in Gfx9000)</em></td></tr>
-<tr><td>#6C-#6E</td> <td>Reserved</td></tr>
-<tr><td>#6F</td> <td>v7040 superimpose chip <em>(write only)</em> <em>(both Gfx9000 and Video9000)</em></td></tr>
+<tr><th>Port range</th><th>Description</th></tr>
+<tr><td>#60</td><td>VRAM data port</td></tr>
+<tr><td>#61</td><td>Palette data port</td></tr>
+<tr><td>#62</td><td>Command data port</td></tr>
+<tr><td>#63</td><td>Register data port</td></tr>
+<tr><td>#64</td><td>Register select port <em>(write only)</em></td></tr>
+<tr><td>#65</td><td>Status port <em>(read only)</em></td></tr>
+<tr><td>#66</td><td>Interrupt flag port</td></tr>
+<tr><td>#67</td><td>System control port <em>(write only)</em></td></tr>
+<tr><td>#68-#69</td><td>Primary standard Kanji ROM address port
+                        <em>(write only) (not used in Gfx9000)</em></td></tr>
+<tr><td>#69</td><td>Primary standard Kanji ROM data port
+                    <em>(read only) (not used in Gfx9000)</em></td></tr>
+<tr><td>#6A-#6B</td><td>Secondary standard Kanji ROM address port
+                        <em>(write only) (not used in Gfx9000)</em></td></tr>
+<tr><td>#6B</td><td>Secondary standard Kanji ROM data port
+                    <em>(read only) (not used in Gfx9000)</em></td></tr>
+<tr><td>#6C-#6E</td><td>Reserved</td></tr>
+<tr><td>#6F</td><td>v7040 superimpose chip
+                    <em>(write only) (both Gfx9000 and Video9000)</em></td></tr>
 </table>
 
-<p><em>Important note:</em> for correct behaviour, all Gfx9000 applications should initialize by writing 0 to port #6F (the v7040 superimpose chip), and then wait a frame before accessing the Gfx9000 again. Not ensuring this  register has the value 0 written to it will cause the Gfx9000 output to be blurred occasionally. On exit, Gfx9000 applications should write #10 to port #6F as a courtesy to Video9000 owners.</p>
+<p><em>Important note:</em> for correct behaviour, all Gfx9000 applications
+should initialize by writing 0 to port #6F (the v7040 superimpose chip), and
+then wait a frame before accessing the Gfx9000 again. Not ensuring this
+register has the value 0 written to it will cause the Gfx9000 output to be
+blurred occasionally. On exit, Gfx9000 applications should write #10 to port #6F
+as a courtesy to Video9000 owners.</p>
 
-<p>Refer to the <a href="/resources/#v9990">Video9000 manual</a>, page 13, for more (Video9000-specific) details about the v7040 chip.</p>
+<p>Refer to the <a href="/resources/#v9990">Video9000 manual</a>, page 13, for
+more (Video9000-specific) details about the v7040 chip.</p>
 
 
 <h2 id="rs232">RS232C UART (8251) / timer (8253)</h2>
@@ -546,7 +594,8 @@ So you can check if certain extensions are available and ready to be accessed by
   <tr>
     <td>#99 (write)</td>
     <td>VDP register write port (bit 7=1 in second write)<br />
-      VRAM address register (bit 7=0 in second write, bit 6: read/write access (0=read))</td>
+      VRAM address register (bit 7=0 in second write, bit 6: read/write access
+      (0=read))</td>
   </tr>
   <tr>
     <td>#99 (read)</td>
@@ -562,13 +611,14 @@ So you can check if certain extensions are available and ready to be accessed by
   </tr>
 </table>
 
-<p>See the <a href="/resources/#video">TMS9918, v9938 and v9958 application manuals</a>
-for more details.</p>
+<p>See the <a href="/resources/#video">TMS9918, v9938 and v9958 application
+manuals</a> for more details.</p>
 
 
 <h2 id="psg">PSG / AY-3-8910 / YM2149</h2>
 
-<p>These are the I/O registers for accessing the MSX PSG (Programmable Sound Generator):</p>
+<p>These are the I/O registers for accessing the MSX PSG (Programmable Sound
+Generator):</p>
 
 <table>
   <tr>
@@ -607,7 +657,10 @@ for more details.</p>
   <tr>
     <td>7</td>
     <td>Mixer control-I/O enable<br />
-      <em>Important note:</em> bit 6 <strong>must</strong> be 0, and bit 7 <strong>must</strong> be 1. Setting different values can cause damage on some systems. Safest approach is to just not touch them and read them first before writing a new value.
+      <em>Important note:</em> bit 6 <strong>must</strong> be 0, and bit 7
+      <strong>must</strong> be 1. Setting different values can cause damage on
+      some systems. Safest approach is to just not touch them and read them
+      first before writing a new value.
     </td>
   </tr>
   <tr>
@@ -624,8 +677,8 @@ for more details.</p>
   </tr>
 </table>
 
-<p>See the <a href="/resources/#psg">AY-3-8910 and YM2149 application manuals</a>
-for more details.</p>
+<p>See the <a href="/resources/#psg">AY-3-8910 and YM2149 application
+manuals</a> for more details.</p>
 
 <h3 id="psgioports">Additional PSG I/O ports A &amp; B</h3>
 
@@ -734,7 +787,8 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="pausetr">Pause / R800 info (turboR)</h2>
 
-<p>This I/O register is only present on MSX turboR computers. Its function differs depending on whether you are reading or writing.</p>
+<p>This I/O register is only present on MSX turboR computers. Its function
+differs depending on whether you are reading or writing.</p>
 
 <table>
 <tr>
@@ -758,7 +812,8 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="ppi">PPI / Programmable Peripheral Interface / 8255</h2>
 
-<p>The PPI controls a number of things in the MSX system, ranging from slot selection through cassette output to interfacing with the keyboard.</p>
+<p>The PPI controls a number of things in the MSX system, ranging from slot
+selection through cassette output to interfacing with the keyboard.</p>
 
 <table>
 <tr>
@@ -790,7 +845,9 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h3 id="ppi-a">Primary slot select register</h3>
 
-<p>The 64k of MSX main memory is divided into four blocks of 16k, referred to as <dfn>pages</dfn>. This register controls which primary slot will be mapped to each page of memory.</p>
+<p>The 64k of MSX main memory is divided into four blocks of 16k, referred to as
+<dfn>pages</dfn>. This register controls which primary slot will be mapped to
+each page of memory.</p>
 
 <table>
 	<caption>PPI-register A (#A8)</caption>
@@ -818,12 +875,17 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <p>This register can both be written and be read.</p>
 
-<p>Additionally, each primary slot can and often will be expanded into four secondary slots, also known as <dfn>subslots</dfn>. The subslot select register can be found at memory address #FFFF. For more details, go to the <a href="#subslot">secondary slot select register</a>.</p>
+<p>Additionally, each primary slot can and often will be expanded into four
+secondary slots, also known as <dfn>subslots</dfn>. The subslot select register
+can be found at memory address #FFFF. For more details, go to the
+<a href="#subslot">secondary slot select register</a>.</p>
 
 
 <h3 id="ppi-bc">Misc PPI controls</h3>
 
-<p>With PPI register C you can access the keyboard (including CAPS LED and key click), and control the cassette interface. The precise function of each bit is described in the table below:</p>
+<p>With PPI register C you can access the keyboard (including CAPS LED and key
+click), and control the cassette interface. The precise function of each bit is
+described in the table below:</p>
 
 <table>
 	<caption>PPI-register C (#AA)</caption>
@@ -854,12 +916,15 @@ and working more or less in conjunction with it. These are the functions:</p>
 	</tr>
 </table>
 
-<p>More information about keyboard matrices can be found in the <a href="/articles/keymatrix.php">keyboard matrices</a> article.</p>
+<p>More information about keyboard matrices can be found in the
+<a href="/articles/keymatrix.php">keyboard matrices</a> article.</p>
 
 
 <h3 id="ppi-cmd">PPI command register</h3>
 
-<p>With this write-only register you can set or reset individual bits in PPI-register C. This is the recommended (fastest) method to use when you want to modify bits 4-7.</p>
+<p>With this write-only register you can set or reset individual bits in
+PPI-register C. This is the recommended (fastest) method to use when you want to
+modify bits 4-7.</p>
 
 <table>
 	<caption>PPI command register (#AB)</caption>
@@ -947,7 +1012,11 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="sysflags">System flags</h2>
 
-<p>This register is basically a simple memory cell which is preserved after a reset. It is used on the MSX2+ to differentiate between a hard boot (power on) and a soft boot (reset button) by writing a value to it during the boot routine, and check for that value everytime the computer starts. On the turboR, it also indicates whether the Z80 or the R800 has to boot.</p>
+<p>This register is basically a simple memory cell which is preserved after a
+reset. It is used on the MSX2+ to differentiate between a hard boot (power on)
+and a soft boot (reset button) by writing a value to it during the boot routine,
+and check for that value everytime the computer starts. On the turboR, it also
+indicates whether the Z80 or the R800 has to boot.</p>
 
 <table>
 <tr>
@@ -966,7 +1035,12 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="mmapper">Memory Mapper registers</h2>
 
-<p>The Z80 used in the MSX has 64k of addressable memory. To be able to use more memory, memory mappers are used in MSX2 computers and above. A memory mapper divides the 64k of RAM into four 16k blocks called <dfn>pages</dfn>, into which up to 256 different memory <dfn>segments</dfn> can be mapped. Note that these segments are shared – it is possible to map a segment used in page 0 into page 1 as well.</p>
+<p>The Z80 used in the MSX has 64k of addressable memory. To be able to use more
+memory, memory mappers are used in MSX2 computers and above. A memory mapper
+divides the 64k of RAM into four 16k blocks called <dfn>pages</dfn>, into which
+up to 256 different memory <dfn>segments</dfn> can be mapped. Note that these
+segments are shared – it is possible to map a segment used in page 0 into page 1
+as well.</p>
 
 <table>
 <tr>
@@ -991,17 +1065,29 @@ and working more or less in conjunction with it. These are the functions:</p>
 </tr>
 </table>
 
-<p>Note that reading those registers is <strong>not</strong> reliable, and should not be done.</p>
+<p>Note that reading those registers is <strong>not</strong> reliable, and
+should not be done.</p>
 
-<p>Detecting the amount of available memory can be done by writing a unique value into all mapper pages and iterating through them until you see repetition. If the repetition e.g. occurs after 8 pages, there is 128k of RAM available. Usually, you will want to do this with interrupts disabled and also want to restore the original values.</p>
+<p>Detecting the amount of available memory can be done by writing a unique
+value into all mapper pages and iterating through them until you see repetition.
+If the repetition e.g. occurs after 8 pages, there is 128k of RAM available.
+Usually, you will want to do this with interrupts disabled and also want to
+restore the original values.</p>
 
-<p>Note about DOS2: MSX-DOS2 provides a set of <a href="/resources/dos2_environment.php#c5">convenient memory management routines</a>. In a DOS2 environment, you should <strong>not</strong> access the mapper registers directly, as this will cause various problems. The routines DOS2 offers are very fast, and there should be no reason not to use them.</p>
+<p>Note about DOS2: MSX-DOS2 provides a set of
+<a href="/resources/dos2_environment.php#c5">convenient memory management
+routines</a>. In a DOS2 environment, you should <strong>not</strong> access the
+mapper registers directly, as this will cause various problems. The routines
+DOS2 offers are very fast, and there should be no reason not to use them.</p>
 
 
 
 <h2 id="a1fm-modem">Panasonic FS-A1FM Modem ROM</h2>
 
-<p>The Panasonic FS-A1FM computer has a built-in modem with firmware. On the back of the computer, there is a switch to enable the modem software. This firmware, including a memory-mapped I/O area in the #7FC0-#7FFF range, is located in slot 3-1. I do not know if there is a detection method.</p>
+<p>The Panasonic FS-A1FM computer has a built-in modem with firmware. On the
+back of the computer, there is a switch to enable the modem software. This
+firmware, including a memory-mapped I/O area in the #7FC0-#7FFF range, is
+located in slot 3-1. I do not know if there is a detection method.</p>
 
 <table>
 <tr>
@@ -1027,9 +1113,12 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="subslot">Secondary slot select register</h2>
 
-<p>Each <a href="#ppi-a">primary slot</a> can and often will be expanded into four secondary slots, also known as <dfn>subslots</dfn>. Just like a primary slot, a subslot can also be mapped to one of the four pages in main memory.</p>
+<p>Each <a href="#ppi-a">primary slot</a> can and often will be expanded into
+four secondary slots, also known as <dfn>subslots</dfn>. Just like a primary
+slot, a subslot can also be mapped to one of the four pages in main memory.</p>
 
-<p>The subslot select register can be found at memory address #FFFF, and looks as follows:</p>
+<p>The subslot select register can be found at memory address #FFFF, and looks
+as follows:</p>
 
 <table>
 	<tr>
@@ -1054,11 +1143,26 @@ and working more or less in conjunction with it. These are the functions:</p>
 	</tr>
 </table>
 
-<p>When this register is read, it returns the complement of the previous value written.</p>
+<p>When this register is read, it returns the complement of the previous value
+written.</p>
 
-<p>It is important to note that the subslot register <strong>only</strong> affects the primary slot which is selected in page 3 (which the #FFFF address is in). This makes selecting a different subslot in e.g. page 1 a little less than trivial when page 1 doesn’t have the same primary slot as page 3. This involves switching page 1’s slot into page 3, selecting the desired subslot, and switching back the original slot into page 3. All this must be done with interrupts disabled and, logically, from an address not in the #C000-#FFFF range. Don’t forget to take care of the stack as well.</p>
+<p>It is important to note that the subslot register <strong>only</strong>
+affects the primary slot which is selected in page 3 (which the #FFFF address is
+in). This makes selecting a different subslot in e.g. page 1 a little less than
+trivial when page 1 doesn’t have the same primary slot as page 3. This involves
+switching page 1’s slot into page 3, selecting the desired subslot, and
+switching back the original slot into page 3. All this must be done with
+interrupts disabled and, logically, from an address not in the #C000-#FFFF
+range. Don’t forget to take care of the stack as well.</p>
 
-<p>Usually it will be easier to use the BIOS-provided slot select routines (e.g. <a href="/resources/msxbios.php#ENASLT">ENASLT</a> or its <a href="/resources/dos2_environment.php#c2_3">DOS equivalent</a>). While on the subject of the BIOS, the easiest method to determine whether a slot is expanded is to read out the <a href="/resources/msxsystemvars.php#EXPTBL">EXPTBL</a> system variables. Also, the BIOS maintains a mirror of the value of each primary slot’s subslot register in the <a href="/resources/msxsystemvars.php#SLTTBL">SLTTBL</a> system variables.</p>
+<p>Usually it will be easier to use the BIOS-provided slot select routines
+(e.g. <a href="/resources/msxbios.php#ENASLT">ENASLT</a> or its
+<a href="/resources/dos2_environment.php#c2_3">DOS equivalent</a>). While on the
+subject of the BIOS, the easiest method to determine whether a slot is expanded
+is to read out the <a href="/resources/msxsystemvars.php#EXPTBL">EXPTBL</a>
+system variables. Also, the BIOS maintains a mirror of the value of each primary
+slot’s subslot register in the
+<a href="/resources/msxsystemvars.php#SLTTBL">SLTTBL</a> system variables.</p>
 
 
 

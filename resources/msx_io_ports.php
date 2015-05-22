@@ -252,7 +252,7 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#D0-#D7</td>
   <td><a href="/resources/#diskcontrollers">FDC / Floppy Disk Controller</a>
-      (various types)</td>
+      (WD2793 Microsol)</td>
 </tr>
 <tr>
   <td>#D8-#D9</td>

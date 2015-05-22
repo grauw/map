@@ -415,14 +415,15 @@ switched I/O ports.</p>
 </table>
 
 <p>ID numbers between 1 and 127 are manufacturer ID numbers, and ID numbers 128
-to 254 are device IDs. As a basic rule, those devices which are designed
-specifically for one machine should contain the manufacturer’s company ID, while
-periperhal devices which can be used on all MSX computers should have a device
-ID number. Also, the Z80 actually has a 16-bit I/O addressing space so it is
-recommended to access in 16-bit by decoding the upper 8 bits for those IDs which
-might be expanded in the future. Especially for devices which are connected with
-their make ID it can be expected that they might eventually need more addressing
-space, and with this it will be future-proofed.</p>
+to 254 are device IDs. Built-in devices should use the manufacturer’s company
+ID, while periperhal devices which can be used on all MSX computers should use a
+device ID number.</p>
+
+<p>As the Z80 has a 16-bit I/O addressing space, for those IDs which might be
+expanded in the future, it is recommended to use 16-bit access by decoding the
+upper 8 bits. Particularly for devices connected by manufacturer ID, with 16-bit
+access the address space for each ID can be expanded 256 times, which will help
+to support future expansion.</p>
 
 <p>List of BIOS extension device ID’s:</p>
 <table>

@@ -131,7 +131,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#7E-#7F</td>
-  <td>MoonSound / OPL4 - Wave-bank</td>
+  <td>MoonSound / OPL4 - Wave</td>
 </tr>
 <tr>
   <td>#80-#83</td>
@@ -222,24 +222,16 @@ If you have additions or see an error, please let us know.</em></p>
   <td>MSX-AUDIO / Music Module</td>
 </tr>
 <tr>
-  <td>#C0-#C1</td>
-  <td>MoonSound / OPL4 - FM-bank 1 alternate addressing mode</td>
+  <td>#C0-#C3</td>
+  <td>MoonSound / OPL4 - FM alternate addressing mode</td>
 </tr>
 <tr>
   <td>#C2-#C3</td>
   <td>MSX-AUDIO / Music Module - 2nd cartridge</td>
 </tr>
 <tr>
-  <td>#C2-#C3</td>
-  <td>MoonSound / OPL4 - FM-bank 2 alternate addressing mode</td>
-</tr>
-<tr>
-  <td>#C4-#C5</td>
-  <td>MoonSound / OPL4 - FM-bank 1</td>
-</tr>
-<tr>
-  <td>#C6-#C7</td>
-  <td>MoonSound / OPL4 - FM-bank 2</td>
+  <td>#C4-#C7</td>
+  <td>MoonSound / OPL4 - FM</td>
 </tr>
 <tr>
   <td>#C8-#CF</td>

@@ -417,6 +417,12 @@ LDIR
 <tr><td>18</td><td>Spectravideo</td></tr>
 <tr><td>19</td><td>Toshiba</td></tr>
 <tr><td>20</td><td>Mitsumi</td></tr>
+<tr><td>21</td><td>Telematica</td></tr>
+<tr><td>22</td><td>Gradiente</td></tr>
+<tr><td>23</td><td>Sharp Brazil</td></tr>
+<tr><td>24</td><td>GoldStar (LG)</td></tr>
+<tr><td>25</td><td>Daewoo</td></tr>
+<tr><td>26</td><td>SumSong</td></tr>
 <tr><td>128</td><td>Image Scanner (Matsushita)</td></tr>
 <tr><td>254</td><td>MPS2 (ASCII)</td></tr>
 </table>

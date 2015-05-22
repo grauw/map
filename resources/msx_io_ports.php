@@ -115,7 +115,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#60-#6F</td>
-  <td><a href="#gfx9000">Graphics9000 / v9990</a></td>
+  <td><a href="#gfx9000">Graphics9000 / V9990</a></td>
 </tr>
 <tr>
   <td>#70-73</td>
@@ -498,12 +498,12 @@ present.</p>
 
 
 
-<h2 id="gfx9000">Graphics9000 / v9990</h2>
+<h2 id="gfx9000">Graphics9000 / V9990</h2>
 
-<p>The v9990 has 16 registers in total, covering the range #60-#6F. Only the
+<p>The V9990 has 16 registers in total, covering the range #60-#6F. Only the
 first eight are used in the Graphics9000, ports #68-#6B are used in combination
 with an optional Kanji ROM extension, and the rest is left as reserve. In the
-Graphics9000, port #6F is mapped to the v7040 superimpose chip.</p>
+Graphics9000, port #6F is mapped to the V7040 superimpose chip.</p>
 
 <table>
 <tr><th>Port range</th><th>Description</th></tr>

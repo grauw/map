@@ -171,7 +171,7 @@ information, feel free to send us an email.</p>
     <li>S1990 · turboR bus controller</li>
     </ul>
   </li>
-  <li id="diskctl">Disk controllers
+  <li id="diskcontrollers">Disk controllers
     <ul>
     <li><a href="/resources/disk/westerndigital_wd279x02.pdf">Western Digital WD2793-02 FDC</a> · used in most MSX2’s</li>
     <li><a href="/resources/disk/toshiba_tc8566af.pdf">Toshiba TC8566AF FDC</a> · used in Panasonic MSX computers</li>

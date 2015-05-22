@@ -251,7 +251,8 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#D0-#D7</td>
-  <td>FDC / Floppy Disk Controller <em>(which types?)</em></td>
+  <td><a href="/resources/#diskcontrollers">FDC / Floppy Disk Controller</a>
+      (various types)</td>
 </tr>
 <tr>
   <td>#D8-#D9</td>

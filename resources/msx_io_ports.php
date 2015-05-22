@@ -397,8 +397,7 @@ so-called ‘switched I/O ports’. With these the limitation of a maximum numbe
 logic on the hardware’s behalf. The port numbers #41-#4F are the actual switched
 ports, and the device addressed via those ports is determined by the device ID
 written to port #40. When port #40 is read it returns the complement of the
-current device ID. Device IDs 0 and 255 can be used to detect the presence of
-switched I/O ports.</p>
+current device ID.</p>
 
 <table>
 <tr>

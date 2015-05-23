@@ -447,7 +447,7 @@ to support future expansion.</p>
 <tr><td>25</td><td>Daewoo</td></tr>
 <tr><td>26</td><td>SumSong</td></tr>
 <tr><td>128</td><td>Image Scanner (Matsushita)</td></tr>
-<tr><td>212</td><td>1chipMSX / Zemmix Neo</td></tr>
+<tr><td>212</td><td>1chipMSX / Zemmix Neo (KdL firmware)</td></tr>
 <tr><td>254</td><td>MPS2 (ASCII)</td></tr>
 </table>
 

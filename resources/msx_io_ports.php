@@ -30,6 +30,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Music Module MIDI, output ports</td>
 </tr>
 <tr>
+  <td>#00-#01</td>
+  <td>Sensor Kid</td>
+</tr>
+<tr>
   <td>#00-#03</td>
   <td>FAC MIDI interface</td>
 </tr>

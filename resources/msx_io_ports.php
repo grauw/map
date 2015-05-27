@@ -157,7 +157,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#8C-#8D</td>
-  <td>Sony MSX Modem <em>(HBI-1200? “TELECOM BIOS” what does it mean?)</em></td>
+  <td>Sony MSX Modem <em>(HBI-1200?)</em></td>
 </tr>
 <tr>
   <td>#8E-#8F</td>

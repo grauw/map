@@ -208,10 +208,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#B8-BB</td>
-  <td>Card Reader <em>(maybe the
-  <a href="http://www.faq.msxnet.org/hardware.html#Electric">Softcard
-  adaptor</a> or <a href="http://www.faq.msxnet.org/hardware.html#Hudson">Bee
-  Pack</a>???)</em></td>
+  <td>Card Reader <em>(which?)</em></td>
 </tr>
 <tr>
   <td>#B8-BB</td>

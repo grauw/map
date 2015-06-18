@@ -42,6 +42,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Music Module MIDI, input ports</td>
 </tr>
 <tr>
+  <td>#0A</td>
+  <td>Music Module DAC (enable with Y8950 IO0)</td>
+</tr>
+<tr>
   <td>#0F</td>
   <td><a href="#zemina-memory">Zemina memory extensions</a></td>
 </tr>

@@ -220,7 +220,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#BC-BF</td>
-  <td>JVC video controller (8255 i/f)</td>
+  <td>JVC VHD video controller (8255 i/f)</td>
 </tr>
 <tr>
   <td>#C0-#C1</td>

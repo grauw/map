@@ -3538,7 +3538,7 @@ this:</p>
 may be deviations or errors in the above description. The above findings are
 based on research by the openMSX team and verified by Grauw using a different,
 cycle-accurate methodology. For more details see the documents in the
-<a href="https://sourceforge.net/p/openmsx/openmsx/ci/master/tree/doc/internal/">openMSX
+<a href="https://github.com/openMSX/openMSX/tree/master/doc/internal">openMSX
 repository</a>.</p>
 
 

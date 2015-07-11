@@ -28,11 +28,11 @@ documentation courtesy Dennis Koller and Sander van Nunen.</p>
 
 <p><em>2014-08-16</em><br />
 Added <a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings,
-part II</a> by team <a href="http://openmsx.sourceforge.net/">openMSX</a>.</p>
+part II</a> by team <a href="http://www.openmsx.org/">openMSX</a>.</p>
 
 <p><em>2014-07-26</em><br />
 Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
-article by the <a href="http://openmsx.sourceforge.net/">openMSX</a> team.
+article by the <a href="http://www.openmsx.org/">openMSX</a> team.
 Highly detailed insights in the inner workings of the VDP.</p>
 
 <p><em>2014-07-18</em><br />

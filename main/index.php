@@ -18,6 +18,10 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p><em>2015-07-14</em><br />
+Added <a href="/resources/">MSX datasheet chapters</a> translated
+by FRS, Takamichi and sandervn.</p>
+
 <p><em>2015-03-05</em><br />
 Added detailed R800 timing information to the
 <a href="/resources/z80instr.php">Z80 instruction set overview</a>.</p>

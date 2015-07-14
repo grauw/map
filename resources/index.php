@@ -27,6 +27,7 @@ information, feel free to send us an email.</p>
     <li class="map"><a href="/resources/subrom.php">MSX SUBROM BIOS calls</a></li>
     <li class="map"><a href="/resources/msxsystemvars.php">System variables</a> <em>(work in progress)</em></li>
     <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">MSX2 Technical Handbook appendices</a> · by Nestor Soriano (Konamiman)</li>
+    <li><a href="/resources/datapack/Vol3-7MSXExtendedBIOSSpecification.pdf">MSX Extended BIOS Specification</a> · MSX Datapack Vol. 3-7, translated by FRS, Takamichi &amp; sandervn</li>
     </ul>
   </li>
   <li id="dos2">DOS2 documentation
@@ -114,6 +115,9 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/sound/yamaha_ym2413.pdf">Yamaha YM2413 (OPLL) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
+      <li><a href="/resources/datapack/Vol2-3.1MSX-MUSICHardware.pdf">MSX-MUSIC Hardware</a> · MSX Datapack Vol. 2-3.1, translated by FRS, Takamichi &amp; sandervn</li>
+      <li><a href="/resources/datapack/Vol2-3.2MSX-MUSICExtendedBASIC.pdf">MSX-MUSIC Extended BASIC</a> · MSX Datapack Vol. 2-3.2, translated by FRS, Takamichi &amp; sandervn</li>
+      <li><a href="/resources/datapack/Vol2-3.3FMBIOS.pdf">FM BIOS</a> · MSX Datapack Vol. 2-3.3, translated by FRS, Takamichi &amp; sandervn</li>
       </ul>
     </li>
     <li id="opl1">MSX-Audio / Music Module
@@ -121,6 +125,10 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
       <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
       <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 (OPL) datasheet</a></li>
+      <li><a href="/resources/datapack/Vol2-4.1MSX-AUDIOHardware.pdf">MSX-AUDIO Hardware</a> · MSX Datapack Vol. 2-4.1, translated by FRS, Takamichi &amp; sandervn</li>
+      <li><a href="/resources/datapack/Vol2-4.2MSX-AUDIOBASICExpansion.pdf">MSX-AUDIO BASIC Expansion</a> · MSX Datapack Vol. 2-4.2, translated by FRS, Takamichi &amp; sandervn</li>
+      <li><a href="/resources/datapack/Vol2-4.3MSX-AUDIOExtendedBIOS.pdf">MSX-AUDIO Extended BIOS</a> · MSX Datapack Vol. 2-4.3, translated by FRS, Takamichi &amp; sandervn</li>
+      <li><a href="/resources/datapack/Vol2-4.4MSX-AUDIOMBIOS.pdf">MSX-AUDIO MBIOS</a> · MSX Datapack Vol. 2-4.4, translated by FRS, Takamichi &amp; sandervn</li>
       <li class="map"><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a></li>
       </ul>
     </li>

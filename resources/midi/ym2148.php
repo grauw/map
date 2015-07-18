@@ -22,9 +22,9 @@ I/O</em> at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
 <tr><th>Address</th><th>Access</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>3FF0H</td><td>R</td><td>FM status register</td></tr>
 <tr><td>3FF0H</td><td>W</td><td>FM address register</td></tr>
-<tr><td>3FF1H</td><td>R/W</td><td>FM data register</td></tr>
+<tr><td>3FF1H</td><td>W</td><td>FM data register</td></tr>
+<tr><td>3FF1H</td><td>R</td><td>FM status register</td></tr>
 <tr><td>3FF2H</td><td>R/W</td><td>External mounted keyboard (MK) I/O</td></tr>
 <tr><td>3FF3H</td><td>W</td><td>MIDI UART IRQ vector</td></tr>
 <tr><td>3FF4H</td><td>W</td><td>External IRQ vector</td></tr>

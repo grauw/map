@@ -29,8 +29,8 @@ I/O</em> at address 3FF0H-3FF6H of the SFG’s ROM. More specifically:</p>
 <tr><td>3FF3H</td><td>W</td><td>MIDI UART IRQ vector</td></tr>
 <tr><td>3FF4H</td><td>W</td><td>External IRQ vector</td></tr>
 <tr><td>3FF5H</td><td>R/W</td><td>MIDI UART data read / write buffer</td></tr>
-<tr><td>3FF6H</td><td>R</td><td>MIDI UART status register</td></tr>
 <tr><td>3FF6H</td><td>W</td><td>MIDI UART command register</td></tr>
+<tr><td>3FF6H</td><td>R</td><td>MIDI UART status register</td></tr>
 </tbody>
 </table>
 

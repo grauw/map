@@ -34,8 +34,8 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Sensor Kid</td>
 </tr>
 <tr>
-  <td>#00-#03</td>
-  <td>FAC MIDI interface</td>
+  <td>#02-#03</td>
+  <td>FAC MIDI interface (i8251, mirrored on ports #00-#07)</td>
 </tr>
 <tr>
   <td>#04-#05</td>

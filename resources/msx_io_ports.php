@@ -1016,7 +1016,7 @@ modify bits 4-7.</p>
   <th>Bit</th>
   <th>Description</th>
 </tr>
-<tr><td rowspan="8">#F5</td>
+<tr><td rowspan="8">#F3</td>
     <td>0</td><td>M3</td></tr>
 <tr><td>1</td><td>M4</td></tr>
 <tr><td>2</td><td>M5</td></tr>
@@ -1065,7 +1065,7 @@ should not read or set these values.</p>
 </tr>
 <tr><td rowspan="8">#F5 (write)</td>
     <td>0</td><td>Kanji ROM, JIS 1 (see also
-    <a href="/resources/engine/yamaha_s1985.pdf">S1986 MSX-ENGINE</a>)</td></tr>
+    <a href="/resources/engine/yamaha_s1985.pdf">S1985 MSX-ENGINE</a>)</td></tr>
 <tr><td>1</td><td>Kanji ROM, JIS 2</td></tr>
 <tr><td>2</td><td>MSX-AUDIO</td></tr>
 <tr><td>3</td><td>Super impose</td></tr>
@@ -1084,7 +1084,7 @@ should not read or set these values.</p>
   <th>Bit</th>
   <th colspan="3">Description</th>
 </tr>
-<tr><td rowspan="8">#F5</td>
+<tr><td rowspan="8">#F7</td>
     <td>0</td><td>Audio R</td><td>Mixing on</td><td>(Write)</td></tr>
 <tr><td>1</td><td>Audio L</td><td>Mixing off</td><td>(Write)</td></tr>
 <tr><td>2</td><td>Video input selection</td><td>21-pin RGB</td><td>(Write)</td></tr>

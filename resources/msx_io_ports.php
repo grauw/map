@@ -1071,7 +1071,7 @@ should not read or set these values.</p>
 <tr><td>3</td><td>Super impose</td></tr>
 <tr><td>4</td><td>MSX INTERFACE</td></tr>
 <tr><td>5</td><td>RS-232C</td></tr>
-<tr><td>6</td><td>Wait pin</td></tr>
+<tr><td>6</td><td>Light pen</td></tr>
 <tr><td>7</td><td>CLOCK-IC (MSX2, MSX2+ only implementation)</td></tr>
 </table>
 

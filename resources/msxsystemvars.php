@@ -845,6 +845,44 @@
   <td>SUBROM slot address (EXtended Bios-Rom Slot Address)</td>
 </tr>
 
+<tr id="XSAVE">
+  <td>XSAVE</td>
+  <td>#FAFE</td>
+  <td>1</td>
+  <td>Light pen X coordinate read from the device (internal use only).</td>
+</tr>
+
+<tr id="XOFFS">
+  <td>XOFFS</td>
+  <td>#FAFF</td>
+  <td>1</td>
+  <td>Light pen X calibration offset
+    <ul>
+      <li>Bit 0-6: X calibration offset</li>
+      <li>Bit 7: A light pen interrupt occurred. Used internally by the MSX-BIOS, user software mustn’t set it.</li>
+    </ul>
+  </td>
+</tr>
+
+<tr id="YSAVE">
+  <td>YSAVE</td>
+  <td>#FB00</td>
+  <td>1</td>
+  <td>Light pen Y coordinate read from the device (internal use only).</td>
+</tr>
+
+<tr id="YOFFS">
+  <td>YOFFS</td>
+  <td>#FB01</td>
+  <td>1</td>
+  <td>Light pen Y calibration offset
+    <ul>
+      <li>Bit 0-6: Y calibration offset</li>
+      <li>Bit 7: Reserved for future use. Mask from reads and do not set.</li>
+    </ul>
+  </td>
+</tr>
+
 <tr id="DRVINF">
   <td rowspan="8">DRVINF</td>
   <td>#FB21</td>

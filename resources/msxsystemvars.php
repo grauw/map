@@ -1074,6 +1074,13 @@
   <td>Mirror of VDP register 22 (Basic: <code>VDP(23)</code>, note: +1)</td>
 </tr>
 
+<tr id="ROMSLT">
+  <td>ROMSLT</td>
+  <td>#FFF7</td>
+  <td>1</td>
+  <td>Main BIOS slot ID.</td>
+</tr>
+
 <tr id="RG23SA">
   <td>RG23SA</td>
   <td>#FFF6</td>

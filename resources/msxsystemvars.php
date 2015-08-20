@@ -1078,7 +1078,7 @@
   <td>ROMSLT</td>
   <td>#FFF7</td>
   <td>1</td>
-  <td>Main BIOS slot ID.</td>
+  <td>Main BIOS slot ID. (MSX2 and up only)</td>
 </tr>
 
 <tr id="RG23SA">

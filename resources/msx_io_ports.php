@@ -59,11 +59,11 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#20-#28</td>
-  <td>Second setting Philips NMS1251 modem</td>
+  <td>Philips NMS1251 modem second setting</td>
 </tr>
 <tr>
   <td>#20-#28</td>
-  <td>Second setting Miniware M4000 modem</td>
+  <td>Miniware M4000 modem second setting</td>
 </tr>
 <tr>
   <td>#21-#27</td>

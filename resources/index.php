@@ -194,7 +194,11 @@ information, feel free to send us an email.</p>
   </li>
   <li id="communication">Communication
     <ul>
-    <li id="rs232">RS232</li>
+    <li id="rs232">RS232
+      <ul>
+      <li><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface user guide</a></li>
+      </ul>
+    </li>
     <li id="joynet">JoyNet
       <ul>
       <li><a href="/resources/joynet/">JoyNet standard documentation</a></li>

@@ -86,6 +86,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a> second setting (hardware switch)</td>
 </tr>
 <tr>
+  <td>#27-#2F</td>
+  <td>Philips NMS1255 MSX interface/modem second setting (hardware switch) (see <a href="/resources/serial/philips_nms1210.pdf">NMS121x</a>)</td>
+</tr>
+<tr>
   <td>#2E-#2F</td>
   <td>openMSX debug device (default address)</td>
 </tr>
@@ -108,6 +112,10 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#37-#3F</td>
   <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a></td>
+</tr>
+<tr>
+  <td>#37-#3F</td>
+  <td>Philips NMS1255 MSX interface/modem (see <a href="/resources/serial/philips_nms1210.pdf">NMS121x</a>)</td>
 </tr>
 <tr>
   <td>#3C</td>

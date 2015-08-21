@@ -82,8 +82,8 @@ If you have additions or see an error, please let us know.</em></p>
   <td>PlaySoniq joypad / temporary data</td>
 </tr>
 <tr>
-  <td>#28-#2F</td>
-  <td>Second setting Philips NMS1210 RS232 interface</td>
+  <td>#27-#2F</td>
+  <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a> second setting (hardware switch)</td>
 </tr>
 <tr>
   <td>#2E-#2F</td>
@@ -104,6 +104,10 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#30-#38</td>
   <td>CD-ROM interface</td>
+</tr>
+<tr>
+  <td>#37-#3F</td>
+  <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a></td>
 </tr>
 <tr>
   <td>#3C</td>

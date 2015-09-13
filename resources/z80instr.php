@@ -2863,7 +2863,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>C7</td>
 			<td>1</td>
 		</tr>
@@ -2872,7 +2872,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>CF</td>
 			<td>1</td>
 		</tr>
@@ -2881,7 +2881,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>D7</td>
 			<td>1</td>
 		</tr>
@@ -2890,7 +2890,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>DF</td>
 			<td>1</td>
 		</tr>
@@ -2899,7 +2899,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>E7</td>
 			<td>1</td>
 		</tr>
@@ -2908,7 +2908,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>EF</td>
 			<td>1</td>
 		</tr>
@@ -2917,7 +2917,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>F7</td>
 			<td>1</td>
 		</tr>
@@ -2926,7 +2926,7 @@ section.</p>
 			<td>11</td>
 			<td>12</td>
 			<td>4</td>
-			<td>6</td>
+			<td>6/7<a href="#callwaitnote">²</a></td>
 			<td>FF</td>
 			<td>1</td>
 		</tr>
@@ -3320,7 +3320,7 @@ information, see the <a href="#r800waits">R800 waits section</a>.</p>
 found that a <code>call</code> followed by a series of <code>nop</code>s takes 8
 cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
 combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /
-<code>pop af</code>).</p>
+<code>pop af</code>). This also applies to <code>rst</code>.</p>
 
 <p id="iowaitnote">³ As described below, I/O instructions get aligned to the bus
 clock, so an extra wait is inserted depending on the alignment. This means that

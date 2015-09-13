@@ -3316,11 +3316,12 @@ the internal RAM. Note that an additional wait is inserted if the instruction
 fetch or a 16-bit memory access crosses a 256-byte memory boundary. For more
 information, see the <a href="#r800waits">R800 waits section</a>.</p>
 
-<p id="callwaitnote">² I have no theory about the underlying logic yet, but testing
-found that a <code>call</code> followed by a series of <code>nop</code>s takes 8
-cycles, whereas if it’s followed by a <code>ret</code> or <code>pop af</code>,
-combined they take 12 cycles (7 for <code>call</code> + 5 for <code>ret</code> /
-<code>pop af</code>). This also applies to <code>rst</code>.</p>
+<p id="callwaitnote">² Testing showed that a <code>call</code> followed by a
+series of <code>nop</code>s takes 8 cycles, whereas if it’s followed by a
+<code>ret</code> or <code>pop af</code>, combined they take 12 cycles (7 for
+<code>call</code> + 5 for <code>ret</code> / <code>pop af</code>). This also
+applies to <code>rst</code>. I have no theory about the underlying logic
+yet.</p>
 
 <p id="iowaitnote">³ As described below, I/O instructions get aligned to the bus
 clock, so an extra wait is inserted depending on the alignment. This means that

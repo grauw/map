@@ -815,32 +815,33 @@ Registers: All
 <h3 id="NEWPAD">NEWPAD</h3>
 <pre>
 Address  : #01AD
-Function : Read lightpen, mouse and trackball
-Input    : Access via GETPAD in MSX1BIOS, Will be linked to this call
-           Procedure: read device, after that X and Y.
-           A  - 8 to 23
-           [ 8]   Read light pen (#FF if available; touching screen)
+Function : Read light pen, mouse and trackball
+Input    : A  - Function call number. Fetch device data first, then read.
+
+           [ 8]   Fetch light pen (#FF if available; touching screen)
            [ 9]   Read X-position
            [10]   Read Y-position
            [11]   Read lightpen-status (#FF if pressed)
 
-           [12]   Read mouse/trackball in port 1
+           [12]   Fetch mouse/trackball in port 1
            [13]   Read X-offset
            [14]   Read Y-offset
            [15]   No function (always #00)
 
-           [16]   Read mouse/trackball in port 2
+           [16]   Fetch mouse/trackball in port 2
            [17]   Read X-offset
            [18]   Read Y-offset
            [19]   No function (always #00)
 
-           [20]   Read 2nd light pen (#FF if available; touching screen)
+           [20]   Fetch 2nd light pen (#FF if available; touching screen)
            [21]   Read X-position
            [22]   Read Y-position
            [23]   Read light-pen status (#FF if pressed)
 
 Output   : A  - Read value
 Registers: All
+Remark   : Access via GTPAD in the main BIOS, function call numbers 8 and up
+           will be forwarded to this call.
 </pre>
 
 

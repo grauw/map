@@ -984,13 +984,14 @@ Registers: AF
 <pre>
 Address  : #0144
 Function : Executes I/O for mass-storage media like diskettes
-Input    : A  - Drive number (0 = A:, 1 = B:, etc.)
+Input    : F  - Set carry to write, reset carry to read
+           A  - Drive number (0 = A:, 1 = B:, etc.)
            B  - Number of sectors
            C  - Media ID of the disk
            DE - Begin sector
            HL - Begin address in memory
-           F  - Set carry to write, unset carry to read
-Output   : A  - Error code (only when writing)
+Output   : F  - Carry set on error
+           A  - Error code (only if carry set)
                 0 = Write protected
                 2 = Not ready
                 4 = Data error
@@ -1002,9 +1003,9 @@ Output   : A  - Error code (only when writing)
                 16 = Other error
            B  - Number of sectors actually written or read
 Registers: All
-Remark   : Before the call is called, the Z-flag must be reset, and the execution
-           address which was in HL must be at the last stack address
-           By the way: In minimum configuration only a HOOK is available
+Remark   : Interrupts may be disabled afterwards. On some hard disk interfaces,
+           when bit 7 of register C is set, a 23-bit addressing scheme is used
+           and bits 0-6 of register C contain bits 23-16 of the sector number.
 </pre>
 
 

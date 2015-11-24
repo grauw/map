@@ -223,6 +223,11 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Clock chip / RP-5C01</td>
 </tr>
 <tr>
+  <td>#B6</td>
+  <td>CIEL ExpertTurbo / Expert3 turbo switch<br />
+      bit 7: 1 = turbo on</td>
+</tr>
+<tr>
   <td>#B8-BB</td>
   <td>Card Reader <em>(which?)</em></td>
 </tr>

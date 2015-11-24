@@ -1092,6 +1092,8 @@ should not read or set these values.</p>
 <tr><td>7</td><td>CLOCK-IC (MSX2, MSX2+ only implementation)</td></tr>
 </table>
 
+<p>See MSX turboR Tech Handbook section 2.2.7 &amp; MSX Datapack appendix A.6.</p>
+
 
 <h2 id="avcontrol">A/V control</h2>
 
@@ -1111,6 +1113,8 @@ should not read or set these values.</p>
 <tr><td>6</td><td>VDP register 9 bit 4 inversion</td><td></td><td>(Write)</td></tr>
 <tr><td>7</td><td>VDP register 9 bit 5 inversion</td><td></td><td>(Write)</td></tr>
 </table>
+
+<p>See MSX Datapack appendix A.6.</p>
 
 
 <h2 id="mmapper">Memory Mapper registers</h2>

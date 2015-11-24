@@ -818,8 +818,8 @@ Address  : #01AD
 Function : Read lightpen, mouse and trackball
 Input    : Access via GETPAD in MSX1BIOS, Will be linked to this call
            Procedure: read device, after that X and Y.
-           A  - 8 tot 19
-           [ 8]   Read lightpen (#FF if available)
+           A  - 8 to 23
+           [ 8]   Read light pen (#FF if available; touching screen)
            [ 9]   Read X-position
            [10]   Read Y-position
            [11]   Read lightpen-status (#FF if pressed)
@@ -833,6 +833,11 @@ Input    : Access via GETPAD in MSX1BIOS, Will be linked to this call
            [17]   Read X-offset
            [18]   Read Y-offset
            [19]   No function (always #00)
+
+           [20]   Read 2nd light pen (#FF if available; touching screen)
+           [21]   Read X-position
+           [22]   Read Y-position
+           [23]   Read light-pen status (#FF if pressed)
 
 Output   : A  - Read value
 Registers: All

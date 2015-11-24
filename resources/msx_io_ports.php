@@ -224,8 +224,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#B6</td>
-  <td>CIEL ExpertTurbo / Expert3 turbo switch<br />
-      bit 7: 1 = turbo on</td>
+  <td>CIEL ExpertTurbo / Expert3 turbo switch (bit 7: 1 = turbo on)</td>
 </tr>
 <tr>
   <td>#B8-BB</td>

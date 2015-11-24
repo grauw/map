@@ -840,7 +840,7 @@ Input    : A  - Function call number. Fetch device data first, then read.
 
 Output   : A  - Read value
 Registers: All
-Remark   : Access via GTPAD in the main BIOS, function call numbers 8 and up
+Remark   : Access via <a href="msxbios.php#GTPAD">GTPAD</a> in the main BIOS, function call numbers 8 and up
            will be forwarded to this call.
 </pre>
 

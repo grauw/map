@@ -673,9 +673,22 @@ Registers: AF
 <pre>
 Address  : #00DB
 Function : Returns current touch pad status
-Input    : A  - Touchpad number to test
+Input    : A  - Function call number. Fetch device data first, then read.
+
+           [ 0]   Fetch touch pad data from port 1 (#FF if available)
+           [ 1]   Read X-position
+           [ 2]   Read Y-position
+           [ 3]   Read touchpad status from port 1 (#FF if pressed)
+
+           [ 4]   Fetch touch pad data from port 2 (#FF if available)
+           [ 5]   Read X-position
+           [ 6]   Read Y-position
+           [ 7]   Read touchpad status from port 2 (#FF if pressed)
+
 Output   : A  - Value
 Registers: All
+Remark   : On MSX2, function call numbers 8-23 are forwarded to
+           <a href="subrom.php#NEWPAD">NEWPAD</a> in the SubROM.
 </pre>
 
 

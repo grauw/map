@@ -416,7 +416,7 @@ A 4 MHz clock is input to the CLK pin.</span>
 <h3 title="2.3 外付けMIDIインターフェイス">2.3 External MIDI Interface</h3>
 
 <p title="外付けのMSX-MIDIインターフェイスは、I/Oポートの0E2Hに値を設定することによって、I/Oポートのアドレスが変わります。">
-The external MSX-MIDI interface’s I/O port address can be changed by setting a value to I/O port 02EH.
+The external MSX-MIDI interface’s I/O port address can be changed by setting a value to I/O port 0E2H.
 
 </p>
 

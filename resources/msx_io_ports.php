@@ -70,6 +70,14 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a></td>
 </tr>
 <tr>
+  <td>#27-#2F</td>
+  <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a> second setting (hardware switch)</td>
+</tr>
+<tr>
+  <td>#27-#2F</td>
+  <td>Philips NMS1255 MSX interface/modem second setting (hardware switch) (see <a href="/resources/serial/philips_nms1210.pdf">NMS121x</a>)</td>
+</tr>
+<tr>
   <td>#28-#29</td>
   <td>DenYoNet, mapper / status</td>
 </tr>
@@ -84,14 +92,6 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#2D</td>
   <td>PlaySoniq joypad / temporary data</td>
-</tr>
-<tr>
-  <td>#27-#2F</td>
-  <td><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface</a> second setting (hardware switch)</td>
-</tr>
-<tr>
-  <td>#27-#2F</td>
-  <td>Philips NMS1255 MSX interface/modem second setting (hardware switch) (see <a href="/resources/serial/philips_nms1210.pdf">NMS121x</a>)</td>
 </tr>
 <tr>
   <td>#2E-#2F</td>

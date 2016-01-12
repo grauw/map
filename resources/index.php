@@ -46,6 +46,7 @@ information, feel free to send us an email.</p>
     <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
     <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/megaroms">Megabit ROM Cartridges mapper types</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
+    <li><a href="/resources/system/msxtech.pdf">MSX Technical Data Book</a></li>
     </ul>
   </li>
   <li id="processors">Processors

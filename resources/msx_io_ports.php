@@ -1106,10 +1106,11 @@ should not read or set these values.</p>
   <th>Bit</th>
   <th colspan="3">Description</th>
 </tr>
-<tr><td rowspan="8">#F7</td>
+<tr><td rowspan="9">#F7</td>
     <td>0</td><td>Audio R</td><td>Mixing on</td><td>(Write)</td></tr>
 <tr><td>1</td><td>Audio L</td><td>Mixing off</td><td>(Write)</td></tr>
 <tr><td>2</td><td>Video input selection</td><td>21-pin RGB</td><td>(Write)</td></tr>
+<tr><td>3</td><td>Synchronous mode switch</td><td></td><td>(Write)</td></tr>
 <tr><td>3</td><td>Video input detection</td><td>No input</td><td>(Read)</td></tr>
 <tr><td>4</td><td>AV control</td><td>0: TV</td><td>(Write)</td></tr>
 <tr><td>5</td><td>Ym control</td><td>0: TV</td><td>(Write)</td></tr>

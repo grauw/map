@@ -70,6 +70,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a></td>
 </tr>
 <tr>
+  <td>#28-#29</td>
+  <td>DenYoNet, mapper / status</td>
+</tr>
+<tr>
   <td>#2A-#2B</td>
   <td>PlaySoniq SID chip / settings</td>
 </tr>

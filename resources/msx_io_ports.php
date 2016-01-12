@@ -1111,13 +1111,13 @@ should not read or set these values.</p>
 <tr><td>1</td><td>Audio L</td><td>Mixing off</td><td>(Write)</td></tr>
 <tr><td>2</td><td>Video input selection</td><td>21-pin RGB</td><td>(Write)</td></tr>
 <tr><td>3</td><td>Video input detection</td><td>No input</td><td>(Read)</td></tr>
-<tr><td>4</td><td>AV control</td><td>TV</td><td>(Write)</td></tr>
-<tr><td>5</td><td>Ym control</td><td>TV</td><td>(Write)</td></tr>
-<tr><td>6</td><td>VDP register 9 bit 4 inversion</td><td></td><td>(Write)</td></tr>
-<tr><td>7</td><td>VDP register 9 bit 5 inversion</td><td></td><td>(Write)</td></tr>
+<tr><td>4</td><td>AV control</td><td>0: TV</td><td>(Write)</td></tr>
+<tr><td>5</td><td>Ym control</td><td>0: TV</td><td>(Write)</td></tr>
+<tr><td>6</td><td>Ys control</td><td>0: Super</td><td>(Write)</td></tr>
+<tr><td>7</td><td>Video select</td><td>0: TV</td><td>(Write)</td></tr>
 </table>
 
-<p>See MSX Datapack appendix A.6.</p>
+<p>See MSX Datapack appendix A.6 and MSX Technical Data Book section 1.7.9.</p>
 
 
 <h2 id="mmapper">Memory Mapper registers</h2>

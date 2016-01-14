@@ -200,6 +200,11 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/serial/philips_nms1210.pdf">Philips NMS1210/1211/1212 RS232 Serial Interface user guide</a></li>
       </ul>
     </li>
+    <li id="ethernet">Ethernet
+      <ul>
+      <li><a id="gr8net" href="http://rs.gr8bit.ru/Documentation/GR8NET-manual.pdf">GR8NET Ethernet Interface</a></li>
+      </ul>
+    </li>
     <li id="joynet">JoyNet
       <ul>
       <li><a href="/resources/joynet/">JoyNet standard documentation</a></li>

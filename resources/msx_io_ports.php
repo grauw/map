@@ -138,6 +138,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Franky SN76489 DCSG / VDP H/V counters</td>
 </tr>
 <tr>
+  <td>#5E-#5F</td>
+  <td><a href="/resources/#gr8net">GR8NET Ethernet Interface</a></td>
+</tr>
+<tr>
   <td>#60-#6F</td>
   <td><a href="#gfx9000">Graphics9000 / V9990</a></td>
 </tr>

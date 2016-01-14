@@ -50,7 +50,7 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#zemina-memory">Zemina memory extensions</a></td>
 </tr>
 <tr>
-  <td>#10-#12</td>
+  <td>#10-#11</td>
   <td>MegaFlashROM PSG (AY-3-8910 clone)</td>
 </tr>
 <tr>

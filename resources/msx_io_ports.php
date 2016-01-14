@@ -54,6 +54,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>MegaFlashROM PSG (AY-3-8910 clone)</td>
 </tr>
 <tr>
+  <td>#14-#17</td>
+  <td>YM2608 OPNA cartridge (in development)</td>
+</tr>
+<tr>
   <td>#18-#19</td>
   <td>Philips Barcode Reader NMS1170/20</td>
 </tr>

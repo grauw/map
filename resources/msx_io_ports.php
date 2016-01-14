@@ -79,7 +79,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#28-#29</td>
-  <td>DenYoNet, mapper / status</td>
+  <td>DenYoNet Ethernet Interface, mapper / status</td>
 </tr>
 <tr>
   <td>#2A-#2B</td>

@@ -364,105 +364,105 @@
 
 <tr id="T32NAM">
   <td>T32NAM</td>
-  <td>#F3B3</td>
+  <td>#F3BD</td>
   <td>2</td>
   <td>BASE(5) - SCREEN 1 name table</td>
 </tr>
 
 <tr id="T32COL">
   <td>T32COL</td>
-  <td>#F3B5</td>
+  <td>#F3BF</td>
   <td>2</td>
   <td>BASE(6) - SCREEN 1 color table</td>
 </tr>
 
 <tr id="T32CGP">
   <td>T32CGP</td>
-  <td>#F3B7</td>
+  <td>#F3C1</td>
   <td>2</td>
   <td>BASE(7) - SCREEN 1 character pattern table</td>
 </tr>
 
 <tr id="T32ATR">
   <td>T32ATR</td>
-  <td>#F3B9</td>
+  <td>#F3C3</td>
   <td>2</td>
   <td>BASE(8) - SCREEN 1 sprite attribute table</td>
 </tr>
 
 <tr id="T32PAT">
   <td>T32PAT</td>
-  <td>#F3BB</td>
+  <td>#F3C5</td>
   <td>2</td>
   <td>BASE(9) - SCREEN 1 sprite pattern table</td>
 </tr>
 
 <tr id="GRPNAM">
   <td>GRPNAM</td>
-  <td>#F3B3</td>
+  <td>#F3C7</td>
   <td>2</td>
   <td>BASE(10) - SCREEN 2 name table</td>
 </tr>
 
 <tr id="GRPCOL">
   <td>GRPCOL</td>
-  <td>#F3B5</td>
+  <td>#F3C9</td>
   <td>2</td>
   <td>BASE(11) - SCREEN 2 color table</td>
 </tr>
 
 <tr id="GRPCGP">
   <td>GRPCGP</td>
-  <td>#F3B7</td>
+  <td>#F3CB</td>
   <td>2</td>
   <td>BASE(12) - SCREEN 2 character pattern table</td>
 </tr>
 
 <tr id="GRPATR">
   <td>GRPATR</td>
-  <td>#F3B9</td>
+  <td>#F3CD</td>
   <td>2</td>
   <td>BASE(13) - SCREEN 2 sprite attribute table</td>
 </tr>
 
 <tr id="GRPPAT">
   <td>GRPPAT</td>
-  <td>#F3BB</td>
+  <td>#F3CF</td>
   <td>2</td>
   <td>BASE(14) - SCREEN 2 sprite pattern table</td>
 </tr>
 
 <tr id="MLTNAM">
   <td>MLTNAM</td>
-  <td>#F3B3</td>
+  <td>#F3D1</td>
   <td>2</td>
   <td>BASE(15) - SCREEN 3 name table</td>
 </tr>
 
 <tr id="MLTCOL">
   <td>MLTCOL</td>
-  <td>#F3B5</td>
+  <td>#F3D3</td>
   <td>2</td>
   <td>BASE(16) - SCREEN 3 color table</td>
 </tr>
 
 <tr id="MLTCGP">
   <td>MLTCGP</td>
-  <td>#F3B7</td>
+  <td>#F3D5</td>
   <td>2</td>
   <td>BASE(17) - SCREEN 3 character pattern table</td>
 </tr>
 
 <tr id="MLTATR">
   <td>MLTATR</td>
-  <td>#F3B9</td>
+  <td>#F3D7</td>
   <td>2</td>
   <td>BASE(18) - SCREEN 3 sprite attribute table</td>
 </tr>
 
 <tr id="MLTPAT">
   <td>MLTPAT</td>
-  <td>#F3BB</td>
+  <td>#F3D9</td>
   <td>2</td>
   <td>BASE(19) - SCREEN 3 sprite pattern table</td>
 </tr>

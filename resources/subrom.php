@@ -702,7 +702,7 @@ Registers: All
 <h3 id="PROMPT">PROMPT</h3>
 <pre>
 Address  : #0181
-Function : Shows prompt (normal &quot;Ok&quot;, Chaos: &quot;Files&quot; = a nice prompt ;))
+Function : Shows prompt (default: “Ok”)
 Registers: All
 </pre>
 

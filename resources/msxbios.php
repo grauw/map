@@ -117,7 +117,7 @@ Remark   : Variables can never be given in alternative registers
 Address  : #0020
 Function : Compares HL with DE
 Input    : HL, DE
-Output   : Z-flag set if HL and DE are the same.
+Output   : Z-flag set if HL and DE are equal. C-flag set if HL is less than DE.
 Registers: AF
 </pre>
 

@@ -1092,21 +1092,21 @@
   <td>RG25SA</td>
   <td>#FFFA</td>
   <td>1</td>
-  <td>Mirror of VDP register 25 (Basic: <code>VDP(26)</code>)</td>
+  <td>Mirror of VDP register 25 (Basic: <code>VDP(26)</code>, note: +1)</td>
 </tr>
 
 <tr id="RG26SA">
   <td>RG26SA</td>
   <td>#FFFB</td>
   <td>1</td>
-  <td>Mirror of VDP register 26 (Basic: <code>VDP(27)</code>)</td>
+  <td>Mirror of VDP register 26 (Basic: <code>VDP(27)</code>, note: +1)</td>
 </tr>
 
 <tr id="RG27SA">
   <td>RG27SA</td>
   <td>#FFFC</td>
   <td>1</td>
-  <td>Mirror of VDP register 27 (Basic: <code>VDP(28)</code>)</td>
+  <td>Mirror of VDP register 27 (Basic: <code>VDP(28)</code>, note: +1)</td>
 </tr>
 
 <tr>

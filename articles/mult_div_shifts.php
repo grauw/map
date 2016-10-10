@@ -265,7 +265,7 @@ Mult32_Loop:
 	jp nc,Mult32_NoAdd
 	inc c
 Mult32_NoAdd:
-	djnz,Mult32_Loop
+	djnz Mult32_Loop
 	ld b,c
 	ld c,a
 	ret

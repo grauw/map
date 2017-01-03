@@ -434,28 +434,6 @@ Div8_NoAdd:
 
 <pre>
 ;
-;Divide 16-bit values (with 8-bit result)
-;In: Divide HL by divider D
-;Out: L = result, H = rest
-;
-Div12:	ld b,8
-Div12_Loop:
-	and a
-	sbc hl,de
-	jp p,Div12_NoAdd
-	add hl,de
-	add hl,hl
-	djnz Div12_Loop
-	ret
-Div12_NoAdd:
-	scf
-	adc hl,hl
-	djnz Div12_Loop
-	ret
-</pre>
-
-<pre>
-;
 ;Divide 16-bit values (with 16-bit result)
 ;In: Divide BC by divider DE
 ;Out: BC = result, HL = rest

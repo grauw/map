@@ -449,6 +449,8 @@ Div16_Loop1:
 	add hl,de
 Div16_NoAdd1:
 	djnz Div16_Loop1
+	rla
+	cpl
 	ld b,a
 	ld a,c
 	ld c,b
@@ -463,12 +465,8 @@ Div16_NoAdd2:
 	djnz Div16_Loop2
 	rla
 	cpl
-	ld b,a
-	ld a,c
-	ld c,b
-	rla
-	cpl
-	ld b,a
+	ld b,c
+	ld c,a
 	ret
 </pre>
 

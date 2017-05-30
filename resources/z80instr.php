@@ -3529,16 +3529,17 @@ this:</p>
     it does both, regardless of whether it is in the same page or not.</li>
 <li>In internal RAM, 2 waits are inserted for every <code>jp</code>.</li>
 <li>In internal ROM, 3 waits are inserted.</li>
-<li>In external memory, 4-5 waits are inserted depending on clock alignment.</li>
-<li>For I/O, 6-7 waits are inserted depending on clock alignment.</li>
+<li>In external memory, 4-5 waits are inserted depending on bus clock alignment.</li>
+<li>For I/O, 6-7 waits are inserted depending on bus clock alignment.</li>
 <li>For I/O to ports 98H-9BH, ± 54 extra waits are inserted if not enough time
     has passed since the last access to these ports.</li>
 </ul>
 
 <p>Note that the R800 timing is complex and not officially documented, so there
-may be deviations or errors in the above description. The above findings are
-based on research by the openMSX team and verified by Grauw using a different,
-cycle-accurate methodology. For more details see the documents in the
+may be deviations or errors in the above description. The above findings and
+values in the R800+wait column of the table are based on research by the openMSX
+team and verified by Grauw using a different, cycle-accurate measuring method.
+For more details see the documents in the
 <a href="https://github.com/openMSX/openMSX/tree/master/doc/internal">openMSX
 repository</a>.</p>
 

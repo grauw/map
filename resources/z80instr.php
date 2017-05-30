@@ -3513,7 +3513,7 @@ this:</p>
 <li><code>XOR A</code> has opcode <code>AF</code> and is documented as taking
     4 T-states. On MSX, it takes 5 (one more).</li>
 <li><code>BIT 0,A</code> has opcode <code>CB 47</code> and is documented as
-    taking 12 T-states. On MSX, it takes 14 (two more).</li>
+    taking 8 T-states. On MSX, it takes 10 (two more).</li>
 <li><code>SRL (IX+0)</code> has opcode <code>DD CB 00 3E</code> and is
     documented as taking 23 T-states. On MSX, it takes 25 (two more).</li>
 </ul>

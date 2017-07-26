@@ -142,6 +142,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Franky SN76489 DCSG / VDP H/V counters</td>
 </tr>
 <tr>
+  <td>#56-#5D</td>
+  <td><a href="#msxpi">MSXPi interface</a></td>
+</tr>
+<tr>
   <td>#5E-#5F</td>
   <td><a href="/resources/#gr8net">GR8NET Ethernet Interface</a></td>
 </tr>
@@ -521,6 +525,23 @@ by reading back the value you just wrote to the device ID register. If that
 value is not the complement of what you wrote, then the extensions are not
 present.</p>
 
+
+<h2 id="msxpi">MSXPi interface</h2>
+
+<p>The <a href="http://retro-cpu.run/wiki/index.php?title=MSXPI:Specs:EN">MSXPi
+interface</a> interfaces the MSX to a Raspberry Pi.</p>
+
+<table>
+<tr><th>Port range</th><th>Description</th></tr>
+<tr><td>#56</td><td>Control port 1</td></tr>
+<tr><td>#57</td><td>Control port 2 (future use)</td></tr>
+<tr><td>#58</td><td>Programming port 1 (future use)</td></tr>
+<tr><td>#59</td><td>Programming port 2 (future use)</td></tr>
+<tr><td>#5A</td><td>Data I/O port 1</td></tr>
+<tr><td>#5B</td><td>Data I/O port 2</td></tr>
+<tr><td>#5C</td><td>Data I/O port 3 (future use)</td></tr>
+<tr><td>#5D</td><td>Data I/O port 4 (future use)</td></tr>
+</table>
 
 
 <h2 id="gfx9000">Graphics9000 / V9990</h2>

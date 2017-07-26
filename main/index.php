@@ -18,6 +18,8 @@
 <div class="updates">
 <h2>Latest updates:</h2>
 
+<p>For the full changelog see <a href="https://bitbucket.org/grauw/map/commits/all">here</a>.</p>
+
 <p><em>2015-07-14</em><br />
 Added <a href="/resources/">MSX datasheet chapters</a> translated
 by FRS, Takamichi and sandervn.</p>
@@ -51,10 +53,8 @@ is the Yamaha FM Sound Synthesizer Unit’s MIDI interface.</p>
 Added <a href="/resources/hbi55.php">Sony HBI-55 / Yamaha UDC-01</a> 4kB SRAM
 data cartridge documentation.</p>
 
-<p><em>2014-05-22</em><br />
-Added <a href="/sources/vdp_detection.php">VDP version detection</a> source code.</p>
-
-<p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)</p>
+<p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)
+(<a href="https://bitbucket.org/grauw/map/commits/all">Full changelog</a>)</p>
 <!-- Move outdated updates to updates-old.php!!! -->
 </div>
 

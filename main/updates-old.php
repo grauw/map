@@ -14,6 +14,9 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2014-05-22</em><br />
+Added <a href="/sources/vdp_detection.php">VDP version detection</a> source code.</p>
+
 <p><em>2014-05-20</em><br />
 Translated <a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> article by Ramon van der Winkel.</p>
 

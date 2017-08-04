@@ -510,6 +510,9 @@ computers:</p>
 
 
 <pre>
+	IN	A,(040H)
+	CPL
+	PUSH AF
 	LD	A,8
 	OUT 	(040H),A	;out the manufacturer code 8 (Panasonic) to I/O port 40h
 	IN	A,(040H)	;read the value you have just written
@@ -518,12 +521,23 @@ computers:</p>
 	JR	NZ,Not_WX	;it is not a WX/WSX/FX.
 	XOR	A		;write 0 to I/O port 41h
 	OUT	(041H),A	;and the mode changes to high-speed clock
+Not_WX:
+	POP AF
+	OUT	(040H),A
 </pre>
 
 <p>So you can check if certain extensions are available and ready to be accessed
 by reading back the value you just wrote to the device ID register. If that
 value is not the complement of what you wrote, then the extensions are not
 present.</p>
+
+<p>Note that this example restores the previous switched I/O bank after use.
+For the sake of software interoperability, any
+<abbr title="Operating System">OS</abbr> routines and
+<abbr title="Interrupt Service Routine">ISR</abbr>s,
+<abbr title="Terminate and Stay Resident program">TSR</abbr>s or hooks should do
+this. This so that software does not need to disable interrupts during switched
+I/O port access, and can invoke OS routines freely.</p>
 
 
 <h2 id="msxpi">MSXPi interface</h2>

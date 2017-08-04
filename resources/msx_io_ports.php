@@ -393,25 +393,25 @@ selected for address range #4000-#7FFF.</p>
 
 <p>To switch RAM page 5 to address #4000-#5FFF (8K page size):</p>
 
-<pre>LD   A,10100000B
-OUT  (0FH),A
-LD   A,5
-LD   (4000H),A
+<pre>    ld a,10100000B
+    out (0FH),a
+    ld a,5
+    ld (4000H),a
 </pre>
 
 <p>To copy the contents of the MSX main RAM address range #A000-#BFFF to RAM
 page 3 (8K page size):</p>
 
-<pre>LD   A,10100000B
-OUT  (0FH),A
-LD   A,3
-LD   (4000H),A
-LD   A,10010000B
-OUT  (0FH),A
-LD   HL,0A000H
-LD   DE,4000H
-LD   BC,2000H
-LDIR
+<pre>    ld a,10100000B
+    out (0FH),a
+    ld a,3
+    ld (4000H),a
+    ld a,10010000B
+    out (0FH),a
+    ld hl,0A000H
+    ld de,4000H
+    ld bc,2000H
+    ldir
 </pre>
 
 <p>See the <a href="http://www.hqunix.com/wordpress/?page_id=554">scanned
@@ -510,20 +510,20 @@ computers:</p>
 
 
 <pre>
-	IN	A,(040H)
-	CPL
-	PUSH AF
-	LD	A,8
-	OUT 	(040H),A	;out the manufacturer code 8 (Panasonic) to I/O port 40h
-	IN	A,(040H)	;read the value you have just written
-	CPL			;complement all bits of the value
-	CP	8		;if it does not match the value you originally wrote,
-	JR	NZ,Not_WX	;it is not a WX/WSX/FX.
-	XOR	A		;write 0 to I/O port 41h
-	OUT	(041H),A	;and the mode changes to high-speed clock
-Not_WX:
-	POP AF
-	OUT	(040H),A
+    in a,(40H)
+    cpl
+    push af
+    ld a,8
+    out (40H),a  ;out the manufacturer code 8 (Panasonic) to I/O port 40h
+    in a,(40H)   ;read the value you have just written
+    cpl          ;complement all bits of the value
+    cp 8         ;if it does not match the value you originally wrote,
+    jr nz,NotWX  ;it is not a WX/WSX/FX.
+    xor a        ;write 0 to I/O port 41h
+    out (41H),a  ;and the mode changes to high-speed clock
+NotWX:
+    pop af
+    out (40H),a
 </pre>
 
 <p>So you can check if certain extensions are available and ready to be accessed

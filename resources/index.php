@@ -44,7 +44,8 @@ information, feel free to send us an email.</p>
   <li id="system">System documentation
     <ul>
     <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman)</li>
+    <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman) (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan">Japanese version</a>, <a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2FTechHan">via Google Translate</a>)</li>
+    <li><a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2Fdatapack">MSX Datapack via Google Translate</a> (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/datapack">Japanese</a>) · many sections also translated below</li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/megaroms">Megabit ROM Cartridges mapper types</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>
     <li><a href="/resources/system/msxtech.pdf">MSX Technical Data Book</a></li>
     </ul>

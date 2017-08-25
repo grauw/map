@@ -118,7 +118,7 @@ information, feel free to send us an email.</p>
     <li id="opll">MSX-Music / FM-PAC
       <ul>
       <li><a href="/resources/sound/yamaha_ym2413_frs.pdf">Yamaha YM2413 (OPLL) application manual</a> · cleaned up by FRS (<a href="/resources/sound/yamaha_ym2413.pdf">original</a>)</li>
-      <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a> (<a href="/resources/sound/yamaha_ym2413b_ds.pdf">YM2413B</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.1MSX-MUSICHardware.pdf">MSX-MUSIC Hardware</a> · MSX Datapack Vol. 2-3.1, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.2MSX-MUSICExtendedBASIC.pdf">MSX-MUSIC Extended BASIC</a> · MSX Datapack Vol. 2-3.2, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.3FMBIOS.pdf">FM BIOS</a> · MSX Datapack Vol. 2-3.3, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>

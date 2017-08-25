@@ -146,6 +146,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#msxpi">MSXPi interface</a></td>
 </tr>
 <tr>
+  <td>#5C-#5D</td>
+  <td>PAC-V mirror</td>
+</tr>
+<tr>
   <td>#5E-#5F</td>
   <td><a href="/resources/#gr8net">GR8NET Ethernet Interface</a></td>
 </tr>
@@ -160,6 +164,10 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#7C-#7D</td>
   <td>MSX-MUSIC / FM-PAC / OPLL</td>
+</tr>
+<tr>
+  <td>#7C-#7D</td>
+  <td>PAC-V</td>
 </tr>
 <tr>
   <td>#7E-#7F</td>

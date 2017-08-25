@@ -128,12 +128,12 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
       <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_y8950_test.txt">Yamaha Y8950 (MSX-AUDIO) test register info</a></li>
       <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 (OPL) datasheet</a></li>
       <li><a href="/resources/datapack/Vol2-4.1MSX-AUDIOHardware.pdf">MSX-AUDIO Hardware</a> · MSX Datapack Vol. 2-4.1, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.2MSX-AUDIOBASICExpansion.pdf">MSX-AUDIO BASIC Expansion</a> · MSX Datapack Vol. 2-4.2, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.3MSX-AUDIOExtendedBIOS.pdf">MSX-AUDIO Extended BIOS</a> · MSX Datapack Vol. 2-4.3, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.4MSX-AUDIOMBIOS.pdf">MSX-AUDIO MBIOS</a> · MSX Datapack Vol. 2-4.4, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
-      <li><a href="/resources/sound/yamaha_y8950_test.txt">Yamaha Y8950 (MSX-AUDIO) test register info</a></li>
       <li class="map"><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a></li>
       </ul>
     </li>

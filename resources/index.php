@@ -136,6 +136,11 @@ information, feel free to send us an email.</p>
       <li class="map"><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a></li>
       </ul>
     </li>
+    <li id="opl2">OPL2
+      <ul>
+      <li><a href="/resources/sound/yamaha_ym3812_ds.pdf">Yamaha YM3812 (OPL2) datasheet</a></li>
+      </ul>
+    </li>
     <li id="opl3">OPL3
       <ul>
       <li><a href="/resources/sound/yamaha_ymf262.pdf">Yamaha YMF262 (OPL3) application manual</a></li>

@@ -81,20 +81,20 @@ information, feel free to send us an email.</p>
     </li>
     <li id="v9938">MSX2 VDP
       <ul>
-      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
-      <li><a href="/resources/video/yamaha_v9938.pdf">Yamaha V9938 Application Manual</a> · scans (<a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">alt version</a>)</li>
-      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 Application Manual</a> · transscribed <em>(incomplete)</em></li>
+      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
+      <li><a href="/resources/video/yamaha_v9938.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · scans (<a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">alt version</a>)</li>
+      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed <em>(incomplete)</em></li>
       </ul>
     </li>
     <li id="v9958">MSX2+ / turboR VDP
       <ul>
-      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha V9958 Application Manual</a> · scans</li>
-      <li><a href="/resources/video/yamaha_v9958_ocr.pdf">Yamaha V9958 Application Manual</a> · transscribed</li>
+      <li><a href="/resources/video/yamaha_v9958.pdf">Yamaha V9958 MSX-VIDEO Application Manual</a> · scans</li>
+      <li><a href="/resources/video/yamaha_v9958_ocr.pdf">Yamaha V9958 MSX-VIDEO Application Manual</a> · transscribed</li>
       </ul>
     </li>
     <li id="v9990">Graphics9000
       <ul>
-      <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha V9990 application manual</a></li>
+      <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha V9990 E-VDP-III application manual</a></li>
       <li><a href="http://msxbanzai.tni.nl/v9990/manual.html">Yamaha V9990 E-VDP-III Programmers Manual</a> · by MSX Banzai! (unofficial)</li>
       <li><a href="/resources/video/v9manual.pdf">Sunrise Video9000 application manual</a></li>
       </ul>
@@ -106,7 +106,7 @@ information, feel free to send us an email.</p>
     <li id="psg">PSG
       <ul>
       <li><a href="/resources/sound/generalinstrument_ay-3-8910.pdf">General Instrument AY-3-8910 application manual</a></li>
-      <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 (SSG) application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ym2149.pdf">Yamaha YM2149 SSG application manual</a></li>
       </ul>
     </li>
     <li id="scc">Konami SCC
@@ -117,8 +117,8 @@ information, feel free to send us an email.</p>
     </li>
     <li id="opll">MSX-Music / FM-PAC
       <ul>
-      <li><a href="/resources/sound/yamaha_ym2413_frs.pdf">Yamaha YM2413 (OPLL) application manual</a> · cleaned up by FRS (<a href="/resources/sound/yamaha_ym2413.pdf">original</a>)</li>
-      <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 (OPLL) datasheet</a> (<a href="/resources/sound/yamaha_ym2413b_ds.pdf">YM2413B</a>)</li>
+      <li><a href="/resources/sound/yamaha_ym2413_frs.pdf">Yamaha YM2413 OPLL application manual</a> · cleaned up by FRS (<a href="/resources/sound/yamaha_ym2413.pdf">original</a>)</li>
+      <li><a href="/resources/sound/yamaha_ym2413_ds.pdf">Yamaha YM2413 OPLL datasheet</a> (<a href="/resources/sound/yamaha_ym2413b_ds.pdf">YM2413B</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.1MSX-MUSICHardware.pdf">MSX-MUSIC Hardware</a> · MSX Datapack Vol. 2-3.1, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.2MSX-MUSICExtendedBASIC.pdf">MSX-MUSIC Extended BASIC</a> · MSX Datapack Vol. 2-3.2, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-3.3FMBIOS.pdf">FM BIOS</a> · MSX Datapack Vol. 2-3.3, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
@@ -126,10 +126,10 @@ information, feel free to send us an email.</p>
     </li>
     <li id="opl1">MSX-Audio / Music Module
       <ul>
-      <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 (MSX-AUDIO) application manual</a></li>
-      <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 (MSX-AUDIO) datasheet</a></li>
-      <li><a href="/resources/sound/yamaha_y8950_test.txt">Yamaha Y8950 (MSX-AUDIO) test register info</a></li>
-      <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 (OPL) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_y8950.pdf">Yamaha Y8950 MSX-AUDIO application manual</a></li>
+      <li><a href="/resources/sound/yamaha_y8950_ds.pdf">Yamaha Y8950 MSX-AUDIO datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_y8950_test.txt">Yamaha Y8950 MSX-AUDIO test register info</a></li>
+      <li><a href="/resources/sound/yamaha_ym3526.pdf">Yamaha YM3526 OPL datasheet</a></li>
       <li><a href="/resources/datapack/Vol2-4.1MSX-AUDIOHardware.pdf">MSX-AUDIO Hardware</a> · MSX Datapack Vol. 2-4.1, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.2MSX-AUDIOBASICExpansion.pdf">MSX-AUDIO BASIC Expansion</a> · MSX Datapack Vol. 2-4.2, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.3MSX-AUDIOExtendedBIOS.pdf">MSX-AUDIO Extended BIOS</a> · MSX Datapack Vol. 2-4.3, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
@@ -139,26 +139,26 @@ information, feel free to send us an email.</p>
     </li>
     <li id="opl2">OPL2
       <ul>
-      <li><a href="/resources/sound/yamaha_ym3812_ds.pdf">Yamaha YM3812 (OPL2) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym3812_ds.pdf">Yamaha YM3812 OPL2 datasheet</a></li>
       </ul>
     </li>
     <li id="opl3">OPL3
       <ul>
-      <li><a href="/resources/sound/yamaha_ymf262.pdf">Yamaha YMF262 (OPL3) application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ymf262.pdf">Yamaha YMF262 OPL3 application manual</a></li>
       </ul>
     </li>
     <li id="opl4">MoonSound
       <ul>
-      <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha YMF278B (OPL4) application manual</a></li>
-      <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha YMF278B (OPL4) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_opl4.pdf">Yamaha YMF278B OPL4 application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ymf278b.pdf">Yamaha YMF278B OPL4 datasheet</a></li>
       <li><a href="/resources/sound/yamaha_yac513.pdf">Yamaha YAC513 2-Channel Floating D/A Converter datasheet</a></li>
       </ul>
     </li>
     <li id="opm">FM Sound Synthesizer Unit (SFG-01 / SFG-05)
       <ul>
-      <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 (OPM) application manual</a></li>
-      <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 (OPM) datasheet</a></li>
-      <li><a href="/resources/sound/yamaha_ym2151_test.txt">Yamaha YM2151 (OPM) test register info</a> · by Jarek Burczynski</li>
+      <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 OPM application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 OPM datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym2151_test.txt">Yamaha YM2151 OPM test register info</a> · by Jarek Burczynski</li>
       <li><a href="/resources/sound/yamaha_sfg05_mbios.pdf">Yamaha SFG-05 Music BIOS reference manual</a></li>
       <li><a href="http://www.cx5m.net/hardware/">More info at CX5M.net</a></li>
       </ul>

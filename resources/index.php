@@ -158,8 +158,8 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 (OPM) application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 (OPM) datasheet</a></li>
+      <li><a href="/resources/sound/yamaha_ym2151_test.txt">Yamaha YM2151 (OPM) test register info</a> · by Jarek Burczynski</li>
       <li><a href="/resources/sound/yamaha_sfg05_mbios.pdf">Yamaha SFG-05 Music BIOS reference manual</a></li>
-      <li><a href="/resources/sound/yamaha_ym2151_test.txt">Yamaha YM2151 timing and test register info</a> · by Jarek Burczynski</li>
       <li><a href="http://www.cx5m.net/hardware/">More info at CX5M.net</a></li>
       </ul>
     </li>

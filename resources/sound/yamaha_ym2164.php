@@ -16,8 +16,8 @@
 
 <p>While the Yamaha SFG-01 module for the CX5M computer series contained
 the well-known YM2151 OPM, the SFG-05 module instead contained the
-YM2164 OPP chip. Although primarily equivalent to the YM2151, there are
-a few differences in some of the control registers.</p>
+YM2164 OPP chip. Although for the most part equivalent to the YM2151,
+there are a few differences in some of the control registers.</p>
 
 <p>For the majority of functions, please refer to the
 <a href="/resources/sound/yamaha_ym2151_synthesis.pdf">YM2151 OPM

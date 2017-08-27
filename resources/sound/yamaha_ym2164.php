@@ -36,9 +36,43 @@ on the OPP should be shifted right by 1 bit relative to the OPM value.
 Since the specified period is negated, make sure to shift in a “1” into
 the leftmost bit when you do so.</p> 
 
-<p>T<sub>B</sub> (s) = (2048 * (256 - CLKB)) / ϕM</p>
+<p>
+	<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+		<mrow>
+			<msub>
+				<mi>T</mi>
+				<mi>B</mi>
+			</msub>
+			<mtext>(s)</mtext>
+			<mo>=</mo>
+			<mfrac>
+				<mrow>
+					<mphantom><mo>(</mo></mphantom>
+					<mn>2048</mn>
+					<mo>*</mo>
+					<mo>(</mo>
+					<mrow>
+						<mn>256</mn>
+						<mo>-</mo>
+						<mi>CLKB</mi>
+					</mrow>
+					<mo>)</mo>
+					<mphantom><mo>)</mo></mphantom>
+				</mrow>
+				<mrow>
+					<mphantom><mo>/</mo></mphantom>
+					<mi>ϕM</mi>
+				</mrow>
+			</mfrac>
+		</mrow>
+	</math>
+</p>
 
-<p>ϕM = 3579545 Hz</p>
+<p>
+	<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+		<mi>ϕM</mi> <mo>=</mo> <mn>3579545</mn><mtext> Hz</mtext>
+	</math>
+</p>
 
 <p>Lastly, the OPP has 8 undocumented registers at addresses 0-7. These
 are initialised to 10H by the SFG-05 BIOS. Their function is as of yet

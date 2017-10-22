@@ -107,6 +107,14 @@
   <td>1</td>
   <td>Reserved</td>
 </tr>
+
+<tr id="CHAR_16">
+  <td>CHAR_16</td>
+  <td>#0034</td>
+  <td>4</td>
+  <td>Default KANJI range. Copied to <a href="#KANJTABLE">KANJTABLE</a>
+      by the DiskBIOS on boot.</td>
+</tr>
 </table>
 
 
@@ -156,6 +164,16 @@
   <col />
 </colgroup>
 <tr><th>Name</th><th>Address</th><th>Length</th><th>Description</th></tr>
+
+<tr id="KANJTABLE">
+  <td>KANJTABLE</td>
+  <td>#F30F</td>
+  <td>4</td>
+  <td>Two pairs of limits for the first bytes of Shift-JIS characters.
+      See <a href="https://sourceforge.net/p/msxsyssrc/git/ci/master/tree/disk100/disk.mac">here</a>
+      and <a href="https://www.msx.org/news/en/nextor-203-released#comment-239704">here</a>
+      for more information.</td>
+</tr>
 
 <tr id="RAMAD0">
   <td>RAMAD0</td>

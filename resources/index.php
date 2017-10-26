@@ -146,6 +146,7 @@ information, feel free to send us an email.</p>
     <li id="opl3">OPL3
       <ul>
       <li><a href="/resources/sound/yamaha_ymf262.pdf">Yamaha YMF262 OPL3 application manual</a></li>
+      <li><a href="/resources/sound/yamaha_ymf289b.pdf">Yamaha YMF289B OPL3-L application manual</a></li>
       </ul>
     </li>
     <li id="opl4">MoonSound

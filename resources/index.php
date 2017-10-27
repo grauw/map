@@ -95,6 +95,7 @@ information, feel free to send us an email.</p>
     <li id="v9990">Graphics9000
       <ul>
       <li><a href="/resources/video/yamaha_v9990.pdf">Yamaha V9990 E-VDP-III application manual</a></li>
+      <li><a href="/resources/video/yamaha_v9978.pdf">Yamaha V9978 E-VDP-III datasheet</a></li>
       <li><a href="http://msxbanzai.tni.nl/v9990/manual.html">Yamaha V9990 E-VDP-III Programmers Manual</a> · by MSX Banzai! (unofficial)</li>
       <li><a href="/resources/video/v9manual.pdf">Sunrise Video9000 application manual</a></li>
       </ul>

@@ -204,7 +204,7 @@
 </tr>
 
 <tr>
-  <td></td>
+  <td>MASTER</td>
   <td>#F348</td>
   <td>1</td>
   <td>Main DiskROM slot address</td>

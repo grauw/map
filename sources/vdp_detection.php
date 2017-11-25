@@ -30,8 +30,6 @@ VDP_GetVersion:
     out (99H),a
     ld a,15 + 128
     out (99H),a
-    nop
-    nop
     in a,(99H)           ; read s#1
     and 00111110B        ; get VDP ID
     rrca
@@ -71,8 +69,6 @@ VDP_IsTMS9918A_Wait:
     out (99H),a
     ld a,15 + 128
     out (99H),a
-    nop
-    nop
     in a,(99H)           ; read s#2 / s#0
     ex af,af'
     xor a                ; select s#0 as required by BIOS

@@ -67,13 +67,17 @@ VDP_IsTMS9918A_Wait:
     jp p,VDP_IsTMS9918A_Wait
     ld a,2               ; select s#2 on V9938
     out (99H),a
-    ld a,15 + 128
+    ld a,15 + 128        ; (this mirrors to r#7 on TMS9918 VDPs)
     out (99H),a
     in a,(99H)           ; read s#2 / s#0
     ex af,af'
     xor a                ; select s#0 as required by BIOS
     out (99H),a
     ld a,15 + 128
+    out (99H),a
+    ld a,(0F3E6H)
+    out (99H),a          ; restore r#7 if it mirrored (small flash visible)
+    ld a,7 + 128
     ei
     out (99H),a
     ex af,af'

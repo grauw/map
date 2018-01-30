@@ -27,7 +27,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#00-#01</td>
-  <td>Music Module MIDI, output ports</td>
+  <td>Music Module MIDI, output ports (mirrored on ports #08-#09, #10-#11, #18-#19)</td>
 </tr>
 <tr>
   <td>#00-#01</td>
@@ -39,11 +39,11 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#04-#05</td>
-  <td>Music Module MIDI, input ports</td>
+  <td>Music Module MIDI, input ports (mirrored on ports #0C-#0D, #14-#15, #1C-#1D)</td>
 </tr>
 <tr>
   <td>#0A</td>
-  <td>Music Module DAC (enable with Y8950 IO0)</td>
+  <td>Music Module DAC (enable with Y8950 IO0) (mirrored on ports #08-#0F, #18-#1F)</td>
 </tr>
 <tr>
   <td>#0F</td>

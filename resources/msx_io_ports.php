@@ -158,7 +158,7 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#gfx9000">Graphics9000 / V9990</a></td>
 </tr>
 <tr>
-  <td>#70-73</td>
+  <td>#70-#73</td>
   <td>MIDI Saurus</td>
 </tr>
 <tr>
@@ -230,20 +230,20 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#pausetr">Pause / R800 info</a> (turboR)</td>
 </tr>
 <tr>
-  <td>#A8-AB</td>
+  <td>#A8-#AB</td>
   <td><a href="#ppi">PPI / Programmable Peripheral Interface / 8255</a></td>
 </tr>
 <tr>
-  <td>#AC-AF</td>
+  <td>#AC-#AF</td>
   <td><a href="/resources/#msxengine">MSX-ENGINE</a> (1-chip MSX I/O)</td>
 </tr>
 <tr>
-  <td>#B0-B3</td>
+  <td>#B0-#B3</td>
   <td><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01
       Data Memory</a> (4kB SRAM) (8255 i/f)</td>
 </tr>
 <tr>
-  <td>#B4-B5</td>
+  <td>#B4-#B5</td>
   <td>Clock chip / RP-5C01</td>
 </tr>
 <tr>
@@ -251,15 +251,15 @@ If you have additions or see an error, please let us know.</em></p>
   <td>CIEL ExpertTurbo / Expert3 turbo switch (bit 7: 1 = turbo on)</td>
 </tr>
 <tr>
-  <td>#B8-BB</td>
+  <td>#B8-#BB</td>
   <td>Card Reader <em>(which?)</em></td>
 </tr>
 <tr>
-  <td>#B8-BB</td>
+  <td>#B8-#BB</td>
   <td>Sanyo lightpen interface</td>
 </tr>
 <tr>
-  <td>#BC-BF</td>
+  <td>#BC-#BF</td>
   <td>JVC VHD video controller (8255 i/f)</td>
 </tr>
 <tr>

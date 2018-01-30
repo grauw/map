@@ -219,7 +219,7 @@ If you have additions or see an error, please let us know.</em></p>
 <tr>
   <td>#A0-#A3</td>
   <td><a href="#psg">PSG / AY-3-8910 / YM2149</a><br />
-      <a href="#psgioports">PSG I/O ports A &amp; B</a></td>
+      <a href="#psgioports">PSG GPIO ports A &amp; B</a></td>
 </tr>
 <tr>
   <td>#A4-#A5</td>
@@ -752,9 +752,9 @@ Generator):</p>
 <p>See the <a href="/resources/#psg">AY-3-8910 and YM2149 application
 manuals</a> for more details.</p>
 
-<h3 id="psgioports">Additional PSG I/O ports A &amp; B</h3>
+<h3 id="psgioports">Additional PSG GPIO ports A &amp; B</h3>
 
-<p>The PSG has two additional I/O ports in registers 14 and 15. They are used by
+<p>The PSG has two general-purpose I/O ports in registers 14 and 15. They are used by
 the MSX standard for several device I/O related tasks, comparable with the PPI
 and working more or less in conjunction with it. These are the functions:</p>
 

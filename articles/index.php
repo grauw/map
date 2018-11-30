@@ -54,7 +54,7 @@
   </li>
 <li id="books">Books
   <ul>
-  <li><a href="http://gerarddruiven.nl/msx/practical_msx_machine_code_programming_steve_webb.pdf">Practical MSX Machine Code Programming</a> by Steve Webb, scanned by Gerard Druiven</li>
+  <li><a href="https://archive.org/details/practical_msx_machine_code_programming_steve_webb">Practical MSX Machine Code Programming</a> by Steve Webb, scanned by Gerard Druiven</li>
   </ul>
 </li>
 <li id="external">External articles (non-MAP)

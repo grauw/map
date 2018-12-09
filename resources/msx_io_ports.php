@@ -508,12 +508,9 @@ computers:</p>
   <td>= 8 (Panasonic manufacturer ID)</td>
 </tr>
 <tr>
-  <td rowspan="2">#41</td>
+  <td>#41</td>
   <td><i>Available on FS-A1FX/WX/WSX only:</i><br />
-      bit 0: CPU speed mode (0=5.37MHz, 1=3.57MHz)</td>
-</tr>
-<tr>
-  <td><i>Available on FS-A1FX/WX/WSX/ST/GT only:</i><br />
+      bit 0: CPU speed mode (0=5.37MHz, 1=3.57MHz)<br />
       bit 7: Firmware switch status (0=on, 1=off) <em>(read-only)</em></td>
 </tr>
 </table>

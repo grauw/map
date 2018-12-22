@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>Scrolling on MSX</title>
-<?php addStyles(); ?>
+  <title>Scrolling on MSX</title>
+  <?php addStyles(); ?>
 </head>
 <body>
 <?php addHeader(); ?>
@@ -11,15 +11,6 @@
 
 
 <h1>A guide to scrolling game engines on MSX</h1>
-
-<!--
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>yyyy-mm-dd</em><br />
-...</p>
-</div>
--->
 
 <p>Scrolling is a feature that is an essential part of many games,
 however due to hardware limitations it is not a trivial thing to do on

@@ -21,8 +21,8 @@
                   The advanced disk operating system
 
                          for MSX 2 computers
-												 
-												 
+
+
 </pre>
 
 
@@ -35,7 +35,7 @@ CONTENTS                                       Page
    3.1   \ 
    . .    \  Definitions of each function
    . .    /
-   3.90  /    
+   3.90  /
 </pre>
 
 

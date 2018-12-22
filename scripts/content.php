@@ -18,11 +18,10 @@ function addHTTPHeader() {
 
 function addStyles() {
 	global $xhtml, $style;
-	if (!$xhtml) {
 ?><link rel="stylesheet" href="/css/map.css" type="text/css" />
 <?php
-	}
 }
+
 function addStylesXHTML() {
 	global $xhtml, $style;
 	if ($xhtml) {

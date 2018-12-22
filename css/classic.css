@@ -201,27 +201,3 @@ blockquote {
 	border-left: 1em solid #DDF;
 	padding-left: 2em;
 }
-/*blockquote {
-	border-left: .5em solid #ddd;
-	padding: 0 1.5em;
-	margin: 0 0 0 .2em;
-}*/
-blockquote[cite] {
-	-moz-binding: url("map-xbl.xml#blockquote-cite");
-	position: relative;
-}
-blockquote[cite] > a.citelink {
-	display: none;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	background: white;
-	border: 1px solid #ccc;
-	padding: 0.2em 0.5em;
-}
-blockquote[cite] > a.citelink:hover {
-	background: #eee;
-}
-blockquote[cite]:hover > a.citelink {
-	display: block;
-}

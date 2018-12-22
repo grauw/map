@@ -13,8 +13,6 @@ function addHTTPHeader() {
 	}
 	header('Content-Style-Type: text/css');
 
-	procStyleCookie();
-
 	// XML header...
 	if ($xhtml) {
 	  echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
@@ -22,46 +20,13 @@ function addHTTPHeader() {
 	}
 }
 
-
-
-
-//
-// Process style cookie
-//
-function procStyleCookie() {
-	global $style;
-	$style='';
-	if (isset($_COOKIE['mapstyle'])) $style = $_COOKIE['mapstyle'];
-	if (isset($_GET['setstyle'])) $style = $_GET['setstyle'];
-
-	switch ($style) {
-	case 'none':			// allowed styles
-	case 'classic':
-	case 'modern':
-	case 'experimental':
-		setcookie('mapstyle', $style, time()+365*24*60*60, '/'); //1yr
-		break;
-	default:
-		$style='classic';
-	}
-}
 //
 // Add style information
 //
 function addStyles() {
 	global $xhtml, $style;
 	if (!$xhtml) {
-/*
-  <!-- compliance patch for microsoft browsers -->
-  <!--[if lt IE 7]>
-  <link rel="stylesheet" href="/IE7/ie7-html.css" type="text/css" />
-  <![endif]-->
-*/
 ?><link rel="stylesheet" href="/css/map.css" type="text/css" />
-  <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
-  <link rel="<?php echo ($style=='classic' ? '' : 'alternate ') ?>stylesheet" href="/css/classic.css" type="text/css" title="MAP Classic" />
-  <link rel="<?php echo ($style=='modern' ? '' : 'alternate ') ?>stylesheet" href="/css/modern.css" type="text/css" title="MAP Modern" />
-  <link rel="<?php echo ($style=='experimental' ? '' :'alternate ') ?>stylesheet" href="/css/experimental.css" type="text/css" title="MAP Experimental" />
 <?php
 	}
 }
@@ -69,10 +34,6 @@ function addStylesXHTML() {
 	global $xhtml, $style;
 	if ($xhtml) {
 		echo '<?xml-stylesheet href="/css/map.css" type="text/css"?>'."\n";
-		echo '<?xml-stylesheet href="/css/print.css" type="text/css" media="print"?>'."\n";
-		echo '<?xml-stylesheet href="/css/classic.css" ' . ($style=='classic' ? '' : 'alternate="yes" ') . 'type="text/css" title="MAP Classic"?>'."\n";
-		echo '<?xml-stylesheet href="/css/modern.css" ' . ($style=='modern' ? '' : 'alternate="yes" ') . 'type="text/css" title="MAP Modern"?>'."\n";
-		echo '<?xml-stylesheet href="/css/experimental.css" ' . ($style=='experimental' ? '' : 'alternate="yes" ') . 'type="text/css" title="Experimental"?>'."\n";
 	}
 }
 
@@ -101,34 +62,10 @@ function addMenu() {
 <div id="menu">
 <ul>
 <li><a href="/">Main</a></li>
-<li><a href="/articles/">Articles</a>
-  <ul>
-  <li><a href="/articles/#tutorials">Tutorials</a></li>
-  <li><a href="/articles/#articles">Articles</a></li>
-  <li><a href="/articles/#extarticles">External articles</a></li>
-  </ul>
-</li>
-<li><a href="/resources/">Resources</a>
-  <ul>
-  <li><a href="/resources/#osdocs">OS documentation</a></li>
-  <li><a href="/resources/#devicedocs">Device documentation</a></li>
-  <li><a href="/resources/#swdocs">Software documentation</a></li>
-  </ul>
-</li>
-<li><a href="/sources/">Sources</a>
-  <ul>
-  <li><a href="/sources/#code">Code examples</a></li>
-  <li><a href="/sources/#source">Source code</a></li>
-  <li><a href="/sources/#extsources">External sources</a></li>
-  </ul>
-</li>
-<li><a href="/links/">Links</a>
-  <ul>
-  <li><a href="/links/#communities">Development communities</a></li>
-  <li><a href="/links/#resources">Documentation resources</a></li>
-  <li><a href="/links/#tools">Programming tools</a></li>
-  </ul>
-</li>
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="/sources/">Sources</a></li>
+<li><a href="/links/">Links</a></li>
 <li><a href="/contributing/">Contributing</a></li>
 </ul>
 </div>

@@ -105,7 +105,7 @@ Added a stub article about <a href="/resources/engine/t9769b/">the T9769B</a>.</
 Added MARMSX's 19268 colors on <abbr title="Machines with Software eXchangeability">MSX</abbr> 2+ article to <a href="/articles/#extarticles">external articles</a>.</p>
 
 <p><em>2004-04-09</em><br />
-Redesigned site structure somewhat. If you linked or bookmarked one of the section indices, please update your links. Also added a <a href="/main/styles.php">style changer</a>.</p>
+Redesigned site structure somewhat. If you linked or bookmarked one of the section indices, please update your links. Also added a style changer.</p>
 
 <p><em>2004-03-03</em><br />
 On capable browsers (Firefox), the <abbr title="MSX Assembly Page">MAP</abbr> is now using true <abbr title="eXtensible HyperText Markup Language">XHTML</abbr>.</p>

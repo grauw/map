@@ -39,10 +39,10 @@ improve the MAP.</p>
 <p><em>Please note that this site’s content may not be redistributed without the
 permission of the MSX Assembly Page or the original author.</em> We have put a
 lot of effort in collecting all this information and also wrote a large number
-of the articles ourselves (the ones marked with a <img src="/css/mapbullet.gif"
-alt="MAP" /> bullet), and we ask everyone to respect our efforts and author’s
-rights. Of course linking to us is always allowed. For more legal information
-read the <a href="/disclaimer.php">Disclaimer</a>.</p>
+of the articles ourselves (the ones marked with <span class="map">MAP</span>),
+and we ask everyone to respect our efforts and author’s rights. Of course
+linking to us is always allowed. For more legal information read the
+<a href="/disclaimer.php">Disclaimer</a>.</p>
 
 <p>The following documents be found in this section:</p>
 

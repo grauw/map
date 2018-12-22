@@ -19,26 +19,26 @@
   <ul>
   <li id="code_vdp">VDP routines
     <ul>
-    <li class="map"><a href="/sources/docopy.php">Execute a VDP command</a></li>
-    <li class="map"><a href="/sources/vdp_detection.php">Detect VDP version</a></li>
-    <li class="map"><a href="/sources/vdp_rout.php">A shitload of VDP routines</a></li>
+    <li><a href="/sources/docopy.php">Execute a VDP command</a> <span class="map">MAP</span></li>
+    <li><a href="/sources/vdp_detection.php">Detect VDP version</a> <span class="map">MAP</span></li>
+    <li><a href="/sources/vdp_rout.php">A shitload of VDP routines</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="code_disk">Disk routines
     <ul>
-    <li class="map"><a href="/sources/load_screen.php">Load a file into the VRAM</a></li>
+    <li><a href="/sources/load_screen.php">Load a file into the VRAM</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="code_math">Math routines
     <ul>
-    <li class="map"><a href="/articles/mult_div_shifts.php#mult">Multiplications</a></li>
-    <li class="map"><a href="/articles/mult_div_shifts.php#div">Divisions</a></li>
+    <li><a href="/articles/mult_div_shifts.php#mult">Multiplications</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/mult_div_shifts.php#div">Divisions</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="code_slot">Slot/mapper routines
     <ul>
-    <li class="map"><a href="/sources/raminpage1.php">Switch RAM/ROM in page 1</a></li>
-    <li class="map"><a href="/sources/callbios.php">Calling the BIOS from MSX-DOS</a></li>
+    <li><a href="/sources/raminpage1.php">Switch RAM/ROM in page 1</a> <span class="map">MAP</span></li>
+    <li><a href="/sources/callbios.php">Calling the BIOS from MSX-DOS</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   </ul>

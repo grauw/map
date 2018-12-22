@@ -17,13 +17,13 @@
 <ul>
   <li id="z80assembly">Z80 assembly programming
     <ul>
-    <li class="map"><a href="/articles/fast_loops.php">Fast loops</a></li>
-    <li class="map"><a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts</a></li>
+    <li><a href="/articles/fast_loops.php">Fast loops</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="basic">Basic programming
     <ul>
-    <li class="map"><a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a></li>
+    <li><a href="/articles/basic_tips_tricks.php">MSX Basic tips &amp; tricks</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="vhdl"><abbr title="VHSIC Hardware Description Language">VHDL</abbr> programming
@@ -33,21 +33,21 @@
   </li>
   <li id="vdp"><abbr title="Video Display Processor">VDP</abbr> programming
     <ul>
-    <li class="map"><a href="/articles/vdp_tut.php">VDP programming tutorial</a></li>
-    <li class="map"><a href="/articles/vdp_guide.php">VDP programming guide</a></li>
-    <li class="map"><a href="/articles/split_guide.php">Screensplit programming guide</a></li>
-    <li class="map"><a href="/articles/vdp_commands_speed.php">VDP commands ~ speed measurements</a></li>
-    <li class="map"><a href="/articles/scrolling.php">A guide to scrolling game engines on MSX</a></li>
+    <li><a href="/articles/vdp_tut.php">VDP programming tutorial</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/vdp_guide.php">VDP programming guide</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/split_guide.php">Screensplit programming guide</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/vdp_commands_speed.php">VDP commands ~ speed measurements</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/scrolling.php">A guide to scrolling game engines on MSX</a> <span class="map">MAP</span></li>
     <li><a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a> · by the <a href="http://openmsx.org/">openMSX</a> team</li>
     <li><a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings, part II</a> · by the <a href="http://openmsx.org/">openMSX</a> team</li>
     </ul>
   </li>
   <li id="other">Other topics
     <ul>
-    <li class="map"><a href="/articles/keymatrix.php">Keyboard matrices</a></li>
-    <li class="map"><a href="/articles/psg_sample.php">Playing samples on the PSG</a></li>
-    <li class="map"><a href="/articles/interrupts.php">Interrupts</a> · MSX Computer Magazine 51 (<a href="http://www.msxcomputermagazine.nl/archief/bladen/msx_computer_magazine_51.pdf" hreflang="nl">read</a>)</li>
-    <li class="map"><a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a></li>
+    <li><a href="/articles/keymatrix.php">Keyboard matrices</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/psg_sample.php">Playing samples on the PSG</a> <span class="map">MAP</span></li>
+    <li><a href="/articles/interrupts.php">Interrupts</a> · MSX Computer Magazine 51 (<a href="http://www.msxcomputermagazine.nl/archief/bladen/msx_computer_magazine_51.pdf" hreflang="nl">read</a>) <span class="map">MAP</span></li>
+    <li><a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> <span class="map">MAP</span></li>
     </ul>
   </li>
 <li id="books">Books

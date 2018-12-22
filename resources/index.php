@@ -21,9 +21,9 @@ information, feel free to send us an email.</p>
 <ul>
   <li id="msxbios">MSX BIOS documentation
     <ul>
-    <li class="map"><a href="/resources/msxbios.php">MSX BIOS calls</a></li>
-    <li class="map"><a href="/resources/subrom.php">MSX SUBROM BIOS calls</a></li>
-    <li class="map"><a href="/resources/msxsystemvars.php">System variables</a> <em>(work in progress)</em></li>
+    <li><a href="/resources/msxbios.php">MSX BIOS calls</a> <span class="map">MAP</span></li>
+    <li><a href="/resources/subrom.php">MSX SUBROM BIOS calls</a> <span class="map">MAP</span></li>
+    <li><a href="/resources/msxsystemvars.php">System variables</a> <em>(work in progress)</em> <span class="map">MAP</span></li>
     <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">MSX2 Technical Handbook appendices</a> · by Nestor Soriano (Konamiman)</li>
     <li><a href="/resources/datapack/Vol3-7MSXExtendedBIOSSpecification.pdf">MSX Extended BIOS Specification</a> · MSX Datapack Vol. 3-7, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
     </ul>
@@ -41,7 +41,7 @@ information, feel free to send us an email.</p>
   </li>
   <li id="system">System documentation
     <ul>
-    <li class="map"><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a></li>
+    <li><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a> <span class="map">MAP</span></li>
     <li><a href="/resources/system/msxtech.pdf">MSX Technical Data Book</a></li>
     <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman) (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan" hreflang="ja">Japanese version</a>, <a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2FTechHan">via Google Translate</a>)</li>
     <li><a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fdai3car.sakura.ne.jp%2Fmsxpage%2Fmsxtr_handbook%2Flates.html">MSX turboR Technical Handbook via Google Translate</a> (<a href="http://dai3car.sakura.ne.jp/msxpage/msxtr_handbook/lates.html" hreflang="ja">Japanese</a>, <a href="https://archive.org/download/MsxTurboR/MsxTurboRTechnicalHandBook.pdf" hreflang="ja">scans</a>)</li>
@@ -53,7 +53,7 @@ information, feel free to send us an email.</p>
     <ul>
     <li id="z80">Z80
       <ul>
-	  <li class="map"><a href="/resources/z80instr.php">Z80 / R800 instruction set overview</a></li>
+	  <li><a href="/resources/z80instr.php">Z80 / R800 instruction set overview</a> <span class="map">MAP</span></li>
       <li><a href="/resources/cpu/z80.pdf">Zilog Z80 user’s manual</a></li>
       <li><a href="http://www.myquest.nl/z80undocumented/z80-documented-v0.91.pdf">The Undocumented Z80 Documented</a> · by Sean Young, Jan Wilmans (<a href="http://www.myquest.nl/z80undocumented/">site</a>)</li>
       <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
@@ -81,7 +81,7 @@ information, feel free to send us an email.</p>
       <ul>
       <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
       <li><a href="/resources/video/yamaha_v9938.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · scans (<a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">alt version</a>)</li>
-      <li class="map"><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed <em>(incomplete)</em></li>
+      <li><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed <em>(incomplete)</em> <span class="map">MAP</span></li>
       </ul>
     </li>
     <li id="v9958">MSX2+ / turboR VDP
@@ -134,7 +134,7 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/datapack/Vol2-4.2MSX-AUDIOBASICExpansion.pdf">MSX-AUDIO BASIC Expansion</a> · MSX Datapack Vol. 2-4.2, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.3MSX-AUDIOExtendedBIOS.pdf">MSX-AUDIO Extended BIOS</a> · MSX Datapack Vol. 2-4.3, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
       <li><a href="/resources/datapack/Vol2-4.4MSX-AUDIOMBIOS.pdf">MSX-AUDIO MBIOS</a> · MSX Datapack Vol. 2-4.4, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
-      <li class="map"><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a></li>
+      <li><a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music keyboard</a> <span class="map">MAP</span></li>
       </ul>
     </li>
     <li id="opl2">OPL2
@@ -160,7 +160,7 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/yamaha_ym2151_synthesis.pdf">Yamaha YM2151 OPM application manual</a></li>
       <li><a href="/resources/sound/yamaha_ym2151_datasheet.pdf">Yamaha YM2151 OPM datasheet</a></li>
       <li><a href="/resources/sound/yamaha_ym2151_test.txt">Yamaha YM2151 OPM test register info</a> · by Jarek Burczynski</li>
-      <li class="map"><a href="/resources/sound/yamaha_ym2164.php">Yamaha YM2164 OPP info</a></li>
+      <li><a href="/resources/sound/yamaha_ym2164.php">Yamaha YM2164 OPP info</a> <span class="map">MAP</span></li>
       <li><a href="/resources/sound/yamaha_sfg05_mbios.pdf">Yamaha SFG-05 Music BIOS reference manual</a></li>
       <li><a href="http://www.cx5m.net/hardware/">More info at CX5M.net</a></li>
       </ul>
@@ -187,7 +187,7 @@ information, feel free to send us an email.</p>
     <li><a href="/resources/engine/yamaha_s1985.pdf">Yamaha S1985 MSX-System II application manual</a></li>
     <li>T9769B · engine of several MSX2+ computers</li>
 	  <ul>
-	  <li class="map"><a href="/resources/engine/t9769b/">T9769B general notes</a></li>
+	  <li><a href="/resources/engine/t9769b/">T9769B general notes</a> <span class="map">MAP</span></li>
 	  </ul>
     <li>T9769C · turboR engine</li>
     <li>S1990 · turboR bus controller</li>
@@ -224,11 +224,11 @@ information, feel free to send us an email.</p>
     </li>
     <li id="midi">MIDI
       <ul>
-      <li class="map"><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> · MSX Datapack Vol. 3 Section 5, English</li>
+      <li><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> · MSX Datapack Vol. 3 Section 5, English <span class="map">MAP</span></li>
       <li><a href="/resources/midi/intel_8251.pdf">Intel 8251 UART</a> · used by MSX-MIDI</li>
       <li><a href="/resources/midi/intel_8253.pdf">Intel 8253 Timer</a> · used by MSX-MIDI</li>
       <li><a href="/resources/midi/motorola_mc68b50.pdf">Motorola MC68B50</a> · used by Philips Music Module</li>
-      <li class="map"><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · FM Sound Synthesizer Unit MIDI interface</li>
+      <li><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · FM Sound Synthesizer Unit MIDI interface <span class="map">MAP</span></li>
       </ul>
     </li>
     </ul>
@@ -248,8 +248,8 @@ information, feel free to send us an email.</p>
     </li>
     <li id="mapper">ROM / RAM memory
       <ul>
-      <li class="map"><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01 Data Memory</a> (4kB SRAM)</li>
-      <li class="map"><a href="/resources/msx_io_ports.php#zemina-memory">Zemina GoldenBox technical info</a></li>
+      <li><a href="/resources/hbi55.php">Sony HBI-55 Data Cartridge / Yamaha UDC-01 Data Memory</a> (4kB SRAM) <span class="map">MAP</span></li>
+      <li><a href="/resources/msx_io_ports.php#zemina-memory">Zemina GoldenBox technical info</a> <span class="map">MAP</span></li>
       <li><a href="http://www.hqunix.com/wordpress/?page_id=554">Zemina GoldenBox manual</a> · by <a href="http://hqunix.com/wordpress/">Chronos</a></li>
       </ul>
     </li>
@@ -259,7 +259,7 @@ information, feel free to send us an email.</p>
     <ul>
     <li id="memman">MemMan (by MST)
       <ul>
-      <li class="map"><a href="/resources/tsrdev_en.php">MemMan v2.32 TSR Development Kit</a></li>
+      <li><a href="/resources/tsrdev_en.php">MemMan v2.32 TSR Development Kit</a> <span class="map">MAP</span></li>
       </ul>
     </li>
     </ul>

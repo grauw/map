@@ -206,7 +206,11 @@ q:lang(ja)::after {
 }
 
 .map {					/* Indicator for MAP-authored files */
-	list-style-image: url("mapbullet.gif");
+	color: #FFF;
+	background: #DDF;
+	padding: 0 0.3em;
+	border-radius: 0.3em;
+	font-size: x-small;
 }
 
 .func {					/* To render function descriptions */

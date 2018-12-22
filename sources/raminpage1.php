@@ -3,8 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>How to switch RAM/ROM in page 1</title>
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
   <?php addStyles(); ?>
 </head>
 <body>

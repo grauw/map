@@ -3,8 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
 <head>
   <title>Contributing to the MAP - MSX Assembly Page</title>
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
   <?php addStyles(); ?>
   <script type="text/javascript" src="/js/email.js"></script>
 </head>

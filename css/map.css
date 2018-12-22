@@ -1,5 +1,7 @@
 ﻿@media print {
-	#menu {	display: none !important; }
+	#menu {
+		display: none !important;
+	}
 
 	.toc a:link, .toc a:active, .toc a:visited, .toc a:hover {
 		color: black;
@@ -17,6 +19,8 @@ body {
 	padding: 0;
 }
 
+
+
 /* Header layout */
 
 #head {
@@ -31,6 +35,8 @@ body {
 	padding: .5em;
 	margin: 0;
 }
+
+
 
 /* Menu layout */
 
@@ -70,16 +76,17 @@ body {
 
 
 
-
 /* Body layout */
 
 #content	{
 	padding: .75em;
 }
+
 #content a {
 	color: #D50;
 	text-decoration: none;
 }
+
 #content a:hover {
 	color: #F70;
 	text-decoration: underline;
@@ -104,6 +111,7 @@ body {
 	color: #444;
 	text-decoration: none;
 }
+
 #foot a:hover {
 	color: #D50;
 }
@@ -115,6 +123,7 @@ body {
 h1, h2, h3 {
 	margin-top: 1.2em;
 }
+
 h1, h1 + h2, h2 + h3 {
 	margin-top: 0.8em;
 }
@@ -131,6 +140,7 @@ h1 {
 h2 {
 	font-size: 22px;
 }
+
 h3 {
 	font-size: 18px;
 }
@@ -156,6 +166,7 @@ img.illustration {
 dt {
 	font-weight: bold;		/* render definitions bold */
 }
+
 table {
 	empty-cells: show;		/* don't hide empty cells */
 	border-color: #EEF;		/* show seperators */
@@ -172,9 +183,11 @@ td, th {
 	border-style: solid;
 	border-color: #EEF;		/* ensure enough space between cells */
 }
+
 th {
 	background: #DDF;		/* give headers nice background color */
 }
+
 blockquote {
 	margin-left: 0;
 	border-left: 1em solid #DDF;
@@ -186,12 +199,15 @@ blockquote {
 q::before {				/* nice quotation marks... */
 	content: '“';
 }
+
 q::after {
 	content: '”';
 }
+
 q:lang(ja)::before {
 	content: '『';
 }
+
 q:lang(ja)::after {
 	content: '』';
 }
@@ -221,6 +237,7 @@ q:lang(ja)::after {
 .signed {				/* Use for the author at the end of an introduction */
 	margin-top: 3em;
 }
+
 .signed::before {
 	content: "\2014\A0"
 }
@@ -253,10 +270,12 @@ q:lang(ja)::after {
 	font-size: larger;
 	margin-top: 1em;
 }
+
 .index dd {
 	display: block;
 	margin-left: 2em;
 }
+
 .indexpage {
 	float: right;
 }
@@ -269,6 +288,7 @@ q:lang(ja)::after {
 	border-collapse: collapse;
 	empty-cells: show;
 }
+
 .matrix th,
 .matrix td {
 	text-align: center;
@@ -280,6 +300,7 @@ q:lang(ja)::after {
 .spacycells td {
 	padding: 1em 3em;
 }
+
 
 
 /* show non-html link file types */

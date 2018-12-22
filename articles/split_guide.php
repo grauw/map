@@ -12,13 +12,6 @@
 
 <h1>Screensplit programming guide</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2003-09-06</em><br />
-Changed the BITs in the polls to ANDs, added a macro to the blank line screensplit example. Still didn’t fix the statements about HR.</p>
-</div>
-
 <p>Programming screensplits can be tricky, even more so if you want them to work on the different types of MSX computers and CPU speeds. Therefore this article was compiled, so that programmers can easily find detailed information about all ups and downs, buts, and possibilities and impossibilities of screensplits. If you have a suggestion, please mail us about it!</p>
 
 <p><em>About the measurements, those of HR in particular: I have been pointed to some errors and accuracy improvements (some bordering the obvious, argh -_-;;). So don’t take them for granted yet, I’ll create new measurements. The rest still stands, ofcourse ;p. Update coming (somewhat) soon!</em></p>

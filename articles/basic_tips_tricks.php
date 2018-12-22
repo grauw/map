@@ -12,13 +12,6 @@
 
 <h1>MSX Basic tips and tricks</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2005-02-10</em><br />
-Initial version.</p>
-</div>
-
 <p>This article contains several tips and tricks for the Basic programmer. Note that this is just a start, a stub, I will not actively seek for new stuff to write there (although if I encounter a good tip incidentally I will add it - if I remember to do so). So people who have additional tips are encouraged to send a mail, and I will add them to the article...</p>
 
 <ul>

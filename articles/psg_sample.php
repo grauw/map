@@ -12,13 +12,6 @@
 
 <h1>Playing samples on the PSG</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2005-06-01</em><br />
-Added information about the PSG’s logarithmic volume scale, and how to play 8-bit samples on the PSG. Thanks go to Arturo Ragozini for pointing this out.</p>
-</div>
-
 <p>I wrote a question about playing samples on the PSG to the MSX Mailinglist once, and Ricardo Bittencourt replied with an explanation of various techniques, which I have quoted below. After that the article continues, describing the logarithmic nature of the PSG volume, and how to utilise it to achieve 8-bit samples on the PSG.</p>
 
 <p>Table of contents:</p>

@@ -13,50 +13,6 @@
 
 <h1>Introduction</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p>For the full changelog see <a href="https://bitbucket.org/grauw/map/commits/all">here</a>.</p>
-
-<p><em>2015-07-14</em><br />
-Added <a href="/resources/">MSX datasheet chapters</a> translated
-by FRS, Takamichi and sandervn.</p>
-
-<p><em>2015-03-05</em><br />
-Added detailed R800 timing information to the
-<a href="/resources/z80instr.php">Z80 instruction set overview</a>.</p>
-
-<p><em>2014-12-07</em><br />
-Added <a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a>
-documentation courtesy Dennis Koller and Sander van Nunen.</p>
-
-<p><em>2014-08-16</em><br />
-Added <a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings,
-part II</a> by team <a href="http://openmsx.org/">openMSX</a>.</p>
-
-<p><em>2014-07-26</em><br />
-Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
-article by the <a href="http://openmsx.org/">openMSX</a> team.
-Highly detailed insights in the inner workings of the VDP.</p>
-
-<p><em>2014-07-18</em><br />
-Added <a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music
-keyboard</a> documentation.</p>
-
-<p><em>2014-07-04</em><br />
-Added <a href="/resources/midi/ym2148.php">Yamaha YM2148</a> documentation. This
-is the Yamaha FM Sound Synthesizer Unit’s MIDI interface.</p>
-
-<p><em>2014-05-29</em><br />
-Added <a href="/resources/hbi55.php">Sony HBI-55 / Yamaha UDC-01</a> 4kB SRAM
-data cartridge documentation.</p>
-
-<p style="text-align: center">(<a href="/main/updates-old.php">Older updates</a>)
-(<a href="https://bitbucket.org/grauw/map/commits/all">Full changelog</a>)</p>
-<!-- Move outdated updates to updates-old.php!!! -->
-</div>
-
-
 <p>The goal of the <acronym title="MSX Assembly Page">MAP</acronym> is to be the
 ultimate source of information for the
 <abbr title="Machines with Software eXchangeability">MSX</abbr> programmer or
@@ -92,6 +48,7 @@ read the <a href="/main/disclaimer.php">Disclaimer</a>.</p>
 
 <ul>
   <li><a href="/main/disclaimer.php">Disclaimer</a></li>
+  <li><a href="https://bitbucket.org/grauw/map/commits/all">Changelog</a></li>
   <li><a href="/main/updates-old.php">Old updates</a></li>
 </ul>
 

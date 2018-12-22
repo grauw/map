@@ -12,28 +12,6 @@
 
 <h1>Keyboard matrices</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2010-07-19</em><br />
-Added more information on models with Yes/No keys and Pioneer PX-7 keys, thanks Manuel Bilderbeek and Sean Young.</p>
-
-<p><em>2004-05-31</em><br />
-Updated Spanish / Argentinian keyboard layout and added a keyboard version no. 6 (again thanks to Flyguille).</p>
-
-<p><em>2004-05-26</em><br />
-Found out about the keyboard layout bit in PSG I/O port A, and fixed and cross-checked some errors.</p>
-
-<p><em>2004-05-25</em><br />
-Added the Spanish / Argentinian keyboard layout (thanks to Flyguille) and added more detailed information, in particular for the Japanese keyboards (JIS vs. ANSI).</p>
-
-<p><em>2003-10-04</em><br />
-Added the Japanese keyboard layout (thanks to Manuel Bilderbeek).</p>
-
-<p><em>2003-08-27</em><br />
-Divided the article in sections, added the section about key ghosting, and added the Russian keyboard layout (for that, many thanks to Stanislav Borutsky).</p>
-</div>
-
 <p>The key matrix is a matrix of 11x8 bits in which the currently pressed keys on the keyboard are indicated. This document contains an overview of all the available keymatrices, since they can be slightly to very different for different types of MSX computers. Also it discusses several oddities about using the keyboard matrix on MSX, and how to read it.</p>
 
 

@@ -112,32 +112,6 @@ body {
 }
 
 
-/* Updates layout */
-
-.updates {
-	float: right;
-	width: 35%;
-	border: solid 3px #DDF;
-	margin-left: .4em;
-	margin-bottom: .4em;
-	margin-top: 1em;
-}
-.updates p {
-	margin: .5em;
-}
-.updates h2 {
-	color: white;
-	background: #BBF;
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
-	width: 100%;
-	padding: .25em 0em;
-	margin-top: 0em;
-	margin-bottom: .5em;
-}
-
-
 
 /* */
 	

@@ -12,40 +12,6 @@
 
 <h1>Multiplications, divisions and shifts</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2009-08-23</em><br />
-Made <a href="#div">16-bit division</a> routine 120 T-states faster, thanks to Juha N.</p>
-
-<p><em>2009-03-27</em><br />
-Added <a href="#divby9">division by 9</a> routine provided by Ricardo Bittencourt.</p>
-
-<p><em>2005-05-12</em><br />
-Optimized the Div16 routine, it is only a humble 7 T-states faster than it was before, but can now be unrolled to be up to 234 T-states faster! It is also 15 bytes smaller. Thanks go to Flyguille.</p>
-
-<p><em>2005-05-01</em><br />
-Optimized the Mult32 routine, it is now 96 T-states faster and three bytes smaller. Thanks to Colin Douglas Howell.</p>
-
-<p><em>2005-07-25</em><br />
-Fixed the Mult32, thanks to Nyyrikki for pointing me to a bit that didn’t make sense.</p>
-
-<p><em>2005-02-06</em><br />
-Put a new (faster) square root routine online, by Ricardo Bittencourt. Also, added the <a href="/sources/external/z80bits.html">Z80 Bits</a> article kindly provided by Petr Petyovsky from the Sinclair scene, which has some very nice routines as well. I will see if I can improve these multiplication and division routines a little more with those in the future.</p>
-
-<p><em>2005-02-01</em><br />
-- Did some Div16 bug hunting, fixed two bugs. It should be error-free now. Another thing, the divider of the Div16 routine had to be a 15-bit value, so changed the name to Div15, and added some additional Div16 code.<br />
-- Added square root Sqr16 routine by Arjan Bakker (based on the one published in MCCM).<br />
-- Changed Mult12 unrolled version’s routine name to Mult12U, and optimized the <code>ld l,0</code> here aswell.<br />
-- Re-calculated all timing figures to include M1 wait states</p>
-
-<p><em>2005-08-28</em><br />
-The MCCW article <a href="http://www.mccw.hetlab.tk/92/Multiplication/en.html">Multiplication on a Z80</a> describes a very fast multiplication method.</p>
-
-<p><em>2005-04-25</em><br />
-Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it altogether in the Mult16 routine. Thanks to Sjoerd Mastijn for the tip :).</p>
-</div>
-
 <p>Because the Z80 does not have a built-in multiplication instructions, when a programmer wants to do a multiplication he has to it manually. The programmer might take a multiplication routine from a book or a magazine, which may not necessarily be optimized for the specific case (or optimized at all), or he might even uses a routine that works by adding the same value n times, which is pretty much the worst solution to the problem.</p>
 
 <p>This article presents you with optimized methods for multiplication. First it introduces you to multiplications using shifts, which are very fast and can be used if one of the multiplication parameters is a fixed number. Next, it provides a number of optimized generic multiplication and division routines for various bit-depths, and even a square root routine.</p>

@@ -11,19 +11,6 @@
 
 <h1>VDP programming guide</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2005-10-05</em><br />
-Update r#18 Q: it only happens with sprites disabled.</p>
-
-<p><em>2004-01-19</em><br />
-Applied gamma correction to the screen 8 palette to make it sRGB (thanks to Maarten ter Huurne).</p>
-
-<p><em>2004-01-18</em><br />
-Wrote a little explanation about what the proper values for Blue colours are in screen 8, and replaced the palette download.</p>
-</div>
-
 <p>This article aims to document most VDP programming loopholes you may encounter. Below is a list of tips and answers to questions, which may be useful either before programming a certain VDP-related routine, or afterwards to hunt down bugs (should’ve read it beforehand after all, eh ;)). The screensplit related tips are located in <a href="/articles/split_guide.php">a separate article</a>. If you have any suggestions, please submit them to us!</p>
 
 <ul>

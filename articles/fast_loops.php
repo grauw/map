@@ -12,29 +12,6 @@
 
 <h1>Z80 programming techniques - Loops</h1>
 
-<div class="updates">
-<h2>Latest updates:</h2>
-
-<p><em>2015-01-20</em><br />
-Faster “mystery calculus”, thanks to Urusergi.</p>
-
-<p><em>2014-11-20</em><br />
-Corrected timing calculations, replaced outdated example, disable interrupts in
-FastLDIR, and copy editing.</p>
-
-<p><em>2005-08-11</em><br />
-Optimized FastLDIR routine even more, yet another 5 ticks faster! (thanks Arnold
-Metselaar).</p>
-
-<p><em>2004-01-22</em><br />
-Optimized DoLDIR routine more, 5 ticks faster now, and corrected a small error
-(thanks GuyveR800).</p>
-
-<p><em>2003-04-24</em><br />
-Wrote a faster DoLDIR routine, corrected speed calculations, uses JP PE for
-0-check now.</p>
-</div>
-
 <p>Here I will discuss two methods to drastically increase the execution speed
 of different kinds of loops in assembly.</p>
 

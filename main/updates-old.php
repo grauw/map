@@ -12,6 +12,48 @@
 
 <h1>Older Updates</h1>
 
+<p><em>2015-07-14</em><br />
+Added <a href="/resources/">MSX datasheet chapters</a> translated
+by FRS, Takamichi and sandervn.</p>
+
+<p><em>2015-03-05</em><br />
+Added detailed R800 timing information to the
+<a href="/resources/z80instr.php">Z80 instruction set overview</a>.</p>
+
+<p><em>2015-01-20</em><br />
+<a href="/articles/fast_loops.php">Fast loops</a>: Faster “mystery calculus”,
+thanks to Urusergi.</p>
+
+<p><em>2014-12-07</em><br />
+Added <a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player</a>
+documentation courtesy Dennis Koller and Sander van Nunen.</p>
+
+<p><em>2014-11-20</em><br />
+<a href="/articles/fast_loops.php">Fast loops</a>: Corrected timing
+calculations, replaced outdated example, disable interrupts in FastLDIR, and
+copy editing.</p>
+
+<p><em>2014-08-16</em><br />
+Added <a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings,
+part II</a> by team <a href="http://openmsx.org/">openMSX</a>.</p>
+
+<p><em>2014-07-26</em><br />
+Added <a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a>
+article by the <a href="http://openmsx.org/">openMSX</a> team.
+Highly detailed insights in the inner workings of the VDP.</p>
+
+<p><em>2014-07-18</em><br />
+Added <a href="/resources/sound/msxaudio_keyboard.php">MSX-AUDIO music
+keyboard</a> documentation.</p>
+
+<p><em>2014-07-04</em><br />
+Added <a href="/resources/midi/ym2148.php">Yamaha YM2148</a> documentation. This
+is the Yamaha FM Sound Synthesizer Unit’s MIDI interface.</p>
+
+<p><em>2014-05-29</em><br />
+Added <a href="/resources/hbi55.php">Sony HBI-55 / Yamaha UDC-01</a> 4kB SRAM
+data cartridge documentation.</p>
+
 <p><em>2014-05-22</em><br />
 Added <a href="/sources/vdp_detection.php">VDP version detection</a> source code.</p>
 
@@ -38,6 +80,11 @@ transscription</a>.</p>
 Added an English translation of the MSX Datapack Vol. 3’s
 <a href="/resources/midi/msx-midi.php">MSX-MIDI</a> documentation.</p>
 
+<p><em>2010-07-19</em><br />
+<a href="/articles/keymatrix.php">Key matrices:</a> Added more information on
+models with Yes/No keys and Pioneer PX-7 keys, thanks Manuel Bilderbeek and
+Sean Young.</p>
+
 <p><em>2009-08-23</em><br />
 Added “<a href="/articles/scrolling.php">A guide to scrolling game
 engines on MSX</a>” article. Also made the <a href="/articles/mult_div_shifts.php#div">16-bit
@@ -63,11 +110,40 @@ archive links.</p>
 <p><em>2006-12-07</em><br />
 Added Tanni’s ‘<a href="/articles/taste_of_vhdl.php">A taste of VHDL</a>’ tutorial.</p>
 
+<p><em>2005-10-05</em><br />
+<a href="/articles/vdp_guide.php">VDP programming guide</a>: Update r#18 Q: it
+only happens with sprites disabled.</p>
+
+<p><em>2005-08-28</em><br />
+<a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts:</a>
+The MCCW article
+<a href="http://www.mccw.hetlab.tk/92/Multiplication/en.html">Multiplication on
+a Z80</a> describes a very fast multiplication method.</p>
+
+<p><em>2005-08-11</em><br />
+<a href="/articles/fast_loops.php">Fast loops</a>: Optimized FastLDIR routine
+even more, yet another 5 ticks faster! (thanks Arnold Metselaar).</p>
+
 <p><em>2005-06-01</em><br />
 Added information to the PSG samples article about its logarithmic volume scale, and how to play <a href="/articles/psg_sample.php">8-bit samples on the PSG</a>. Thanks go to Arturo Ragozini for pointing this out.</p>
 
 <p><em>2005-05-12</em><br />
-Fixed cut-off values in some timings in the <a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added undocumented and R800 instructions and timings. Also optimized the <a href="/articles/mult_div_shifts.php">Div16</a> routine, thanks to Flyguille.</p>
+Fixed cut-off values in some timings in the
+<a href="/resources/z80instr.php">Z80 instruction set overview</a>, and added
+undocumented and R800 instructions and timings. Also optimized the
+<a href="/articles/mult_div_shifts.php">Div16</a> routine, it is only a humble
+7 T-states faster than it was before, but can now be unrolled to be up to 234
+T-states faster! It is also 15 bytes smaller. Thanks go to Flyguille.</p>
+
+<p><em>2005-05-01</em><br />
+<a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts:</a>
+Optimized the Mult32 routine, it is now 96 T-states faster and three bytes
+smaller. Thanks to Colin Douglas Howell.</p>
+
+<p><em>2005-04-25</em><br />
+<a href="/articles/mult_div_shifts.php">Multiplications, divisions and shifts:</a>
+Changed <code>ld hl,0</code> to <code>ld l,0</code> in Mult12, and removed it
+altogether in the Mult16 routine. Thanks to Sjoerd Mastijn for the tip :).</p>
 
 <p><em>2005-03-18</em><br />
 Added information about memory mapper, PPI and subslot select register to <a href="/resources/msx_io_ports.php">I/O ports overview</a>.</p>
@@ -85,16 +161,29 @@ Added info about the #6F register for the <a href="/resources/msx_io_ports.php#g
 Added <a href="/resources/z80instr.php">Z80 instruction set reference</a>. Also, linked to Funet source code repositories, and linkified <abbr title="(MSX-) Disk Operating System version 2">DOS2</abbr> reference table of contents.</p>
 
 <p><em>2004-07-25</em><br />
-Fixed <a href="/articles/mult_div_shifts.php">Mult32 routine</a>.</p>
+Fixed <a href="/articles/mult_div_shifts.php">Mult32 routine</a>, thanks to
+Nyyrikki for pointing me to a bit that didn’t make sense.</p>
 
 <p><em>2004-06-23</em><br />
 Added <a href="/logs/">log functions</a> with more detailed <abbr title="User Agent">UA</abbr> stats.</p>
 
+<p><em>2004-05-31</em><br />
+<a href="/articles/keymatrix.php">Key matrices:</a> Updated Spanish /
+Argentinian keyboard layout and added a keyboard version no. 6 (again thanks to
+Flyguille).</p>
+
 <p><em>2004-05-26</em><br />
-Updated <a href="/articles/keymatrix.php">key matrices article</a> again, and updated the <a href="/resources/msx_io_ports.php">I/O ports overview</a> with <abbr title="Programmable Sound Generator">PSG</abbr> ports.</p>
+Updated <a href="/articles/keymatrix.php">key matrices article</a> with
+information about the keyboard layout bit in PSG I/O port A, and updated the
+<a href="/resources/msx_io_ports.php">I/O ports overview</a> with
+<abbr title="Programmable Sound Generator">PSG</abbr> ports.</p>
 
 <p><em>2004-05-25</em><br />
-Hosting all resources ourselves now, amongst others because unfortunately many of the documentation files on funet are broken. Also updated <a href="/articles/keymatrix.php">key matrices article</a>.</p>
+Hosting all resources ourselves now, amongst others because unfortunately many
+of the documentation files on funet are broken. Also updated
+<a href="/articles/keymatrix.php">key matrices article</a>, adding the Spanish /
+Argentinian keyboard layout (thanks to Flyguille) and added more detailed
+information for the Japanese keyboards (JIS vs. ANSI).</p>
 
 <p><em>2004-05-24</em><br />
 Added a stub article about <a href="/resources/engine/t9769b/">the T9769B</a>.</p>
@@ -115,19 +204,36 @@ Added Panasonic FS-A1FM's Modem <abbr title="Read Only Memory">ROM</abbr> info i
 Got rid of the ?p= style linking. This should improve the indexing of the <abbr title="MSX Assembly Page">MAP</abbr> by search engines such as <a href="http://www.google.com/">Google</a>.</p>
 
 <p><em>2004-02-06</em><br />
-In the <a href="/articles/mult_div_shifts.php">Multiplications and divisions article</a>, replaced the square root routine with a new (faster) one, thanks to Ricardo Bittencourt. Also added a link to the <abbr title="Machines with Software eXchangeability">MSX</abbr> Banzai <abbr title="Graphics 9000">Gfx9000</abbr> programmer's manual and Development <abbr title="Frequently Asked Questions">FAQ</abbr> in the external articles section. Finally, added the ‘Z80 Bits’ article kindly provided by Petr Petyovsky from the Sinclair scene, also in the external articles section.</p>
+In the <a href="/articles/mult_div_shifts.php">Multiplications and divisions
+article</a>, replaced the square root routine with a new (faster) one, thanks to
+Ricardo Bittencourt. Also added a link to the
+<abbr title="Machines with Software eXchangeability">MSX</abbr> Banzai
+<abbr title="Graphics 9000">Gfx9000</abbr> programmer's manual and Development
+<abbr title="Frequently Asked Questions">FAQ</abbr> in the external articles
+section. Finally, added the <a href="/sources/external/z80bits.html">Z80
+Bits</a> article kindly provided by Petr Petyovsky from the Sinclair scene, also
+in the external articles section.</p>
 
 <p><em>2004-02-01</em><br />
 Updated the <a href="/articles/mult_div_shifts.php">Multiplications and divisions article</a> with the following: fixed bugs in Div16 and renamed it to Div15 because the divider could only be 15 bits max; there is a new Div16 available offering support for all 16 bits. Also changed Mult12 unrolled version's routine name to Mult12U, and optimized the ld l,0 here aswell. Furthermore, added a square root Sqr16 routine by Arjan Bakker (based on the one published in <abbr title="MSX Computer &amp; Club Magazine">MCCM</abbr>). And finally, re-calculated all timing figures to include M1 wait states</p>
+
+<p><em>2004-01-22</em><br />
+<a href="/articles/fast_loops.php">Fast loops</a>: Optimized DoLDIR routine
+more, 5 ticks faster now, and corrected a small error (thanks GuyveR800).</p>
 
 <p><em>2004-01-19</em><br />
 Applied gamma correction to the <a href="/articles/vdp_guide.php#screen8col">screen 8 palette</a> from yesterday’s update, to make it <abbr title="Standard Red Green &amp; Blue">sRGB</abbr>, and updated the article again. Thanks to Maarten ter Huurne.</p>
 
 <p><em>2004-01-18</em><br />
-Replaced the screen 8 palette file with one with the ‘proper’ colours for Blue. Also wrote a little explanation why in the <a href="/articles/vdp_guide.php#screen8col"><abbr title="Video Display Processor">VDP</abbr> programming guide</a>. Updated the downloads section aswell with some new tools.</p>
+Replaced the screen 8 palette file with one with the ‘proper’ colours for Blue. Also wrote a little explanation why in the <a href="/articles/vdp_guide.php#screen8col"><abbr title="Video Display Processor">VDP</abbr> programming guide</a>. Updated the downloads section as well with some new tools.</p>
 
 <p><em>2003-10-04</em><br />
 Added the <a href="/articles/keymatrix.php#jap">Japanese keyboard layout</a>. Thanks to Manuel Bilderbeek.</p>
+
+<p><em>2003-09-06</em><br />
+<a href="/articles/split_guide.php">Split programming guide</a>: Changed the
+BITs in the polls to ANDs, added a macro to the blank line screensplit example.
+Still didn’t fix the statements about HR.</p>
 
 <p><em>2003-08-27</em><br />
 Updated the <a href="/articles/keymatrix.php">keyboard matrices article</a>, and added the Russian keyboard layout. For that, many thanks to Stanislav Borutsky.</p>
@@ -139,7 +245,8 @@ Added an ‘external articles’ section and put up a couple of links to amongst
 Wrote a <a href="/resources/msx_io_ports.php">resource about I/O ports</a> on <abbr title="Machines with Software eXchangeability">MSX</abbr>. Updated the resources section with a fair number of new documentation and added mirrors. Linked to a couple more sites in the links section. Also made the tables look a little prettier.</p>
 
 <p><em>2003-04-24</em><br />
-Updated the <a href="/articles/fast_loops.php">fast loops article</a>, added notice to the <a href="/articles/split_guide.php">screensplit programming guide</a>.</p>
+Updated the <a href="/articles/fast_loops.php">fast loops article</a> (wrote a faster DoLDIR routine, corrected speed calculations, uses JP PE for
+-0-check now), added notice to the <a href="/articles/split_guide.php">screensplit programming guide</a>.</p>
 
 <p><em>2003-04-23</em><br />
 Official release of the <abbr title="Machines with Software eXchangeability">MSX</abbr> Assembly Page. Also removed the inactive forum section and replaced it with a new links section.</p>

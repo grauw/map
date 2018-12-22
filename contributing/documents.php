@@ -38,24 +38,6 @@
 
 <h1><code>&lt;h1&gt;</code>Main topic<code>&lt;/h1&gt;</code></h1>
 
-<div class="updates">
-<h1>Latest updates:</h1>
-
-<p><em>1900-01-04</em><br />
-If you update an article, you can add an ‘updates’ block to your code. Just use the same code as is used here, and place it right after your first heading. By the way, the time notation format is year-month-day (ISO 8601 time notation).</p>
-
-<p><em>1900-01-03</em><br />
-Also, when you update an article and it is an update worthwhile of mentioning on the front page, place a notification in the <i>main/index.php</i> file, so that people who visit the page can see that it has been changed.</p>
-
-<p><em>1900-01-02</em><br />
-You can put outdated updates between <code>&lt;!-- comments --&gt;</code>, so that they can still be viewed in the code for reference. Updates usually become ‘outdated’ when the updates list is getting too long :). On the main page, outdated updates should be moved into the <i>main/updates-old.php</i> file.</p>
-
-<!--
-<p><em>1/1/1900</em><br />
-outdated</p>
--->
-</div>
-
 <p>You should put the main topic on the first line of your article, and you can also use it later on to indicate different chapters for example.</p>
 
 <h2><code>&lt;h2&gt;</code>Sub head<code>&lt;/h2&gt;</code></h2>

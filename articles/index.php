@@ -12,7 +12,7 @@
 
 <h1>Articles</h1>
 
-<p>This is a collection of articles about MSX programming. Most are written by us, the MAP maintainers, and can only be found here exclusively. Those are marked with a <img src="/css/mapbullet.gif" alt="MAP bullet"/> bullet. Please do not spread them without our permission but instead link to the MAP. If you have comments of any kind, perhaps you’ve discovered an error or you came up with an improvement for one of the routines / algorithms, or perhaps you want to submit an article of your own, then send us an email!</p>
+<p>This is a collection of articles about MSX programming. Most are written by us, the MAP maintainers, and can only be found here exclusively. Those are marked with <span class="map">MAP</span>. Please do not spread them without our permission but instead link to the MAP. If you have comments of any kind, perhaps you’ve discovered an error or you came up with an improvement for one of the routines / algorithms, or perhaps you want to submit an article of your own, then send us an email!</p>
 
 <ul>
   <li id="z80assembly">Z80 assembly programming

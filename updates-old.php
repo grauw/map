@@ -252,7 +252,7 @@ Updated the <a href="/articles/fast_loops.php">fast loops article</a> (wrote a f
 Official release of the <abbr title="Machines with Software eXchangeability">MSX</abbr> Assembly Page. Also removed the inactive forum section and replaced it with a new links section.</p>
 
 <p><em>2003-04-05</em><br />
-Did some work on the downloads section, introduced ‘<abbr title="MSX Assembly Page">MAP</abbr> bullets’ (<img src="/css/mapbullet.gif" alt="MAP bullet"/>) to indicate MAP-authored documents.</p>
+Did some work on the downloads section, introduced ‘<abbr title="MSX Assembly Page">MAP</abbr> bullets’ (<span class="map">MAP</span>) to indicate MAP-authored documents.</p>
 
 <p><em>2003-02-18</em><br />
 Added article about playing samples on the PSG.</p>

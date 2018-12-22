@@ -3,9 +3,9 @@
 function addHTTPHeader() {
 	global $xhtml;
 	if ($xhtml) {
-	  header('Content-type: application/xhtml+xml; charset=UTF-8');
+	  header('Content-Type: application/xhtml+xml; charset=UTF-8');
 	} else {
-	  header('Content-type: text/html; charset=UTF-8');
+	  header('Content-Type: text/html; charset=UTF-8');
 	}
 	header('Content-Style-Type: text/css');
 

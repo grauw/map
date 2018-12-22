@@ -1,7 +1,6 @@
 <?php
 
 include $_SERVER['DOCUMENT_ROOT'].'/scripts/content.php';
-//include $_SERVER['DOCUMENT_ROOT'].'/scripts/logger.php';
 
 // Tell PHP to use escaped ampersants if it happens to insert one.
 ini_set('arg_separator.input','&amp;');
@@ -12,11 +11,5 @@ $xhtml = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'appl
 
 // gzip pages...
 ob_start("ob_gzhandler");
-
-
-
-
-
-
 
 ?>

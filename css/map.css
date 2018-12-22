@@ -225,12 +225,6 @@ q:lang(ja)::after {
 	content: "\2014\A0"
 }
 
-.toc {
-	width: 100%;			/* erm... ble */
-	padding: 0;
-	border: 0;
-}
-
 .page {
 	color: #888;			/* To indicate a page boundary */
 	text-align: center;		/* like <p class="page">23</p> */

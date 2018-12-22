@@ -19,7 +19,7 @@
 <p style="text-align:center">for MSX 2 computers</p>
 
 
-<pre class="toc">
+<pre>
      CONTENTS                                         Page
 
 

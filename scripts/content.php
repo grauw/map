@@ -1,9 +1,5 @@
 <?php
 
-//
-// Add http header...
-// If accepting XHTML, give nice header + xml tag, etc.
-//
 function addHTTPHeader() {
 	global $xhtml;
 	if ($xhtml) {
@@ -20,9 +16,6 @@ function addHTTPHeader() {
 	}
 }
 
-//
-// Add style information
-//
 function addStyles() {
 	global $xhtml, $style;
 	if (!$xhtml) {
@@ -37,11 +30,6 @@ function addStylesXHTML() {
 	}
 }
 
-
-
-//
-// Add site header
-//
 function addHeader() {
 	addMenu();
 ?>
@@ -49,12 +37,6 @@ function addHeader() {
 <?php
 }
 
-
-
-
-//
-// Adds menu code
-//
 function addMenu() {
 ?>
 <h1 id="head">MSX Assembly Page</h1>
@@ -72,12 +54,6 @@ function addMenu() {
 <?php
 }
 
-
-
-
-//
-// Add site footer
-//
 function addFooter() {
 ?>
 </div>
@@ -85,14 +61,5 @@ function addFooter() {
 <div id="foot">© <?php echo date("Y"); ?> MSX Assembly Page</div>
 <?php
 }
-
-
-
-
-
-
-
-
-
 
 ?>

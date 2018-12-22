@@ -5,7 +5,7 @@
   <title>Links - MSX Assembly Page</title>
   <?php addStyles(); ?>
 </head>
-<body id="msxasm">
+<body>
 <?php addHeader(); ?>
 
 

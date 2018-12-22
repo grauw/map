@@ -21,7 +21,7 @@ function filter(query) {
 }
   </script>
 </head>
-<body id="msxasm" onload="registerSort();">
+<body onload="registerSort();">
 <?php addHeader(); ?>
 
 

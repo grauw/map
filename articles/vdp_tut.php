@@ -83,8 +83,7 @@
 
 <p>Anyways, let’s talk about how to actually write to them registers ;). The VDP registers can be addressed in two ways, direct and indirect. Usually the direct way is used, but the indirect method is also practical in some situations. For direct register access, what you have to do is write the value to port #99 first, and then write the register number with bit 8 set (in other words, +128). Here is the method definition from the v9938 application manual:</p>
 
-<pre>
-                     MSB  7   6   5   4   3   2   1   0  LSB
+<pre>                     MSB  7   6   5   4   3   2   1   0  LSB
                         +---+---+---+---+---+---+---+---+
    Port #1 First byte   |D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 | DATA
                         +===+===+===+===+===+===+===+===+
@@ -94,8 +93,7 @@
 
 <p>So the actual code with which you change a register’s value will look something like this:</p>
 
-<pre>
-    ld a,value
+<pre>    ld a,value
     di
     out (#99),a
     ld a,regnr + 128
@@ -116,8 +114,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>There is also the other method of addressing the registers, which is, as said before, the indirect method. This means that you can specify the register to write to once, and then repeatedly write values, which is about twice as fast. However the register needs to be the same for all values, or it has to be a successive range of registers (indirect register writing supports auto incrementing). Indirect register writing is done by writing the register number to r#17, also specifying whether to auto-increment, and then writing the desired values to port #9B:</p>
 
-<pre>
-                  MSB  7   6   5   4   3   2   1   0  LSB
+<pre>                  MSB  7   6   5   4   3   2   1   0  LSB
                      +---+---+---+---+---+---+---+---+
   Register #17       |AII| 0 |R5 |R4 |R3 |R2 |R1 |R0 | REGISTER #
                      +-+-+---+---+---+---+---+---+---+
@@ -131,8 +128,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>Code example:</p>
 
-<pre>
-    ld a,regnr      ; add +128 for no auto increment
+<pre>    ld a,regnr      ; add +128 for no auto increment
     di
     out (#99),a
     ld a,17 + 128
@@ -153,8 +149,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>In order to read a status register one needs to write the number of the status register in r#15, and after that the status register’s value can be read from port #99:</p>
 
-<pre>
-                  MSB  7   6   5   4   3   2   1   0  LSB
+<pre>                  MSB  7   6   5   4   3   2   1   0  LSB
                      +---+---+---+---+---+---+---+---+
   Register #15       | 0 | 0 | 0 | 0 |S3 |S2 |S1 |S0 | Status register
                      +===+===+===+===+===+===+===+===+
@@ -166,8 +161,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 <p>Some example code to read out a status register:</p>
 
-<pre>
-    ld a,statusregnr
+<pre>    ld a,statusregnr
     di
     out (#99),a
     ld a,15 + 128
@@ -203,8 +197,7 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 <p>The setting of the upper three bits in register 14 was added in the v9938 VDP (as opposed to the MSX1 TMS9918A) because of the larger amount of VRAM, 128kb instead of 16kb, and hence the larger addressing space. Anyways, those bits need to be set first, and then the bits 0-13 have to be written using two consecutive <code>OUT</code>s to port #99. To clarify a bit more:</p>
 
 
-<pre>
-                   MSB  7   6   5   4   3   2   1   0  LSB
+<pre>                   MSB  7   6   5   4   3   2   1   0  LSB
                       +---+---+---+---+---+---+---+---+
   Register #14        | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| VRAM access base
                       +---+---+---+---+---+---+---+---+ address register
@@ -291,8 +284,7 @@ Finally, note that all V9938 timings also apply to the V9958.</p>
 
 <p>Here are example routines to set the VDP for reading/writing the VRAM:</p>
 
-<pre>
-;
+<pre>;
 ; Set VDP address counter to write from address AHL (17-bit)
 ; Enables the interrupts
 ;
@@ -359,8 +351,7 @@ SetVdp_Read:
 
 <p>Here is the <code>DoCopy</code> routine, read the small source code article <a href="/sources/docopy.php">about <code>DoCopy</code></a> on how to speed it up a little more.</p>
 
-<pre>
-;
+<pre>;
 ; Fast DoCopy, by Grauw
 ; In:  HL = pointer to 15-byte VDP command data
 ; Out: HL = updated
@@ -412,8 +403,7 @@ VDPready:
 
 <p>Here is an example SetPalette routine. The <code>OTIR</code> could be unrolled to <code>OUTI</code>s if you really need the additional speed (for example on a screensplit).</p>
 
-<pre>
-;
+<pre>;
 ; Set the palette to the one HL points to...
 ; Modifies: AF, BC, HL (=updated)
 ; Enables the interrupts.
@@ -436,8 +426,7 @@ SetPalette:
 
 <p>This is a small example of a short program which combines most techniques. Do with it whatever you want, look at it, try it out, ignore it... ^_^. It isn’t exactly the summum of speed and optimized code, but ahwell... It will do.</p>
 
-<pre>
-;
+<pre>;
 ; Is supposed to run in screen 5, so you should make a small BASIC loader,
 ; or call the CHMOD BIOS routine.
 ;

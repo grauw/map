@@ -312,8 +312,7 @@ Issues with compatibility and ever-spinning disk drives are lying in wait.]</p>
 <div class="box">
 <p><strong>Example program application of Interrupt Mode 2</strong></p>
 
-<pre>
-;
+<pre>;
 ; im2.gen - RWi
 ;
 ; Example of how to use Interrupt Mode 2

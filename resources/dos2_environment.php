@@ -19,8 +19,7 @@
 <p style="text-align:center">for MSX 2 computers</p>
 
 
-<pre>
-     CONTENTS                                         Page
+<pre>     CONTENTS                                         Page
 
 
 1.   <a href="#c1">Introduction</a> ...............................  3
@@ -149,8 +148,7 @@
 
 <p>On entry, various parameter areas are set up for the transient program in the first 256 bytes of RAM.  The layout of this area is as below and is compatible with MSX-DOS 1 and with CP/M apart from the area used for MSX slot switching calls.</p>
 
-<pre>
-      +-------+-----+------+------+------+------+------+------+
+<pre>      +-------+-----+------+------+------+------+------+------+
 0000h |    Reboot entry    |  Reserved   |   MSX-DOS entry    |
       +------+------+------+------+------+------+------+------+
 0008h |  RST 08h not used         | RDSLT routine entry point |
@@ -244,8 +242,7 @@
 
 <p>The entries in the BIOS jump vector are as below:</p>
 
-<pre>
-   xx00h - JMP  WBOOT     ;Warm boot
+<pre>   xx00h - JMP  WBOOT     ;Warm boot
    xx03h - JMP  WBOOT     ;Warm boot
    xx06h - JMP  CONST     ;Console status
    xx09h - JMP  CONIN     ;Console input
@@ -418,8 +415,7 @@
 
 <p>A FIB is a 64 byte area of the user's memory which contains information about the directory entry on disk for a particular file or sub-directory. The information in a FIB is filled in by the new MSX-DOS "find" functions ("find first entry" (function 40H), "find new entry" (function 42H) and "find next entry" (function 41H)). The format of a File Info Block is as follows:</p>
 
-<pre>
-     0 - Always 0FFh
+<pre>     0 - Always 0FFh
  1..13 - Filename as an ASCIIZ string
     14 - File attributes byte
 15..16 - Time of last modification
@@ -467,8 +463,7 @@
 
 <p>The time of last modification is encoded into two bytes as follows:</p>
 
-<pre>
-     Bits 15..11 - HOURS (0..23)
+<pre>     Bits 15..11 - HOURS (0..23)
      Bits 10...5 - MINUTES (0..59)
      Bits  4...0 - SECONDS/2 (0..29)
 </pre>
@@ -476,8 +471,7 @@
 
 <p>The date of last modification is encoded into two bytes as follows.  If all bits are zero then there is no valid date set.</p>
 
-<pre>
-     Bits 15...9 - YEAR (0..99 corresponding to 1980..2079)
+<pre>     Bits 15...9 - YEAR (0..99 corresponding to 1980..2079)
      Bits  8...5 - MONTH (1..12 corresponding to Jan..Dec)
      Bits  4...0 - DAY (1..31)
 </pre>
@@ -738,8 +732,7 @@
 
 <p>The mapper support routines use some variables in the DOS system area.  These tables may be referred and used by the user programs for the various purposes, but must not be altered.  The contents of the tables are as follows:</p>
 
-<pre>
-address			function
+<pre>address			function
 +0		Slot address of the mapper slot.
 +1		Total number of 16k RAM segments. 1...255 (8...255 for the primary)
 +2		Number of free 16k RAM segments.
@@ -751,8 +744,7 @@ address			function
 
 <p>A program uses the mapper support code by calling various subroutines.  These are accessed through a jump table which is located in the MSX-DOS system area.  The contents of the jump table are as follows:</p>
 
-<pre>
-address	entry name	function
+<pre>address	entry name	function
 +0H	ALL_SEG     Allocate a 16k segment.
 +3H	FRE_SEG     Free a 16k segment.
 +6H	RD_SEG      Read byte from address A:HL to A.
@@ -780,8 +772,8 @@ address	entry name	function
 <p>The functions available in the mapper support extended BIOS are:</p>
 
 <p>* Get mapper variable table</p>
-<pre>
-	Parameter:	A = 0
+
+<pre>	Parameter:	A = 0
 			D = 4 (device number of mapper support)
 			E = 1
 	Result:		A = slot address of primary mapper
@@ -790,8 +782,8 @@ address	entry name	function
 </pre>
 
 <p>* Get mapper support routine address</p>
-<pre>
-	Parameter:	A = 0
+
+<pre>	Parameter:	A = 0
 			D = 4
 			E = 2
 	Result:		A = total number of memory mapper segments
@@ -843,8 +835,7 @@ address	entry name	function
 <p>An error from "allocate segment" usually indicates that there are no free segments, although it can also mean that an invalid parameter was passed in register A and B.  An error from "free segment" indicates that the specified segment number does not exist or is already free.</p>
 
 
-<pre>
-ALL_SEG - Parameters:   A=0 => allocate user segment
+<pre>ALL_SEG - Parameters:   A=0 => allocate user segment
                         A=1 => allocate system segment
                         B=0 => allocate primary mapper
                         B!=0 => allocate 
@@ -876,8 +867,7 @@ FRE_SEG - Parameters:   A=segment number to free
 <p>The top two bits of the address are ignored and the data will be always read or written via page-2, since the segment number specifies a 16k segment which could appear in any of the four pages.  The data will be read or written from the correct segment regardless of the current paging or slot selection in page-0 or page-1, but note that the mapper RAM slot must be selected in page-2 when either of these routines are called.  This is so that the routines do not have to do any slot switching and so can be fast.  Also the stack must not be in page-2.  These routines will return disabling interrupts.</p>
 
 
-<pre>
-RD_SEG -  Parameters:   A = segment number to read from
+<pre>RD_SEG -  Parameters:   A = segment number to read from
                        HL = address within this segment
           Results:      A = value of byte at that address
                         All other registers preserved 
@@ -909,8 +899,7 @@ WR_SEG -  Parameters:   A = segment number to write to
 <p>Parameters cannot be passed in registers IX, IY, AF', BC', DE' or HL' since these are used internally in the routine.  These registers will be corrupted by the inter-segment call and may also be corrupted by the called routine.  All other registers (AF, BC, DE and HL) will be passed intact to the called routine and returned from it to the caller.</p>
 
 
-<pre>
-CAL_SEG - Parameters: IY = segment number to be called
+<pre>CAL_SEG - Parameters: IY = segment number to be called
                        IX = address to call
                        AF, BC, DE, HL passed to called routine
                        Other registers corrupted
@@ -944,8 +933,7 @@ CALLS -   Parameters:  AF, BC, DE, HL passed to called routine
 <p>Another pair of routines ("GET_PH" and "PUT_PH") is provided which are identical in function except that the page is specified by the top two bits of register H.  This is useful when register HL contains an address, and these routines do not corrupt register HL.  "PUT_PH" will never alter the page-3 register.</p>
 
 
-<pre>
-PUT_Pn -  Parameters:   n = 0,1,2 or 3 to select page
+<pre>PUT_Pn -  Parameters:   n = 0,1,2 or 3 to select page
                         A = segment number
           Results:      None
                         All registers preserved 

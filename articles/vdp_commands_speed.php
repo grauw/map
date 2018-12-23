@@ -99,8 +99,7 @@
 
 <p>Speed is indicated in bytes per interrupt.</p>
 
-<pre>
-     LMMM  accuracy: 16              HMMM  accuracy: 32              YMMM  accuracy: 32
+<pre>     LMMM  accuracy: 16              HMMM  accuracy: 32              YMMM  accuracy: 32
 
  Spr / Lin  - Speed 50/60Hz      Spr / Lin  - Speed 50/60Hz      Spr / Lin  - Speed 50/60Hz
 
@@ -124,8 +123,7 @@
 
 <h2 id="fillresults">The tables for the fills</h2>
 
-<pre>
-     LMMV  accuracy: 16              HMMV  accuracy: 64
+<pre>     LMMV  accuracy: 16              HMMV  accuracy: 64
 
  Spr / Lin  - Speed 50/60Hz      Spr / Lin  - Speed 50/60Hz
 

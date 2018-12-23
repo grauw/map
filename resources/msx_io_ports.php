@@ -514,8 +514,7 @@ computers:</p>
 </table>
 
 
-<pre>
-    in a,(40H)
+<pre>    in a,(40H)
     cpl
     push af
     ld a,8

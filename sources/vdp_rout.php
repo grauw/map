@@ -14,8 +14,7 @@
 
 <p>These routines are just provided as-is, since I don’t really feel like explaining them all. Most of them are either a. already explained somewhere else, b. obvious, or c. may give you a little challenge to try and understand them. They are designed for use from a DOS environment, but most of them can also be used from Basic...</p>
 
-<pre>
-;
+<pre>;
 ;==============================================================================
 ;= VDP-Routines ===============================================================
 ;==============================================================================

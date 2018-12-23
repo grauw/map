@@ -40,16 +40,14 @@
 
 <p>When you shift a register 1 bit to the left, you multiply the value of the register with 2. This shifting can be done using the SLA r instruction. By doing several shifts in sequence you can very easily multiply by any power of 2. For example:</p>
 
-<pre>
-    ld b,3          ; Multiply 3 with 4
+<pre>    ld b,3          ; Multiply 3 with 4
     sla b           ; x4
     sla b           ; result: b = 12
 </pre>
 
 <p>If you use register A you can multiply faster by using the ADD A,A instruction, which is 5 T-states per instruction instead of 8. So ADD A,A is exactly the same as SLA A, or a multiplication by two. On a sidenote, instead of using ADD A,A, you can also use RLCA, which effectively behaves the same.</p>
 
-<pre>
-    ld a,15         ; Multiply 15 with 8
+<pre>    ld a,15         ; Multiply 15 with 8
     add a,a         ; x8
     add a,a
     add a,a         ; result: a = 120
@@ -59,8 +57,7 @@
 
 <p>If you want to multiply by another value than a power of two, you can almost always achieve the desired result by storing inbetween values during the shifting and adding or subtracting them up afterwards. A few examples:</p>
 
-<pre>
-    ld a,5          ; Multiply 5 with 20 (= A x 16 + A x 4)
+<pre>    ld a,5          ; Multiply 5 with 20 (= A x 16 + A x 4)
     add a,a         ; x16
     add a,a
     ld b,a          ; Store value of A x 4 in B
@@ -73,8 +70,7 @@
 
 <p>Sometimes, you can also use substractions to achieve your goals faster. For example, the multiplication of A with 15. This can be done by using the method described above, however, in that case you’ll need 4 temporary registers, and four additional adds afterwards. This could better be done as follows, which requires 1 more multiplication but only uses 1 temporary register and 1 subtraction afterwards:</p>
 
-<pre>
-    ld a,3          ; Multiply 3 with 15 (= A x 16 - A x 1)
+<pre>    ld a,3          ; Multiply 3 with 15 (= A x 16 - A x 1)
     ld b,a          ; Store value of A x 1 in B
     add a,a         ; x16
     add a,a
@@ -88,16 +84,14 @@
 
 <p>Now, divisions are very much like multiplications. If a multiplication routine is complex, a division routine is even more so. However, using shifts it’s all too easy to divide in Assembly. It is done by simply shifting the other way, to the right. For this, you should use the SRL r instruction. An example:</p>
 
-<pre>
-    ld b,3          ; Divide 18 by 4
+<pre>    ld b,3          ; Divide 18 by 4
     srl b           ; x4
     srl b           ; result: b = 4 (rest 2 is lost)
 </pre>
 
 <p>There is no real fast alternative to a shift right when using register A. As an alternative, you can use RRCA for that. However, when using RRCA you must make sure there will be no rest, otherwise the result won’t be correct. This can be achieved by ANDing the original value with a value clearing the lower bits (which would otherwise be rotated out), or by making sure you are using values which are always a multiple of the divider.</p>
 
-<pre>
-    ld a,153        ; Divide 153 by 8
+<pre>    ld a,153        ; Divide 153 by 8
     and a,%11111000 ; Clear bits 0-2 (equals 256 - 8)
     rrca            ; /8
     rrca
@@ -113,22 +107,19 @@
 
 <p>There are also ways to shift 16-bit registers. This is done using a 8-bit shift in combination with an 8-bit rotate and the carry bit. To shift a register DE one bit to the left you should use:</p>
 
-<pre>
-    sla e
+<pre>    sla e
     rl d
 </pre>
 
 <p>To shift it one bit to the right (now with BC as example), use:</p>
 
-<pre>
-    srl b
+<pre>    srl b
     rr c
 </pre>
 
 <p>Unfortunately, generally those 16-bit shifts are rather slow compared to 8-bit shifts (which will most often take place in the fast A register, which makes them almost 4 times as fast). However, just as with the 8-bit shifts, there is also the possibility to do faster 16-bit shifts to the left using the ADD instruction.</p>
 
-<pre>
-    add hl,hl       ; shift HL 1 bit left... hl = hl x 2
+<pre>    add hl,hl       ; shift HL 1 bit left... hl = hl x 2
 </pre>
 
 <p>So, the best way to multiply 16-bit values is by using register HL in combination with ADD HL,HL instructions.</p>
@@ -153,8 +144,7 @@
 
 <p>These are left-rotating multiplication routines. Their speed is basically quite constant, although depending on the number of 1’s in the primary multiplier there may be a slight difference in speed (a 1 usually takes 7 states longer to process than a 0).</p>
 
-<pre>
-;
+<pre>;
 ; Multiply 8-bit values
 ; In:  Multiply H with E
 ; Out: HL = result
@@ -172,8 +162,7 @@ Mult8_NoAdd:
     ret
 </pre>
 
-<pre>
-;
+<pre>;
 ; Multiply 8-bit value with a 16-bit value
 ; In: Multiply A with DE
 ; Out: HL = result
@@ -191,8 +180,7 @@ Mult12_NoAdd:
     ret
 </pre>
 
-<pre>
-;
+<pre>;
 ; Multiply 16-bit values (with 16-bit result)
 ; In: Multiply BC with DE
 ; Out: HL = result
@@ -211,8 +199,7 @@ Mult16_NoAdd:
     ret
 </pre>
 
-<pre>
-;
+<pre>;
 ; Multiply 16-bit values (with 32-bit result)
 ; In: Multiply BC with DE
 ; Out: BCHL = result
@@ -278,8 +265,7 @@ Mult32_NoAdd:
 
 <p>Well, here is the actual routine. Note that it can easily be converted to a Mult8R-routine by inserting an ld d,0 instruction right after the ld hl,0, and also that unrolling this routine will not give you additional speed. Oh, and by the way, although I’ve been talking about right-rotating all the time, this implementation is actually right-shifting ^_^.</p>
 
-<pre>
-;
+<pre>;
 ; Multiply 8-bit value with a 16-bit value (right rotating)
 ; In: Multiply A with DE
 ;      Put lowest value in A for most efficient calculation
@@ -305,8 +291,7 @@ Mult12R_NoAdd:
 
 <p>By the way, I looked at the possibility to use the same technique as with the right-rotating multiplication on this routine, it can fairly easy be done by putting jumps inbetween which jump into a list of add hl,hl’s. However, loss in speed the additional jumps cause don’t outweigh the gain, and it is hardly practical anyway since it would apply to the nr. of bits used from the left (the number 128 would use 1 bit, and 64 two).</p>
 
-<pre>
-;
+<pre>;
 ; Multiply 8-bit value with a 16-bit value (unrolled)
 ; In: Multiply A with DE
 ; Out: HL = result
@@ -376,8 +361,7 @@ Output: #528 (#5.28 or 5,15625 decimal)<br />
 
 <p>Anyways. These are the general division routines. Slower than the multiplication routines but still as fast as possible, and probably very useful.</p>
 
-<pre>
-;
+<pre>;
 ; Divide 8-bit values
 ; In: Divide E by divider C
 ; Out: A = result, B = rest
@@ -400,8 +384,7 @@ Div8_NoAdd:
     ret
 </pre>
 
-<pre>
-;
+<pre>;
 ; Divide 16-bit values (with 16-bit result)
 ; In: Divide BC by divider DE
 ; Out: BC = result, HL = rest
@@ -449,8 +432,7 @@ Div16_NoAdd2:
 <p>Ricardo Bittencourt provided us with a fast routine for division by 9. It is built for
 .dsk or Disk ROM routines. It’s very fast, but only works in the range 0-1440.</p>
 
-<pre>
-;
+<pre>;
 ; division by nine
 ; enter     HL = number from 0 to 1440
 ; exit      A = HL/9
@@ -484,8 +466,7 @@ DIV9:   INC     HL              ;  7    1
 
 <p>This is a faster square root routine than the one that was previously here, test results say that it’s 26% faster. It is written by Ricardo Bittencourt, so many thanks to him :).</p>
 
-<pre>
-;
+<pre>;
 ; Square root of 16-bit value
 ; In:  HL = value
 ; Out:  D = result (rounded down)

@@ -156,8 +156,7 @@
 </tr>
 </table>
 
-<pre>
-    in a,(#AA)
+<pre>    in a,(#AA)
     and #F0         ; only change bits 0-3
     or b            ; take row number from B
     out (#AA),a
@@ -169,8 +168,7 @@
 
 <p>In the following example I will show you how to read out the space key its status. The space key is located in bit 0 of row 8:</p>
 
-<pre>
-keys: EQU #FBE5
+<pre>keys: EQU #FBE5
 
 ;
 ; Check whether space is pressed
@@ -189,8 +187,7 @@ Main_ReadKeys:
 
 <p>Finally, a small Basic program which you can use for keyboard matrix testing purposes:</p>
 
-<pre>
-10 DEFINT A-Z:K=&amp;HFBE5:CLS
+<pre>10 DEFINT A-Z:K=&amp;HFBE5:CLS
 20 FOR I=0 TO 10:PRINT RIGHT$("0000000"+BIN$(PEEK(K+I)),8):NEXT
 30 PRINT CHR$(11):GOTO 20
 </pre>

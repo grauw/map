@@ -140,8 +140,7 @@ while another one would need less space but would be slower.</p>
 The <code>&lt;=</code> symbol denotes signal assignement.</p>
 
 
-<pre>
-Library IEEE;
+<pre>Library IEEE;
 use IEEE.std_logic_1164.all;
         
 
@@ -245,8 +244,7 @@ The declarations made there provide our gate with the required signals
 and stimuli values.</p>
 
 
-<pre>
-Library IEEE;
+<pre>Library IEEE;
 use IEEE.std_logic_1164.all;
 
         
@@ -319,8 +317,7 @@ creating the netlist.
 This is accomplished by configuration statements.</p>
 
 
-<pre>
-CONFIGURATION nand_test_dataflow OF SimBox IS
+<pre>CONFIGURATION nand_test_dataflow OF SimBox IS
   FOR test_nand
     FOR my_nand_gate : nand_gate
       use entity work.nand_gate(dataflow);

@@ -73,8 +73,7 @@ A: I tested the statements made in this article with a number of carefully progr
 
 <p>Example code to poll for the end of HBLANK, assumes disabled interrupts and s#2 to be set:</p>
 
-<pre>
-Poll_1:
+<pre>Poll_1:
     in a,(#99)      ; wait until start of HBLANK
     and %00100000
     jp nz,Poll_1
@@ -96,8 +95,7 @@ A: The VDP lineinterrupt is linked to the FH bit, and the interrupt occurs when 
 
 <p>Example code for polling FH, assumes disabled interrupts and s#1 to be set:</p>
 
-<pre>
-    ld a,(VDP+23)   ; set split line
+<pre>    ld a,(VDP+23)   ; set split line
     add a,SPLITLINE
     out (#99),a
     ld a,19+128
@@ -135,8 +133,7 @@ A: This is in my opinion the best way to have a screensplit. It looks very tidy,
 
 <p>Some example code, which assumes the interrupts are disabled, and doesn’t switch back the status register afterwards:</p>
 
-<pre>
-;
+<pre>;
 ; A macro definition which waits until the end of the next/current HBLANK...
 ;
 Wait_HBLANK:

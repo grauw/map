@@ -49,8 +49,7 @@
 
 <p>Many who designed or converted graphics on the PC have probably not considered these two ‘complications’, and instead used a gliding blue scale and no gamma correction, which would yield somewhat inaccurate results. I have however put a <a href="downloads/articles/sc8_palette_srgb.zip">proper palette</a> online for your convenience. It used to be a ‘wrong’ one too, so if you downloaded it before, do it again.</p>
 
-<pre>
-10 SCREEN 8:SETPAGE 1,1:LINE (0,0)-(255,211),&amp;B11111111,BF
+<pre>10 SCREEN 8:SETPAGE 1,1:LINE (0,0)-(255,211),&amp;B11111111,BF
 20 SCREEN 1:KEY OFF:COLOR 15,4,0:COLOR=(4,5,5,5)  'change to (4,4,4,4), etc
 30 VDP(0)=0:VDP(2)=6
 40 IF INKEY$="" GOTO 40

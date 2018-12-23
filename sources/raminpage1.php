@@ -18,8 +18,7 @@
 
 <p>You can use this method to switch RAM:</p>
 
-<pre>
-ENASLT: EQU #0024
+<pre>ENASLT: EQU #0024
 RAMAD1: EQU #F342
 EXPTBL: EQU #FCC1
 
@@ -30,8 +29,7 @@ Enable_RAM:  ld     a,(RAMAD1)
 
 <p>There is a slightly better method to switch RAM, by selecting the same slot in page 1 as you have in page 3, which will always be the system RAM. This will work on any MSX, even without DiskROM, provided there is at least 48kB of RAM available ofcourse ^_^. It can be done as follows:</p>
 
-<pre>
-Enable_RAM2: ld     a,(EXPTBL+3)
+<pre>Enable_RAM2: ld     a,(EXPTBL+3)
              ld     b,a                 ;check if slot is expanded
              and    a
              jp     z,Ena_RAM2_jp
@@ -55,11 +53,9 @@ Ena_RAM2_jp: in     a,(#A8)             ;read slot value
 
 <p>And, before returning to Basic, don’t forget to switch back the Basic ROM:</p>
 
-<pre>
-Enable_ROM:  ld     a,(EXPTBL)
+<pre>Enable_ROM:  ld     a,(EXPTBL)
              ld     h,#40
              call   ENASLT
-
 </pre>
 
 <p>~Grauw</p>

@@ -13,6 +13,10 @@
 	ul, ol {
 		padding-left: 1.2em;
 	}
+
+	pre {
+		font-size: small;
+	}
 }
 
 body {

@@ -16,58 +16,70 @@
 
 <pre>
 ;
-;Fast DoCopy, by Grauw
-;In:  HL = pointer to 15-byte VDP command data
-;Out: HL = updated
+; Fast DoCopy, by Grauw
+; In:  HL = pointer to 15-byte VDP command data
+; Out: HL = updated
 ;
-DoCopy:	ld	a,32
-	di
-	out	(#99),a
-	ld	a,17+128
-	out	(#99),a
-	ld	c,#9B
+DoCopy:
+    ld a,32
+    di
+    out (#99),a
+    ld a,17+128
+    out (#99),a
+    ld c,#9B
 VDPready:
-	ld	a,2
-	di
-	out	(#99),a		;select s#2
-	ld	a,15+128
-	out	(#99),a
-	in	a,(#99)
-	rra
-	ld 	a,0		;back to s#0, enable ints
-	out	(#99),a
-	ld	a,15+128
-	ei
-	out	(#99),a		;loop if vdp not ready (CE)
-	jp	c,VDPready
-	DW	#A3ED,#A3ED,#A3ED,#A3ED	  ;15x OUTI
-	DW	#A3ED,#A3ED,#A3ED,#A3ED	  ; (faster than OTIR)
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED
-	ret
+    ld a,2
+    di
+    out (#99),a     ; select s#2
+    ld a,15+128
+    out (#99),a
+    in a,(#99)
+    rra
+    ld  a,0         ; back to s#0, enable ints
+    out (#99),a
+    ld a,15+128
+    ei
+    out (#99),a     ; loop if vdp not ready (CE)
+    jp c,VDPready
+    outi            ; 15x OUTI
+    outi            ; (faster than OTIR)
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    ret
 </pre>
 
 <p>I sometimes find this useful too, a separate routine to wait for the VDP to finish its current command.</p>
 
 <pre>
 ;
-;This lil' routine waits until the VDP is done copying.
+; This lil' routine waits until the VDP is done copying.
 ;
 VDP_Ready:
-	ld	a,2
-	di
-	out	(#99),a		;select s#2
-	ld	a,15+128
-	out	(#99),a
-	in	a,(#99)
-	rra
-	ld	a,0		;back to s#0, enable ints
-	out	(#99),a
-	ld	a,15+128
-	ei
-	out	(#99),a		;loop if vdp not ready (CE)
-	jp	c,VDPready
-	ret
+    ld a,2
+    di
+    out (#99),a     ; select s#2
+    ld a,15+128
+    out (#99),a
+    in a,(#99)
+    rra
+    ld a,0          ; back to s#0, enable ints
+    out (#99),a
+    ld a,15+128
+    ei
+    out (#99),a     ; loop if vdp not ready (CE)
+    jp c,VDPready
+    ret
 </pre>
 
 
@@ -75,26 +87,38 @@ VDP_Ready:
 
 <pre>
 ;
-;Faster again!!! DoCopy, by Grauw
-;In:  HL = pointer to 15-byte VDP command data
-;Out: HL = updated
+; Faster again!!! DoCopy, by Grauw
+; In:  HL = pointer to 15-byte VDP command data
+; Out: HL = updated
 ;
-DoCopy:	ld	a,32
-	di
-	out	(#99),a
-	ld	a,17+128
-	ei
-	out	(#99),a
-	ld	c,#9B
+DoCopy:
+    ld a,32
+    di
+    out (#99),a
+    ld a,17+128
+    ei
+    out (#99),a
+    ld c,#9B
 VDPready:
-	in	a,(#99)		;loop if vdp not ready (CE)
-	rra
-	jp      c,VDPready
-	DW	#A3ED,#A3ED,#A3ED,#A3ED	  ;15x OUTI
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED
-	ret
+    in a,(#99)      ; loop if vdp not ready (CE)
+    rra
+    jp c,VDPready
+    outi            ; 15x OUTI
+    outi            ; (faster than OTIR)
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    ret
 
 </pre>
 

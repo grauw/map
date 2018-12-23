@@ -26,7 +26,7 @@ Start:        ld      de,FILENAME
               call    LoadScreen
               ret
 
-FILENAME:     DB	"IMAGE.SC5",0
+FILENAME:     DB      "IMAGE.SC5",0
 </pre>
 
 
@@ -151,9 +151,10 @@ LoadScr_End:
 ;Handle an error...
 ;Returns to DOS 2 which will show the error.
 ;
-Error:	ld	b,a
-	ld	c,_TERM
-	jp	Bdos
+Error:
+    ld b,a
+    ld c,_TERM
+    jp Bdos
 </pre>
 
 
@@ -167,21 +168,21 @@ Error:	ld	b,a
 ;
 ;DE = filename
 ;
-Load_Palet:   ld      c,_OPEN	;Open File Handle (no flags)
+Load_Palet:   ld      c,_OPEN   ;Open File Handle (no flags)
               xor     a
               call    Bdos
               jp      nz,Error
               push    bc
               ld      de,TEMP1
               ld      hl,32
-              ld      c,_READ	;Read From File Handle
+              ld      c,_READ   ;Read From File Handle
               call    Bdos
               jp      nz,Error
               pop     bc
-              ld      c,_CLOSE	;Close File Handle
+              ld      c,_CLOSE  ;Close File Handle
               call    Bdos
               jp      nz,Error
-              ld      hl,TEMP1	;Set palette
+              ld      hl,TEMP1  ;Set palette
               jp      SetPalet
 </pre>
 

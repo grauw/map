@@ -95,12 +95,12 @@
 <p>So the actual code with which you change a register’s value will look something like this:</p>
 
 <pre>
-	ld	a,value
-	di
-	out	(#99),a
-	ld	A,regnr+128
-	ei
-	out	(#99),a
+    ld a,value
+    di
+    out (#99),a
+    ld a,regnr + 128
+    ei
+    out (#99),a
 </pre>
 
 <p>Note the <code>DI</code> and the <code>EI</code> instructions inbetween. It is <em>VERY</em> important that you disable the interrupts during the 2 <code>OUT</code>s. This is because the VDP registers are also changed on the interrupt, and if an interrupt were to occur right inbetween these two <code>OUT</code> instructions the results would be unpredictable. The <code>EI</code> is put before the <code>OUT</code> here since the <code>EI</code> has a delay of 1 instruction on the Z80 before it re-enables the interrupts, and if possible one should keep the interrupts disabled as shortly as possible (some interrupts like line interrupts for screensplits or RS232 interrupts need responses as fast as possible).</p>
@@ -117,32 +117,32 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 <p>There is also the other method of addressing the registers, which is, as said before, the indirect method. This means that you can specify the register to write to once, and then repeatedly write values, which is about twice as fast. However the register needs to be the same for all values, or it has to be a successive range of registers (indirect register writing supports auto incrementing). Indirect register writing is done by writing the register number to r#17, also specifying whether to auto-increment, and then writing the desired values to port #9B:</p>
 
 <pre>
-                     MSB  7   6   5   4   3   2   1   0  LSB
-                        +---+---+---+---+---+---+---+---+
-   Register #17         |AII| 0 |R5 |R4 |R3 |R2 |R1 |R0 | REGISTER #
-                        +-+-+---+---+---+---+---+---+---+
-                          |-- 1:  Auto increment inhibit
-                          +-- 0:  Auto increment on
+                  MSB  7   6   5   4   3   2   1   0  LSB
+                     +---+---+---+---+---+---+---+---+
+  Register #17       |AII| 0 |R5 |R4 |R3 |R2 |R1 |R0 | REGISTER #
+                     +-+-+---+---+---+---+---+---+---+
+                       |-- 1:  Auto increment inhibit
+                       +-- 0:  Auto increment on
 
-                        +---+---+---+---+---+---+---+---+
-   Port #3              |D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 | DATA
-                        +---+---+---+---+---+---+---+---+
+                     +---+---+---+---+---+---+---+---+
+  Port #3            |D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 | DATA
+                     +---+---+---+---+---+---+---+---+
 </pre>
 
 <p>Code example:</p>
 
 <pre>
-	ld	a,regnr		;add +128 for no auto increment
-	di
-	out	(#99),a
-	ld	A,17+128
-	ei
-	out	(#99),a
+    ld a,regnr      ; add +128 for no auto increment
+    di
+    out (#99),a
+    ld a,17 + 128
+    ei
+    out (#99),a
 
-	ld	b,number_of_bytes
-	ld	c,#9B		;you can also write ld bc,#nn9B, which is faster
-	ld	hl,address
-	otir
+    ld b,number_of_bytes
+    ld c,#9B        ; you can also write ld bc,#nn9B, which is faster
+    ld hl,address
+    otir
 </pre>
 
 <p>Note that since VDP programming can be very tight, especially on screensplits, you often need the fastest solution possible. In that case, consider unrolling the <code>OTIR</code> to <code>OUTI</code>s as discussed in the <a href="/articles/fast_loops.php">Fast Loops</a> article.</p>
@@ -167,20 +167,20 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 <p>Some example code to read out a status register:</p>
 
 <pre>
-	ld	a,statusregnr
-	di
-	out	(#99),a
-	ld	a,15+128
-	out	(#99),a
-	in	a,(#99)
-	ex	af,af'
-	xor	a		;ld a,0
-	out	(#99),a
-	ld	a,15+128
-	ei
-	out	(#99),a
-	ex	af,af'
-	ret
+    ld a,statusregnr
+    di
+    out (#99),a
+    ld a,15 + 128
+    out (#99),a
+    in a,(#99)
+    ex af,af'
+    xor a           ; ld a,0
+    out (#99),a
+    ld a,15 + 128
+    ei
+    out (#99),a
+    ex af,af'
+    ret
 </pre>
 
 
@@ -204,19 +204,19 @@ consecutive <code>OUTI</code> or <code>OUT (C),r</code> instructions.</p>
 
 
 <pre>
-                     MSB  7   6   5   4   3   2   1   0  LSB
-                        +---+---+---+---+---+---+---+---+
-   Register #14         | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| VRAM access base
-                        +---+---+---+---+---+---+---+---+ address register
+                   MSB  7   6   5   4   3   2   1   0  LSB
+                      +---+---+---+---+---+---+---+---+
+  Register #14        | 0 | 0 | 0 | 0 | 0 |A16|A15|A14| VRAM access base
+                      +---+---+---+---+---+---+---+---+ address register
 
-                     MSB  7   6   5   4   3   2   1   0  LSB
-                        +---+---+---+---+---+---+---+---+
-   Port #1 First byte   |A7 |A6 |A5 |A4 |A3 |A2 |A1 |A0 | VRAM access base
-                        +===+===+===+===+===+===+===+===+ address registers
-           Second byte  | X | X |A13|A12|A11|A10|A9 |A8 |
-                        +-+-+-+-+---+---+---+---+---+---+
-                          0   0:  Read
-                          0   1:  Write
+                   MSB  7   6   5   4   3   2   1   0  LSB
+                      +---+---+---+---+---+---+---+---+
+  Port #1 First byte  |A7 |A6 |A5 |A4 |A3 |A2 |A1 |A0 | VRAM access base
+                      +===+===+===+===+===+===+===+===+ address registers
+         Second byte  | X | X |A13|A12|A11|A10|A9 |A8 |
+                      +-+-+-+-+---+---+---+---+---+---+
+                        0   0:  Read
+                        0   1:  Write
 </pre>
 
 <p>After having done this, you can read or write the data from or to port #98.
@@ -241,8 +241,8 @@ slower than the <code>OTIR</code> and <code>INIR</code> instructions (23
 cycles), so use the following code in stead (exactly 29 cycles):</p>
 
 <pre>OutiToVram:
-	outi
-	jp nz,OutiToVram
+    outi
+    jp nz,OutiToVram
 </pre>
 
 <p>The V9938 is quite a bit faster, reads and writes only need to be 15 T-states
@@ -293,51 +293,51 @@ Finally, note that all V9938 timings also apply to the V9958.</p>
 
 <pre>
 ;
-;Set VDP address counter to write from address AHL (17-bit)
-;Enables the interrupts
+; Set VDP address counter to write from address AHL (17-bit)
+; Enables the interrupts
 ;
 SetVdp_Write:
-	rlc	h
-	rla
-	rlc	h
-	rla
-	srl	h
-	srl	h
-	di
-	out	(#99),a
-	ld	a,14+128
-	out	(#99),a
-	ld	a,l
-	nop
-	out	(#99),a
-	ld	a,h
-	or	64
-	ei
-	out	(#99),a
-	ret
+    rlc h
+    rla
+    rlc h
+    rla
+    srl h
+    srl h
+    di
+    out (#99),a
+    ld a,14 + 128
+    out (#99),a
+    ld a,l
+    nop
+    out (#99),a
+    ld a,h
+    or 64
+    ei
+    out (#99),a
+    ret
 
 ;
-;Set VDP address counter to read from address AHL (17-bit)
-;Enables the interrupts
+; Set VDP address counter to read from address AHL (17-bit)
+; Enables the interrupts
 ;
 SetVdp_Read:
-	rlc	h
-	rla
-	rlc	h
-	rla
-	srl	h
-	srl	h
-	di
-	out	(#99),a
-	ld	a,14+128
-	out	(#99),a
-	ld	a,l
-	nop
-	out	(#99),a
-	ld	a,h
-	ei
-	out	(#99),a
-	ret
+    rlc h
+    rla
+    rlc h
+    rla
+    srl h
+    srl h
+    di
+    out (#99),a
+    ld a,14 + 128
+    out (#99),a
+    ld a,l
+    nop
+    out (#99),a
+    ld a,h
+    ei
+    out (#99),a
+    ret
 </pre>
 
 
@@ -361,35 +361,47 @@ SetVdp_Read:
 
 <pre>
 ;
-;Fast DoCopy, by Grauw
-;In:  HL = pointer to 15-byte VDP command data
-;Out: HL = updated
+; Fast DoCopy, by Grauw
+; In:  HL = pointer to 15-byte VDP command data
+; Out: HL = updated
 ;
-DoCopy:	ld	a,32
-	di
-	out	(#99),a
-	ld	a,17+128
-	out	(#99),a
-	ld	c,#9B
+DoCopy:
+    ld a,32
+    di
+    out (#99),a
+    ld a,17 + 128
+    out (#99),a
+    ld c,#9B
 VDPready:
-	ld	a,2
-	di
-	out	(#99),a		;select s#2
-	ld	a,15+128
-	out	(#99),a
-	in	a,(#99)
-	rra
-	ld 	a,0		;back to s#0, enable ints
-	out	(#99),a
-	ld	a,15+128
-	ei
-	out	(#99),a		;loop if vdp not ready (CE)
-	jp	c,VDPready
-	DW	#A3ED,#A3ED,#A3ED,#A3ED	  ;15x OUTI
-	DW	#A3ED,#A3ED,#A3ED,#A3ED	  ; (faster than OTIR)
-	DW	#A3ED,#A3ED,#A3ED,#A3ED
-	DW	#A3ED,#A3ED,#A3ED
-	ret
+    ld a,2
+    di
+    out (#99),a     ; select s#2
+    ld a,15 + 128
+    out (#99),a
+    in a,(#99)
+    rra
+    ld a,0          ; back to s#0, enable ints
+    out (#99),a
+    ld a,15 + 128
+    ei
+    out (#99),a     ; loop if vdp not ready (CE)
+    jp c,VDPready
+    outi            ; 15x OUTI
+    outi            ; (faster than OTIR)
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    outi
+    ret
 </pre>
 
 
@@ -402,20 +414,20 @@ VDPready:
 
 <pre>
 ;
-;Set the palette to the one HL points to...
-;Modifies: AF, BC, HL (=updated)
-;Enables the interrupts.
+; Set the palette to the one HL points to...
+; Modifies: AF, BC, HL (=updated)
+; Enables the interrupts.
 ;
 SetPalette:
-	xor	a		;Set p#pointer to zero.
-	di
-	out	(#99),a
-	ld	a,16+128
-	ei
-	out	(#99),a
-	ld	bc,#209A	;out 32x to port #9A
-	otir
-	ret
+    xor a           ; set p#pointer to zero.
+    di
+    out (#99),a
+    ld a,16+128
+    ei
+    out (#99),a
+    ld bc,#209A     ; out 32x to port #9A
+    otir
+    ret
 </pre>
 
 
@@ -426,40 +438,42 @@ SetPalette:
 
 <pre>
 ;
-;Is supposed to run in screen 5, so you should make a small BASIC loader,
+; Is supposed to run in screen 5, so you should make a small BASIC loader,
 ; or call the CHMOD BIOS routine.
 ;
 DoExampleCopy:
-	xor	a		;set vram write base address
-	ld	hl,#8000	; to 1st byte of page 1...
-	call	SetVDP_Write
+    xor a           ; set vram write base address
+    ld hl,#8000     ;  to 1st byte of page 1...
+    call SetVDP_Write
 
-	ld	a,#88		;use color 8 (red)
-FillL1:	ld	c,8		;fill 1st 8 lines of page 1
-FillL2:	ld	b,128		;
-	out	(#98),a		;could also have been done with
-	djnz	FillL2		;a vdp command (probably faster)
-	dec	c		;(and could also use a fast loop)
-	jp	nz,FillL1
+    ld a,#88        ; use color 8 (red)
+FillL1:
+    ld c,8          ; fill 1st 8 lines of page 1
+FillL2:
+    ld b,128        ;
+    out (#98),a     ; could also have been done with
+    djnz FillL2     ; a vdp command (probably faster)
+    dec c           ; (and could also use a fast loop)
+    jp nz,FillL1
 
-	ld	hl,COPYBLOCK	;execute the copy
-	call	DoCopy
+    ld hl,COPYBLOCK ; execute the copy
+    call DoCopy
 
-	ret
+    ret
 
 
 COPYBLOCK:
-	DB	0,0,0,1
-	DB	0,0,0,0
-	DB	8,0,8,0
-	DB	0,0,#D0		;HMMM
+    db 0,0,0,1
+    db 0,0,0,0
+    db 8,0,8,0
+    db 0,0,#D0        ; HMMM
 
-;As an alternate notation, you might actually prefer the following:
+; As an alternate notation, you might actually prefer the following:
 ;
-;	DW	#0000,#0100
-;	DW	#0000,#0000
-;	DW	#0008,#0008
-;	DB	0,0,#D0
+;   dw    #0000,#0100
+;   dw    #0000,#0000
+;   dw    #0008,#0008
+;   db    0,0,#D0
 </pre>
 
 

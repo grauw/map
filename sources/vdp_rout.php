@@ -28,9 +28,9 @@ INITXT:       equ     #6C
 
 ;
 VDP_SetReg:   MACRO   @register        ;Set value A in the specified register
-              out	(#99),a
-              ld	a,@register+128
-              out	(#99),a
+              out     (#99),a
+              ld      a,@register+128
+              out     (#99),a
               ENDM
 
 
@@ -113,7 +113,7 @@ Rest_VdpRegs: ld      bc,#0800
               ld      hl,VDP_8
               call    Rest_VdpSub
               ld      bc,#0319
-              ld      hl,TRIPLE_ZERO	;a jp Restore_Vdp_Sub is implied
+              ld      hl,TRIPLE_ZERO     ;a jp Restore_Vdp_Sub is implied
 Rest_VdpSub:  ld      a,(hl)
               inc     hl
               di
@@ -134,7 +134,7 @@ TRIPLE_ZERO:  DB      0,0,0
 ;
 ;Selecteer screen 5...
 ;
-Screen5:      ld      a,(VDP)	         ;Select screen 5 (0)
+Screen5:      ld      a,(VDP)            ;Select screen 5 (0)
               and     %11110001
               or      %00000110
               ld      (VDP),a

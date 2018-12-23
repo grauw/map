@@ -41,18 +41,18 @@
 <p>When you shift a register 1 bit to the left, you multiply the value of the register with 2. This shifting can be done using the SLA r instruction. By doing several shifts in sequence you can very easily multiply by any power of 2. For example:</p>
 
 <pre>
-	ld b,3		;Multiply 3 with 4
-	sla b		;x4
-	sla b		;result: b = 12
+    ld b,3          ; Multiply 3 with 4
+    sla b           ; x4
+    sla b           ; result: b = 12
 </pre>
 
 <p>If you use register A you can multiply faster by using the ADD A,A instruction, which is 5 T-states per instruction instead of 8. So ADD A,A is exactly the same as SLA A, or a multiplication by two. On a sidenote, instead of using ADD A,A, you can also use RLCA, which effectively behaves the same.</p>
 
 <pre>
-	ld a,15		;Multiply 15 with 8
-	add a,a		;x8
-	add a,a
-	add a,a		;result: a = 120
+    ld a,15         ; Multiply 15 with 8
+    add a,a         ; x8
+    add a,a
+    add a,a         ; result: a = 120
 </pre>
 
 <p>When programming multiplications you must always make sure the result will never exeed 255, in other words a carry may not occur. In the case of that happening, RLCA actually acts different from SLA A or ADD A,A (in some cases more usable, in some cases less usable). But generally that isn’t of any concern because when register A overflows the result will generally not be of much use anymore.</p>
@@ -60,13 +60,13 @@
 <p>If you want to multiply by another value than a power of two, you can almost always achieve the desired result by storing inbetween values during the shifting and adding or subtracting them up afterwards. A few examples:</p>
 
 <pre>
-	ld a,5		;Multiply 5 with 20 (= A x 16 + A x 4)
-	add a,a		;x16
-	add a,a
-	ld b,a		;Store value of A x 4 in B
-	add a,a
-	add a,a
-	add a,b		;Add A x 4 to A x 16, result: a = 100
+    ld a,5          ; Multiply 5 with 20 (= A x 16 + A x 4)
+    add a,a         ; x16
+    add a,a
+    ld b,a          ; Store value of A x 4 in B
+    add a,a
+    add a,a
+    add a,b         ; Add A x 4 to A x 16, result: a = 100
 </pre>
 
 <p>If you would want to multiply with 22, you would also save the value after the first add in a register and add it to the total afterwards.</p>
@@ -74,13 +74,13 @@
 <p>Sometimes, you can also use substractions to achieve your goals faster. For example, the multiplication of A with 15. This can be done by using the method described above, however, in that case you’ll need 4 temporary registers, and four additional adds afterwards. This could better be done as follows, which requires 1 more multiplication but only uses 1 temporary register and 1 subtraction afterwards:</p>
 
 <pre>
-	ld a,3		;Multiply 3 with 15 (= A x 16 - A x 1)
-	ld b,a		;Store value of A x 1 in B
-	add a,a		;x16
-	add a,a
-	add a,a
-	add a,a
-	sub b		;result: a = 45
+    ld a,3          ; Multiply 3 with 15 (= A x 16 - A x 1)
+    ld b,a          ; Store value of A x 1 in B
+    add a,a         ; x16
+    add a,a
+    add a,a
+    add a,a
+    sub b           ; result: a = 45
 </pre>
 
 
@@ -89,19 +89,19 @@
 <p>Now, divisions are very much like multiplications. If a multiplication routine is complex, a division routine is even more so. However, using shifts it’s all too easy to divide in Assembly. It is done by simply shifting the other way, to the right. For this, you should use the SRL r instruction. An example:</p>
 
 <pre>
-	ld b,3		;Divide 18 by 4
-	srl b		;x4
-	srl b		;result: b = 4 (rest 2 is lost)
+    ld b,3          ; Divide 18 by 4
+    srl b           ; x4
+    srl b           ; result: b = 4 (rest 2 is lost)
 </pre>
 
 <p>There is no real fast alternative to a shift right when using register A. As an alternative, you can use RRCA for that. However, when using RRCA you must make sure there will be no rest, otherwise the result won’t be correct. This can be achieved by ANDing the original value with a value clearing the lower bits (which would otherwise be rotated out), or by making sure you are using values which are always a multiple of the divider.</p>
 
 <pre>
-	ld a,153	;Divide 153 by 8
-	and a,%11111000	;Clear bits 0-2 (equals 256 - 8)
-	rrca		;/8
-	rrca
-	rrca		;result: a = 19
+    ld a,153        ; Divide 153 by 8
+    and a,%11111000 ; Clear bits 0-2 (equals 256 - 8)
+    rrca            ; /8
+    rrca
+    rrca            ; result: a = 19
 </pre>
 
 <p>Dividing with values other than powers of 2 is trickier and is often not possible. If you want to see for yourself, try to construct a routine which divides 100 by 20. To know if a value can be divided, you must look at the amount of trailing zeroes in the binary representation of that value. The maximum number of RRCA’s you can use is then equal to that number. If you look at the beforementioned value 100 in binary (%01100100), you will see there are two trailing zeroes. Therefor, the division routine can only use 2 RRCA’s, while dividing by 20 needs 4 of them.</p>
@@ -114,21 +114,21 @@
 <p>There are also ways to shift 16-bit registers. This is done using a 8-bit shift in combination with an 8-bit rotate and the carry bit. To shift a register DE one bit to the left you should use:</p>
 
 <pre>
-	sla e
-	rl d
+    sla e
+    rl d
 </pre>
 
 <p>To shift it one bit to the right (now with BC as example), use:</p>
 
 <pre>
-	srl b
-	rr c
+    srl b
+    rr c
 </pre>
 
 <p>Unfortunately, generally those 16-bit shifts are rather slow compared to 8-bit shifts (which will most often take place in the fast A register, which makes them almost 4 times as fast). However, just as with the 8-bit shifts, there is also the possibility to do faster 16-bit shifts to the left using the ADD instruction.</p>
 
 <pre>
-	add hl,hl	;shift HL 1 bit left... hl = hl x 2
+    add hl,hl       ; shift HL 1 bit left... hl = hl x 2
 </pre>
 
 <p>So, the best way to multiply 16-bit values is by using register HL in combination with ADD HL,HL instructions.</p>
@@ -155,84 +155,87 @@
 
 <pre>
 ;
-;Multiply 8-bit values
-;In:  Multiply H with E
-;Out: HL = result
+; Multiply 8-bit values
+; In:  Multiply H with E
+; Out: HL = result
 ;
 Mult8:
-	ld d,0
-	ld l,d
-	ld b,8
+    ld d,0
+    ld l,d
+    ld b,8
 Mult8_Loop:
-	add hl,hl
-	jr nc,Mult8_NoAdd
-	add hl,de
+    add hl,hl
+    jr nc,Mult8_NoAdd
+    add hl,de
 Mult8_NoAdd:
-	djnz Mult8_Loop
-	ret
+    djnz Mult8_Loop
+    ret
 </pre>
 
 <pre>
 ;
-;Multiply 8-bit value with a 16-bit value
-;In: Multiply A with DE
-;Out: HL = result
+; Multiply 8-bit value with a 16-bit value
+; In: Multiply A with DE
+; Out: HL = result
 ;
-Mult12:	ld l,0
-	ld b,8
+Mult12:
+    ld l,0
+    ld b,8
 Mult12_Loop:
-	add hl,hl
-	add a,a
-	jr nc,Mult12_NoAdd
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12_NoAdd
+    add hl,de
 Mult12_NoAdd:
-	djnz Mult12_Loop
-	ret
+    djnz Mult12_Loop
+    ret
 </pre>
 
 <pre>
 ;
-;Multiply 16-bit values (with 16-bit result)
-;In: Multiply BC with DE
-;Out: HL = result
+; Multiply 16-bit values (with 16-bit result)
+; In: Multiply BC with DE
+; Out: HL = result
 ;
-Mult16:	ld a,b
-	ld b,16
+Mult16:
+    ld a,b
+    ld b,16
 Mult16_Loop:
-	add hl,hl
-	sla c
-	rla
-	jr nc,Mult16_NoAdd
-	add hl,de
+    add hl,hl
+    sla c
+    rla
+    jr nc,Mult16_NoAdd
+    add hl,de
 Mult16_NoAdd:
-	djnz Mult16_Loop
-	ret
+    djnz Mult16_Loop
+    ret
 </pre>
 
 <pre>
 ;
-;Multiply 16-bit values (with 32-bit result)
-;In: Multiply BC with DE
-;Out: BCHL = result
+; Multiply 16-bit values (with 32-bit result)
+; In: Multiply BC with DE
+; Out: BCHL = result
 ;
-Mult32:	ld a,c
-	ld c,b
-	ld hl,0
-	ld b,16
+Mult32:
+    ld a,c
+    ld c,b
+    ld hl,0
+    ld b,16
 Mult32_Loop:
-	add hl,hl
-	rla
-	rl c
-	jr nc,Mult32_NoAdd
-	add hl,de
-	adc a,0
-	jp nc,Mult32_NoAdd
-	inc c
+    add hl,hl
+    rla
+    rl c
+    jr nc,Mult32_NoAdd
+    add hl,de
+    adc a,0
+    jp nc,Mult32_NoAdd
+    inc c
 Mult32_NoAdd:
-	djnz Mult32_Loop
-	ld b,c
-	ld c,a
-	ret
+    djnz Mult32_Loop
+    ld b,c
+    ld c,a
+    ret
 </pre>
 
 <h3 id="rrmultr">Right-rotating multiplication</h3>
@@ -277,23 +280,23 @@ Mult32_NoAdd:
 
 <pre>
 ;
-;Multiply 8-bit value with a 16-bit value (right rotating)
-;In: Multiply A with DE
-;     Put lowest value in A for most efficient calculation
-;Out: HL = result
+; Multiply 8-bit value with a 16-bit value (right rotating)
+; In: Multiply A with DE
+;      Put lowest value in A for most efficient calculation
+; Out: HL = result
 ;
 Mult12R:
-	ld hl,0
+    ld hl,0
 Mult12R_Loop:
-	srl a
-	jr nc,Mult12R_NoAdd
-	add hl,de
+    srl a
+    jr nc,Mult12R_NoAdd
+    add hl,de
 Mult12R_NoAdd:
-	sla e
-	rl d
-	or a
-	jp nz,Mult12R_Loop
-	ret
+    sla e
+    rl d
+    or a
+    jp nz,Mult12R_Loop
+    ret
 </pre>
 
 <h3 id="ulrmultr">Unrolled left-rotating multiplication</h3>
@@ -304,51 +307,51 @@ Mult12R_NoAdd:
 
 <pre>
 ;
-;Multiply 8-bit value with a 16-bit value (unrolled)
-;In: Multiply A with DE
-;Out: HL = result
+; Multiply 8-bit value with a 16-bit value (unrolled)
+; In: Multiply A with DE
+; Out: HL = result
 ;
 Mult12U:
-	ld l,0
-	add a,a
-	jr nc,Mult12U_NoAdd0
-	add hl,de
+    ld l,0
+    add a,a
+    jr nc,Mult12U_NoAdd0
+    add hl,de
 Mult12U_NoAdd0:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd1
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd1
+    add hl,de
 Mult12U_NoAdd1:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd2
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd2
+    add hl,de
 Mult12U_NoAdd2:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd3
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd3
+    add hl,de
 Mult12U_NoAdd3:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd4
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd4
+    add hl,de
 Mult12U_NoAdd4:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd5
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd5
+    add hl,de
 Mult12U_NoAdd5:
-	add hl,hl
-	add a,a
-	jr nc,Mult12U_NoAdd6
-	add hl,de
+    add hl,hl
+    add a,a
+    jr nc,Mult12U_NoAdd6
+    add hl,de
 Mult12U_NoAdd6:
-	add hl,hl
-	add a,a
-	ret nc
-	add hl,de
-	ret
+    add hl,hl
+    add a,a
+    ret nc
+    add hl,de
+    ret
 </pre>
 
 <p>It is also worthwhile to unroll the other multiplication routines. For the Mult8 routine for example, it saves 115 out of 367 T-states on average, that’s 31% faster, at the cost of just 38 bytes (14 → 52).</p>
@@ -375,63 +378,65 @@ Output: #528 (#5.28 or 5,15625 decimal)<br />
 
 <pre>
 ;
-;Divide 8-bit values
-;In: Divide E by divider C
-;Out: A = result, B = rest
+; Divide 8-bit values
+; In: Divide E by divider C
+; Out: A = result, B = rest
 ;
-Div8:	xor a
-	ld b,8
+Div8:
+    xor a
+    ld b,8
 Div8_Loop:
-	rl e
-	rla
-	sub c
-	jr nc,Div8_NoAdd
-	add a,c
+    rl e
+    rla
+    sub c
+    jr nc,Div8_NoAdd
+    add a,c
 Div8_NoAdd:
-	djnz Div8_Loop
-	ld b,a
-	ld a,e
-	rla
-	cpl
-	ret
+    djnz Div8_Loop
+    ld b,a
+    ld a,e
+    rla
+    cpl
+    ret
 </pre>
 
 <pre>
 ;
-;Divide 16-bit values (with 16-bit result)
-;In: Divide BC by divider DE
-;Out: BC = result, HL = rest
+; Divide 16-bit values (with 16-bit result)
+; In: Divide BC by divider DE
+; Out: BC = result, HL = rest
 ;
-Div16:	ld hl,0
-	ld a,b
-	ld b,8
+Div16:
+    ld hl,0
+    ld a,b
+    ld b,8
 Div16_Loop1:
-	rla
-	adc hl,hl
-	sbc hl,de
-	jr nc,Div16_NoAdd1
-	add hl,de
+    rla
+    adc hl,hl
+    sbc hl,de
+    jr nc,Div16_NoAdd1
+    add hl,de
 Div16_NoAdd1:
-	djnz Div16_Loop1
-	rla
-	cpl
-	ld b,a
-	ld a,c
-	ld c,b
-	ld b,8
+    djnz Div16_Loop1
+    rla
+    cpl
+    ld b,a
+    ld a,c
+    ld c,b
+    ld b,8
 Div16_Loop2:
-	rla
-	adc hl,hl
-	sbc hl,de
-	jr nc,Div16_NoAdd2
-	add hl,de
+    rla
+    adc hl,hl
+    sbc hl,de
+    jr nc,Div16_NoAdd2
+    add hl,de
 Div16_NoAdd2:
-	djnz Div16_Loop2
-	rla
-	cpl
-	ld b,c
-	ld c,a
-	ret
+    djnz Div16_Loop2
+    rla
+    cpl
+    ld b,c
+    ld c,a
+    ret
 </pre>
 
 <p><i>Thanks to Flyguille for the Div16 routine, taken from his MNBIOS source code.</i></p>
@@ -481,29 +486,30 @@ DIV9:   INC     HL              ;  7    1
 
 <pre>
 ;
-;Square root of 16-bit value
-;In:  HL = value
-;Out:  D = result (rounded down)
+; Square root of 16-bit value
+; In:  HL = value
+; Out:  D = result (rounded down)
 ;
-Sqr16:	ld de,#0040
-	ld a,l
-	ld l,h
-	ld h,d
-	or a
-	ld b,8
+Sqr16:
+    ld de,#0040
+    ld a,l
+    ld l,h
+    ld h,d
+    or a
+    ld b,8
 Sqr16_Loop:
-	sbc hl,de
-	jr nc,Sqr16_Skip
-	add hl,de
+    sbc hl,de
+    jr nc,Sqr16_Skip
+    add hl,de
 Sqr16_Skip:
-	ccf
-	rl d
-	add a,a
-	adc hl,hl
-	add a,a
-	adc hl,hl
-	djnz Sqr16_Loop
-	ret
+    ccf
+    rl d
+    add a,a
+    adc hl,hl
+    add a,a
+    adc hl,hl
+    djnz Sqr16_Loop
+    ret
 </pre>
 
 

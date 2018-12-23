@@ -74,12 +74,14 @@ A: I tested the statements made in this article with a number of carefully progr
 <p>Example code to poll for the end of HBLANK, assumes disabled interrupts and s#2 to be set:</p>
 
 <pre>
-Poll_1:	in	a,(#99)		;wait until start of HBLANK
-	and	%00100000
-	jp	nz,Poll_1
-Poll_2:	in	a,(#99)		;wait until end of HBLANK
-	and	%00100000
-	jp	z,Poll_2
+Poll_1:
+    in a,(#99)      ; wait until start of HBLANK
+    and %00100000
+    jp nz,Poll_1
+Poll_2:
+    in a,(#99)      ; wait until end of HBLANK
+    and %00100000
+    jp z,Poll_2
 </pre>
 
 
@@ -95,15 +97,16 @@ A: The VDP lineinterrupt is linked to the FH bit, and the interrupt occurs when 
 <p>Example code for polling FH, assumes disabled interrupts and s#1 to be set:</p>
 
 <pre>
-	ld	a,(VDP+23)	;set split line
-	add	a,SPLITLINE
-	out	(#99),a
-	ld	a,19+128
-	out	(#99),a
-	nop			;don’t access too fast
-Poll:	in	a,(#99)		;poll until line reached, also clears FH bit
-	rra
-	jp	nc,Poll
+    ld a,(VDP+23)   ; set split line
+    add a,SPLITLINE
+    out (#99),a
+    ld a,19+128
+    out (#99),a
+    nop             ; don’t access too fast
+Poll:
+    in a,(#99)      ; poll until line reached, also clears FH bit
+    rra
+    jp nc,Poll
 </pre>
 
 <p>Ofcourse, when not using this code in an interrupt routine you shouldn’t keep the interrupts disabled in the polling loop all the time.</p>
@@ -134,44 +137,44 @@ A: This is in my opinion the best way to have a screensplit. It looks very tidy,
 
 <pre>
 ;
-;A macro definition which waits until the end of the next/current HBLANK...
+; A macro definition which waits until the end of the next/current HBLANK...
 ;
 Wait_HBLANK:
-	MACRO			;(this macro is Compass-formatted)
+    MACRO           ; (this macro is Compass-formatted)
 WHL1_@sym:
-	in	a,(#99)		;wait until start of HBLANK
-	and	%00100000
-	jp	nz,WHL1_@sym
+    in a,(#99)      ; wait until start of HBLANK
+    and %00100000
+    jp nz,WHL1_@sym
 WHL2_@sym:
-	in	a,(#99)		;wait until end of HBLANK
-	and	%00100000
-	jp	z,WHL2_@sym
+    in a,(#99)      ; wait until end of HBLANK
+    and %00100000
+    jp z,WHL2_@sym
 	ENDM
 
-
 ;
-;The routine performing the screensplit
+; The routine performing the screensplit
 ;
-Split:	ld	a,2
-	out	(#99),a
-	ld	a,15+128
-	out	(#99),a
-	nop
-	Wait_HBLANK
-	ld	a,(VDP+1)	;disable screen (reset bit 6)
-	and	%10111111
-	out	(#99),a
-	ld	a,1+128
-	out	(#99),a
-	nop	
-	Wait_HBLANK
+Split:
+    ld a,2
+    out (#99),a
+    ld a,15+128
+    out (#99),a
+    nop
+    Wait_HBLANK
+    ld a,(VDP+1)    ; disable screen (reset bit 6)
+    and %10111111
+    out (#99),a
+    ld a,1+128
+    out (#99),a
+    nop
+    Wait_HBLANK
 
-	...			;do your split stuff
+    ...             ; do your split stuff
 
-	ld	a,(VDP+1)
-	out	(#99),a
-	ld	a,1+128
-	out	(#99),a
+    ld a,(VDP+1)
+    out (#99),a
+    ld a,1+128
+    out (#99),a
 </pre>
 
 

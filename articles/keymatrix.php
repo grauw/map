@@ -157,11 +157,11 @@
 </table>
 
 <pre>
-	in	a,(#AA)
-	and	#F0		;only change bits 0-3
-	or	b		;take row number from B
-	out	(#AA),a
-	in	a,(#A9)		;read row into A
+    in a,(#AA)
+    and #F0         ; only change bits 0-3
+    or b            ; take row number from B
+    out (#AA),a
+    in a,(#A9)      ; read row into A
 </pre>
 
 
@@ -170,20 +170,19 @@
 <p>In the following example I will show you how to read out the space key its status. The space key is located in bit 0 of row 8:</p>
 
 <pre>
-keys:	EQU	#FBE5
+keys: EQU #FBE5
 
-
+;
+; Check whether space is pressed
+;
 Main_ReadKeys:
-;
-;Check whether space is pressed
-;
-	ld	a,(keys+8)	;space
-	bit	0,a
-	jp	z,spacepressed
+    ld a,(keys+8)   ; space
+    bit 0,a
+    jp z,spacepressed
 
-	...
+    ...
 
-	ret
+    ret
 </pre>
 
 <p>The key readout itself is pretty trivial, however as you can see, I have put the key readout routines in a subroutine. It is good practice to do this because then the key handlers will in effect be called as subroutines so they can quite with a RET instead of having to manually JP back to the mainloop afterwards... <a href="http://www.acm.org/classics/oct95/">Go To Statement Considered Harmful</a>, eh ;). Actually the real objection against it in this case is that it introduces redundant code (being the “JP main” at the end of each keyhandler), which is bad; if you change something like for example the spot of the main routine which has to be jumped to, all those keyhandler exit jumps need to be changed and it is easy to forget one.</p>

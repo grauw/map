@@ -435,8 +435,7 @@ read the data through Port #1.</p>
 connected to the MSX-VIDEO. The memory maps for these cases are shown
 in the map below.</p>
 
-<pre>
-                            Address counter
+<pre>                            Address counter
 
             ┌─────────┐         1FFFFH
             │         │            │
@@ -817,8 +816,7 @@ you must mask the unwanted bits.</p>
 <p>The color registers are used to control the MSX-VIDEO's text and
 background screen colors as well as blinking, etc.</p>
 
-<pre>
-       MSB  7   6   5   4   3   2   1   0  LSB
+<pre>       MSB  7   6   5   4   3   2   1   0  LSB
           ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7    │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
           └───┴───┴───┴───┴───┴───┴───┴───┘ color register
@@ -849,8 +847,7 @@ background screen colors as well as blinking, etc.</p>
 <p>In TEXT 2 mode, if the attributes for blinking are set, the color set
 in this register and set in R#7 are displayed alternately.</p>
 
-<pre>
-            T23 to T20:  Specifies the color of part 1 of the pattern.
+<pre>            T23 to T20:  Specifies the color of part 1 of the pattern.
             BC3 to BC0:  Specifies the color of part 0 of the pattern.
 </pre>
 
@@ -872,8 +869,7 @@ alternately displayed (blinked). Place data in this register to set
 the display page to an odd page to begin blinking. This register is
 also used in the TEXT2 mode.</p>
 
-<pre>
-            ON3 to ON0:  Display time for even page
+<pre>            ON3 to ON0:  Display time for even page
             OF3 to OF0:  Display time for odd page
 </pre>
 
@@ -928,8 +924,7 @@ CRT.</p>
 
 <p>The above register is used to adjust the display position on the CRT.</p>
 
-<pre>
-     H = 7 . . . H = 1,  H = 0, H = 15 . . . H = 8
+<pre>     H = 7 . . . H = 1,  H = 0, H = 15 . . . H = 8
      (Left)            (Center)             (Right)
 
      V = 8 . . . V = 15, V = 0, V = 1  . . . V = 7
@@ -959,8 +954,7 @@ the sprites are disabled will result in a corrupted byte)</p>
 <p>The above register sets the location of the line to begin display.</p>
 
 
-<pre>
-                 VRAM (Line)
+<pre>                 VRAM (Line)
 
           TOP  ┌────────────┐ 0
                │            │
@@ -1080,8 +1074,7 @@ palette in the Color palette address register.</p>
 access another register. In addition, according to the setting of the
 AII bit, the data van be automatically incremented.</p>
 
-<pre>
-    AII = 1:  Auto increment disabled
+<pre>    AII = 1:  Auto increment disabled
     AII = 0:  Auto increment enabled
 </pre>
 
@@ -1092,8 +1085,7 @@ AII bit, the data van be automatically incremented.</p>
 the MSX-VIDEO. Details on the use of these command registers will be
 presented in a later chapter.</p>
 
-<pre>
-    MSB  7   6   5   4   3   2   1   0  LSB
+<pre>    MSB  7   6   5   4   3   2   1   0  LSB
        ┌───┬───┬───┬───┬───┬───┬───┬───┐
   R#32 │SX7│SX6│SX5│SX4│SX3│SX2│SX1│SX0│ Source X low register
        ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1139,8 +1131,7 @@ presented in a later chapter.</p>
 <p>The following status registers are read-only registers for reporting
 the status when the MSX-VIDEO is read.</p>
 
-<pre>
-       MSB  7   6   5   4   3   2   1   0  LSB
+<pre>       MSB  7   6   5   4   3   2   1   0  LSB
           ┌───┬───┬───┬───┬───┬───┬───┬───┐
    S#0    │ F │5S │ C │Fifth sprite number│ Status register 0
           └───┴───┴───┴───┴───┴───┴───┴───┘
@@ -1201,8 +1192,7 @@ the status when the MSX-VIDEO is read.</p>
 
 
 
-<pre>
-     VR:  Vertical scanning line timing flag
+<pre>     VR:  Vertical scanning line timing flag
           During vertical scanning, this flag is set to 1.
 
      HR:  Horizontal scanning line timing flag
@@ -1236,8 +1226,7 @@ the status when the MSX-VIDEO is read.</p>
 sprites, the location of lightpen detection, and the relative movement
 of the mouse.</p>
 
-<pre>
-       MSB  7   6   5   4   3   2   1   0  LSB
+<pre>       MSB  7   6   5   4   3   2   1   0  LSB
           ┌───┬───┬───┬───┬───┬───┬───┬───┐
    S#7    │C7 │C6 │C5 │C4 │C3 │C2 │C1 │C0 │ Color register
           └───┴───┴───┴───┴───┴───┴───┴───┘
@@ -1246,8 +1235,7 @@ of the mouse.</p>
 <p>The above color register is used when the POINT and VRAM to CPU
 commands are executed. The VRAM data is set in this register.</p>
 
-<pre>
-       MSB  7   6   5   4   3   2   1   0  LSB
+<pre>       MSB  7   6   5   4   3   2   1   0  LSB
           ┌───┬───┬───┬───┬───┬───┬───┬───┐
    S#8    │BX7│BX6│BX5│BX4│BX3│BX2│BX1│BX0│ Border X register low
           ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1267,8 +1255,7 @@ detected, the X coordinate is set in the above registers.</p>
 
 <h2 id="pt1-3-1">Characteristics</h2>
 
-<pre>
-- Pattern size             : 6 dots (w) x 8 dots (h)
+<pre>- Pattern size             : 6 dots (w) x 8 dots (h)
 - Patterns                 : 256 types
 - Screen pattern count     : 40 (w) x 24 (h) patterns
 - Pattern colors           : Two colors out of 512 colors (per screen)
@@ -1278,8 +1265,7 @@ detected, the X coordinate is set in the above registers.</p>
 
 <h2>Controls</h2>
 
-<pre>
-- Pattern font             : VRAM pattern generator table
+<pre>- Pattern font             : VRAM pattern generator table
 - Screen pattern location  : VRAM pattern name table
 - Pattern color code 1     : High-order four bits of R#7
 - Pattern color code 0     : Low-order fout bits of R#7
@@ -1292,8 +1278,7 @@ detected, the X coordinate is set in the above registers.</p>
 
 <h3 id="pt1-3-2-1">1.  Mode and register settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1323,8 +1308,7 @@ All other bits are set accordingly
     register R#4.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -1333,8 +1317,7 @@ All other bits are set accordingly
 
 <h4 id="pt1-3-2-2-1">Pattern generator table</h4>
 
-<pre>
-(X=1, O=0)
+<pre>(X=1, O=0)
 
                  ┌┬────────  These bits are not displayed.
                  ││
@@ -1381,8 +1364,7 @@ All other bits are set accordingly
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -1391,8 +1373,7 @@ All other bits are set accordingly
 <h4 id="pt1-3-2-3-1">Pattern name table</h4>
 
 
-<pre>
-     │         │
+<pre>     │         │
      ├─────────┤ Base address
      │ ( 0, 0) │   0              0    1    2    3   .  .   39  X
      ├─────────┤               ┌────┬────┬────┬────┬      ┬────┐
@@ -1423,8 +1404,7 @@ All other bits are set accordingly
 <h3 id="pt1-3-2-4">4.  Color register settings</h3>
 
 
-<pre>
-       MSB  7   6   5   4   3   2   1   0  LSB
+<pre>       MSB  7   6   5   4   3   2   1   0  LSB
           ┌───┬───┬───┬───┬───┬───┬───┬───┐
   R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
           └──┬┴──┬┴──┬┴──┬┴──┬┴──┬┴──┬┴──┬┘ register
@@ -1439,8 +1419,7 @@ All other bits are set accordingly
 <h2 id="pt1-3-3">Example of VRAM allocation in TEXT 1 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐         MSB   7   6   5   4   3   2   1   0   LSB
+<pre>00000H  ┌──────────┐         MSB   7   6   5   4   3   2   1   0   LSB
         │ Pattern  │             ┌───┬───┬───┬───┬───┬───┬───┬───┐
         │ Name     │        R#2  │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │ 0 │
         │ Table 0  │             └───┴───┴───┴───┴───┴───┴───┴───┘
@@ -1486,8 +1465,7 @@ All other bits are set accordingly
 
 <h2 id="pt1-4-1">Characteristics</h2>
 
-<pre>
-- Pattern size             : 6 dots (w) x 8 dots (h)
+<pre>- Pattern size             : 6 dots (w) x 8 dots (h)
 - Patterns                 : 256 types
 - Screen pattern count     : 80 (w) x 24 (h) patterns
                              80 (w) x 26.5 (h) patterns
@@ -1500,8 +1478,7 @@ All other bits are set accordingly
 
 <h2 id="pt1-4-2">Controls</h2>
 
-<pre>
-- Pattern font             : VRAM pattern generator table
+<pre>- Pattern font             : VRAM pattern generator table
 - Screen pattern location  : VRAM pattern name table
 - Blink attributes         : VRAM color table
 - Pattern color code 1     : High-order four bits of R#7
@@ -1518,8 +1495,7 @@ All other bits are set accordingly
 
 <h3 id="pt1-4-3-1">1. Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 1*│ 0*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1550,8 +1526,7 @@ All other bits are set accordingly.</p>
   register R#4</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -1565,8 +1540,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-4-3-2-1">Pattern generator table</h4>
 
-<pre>
-(X=1, O=0)
+<pre>(X=1, O=0)
 
                  ┌┬────────  These bits are not displayed.
                  ││
@@ -1613,8 +1587,7 @@ All other bits are set accordingly.</p>
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│A14│A13│A12│ 1 │ 1 │ Pattern name table
            └───┴───┴───┴───┴───┴───┴───┴───┘  base address register
@@ -1627,8 +1600,7 @@ All other bits are set accordingly.</p>
 <h4 id="pt1-4-3-3-1">Pattern name table</h4>
 
 
-<pre>
-     │         │
+<pre>     │         │
      ├─────────┤ Base address
      │ ( 0, 0) │   0              0    1    2    3   .  .   79  X
      ├─────────┤               ┌────┬────┬────┬────┬      ┬────┐
@@ -1664,8 +1636,7 @@ All other bits are set accordingly.</p>
     and R#10.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#3     │A13│A12│A11│A10│A9 │ 1 │ 1 │ 1 │ Color table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1676,8 +1647,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-4-3-4-1">Color table</h4>
 
-<pre>
- MSB   7       6       5       4       3       2       1       0   LSB
+<pre> MSB   7       6       5       4       3       2       1       0   LSB
    ┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐
   0│( 0, 0)│( 1, 0)│( 2, 0)│( 3, 0)│( 4, 0)│( 5, 0)│( 6, 0)│( 7, 0)│ Base
    ├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤ address
@@ -1703,8 +1673,7 @@ All other bits are set accordingly.</p>
 <li>Set the color for pattern 0 in the low-order bits of register R#7.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
            └───┴───┴───┴───┴───┴───┴───┴───┘ color register
@@ -1716,8 +1685,7 @@ All other bits are set accordingly.</p>
     by using the color codes set in register R#7 and R#12.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#12    │T23│T22│T21│T20│BC3│BC2│BC1│BC0│ Text color/Back color
            └───┴───┴───┴───┴───┴───┴───┴───┘ register
@@ -1732,8 +1700,7 @@ All other bits are set accordingly.</p>
     on and time off) can also be set in register R#13.</li>
 </ul>
 
-<pre>
-                 ┌────────────────┐                ┌─────────────
+<pre>                 ┌────────────────┐                ┌─────────────
                  │                │                │
                  │      R#12      │      R#7       │      R#12
                  │                │                │
@@ -1743,8 +1710,7 @@ All other bits are set accordingly.</p>
 </pre>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#13    │ON3│ON2│ON1│ON0│OF3│OF2│OF1│OF0│ Blinking period register
            └──┬┴───┴───┴──┬┴──┬┴───┴───┴──┬┘
@@ -1854,8 +1820,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-4-4">Example of VRAM allocation in TEXT 2 mode</h2>
 
-<pre>
-                            Pattern name table base address
+<pre>                            Pattern name table base address
 
 00000H  ┌──────────┐         MSB   7   6   5   4   3   2   1   0   LSB
         │ Pattern  │             ┌───┬───┬───┬───┬───┬───┬───┬───┐
@@ -1908,8 +1873,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-5-1">Characteristics</h2>
 
-<pre>
-- Screen composition       : 64 (w) x 48 (h) color blocks
+<pre>- Screen composition       : 64 (w) x 48 (h) color blocks
 - Color blocks             : Sixteen colors out of 512 colors
 - Sprite mode              : Sprite mode 1
 - VRAM area per screen     : 4K bytes
@@ -1918,8 +1882,7 @@ All other bits are set accordingly.</p>
 
 <h2>Controls</h2>
 
-<pre>
-- Color block color code   : VRAM pattern generator table
+<pre>- Color block color code   : VRAM pattern generator table
 - Color block location     : VRAM pattern name table
 - Background color code    : Low-order four bits of R#7
 - Sprites                  : VRAM sprite attribute table
@@ -1931,8 +1894,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-5-2-1">1. Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1957,8 +1919,7 @@ All other bits are set accordingly.</p>
     area is 256 x 192 dots.</li>
 </ul>
 
-<pre>
-          ◄────  8 dots  ───►
+<pre>          ◄────  8 dots  ───►
 
           ┌────────┬────────┐    ▲
           │        │        │    │
@@ -1980,8 +1941,7 @@ All other bits are set accordingly.</p>
     each pattern includes four color blocks.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
            │  Color code A │  Color code B │
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -1995,8 +1955,7 @@ All other bits are set accordingly.</p>
     pattern names are automatically set.</li>
 </ul>
 
-<pre>
-               MSB  7   6   5   4   3   2   1   0  LSB
+<pre>               MSB  7   6   5   4   3   2   1   0  LSB
         ┌───┬───┐ ┌───┬───┬───┬───┬───┬───┬───┬───┐
    ┌─   │ A │ B │ │  Color code A │  Color code B │ Pattern when
    │    ├───┼───┤ ├───┼───┼───┼───┼───┼───┼───┼───┤ Y=0, 4, 8, 12, 16
@@ -2023,8 +1982,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     register R#4.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
            └───┴───┴───┴───┴───┴───┴───┴───┘  base address register
@@ -2034,8 +1992,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h4 id="pt1-5-2-2-1">Pattern generator table</h4>
 
 
-<pre>
-          │                   │
+<pre>          │                   │
           ├───────────────────┤     0  Base address
           │ Pattern name #0   │
           │   (Eight bytes)   │
@@ -2121,8 +2078,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h4 id="pt1-5-2-3-2">Pattern name table</h4>
 
-<pre>
-     │         │
+<pre>     │         │
      ├─────────┤ Base address
      │ ( 0, 0) │   0
      ├─────────┤
@@ -2153,8 +2109,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h3 id="pt1-5-2-4">4. Color register settings</h3>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ register
@@ -2174,8 +2129,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     sprites, see the section on SPRITE MODE 1.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
@@ -2194,8 +2148,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h2 id="pt1-5-3">Example of VRAM allocation in MULTICOLOR mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │ Sprite   │
         │ Generator│
         │ Table    │
@@ -2244,8 +2197,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h2 id="pt1-6-1">Characteristics</h2>
 
-<pre>
-- Pattern size             : 8 dots (w) x 8 dots (h)
+<pre>- Pattern size             : 8 dots (w) x 8 dots (h)
 - Patterns                 : 256 types
 - Screen pattern count     : 32 (w) x 24 (h) patterns
 - Pattern colors           : 16 colors out of 512 colors (per screen)
@@ -2256,8 +2208,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h2 id="pt1-6-2">Controls</h2>
 
-<pre>
-- Pattern font             : VRAM pattern generator table
+<pre>- Pattern font             : VRAM pattern generator table
 - Screen pattern location  : VRAM pattern name table
 - Pattern color codes 1 &amp; 0: Can be specified as a group for each
                              8-pattern set, in the VRAM color table
@@ -2271,8 +2222,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h3 id="pt1-6-3-1">1. Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -2300,8 +2250,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     register R#4.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#4     │ 0 │ 0 │A16│A15│A14│A13│A12│A11│ Pattern generator table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -2310,8 +2259,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h4 id="pt1-6-3-2-1">Pattern generator table</h4>
 
-<pre>
-(X=1, O=0)
+<pre>(X=1, O=0)
 
        MSB 76543210 LSB
          0 OOXXXOOO ─────┐
@@ -2356,8 +2304,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -2367,8 +2314,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h4 id="pt1-6-3-3-1">Pattern name table</h4>
 
 
-<pre>
-     │         │
+<pre>     │         │
      ├─────────┤ Base address
      │ ( 0, 0) │   0              0    1    2    3   .  .   31 X
      ├─────────┤               ┌────┬────┬────┬────┬      ┬────┐
@@ -2397,8 +2343,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h3 id="pt1-6-3-4">4. Color register settings</h3>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ register
@@ -2422,8 +2367,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#3     │A13│A12│A11│A10│A9 │A8 │A7 │A6 │ Color table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -2433,8 +2377,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h4 id="pt1-6-3-5-1">Color table</h4>
 
-<pre>
-             ┌───┬───┬───┬────────────────── Color code for part 1
+<pre>             ┌───┬───┬───┬────────────────── Color code for part 1
              │   │   │   │   ┌───┬───┬───┬── Color code for part 0
              │   │   │   │   │   │   │   │
         MSB  7   6   5   4   3   2   1   0  LSB
@@ -2460,8 +2403,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     sprites, see the section on SPRITE MODE 1.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
@@ -2480,8 +2422,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h2 id="pt1-6-4">Example of VRAM allocation in GRAPHIC 1 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │ Sprite   │
         │ Generator│
         │ Table    │
@@ -2530,8 +2471,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h2 id="pt1-7-1">Characteristics</h2>
 
-<pre>
-- Pattern size             : 8 dots (w) x 8 dots (h)
+<pre>- Pattern size             : 8 dots (w) x 8 dots (h)
 - Patterns                 : 768 types
 - Screen pattern count     : 32 (w) x 24 (h) patterns
 - Pattern colors           : 16 colors out of 512 colors (per screen)
@@ -2546,8 +2486,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h2 id="pt1-7-2">Controls</h2>
 
-<pre>
-- Pattern font             : VRAM pattern generator table
+<pre>- Pattern font             : VRAM pattern generator table
 - Screen pattern location  : VRAM pattern name table
 - Pattern color codes 1 &amp; 0: Can be specified as a group for each
                            : raster, in the VRAM color table
@@ -2561,8 +2500,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h3 id="pt1-7-3-1">1. Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 0*│ 0*│ 0 │ Mode register 0
            └───┴───┴───┴───┴───┴─┬─┴─┬─┴───┘
@@ -2595,8 +2533,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     register R#4.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#4     │ 0 │ 0 │A16│A15│A14│A13│ 1 │ 1 │ Pattern generator table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -2614,8 +2551,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
     and R#10.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#3     │A13│ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ 1 │ Color table address
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -2627,8 +2563,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 <h3 id="pt1-7-3-4">4. Color register settings</h3>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop color
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ register
@@ -2643,8 +2578,7 @@ Pattern │ G │ H │ │  Color code G │  Color code H │ or 21 is selecte
 
 <h4 id="pt1-7-3-4-1">Pattern generator table</h4>
 
-<pre>
-(X=1, O=0)
+<pre>(X=1, O=0)
                             MSB 76543210 LSB      MSB 76543210 LSB
                       ┌─────   0 OOXXXOOO              OOOOOOOO
                       │        1 OXOOOXOO              OOOOOOOO
@@ -2720,8 +2654,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 
 <h4 id="pt1-7-3-5-1">Pattern name table</h4>
 
-<pre>
-     ┌──────────────────────────────────────────────────────┐
+<pre>     ┌──────────────────────────────────────────────────────┐
      │ ( 0, 0)    Pattern display area for upper    (31, 0) │
      │              third of screen (256 bytes)             │
      │ ( 0, 7)                                      (31, 7) │
@@ -2742,8 +2675,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│A14│A13│A12│A11│A10│ Pattern name table
            └───┴───┴───┴───┴───┴───┴───┴───┘ base address register
@@ -2753,8 +2685,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 <h4 id="pt1-7-3-5-2">Pattern name table</h4>
 
 
-<pre>
-     │         │
+<pre>     │         │
      ├─────────┤ Base address  ──────────────┐
      │ ( 0, 0) │   0                         │
      ├─────────┤                             │
@@ -2793,8 +2724,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
     the section on SPRITE MODE 2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│A9 │A8 │A7 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡ base address register
@@ -2813,8 +2743,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 <h2 id="pt1-7-4">Example of VRAM allocation in GRAPHIC 2 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │ Pattern  │
         │ Generator│
         │ Table    │
@@ -2870,8 +2799,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 <h2 id="pt1-7-5">Example of VRAM allocation in GRAPHIC 3 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │ Pattern  │
         │ Generator│
         │ Table    │
@@ -2928,8 +2856,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 
 <h2 id="pt1-8-1">Characteristics</h2>
 
-<pre>
-- Bit-mapped Graphics Mode
+<pre>- Bit-mapped Graphics Mode
 - Screen size              : 256 (w) x 212 (h) dots
                            : 256 (w) x 192 (h) dots
 - Screen colors            : 16 colors out of 512 colors (per screen)
@@ -2940,8 +2867,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 
 <h2 id="pt1-8-2">Controls</h2>
 
-<pre>
-- Graphics                 : VRAM pattern name table
+<pre>- Graphics                 : VRAM pattern name table
 - Background color code    : Low-order four bits of R#7
 - Sprites                  : VRAM sprite attribute table, VRAM sprite
                              pattern table
@@ -2952,8 +2878,7 @@ Pattern number 255 ───┤     2043 OXOXOXOX              OOOOOOOO
 
 <h3 id="pt1-8-3-1">1.  Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 0*│ 1*│ 1*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -2984,8 +2909,7 @@ All other bits are set accordingly.</p>
 </ul>
 
 
-<pre>
-  ┌────► X
+<pre>  ┌────► X
   │  ┌───────┬───────┬..................┬─────────┬─────────┐
   │  │(0,  0)│(1,  0)│                  │(254,  0)│(255,  0)│
   ▼  ├───────┼───────┘                  └─────────┼─────────┤
@@ -3016,8 +2940,7 @@ All other bits are set accordingly.</p>
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
            └───┴─┬─┴─┬─┴───┴───┴───┴───┴───┘ base address register
@@ -3033,8 +2956,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-8-3-2-1">Pattern name table</h4>
 
-<pre>
-  MSB     7   6   5   4   3   2   1   0    LSB
+<pre>  MSB     7   6   5   4   3   2   1   0    LSB
        ┌────┬───┬───┬───┬───┬───┬───┬───┐
     1  │    (  0,  0)   │   (  1,  0)   │  Base address
        ├────┼───┼───┼───┼───┼───┼───┼───┤
@@ -3063,8 +2985,7 @@ All other bits are set accordingly.</p>
 <h3 id="pt1-8-3-3">3.  Color register settings</h3>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
@@ -3087,8 +3008,7 @@ All other bits are set accordingly.</p>
     sprites, see the section on SPRITE MODE 2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3104,8 +3024,7 @@ All other bits are set accordingly.</p>
 <h2 id="pt1-8-4">Example of VRAM allocation in GRAPHIC 4 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │          │
         │          │
         │          │
@@ -3154,8 +3073,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-9-1">Characteristics</h2>
 
-<pre>
-- Bit-mapped Graphics Mode
+<pre>- Bit-mapped Graphics Mode
 - Screen size              : 512 (w) x 212 (h) dots
                            : 512 (w) x 192 (h) dots
 - Screen colors            : 4 colors out of 512 colors (per screen)
@@ -3166,8 +3084,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-9-2">Controls</h2>
 
-<pre>
-- Graphics                 : VRAM pattern name table
+<pre>- Graphics                 : VRAM pattern name table
 - Background color code    : Low-order four bits of R#7
 - Sprites                  : VRAM sprite attribute table, VRAM sprite
                              pattern table
@@ -3178,8 +3095,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-9-3-1">1.  Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 1*│ 0*│ 0*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3209,8 +3125,7 @@ All other bits are set accordingly.</p>
     selection of 4 colors out of 512 colors.</li>
 </ul>
 
-<pre>
-  ┌────► X
+<pre>  ┌────► X
   │  ┌───────┬───────┬..................┬─────────┬─────────┐
   │  │(0,  0)│(1,  0)│                  │(510,  0)│(511,  0)│
   ▼  ├───────┼───────┘                  └─────────┼─────────┤
@@ -3241,8 +3156,7 @@ All other bits are set accordingly.</p>
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │A16│A15│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
            └───┴─┬─┴─┬─┴───┴───┴───┴───┴───┘ base address register
@@ -3257,8 +3171,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-9-3-2-1">Pattern name table</h4>
 
-<pre>
-  MSB     7   6   5   4   3   2   1   0    LSB
+<pre>  MSB     7   6   5   4   3   2   1   0    LSB
        ┌────┬───┬───┬───┬───┬───┬───┬───┐
     1  │ ( 0, 0)│( 1, 0)│( 2, 0)│( 3, 0)│  Base address
        ├────┼───┼───┼───┼───┼───┼───┼───┤
@@ -3285,8 +3198,7 @@ All other bits are set accordingly.</p>
 <h3 id="pt1-9-3-3">3.  Color register settings</h3>
 
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
@@ -3306,8 +3218,7 @@ All other bits are set accordingly.</p>
     sprites, see the section on SPRITE MODE 2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3339,8 +3250,7 @@ All other bits are set accordingly.</p>
 </ul>
 
 
-<pre>
-           ┌──────── Even dots (0, 2, . . . 510)
+<pre>           ┌──────── Even dots (0, 2, . . . 510)
            │    ┌─── Odd dots  (1, 3, . . . 511)
            │    │
           ┌┴──┬─┴─┐
@@ -3369,8 +3279,7 @@ All other bits are set accordingly.</p>
 <h2 id="pt1-9-4">Example of VRAM allocation in GRAPHIC 5 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │          │
         │ Pattern  │
         │  name    │
@@ -3424,8 +3333,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-10-1">Characteristics</h2>
 
-<pre>
-- Bit-mapped Graphics Mode
+<pre>- Bit-mapped Graphics Mode
 - Screen size              : 512 (w) x 212 (h) dots
                            : 512 (w) x 192 (h) dots
 - Screen colors            : 16 colors out of 512 colors (per screen)
@@ -3438,8 +3346,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-10-2">Controls</h2>
 
-<pre>
-- Graphics                 : VRAM pattern name table
+<pre>- Graphics                 : VRAM pattern name table
 - Background color code    : Low-order four bits of R#7
 - Sprites                  : VRAM sprite attribute table, VRAM sprite
                              pattern table
@@ -3450,8 +3357,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-10-3-1">1.  Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 1*│ 0*│ 1*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3481,8 +3387,7 @@ All other bits are set accordingly.</p>
     of 16 colors out of 512 colors.</li>
 </ul>
 
-<pre>
-  ┌────► X
+<pre>  ┌────► X
   │  ┌───────┬───────┬..................┬─────────┬─────────┐
   │  │(0,  0)│(1,  0)│                  │(510,  0)│(511,  0)│
   ▼  ├───────┼───────┘                  └─────────┼─────────┤
@@ -3513,8 +3418,7 @@ All other bits are set accordingly.</p>
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │ 0 │A16│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
            └───┴───┴─┬─┴───┴───┴───┴───┴───┘ base address register
@@ -3529,8 +3433,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-10-3-2-1">Pattern name table</h4>
 
-<pre>
-  MSB     7   6   5   4   3   2   1   0    LSB
+<pre>  MSB     7   6   5   4   3   2   1   0    LSB
        ┌────┬───┬───┬───┬───┬───┬───┬───┐
     1  │    (  0,  0)   │   (  1,  0)   │  Base address
        ├────┼───┼───┼───┼───┼───┼───┼───┤
@@ -3557,8 +3460,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-10-3-3">3.  Color register settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
@@ -3578,8 +3480,7 @@ All other bits are set accordingly.</p>
     sprites, see the section on SPRITE MODE 2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3599,8 +3500,7 @@ All other bits are set accordingly.</p>
 <h2 id="pt1-10-4">Example of VRAM allocation in GRAPHIC 6 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │          │
         │ Pattern  │
         │ Name     │
@@ -3655,8 +3555,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-11-1">Characteristics</h2>
 
-<pre>
-- Bit-mapped Graphics Mode
+<pre>- Bit-mapped Graphics Mode
 - Screen size              : 256 (w) x 212 (h) dots
                            : 256 (w) x 192 (h) dots
 - Screen colors            : 256 colors (per screen)
@@ -3669,8 +3568,7 @@ All other bits are set accordingly.</p>
 
 <h2 id="pt1-11-2">Controls</h2>
 
-<pre>
-- Graphics                 : VRAM pattern name table
+<pre>- Graphics                 : VRAM pattern name table
 - Background color code    : Low-order four bits of R#7
 - Sprites                  : VRAM sprite attribute table, VRAM sprite
                              pattern table
@@ -3681,8 +3579,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-11-3-1">1.  Mode and Register Settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#0     │ 0 │DG │IE2│IE1│ 1*│ 1*│ 1*│ 0 │ Mode register 0
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3712,8 +3609,7 @@ All other bits are set accordingly.</p>
     256 colors.</li>
 </ul>
 
-<pre>
-  ┌────► X
+<pre>  ┌────► X
   │  ┌───────┬───────┬..................┬─────────┬─────────┐
   │  │(0,  0)│(1,  0)│                  │(254,  0)│(255,  0)│
   ▼  ├───────┼───────┘                  └─────────┼─────────┤
@@ -3744,8 +3640,7 @@ All other bits are set accordingly.</p>
     register R#2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#2     │ 0 │ 0 │A16│ 1 │ 1 │ 1 │ 1 │ 1 │ Pattern name table
            └───┴───┴─┬─┴───┴───┴───┴───┴───┘ base address register
@@ -3761,8 +3656,7 @@ All other bits are set accordingly.</p>
 
 <h4 id="pt1-11-3-2-1">Pattern name table</h4>
 
-<pre>
-  MSB     7   6   5   4   3   2   1   0    LSB
+<pre>  MSB     7   6   5   4   3   2   1   0    LSB
        ┌────┬───┬───┬───┬───┬───┬───┬───┐
     1  │    │   │ (   0,   0)   │   │   │  Base address
        ├────┼───┼───┼───┼───┼───┼───┼───┤
@@ -3791,8 +3685,7 @@ All other bits are set accordingly.</p>
 
 <h3 id="pt1-11-3-3">3.  Color register settings</h3>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0   LSB
+<pre>        MSB  7   6   5   4   3   2   1   0   LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#7     │TC3│TC2│TC1│TC0│BD3│BD2│BD1│BD0│ Text color/Back drop
            └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘ color register
@@ -3811,8 +3704,7 @@ All other bits are set accordingly.</p>
     sprites, see the section on SPRITE MODE 2.</li>
 </ul>
 
-<pre>
-        MSB  7   6   5   4   3   2   1   0  LSB
+<pre>        MSB  7   6   5   4   3   2   1   0  LSB
            ┌───┬───┬───┬───┬───┬───┬───┬───┐
    R#5     │A14│A13│A12│A11│A10│ 1 │ 1 │ 1 │ Sprite attribute table
            ╞═══╪═══╪═══╪═══╪═══╪═══╪═══╪═══╡
@@ -3831,8 +3723,7 @@ All other bits are set accordingly.</p>
 <h2 id="pt1-11-4">Example of VRAM allocation in GRAPHIC 7 mode</h2>
 
 
-<pre>
-00000H  ┌──────────┐
+<pre>00000H  ┌──────────┐
         │          │
         │ Pattern  │
         │ Name     │
@@ -4129,8 +4020,7 @@ in the table below.</p>
 	<tbody>
 		<tr>
 			<td>
-<pre>
-┌──────────────────────────┐
+<pre>┌──────────────────────────┐
 │(0,0)              (255,0)│
 │           Page 0         │
 │(0,255)          (255,255)│
@@ -4149,8 +4039,7 @@ in the table below.</p>
 └──────────────────────────┘
 </pre>			</td>
 			<td style="text-align: center; padding: 0 1em;">
-<pre>
-00000H
+<pre>00000H
 │
 │
 │
@@ -4169,8 +4058,7 @@ in the table below.</p>
 1FFFFH
 </pre>			</td>
 			<td>
-<pre>
-┌──────────────────────────┐
+<pre>┌──────────────────────────┐
 │(0,0)              (511,0)│
 │           Page 0         │
 │(0,255)          (511,255)│
@@ -4203,8 +4091,7 @@ in the table below.</p>
 	<tbody>
 		<tr>
 			<td>
-<pre>
-┌──────────────────────────┐
+<pre>┌──────────────────────────┐
 │(0,0)              (255,0)│
 │           Page 0         │
 │(0,255)          (255,255)│
@@ -4215,8 +4102,7 @@ in the table below.</p>
 └──────────────────────────┘
 </pre>			</td>
 			<td style="text-align: center; padding: 0 1em;">
-<pre>
-00000H
+<pre>00000H
 │
 │
 │
@@ -4227,8 +4113,7 @@ in the table below.</p>
 1FFFFH
 </pre>			</td>
 			<td>
-<pre>
-┌──────────────────────────┐
+<pre>┌──────────────────────────┐
 │(0,0)              (511,0)│
 │           Page 0         │
 │(0,255)          (511,255)│
@@ -4658,8 +4543,7 @@ single CRT horizontal line, up to 4 sprites with the highest priority
 are displayed, and the overlapping portions of sprites with lower
 priorities are not displayed.</p>
 
-<pre>
-       ┌────────────────────────────────────────────────┐
+<pre>       ┌────────────────────────────────────────────────┐
        │                                                │
        │    ┌──┐               ┌──┐    ┌──┐             │
        │    │#1│   ┌──┐  ┌──┐  │#4│    :#5:    ....     │
@@ -4938,8 +4822,7 @@ single CRT horizontal line, up to 8 sprites with the highest priority
 are displayed, and the overlapping portions of sprites with lower
 priorities are not displayed.</p>
 
-<pre>
-       ┌────────────────────────────────────────────────┐
+<pre>       ┌────────────────────────────────────────────────┐
        │                                                │
        │ ┌──┐ ┌──┐           ┌──┐ ┌──┐ ┌──┐      ┌──┐   │
        │ │#0│ │#1│ ┌──┐ ┌──┐ │#4│ │#5│ │#6│ ┌──┐ :#8:.. │

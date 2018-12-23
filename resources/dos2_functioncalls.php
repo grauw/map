@@ -13,7 +13,6 @@
 <h1>MSX-DOS version 2 - function reference</h1>
 
 <pre>
-
                   M S X -- D O S   v e r s i o n  2
                   =================================
 
@@ -26,8 +25,7 @@
 </pre>
 
 
-<pre>
-CONTENTS                                       Page
+<pre>CONTENTS                                       Page
 
 1.    <a href="#c1">Introduction</a> ............................  3
 2.    <a href="#c2">List of functions</a> .......................  4
@@ -85,8 +83,7 @@ that the function may be safely called from a user disk error routine (see funct
 
 <p>List of MSX-DOS 2 Function Calls</p>
 
-<pre>
-     CPM MSX1  00h -  <a href="#_TERM0">Program terminate</a>
+<pre>     CPM MSX1  00h -  <a href="#_TERM0">Program terminate</a>
      CPM MSX1* 01h -  <a href="#_CONIN">Console input</a>
      CPM MSX1* 02h -  <a href="#_CONOUT">Console output</a>
      CPM MSX1* 03h -  <a href="#_AUXIN">Auxiliary input</a>
@@ -257,8 +254,7 @@ will always be correctly updated.</p>
 
   <h3 id="_TERM0">3.1   PROGRAM TERMINATE (00H)</h3>
 
-<pre>
-     Parameters:    C = 00H (_TERM0)
+<pre>     Parameters:    C = 00H (_TERM0)
      Results:       Does not return
 </pre>
 
@@ -275,8 +271,7 @@ what happens when a program terminates.  This function call never returns to the
 
   <h3 id="_CONIN">3.2   CONSOLE INPUT (01H)</h3>
 
-<pre>
-    Parameters:    C = 01H (_CONIN)
+<pre>    Parameters:    C = 01H (_CONIN)
     Results:     L=A = Character from keyboard
 </pre>
 
@@ -294,8 +289,7 @@ character.  Thus these characters will never be returned to the user by this fun
 
   <h3 id="_CONOUT">3.3   CONSOLE OUTPUT (02H)</h3>
 
-<pre>
-     Parameters:    C = 02H (_CONOUT)
+<pre>     Parameters:    C = 02H (_CONOUT)
                     E = Character to be output
      Results:       None
 </pre>
@@ -318,8 +312,7 @@ Any other character will be saved internally for a later "console input" functio
 
   <h3 id="_AUXIN">3.4   AUXILIARY INPUT (03H)</h3>
 
-<pre>
-     Parameters:    C = 03H (_AUXIN)
+<pre>     Parameters:    C = 03H (_AUXIN)
      Results:     L=A = Input character
 </pre>
 
@@ -335,8 +328,7 @@ file character ("Ctrl-Z").</p>
 
   <h3 id="_AUXOUT">3.5   AUXILIARY OUTPUT (04H)</h3>
 
-<pre>
-     Parameters:    C = 04H (_AUXOUT)
+<pre>     Parameters:    C = 04H (_AUXOUT)
                     E = Character to be output
      Results:       None
 </pre>
@@ -352,8 +344,7 @@ device has been installed then this function will simply throw the character awa
 
   <h3 id="_LSTOUT">3.6   PRINTER OUTPUT (05H)</h3>
 
-<pre>
-     Parameters:    C = 05H (_LSTOUT)
+<pre>     Parameters:    C = 05H (_LSTOUT)
                     E = Character to be output
       Results:      None
 </pre>
@@ -370,8 +361,7 @@ echoed to the printer with "Ctrl-P".</p>
 
   <h3 id="_DIRIO">3.7   DIRECT CONSOLE I/O (06H)</h3>
 
-<pre>
-     Parameters:    C = 06H (_DIRIO)
+<pre>     Parameters:    C = 06H (_DIRIO)
                     E = 00H...FEH - character for output
                       = FFH  - requests input
      Results:     A=L = input - 00H - no character ready
@@ -397,8 +387,7 @@ include TAB expansion so the effect on the screen is the same.</p>
 
   <h3 id="_DIRIN">3.8   DIRECT CONSOLE INPUT (07H)</h3>
 
-<pre>
-     Parameters:    C = 07H (_DIRIN)
+<pre>     Parameters:    C = 07H (_DIRIN)
      Results:     L=A = Input character
 </pre>
 
@@ -413,8 +402,7 @@ This function is not compatible with CP/M which uses this function number for "g
 
   <h3 id="_INNOE">3.9   CONSOLE INPUT WITHOUT ECHO (08H)</h3>
 
-<pre>
-     Parameters:    C = 08H (_INNOE)
+<pre>     Parameters:    C = 08H (_INNOE)
      Results:     L=A = Input character
 </pre>
 
@@ -429,8 +417,7 @@ compatible with CP/M which uses this function number for "set I/O byte".</p>
 
   <h3 id="_STROUT">3.10   STRING OUTPUT (09H)</h3>
 
-<pre>
-     Parameters:    C = 09H (_STROUT)
+<pre>     Parameters:    C = 09H (_STROUT)
                    DE = Address of string
      Results:       None
 </pre>
@@ -445,8 +432,7 @@ output routine (function call 02h).  The string is terminated by "$" (ASCII 24h)
 
   <h3 id="_BUFIN">3.11   BUFFERED LINE INPUT (0AH)</h3>
 
-<pre>
-     Parameters:    C = 0AH (_BUFIN)
+<pre>     Parameters:    C = 0AH (_BUFIN)
                    DE = Address of an input buffer
      Results:       None
 </pre>
@@ -473,8 +459,7 @@ echoed to the standard output and also to the printer if printer echo is enabled
 
   <h3 id="_CONST">3.12   CONSOLE STATUS (0BH)</h3>
 
-<pre>
-     Parameters:    C = 0BH (_CONST)
+<pre>     Parameters:    C = 0BH (_CONST)
      Results:     L=A = 00H if no key was pressed
                       = FFH if a key was pressed
 </pre>
@@ -503,8 +488,7 @@ functions 01h, 02h, 08h, 09h and 0Ah.</p>
 
   <h3 id="_CPMVER">3.13   RETURN VERSION NUMBER (0CH)</h3>
 
-<pre>
-     Parameters:    C = 0CH (_CPMVER)
+<pre>     Parameters:    C = 0CH (_CPMVER)
      Results:     L=A = 22H
                   H=B = 00H
 </pre>
@@ -519,8 +503,7 @@ version 2.2 in current systems.</p>
 
   <h3 id="_DSKRST">3.14   DISK RESET (0DH)</h3>
 
-<pre>
-     Parameters:    C = 0DH (_DSKRST)
+<pre>     Parameters:    C = 0DH (_DSKRST)
      Results:       None
 </pre>
 
@@ -535,8 +518,7 @@ also set back to its default value of 80h by this function.</p>
 
   <h3 id="_SELDSK">3.15   SELECT DISK (0EH)</h3>
 
-<pre>
-     Parameters:    C = 0EH (_SELDSK)
+<pre>     Parameters:    C = 0EH (_SELDSK)
                     E = Drive number.  0=A:  1=B:   etc.
      Results:     L=A = Number of drives (1...8)
 </pre>
@@ -553,8 +535,7 @@ register A but this will not include the RAM disk.</p>
 
   <h3 id="_FOPEN">3.16   OPEN FILE [FCB] (0FH)</h3>
 
-<pre>
-     Parameters:    C = 0FH (_FOPEN)
+<pre>     Parameters:    C = 0FH (_FOPEN)
                    DE = Pointer to unopened FCB 
      Results:     L=A = 0FFH if file not found
                       =   0  if file is found
@@ -602,8 +583,7 @@ to ensure correct accessing of the file if the original drive byte was zero (def
 
   <h3 id="_FCLOSE">3.17   CLOSE FILE [FCB] (10H)</h3>
 
-<pre>
-     Parameters:    C = 10H (_FCLOSE)
+<pre>     Parameters:    C = 10H (_FCLOSE)
                    DE = Pointer to opened FCB
      Results:     L=A = 0FFH if not successful
                       =   0  if successful
@@ -621,8 +601,7 @@ still be accessed after a close, so the function can be regarded as doing an "en
 
   <h3 id="_SFIRST">3.18   SEARCH FOR FIRST [FCB] (11H)</h3>
 
-<pre>
-     Parameters:    C = 11H (_SFIRST)
+<pre>     Parameters:    C = 11H (_SFIRST)
                    DE = Pointer to unopened FCB
      Results:     L=A = 0FFH if file not found
                       =   0  if file found.
@@ -662,8 +641,7 @@ generally specific to the CP/M filing system (such as "STAT").  Neither feature 
 
   <h3 id="_SNEXT">3.19   SEARCH FOR NEXT [FCB] (12H)</h3>
 
-<pre>
-     Parameters:    C = 12H (_SNEXT)
+<pre>     Parameters:    C = 12H (_SNEXT)
      Results:     L=A = 0FFH if file not found
                       =   0  if file found.
 </pre>
@@ -680,8 +658,7 @@ FIRST need not still exist.</p>
 
   <h3 id="_FDEL">3.20   DELETE FILE [FCB] (13H)</h3>
 
-<pre>
-     Parameters:    C = 13H (_FDEL)
+<pre>     Parameters:    C = 13H (_FDEL)
                   DE = Pointer to unopened FCB
      Results:     L=A = 0FFH if no files deleted
                       =   0  if files deleted OK
@@ -699,8 +676,7 @@ A return with A=FFh indicates that no files were deleted.</p>
 
   <h3 id="_RDSEQ">3.21   SEQUENTIAL READ [FCB] (14H)</h3>
 
-<pre>
-     Parameters:    C = 14H (_RDSEQ)
+<pre>     Parameters:    C = 14H (_RDSEQ)
                    DE = Pointer to opened FCB
      Results:     L=A = 01H if error (end of file)
                       =  0  if read was successful
@@ -724,8 +700,7 @@ zeroes when it is copied to the transient program's DTA address.</p>
 
   <h3 id="_WRSEQ">3.22   SEQUENTIAL WRITE [FCB] (15H)</h3>
 
-<pre>
-     Parameters:    C = 15H (_WRSEQ)
+<pre>     Parameters:    C = 15H (_WRSEQ)
                    DE = Pointer to opened FCB
      Results:     L=A = 01H if error (disk full)
                       =  0  if write was successful
@@ -743,8 +718,7 @@ extent.  The file size in the FCB is also updated if the file is extended.</p>
 
   <h3 id="_FMAKE">3.23   CREATE FILE [FCB] (16H)</h3>
 
-<pre>
-     Parameters:    C = 16H (_FMAKE)
+<pre>     Parameters:    C = 16H (_FMAKE)
                    DE = Pointer to unopened FCB
      Results:     L=A = 0FFH if unsuccessful
                       =   0  if successful   
@@ -772,8 +746,7 @@ OPEN function call had been done.</p>
 
   <h3 id="_FREN">3.24   RENAME FILE [FCB] (17H)</h3>
 
-<pre>
-     Parameters:    C = 17H (_FREN)
+<pre>     Parameters:    C = 17H (_FREN)
                    DE = Pointer to unopened FCB
      Results:     L=A = 0FFH not if successful
                       =   0  if successful
@@ -793,8 +766,7 @@ being created. Entries for sub-directories, hidden files and system files will n
 
   <h3 id="_LOGIN">3.25   GET LOGIN VECTOR (18H)</h3>
 
-<pre>
-     Parameters:    C = 18H (_LOGIN)
+<pre>     Parameters:    C = 18H (_LOGIN)
      Results:      HL = Login vector
 </pre>
 
@@ -809,8 +781,7 @@ supported by the system currently, so register H will usually be zero on return.
 
   <h3 id="_CURDRV">3.26   GET CURRENT DRIVE (19H)</h3>
 
-<pre>
-     Parameters:    C = 19H (_CURDRV)
+<pre>     Parameters:    C = 19H (_CURDRV)
      Results:     L=A = Current drive (0=A: etc)
 </pre>
 
@@ -822,8 +793,7 @@ supported by the system currently, so register H will usually be zero on return.
 
   <h3 id="_SETDTA">3.27   SET DISK TRANSFER ADDRESS (1AH)</h3>
 
-<pre>
-     Parameters:    C = 1AH (_SETDTA)
+<pre>     Parameters:    C = 1AH (_SETDTA)
                    DE = Required Disk Transfer Address
      Results:       None
 </pre>
@@ -840,8 +810,7 @@ the new MSX-DOS read and write functions.  The address is set back to 80h by a D
 
   <h3 id="_ALLOC">3.28   GET ALLOCATION INFORMATION (1BH)</h3>
 
-<pre>
-     Parameters:    C = 1BH (_ALLOC)
+<pre>     Parameters:    C = 1BH (_ALLOC)
                     E = Drive number (0=current, 1=A: etc)
      Results:       A = Sectors per cluster
                    BC = Sector size (always 512)
@@ -864,8 +833,7 @@ and the data there will only remain valid until the next MSX-DOS call.</p>
 
   <h3 id="_RDRND">3.29   RANDOM READ [FCB] (21H)</h3>
 
-<pre>
-     Parameters:    C = 21H (_RDRND)
+<pre>     Parameters:    C = 21H (_RDRND)
                    DE = Pointer to opened FCB
      Results:     L=A = 01H if error (end of file)
                          0  if read was successful
@@ -889,8 +857,7 @@ The record count byte is also set up correctly for the extent.</p>
 
   <h3 id="_WRRND">3.30   RANDOM WRITE [FCB] (22H)</h3>
 
-<pre>
-     Parameters:    C = 22H (_WRRND)
+<pre>     Parameters:    C = 22H (_WRRND)
                    DE = Pointer to opened FCB
      Results:     L=A = 01H if error (disk full)
                       =  0  if no error 
@@ -912,8 +879,7 @@ file is being extended or if the write goes into a new extent.</p>
 
   <h3 id="_FSIZE">3.31   GET FILE SIZE [FCB] (23H)</h3>
 
-<pre>
-     Parameters:    C = 23H (_FSIZE)
+<pre>     Parameters:    C = 23H (_FSIZE)
                    DE = Pointer to unopened FCB
      Results:     L=A = 0FFH if file not found
                       =   0  if file found OK
@@ -932,8 +898,7 @@ record number is not altered.</p>
 
   <h3 id="_SETRND">3.32   SET RANDOM RECORD [FCB] (24H)</h3>
 
-<pre>
-     Parameters:    C = 24H (_SETRND)
+<pre>     Parameters:    C = 24H (_SETRND)
                    DE = Pointer to opened FCB
      Results:       None
 </pre>
@@ -949,8 +914,7 @@ No check is done as to whether the record actually exists in the file.</p>
 
   <h3 id="_WRBLK">3.33   RANDOM BLOCK WRITE [FCB] (26H)</h3>
 
-<pre>
-     Parameters:    C = 26H (_WRBLK)
+<pre>     Parameters:    C = 26H (_WRBLK)
                    DE = Pointer to opened FCB
                    HL = Number of records to write
      Results:       A = 01H if error 
@@ -991,8 +955,7 @@ Additional disk space allocated in this way will not be initialized to any parti
 
   <h3 id="_RDBLK">3.34   RANDOM BLOCK READ [FCB] (27H)</h3>
 
-<pre>
-     Parameters:    C = 27H (_RDBLK)
+<pre>     Parameters:    C = 27H (_RDBLK)
                    DE = Pointer to opened FCB
                    HL = Number of records to read
      Results:       A = 01H if error (usually caused by end-of-file)
@@ -1022,8 +985,7 @@ the first record not read, ie. the value returned in HL is added on to it.</p>
 
   <h3 id="_WRZER">3.35   RANDOM WRITE WITH ZERO FILL [FCB] (28H)</h3>
 
-<pre>
-     Parameters:    C = 28H (_WRZER)
+<pre>     Parameters:    C = 28H (_WRZER)
                    DE = Pointer to opened FCB
      Results:     L=A = 01H if error
                       = 00H if no error
@@ -1040,8 +1002,7 @@ extended, any extra allocated disk clusters will be filled with zeroes before wr
 
   <h3 id="_GDATE">3.36   GET DATE (2AH)</h3>
 
-<pre>
-     Parameters:    C = 2AH (_GDATE)
+<pre>     Parameters:    C = 2AH (_GDATE)
      Results:      HL = Year 1980...2079
                     D = Month (1=Jan...12=Dec)
                     E = Date (1...31)
@@ -1056,8 +1017,7 @@ extended, any extra allocated disk clusters will be filled with zeroes before wr
 
   <h3 id="_SDATE">3.37   SET DATE (2BH)</h3>
 
-<pre>
-     Parameters:    C = 2BH (_SDATE)
+<pre>     Parameters:    C = 2BH (_SDATE)
                    HL = Year 1980...2079
                     D = Month (1=Jan...12=Dec)
                     E = Date (1...31)
@@ -1077,8 +1037,7 @@ time clock chip so it will be remembered when the machine is turned off.</p>
 
   <h3 id="_GTIME">3.38   GET TIME (2CH)</h3>
 
-<pre>
-     Parameters:    C = 2CH (_GTIME)
+<pre>     Parameters:    C = 2CH (_GTIME)
      Results:       H = Hours (0...23)
                     L = Minutes (0...59)
                     D = Seconds (0...59)
@@ -1093,8 +1052,7 @@ time clock chip so it will be remembered when the machine is turned off.</p>
 
   <h3 id="_STIME">3.39   SET TIME (2DH)</h3>
 
-<pre>
-     Parameters:    C = 2DH (_STIME)
+<pre>     Parameters:    C = 2DH (_STIME)
                     H = Hours (0...23)
                     L = Minutes (0...59)
                     D = Seconds (0...59)
@@ -1115,8 +1073,7 @@ correct when the machine is turned off.</p>
 
   <h3 id="_VERIFY">3.40   SET/RESET VERIFY FLAG (2EH)</h3>
 
-<pre>
-     Parameters:    C = 2EH (_VERIFY)
+<pre>     Parameters:    C = 2EH (_VERIFY)
                     E =  0 to disable verify
                       &lt;&gt; 0 to enable verify  
      Results:       None
@@ -1134,8 +1091,7 @@ if the driver does not support it.</p>
 
   <h3 id="_RDABS">3.41   ABSOLUTE SECTOR READ (2FH)</h3>
 
-<pre>
-     Parameters:    C = 2FH (_RDABS)
+<pre>     Parameters:    C = 2FH (_RDABS)
                    DE = Sector number
                     L = Drive number (0=A: etc.)
                     H = Number of sectors to read
@@ -1154,8 +1110,7 @@ reported by the system in the usual way.</p>
 
   <h3 id="_WRABS">3.42   ABSOLUTE SECTOR WRITE (30H)</h3>
 
-<pre>
-     Parameters:    C = 30H (_WRABS)
+<pre>     Parameters:    C = 30H (_WRABS)
                    DE = Sector number
                     L = Drive number (0=A: etc.)
                     H = Number of sectors to write
@@ -1174,8 +1129,7 @@ reported by the system in the usual way.</p>
 
   <h3 id="_DPARM">3.43   GET DISK PARAMETERS (31H)</h3>
 
-<pre>
-     Parameters:    C = 31H (_DPARM)
+<pre>     Parameters:    C = 31H (_DPARM)
                    DE = Pointer to 32 byte buffer
                     L = Drive number (0=default, 1=A: etc.)
      Results:       A = Error code
@@ -1189,8 +1143,7 @@ to do absolute sector reads and writes, in order for them to be able to interpre
 numbers.  The parameters returned contain some redundant information in order to provide parameters 
 which are most useful to transient programs.  The format of the returned parameter block is:</p>
 
-<pre>
-     DE+0      - Physical drive number (1=A: etc)
+<pre>     DE+0      - Physical drive number (1=A: etc)
      DE+1,2    - Sector size (always 512 currently)
      DE+3      - Sectors per cluster (non-zero power of 2)
      DE+4,5    - Number of reserved sectors (usually 1)
@@ -1215,8 +1168,7 @@ command. It is reset when the file allocation is done.</p>
 
   <h3 id="_FFIRST">3.44   FIND FIRST ENTRY (40H)</h3>
 
-<pre>
-     Parameters:    C = 40H (_FFIRST) 
+<pre>     Parameters:    C = 40H (_FFIRST) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                         HL = filename ASCIIZ string (only if
@@ -1261,8 +1213,7 @@ this case when a match is found the new fileinfo block will overwrite the old on
 
   <h3 id="_FNEXT">3.45   FIND NEXT ENTRY (41H)</h3>
 
-<pre>
-     Parameters:    C = 41H (_FNEXT) 
+<pre>     Parameters:    C = 41H (_FNEXT) 
                         IX = Pointer to fileinfo block from
                              previous find first function. 
      Results:       A = Error
@@ -1281,8 +1232,7 @@ otherwise the fileinfo block is filled in with the information about the new mat
 
   <h3 id="_FNEW">3.46   FIND NEW ENTRY (42H)</h3>
 
-<pre>
-     Parameters:    C = 42H (_FNEW) 
+<pre>     Parameters:    C = 42H (_FNEW) 
                         DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                         HL = filename ASCIIZ string (only if
@@ -1354,8 +1304,7 @@ exactly as if it had been returned from a "find first" function.</p>
 
   <h3 id="_OPEN">3.47   OPEN FILE HANDLE (43H)</h3>
 
-<pre>
-     Parameters:    C = 43H (_OPEN) 
+<pre>     Parameters:    C = 43H (_OPEN) 
                         DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                     A = Open mode. b0 set => no write
@@ -1395,8 +1344,7 @@ reading from devices in binary mode because there is no end of file condition.</
 
   <h3 id="_CREATE">3.48   CREATE FILE HANDLE (44H)</h3>
 
-<pre>
-     Parameters:    C = 44H (_CREATE) 
+<pre>     Parameters:    C = 44H (_CREATE) 
                         DE = Drive/path/file ASCIIZ string
                     A = Open mode. b0 set => no write
                                    b1 set => no read
@@ -1437,8 +1385,7 @@ be returned as 0FFh which can never be a valid file handle.</p>
 
   <h3 id="_CLOSE">3.49   CLOSE FILE HANDLE (45H)</h3>
 
-<pre>
-     Parameters:    C = 45H (_CLOSE) 
+<pre>     Parameters:    C = 45H (_CLOSE) 
                     B = File handle
      Results:       A = Error
 </pre>
@@ -1456,8 +1403,7 @@ file handle will return an error.  If there are any other copies of this file ha
 
   <h3 id="_ENSURE">3.50   ENSURE FILE HANDLE (46H)</h3>
 
-<pre>
-     Parameters:    C = 46H (_ENSURE) 
+<pre>     Parameters:    C = 46H (_ENSURE) 
                     B = File handle
      Results:       A = Error
 </pre>
@@ -1474,8 +1420,7 @@ file, and the current file pointer setting will not be altered.</p>
 
   <h3 id="_DUP">3.51   DUPLICATE FILE HANDLE (47H)</h3>
 
-<pre>
-     Parameters:    C = 47H (_DUP) 
+<pre>     Parameters:    C = 47H (_DUP) 
                     B = File handle
      Results:       A = Error
                     B = New file handle
@@ -1503,8 +1448,7 @@ ensured or deleted) then an ".FDEL" error will be returned.</p>
 
   <h3 id="_READ">3.52   READ FROM FILE HANDLE (48H)</h3>
 
-<pre>
-     Parameters:    C = 48H (_READ) 
+<pre>     Parameters:    C = 48H (_READ) 
                     B = File handle
                    DE = Buffer address
                    HL = Number of bytes to read  
@@ -1567,8 +1511,7 @@ another line input.  The end of file condition is thus not permanent.</p>
 
   <h3 id="_WRITE">3.53   WRITE TO FILE HANDLE (49H)</h3>
 
-<pre>
-     Parameters:    C = 49H (_WRITE) 
+<pre>     Parameters:    C = 49H (_WRITE) 
                     B = File handle
                    DE = Buffer address
                    HL = Number of bytes to write
@@ -1612,8 +1555,7 @@ Also printer echo if enabled will only be done in ASCII mode.</p>
 
   <h3 id="_SEEK">3.54   MOVE FILE HANDLE POINTER (4AH)</h3>
 
-<pre>
-     Parameters:    C = 4AH (_SEEK) 
+<pre>     Parameters:    C = 4AH (_SEEK) 
                     B = File handle
                     A = Method code
                 DE:HL = Signed offset
@@ -1626,8 +1568,7 @@ Also printer echo if enabled will only be done in ASCII mode.</p>
 code and offset, and the new pointer value returned in DE:HL.  The method code specifies where the 
 signed offset is relative to as follows:</p>
 
-<pre>
-     A=0  Relative to the beginning of the file
+<pre>     A=0  Relative to the beginning of the file
      A=1  Relative to the current position
      A=2  Relative to the end of the file.
 </pre>
@@ -1650,8 +1591,7 @@ unlikely to be useful.</p>
 
   <h3 id="_IOCTL">3.55   I/O CONTROL FOR DEVICES (4BH)</h3>
 
-<pre>
-     Parameters:    C = 4BH (_IOCTL) 
+<pre>     Parameters:    C = 4BH (_IOCTL) 
                     B = File handle
                     A = Sub-function code
                         00H => get file handle status
@@ -1682,8 +1622,7 @@ handles and disk file handles, and bit-7 specifies which it is.  The format of t
 follows:</p>
 
 
-<pre>
-For devices:    DE -     b0  set  => console input device
+<pre>For devices:    DE -     b0  set  => console input device
                          b1  set  => console output device
                      b2..b4  reserved
                          b5  set  => ASCII mode
@@ -1729,8 +1668,7 @@ to decide how many files to print per line, and a value of zero for register E i
 
   <h3 id="_HTEST">3.56   TEST FILE HANDLE (4CH)</h3>
 
-<pre>
-     Parameters:    C = 4CH (_HTEST)
+<pre>     Parameters:    C = 4CH (_HTEST)
                     B = File handle
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
@@ -1757,8 +1695,7 @@ programs which need to do similar tests.</p>
 
   <h3 id="_DELETE">3.57   DELETE FILE OR SUBDIRECTORY (4DH)</h3>
 
-<pre>
-     Parameters:    C = 4DH (_DELETE) 
+<pre>     Parameters:    C = 4DH (_DELETE) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
      Results:       A = Error
@@ -1789,8 +1726,7 @@ actually be deleted.</p>
 
   <h3 id="_RENAME">3.58   RENAME FILE OR SUBDIRECTORY (4EH)</h3>
 
-<pre>
-     Parameters:    C = 4EH (_RENAME) 
+<pre>     Parameters:    C = 4EH (_RENAME) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                    HL = New filename ASCIIZ string 
@@ -1826,8 +1762,7 @@ Therefore care must be taken in using the fileinfo block after making this funct
 
   <h3 id="_MOVE">3.59   MOVE FILE OR SUBDIRECTORY (4FH)</h3>
 
-<pre>
-     Parameters:    C = 4FH (_MOVE) 
+<pre>     Parameters:    C = 4FH (_MOVE) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                    HL = New path ASCIIZ string 
@@ -1861,8 +1796,7 @@ operations on it such as "rename" or "open".</p>
 
   <h3 id="_ATTR">3.60   GET/SET FILE ATTRIBUTES (50H)</h3>
 
-<pre>
-     Parameters:    C = 50H (_ATTR) 
+<pre>     Parameters:    C = 50H (_ATTR) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                     A = 0 => get attributes
@@ -1898,8 +1832,7 @@ will not actually be changed (since it does not have any).</p>
 
   <h3 id="_FTIME">3.61   GET/SET FILE DATE AND TIME (51H)</h3>
 
-<pre>
-     Parameters:    C = 51H (_FTIME) 
+<pre>     Parameters:    C = 51H (_FTIME) 
                    DE = Drive/path/file ASCIIZ string
                                 or fileinfo block pointer
                     A = 0 => get date and time
@@ -1936,8 +1869,7 @@ there is a file handle open to the file (".FOPEN" error).</p>
 
   <h3 id="_HDELETE">3.62   DELETE FILE HANDLE (52H)</h3>
 
-<pre>
-     Parameters:    C = 52H (_HDELETE) 
+<pre>     Parameters:    C = 52H (_HDELETE) 
                     B = File handle
      Results:       A = Error
 </pre>
@@ -1959,8 +1891,7 @@ such as ".FILRO" or ".FOPEN".</p>
 
   <h3 id="_HRENAME">3.63   RENAME FILE HANDLE (53H)</h3>
 
-<pre>
-     Parameters:    C = 53H (_HRENAME) 
+<pre>     Parameters:    C = 53H (_HRENAME) 
                     B = File handle
                    HL = New filename ASCIIZ string 
      Results:       A = Error
@@ -1983,8 +1914,7 @@ will do an implicit "ensure" operation.</p>
 
   <h3 id="_HMOVE">3.64   MOVE FILE HANDLE (54H)</h3>
 
-<pre>
-     Parameters:    C = 54H (_HMOVE) 
+<pre>     Parameters:    C = 54H (_HMOVE) 
                     B = File handle
                    HL = New path ASCIIZ string 
      Results:       A = Error
@@ -2007,8 +1937,7 @@ an implicit "ensure" operation.</p>
 
   <h3 id="_HATTR">3.65   GET/SET FILE HANDLE ATTRIBUTES (55H)</h3>
 
-<pre>
-     Parameters:    C = 55H (_HATTR) 
+<pre>     Parameters:    C = 55H (_HATTR) 
                     B = File handle
                     A = 0 => get attributes
                         1 => set attributes
@@ -2033,8 +1962,7 @@ altered but an implicit "ensure" operation will be done.</p>
 
   <h3 id="_HFTIME">3.66   GET/SET FILE HANDLE DATE AND TIME (56H)</h3>
 
-<pre>
-     Parameters:    C = 56H (_HFTIME) 
+<pre>     Parameters:    C = 56H (_HFTIME) 
                     B = File handle
                     A = 0 => get date and time
                         1 => set date and time 
@@ -2063,8 +1991,7 @@ altered but an implicit "ensure" operation will be done.</p>
 
   <h3 id="_GETDTA">3.67   GET DISK TRANSFER ADDRESS (57H)</h3>
 
-<pre>
-     Parameters:    C = 57H (_GETDTA) 
+<pre>     Parameters:    C = 57H (_GETDTA) 
      Results:      DE = Current disk transfer address
 </pre>
 
@@ -2078,8 +2005,7 @@ altered but an implicit "ensure" operation will be done.</p>
 
   <h3 id="_GETVFY">3.68   GET VERIFY FLAG SETTING (58H)</h3>
 
-<pre>
-     Parameters:    C = 58H (_GETVFY) 
+<pre>     Parameters:    C = 58H (_GETVFY) 
      Results:       B = 00H => verify disabled
                         FFH => verify enabled
 </pre>
@@ -2094,8 +2020,7 @@ function 2Eh.</p>
 
   <h3 id="_GETCD">3.69   GET CURRENT DIRECTORY (59H)</h3>
 
-<pre>
-     Parameters:    C = 59H (_GETCD) 
+<pre>     Parameters:    C = 59H (_GETCD) 
                     B = Drive number (0=current, 1=A: etc)
                    DE = Pointer to 64 byte buffer 
      Results:       A = Error
@@ -2115,8 +2040,7 @@ the current directory will be set back to the root and a null string returned.</
 
   <h3 id="_CHDIR">3.70   CHANGE CURRENT DIRECTORY (5AH)</h3>
 
-<pre>
-     Parameters:    C = 5AH (_CHDIR) 
+<pre>     Parameters:    C = 5AH (_CHDIR) 
                    DE = Drive/path/file ASCIIZ string
      Results:       A = Error
 </pre>
@@ -2132,8 +2056,7 @@ current setting will be unaltered and a ".NODIR" error returned.</p>
 
   <h3 id="_PARSE">3.71   PARSE PATHNAME (5BH)</h3>
 
-<pre>
-     Parameters:    C = 5BH (_PARSE) 
+<pre>     Parameters:    C = 5BH (_PARSE) 
                     B = Volume name flag (bit 4)
                    DE = ASCIIZ string for parsing
      Results:       A = Error
@@ -2177,8 +2100,7 @@ volume name bits 1, 4, 5, 6 and 7 will always be clear.  For a filename, bits 3 
 last item on the string (the "filename" component).  The bit assignments are as follows:</p>  
 
 
-<pre>
-b0 - set if any characters parsed other than drive name
+<pre>b0 - set if any characters parsed other than drive name
 b1 - set if any directory path specified
 b2 - set if drive name specified
 b3 - set if main filename specified in last item
@@ -2193,8 +2115,7 @@ b7 - set if last item is ".."
 
   <h3 id="_PFILE">3.72   PARSE FILENAME (5CH)</h3>
 
-<pre>
-     Parameters:    C = 5CH (_PFILE) 
+<pre>     Parameters:    C = 5CH (_PFILE) 
                    DE = ASCIIZ string for parsing
                    HL = Pointer to 11 byte buffer
      Results:       A = Error (always zero)
@@ -2227,8 +2148,7 @@ valid filename character (see the "Command Specification" for details of valid f
 
   <h3 id="_CHKCHR">3.73   CHECK CHARACTER (5DH)</h3>
 
-<pre>
-     Parameters:    C = 5DH (_CHKCHR) 
+<pre>     Parameters:    C = 5DH (_CHKCHR) 
                     D = Character flags
                     E = Character to be checked
      Results:       A = 0 (never returns an error)
@@ -2241,8 +2161,7 @@ valid filename character (see the "Command Specification" for details of valid f
 16-bit characters and manipulation of filenames.  The bit assignments in the character flags are as 
 follows:</p>
 
-<pre>
-   b0   - set to suppress upper casing
+<pre>   b0   - set to suppress upper casing
    b1   - set if first byte of 16-bit character
    b2   - set if second byte of 16-bit character
    b3   - set => volume name (rather than filename)
@@ -2272,8 +2191,7 @@ filename terminators.</p>
 
   <h3 id="_WPATH">3.74   GET WHOLE PATH STRING (5EH)</h3>
 
-<pre>
-     Parameters:    C = 5EH (_WPATH) 
+<pre>     Parameters:    C = 5EH (_WPATH) 
                    DE = Pointer to 64 byte buffer 
      Results:       A = Error
                    DE = Filled in with whole path string
@@ -2308,8 +2226,7 @@ relates.</p>
 
   <h3 id="_FLUSH">3.75   FLUSH DISK BUFFERS (5FH)</h3>
 
-<pre>
-     Parameters:    C = 5FH (_FLUSH) 
+<pre>     Parameters:    C = 5FH (_FLUSH) 
                     B = Drive number (0=current, FFH=all)
                     D = 00H => Flush only
                       = FFH => Flush and invalidate 
@@ -2327,8 +2244,7 @@ If register D is FFh then all buffers for that drive will also be invalidated.</
 
   <h3 id="_FORK">3.76   FORK TO CHILD PROCESS (60H)</h3>
 
-<pre>
-     Parameters:    C = 60H (_FORK) 
+<pre>     Parameters:    C = 60H (_FORK) 
      Results:       A = Error
                     B = Process id of parent process
 </pre>
@@ -2362,8 +2278,7 @@ still be there.</p>
 
   <h3 id="_JOIN">3.77   REJOIN PARENT PROCESS (61H)</h3>
 
-<pre>
-     Parameters:    C = 61H (_JOIN) 
+<pre>     Parameters:    C = 61H (_JOIN) 
                     B = Process id of parent, or zero
      Results:       A = Error
                     B = Primary error code from child
@@ -2408,8 +2323,7 @@ meaning of the primary and secondary error code.</p>
 
   <h3 id="_TERM">3.78   TERMINATE WITH ERROR CODE (62H)</h3>
 
-<pre>
-     Parameters:    C = 62H (_TERM) 
+<pre>     Parameters:    C = 62H (_TERM) 
                     B = Error code for termination
      Results:       Does not return
 </pre>
@@ -2441,8 +2355,7 @@ not return the error code.</p>
 
   <h3 id="_DEFAB">3.79   DEFINE ABORT EXIT ROUTINE (63H)</h3>
 
-<pre>
-     Parameters:    C = 63H (_DEFAB) 
+<pre>     Parameters:    C = 63H (_DEFAB) 
                    DE = Address of abort exit routine 
                         0000H to un-define routine 
      Results:       A = 0 (never generates errors)
@@ -2495,8 +2408,7 @@ error occurred.  This may be useful in conjunction with a disk error handler rou
 
   <h3 id="_DEFER">3.80   DEFINE DISK ERROR HANDLER ROUTINE (64H)</h3>
 
-<pre>
-     Parameters:    C = 64H (_DEFER) 
+<pre>     Parameters:    C = 64H (_DEFER) 
                    DE = Address of disk error routine
                         0000H to un-define routine 
      Results:       A = 0 (never generates errors)
@@ -2523,8 +2435,7 @@ then get control and this may do whatever it wants to.</p>
 
 
 
-<pre>
-     Parameters:    A = Error code which caused error
+<pre>     Parameters:    A = Error code which caused error
                     B = Physical drive 
                     C = b0 - set if writing
                         b1 - set if ignore not recommended
@@ -2542,8 +2453,7 @@ then get control and this may do whatever it wants to.</p>
 
   <h3 id="_ERROR">3.81   GET PREVIOUS ERROR CODE (65H)</h3>
 
-<pre>
-     Parameters:    C = 65H (_ERROR) 
+<pre>     Parameters:    C = 65H (_ERROR) 
      Results:       A = 0
                     B = Error code from previous function
 </pre>
@@ -2561,8 +2471,7 @@ reasons for the failure and doing this function call will return the appropriate
 
   <h3 id="_EXPLAIN">3.82   EXPLAIN ERROR CODE (66H)</h3>
 
-<pre>
-     Parameters:    C = 66H (_EXPLAIN) 
+<pre>     Parameters:    C = 66H (_EXPLAIN) 
                     B = Error code to be explained
                    DE = Pointer to 64 byte string buffer
      Results:       A = 0
@@ -2591,8 +2500,7 @@ form: "System error 194" or "User error 45" will be returned, and register B wil
 
   <h3 id="_FORMAT">3.83   FORMAT A DISK (67H)</h3>
 
-<pre>
-     Parameters:    C = 67H (_FORMAT)
+<pre>     Parameters:    C = 67H (_FORMAT)
                     B = Drive number (0=>current, 1=>A:)
                     A =    00H    => return choice string
                         01H...09H => format this choice
@@ -2648,8 +2556,7 @@ damaged by this function.</p>
 
   <h3 id="_RAMD">3.84   CREATE OR DESTROY RAMDISK (68H)</h3>
 
-<pre>
-     Parameters:    C = 68H (_RAMD) 
+<pre>     Parameters:    C = 68H (_RAMD) 
                     B =     00H => destroy RAM disk
                         1...FEH => create new RAM disk
                             FFH => return RAM disk size
@@ -2682,8 +2589,7 @@ in the system.</p>
 
   <h3 id="_BUFFER">3.85   ALLOCATE SECTOR BUFFERS (69H)</h3>
 
-<pre>
-     Parameters:    C = 69H (_BUFFER) 
+<pre>     Parameters:    C = 69H (_BUFFER) 
                     B = 0 => return number of buffers
                         else number of buffers required
      Results:       A = Error
@@ -2708,8 +2614,7 @@ maximum number of buffers will be about 20.</p>
 
   <h3 id="_ASSIGN">3.86   LOGICAL DRIVE ASSIGNMENT (6AH)</h3>
 
-<pre>
-     Parameters:    C = 6AH (_ASSIGN) 
+<pre>     Parameters:    C = 6AH (_ASSIGN) 
                     B = Logical drive number (1=A: etc)
                     D = Physical drive number (1=A: etc)
      Results:       A = Error
@@ -2741,8 +2646,7 @@ corresponding logical drive.</p>
 
   <h3 id="_GENV">3.87   GET ENVIRONMENT ITEM (6BH)</h3>
 
-<pre>
-     Parameters:    C = 6BH (_GENV)
+<pre>     Parameters:    C = 6BH (_GENV)
                    HL = ASCIIZ name string
                    DE = Pointer to buffer for value
                     B = Size of buffer
@@ -2765,8 +2669,7 @@ null).</p>
 
   <h3 id="_SENV">3.88   SET ENVIRONMENT ITEM (6CH)</h3>
 
-<pre>
-     Parameters:    C = 6CH (_SENV)
+<pre>     Parameters:    C = 6CH (_SENV)
                    HL = ASCIIZ name string
                    DE = ASCIIZ value string
      Results:       A = 
@@ -2785,8 +2688,7 @@ environment list.  If the value string is null then the environment item will be
 
   <h3 id="_FENV">3.89   FIND ENVIRONMENT ITEM (6DH)</h3>
 
-<pre>
-     Parameters:    C = 6DH (_FENV)
+<pre>     Parameters:    C = 6DH (_FENV)
                    DE = Environment item number
                    HL = Pointer to buffer for name string
      Results:       A = Error
@@ -2808,8 +2710,7 @@ number &lt;DE&gt; then a null string will be returned, since an item can never h
 
   <h3 id="_DSKCHK">3.90   GET/SET DISK CHECK STATUS (6EH)</h3>
 
-<pre>
-     Parameters:    C = 6EH (_DSKCHK)
+<pre>     Parameters:    C = 6EH (_DSKCHK)
                     A = 00H => get disk check status
                         01H => set disk check status
                     B = 00H => enable (only if A=01H)
@@ -2837,8 +2738,7 @@ difference and the additional security is well worth having.</p>
 
   <h3 id="_DOSVER">3.91   GET MSX-DOS VERSION NUMBER (6FH)</h3>
 
-<pre>
-     Parameters:    C = 6FH (_DOSVER)
+<pre>     Parameters:    C = 6FH (_DOSVER)
      Results:       A = Error (always zero)
                    BC = MSX-DOS kernel version
                    DE = MSXDOS2.SYS version number
@@ -2864,8 +2764,7 @@ version in register DE.</p>
 
   <h3 id="_REDIR">3.92   GET/SET REDIRECTION STATE (70H)</h3>
 
-<pre>
-     Parameters:    C = 70H (_REDIR)
+<pre>     Parameters:    C = 70H (_REDIR)
                     A = 00H => get redirection state
                         01H => set redirection state
                     B = New state.   b0 - standard input

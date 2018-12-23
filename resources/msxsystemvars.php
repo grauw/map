@@ -55,8 +55,7 @@
   <td>#002B</td>
   <td>1</td>
   <td>Basic ROM version
-<pre>
-7 6 5 4 3 2 1 0
+<pre>7 6 5 4 3 2 1 0
 │ │ │ │ └─┴─┴─┴── Character set
 │ │ │ │           0 = Japanese, 1 = International, 2=Korean
 │ └─┴─┴────────── Date format
@@ -71,8 +70,7 @@
   <td>#002C</td>
   <td>1</td>
   <td>Basic ROM version
-<pre>
-7 6 5 4 3 2 1 0
+<pre>7 6 5 4 3 2 1 0
 │ │ │ │ └─┴─┴─┴── Keyboard type
 │ │ │ │           0 = Japanese, 1 = International
 │ │ │ │           2 = French (AZERTY), 3 = UK, 4 = German (DIN)
@@ -582,8 +580,7 @@
   <td>#F3E8</td>
   <td>1</td>
   <td>Information about trigger buttons and space bar state
-<pre>
-7 6 5 4 3 2 1 0
+<pre>7 6 5 4 3 2 1 0
 │ │ │ │       └── Space bar, trig(0) (0 = pressed)
 │ │ │ └────────── Stick 1, Trigger 1 (0 = pressed)
 │ │ └──────────── Stick 1, Trigger 2 (0 = pressed)
@@ -1131,8 +1128,7 @@
   <td>1</td>
   <td>
     <p>Secondary slot select register, if the slot is expanded.</p>
-<pre>
-7 6 5 4 3 2 1 0
+<pre>7 6 5 4 3 2 1 0
 │ │ │ │ │ │ └─┴── Secondary slot for page 0 (#0000-#3FFF)
 │ │ │ │ └─┴────── Secondary slot for page 1 (#4000-#7FFF)
 │ │ └─┴────────── Secondary slot for page 2 (#8000-#BFFF)

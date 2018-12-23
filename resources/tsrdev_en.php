@@ -695,8 +695,7 @@ Out:      HL = Segment code (0000 = no free segments)
 
 <p>Segment preferrence code overview (register B):</p>
 
-<pre>
-Bit 7 6 5 4 3 2 1 0
+<pre>Bit 7 6 5 4 3 2 1 0
     ^ ^ ^ ^ ^ ^ ^ ^
     | | | | | | | |
     | | | | | | +-+-- Segment Type. 00 = PSEG0000
@@ -996,8 +995,7 @@ Out:      HL = Length of the largest free block
 
 <p>When there is no source available, it is still possible to change the stack address of a Turbo Pascal program by means of a debugger. The initialization of a Turbo Pascal-program looks like this:</p>
 
-<pre>
-START:   JP INIT
+<pre>START:   JP INIT
          ...
          ...
 INIT:    LD SP,#100
@@ -1045,8 +1043,7 @@ Some programs however bend the hooks by using an RST 30H instruction, in other w
 
 <p>A TSR may only be left by jumping back to the TSR manager. Upon return to the manager after a hook-call a value needs to be placed in the shadow-register A'. The function of this is as follows:</p>
 
-<pre>
-Bit   Name      Function
+<pre>Bit   Name      Function
  0    QuitHook  1 = Stop hook-processing
 1..7  Reserved  Always 0
 </pre>
@@ -1061,8 +1058,7 @@ In case the TSR however DID recognize and process the statement, the text-pointe
 
 <p>Say for exemple a TSR routine is linked to the interrupt-hook H.TIMI. This routine’s function is to increase a counter every interrupt. It could look like this:</p>
 
-<pre>
-INTTSR:  EI              ;This is the routine which increases
+<pre>INTTSR:  EI              ;This is the routine which increases
          LD HL,COUNT     ; a counter
          INC (HL)
 
@@ -1080,8 +1076,7 @@ INTTSR:  EI              ;This is the routine which increases
 
 <p>Say that a TSR is linked to the hook H.CHPUT. The BIOS routine CHPUT - which calls the hook H.CHPU - looks as follows:</p>
 
-<pre>
-CHPUT:   PUSH HL         ;Save data registers
+<pre>CHPUT:   PUSH HL         ;Save data registers
          PUSH DE
          PUSH BC
          PUSH AF
@@ -1091,8 +1086,7 @@ CHPUT:   PUSH HL         ;Save data registers
 
 <p>When the H.CHPU hook is called, the stack which MemMan passes to the TSR will look as follows:</p>
 
-<pre>
-	(SP+0) = Return address to the TsrManager
+<pre>	(SP+0) = Return address to the TsrManager
 	(SP+2) = Return address to the BIOS
 	(SP+4) = AF
 	(SP+6) = BC
@@ -1104,8 +1098,7 @@ CHPUT:   PUSH HL         ;Save data registers
 
 <p>When after execution of the TSR it directly needs to return to the application which the CHPUT routine called, the registers placed on the stack aswell as the return address to the BIOS must be removed from the stack. The return address to MemMan however needs to be retained. To do this you can put the following routine in the TSR:</p>
 
-<pre>
-CHARTSR: EI             ;This is the routine processing the H.CHPU call
+<pre>CHARTSR: EI             ;This is the routine processing the H.CHPU call
          ...
          ...
          ...
@@ -1214,8 +1207,7 @@ The specifications of the BasicCall function can be found in the function specif
 
 <p>Every TSR listing is therefor supposed to start with the header table. The contents of this table is as follows:</p>
 
-<pre>
-	defb 'MST TSR',13,10	;TSR file ID
+<pre>	defb 'MST TSR',13,10	;TSR file ID
 	defb 'MSTs TSRname'	;TSR naam
 	defb 26			;End of text mark
 	defw 0002		;Versie nummer voor TsrLoad
@@ -1258,8 +1250,7 @@ Is called during the installation of the TSR. The init-routine MUST be placed at
 
 <p>After calling the initroutine must return a flag in register A. The definition of this flag register is as follows:</p>
 
-<pre>
-Bit   Function
+<pre>Bit   Function
  0    0 = Initialization succeeded
       1 = Initialization failed
  1    0 = No intro text

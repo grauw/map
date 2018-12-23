@@ -71,8 +71,7 @@
 
 <p>Some preformatted text/tables/code:</p>
 
-<pre>
-                MSB  7   6   5   4   3   2   1   0  LSB
+<pre>                MSB  7   6   5   4   3   2   1   0  LSB
                    +---+---+---+---+---+---+---+---+
    Port #1         |A7 |A6 |A5 |A4 |A3 |A2 |A1 |A0 | First byte
                    +---+---+---+---+---+---+---+---+

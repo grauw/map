@@ -50,8 +50,7 @@ enlarged from 160 to 240 bytes. MemMan 2.2’s function stack turned out to be t
 small to process nested “tsrCalls”.</li>
 </ul>
 
-<pre class="func">
-Name:     XTsrCall
+<pre class="func">Name:     XTsrCall
 Number:   61
 Function: Invoke the driver entry of a TSR
 In:       IX = ID code of the TSR to call
@@ -68,8 +67,7 @@ EXTBIO call modifies the IX register. Therefore, invoke this function directly,
 or use the MemMan function handling routine. The addresses at which these
 routines can be called can be obtained through the info function (50).</p>
 
-<pre class="func">
-Name:     Info
+<pre class="func">Name:     Info
 Number:   50
 Function: Provides information about amongst others
           the entry adddresses of certain MemMan functions
@@ -133,8 +131,7 @@ function number.</dd>
 The TSR-ID code has to be passed in the IX register.</dd>
 </dl>
 
-<pre class="func">
-basicCall: Has no function number (address must be obtained through info)
+<pre class="func">basicCall: Has no function number (address must be obtained through info)
 Function:  Invoke a routine in the BASIC ROM.
 In:        IX = Call address in page 0 or 1
            AF, BC, DE, HL are passed to the BASIC ROM
@@ -151,8 +148,7 @@ are located in page 0 of the BASIC ROM, but which themselves also call a few
 routines in page 1. The H.STKE (stack error) hook will be bent, so that if a
 BASIC error occurs the internal MemMan stacks can be reset.</p>
 
-<pre class="func">
-memMan:   Has no MemMan function number (address must be obtained through info)
+<pre class="func">memMan:   Has no MemMan function number (address must be obtained through info)
 Function: Directly invoke a MemMan function
 In:       E = Memman function number
           AF, BC, HL are passed to the function
@@ -180,8 +176,7 @@ instructions. The meaning of the used symbols is as follows:</p>
 &lt;&gt; Parameter descriptions are between angle brackets.<br />
 () Parentheses must be entered, as well as punctuation and comma’s.</p>
 
-<pre class="func">
-Command:  TSR-Load
+<pre class="func">Command:  TSR-Load
 Syntax:   CMD TL("&lt;filename&gt;",[T],[A$],[&lt;F&gt;])
 Type:     Statement
 Example:  CMD TL("PB")
@@ -205,8 +200,7 @@ omitted load errors will produce a standard BASIC error. The error codes are:</p
 <li value="6">Not enough BASIC work memory</li>
 </ol>
 
-<pre class="func">
-Command:  TSR-Kill
+<pre class="func">Command:  TSR-Kill
 Syntax:   CMD TK("&lt;TSR ID-name&gt;")
 Type:     Statement
 Example:  CMD TK("MJV printbuf")
@@ -217,8 +211,7 @@ Function: Removes a TSR from memory
 be retrieved by means of TSR-View or Find-TSR.</p>
 
 
-<pre class="func">
-Command:  TSR-View
+<pre class="func">Command:  TSR-View
 Syntax:   CMD TV
 Type:     Statement
 Function: Shows an overview of the ID-names of all active TSRs.
@@ -228,8 +221,7 @@ Function: Shows an overview of the ID-names of all active TSRs.
 <p class="page">III</p>
 
 
-<pre class="func">
-Command:  Find-TSR name
+<pre class="func">Command:  Find-TSR name
 Syntax:   ATTR$ FT("&lt;TSR ID-name&gt;")
 Type:     Function
 Example:  IF ATTR$ FT("CAPS") THEN CMD TK("CAPS")
@@ -238,8 +230,7 @@ Function: Returns -1 if the specified TSR is installed, otherwise 0.
 
 <p>&lt;TSR ID-name&gt; = Identification name of the TSR.</p>
 
-<pre class="func">
-Command:  Find-TSR number
+<pre class="func">Command:  Find-TSR number
 Syntax:   ATTR$ FT(&lt;TSR sequence number&gt;)
 Type:     Function
 Example:  N$ = ATTR$ FT(0)
@@ -646,8 +637,7 @@ If a (Dos2-) RAMdisk is installed after MemMan however, the segments used by the
 <p class="page">14</p>
 
 
-<pre class="func">
-Name:     Use0
+<pre class="func">Name:     Use0
 Number:   0
 Function: Enabling a segment on page 0 (address range #0000..#3FFF)
 In:       HL = segment code
@@ -659,8 +649,7 @@ Out:      A = result code (-1 = failed, 0 = succeeded)
 <p>Remark: This functions may not be called through the EXTBIO hook. This function may only be called through a direct call of the MemMan function handler, or the FastUse0 function. The addresses on which these routines can be called, can be obtained through the Info function (50).</p>
 
 
-<pre class="func">
-Name:     Use1
+<pre class="func">Name:     Use1
 Number:   1
 Function: Enabling a segment on page 1 (address range #4000..#7FFF)
 In:       HL = segment code
@@ -670,8 +659,7 @@ Out:      A = result code (-1 = failed, 0 = succeeded)
 <p>Remark: This functions may not be called through the EXTBIO hook. This function may only be called through a direct call of the MemMan function handler, or the FastUse1 function. The addresses on which these routines can be called, can be obtained through the Info function (50).</p>
 
 
-<pre class="func">
-Name:     Use2
+<pre class="func">Name:     Use2
 Number:   2
 Function: Enabling a segment on page 2 (address range #8000..#BFFF)
 In:       HL = segment code
@@ -684,8 +672,7 @@ Out:      A = result code (-1 = failed, 0 = succeeded)
 <p class="page">15</p>
 
 
-<pre class="func">
-Name:     Alloc
+<pre class="func">Name:     Alloc
 Number:   10
 Function: Allocate a segment
 In:       B = Segment preferrence code
@@ -712,8 +699,7 @@ Out:      HL = Segment code (0000 = no free segments)
 <p>In case a PSEG type segment was allocated but is not available - if possible - an FSEG will be used instead.</p>
 
 
-<pre class="func">
-Name:     SetRes
+<pre class="func">Name:     SetRes
 Number:   11
 Function: Give a segment the reserved-status
 In:       HL = segment code
@@ -722,8 +708,7 @@ In:       HL = segment code
 <p>Gives a segment the ‘reserved’-status, so that the segment won’t automatically be freed after calling the IniChk routine. Usually, programs won’t have to set the reserved status, unless it wants to retain the segment after it terminates - like for example a Ramdisk -.</p>
 
 
-<pre class="func">
-Name:     DeAlloc
+<pre class="func">Name:     DeAlloc
 Number:   20
 Function: Free a segment
 In:       HL = segment code
@@ -735,8 +720,7 @@ In:       HL = segment code
 <p class="page">16</p>
 
 
-<pre class="func">
-Name: ClrRes
+<pre class="func">Name: ClrRes
 Number: 21
 Function: Cancel the reserved status of a segment
 In: HL = segment code
@@ -748,8 +732,7 @@ In: HL = segment code
 <p class="page">17</p>
 
 
-<pre class="func">
-Name:     IniChk
+<pre class="func">Name:     IniChk
 Number:   30
 Function: Initialization of MemMan before a program
 In:       A = Control code
@@ -761,8 +744,7 @@ Out:      A = Control code + ‘M’
 The IniChk function may only be called once by every MemMan application. The calling of IniChk has to occur before any other functions of MemMan are called. TSR programs may never call the IniChk function.</p>
 
 
-<pre class="func">
-Name:     Status
+<pre class="func">Name:     Status
 Number:   31
 Function: Retrieve MemMan status information
 Out:      HL = Number of available segments
@@ -777,8 +759,7 @@ Out:      HL = Number of available segments
 <p>In case bit 0 of the connected status is set, the DOS2 memory management functions are present. The number of free segments can be lower than is indicated in register BC, because some segments are in use by DOS2 after MemMan’s installation - for example to install a RAM-disk.</p>
 
 
-<pre class="func">
-Name:     CurSeg
+<pre class="func">Name:     CurSeg
 Number:   32
 Function: Retrieve segment code of a page
 In:       B = Page number (0, 1, 2, 3)
@@ -800,8 +781,7 @@ Out:      HL = Segment code
 <p class="page">19</p>
 
 
-<pre class="func">
-Name:     StoSeg
+<pre class="func">Name:     StoSeg
 Number:   40
 Function: Store current segment status
 In:       HL = Buffer address (9 bytes)
@@ -813,8 +793,7 @@ In:       HL = Buffer address (9 bytes)
 Ofcourse also the (Fast)CurSeg functions can be used to store the current segment status.</p>
 
 
-<pre class="func">
-Name: RstSeg
+<pre class="func">Name: RstSeg
 Number: 41
 Function: Activate a stored segment status
 In: HL = Buffer status
@@ -829,8 +808,7 @@ Ofcourse also the (Fast)CurSeg functions can be used to store the current segmen
 <p class="page">20</p>
 
 
-<pre class="func">
-Name:     Info
+<pre class="func">Name:     Info
 Number:   50
 Function: Provides information about amongst others
           the entry adddresses of certain MemMan functions
@@ -879,8 +857,7 @@ Keep in mind however that the ‘fast’ functions differ from the ‘normal’ 
 <p class="page">21</p>
 
 
-<pre class="func">
-BasicCall: Has no function number (address must be obtained through info)
+<pre class="func">BasicCall: Has no function number (address must be obtained through info)
 Function:  Call a routine in the BASIC ROM.
 In:        IX = Call address in page 0 or 1
            AF, BC, DE, HL are passed to the BASIC ROM
@@ -891,8 +868,7 @@ Out:       AF, BC, DE, HL are received from the BASIC ROM
 <p>Through this function TSRs can call a routine which is in page 0 or 1 of the BASIC ROM. The bios must already be enabled in page 0. In page 1 the BASIC ROM will be enabled by MemMan.<br />
 This is for example necessary to be able to call the math-pack routines which are situated in page 0 of the BASIC ROM, but which also call a few routines in page 1 inbetween. The H.STKE (stack error) hook will be bent, so that after an eventual BASIC error the internal MemMan stacks can be reset.</p>
 
-<pre class="func">
-memMan:   Has no MemMan function number (address must be obtained through info)
+<pre class="func">memMan:   Has no MemMan function number (address must be obtained through info)
 Function: Directly call a MemMan function
 In:       E = Memman function number
           AF, BC, HL are passed to the function
@@ -905,8 +881,7 @@ Out:      AF, BC, DE, HL are received from the function
 <p class="page">22</p>
 
 
-<pre class="func">
-Name:     XTsrCall
+<pre class="func">Name:     XTsrCall
 Number:   61
 Function: Call the driver-entry of a TSR
 In:       IX = ID code of the to be called TSR
@@ -918,8 +893,7 @@ Out:      AF, BC, DE, HL will be returned from the TSR
 Remark: This function may not be called through the EXTBIO hook, because when calling through EXTBIO, the IX register is maimed. Therefor, call this function directly, or use the MemMan function handling routine. The addresses on which these routines can be called, can be obtained through the info function (50).</p>
 
 
-<pre class="func">
-Name:     GetTsrID
+<pre class="func">Name:     GetTsrID
 Number:   62
 Function: Determine TSR ID code
 In:       HL = Pointer to the TsrName (12 characters)
@@ -930,8 +904,7 @@ Out:      Found: Carry clear (NC)
 </pre>
 
 
-<pre class="func">
-Name:     TsrCall
+<pre class="func">Name:     TsrCall
 Number:   63
 Function: Call the driver-entry of a TSR
 In:       BC = ID code of the to be called TSR
@@ -946,8 +919,7 @@ When using the Fast-TsrCall routine this complication does not arise; the addres
 <p class="page">23</p>
 
 
-<pre class="func">
-Name:     HeapAlloc
+<pre class="func">Name:     HeapAlloc
 Number:   70
 Function: Allocate space in the heap
 In:       HL = Desired amount of space (in bytes)
@@ -961,16 +933,14 @@ Requested blocks of memory in the heap will stay unusable for other programs unt
 The heap’s size can be set by using the configuration tool CFGMMAN.</p>
 
 
-<pre class="func">
-Name:     HeapDeAlloc
+<pre class="func">Name:     HeapDeAlloc
 Number:   71
 Function: Frees previously allocated heap space
 In:       HL = start address of the space
 </pre>
 
 
-<pre class="func">
-Name:     HeapMax
+<pre class="func">Name:     HeapMax
 Number:   72
 Function: Return the length of the largest free block of heap space
 Out:      HL = Length of the largest free block

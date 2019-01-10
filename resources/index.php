@@ -24,7 +24,8 @@ information, feel free to send us an email.</p>
     <li><a href="/resources/msxbios.php">MSX BIOS calls</a> <span class="map">MAP</span></li>
     <li><a href="/resources/subrom.php">MSX SUBROM BIOS calls</a> <span class="map">MAP</span></li>
     <li><a href="/resources/msxsystemvars.php">System variables</a> <em>(work in progress)</em> <span class="map">MAP</span></li>
-    <li><a href="http://www.konamiman.com/msx/msx2th/th-ap.txt">MSX2 Technical Handbook appendices</a> · by Nestor Soriano (Konamiman)</li>
+    <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/md/Appendix1.html">MSX2 Technical Handbook: BIOS listing</a> · by Nestor Soriano (Konamiman)</li>
+    <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/md/Appendix4.html">MSX2 Technical Handbook: Work area listing</a> · by Nestor Soriano (Konamiman)</li>
     <li><a href="/resources/datapack/Vol3-7MSXExtendedBIOSSpecification.pdf">MSX Extended BIOS Specification</a> · MSX Datapack Vol. 3-7, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
     </ul>
   </li>
@@ -43,7 +44,7 @@ information, feel free to send us an email.</p>
     <ul>
     <li><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a> <span class="map">MAP</span></li>
     <li><a href="/resources/system/msxtech.pdf">MSX Technical Data Book</a></li>
-    <li><a href="http://www.konamiman.com/msx/msx-e.html#msx2th">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman) (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan" hreflang="ja">Japanese version</a>, <a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2FTechHan">via Google Translate</a>)</li>
+    <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman) (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan" hreflang="ja">Japanese version</a>, <a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2FTechHan">via Google Translate</a>)</li>
     <li><a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fdai3car.sakura.ne.jp%2Fmsxpage%2Fmsxtr_handbook%2Flates.html">MSX turboR Technical Handbook via Google Translate</a> (<a href="http://dai3car.sakura.ne.jp/msxpage/msxtr_handbook/lates.html" hreflang="ja">Japanese</a>, <a href="https://archive.org/download/MsxTurboR/MsxTurboRTechnicalHandBook.pdf" hreflang="ja">scans</a>)</li>
     <li><a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2Fdatapack">MSX Datapack via Google Translate</a> (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/datapack" hreflang="ja">Japanese</a>, scans <a href="https://archive.org/download/MSXDatapackVolume1/MSX-Datapack_Volume1_1991.pdf" hreflang="ja">1</a>, <a href="https://archive.org/download/MSXDatapackVolume2/MSX-Datapack_Volume2_1991.pdf" hreflang="ja">2</a>, <a href="https://archive.org/download/MSXDatapackVolume3_turboR/MSX-Datapack_Volume3_1991.pdf" hreflang="ja">3</a>, <a href="/resources/datapack/msxdatapack-disks.zip">disks</a>)</li>
     <li><a href="http://bifi.msxnet.org/msxnet/tech/megaroms">Megabit ROM Cartridges mapper types</a> · on <a href="http://bifi.msxnet.org/msxnet/tech/">msxnet</a></li>

@@ -48,8 +48,8 @@ If you have additions or see an error, please let us know.</em></p>
   <td><a href="#zemina-memory">Zemina memory extensions</a></td>
 </tr>
 <tr>
-  <td>#10-#11</td>
-  <td>MegaFlashROM PSG (AY-3-8910 clone)</td>
+  <td>#10-#12</td>
+  <td>Second AY-3-8910 PSG: MegaFlashROM SCC+ (write-only), Manbow 2 v2, Best of Hamaraja Night</td>
 </tr>
 <tr>
   <td>#14-#17</td>

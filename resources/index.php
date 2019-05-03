@@ -60,6 +60,11 @@ information, feel free to send us an email.</p>
       <li><a href="http://www.z80.info/zaks.html">Programming the Z80</a> · by Rodnay Zaks</li>
       </ul>
     </li>
+    <li id="z80">R800
+      <ul>
+	  <li><a href="/resources/cpu/r800_users_manual.php">R800 User’s Manual</a> (incomplete) <span class="map">MAP</span></li>
+      </ul>
+    </li>
     <li id="z380">Z380
       <ul>
       <li><a href="/resources/cpu/z380.pdf">Zilog Z380 product specification</a></li>

@@ -148,6 +148,8 @@ be executed due to an interrupt or bus request, etc., the instruction that could
 not be executed will be fetched again after the service such as interrupt or bus
 request is finished.</p>
 
+<p><img src="r800_users_manual_figure15-1.jpg" /></p>
+
 
 <?php addFooter(); ?>
 </body>

@@ -58,7 +58,7 @@ function addFooter() {
 ?>
 </div>
 
-<div id="foot">© <?php echo date("Y"); ?> MSX Assembly Page</div>
+<div id="foot">© <?php echo date("Y"); ?> MSX Assembly Page. MSX is a trademark of MSX Licensing Corporation.</div>
 <?php
 }
 

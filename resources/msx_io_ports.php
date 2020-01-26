@@ -1097,21 +1097,44 @@ modify bits 4-7.</p>
 
 <h2 id="sysflags">System flags</h2>
 
-<p>This register is a simple memory cell which is preserved after a reset. It is
-used on the MSX2+ to differentiate between a hard boot (power on) and a soft
-boot (reset button) by writing a value to it during the boot routine, and check
-for that value everytime the computer starts. On the turboR, it also indicates
-whether the Z80 or the R800 has to boot.</p>
+<p>This register is used on MSX2+ computers and up to help the BIOS distinguish
+between a cold and a warm boot. A cold boot (power on / reset button) resets
+the register, whereas a warm boot (jump to BIOS entry
+<a href="http://map.grauw.nl/resources/msxbios.php#CHKRAM">CHKRAM</a> at address
+0) preserves it. On the Turbo R it also indicates to the BIOS whether the R800
+has booted up.</p>
+
+<p>During a warm boot, the MSX2+ and up do not show the start-up logo sequence
+and do not initialise the RAM (which clears “AB” cartridge headers).</p>
+
+<p>Use BIOS entries
+<a href="http://map.grauw.nl/resources/msxbios.php#RDRES">RDRES</a> (017AH) to
+read the register, and
+<a href="http://map.grauw.nl/resources/msxbios.php#WRRES">WRRES</a> (017DH) to
+write.</p>
+
+<p>Note that on some MSX models the register is inverted and the initial value
+is 0FFH rather than 00H. This is the case on the Panasonic and Sanyo MSX2+
+models, but not on the Sony MSX2+ and the Panasonic MSX Turbo R models. If this
+is the case the
+<a href="http://map.grauw.nl/resources/msxbios.php#RDRES">RDRES</a> and
+<a href="http://map.grauw.nl/resources/msxbios.php#WRRES">WRRES</a> BIOS
+routines compensate for this by complementing the value, therefore their use is
+recommended.</p>
 
 <table>
-<tr>
-  <th>Port</th>
-  <th>Bit</th>
-  <th>Description</th>
-</tr>
-<tr><td rowspan="2">#F4</td>
-    <td>5</td><td>CPU boot mode (1=R800)</td></tr>
-<tr><td>7</td><td>Boot method (1=soft boot, doesn’t show start logo)</td></tr>
+  <tr>
+    <th>Port</th>
+    <th>Bit</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td rowspan="2">#F4</td>
+    <td>5</td><td>R800 booted (1=yes)</td>
+  </tr>
+  <tr>
+    <td>7</td><td>Boot method (1=warm boot)</td>
+  </tr>
 </table>
 
 

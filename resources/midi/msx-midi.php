@@ -109,8 +109,8 @@ The I/O ports of the built-in MSX-MIDI interface are assigned as follows:</p>
 
 <ul>
 <li>
-<p title="8251インターフェイス (08EH、0E9H番地)">
-8251 interface (address 08EH, 0E9H)</p>
+<p title="8251インターフェイス (0E8H、0E9H番地)">
+8251 interface (address 0E8H, 0E9H)</p>
 
 <table>
 <tr>

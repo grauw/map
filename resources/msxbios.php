@@ -1080,20 +1080,21 @@ Registers: AF
 
 <h1 id="msx2pbios">MSX 2+ BIOS Entries</h1>
 
-<h3 id="RDBTST">RDBTST</h3>
+<h3 id="RDRES"><span id="RDBTST">RDRES</span></h3>
 <pre>Address  : #017A
-Function : Read value of I/O poort #F4
+Function : Read value of I/O port #F4
 Input    : none
 Output   : A = value read
 Registers: AF
 </pre>
 
 
-<h3 id="WRBTST">WRBTST</h3>
+<h3 id="WRRES"><span id="WRBTST">WRRES</span></h3>
 <pre>Address  : #017D
-Function : Write value to I/O poort #F4
+Function : Write value to I/O port #F4
 Input    : A = value to write
-           Bit 7 shows the MSX 2+ startup screen when reset, otherwise it's skipped.
+           When bit 7 is reset it shows the MSX 2+ startup screen on boot,
+           and counts and initialises the RAM.
 Output   : none
 Registers: none
 </pre>

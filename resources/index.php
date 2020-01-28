@@ -43,6 +43,7 @@ information, feel free to send us an email.</p>
   <li id="system">System documentation
     <ul>
     <li><a href="/resources/msx_io_ports.php">MSX I/O ports overview</a> <span class="map">MAP</span></li>
+    <li><a href="/resources/system/msx-expansion-io-port-manual.pdf">MSX expansion I/O port manual</a> · a.k.a. <a href="http://map.grauw.nl/resources/msx_io_ports.php#switch_io">switched I/O ports</a></li>
     <li><a href="/resources/system/msxtech.pdf">MSX Technical Data Book</a></li>
     <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/">MSX2 Technical Handbook</a> · by Nestor Soriano (Konamiman) (<a href="http://ngs.no.coocan.jp/doc/wiki.cgi/TechHan" hreflang="ja">Japanese version</a>, <a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fngs.no.coocan.jp%2Fdoc%2Fwiki.cgi%2FTechHan">via Google Translate</a>)</li>
     <li><a href="https://translate.google.nl/translate?sl=ja&amp;tl=en&amp;u=http%3A%2F%2Fdai3car.sakura.ne.jp%2Fmsxpage%2Fmsxtr_handbook%2Flates.html">MSX turboR Technical Handbook via Google Translate</a> (<a href="http://dai3car.sakura.ne.jp/msxpage/msxtr_handbook/lates.html" hreflang="ja">Japanese</a>, <a href="https://archive.org/download/MsxTurboR/MsxTurboRTechnicalHandBook.pdf" hreflang="ja">scans</a>)</li>

@@ -133,7 +133,7 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#40-#4F</td>
-  <td><a href="#switch_io">Switched I/O ports</a></td>
+  <td><a href="#expanded_io">Expanded I/O ports</a> (a.k.a. switched I/O)</td>
 </tr>
 <tr>
   <td>#48-#49</td>
@@ -424,15 +424,15 @@ page 3 (8K page size):</p>
 manual</a> with partial translation for more info.</p>
 
 
-<h2 id="switch_io">Switched I/O ports</h2>
+<h2 id="expanded_io">Expanded I/O ports <span id="switch_io">(a.k.a. switched I/O)</span></h2>
 
 <p>According to the MSX2 Hardware Specification, ports #40-#4F are forming the
-so-called ‘switched I/O ports’. With these the limitation of a maximum number of
-256 I/O ports can be overcome, although it does require a little additional
-logic on the hardware’s behalf. The port numbers #41-#4F are the actual switched
-ports, and the device addressed via those ports is determined by the device ID
-written to port #40. When port #40 is read the currently selected device returns
-the complement of the current device ID, if present.</p>
+so-called ‘expanded I/O ports’. With these the limitation of a maximum number of
+256 I/O ports can be overcome, although it does require some additional logic on
+the hardware’s behalf. The port numbers #41-#4F are the actual switched ports,
+and the device addressed via those ports is determined by the device ID written
+to port #40. When port #40 is read the currently selected device returns the
+complement of the current device ID, if present.</p>
 
 <table>
 <tr>
@@ -540,8 +540,12 @@ For the sake of software interoperability, any
 <abbr title="Operating System">OS</abbr> routines and
 <abbr title="Interrupt Service Routine">ISR</abbr>s,
 <abbr title="Terminate and Stay Resident program">TSR</abbr>s or hooks should do
-this. This so that software does not need to disable interrupts during switched
+this. This so that software does not need to disable interrupts during expanded
 I/O port access, and can invoke OS routines freely.</p>
+
+<p>See also <a href="/resources/system/msx-expansion-io-port-manual.pdf">MSX
+Expansion I/O Port manual</a> and <a href="https://archive.org/download/MSXDatapackVolume2/MSX-Datapack_Volume2_1991.pdf"
+hreflang="ja">MSX Datapack Vol. 2</a> appendix A.5.</p>
 
 
 <h2 id="msxpi">MSXPi interface</h2>

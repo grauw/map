@@ -12,9 +12,9 @@
 
 <h1>MAP document authoring tutorial</h1>
 
-<p>On this page I’ll try to explain some guidelines for authoring a document for the MAP. Check <a href="https://bitbucket.org/grauw/map/src/default/contributing/documents.php">the source on Mercurial</a> to see how everything is done in this (and other) pages’ source code.</p>
+<p>On this page I’ll try to explain some guidelines for authoring a document for the MAP. Check <a href="https://hg.sr.ht/~grauw/map/browse/@/contributing/documents.php">the source on Mercurial</a> to see how everything is done in this (and other) pages’ source code.</p>
 
-<p>You can go ahead and get the source code from the <a href="https://bitbucket.org/grauw/map">MAP Mercurial repository</a>. From there, You can start a new article or add a new resource, or modify an existing one. But keep in mind the social aspect of editing documents, that every article is made and thus ‘owned’ by someone. So although corrections are fine, you probably shouldn’t push significant modifications onto the server without consulting with the author first. Also, if you want to make changes to the style sheet or site structure, drop me (Grauw) a line first :).</p>
+<p>You can go ahead and get the source code from the <a href="https://hg.sr.ht/~grauw/map">MAP Mercurial repository</a>. From there, You can start a new article or add a new resource, or modify an existing one. But keep in mind the social aspect of editing documents, that every article is made and thus ‘owned’ by someone. So although corrections are fine, you probably shouldn’t push significant modifications onto the server without consulting with the author first. Also, if you want to make changes to the style sheet or site structure, drop me (Grauw) a line first :).</p>
 
 <p>If you have push rights to the server, keep in mind that everything you push will be live immediately. Generally speaking, it’s also always useful if someone reviews your changes before they are pushed to the server. Of course, this review can also happen after things are pushed, but because we use Mercurial, if you are unsure about whether something is correct or using the right tags or correctly spelled or whatever, you can easily draft some changes and send them to someone else for review.</p>
 

@@ -56,7 +56,7 @@
   <ul>
   <li><a href="http://www.msxarchive.nl/pub/msx/programming/asm/sources/">Funet source code repository</a></li>
   <li><a href="http://www.msxarchive.nl/pub/msx/mirrors/msx2.com/sources/">Funet msx2.com mirror source repository</a></li>
-  <li><a href="https://bitbucket.org/konamiman/msx/overview">Konamiman's MSX software repository</a> · NestorBasic and more</li>
+  <li><a href="https://github.com/Konamiman/MSX">Konamiman's MSX software repository</a> · NestorBasic and more</li>
   </ul>
 </li>
 </ul>

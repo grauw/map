@@ -48,7 +48,7 @@ linking to us is always allowed. For more legal information read the
 
 <ul>
   <li><a href="/disclaimer.php">Disclaimer</a></li>
-  <li><a href="https://hg.sr.ht/~grauw/glass/log">Changelog</a></li>
+  <li><a href="https://hg.sr.ht/~grauw/map/log">Changelog</a></li>
   <li><a href="/updates-old.php">Old updates</a></li>
 </ul>
 

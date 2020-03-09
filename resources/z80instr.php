@@ -793,7 +793,7 @@ section.</p>
 			<td>1</td>
 			<td>1</td>
 			<td>2D</td>
-			<td>2</td>
+			<td>1</td>
 		</tr>
 		<tr>
 			<td>DEC SP</td>
@@ -1000,7 +1000,7 @@ section.</p>
 			<td>3</td>
 			<td>10/9<a href="#iowaitnote">³</a></td>
 			<td>ED 70</td>
-			<td>3</td>
+			<td>2</td>
 		</tr>
 		<tr>
 			<td>INC (HL)</td>
@@ -1936,7 +1936,7 @@ section.</p>
 			<td>5</td>
 			<td>7</td>
 			<td>2A nn nn</td>
-			<td>5</td>
+			<td>3</td>
 		</tr>
 		<tr>
 			<td>LD HL,nn</td>
@@ -1981,7 +1981,7 @@ section.</p>
 			<td>3</td>
 			<td>3</td>
 			<td>DD 26 n</td>
-			<td>2</td>
+			<td>3</td>
 		</tr>
 		<tr>
 			<td>LD IXh,p</td>
@@ -1999,7 +1999,7 @@ section.</p>
 			<td>3</td>
 			<td>3</td>
 			<td>DD 2E n</td>
-			<td>2</td>
+			<td>3</td>
 		</tr>
 		<tr>
 			<td>LD IXl,p</td>
@@ -2035,7 +2035,7 @@ section.</p>
 			<td>3</td>
 			<td>3</td>
 			<td>FD 26 n</td>
-			<td>2</td>
+			<td>3</td>
 		</tr>
 		<tr>
 			<td>LD IYh,q</td>
@@ -2053,7 +2053,7 @@ section.</p>
 			<td>3</td>
 			<td>3</td>
 			<td>FD 2E n</td>
-			<td>2</td>
+			<td>3</td>
 		</tr>
 		<tr>
 			<td>LD IYl,q</td>

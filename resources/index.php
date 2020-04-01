@@ -235,8 +235,9 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/midi/msx-midi.php">MSX-MIDI</a> · MSX Datapack Vol. 3 Section 5, English <span class="map">MAP</span></li>
       <li><a href="/resources/midi/intel_8251.pdf">Intel 8251 UART</a> · used by MSX-MIDI</li>
       <li><a href="/resources/midi/intel_8253.pdf">Intel 8253 Timer</a> · used by MSX-MIDI</li>
-      <li><a href="/resources/midi/motorola_mc68b50.pdf">Motorola MC68B50</a> · used by Philips Music Module</li>
+      <li><a href="/resources/midi/motorola_mc68b50.pdf">Motorola MC68B50</a> · used by Philips Music Module and JVC MSX MIDI interface</li>
       <li><a href="/resources/midi/ym2148.php">Yamaha YM2148</a> · FM Sound Synthesizer Unit MIDI interface <span class="map">MAP</span></li>
+      <li><a href="/resources/midi/jvc-midi.php">JVC MSX MIDI interface</a> <span class="map">MAP</span></li>
       </ul>
     </li>
     </ul>

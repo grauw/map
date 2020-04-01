@@ -32,6 +32,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Sensor Kid</td>
 </tr>
 <tr>
+  <td>#00-#03</td>
+  <td><a href="/resources/midi/jvc-midi.php">JVC MSX MIDI interface</a> (MC6850, mirrored on ports #08-#0B)</td>
+</tr>
+<tr>
   <td>#02-#03</td>
   <td>FAC MIDI interface (i8251, mirrored on ports #00-#07)</td>
 </tr>

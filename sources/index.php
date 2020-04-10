@@ -37,6 +37,7 @@
   </li>
   <li id="code_slot">Slot/mapper routines
     <ul>
+    <li><a href="/sources/getslot.php">GETSLT: Get slot ID of any page</a> <span class="map">MAP</span></li>
     <li><a href="/sources/raminpage1.php">Switch RAM/ROM in page 1</a> <span class="map">MAP</span></li>
     <li><a href="/sources/callbios.php">Calling the BIOS from MSX-DOS</a> <span class="map">MAP</span></li>
     </ul>

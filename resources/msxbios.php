@@ -8,17 +8,15 @@
 <body>
 <?php addHeader(); ?>
 
-
-
 <h1>MSX BIOS calls</h1>
 
 <p>This is an overview of all official MSX BIOS calls.</p>
 
 <ul>
-  <li><a href="#msx1bios">MSX 1 BIOS</a> (up till function call #159)</li>
-  <li><a href="#msx2bios">MSX 2 BIOS</a> (up till function call #177)</li>
-  <li><a href="#msx2pbios">MSX 2+ BIOS</a> (up till function call #17D)</li>
-  <li><a href="#msxtrbios">MSX turbo R BIOS</a> (up till function call #189)</li>
+  <li><a href="#msx1bios">MSX 1 BIOS</a> (up to function call #159)</li>
+  <li><a href="#msx2bios">MSX 2 BIOS</a> (up to function call #177)</li>
+  <li><a href="#msx2pbios">MSX 2+ BIOS</a> (up to function call #17D)</li>
+  <li><a href="#msxtrbios">MSX turbo R BIOS</a> (up to function call #189)</li>
 </ul>
 
 
@@ -36,13 +34,13 @@ Remark   : After this, a jump must be made to INIT, for further initialisation.
 
 <h3 id="SYNCHR">SYNCHR</h3>
 <pre>Address  : #0008
-Function : tests whether the character of [HL] is the specified character
-           if not, it generates SYNTAX ERROR, otherwise it goes to CHRGTR (#0010)
-Input    : set the character to be tested in [HL] and the character to be
+Function : Tests whether the character of (HL) is the specified character
+           if not, it generates SYNTAX ERROR, otherwise it goes to <a href="#CHRGTR">CHRGTR</a> (#0010)
+Input    : Set the character to be tested in (HL) and the character to be
            compared next to RST instruction which calls this routine (inline parameter)
-Output   : HL is increased by one and A receives [HL], When the tested character is
-           numerical, the CY flag is set the end of the statement (00h or 3Ah) causes
-           the Z flag to be set
+Output   : HL is increased by one and A receives (HL), When the tested character is
+           numerical, the carry flag is set the end of the statement (00h or 3Ah) causes
+           the zero flag to be set
 Registers: AF, HL
 </pre>
 
@@ -50,12 +48,12 @@ Registers: AF, HL
 <h3 id="RDSLT">RDSLT</h3>
 <pre>Address  : #000C
 Function : Reads the value of an address in another slot
-Input    : A  - ExxxSSPP
-           |        || Primary  slotnumber  (00-11)
-           |        - Secundary slotnumber (00-11)
-           +----------- Expanded slot (0 = no, 1 = yes)
+Input    : A  - ExxxSSPP  Slot-ID
+           │        ││└┴─ Primary slot number (00-11)
+           │        └┴─── Secondary slot number (00-11)
+           └───────────── Expanded slot (0 = no, 1 = yes)
            HL - Address to read
-Output   : A  - Contains the vaule of the read address
+Output   : A  - Contains the value of the read address
 Registers: AF, C, DE
 Remark   : This routine turns off the interupt, but won't turn it on again
 </pre>
@@ -63,12 +61,12 @@ Remark   : This routine turns off the interupt, but won't turn it on again
 
 <h3 id="CHRGTR">CHRGTR</h3>
 <pre>Address  : #0010
-Function : Gets the next character (or token) of the Basic-text
+Function : Gets the next character (or token) of the Basic text
 Input    : HL - Address last character
-Output   : HL - points to the next character
-           A  - contains the character
-           C  - flag set if it's a number
-           Z  - flag set if it's the end of the statement
+Output   : HL - Points to the next character
+           A  - Contains the character
+           Carry flag set if it's a number
+           Zero flag set if it's the end of the statement
 Registers: AF, HL
 </pre>
 
@@ -76,18 +74,17 @@ Registers: AF, HL
 <h3 id="WRSLT">WRSLT</h3>
 <pre>Address  : #0014
 Function : Writes a value to an address in another slot.
-Input    : A  - Slot in which the value will be written
-           see RDSLT for input
-           HL - Address of value to write
-           E  - value to write
+Input    : A  - Slot ID, see <a href="#RDSLT">RDSLT</a>
+           HL - Address
+           E  - Value
 Registers: AF, BC, D
-Remark   : See RDSLT
+Remark   : See <a href="#RDSLT">RDSLT</a>
 </pre>
 
 
 <h3 id="OUTDO">OUTDO</h3>
 <pre>Address  : #0018
-Function : Output to current outputchannel (printer, diskfile, etc.)
+Function : Output to current output channel (printer, file, etc.)
 Input    : A  - PRTFIL, PRTFLG
 Remark   : Used in basic, in ML it's pretty difficult
 </pre>
@@ -96,10 +93,9 @@ Remark   : Used in basic, in ML it's pretty difficult
 <h3 id="CALSLT">CALSLT</h3>
 <pre>Address  : #001C
 Function : Executes inter-slot call.
-Input    : IY - High byte with input for A in RDSLT
+Input    : IY - High byte with slot ID, see <a href="#RDSLT">RDSLT</a>
            IX - The address that will be called
-Remark   : Variables can never be given in alternative registers
-           of the Z-80 or IX and IY
+Remark   : Variables can never be given in alternative registers or IX and IY
 </pre>
 
 
@@ -107,16 +103,15 @@ Remark   : Variables can never be given in alternative registers
 <pre>Address  : #0020
 Function : Compares HL with DE
 Input    : HL, DE
-Output   : Z-flag set if HL and DE are equal. C-flag set if HL is less than DE.
+Output   : Zero flag set if HL and DE are equal. Carry flag set if HL is less than DE.
 Registers: AF
 </pre>
 
 
 <h3 id="ENASLT">ENASLT</h3>
 <pre>Address  : #0024
-Function : Switches indicated slot at indicated page on perpetual
-Input    : A  - ExxxSSPP
-                +-?------ see RDSLT
+Function : Switches indicated slot at indicated page on perpetually
+Input    : A - Slot ID, see <a href="#RDSLT">RDSLT</a>
            H - Bit 6 and 7 must contain the page number (00-11)
 </pre>
 
@@ -134,11 +129,11 @@ Remark   : Not a very clear routine to me, please mail us if you know more about
 <h3 id="CALLF">CALLF</h3>
 <pre>Address  : #0030
 Function : Executes an interslot call
-Output   : depends on the calling routine
+Output   : Depends on the calling routine
 Registers: AF, and the other registers depending on the calling routine
 Remark   : The following is the calling sequence:
            RST #30
-           DB destination slot (see RDSLT accu)
+           DB destination slot ID, see <a href="#RDSLT">RDSLT</a>
            DW destination address
 </pre>
 
@@ -169,23 +164,23 @@ Registers: All
 
 <h3 id="DISSCR">DISSCR</h3>
 <pre>Address  : #0041
-Function : inhibits the screen display
+Function : Inhibits the screen display
 Registers: AF, BC
 </pre>
 
 
 <h3 id="ENASCR">ENASCR</h3>
 <pre>Address  : #0044
-Function : displays the screen
+Function : Displays the screen
 Registers: AF, BC
 </pre>
 
 
 <h3 id="WRTVDP">WRTVDP</h3>
 <pre>Address  : #0047
-Function : write data in the VDP-register
-Input    : B  - data to write
-           C  - number of the register
+Function : Write data in the VDP-register
+Input    : B  - Data to write
+           C  - Number of the register
 Registers: AF, BC
 </pre>
 
@@ -193,8 +188,8 @@ Registers: AF, BC
 <h3 id="RDVRM">RDVRM</h3>
 <pre>Address  : #004A
 Function : Reads the content of VRAM
-Input    : HL - address read
-Output   : A  - value which was read
+Input    : HL - Address read
+Output   : A  - Value which was read
 Registers: AF
 </pre>
 
@@ -202,8 +197,8 @@ Registers: AF
 <h3 id="WRTVRM">WRTVRM</h3>
 <pre>Address  : #004D
 Function : Writes data in VRAM
-Input    : HL - address write
-           A  - value write
+Input    : HL - Address write
+           A  - Value write
 Registers: AF
 </pre>
 
@@ -211,7 +206,7 @@ Registers: AF
 <h3 id="SETRD">SETRD</h3>
 <pre>Address  : #0050
 Function : Enable VDP to read
-Input    : HL - for VRAM-address
+Input    : HL - For VRAM-address
 Registers: AF
 </pre>
 
@@ -226,10 +221,10 @@ Registers: AF
 
 <h3 id="FILVRM">FILVRM</h3>
 <pre>Address  : #0056
-Function : fill VRAM with value
-Input    : A  - data byte
-           BC - length of the area to be written
-           HL - start address
+Function : Fill VRAM with value
+Input    : A  - Data byte
+           BC - Length of the area to be written
+           HL - Start address
 Registers: AF, BC
 </pre>
 
@@ -237,7 +232,7 @@ Registers: AF, BC
 <h3 id="LDIRMV">LDIRMV</h3>
 <pre>Address  : #0059
 Function : Block transfer to memory from VRAM
-Input    : BC - blocklength
+Input    : BC - Block length
            DE - Start address of memory
            HL - Start address of VRAM
 Registers: All
@@ -247,7 +242,7 @@ Registers: All
 <h3 id="LDIRVM">LDIRVM</h3>
 <pre>Address  : #005C
 Function : Block transfer to VRAM from memory
-Input    : BC - blocklength
+Input    : BC - Block length
            DE - Start address of VRAM
            HL - Start address of memory
 Registers: All
@@ -256,25 +251,25 @@ Registers: All
 
 <h3 id="CHGMOD">CHGMOD</h3>
 <pre>Address  : #005F
-Function : Switches to given screenmode
-Input    : A  - screen mode
+Function : Switches to given screen mode
+Input    : A  - Screen mode
 Registers: All
 </pre>
 
 
 <h3 id="CHGCLR">CHGCLR</h3>
 <pre>Address  : #0062
-Function : Changes the screencolors
-Input    : Foregroundcolor in FORCLR
-           Backgroundcolor in BAKCLR
-           Bordercolor in BDRCLR
+Function : Changes the screen colors
+Input    : Foreground color in FORCLR
+           Background color in BAKCLR
+           Border color in BDRCLR
 Registers: All
 </pre>
 
 
 <h3 id="NMI">NMI</h3>
 <pre>Address  : #0066
-Function : Executes (non-maskable interupt) handling routine
+Function : Executes non-maskable interupt handling routine
 </pre>
 
 
@@ -288,7 +283,7 @@ Registers: Alles
 
 <h3 id="INITXT">INITXT</h3>
 <pre>Address  : #006C
-Function : Schakelt naar SCREEN 0 (tekst-scherm met 40*24 tekens)
+Function : Switches to SCREEN 0 (text screen with 40×24 characters)
 Input    : TXTNAM, TXTCGP
 Registers: All
 </pre>
@@ -296,7 +291,7 @@ Registers: All
 
 <h3 id="INIT32">INIT32</h3>
 <pre>Address  : #006F
-Function : Switches to SCREEN 1 (text screen with 32*24 characters)
+Function : Switches to SCREEN 1 (text screen with 32×24 characters)
 Input    : T32NAM, T32CGP, T32COL, T32ATR, T32PAT
 Registers: All
 </pre>
@@ -304,7 +299,7 @@ Registers: All
 
 <h3 id="INIGRP">INIGRP</h3>
 <pre>Address  : #0072
-Function : Switches to SCREEN 2 (high resolution screen with 256*192 pixels)
+Function : Switches to SCREEN 2 (high resolution screen with 256×192 pixels)
 Input    : GRPNAM, GRPCGP, GRPCOL, GRPATR, GRPPAT
 Registers: All
 </pre>
@@ -312,7 +307,7 @@ Registers: All
 
 <h3 id="INIMLT">INIMLT</h3>
 <pre>Address  : #0075
-Function : Switches to SCREEN 3 (multi-color screen 64*48 pixels)
+Function : Switches to SCREEN 3 (multi-color screen with 64×48 pixels)
 Input    : MLTNAM, MLTCGP, MLTCOL, MLTATR, MLTPAT
 Registers: All
 </pre>
@@ -320,16 +315,16 @@ Registers: All
 
 <h3 id="SETTXT">SETTXT</h3>
 <pre>Address  : #0078
-Function : Switches to VDP in SCREEN 0 mode
-Input    : See INITXT
+Function : Switches VDP to SCREEN 0 mode
+Input    : See <a href="#INITXT">INITXT</a>
 Registers: All
 </pre>
 
 
 <h3 id="SETT32">SETT32</h3>
 <pre>Address  : #007B
-Function : Schakelt VDP in SCREEN 1 modus
-Input    : See INIT32
+Function : Switches VDP to SCREEN 1 mode
+Input    : See <a href="#INIT32">INIT32</a>
 Registers: All
 </pre>
 
@@ -337,7 +332,7 @@ Registers: All
 <h3 id="SETGRP">SETGRP</h3>
 <pre>Address  : #007E
 Function : Switches VDP to SCREEN 2 mode
-Input    : See INIGRP
+Input    : See <a href="#INIGRP">INIGRP</a>
 Registers: All
 </pre>
 
@@ -345,7 +340,7 @@ Registers: All
 <h3 id="SETMLT">SETMLT</h3>
 <pre>Address  : #0081
 Function : Switches VDP to SCREEN 3 mode
-Input    : See INIMLT
+Input    : See <a href="#INIMLT">INIMLT</a>
 Registers: All
 </pre>
 
@@ -371,8 +366,8 @@ Registers: AF, DE, HL
 <h3 id="GSPSIZ">GSPSIZ</h3>
 <pre>Address  : #008A
 Function : Returns current sprite size
-Output   : A  - Sprite-size in bytes
-           C-flag set when size is 16*16 sprites otherwise C-flag is reset
+Output   : A  - Sprite size in bytes
+           Carry flag set when size is 16×16 sprites otherwise Carry flag is reset
 Registers: AF
 </pre>
 
@@ -396,17 +391,17 @@ Registers: All
 
 <h3 id="WRTPSG">WRTPSG</h3>
 <pre>Address  : #0093
-Function : Writes data to PSG-register
+Function : Writes data to PSG register
 Input    : A  - PSG register number
-           E  - data write
+           E  - Data write
 </pre>
 
 
 <h3 id="RDPSG">RDPSG</h3>
 <pre>Address  : #0096
-Function : Reads value from PSG-register
-Input    : A  - PSG-register read
-Output   : A  - value read
+Function : Reads value from PSG register
+Input    : A  - PSG register read
+Output   : A  - Value read
 </pre>
 
 
@@ -423,7 +418,7 @@ Registers: All
 <h3 id="CHSNS">CHSNS</h3>
 <pre>Address  : #009C
 Function : Tests the status of the keyboard buffer
-Output   : Z-flag set if buffer is empty, otherwise not set
+Output   : Zero flag set if buffer is empty, otherwise not set
 Registers: AF
 </pre>
 
@@ -431,7 +426,7 @@ Registers: AF
 <h3 id="CHGET">CHGET</h3>
 <pre>Address  : #009F
 Function : One character input (waiting)
-Output   : A  - ASCII-code of the input character
+Output   : A  - ASCII code of the input character
 Registers: AF
 </pre>
 
@@ -439,15 +434,15 @@ Registers: AF
 <h3 id="CHPUT">CHPUT</h3>
 <pre>Address  : #00A2
 Function : Displays one character
-Input    : A  - ASCII-code of character to display
+Input    : A  - ASCII code of character to display
 </pre>
 
 
 <h3 id="LPTOUT">LPTOUT</h3>
 <pre>Address  : #00A5
 Function : Sends one character to printer
-Input    : A  - ASCII-code of character to send
-Output   : C-flag set if failed
+Input    : A  - ASCII code of character to send
+Output   : Carry flag set if failed
 Registers: F
 </pre>
 
@@ -455,19 +450,19 @@ Registers: F
 <h3 id="LPTSTT">LPTSTT</h3>
 <pre>Address  : #00A8
 Function : Tests printer status
-Output   : A  - #FF and Z-flag reset if printer is ready
-                #00 and Z-flag set if not ready
+Output   : A  - #FF and zero flag reset if printer is ready
+                #00 and zero flag set if not ready
 Registers: AF
 </pre>
 
 
 <h3 id="CNVCHR">CNVCHR</h3>
 <pre>Address  : #00AB
-Function : tests for the graphic header and transforms the code
-Input    : A  - charactercode
-Output   : the C-flag is reset to not the graphic reader
-           the C-flag and Z-flag are set to the transformed code is set in A
-           the C-flag is set and Z-flag is reset to the untransformed code is set in A
+Function : Tests for the graphic header and transforms the code
+Input    : A  - Character code
+Output   : The carry flag is reset to not the graphic reader
+           The carry flag and zero flag are set to the transformed code is set in A
+           The carry flag is set and zero flag is reset to the untransformed code is set in A
 Registers: AF
 </pre>
 
@@ -476,26 +471,26 @@ Registers: AF
 <pre>Address  : #00AE
 Function : Stores in the specified buffer the character codes input until the return
            key or STOP key is pressed
-Output   : HL - for the starting address of the buffer -1
-           C-flag set when it ends with the STOP key
+Output   : HL - For the starting address of the buffer -1
+           Carry flag set when it ends with the STOP key
 Registers: All
 </pre>
 
 
 <h3 id="INLIN">INLIN</h3>
 <pre>Address  : #00B1
-Function : Same as PINLIN except that AUGFLG (#F6AA) is set
-Output   : HL - for the starting address of the buffer -1
-           C-flag set when it ends with the STOP key
+Function : Same as <a href="#PINLIN">PINLIN</a> except that AUGFLG (#F6AA) is set
+Output   : HL - For the starting address of the buffer -1
+           Carry flag set when it ends with the STOP key
 Registers: All
 </pre>
 
 
 <h3 id="QINLIN">QINLIN</h3>
 <pre>Address  : #00B4
-Function : Prints a questionmark andone space
-Output   : HL - for the starting address of the buffer -1
-           C-flag set when it ends with the STOP key
+Function : Prints a question mark and one space
+Output   : HL - For the starting address of the buffer -1
+           Carry flag set when it ends with the STOP key
 Registers: All
 </pre>
 
@@ -503,7 +498,7 @@ Registers: All
 <h3 id="BREAKX">BREAKX</h3>
 <pre>Address  : #00B7
 Function : Tests status of CTRL-STOP
-Output   : C-flag set when pressed
+Output   : Carry flag set when pressed
 Registers: AF
 Remark   : In this routine, interrupts are inhibited
 </pre>
@@ -517,13 +512,13 @@ Function : Tests status of SHIFT-STOP
 
 <h3 id="CKCNTC">CKCNTC</h3>
 <pre>Address  : #00BD
-Function : Same as ISCNTC. used in Basic
+Function : Same as <a href="#ISCNTC">ISCNTC</a>. used in Basic
 </pre>
 
 
 <h3 id="BEEP">BEEP</h3>
 <pre>Address  : #00C0
-Function : generates beep
+Function : Generates beep
 Registers: All
 </pre>
 
@@ -532,14 +527,14 @@ Registers: All
 <pre>Address  : #00C3
 Function : Clears the screen
 Registers: AF, BC, DE
-Remark   : Z-flag must be set to be able to run this routine
+Remark   : Zero flag must be set to be able to run this routine
            XOR A will do fine most of the time
 </pre>
 
 
 <h3 id="POSIT">POSIT</h3>
 <pre>Address  : #00C6
-Function : Plaatst cursor op aangegeven positie
+Function : Moves cursor to the specified position
 Input    : H  - Y coordinate of cursor
            L  - X coordinate of cursor
 Registers: AF
@@ -590,8 +585,8 @@ Registers: All
 <h3 id="GTTRIG">GTTRIG</h3>
 <pre>Address  : #00D8
 Function : Returns current trigger status
-Input    : A  - trigger button to test
-           0 = spacebar
+Input    : A  - Trigger button to test
+           0 = space bar
            1 = port 1, button A
            2 = port 2, button A
            3 = port 1, button B
@@ -626,7 +621,7 @@ Remark   : On MSX2, function call numbers 8-23 are forwarded to
 
 <h3 id="GTPDL">GTPDL</h3>
 <pre>Address  : #00DE
-Function : Returns currenct value of paddle
+Function : Returns current value of paddle
 Input    : A  - Paddle number
 Output   : A  - Value
 Registers: All
@@ -638,7 +633,7 @@ Registers: All
 <h3 id="TAPION">TAPION</h3>
 <pre>Address  : #00E1
 Function : Reads the header block after turning the cassette motor on
-Output   : C-flag set if failed
+Output   : Carry flag set if failed
 Registers: All
 </pre>
 
@@ -646,8 +641,8 @@ Registers: All
 <h3 id="TAPIN">TAPIN</h3>
 <pre>Address  : #00E4
 Function : Read data from the tape
-Output   : A  - read value
-           C-flag set if failed
+Output   : A  - Read value
+           Carry flag set if failed
 Registers: All
 </pre>
 
@@ -663,7 +658,7 @@ Function : Stops reading from the tape
 Function : Turns on the cassette motor and writes the header
 Input    : A  - #00 short header
             not #00 long header
-Output   : C-flag set if failed
+Output   : Carry flag set if failed
 Registers: All
 </pre>
 
@@ -671,8 +666,8 @@ Registers: All
 <h3 id="TAPOUT">TAPOUT</h3>
 <pre>Address  : #00ED
 Function : Writes data on the tape
-Input    : A  - data to write
-Output   : C-flag set if failed
+Input    : A  - Data to write
+Output   : Carry flag set if failed
 Registers: All
 </pre>
 
@@ -698,7 +693,7 @@ Registers: AF
 <h3 id="LFTQ">LFTQ</h3>
 <pre>Address  : #00F6
 Function : Gives number of bytes in queue
-Output   : A  - length of queue in bytes
+Output   : A  - Length of queue in bytes
 Remark   : Internal use
 </pre>
 
@@ -714,44 +709,44 @@ Remark   : Internal use
 
 <h3 id="RIGHTC">RIGHTC</h3>
 <pre>Address  : #00FC
-Function : Shifts screenpixel to the right
+Function : Shifts screen pixel to the right
 Registers: AF
 </pre>
 
 
 <h3 id="LEFTC">LEFTC</h3>
 <pre>Address  : #00FF
-Function : Shifts screenpixel to the left
+Function : Shifts screen pixel to the left
 Registers: AF
 </pre>
 
 
 <h3 id="UPC">UPC</h3>
 <pre>Address  : #0102
-Function : Shifts screenpixel up
+Function : Shifts screen pixel up
 Registers: AF
 </pre>
 
 
 <h3 id="TUPC">TUPC</h3>
 <pre>Address  : #0105
-Function : Tests whether UPC is possible, if possible, execute UPC
-Output   : C-flag set if operation would end outside the screen
+Function : Tests whether <a href="#UPC">UPC</a> is possible, if possible, execute <a href="#UPC">UPC</a>
+Output   : Carry flag set if operation would end outside the screen
 Registers: AF
 </pre>
 
 
 <h3 id="DOWNC">DOWNC</h3>
 <pre>Address  : #0108
-Function : Shifts screenpixel down
+Function : Shifts screen pixel down
 Registers: AF
 </pre>
 
 
 <h3 id="TDOWNC">TDOWNC</h3>
 <pre>Address  : #010B
-Function : Tests whether DOWNC is possible, if possible, execute DOWNC
-Output   : C-flag set if operation would end outside the screen
+Function : Tests whether <a href="#DOWNC">DOWNC</a> is possible, if possible, execute <a href="#DOWNC">DOWNC</a>
+Output   : Carry flag set if operation would end outside the screen
 Registers: AF
 </pre>
 
@@ -792,19 +787,19 @@ Function : Set attribute byte
 
 <h3 id="READC">READC</h3>
 <pre>Address  : #011D
-Function : Reads attribute byte of current screenpixel
+Function : Reads attribute byte of current screen pixel
 </pre>
 
 
 <h3 id="SETC">SETC</h3>
 <pre>Address  : #0120
-Function : Returns currenct screenpixel of specificed attribute byte
+Function : Returns current screen pixel of specified attribute byte
 </pre>
 
 
 <h3 id="NSETCX">NSETCX</h3>
 <pre>Address  : #0123
-Function : Set horizontal screenpixels
+Function : Set horizontal screen pixels
 </pre>
 
 
@@ -824,13 +819,13 @@ Function : Initalises the PAINT instruction
 
 <h3 id="SCANR">SCANR</h3>
 <pre>Address  : #012C
-Function : Scans screenpixels to the right
+Function : Scans screen pixels to the right
 </pre>
 
 
 <h3 id="SCANL">SCANL</h3>
 <pre>Address  : #012F
-Function : Scans screenpixels to the left
+Function : Scans screen pixels to the left
 </pre>
 
 
@@ -838,7 +833,7 @@ Function : Scans screenpixels to the left
 
 <h3 id="CHGCAP">CHGCAP</h3>
 <pre>Address  : #0132
-Function : Alternates the CAP lamp status
+Function : Alternates the CAPS lamp status
 Input    : A  - #00 is lamp on
             not #00 is lamp off
 Registers: AF
@@ -857,12 +852,12 @@ Registers: AF
 <h3 id="RSLREG">RSLREG</h3>
 <pre>Address  : #0138
 Function : Reads the primary slot register
-Output   : A  - for the value which was read
+Output   : A  - For the value which was read
            33221100
-           ||||||- Pagina 0 (#0000-#3FFF)
-           ||||--- Pagina 1 (#4000-#7FFF)
-           ||----- Pagina 2 (#8000-#BFFF)
-           ------- Pagina 3 (#C000-#FFFF)
+           ││││││└┴─ Page 0 (#0000-#3FFF)
+           ││││└┴─── Page 1 (#4000-#7FFF)
+           ││└┴───── Page 2 (#8000-#BFFF)
+           └┴─────── Page 3 (#C000-#FFFF)
 Registers: A
 </pre>
 
@@ -870,7 +865,7 @@ Registers: A
 <h3 id="WSLREG">WSLREG</h3>
 <pre>Address  : #013B
 Function : Writes value to the primary slot register
-Input    : A  - value value to (see RSLREG)
+Input    : A  - Value to write, see <a href="#RSLREG">RSLREG</a>
 </pre>
 
 
@@ -885,15 +880,15 @@ Registers: A
 <h3 id="SNSMAT">SNSMAT</h3>
 <pre>Address  : #0141
 Function : Returns the value of the specified line from the keyboard matrix
-Input    : A  - for the specified line
-Output   : A  - for data (the bit corresponding to the pressed key will be 0)
+Input    : A  - For the specified line
+Output   : A  - For data (the bit corresponding to the pressed key will be 0)
 Registers: AF
 </pre>
 
 
 <h3 id="PHYDIO">PHYDIO</h3>
 <pre>Address  : #0144
-Function : Executes I/O for mass-storage media like diskettes
+Function : Executes I/O for mass-storage media like disks
 Input    : F  - Set carry to write, reset carry to read
            A  - Drive number (0 = A:, 1 = B:, etc.)
            B  - Number of sectors
@@ -921,7 +916,7 @@ Remark   : Interrupts may be disabled afterwards. On some hard disk interfaces,
 
 <h3 id="FORMAT">FORMAT</h3>
 <pre>Address  : #0147
-Function : Initialises mass-storage media like formatting of diskettes
+Function : Initialises mass-storage media like formatting of disks
 Registers: All
 Remark   : In minimum configuration only a HOOK is available
 </pre>
@@ -939,9 +934,9 @@ Registers: AF
 <h3 id="OUTDLP">OUTDLP</h3>
 <pre>Address  : #014D
 Function : Printer output
-Input    : A  - code to print
+Input    : A  - Code to print
 Registers: F
-Remark   : Differences with LPTOUT:
+Remark   : Differences with <a href="#LPTOUT">LPTOUT</a>:
            1. TAB is expanded to spaces
            2. For non-MSX printers, Hiragana is transformed to katakana
               and graphic characters are transformed to 1-byte characters
@@ -961,7 +956,7 @@ Remark   : Only used to play music in background
 
 <h3 id="GETVC2">GETVC2</h3>
 <pre>Address  : #0153
-Function : Returns pointer to variable in queue number VOICEN (byte op #FB38)
+Function : Returns pointer to variable in queue number VOICEN (byte at #FB38)
 Input    : L  - Pointer in play buffer
 Output   : HL - Pointer
 Registers: AF
@@ -978,7 +973,7 @@ Registers: HL
 <h3 id="CALBAS">CALBAS</h3>
 <pre>Address  : #0159
 Function : Executes inter-slot call to the routine in BASIC interpreter
-Input    : IX - for the calling address
+Input    : IX - For the calling address
 Output   : Depends on the called routine
 Registers: Depends on the called routine
 </pre>
@@ -992,9 +987,9 @@ Function : Calls a routine in SUB-ROM
 Input    : IX - Address of routine in SUB-ROM
 Output   : Depends on the routine
 Registers: Alternative registers, IY
-Remark   : Use of EXTROM or CALSLT is more convenient.
-           In IX a extra value to the routine can be given by first
-           PUSH'ing it to the stack.
+Remark   : Use of <a href="#EXTROM">EXTROM</a> or <a href="#CALSLT">CALSLT</a> is more convenient.
+           In IX an extra value to the routine can be given by first
+           pushing it to the stack.
 </pre>
 
 
@@ -1012,14 +1007,14 @@ Remark   : Use: LD IX,address
 <h3 id="CHKSLZ">CHKSLZ</h3>
 <pre>Address  : #0162
 Function : Search slots for SUB-ROM
-Registers: Alles
+Registers: All
 </pre>
 
 
 <h3 id="CHKNEW">CHKNEW</h3>
 <pre>Address  : #0165
 Function : Tests screen mode
-Output   : C-flag set if screenmode = 5, 6, 7 or 8 
+Output   : Carry flag set if screenmode = 5, 6, 7 or 8 
 Registers: AF
 </pre>
 
@@ -1027,25 +1022,25 @@ Registers: AF
 <h3 id="EOL">EOL</h3>
 <pre>Address  : #0168
 Function : Deletes to the end of the line
-Input    : H  - x-coordinate of cursor
-           L  - y-coordinate of cursor
+Input    : H  - X coordinate of cursor
+           L  - Y coordinate of cursor
 Registers: All
 </pre>
 
 
 <h3 id="BIGFIL">BIGFIL</h3>
 <pre>Address  : #016B
-Function : Same function as FILVRM (total VRAM can be reached).
-Input    : HL - address
-           BC - length
-           A  - data
+Function : Same function as <a href="#FILVRM">FILVRM</a> (with 16-bit VRAM-address).
+Input    : HL - Address
+           BC - Length
+           A  - Data
 Registers: AF,BC
 </pre>
 
 
 <h3 id="NSETRD">NSETRD</h3>
 <pre>Address  : #016E
-Function : Same function as SETRD.(with full 16 bits VRAM-address)
+Function : Same function as <a href="#SETRD">SETRD</a> (with 16-bit VRAM-address).
 Input    : HL - VRAM address
 Registers: AF
 </pre>
@@ -1053,7 +1048,7 @@ Registers: AF
 
 <h3 id="NSTWRT">NSTWRT</h3>
 <pre>Address  : #0171
-Function : Same function as SETWRT.(with full 16 bits VRAM-address)
+Function : Same function as <a href="#SETWRT">SETWRT</a> (with 16-bit VRAM-address).
 Input    : HL - VRAM address
 Registers: AF
 </pre>
@@ -1061,7 +1056,7 @@ Registers: AF
 
 <h3 id="NRDVRM">NRDVRM</h3>
 <pre>Address  : #0174
-Function : Reads VRAM like in RDVRM.(with full 16 bits VRAM-address)
+Function : Reads VRAM like in <a href="#RDVRM">RDVRM</a> (with 16-bit VRAM-address).
 Input    : HL - VRAM address
 Output   : A  - Read value
 Registers: F
@@ -1070,7 +1065,7 @@ Registers: F
 
 <h3 id="NWRVRM">NWRVRM</h3>
 <pre>Address  : #0177
-Function : Writes to VRAM like in WRTVRM.(with full 16 bits VRAM-address)
+Function : Writes to VRAM like in <a href="#WRTVRM">WRTVRM</a> (with 16-bit VRAM-address).
 Input    : HL - VRAM address
            A  - Value to write
 Registers: AF
@@ -1083,7 +1078,7 @@ Registers: AF
 <h3 id="RDRES"><span id="RDBTST">RDRES</span></h3>
 <pre>Address  : #017A
 Function : Read value of I/O port #F4
-Input    : none
+Input    : None
 Output   : A = value read
 Registers: AF
 </pre>
@@ -1095,8 +1090,8 @@ Function : Write value to I/O port #F4
 Input    : A = value to write
            When bit 7 is reset it shows the MSX 2+ startup screen on boot,
            and counts and initialises the RAM.
-Output   : none
-Registers: none
+Output   : None
+Registers: None
 </pre>
 
 
@@ -1107,19 +1102,19 @@ Registers: none
 <pre>Address  : #0180
 Function : Changes CPU mode
 Input    : A = LED 0 0 0 0 0 x x
-                |            0 0 = Z80 (ROM) mode
-                |            0 1 = R800 ROM  mode
-                |            1 0 = R800 DRAM mode
+                │            0 0 = Z80 (ROM) mode
+                │            0 1 = R800 ROM  mode
+                │            1 0 = R800 DRAM mode
                LED indicates whether the Turbo LED is switched with the CPU
-Output   : none
-Registers: none
+Output   : None
+Registers: None
 </pre>
 
 
 <h3 id="GETCPU">GETCPU</h3>
 <pre>Address  : #0183
 Function : Returns current CPU mode
-Input    : none
+Input    : None
 Output   : A = 0 0 0 0 0 0 x x
                            0 0 = Z80 (ROM) mode
                            0 1 = R800 ROM  mode
@@ -1132,15 +1127,15 @@ Registers: AF
 <pre>Address  : #0186
 Function : Plays specified memory area through the PCM chip
 Input    : A = v 0 0 0 0 0 x x
-               |           | |
-               |           +-+-- Quality parameter (Speed: 0 = Fast)
-               +---------------- VRAM usage flag
+               │           │ │
+               │           └─┴── Quality parameter (Speed: 0 = Fast)
+               └──────────────── VRAM usage flag
            HL= Start address in RAM or VRAM
            BC= Length of area to play
            D = Bit 0 = Bit 17 of area length when using VRAM
            E = Bit 0 = Bit 17 os start address when using VRAM
-Output   : C-flag set when aborted with CTRL-STOP
-Registers: all
+Output   : Carry flag set when aborted with CTRL-STOP
+Registers: All
 </pre>
 
 
@@ -1148,23 +1143,20 @@ Registers: all
 <pre>Address  : #0189
 Function : Records audio using the PCM chip into the specified memory area
 Input    : A = v t t t t c x x
-               | | | | | | | |
-               | | | | | | +-+-- Quality parameter (Speed: 0 = Fast)
-               | | | | | +------ Zero-data compression
-               | +-+-+-+-------- Treshold
-               +---------------- VRAM usage flag
+               │ │ │ │ │ │ │ │
+               │ │ │ │ │ │ └─┴── Quality parameter (Speed: 0 = Fast)
+               │ │ │ │ │ └────── Zero-data compression
+               │ └─┴─┴─┴──────── Treshold
+               └──────────────── VRAM usage flag
            HL= Start address in RAM or VRAM
            BC= Length of area to play
            D = Bit 0 = Bit 17 of area length when using VRAM
            E = Bit 0 = Bit 17 os start address when using VRAM
-Output   : C-flag set when aborted with CTRL-STOP
-Registers: all
+Output   : Carry flag set when aborted with CTRL-STOP
+Registers: All
 </pre>
 
 <p class="signed">BiFi</p>
-
-
-
 
 <?php addFooter(); ?>
 </body>

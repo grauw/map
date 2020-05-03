@@ -34,8 +34,9 @@ on the OPP should be shifted right by 1 bit relative to the OPM value.
 Since the specified period is negated, make sure to shift in a “1” into
 the leftmost bit when you do so.</p> 
 
+<figure>
 <p>
-	<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+	<math xmlns="http://www.w3.org/1998/Math/MathML">
 		<mrow>
 			<msub>
 				<mi>T</mi>
@@ -45,7 +46,7 @@ the leftmost bit when you do so.</p>
 			<mo>=</mo>
 			<mfrac>
 				<mrow>
-					<mphantom><mo>(</mo></mphantom>
+					<mphantom mathsize="0"><mo>(</mo></mphantom>
 					<mn>2048</mn>
 					<mo>*</mo>
 					<mo>(</mo>
@@ -55,10 +56,10 @@ the leftmost bit when you do so.</p>
 						<mi>CLKB</mi>
 					</mrow>
 					<mo>)</mo>
-					<mphantom><mo>)</mo></mphantom>
+					<mphantom mathsize="0"><mo>)</mo></mphantom>
 				</mrow>
 				<mrow>
-					<mphantom><mo>/</mo></mphantom>
+					<mphantom mathsize="0"><mo>/</mo></mphantom>
 					<mi>ϕM</mi>
 				</mrow>
 			</mfrac>
@@ -67,10 +68,11 @@ the leftmost bit when you do so.</p>
 </p>
 
 <p>
-	<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-		<mi>ϕM</mi> <mo>=</mo> <mn>3579545</mn><mtext> Hz</mtext>
+	<math xmlns="http://www.w3.org/1998/Math/MathML">
+		<mi>ϕM</mi> <mo>=</mo> <mn>3579545</mn> <mo rspace="thickmathspace">&#x2062;</mo><mi>Hz</mi>
 	</math>
 </p>
+</figure>
 
 <p>Lastly, the OPP has 8 undocumented registers at addresses 0-7. These
 are initialised to 10H by the SFG-05 BIOS. Their function is as of yet

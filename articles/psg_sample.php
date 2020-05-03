@@ -58,41 +58,38 @@
 
 <p>One thing that this email fails to mention is that the volume control of the PSG operates on a logarithmic scale. Every 2 volume decrements cut the output volume in half. Because of this, you cannot just take the most significant 4 bits of an existing sample and send it to the PSG. Instead, you have to map the values to a logarithmic scale. The formula for this scale is:</p>
 
-<table class="spacycells">
-<tr>
-<th>Formula (MathML)</th>
-<th>Formula (non-MathML)</th>
-</tr>
-<tr>
-<td>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<figure>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mi>y</mi>
     <mo>=</mo>
     <msup>
       <mn>2</mn>
       <mrow>
+        <mphantom><mo mathsize="0">^</mo></mphantom>
         <mo>-</mo>
-        <mfenced>
-          <mrow>
-            <mfrac>
-              <mrow>
-                <mn>15</mn>
-                <mo>−</mo>
-                <mi>n</mi>
-              </mrow>
+        <mphantom><mo mathsize="0">(</mo></mphantom>
+        <mrow>
+          <mfrac>
+            <mrow>
+              <mphantom><mo mathsize="0">(</mo></mphantom>
+              <mn>15</mn>
+              <mo>−</mo>
+              <mi>n</mi>
+              <mphantom><mo mathsize="0">)</mo></mphantom>
+            </mrow>
+            <mrow>
+              <mphantom><mo mathsize="0">/</mo></mphantom>
               <mn>2</mn>
-            </mfrac>
-          </mrow>
-        </mfenced>
+              </mrow>
+          </mfrac>
+        </mrow>
+        <mphantom><mo mathsize="0">)</mo></mphantom>
       </mrow>
     </msup>
   </mrow>
 </math>
-</td>
-<td>y = 2^-((15-n)/2)</td>
-</tr>
-</table>
+</figure>
 
 <p>Where <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>n</mi></math> is the volume, a value from 0 … 15. There is one exception: 0. When the volume is zero, so is the output.</p>
 

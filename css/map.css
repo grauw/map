@@ -29,6 +29,11 @@ body {
 	padding: 0;
 }
 
+math {
+	font-family: serif;
+	font-size: 18px;
+}
+
 
 
 /* Header layout */

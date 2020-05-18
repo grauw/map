@@ -494,6 +494,7 @@ to support future expansion.</p>
 <tr><td>25</td><td>Daewoo</td></tr>
 <tr><td>26</td><td>Samsung</td></tr>
 <tr><td>128</td><td>Image Scanner (Matsushita)</td></tr>
+<tr><td>165</td><td>WORP3</td></tr>
 <tr><td>170</td><td>Darky (SuperSoniqs)</td></tr>
 <tr><td>171</td><td>Darky (SuperSoniqs) second setting</td></tr>
 <tr><td>212</td><td>1chipMSX / Zemmix Neo (KdL firmware)</td></tr>

@@ -169,6 +169,10 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#7C-#7D</td>
+  <td><a href="#midipac">MIDI-PAC</a></td>
+</tr>
+<tr>
+  <td>#7C-#7D</td>
   <td>PAC-V</td>
 </tr>
 <tr>
@@ -222,6 +226,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>#A0-#A3</td>
   <td><a href="#psg">PSG / AY-3-8910 / YM2149</a><br />
       <a href="#psgioports">PSG GPIO ports A &amp; B</a></td>
+</tr>
+<tr>
+  <td>#A0-#A1</td>
+  <td><a href="#midipac">MIDI-PAC2</a></td>
 </tr>
 <tr>
   <td>#A4-#A5</td>
@@ -610,6 +618,36 @@ as a courtesy to Video9000 owners.</p>
 
 <p>Refer to the <a href="/resources/#v9990">Video9000 manual</a>, page 13, for
 more (Video9000-specific) details about the v7040 chip.</p>
+
+
+<h2 id="midipac">MIDI-PAC</h2>
+
+<p>The MIDI-PAC is an extension which translates MSX-MUSIC I/O to MIDI commands.
+The MIDI-PAC2 also supports the PSG. It is developed by
+<a href="https://www.worp3.com/">WORP3</a> and published by
+<a href="https://supersoniqs.com/">SuperSoniqs</a>.</p>
+
+<table>
+<tr><th>Port</th><th>Read/Write</th><th>Description</th></tr>
+<tr><td>#7C</td><td>Read</td><td>MIDI-PAC readback register</td></tr>
+<tr><td>#7C</td><td>Write</td><td>YM2413 interface register address</td></tr>
+<tr><td>#7D</td><td>Write</td><td>YM2413 interface register data</td></tr>
+<tr><td>#A0</td><td>Write</td><td>AY-3-8910 interface register address (MIDI-PAC2)</td></tr>
+<tr><td>#A1</td><td>Write</td><td>AY-3-8910 interface register data (MIDI-PAC2)</td></tr>
+</table>
+
+<table>
+<caption>Readback register (#7C)</caption>
+<tr><th>Bit</th><th>Description</th></tr>
+<tr><td>0</td><td>Readback</td></tr>
+<tr><td>1</td><td>Handshake</td></tr>
+<tr><td>2</td><td>Change on #7C</td></tr>
+<tr><td>3</td><td>Change on #7D</td></tr>
+<tr><td>4</td><td rowspan="3">CPLD version bit</td></tr>
+<tr><td>5</td></tr>
+<tr><td>6</td></tr>
+<tr><td>7</td><td>Change on #A1</td></tr>
+</table>
 
 
 <h2 id="rs232">RS232C UART (8251) / timer (8253)</h2>

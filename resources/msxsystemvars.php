@@ -1124,6 +1124,13 @@
 
 <tr>
   <td></td>
+  <td>#FFFD</td>
+  <td>2</td>
+  <td>Temporary stack pointer for <a href="msxbios.php#CHGCPU">CHGCPU</a>.</td>
+</tr>
+
+<tr>
+  <td></td>
   <td>#FFFF</td>
   <td>1</td>
   <td>

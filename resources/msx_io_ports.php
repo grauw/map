@@ -900,8 +900,10 @@ and working more or less in conjunction with it. These are the functions:</p>
 
 <h2 id="pausetr">Pause / R800 info (turboR)</h2>
 
-<p>This I/O register is only present on MSX turboR computers. Its function
-differs depending on whether you are reading or writing.</p>
+<p>This I/O register is only present on MSX turboR computers. The handling of
+pause differs in Z80 and R800 mode; in Z80 mode it signals WAIT to the CPU,
+while in R800 mode it busy waits in the interrupt handler. The Z80 wait mask
+is changed by the <a href="msxbios.php#CHGCPU">CHGCPU</a> BIOS routine.</p>
 
 <table>
 <tr>
@@ -910,12 +912,12 @@ differs depending on whether you are reading or writing.</p>
 </tr>
 <tr>
   <td>#A7 (read)</td>
-  <td>bit 0: pause switch (1=on)<br />
-      Works only in R800 mode (connected to WAIT of Z80)</td>
+  <td>bit 0: pause switch (1=on)</td>
 </tr>
 <tr>
   <td>#A7 (write)</td>
   <td>bit 0: pause LED (1=on)<br />
+      bit 1: Z80 pause wait mask (1=allow, 0=inhibit)<br />
       bit 7: R800 LED (1=on)<br />
       Mirror address is #FCB1 in the system RAM.</td>
 </tr>

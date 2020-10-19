@@ -141,7 +141,9 @@ If you have additions or see an error, please let us know.</em></p>
 </tr>
 <tr>
   <td>#48-#49</td>
-  <td>Franky SN76489 DCSG / VDP H/V counters</td>
+  <td>Franky SN76489 DCSG / VDP H/V counters<br />
+      <em>Note: Franky does not implement expanded I/O, so its usage of this I/O port is non-standard.<br />
+      Future DCSG hardware is recommended to reserve a device ID and implement the banking protocol.</em></td>
 </tr>
 <tr>
   <td>#56-#5D</td>

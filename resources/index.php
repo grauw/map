@@ -86,8 +86,8 @@ information, feel free to send us an email.</p>
     </li>
     <li id="v9938">MSX2 VDP
       <ul>
-      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
       <li><a href="/resources/video/yamaha_v9938.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · scans (<a href="http://www.msxarchive.nl/pub/msx/docs/datasheets/v9938.pdf">alt version</a>)</li>
+      <li><a href="http://www.ccas.ru/brychkov/MSX/V9938_programmers_guide.pdf">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed and edited by Eugeny Brychkov</li>
       <li><a href="/resources/video/v9938/v9938.xhtml">Yamaha V9938 MSX-VIDEO Application Manual</a> · transscribed <em>(incomplete)</em> <span class="map">MAP</span></li>
       </ul>
     </li>

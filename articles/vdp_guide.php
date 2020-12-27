@@ -17,7 +17,8 @@
 <li>Q: <a href="#r18cmd">r#18 in combination with VDP commands corrupts VRAM?</a></li>
 <li>Q: <a href="#r18disp">What about screensplits with the help of r#18?</a></li>
 <li>Q: <a href="#vdpstrange">VDP does lots of strange things, how come?</a></li>
-<li>Q: <a href="#screen9">Where did screen 9 / r#24 go?</a></li>
+<li>Q: <a href="#screen9">Where did screen 9 go?</a></li>
+<li>Q: <a href="#r24">Where did r#24 go?</a></li>
 <li>Q: <a href="#screen8col">What is there to say about screen 8’s palette?</a></li>
 </ul>
 
@@ -36,9 +37,23 @@
 <p>A: Do you DI during the register OUTs? Is there a poll loop during which the ints are continuously disabled, hence messing up your screensplits? It has probably something to do with the interrupts.</p>
 
 
-<h2 id="screen9">Q: Where did screen 9 / r#24 go?</h2>
+<h2 id="screen9">Q: Where did screen 9 go?</h2>
 
-<p>A: ASCII’s official MSX Magazine says about this: <q xml:lang="ja">SCREEN9は、韓国のMSX2にのみ搭載されたハングル表示専用モードで、国内のMSXと同様にMSXPLAYerでは搭載していません。</q>. For the ones among us who can’t read Japanese *<a href="http://babelfish.altavista.com/">cough</a>*, it translates to something like this: “SCREEN 9 is not available, it is a Hangul (Korean character set) display mode only equipped on Korean MSX2 computers, while the MSXPLAYer is like the domestic (Japanese) MSX.” So, the screenmode is supposed to be a textmode only available in the v9948 videochip, a Korean version of the v9938. In the v9958, this mode was excluded, so screen 9 isn’t available there, nor is r#24 which is used to control the mode (although this is not for sure). Bit 2 of r#8 also seems to be used by the v9948 (unused in the v9938 and v9958). The v9958 continues with modes 10-12 and registers 25-27.</p>
+<p>A: On this topic, ASCII’s official MSX Magazine says:
+<q xml:lang="ja">SCREEN9は、韓国のMSX2にのみ搭載されたハングル表示専用モードで、国内のMSXと同様にMSXPLAYerでは搭載していません。</q>
+It <a href="https://www.deepl.com/">translates</a> to: “SCREEN9 is a dedicated mode for displaying
+Hangul (Korean characters), which was only available on the Korean MSX2, and is not available on the
+MSXPLAYer as well as the domestic (Japanese) MSX.” Under the hood this Hangul mode actually uses
+the SCREEN 6 bitmap mode, similar to the Japanese Kanji modes. The MSX2+ screen mode numbering
+continued with SCREEN 10-12.</p>
+
+
+<h2 id="r24">Q: Where did r#24 go?</h2>
+
+<p>It is unknown. Maybe Yamaha had a V9948 prototype in development which used this register, so they
+kept it reserved, and the V9958 continued with registers 25-27. But no evidence of the existence of
+this chip has been found other than a rather obvious blank in the Yamaha’s numbering of the chip name
+(V9938 vs V9958) and the ID in status register s#1 (0 vs 2).</p>
 
 
 <h2 id="screen8col">What is there to say about screen 8’s colours?</h2>

@@ -182,6 +182,11 @@ information, feel free to send us an email.</p>
       <li><a href="/resources/sound/musical-memory-mapper.pdf">Musical Memory Mapper application manual</a> (<a href="http://www.ebsoft.fr/shop/en/home/35-musical-memory-mapper.html">website</a>)</li>
       </ul>
     </li>
+    <li id="epsg">Darky EPSG
+      <ul>
+      <li><a href="/resources/sound/microchip_ay8930.pdf">Microchip Technologies AY8930 EPSG application manual</a></li>
+      </ul>
+    </li>
     <li id="mp3player">Sunrise MP3 Player
       <ul>
       <li><a href="/resources/sound/mp3player.pdf">Sunrise MP3 Player application manual</a> (<a href="/resources/sound/mp3player.doc">doc</a>)</li>

@@ -40,6 +40,7 @@
     <li><a href="/articles/scrolling.php">A guide to scrolling game engines on MSX</a> <span class="map">MAP</span></li>
     <li><a href="/articles/vdp-vram-timing/vdp-timing.html">V9938 VRAM timings</a> · by the <a href="http://openmsx.org/">openMSX</a> team</li>
     <li><a href="/articles/vdp-vram-timing/vdp-timing-2.html">V9938 VRAM timings, part II</a> · by the <a href="http://openmsx.org/">openMSX</a> team</li>
+    <li><a href="/articles/yjk/">The YJK screen modes</a> <span class="map">MAP</span></li>
     </ul>
   </li>
   <li id="other">Other topics

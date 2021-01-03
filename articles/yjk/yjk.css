@@ -1,0 +1,77 @@
+.tool {
+	background-color: #5D5D7F;
+	box-shadow: 0 0 16px #3E3E55;
+	color: #EEF;
+	text-align: center;
+	border-radius: 7px;
+	margin: 8px 16px;
+	padding: 2px 2px;
+}
+
+.tool.visualizer {
+	width: 512px;
+	float: right;
+	clear: both;
+}
+
+.tool figcaption,
+.tool p {
+	color: #EEF;
+	margin: 8px 0;
+}
+
+.tool figcaption {
+	font-style: italic;
+}
+
+.tool .charts {
+	display: flex;
+	justify-content: center;
+}
+
+.tool canvas {
+	border-radius: 2px;
+	cursor: crosshair;
+	margin: 0 4px;
+}
+
+.tool canvas:focus {
+	outline: none;
+}
+
+.tool label {
+	user-select: none;
+}
+
+.tool .controls {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.tool .controls input[type=number] {
+	background-color: #7C7CAA; /* #5D5D7F; */
+	color: #EEF;
+	border: 0;
+	padding: 3px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: small;
+}
+
+.tool .controls input[type=number]:invalid {
+	box-shadow: 0 0 1px 1px red;
+}
+
+@media screen and (max-width: 896px) {
+	.tool {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 512px) {
+	.tool {
+		width: 384px;
+	}
+}

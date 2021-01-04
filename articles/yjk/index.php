@@ -397,8 +397,8 @@
 <p>
   As we know though YJK mode can generate 19268 colours. Where did the remaining
   2884 colours go? YJK’s 17 bits allow for 131072 different values, but most of
-  these fall outside the range of 15-bit RGB. Values that are out of range are
-  clipped to [0, 31].
+  these fall outside the range of 15-bit RGB. This is called “out of gamut”.
+  Values that are out of range are clipped to [0, 31].
 </p>
 
 <figure>
@@ -519,6 +519,29 @@
   a blurry brush, so that there are no hard colour transitions. This will convert
   to YJK well.
 </p>
+
+<p>
+  Some additional tips:
+</p>
+
+<ul>
+  <li>
+    Align the vertical edges in your graphics to the 4×1 grid to minimise
+    the effect of colour bleed.
+  </li>
+  <li>
+    Use the out of gamut colours of the Y ramps to your advantage, their hue
+    changes more than usual so they give some extra flexibility.
+  </li>
+  <li>
+    In situations where you can’t use the colour you want, try to match its
+    brightness so that the colour difference is harder to spot.
+  </li>
+  <li>
+    The eye is sensitive to edges, so de-block visible edges of colour bleeding
+    by adding detail or dithering in them.
+  </li>
+</ul>
 
 <p>
   In the end to which degree you want to apply these techniques depends on how much

@@ -209,7 +209,14 @@ blockquote {
 	padding-left: 2em;
 }
 
+figure figcaption {
+	font-style: italic;
+	color: #556;
+}
 
+figure.floatright figcaption {
+	text-align: center;
+}
 
 q::before {				/* nice quotation marks... */
 	content: '“';
@@ -267,12 +274,15 @@ q:lang(ja)::after {
 
 .floatleft {
 	float: left;
-	margin: .5em;
-	margin-top: 0;
 }
 
 .floatright {
 	float: right;
+}
+
+.floatleft,
+.floatright {
+	clear: both;
 	margin: .5em;
 	margin-top: 0;
 }

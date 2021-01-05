@@ -135,6 +135,12 @@
 </p>
 
 
+<figure class="floatright">
+  <a href="https://www.deviantart.com/teruchan/art/super-new-Gulliver-s-Travels-133313733"><img src="colorbleed.png" /></a>
+  <figcaption>Pure red and pure black is a difficult combination for YJK.<br />
+  Artwork: Gulliver by Teruchan</figcaption>
+</figure>
+
 <h2 id="encoding">The encoding of YJK</h2>
 
 <p>
@@ -467,6 +473,16 @@
   More on this in part 2, which will be a deep dive into the topic of image conversion.
 </p>
 
+
+<figure class="floatright">
+  <a href="http://tomseditor.com/gallery/i/51671/house-by-windship"><img src="house.png" /></a>
+  <figcaption>House by windship, rearranged by FRS (SC12)</figcaption>
+</figure>
+
+<figure class="floatright">
+  <a href="http://tomseditor.com/gallery/i/40372/midnight-skyhigh-by"><img src="books.png" /></a>
+  <figcaption title="おじいちゃんのほこりっぽい本が好き">I like grandpa’s dusty books by 京典, rearranged by FRS (SC12)</figcaption>
+</figure>
 
 <h2 id="drawing">Drawing techniques</h2>
 

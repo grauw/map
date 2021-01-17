@@ -1,27 +1,12 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/scripts/functions.php'; addHTTPHeader(); ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>Z80 / R800 instruction set</title>
-  <script type="text/javascript" src="/js/tablesort.js" defer="defer"></script>
+  <script type="module" src="z80instr.js"></script>
   <?php addStyles(); ?>
-  <style type="text/css">
-table#instrset td:nth-child(5) {
-	font-family: "Courier New", Courier, mono;
-}
-  </style>
-  <script type="text/javascript">
-function filter(query) {
-	var upperQuery = query.toUpperCase();
-	var rows = document.getElementById("instructiontable").rows;
-	for (var i = 1; i &lt; rows.length; i++) {
-		var match = rows[i].textContent.toUpperCase().indexOf(upperQuery) != -1;
-		rows[i].style.display = match ? "table-row" : "none";
-	}
-}
-  </script>
 </head>
-<body onload="registerSort();">
+<body>
 <?php addHeader(); ?>
 
 
@@ -50,19 +35,18 @@ section.</p>
 
 <h2 id="instructionset">Instruction set</h2>
 
-<p>Filter: <input onkeyup="filter(this.value)" onchange="filter(this.value)"/></p>
+<p>Filter: <input class="filter" data-target="#instructiontable" /></p>
 
 <table id="instructiontable">
 	<thead>
 		<tr>
-			<th g:sort="yes">Instruction</th>
-			<th g:sort="yes">Timing<br />Z80</th>
-			<th g:sort="yes">Timing<br />Z80+M1</th>
-			<th g:sort="yes">Timing<br />R800</th>
-			<th g:sort="yes">Timing<br />R800 +<br/>
-			                 wait<a href="#r800waitnote">¹</a></th>
-			<th g:sort="yes">Opcode</th>
-			<th g:sort="yes">Size</th>
+			<th data-sort="asc" data-type="string">Instruction</th>
+			<th data-sort="desc" data-type="number">Timing<br />Z80</th>
+			<th data-sort="desc" data-type="number">Timing<br />Z80+M1</th>
+			<th data-sort="desc" data-type="number">Timing<br />R800</th>
+			<th data-sort="desc" data-type="number">Timing<br />R800 +<br/>wait<a href="#r800waitnote">¹</a></th>
+			<th data-sort="desc" data-type="string">Opcode</th>
+			<th data-sort="desc" data-type="number">Size</th>
 		</tr>
 	</thead>
 	<tbody>

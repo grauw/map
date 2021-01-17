@@ -1,12 +1,12 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/scripts/functions.php'; addHTTPHeader(); ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.grauw.nl/g" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>Contributing to the MAP - MSX Assembly Page</title>
   <?php addStyles(); ?>
-  <script type="text/javascript" src="/js/email.js"></script>
+  <script type="module" src="/js/email.js"></script>
 </head>
-<body onload="putEmail();">
+<body>
 <?php addHeader(); ?>
 
 <h1>Contributing to the MAP</h1>
@@ -16,8 +16,8 @@ comments about the content, feel free to email us about it! We can make
 mistakes, and we don’t always know what’s best either, so any feedback is
 appreciated. If you want to submit something for publication on this
 site, you can email it to us as well. Our contact address is
-<g:insertMail domain="grauw.nl" local-part="map">(enable JavaScript for email
-link)</g:insertMail>.</p>
+<span class="email" data-domain="grauw.nl" data-local-part="map">(enable
+JavaScript for email link)</span>.</p>
 
 <p>If you want to contribute more directly to the MAP like write articles about
 a certain subject, or digitize some documents, or making editorial changes

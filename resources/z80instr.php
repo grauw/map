@@ -3476,9 +3476,9 @@ between two <code>out</code>s, you can have a 1-cycle instruction for free.</p>
 
 <h2 id="waits">Wait cycles</h2>
 
-<p>The MSX standard requires so-called <dfn>M1 wait cycles</dfn>. What happens
-is that the MSX engine adds one additional wait state to every M1 cycle (the
-first or first two cycles of an instruction). This is an important trait to know
+<p>The MSX standard requires so-called <dfn>M1 wait cycles</dfn>, meaning
+that the system adds one additional wait state to every M1 cycle (the first
+or first two cycles of an instruction). This is an important trait to know
 about if you want to do speed calculations. The M1 waits are inserted like
 this:</p>
 

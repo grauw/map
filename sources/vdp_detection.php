@@ -8,11 +8,10 @@
 <body>
 <?php addHeader(); ?>
 
-
-
 <h1>Detecting VDP version</h1>
 
-<p>Here’s a routine to help you detect the VDP version.</p>
+<p>Here’s a routine to help you detect the VDP version. It takes about a frame
+to complete, so it is recommended to do it once at the start of the program.</p>
 
 <pre>;
 ; Detect VDP version
@@ -41,11 +40,8 @@ VDP_GetVersion:
     ret nz               ; return VDP ID for V9958 or higher
     inc a                ; return 1 for V9938
     ret
-</pre>
 
-<p>The TMS9918A has no VDP ID, so we use a different way to detect it…</p>
-
-<pre>;
+;
 ; Test if the VDP is a TMS9918A.
 ;
 ; The VDP ID number was only introduced in the V9938, so we have to use a
@@ -57,11 +53,11 @@ VDP_GetVersion:
 ; f &lt;- z: TMS9918A, nz: V99X8
 ;
 VDP_IsTMS9918A:
-    in a,(99H)           ; read s#0, make sure interrupt flag is reset
+    in a,(99H)           ; read s#0, make sure interrupt flag (F) is reset
     di
 VDP_IsTMS9918A_Wait:
     in a,(99H)           ; read s#0
-    and a                ; wait until interrupt flag is set
+    and a                ; wait until interrupt flag (F) is set
     jp p,VDP_IsTMS9918A_Wait
     ld a,2               ; select s#2 on V9938
     out (99H),a
@@ -73,7 +69,7 @@ VDP_IsTMS9918A_Wait:
     out (99H),a
     ld a,15 + 128
     out (99H),a
-    ld a,(0F3E6H)
+    ld a,(0F3E6H)        ; RG7SAV
     out (99H),a          ; restore r#7 if it mirrored (small flash visible)
     ld a,7 + 128
     ei
@@ -83,8 +79,12 @@ VDP_IsTMS9918A_Wait:
     ret
 </pre>
 
+<p>Note: As you may know, the MSX VDPs have a race condition in the design of
+the F, FH and FL interrupt flags, which makes polling unreliable since the flag
+can be missed occasionally. If that situation occurs the detection will take a
+frame longer to complete, but still provide the correct result.</p>
 
-
+<p class="signed">Grauw</p>
 
 <?php addFooter(); ?>
 </body>

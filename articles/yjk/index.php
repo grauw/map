@@ -15,7 +15,7 @@
 <body>
 <?php addHeader(); ?>
 
-<h1 id="colour-space">The YJK screen modes</h1>
+<h1>The YJK screen modes</h1>
 
 <figure class="visualizer tool">
   <figcaption>Interactive YJK colour space visualisation</figcaption>

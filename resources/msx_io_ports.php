@@ -511,7 +511,7 @@ to support future expansion.</p>
 <tr><td>254</td><td>MPS2 (ASCII)</td></tr>
 </table>
 
-<p>Some example code, this enables the 6MHz mode on Panasonic FS-A1WX/WSX/FX
+<p>For example, this enables the turbo CPU mode on Panasonic FS-A1WX/WSX/FX
 computers:</p>
 
 <table>
@@ -522,25 +522,27 @@ computers:</p>
 </tr>
 <tr>
   <td>#41</td>
-  <td><i>Available on FS-A1FX/WX/WSX only:</i><br />
-      bit 0: CPU speed mode (0=5.37MHz, 1=3.57MHz)<br />
-      bit 7: Firmware switch status (0=on, 1=off) <em>(read-only)</em></td>
+  <td>bit 0: CPU speed mode (0 = 5.37 MHz, 1 = 3.58 MHz)<br />
+      bit 2: CPU 5.37 MHz turbo available (0 = available) <em>(read-only)</em><br />
+      bit 7: Firmware switch status (0 = on, 1 = off) <em>(read-only)</em></td>
 </tr>
 </table>
-
 
 <pre>    in a,(40H)
     cpl
     push af
     ld a,8
-    out (40H),a  ;out the manufacturer code 8 (Panasonic) to I/O port 40h
-    in a,(40H)   ;read the value you have just written
-    cpl          ;complement all bits of the value
-    cp 8         ;if it does not match the value you originally wrote,
-    jr nz,NotWX  ;it is not a WX/WSX/FX.
-    xor a        ;write 0 to I/O port 41h
-    out (41H),a  ;and the mode changes to high-speed clock
-NotWX:
+    out (40H),a    ; out the manufacturer code 8 (Panasonic) to I/O port 40h
+    in a,(40H)     ; read the value you have just written
+    cpl            ; complement all bits of the value
+    cp 8           ; if it does not match the value you originally wrote,
+    jr nz,NoTurbo  ; it does not have the Panasonic expanded I/O ports
+    in a,(41H)
+    bit 2,a        ; is turbo mode available?
+    jr nz,NoTurbo
+    res 0,a
+    out (41H),a    ; enable turbo
+NoTurbo:
     pop af
     out (40H),a
 </pre>

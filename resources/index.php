@@ -27,6 +27,7 @@ information, feel free to send us an email.</p>
     <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/md/Appendix1.html">MSX2 Technical Handbook: BIOS listing</a> · by Nestor Soriano (Konamiman)</li>
     <li><a href="https://konamiman.github.io/MSX2-Technical-Handbook/md/Appendix4.html">MSX2 Technical Handbook: Work area listing</a> · by Nestor Soriano (Konamiman)</li>
     <li><a href="/resources/datapack/Vol3-7MSXExtendedBIOSSpecification.pdf">MSX Extended BIOS Specification</a> · MSX Datapack Vol. 3-7, by FRS, Takamichi &amp; sandervn (<a href="/resources/datapack/MSXDatapackTranslationREADME.pdf">credits</a>)</li>
+    <li><a href="/resources/system/msxbioslisting.pdf">MSX BIOS The Complete MSX BASIC I/O Listing</a></li>
     </ul>
   </li>
   <li id="dos2">DOS2 documentation

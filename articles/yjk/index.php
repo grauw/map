@@ -90,11 +90,6 @@
 <h2 id="selecting">Selecting the YJK modes</h2>
 
 <p>
-  The MSX2+ BIOS <a href="http://map.grauw.nl/resources/msxbios.php#CHGMOD">CHGMOD</a>
-  routine can be called with the MSX-BASIC SCREEN number in register A.
-</p>
-
-<p>
   On the VDP the YJK mode is selected by following the procedure to select
   SCREEN 8 (G7), and then setting the YJK bit of register 25. To select the
   YJK+YAE mode, additionally set the YAE bit.
@@ -120,11 +115,20 @@
 </figure>
 
 <p>
-  Since a number of MSX2 computers exist that do have a V9958 but no BIOS
-  support, as well modded MSX2 computers with their VDP replaced, consider using
-  <a href="http://map.grauw.nl/resources/msxbios.php#CHGMOD">CHGMOD</a> to
-  switch to SCREEN 8 and then setting the YJK and YAE bits in r#25
-  manually. The other bits can be left at 0.
+  Use the <a href="http://map.grauw.nl/resources/msxbios.php#CHGMOD">CHGMOD</a>
+  BIOS call to switch to SCREEN 8 and then read the r#25 mirror
+  <a href="http://map.grauw.nl/resources/msxsystemvars.php#RG25SA">RG25SA</a>,
+  set the YJK and YAE bits in r#25 appropriately and write the register back with
+  <a href="http://map.grauw.nl/resources/msxbios.php#WRTVDP">WRTVDP</a>.
+</p>
+
+<p>
+  Since a number of MSX2 computers exist that do have a V9958 but
+  no BIOS support, as well modded MSX2 computers with their VDP replaced,
+  consider setting r#25 directly rather than through the BIOS if the
+  <a href="http://map.grauw.nl/resources/msxsystemvars.php#msxver">MSX version number</a>
+  is 1 (MSX2) and the VDP ID in s#1 bits 1-5 is 2 (V9958). In this case the
+  other r#25 bits can be assumed 0.
 </p>
 
 <p>

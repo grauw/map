@@ -300,7 +300,6 @@ SetVdp_Write:
     ld a,14 + 128
     out (#99),a
     ld a,l
-    nop
     out (#99),a
     ld a,h
     or 64
@@ -324,7 +323,6 @@ SetVdp_Read:
     ld a,14 + 128
     out (#99),a
     ld a,l
-    nop
     out (#99),a
     ld a,h
     ei

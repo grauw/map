@@ -52,7 +52,7 @@ A: The screen as it displays on your screen has borders around it, which are ren
 
 <a id="accuracy"></a>
 <p><b>Q: How accurate is this article?</b><br />
-A: I tested the statements made in this article with a number of carefully programmed and optimized programs on an NMS8245 with a v9958 videochip, at aswell 7MHz as 3.5MHz (logically, 7MHz gave me the most exact readings). If you want to verify my findings, download the <a href="downloads\articles\splittests.lzh">split accuracy tests</a>.</p>
+A: I tested the statements made in this article with a number of carefully programmed and optimized programs on an NMS8245 with a v9958 videochip, at aswell 7MHz as 3.5MHz (logically, 7MHz gave me the most exact readings). If you want to verify my findings, download the <a href="\downloads\articles\splittests.lzh">split accuracy tests</a>.</p>
 
 
 

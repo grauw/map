@@ -33,7 +33,10 @@ the current command is finished.</p>
 
 <h2 id="r18disp">Q: What about screensplits with the help of r#18?</h2>
 
-<p>A: Once again, this register behaves a bit strangely when you disable the sprites. During the display cycle, if you move the screen to the left using r#18, the entire current line is drawn in the background color. This only happens when the sprites are disabled. So if you’re creating a screensplit with the help of r#18, watch out for this.</p>
+<p>A: Once again, this register behaves a bit strangely. During the display
+cycle, if you move the screen horizontally using r#18, the entire current line
+can be blanked. This only happens when the sprites are disabled. So if you’re
+creating a screensplit with r#18, watch out for this.</p>
 
 
 <h2 id="vdpstrange">Q: VDP does lots of random strange things, how come?</h2>

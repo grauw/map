@@ -24,7 +24,11 @@
 
 <h2 id="r18cmd">Q: r#18 in combination with VDP commands corrupts VRAM?</h2>
 
-<p>A: Yes. This issue only occurs when you have the sprites (or screen) disabled. If you use the screen position adjust register while executing a copy command and with sprites disabled, it will corrupt the byte the VDP command is currently processing. So, if that is the case, you should wait with setting r#18 until the VDP’s CE bit indicates the current command is finished.</p>
+<p>A: Yes. If you use the screen position adjust register while executing a copy
+command, it will corrupt the byte the VDP command is currently processing. This
+occurs regardless of whether you have the sprites or screen enabled. So, if that
+is the case, you should wait with setting r#18 until the VDP’s CE bit indicates
+the current command is finished.</p>
 
 
 <h2 id="r18disp">Q: What about screensplits with the help of r#18?</h2>

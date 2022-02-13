@@ -30,6 +30,8 @@ occurs regardless of whether you have the sprites or screen enabled. So, if that
 is the case, you should wait with setting r#18 until the VDP’s CE bit indicates
 the current command is finished.</p>
 
+<p>See <a href="/downloads/articles/vdpreg18test.zip">this test program</a>.</p>
+
 
 <h2 id="r18disp">Q: What about screensplits with the help of r#18?</h2>
 
@@ -37,6 +39,8 @@ the current command is finished.</p>
 cycle, if you move the screen horizontally using r#18, the entire current line
 can be blanked. This only happens when the sprites are disabled. So if you’re
 creating a screensplit with r#18, watch out for this.</p>
+
+<p>See <a href="/downloads/articles/vdpreg18test.zip">this test program</a>.</p>
 
 
 <h2 id="vdpstrange">Q: VDP does lots of random strange things, how come?</h2>

@@ -43,13 +43,18 @@
     <li><a href="/articles/yjk/">The YJK screen modes</a> <span class="map">MAP</span></li>
     </ul>
   </li>
+  <li id="disk">Disk programming
+    <ul>
+    <li><a href="/articles/low-level-disk/">Low-level disk storage</a> · by Wouter Vermaelen</li>
+    <li><a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> <span class="map">MAP</span></li>
+    </ul>
+  </li>
   <li id="other">Other topics
     <ul>
     <li><a href="/articles/keymatrix.php">Keyboard matrices</a> <span class="map">MAP</span></li>
     <li><a href="/articles/psg_sample.php">Playing samples on the PSG</a> <span class="map">MAP</span></li>
     <li><a href="https://github.com/digital-sound-antiques/emu2413/wiki/DAC-in-test-mode">Playing samples on the OPLL</a> by D.S.A. (Okazaki)</li>
     <li><a href="/articles/interrupts.php">Interrupts</a> · MSX Computer Magazine 51 (<a href="http://www.msxcomputermagazine.nl/archief/bladen/msx_computer_magazine_51.pdf" hreflang="nl">read</a>) <span class="map">MAP</span></li>
-    <li><a href="/articles/dos-error-handling.php">MSX-DOS 1 disk error handling</a> <span class="map">MAP</span></li>
     </ul>
   </li>
 <li id="books">Books

@@ -53,16 +53,17 @@ PrimaryShiftDone:
     ex de,hl
     ld hl,EXPTBL
     add hl,bc
-    ld a,(hl)
+    ex de,hl
+    ld a,(de)
     and 80H
     or c
+    ret p
     ld c,a
-    inc hl  ; move to SLTTBL
-    inc hl
-    inc hl
-    inc hl
-    ld a,(hl)
-    ex de,hl
+    inc de  ; move to SLTTBL
+    inc de
+    inc de
+    inc de
+    ld a,(de)
     bit 7,h
     jr z,SecondaryShiftContinue
     rrca
@@ -126,10 +127,11 @@ can eliminate the conditional code here.</p>
     ex de,hl
     ld hl,EXPTBL
     add hl,bc
-    ld a,(hl)
+    ex de,hl
+    ld a,(de)
     and 80H
     or c
-    ld c,a
+    ret p
 </pre>
 
 <p>In this second part we determine the value for the expanded flag (<code>F</code> bit)
@@ -137,14 +139,15 @@ by inspecting the <a href="http://map.grauw.nl/resources/msxsystemvars.php#EXPTB
 table in system memory. This table consists of 4 bytes, one for each slot, where
 bit 7 indicates whether the slot is expanded. Because in rare cases bits 0-6 can
 contain a non-zero value, we <code>and</code> the value with 80H to mask out the
-unwanted bits before we insert it into the slot ID.</p>
+unwanted bits before we insert it into the slot ID. If the slot is not expanded,
+we stop here.</p>
 
-<pre>    inc hl  ; move to SLTTBL
-    inc hl
-    inc hl
-    inc hl
-    ld a,(hl)
-    ex de,hl
+<pre>    ld c,a
+    inc de  ; move to SLTTBL
+    inc de
+    inc de
+    inc de
+    ld a,(de)
     bit 7,h
     jr z,SecondaryShiftContinue
     rrca

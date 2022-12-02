@@ -31,7 +31,7 @@ EXPTBL: equ 0FCC1H
 SLTTBL: equ 0FCC5H
 
 ; h = memory address high byte (bits 6-7: page)
-; a &lt;- slot ID formatted FxxxSSPP
+; a &lt;- slot ID formatted F000SSPP
 ; Modifies: f, bc, de
 Memory_GetSlot:
     call RSLREG
@@ -92,7 +92,7 @@ primary slot, the F bit indicates whether the primary slot is expanded, and if
 so the S bits indicate the secondary slot.</p>
 
 <pre>; h = memory address high byte (bits 6-7: page)
-; a &lt;- slot ID formatted FxxxSSPP
+; a &lt;- slot ID formatted F000SSPP
 ; Modifies: f, bc, de
 Memory_GetSlot:
     call RSLREG

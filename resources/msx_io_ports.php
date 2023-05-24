@@ -44,6 +44,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Music Module MIDI, input ports (mirrored on ports #0C-#0D, #14-#15, #1C-#1D)</td>
 </tr>
 <tr>
+  <td>#04-#05</td>
+  <td><a href="/resources/#soundstar">SuperSoniqs SoundStar</a> (<a href="/resources/sound/philips_saa1099.pdf">Philips SAA1099</a>)</td>
+</tr>
+<tr>
   <td>#0A</td>
   <td>Music Module DAC (enable with Y8950 IO0) (mirrored on ports #08-#0F, #18-#1F)</td>
 </tr>

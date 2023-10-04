@@ -26,7 +26,7 @@
 
 <h2 id="fornextgoto">Jumping out of a <code>FOR</code> loop without increasing the <code>FOR/NEXT</code> stack</h2>
 
-<p>When you have a <code>FOR/NEXT</code> loop, Basic will place a counter on an internal stack. This counter is removed when the loop ends, however if you jump out of a loop like in the following example, the counter will never be removed. If you repeat this often enough, the stack will overflow and Basic will quit the program with an error:</p>
+<p>When you have a <code>FOR/NEXT</code> loop, Basic will place the <code>FOR</code> location on its internal stack, so that <code>NEXT</code> knows where the loop begins. This location is removed from the stack when the loop ends, however if you jump out of a loop with <code>GOTO</code> like in the following example, the <code>FOR</code> location will never be removed. If you repeat this often enough, the stack will overflow and Basic will quit the program with an error:</p>
 
 <pre class="code">10 FOR I=0 TO 1000
 20 IF STRIG(0) THEN GOTO 40

@@ -33,11 +33,12 @@ information, feel free to send us an email.</p>
   </li>
   <li id="dos2">DOS2 documentation
     <ul>
-    <li><a href="/resources/dos2info.lzh">ASCII MSX-DOS2 documentation</a>
+    <li><a href="/resources/dos2info.lzh">ASCII MSX-DOS 2 documentation</a>
       <ul>
-      <li>MSX-DOS2 commands reference · not programming-related</li>
-      <li><a href="/resources/dos2_environment.php">MSX-DOS2 environment reference</a></li>
-      <li><a href="/resources/dos2_functioncalls.php">MSX-DOS2 function call reference</a></li>
+      <li>MSX-DOS 2 Command Specification (version 2.20) · <a href="https://archive.org/download/msx-dos-2-command-specification-1986-11-26-version-2.00/MSX-DOS_2_Command_Specification_1986-11-26_version_2.00.pdf">version 2.00</a></li>
+      <li><a href="/resources/dos2_environment.php">MSX-DOS 2 Program Interface Specification</a> (version 2.20) · <a href="https://archive.org/download/msx-dos-2-command-specification-1986-11-26-version-2.00/MSX-DOS_2_Program_Interface_Specification_1986-11-26_version_2.00.pdf">version 2.00</a></li>
+      <li><a href="/resources/dos2_functioncalls.php">MSX-DOS 2 Function Specification</a> (version 2.20) · <a href="https://archive.org/download/msx-dos-2-command-specification-1986-11-26-version-2.00/MSX-DOS_2_Function_Specification_1986-11-26_version_2.00.pdf">version 2.00</a></li>
+      <li>MSX-DOS 2 System Specification (version 2.20) · <a href="https://archive.org/download/msx-dos-2-command-specification-1986-11-26-version-2.00/MSX-DOS_2_System_Specification_1986-11-26_version_2.00.pdf">version 2.00</a></li>
       </ul>
     </li>
     </ul>

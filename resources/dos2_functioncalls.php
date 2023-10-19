@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>MSX-DOS 2 Function Reference</title>
+  <title>MSX-DOS 2 Function Specification</title>
   <?php addStyles(); ?>
 </head>
 <body>
@@ -10,19 +10,13 @@
 
 
 
-<h1>MSX-DOS version 2 - function reference</h1>
+<h1>MSX-DOS 2 Function Specification</h1>
 
-<pre>
-                  M S X -- D O S   v e r s i o n  2
-                  =================================
+<p style="text-align:center">M S X -- D O S&#160;&#160;&#160;v e r s i o n&#160;&#160;&#160; 2</p>
 
+<p style="text-align:center">The advanced disk operating system</p>
 
-                  The advanced disk operating system
-
-                         for MSX 2 computers
-
-
-</pre>
+<p style="text-align:center">for MSX 2 computers</p>
 
 
 <pre>CONTENTS                                       Page

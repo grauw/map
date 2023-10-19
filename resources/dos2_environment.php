@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <title>MSX-DOS 2 Environment Reference</title>
+  <title>MSX-DOS 2 Program Interface Specification</title>
   <?php addStyles(); ?>
 </head>
 <body>
@@ -10,7 +10,7 @@
 
 
 
-<h1>MSX-DOS version 2 - environment reference</h1>
+<h1>MSX-DOS 2 Program Interface Specification</h1>
 
 <p style="text-align:center">M S X -- D O S&#160;&#160;&#160;v e r s i o n&#160;&#160;&#160; 2</p>
 
@@ -19,7 +19,7 @@
 <p style="text-align:center">for MSX 2 computers</p>
 
 
-<pre>     CONTENTS                                         Page
+<pre>CONTENTS                                         Page
 
 
 1.   <a href="#c1">Introduction</a> ...............................  3

@@ -220,6 +220,10 @@ If you have additions or see an error, please let us know.</em></p>
   <td>Printer port interface</td>
 </tr>
 <tr>
+  <td>#92</td>
+  <td>MSX Pico Wave Game interface (see <a href="https://www.msxpico.com/downloads/WaveGameReadme.txt">here</a>)</td>
+</tr>
+<tr>
   <td>#93</td>
   <td>Printer port bus direction <em>(does it exist?)</em></td>
 </tr>

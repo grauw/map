@@ -277,7 +277,7 @@ Function : Executes non-maskable interupt handling routine
 <pre>Address  : #0069
 Function : Initialises all sprites
 Input    : SCRMOD
-Registers: Alles
+Registers: All
 </pre>
 
 

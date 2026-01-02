@@ -80,9 +80,9 @@
 </p>
 
 <p>
-  An additional benefit of these new screen modes have compared to SCREEN 8 is
-  that their sprites make use of the palette, rather than a limited set of
-  predefined colours.
+  An additional benefit these new screen modes have compared to SCREEN 8 is that
+  their sprites make use of the palette, rather than a limited set of predefined
+  colours.
 </p>
 
 
@@ -163,7 +163,7 @@
   right controls the Y amount. All colours in the Y column can be used in the
   same four-pixel group. As you increase Y the colour becomes brighter, but
   notice that it becomes slightly more blue as well. This can be seen well in
-  the grayish hue when both J and K are zero.
+  the greyish hue when both J and K are zero.
 </p>
 
 <p>
@@ -492,7 +492,7 @@
 
 <p>
   The YJK modes can be very nice for pixel art because of the wider range of colours
-  that you an express with 15-bit RGB. Ever wanted that particular pastel colour
+  that you can express with 15-bit RGB. Ever wanted that particular pastel colour
   that the V9938’s 9-bit RGB palette could not express? Or a smoother gradient?
   The V9958 can do in YJK. Additionally the high colour count allows you to
   create very colourful artwork.
@@ -535,7 +535,7 @@
 
 <p>
   For a more cartoony drawing style in YJK mode, you could draw the artwork in
-  grayscale, and then paint the colour on a separate colour modifier layer with
+  greyscale, and then paint the colour on a separate colour modifier layer with
   a blurry brush, so that there are no hard colour transitions. This will convert
   to YJK well.
 </p>

@@ -246,9 +246,9 @@
         <msub><mi>c</mi><mi>in</mi></msub>
         <mo>&lt;&lt;</mo>
         <mn>2</mn>
-        <mo>OR</mo>
+        <mo>𝚘𝚛</mo>
         <msub><mi>c</mi><mi>in</mi></msub>
-        <mo>>></mo>
+        <mo>&gt;&gt;</mo>
         <mn>1</mn>
       </mrow>
     </math>
@@ -284,8 +284,8 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>b</mi> <mo>=</mo>
         <mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>-</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>-</mo> <mi>k</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>4</mn></mrow>
+          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi></mrow>
+          <mrow><mn>4</mn></mrow>
         </mfrac>
       </mrow>
     </math>
@@ -298,20 +298,20 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>y</mi> <mo>=</mo>
         <mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>8</mn></mrow>
+          <mrow><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi></mrow>
+          <mrow><mn>8</mn></mrow>
         </mfrac>
       </mrow>
     </math>
   </p>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mrow><mi>j</mi> <mo>=</mo> <mi>r</mi> <mo>-</mo> <mi>y</mi></mrow>
+      <mrow><mi>j</mi> <mo>=</mo> <mi>r</mi> <mo>−</mo> <mi>y</mi></mrow>
     </math>
   </p>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mrow><mi>k</mi> <mo>=</mo> <mi>g</mi> <mo>-</mo> <mi>y</mi></mrow>
+      <mrow><mi>k</mi> <mo>=</mo> <mi>g</mi> <mo>−</mo> <mi>y</mi></mrow>
     </math>
   </p>
 </figure>
@@ -346,11 +346,11 @@
   </p>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mrow><mi>b</mi> <mo>=</mo> <mo>⌊</mo>
-        <mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>-</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>-</mo> <mi>k</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>4</mn></mrow>
-        </mfrac> <mo>⌋</mo>
+      <mrow><mi>b</mi> <mo>=</mo>
+        <mo>⌊</mo><mfrac>
+          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi></mrow>
+          <mrow><mn>4</mn></mrow>
+        </mfrac><mo>⌋</mo>
       </mrow>
     </math>
   </p>
@@ -362,20 +362,20 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>y</mi> <mo>=</mo>
         <mo>⌈</mo><mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>8</mn></mrow>
+          <mrow><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi></mrow>
+          <mrow><mn>8</mn></mrow>
         </mfrac><mo>⌉</mo>
       </mrow>
     </math>
   </p>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mrow><mi>j</mi> <mo>=</mo> <mi>r</mi> <mo>-</mo> <mi>y</mi></mrow>
+      <mrow><mi>j</mi> <mo>=</mo> <mi>r</mi> <mo>−</mo> <mi>y</mi></mrow>
     </math>
   </p>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mrow><mi>k</mi> <mo>=</mo> <mi>g</mi> <mo>-</mo> <mi>y</mi></mrow>
+      <mrow><mi>k</mi> <mo>=</mo> <mi>g</mi> <mo>−</mo> <mi>y</mi></mrow>
     </math>
   </p>
 </figure>
@@ -386,8 +386,8 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>y</mi> <mo>=</mo>
         <mn>2</mn><mo>&#x2062;</mo><mo>⌈</mo><mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>16</mn></mrow>
+          <mrow><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi></mrow>
+          <mrow><mn>16</mn></mrow>
         </mfrac><mo>⌉</mo>
       </mrow>
     </math>
@@ -432,8 +432,8 @@
       <mrow><mi>b</mi> <mo>=</mo>
         <mi>clamp</mi><mo>&#x2061;</mo><mrow><mo>(</mo><mrow><mo>⌊</mo>
         <mfrac>
-          <mrow><mphantom mathsize="0"><mo>(</mo></mphantom><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>-</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>-</mo> <mi>k</mi><mphantom mathsize="0"><mo>)</mo></mphantom></mrow>
-          <mrow><mphantom mathsize="0"><mo>/</mo></mphantom> <mn>4</mn></mrow>
+          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi></mrow>
+          <mrow><mn>4</mn></mrow>
         </mfrac> <mo>⌋</mo><mo>,</mo>
         <mn>0</mn><mo>,</mo> <mn>31</mn></mrow><mo>)</mo></mrow>
       </mrow>

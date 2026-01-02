@@ -46,20 +46,17 @@ the leftmost bit when you do so.</p>
 			<mo>=</mo>
 			<mfrac>
 				<mrow>
-					<mphantom mathsize="0"><mo>(</mo></mphantom>
 					<mn>2048</mn>
-					<mo>*</mo>
+					<mo>×</mo>
 					<mo>(</mo>
 					<mrow>
 						<mn>256</mn>
-						<mo>-</mo>
+						<mo>−</mo>
 						<mi>CLKB</mi>
 					</mrow>
 					<mo>)</mo>
-					<mphantom mathsize="0"><mo>)</mo></mphantom>
 				</mrow>
 				<mrow>
-					<mphantom mathsize="0"><mo>/</mo></mphantom>
 					<mi>ϕM</mi>
 				</mrow>
 			</mfrac>

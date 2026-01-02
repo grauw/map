@@ -66,25 +66,19 @@
     <msup>
       <mn>2</mn>
       <mrow>
-        <mphantom><mo mathsize="0">^</mo></mphantom>
-        <mo>-</mo>
-        <mphantom><mo mathsize="0">(</mo></mphantom>
+        <mo>−</mo>
         <mrow>
           <mfrac>
             <mrow>
-              <mphantom><mo mathsize="0">(</mo></mphantom>
               <mn>15</mn>
               <mo>−</mo>
               <mi>n</mi>
-              <mphantom><mo mathsize="0">)</mo></mphantom>
             </mrow>
             <mrow>
-              <mphantom><mo mathsize="0">/</mo></mphantom>
               <mn>2</mn>
-              </mrow>
+            </mrow>
           </mfrac>
         </mrow>
-        <mphantom><mo mathsize="0">)</mo></mphantom>
       </mrow>
     </msup>
   </mrow>

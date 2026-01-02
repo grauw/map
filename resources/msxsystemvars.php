@@ -801,6 +801,24 @@
       it will be filled with #FFFF</td>
 </tr>
 
+<tr id="VALTYP">
+  <td>VALTYP</td>
+  <td>#F663</td>
+  <td>1</td>
+  <td><a href="#DAC">DAC</a> value type indicator:<br />
+      =2 for integer (2 bytes value)<br />
+      =3 for string (3 bytes string descriptor; length, address)<br />
+      =4 for single precision (4 bytes value)<br />
+      =8 for double precision (8 bytes value)</td>
+</tr>
+
+<tr id="DAC">
+  <td>DAC</td>
+  <td>#F7F6</td>
+  <td>16</td>
+  <td>Decimal accumulator, see <a href="#VALTYP">VALTYP</a>.</td>
+</tr>
+
 <tr id="QUETAB">
   <td>QUETAB</td>
   <td>#F959</td>

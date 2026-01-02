@@ -118,11 +118,14 @@ Input    : A - Slot ID, see <a href="#RDSLT">RDSLT</a>
 
 <h3 id="GETYPR">GETYPR</h3>
 <pre>Address  : #0028
-Function : Returns Type of DAC
-Input    : DAC
-Output   : S,Z,P/V, CY
+Function : Returns the type of <a href="/resources/msxsystemvars.php#DAC">DAC</a> (decimal accumulator)
+Input    : none (<a href="/resources/msxsystemvars.php#VALTYP">VALTYP</a> contains the <a href="/resources/msxsystemvars.php#DAC">DAC</a> type)
+Output   : Integer          - C = 1, S = 1 (*), Z = 0, P/V = 1
+           String           - C = 1, S = 0, Z = 1 (*), P/V = 1
+           Single precision - C = 1, S = 0, Z = 0, P/V = 0 (*)
+           Double precision - C = 0 (*), S = 0, Z = 0, P/V = 1
 Registers: AF
-Remark   : Not a very clear routine to me, please mail us if you know more about it.
+Remark   : Types can be recognised by the flag marked by “*”.
 </pre>
 
 

@@ -8,14 +8,11 @@
 <body>
 <?php addHeader(); ?>
 
-
-
 <h1>MSX System Variables</h1>
 
 <p>This is an overview of the system variables which you can use. They are official, unless mentioned otherwise.</p>
 
 <p>VDP Registers: <a href="#RG0SAV">R#0-R#7</a>, <a href="#RG8SAV">R#8-R#23</a>, <a href="#RG25SA">R#25-R#27</a>, R#32-R#45 (not mirrored in system ram), <a href="#STATFL">S#0</a>.</p>
-
 
 
 <h1>MSX System Variables located in Main ROM</h1>
@@ -114,10 +111,6 @@
 </table>
 
 
-
-
-
-
 <h1>MSX System Variables located in Sub ROM</h1>
 
 <table width="100%">
@@ -144,8 +137,6 @@
       or MSX&#160;turbo&#160;R. This is unofficial and undocumented.</td>
 </tr>
 </table>
-
-
 
 
 <h1>MSX-DOS (DiskROM) System Variables located in RAM</h1>
@@ -206,9 +197,6 @@
   <td>Main DiskROM slot address</td>
 </tr>
 </table>
-
-
-
 
 
 <h1>MSX System Variables located in RAM</h1>
@@ -832,8 +820,6 @@
   </td>
 </tr>
 
-
-
 <tr id="charsetslot">
   <td></td>
   <td>#F91F</td>
@@ -847,9 +833,18 @@
   <td>Character set address</td>
 </tr>
 
-
-
-
+<tr id="DPPAGE">
+  <td>DPPAGE</td>
+  <td>#FAF5</td>
+  <td>1</td>
+  <td>VDP display page</td>
+</tr>
+<tr id="ACPAGE">
+  <td>ACPAGE</td>
+  <td>#FAF6</td>
+  <td>1</td>
+  <td>VDP active page</td>
+</tr>
 
 <tr id="EXBRSA">
   <td>EXBRSA</td>
@@ -1152,9 +1147,6 @@
 </table>
 
 <p class="signed">BiFi</p>
-
-
-
 
 <?php addFooter(); ?>
 </body>

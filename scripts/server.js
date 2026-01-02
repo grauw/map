@@ -1,7 +1,6 @@
-"use strict";
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
+import express from "express";
+import fs from "fs";
+import path from "path";
 
 const app = express();
 const port = 8048;
@@ -31,6 +30,7 @@ function getFooter() {
 	return `</div>\n<div id="foot">© ${year} MSX Assembly Page. MSX is a trademark of MSX Licensing Corporation.</div>\n`;
 }
 
+app.get("/.*", (req, res) => res.sendStatus(403));
 app.get("/scripts/*", (req, res) => res.sendStatus(403));
 app.get("/node_modules/*", (req, res) => res.sendStatus(403));
 
@@ -63,7 +63,7 @@ app.get("*.php", async (req, res) => {
 	res.send(document);
 });
 
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(path.join(import.meta.dirname, "..")));
 
 app.listen(port, () => {
 	console.log(`App listening at http://localhost:${port}`);

@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "MSX Assembly Page",
 	"author": "Laurens Holst",
+	"type": "module",
 	"scripts": {
 		"start": "nodemon -w scripts scripts/server.js"
 	},

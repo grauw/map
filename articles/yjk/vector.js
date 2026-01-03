@@ -124,16 +124,18 @@ export class Vector4 {
 	}
 
 	toRGB() {
-		return new Vector4(this.x + this.y, this.x + this.z, Math.floor(1.25 * this.x + -0.5 * this.y + -0.25 * this.z), this.w);
+		return new Vector4(this.x + this.y, this.x + this.z, Math.round(1.25 * this.x + -0.5 * this.y + -0.25 * this.z), this.w);
 	}
 
 	toYJK() {
-		const y = Math.ceil(0.25 * this.x + 0.125 * this.y + 0.5 * this.z);
+		const u = this.z - Math.round(-0.5 * this.x + -0.25 * this.y);
+		const y = Math.round(0.5 * u);
 		return new Vector4(y, this.x - y, this.y - y, this.w);
 	}
 
 	toYJKYAE() {
-		const y = 2 * Math.ceil((0.25 * this.x + 0.125 * this.y + 0.5 * this.z) / 2);
+		const u = this.z - Math.round(-0.5 * this.x + -0.25 * this.y);
+		const y = 2 * Math.round(0.25 * u);
 		return new Vector4(y, this.x - y, this.y - y, this.w);
 	}
 

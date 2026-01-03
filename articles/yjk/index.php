@@ -327,9 +327,11 @@
 
 <p>
   Let’s consider the rounding first. The y, j, k and r, g, b values are all
-  integers, so when the blue value is calculated, it is rounded down to the
-  nearest integer value (“floor”). To compensate for this in the RGB to YJK
-  formula, you need to round up (“ceil”) the value resulting from the y.
+  integers, so when the blue value is calculated, it is rounded to the nearest
+  integer value. The V9958 likely implements this by adding 2 before dividing
+  by 4 and truncating the fractional bits (“floor”). To compensate for this in
+  the RGB to YJK formula, you need to cancel out the rounded r and g components
+  before calculating the rounded y value that will result in the nearest blue.
 </p>
 
 <figure>
@@ -348,7 +350,7 @@
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>b</mi> <mo>=</mo>
         <mo>⌊</mo><mfrac>
-          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi></mrow>
+          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi> <mo>+</mo> <mn>2</mn></mrow>
           <mrow><mn>4</mn></mrow>
         </mfrac><mo>⌋</mo>
       </mrow>
@@ -360,11 +362,21 @@
   <figcaption>RGB to YJK (rounded)</figcaption>
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow><mi>u</mi> <mo>=</mo>
+        <mi>b</mi> <mo>−</mo> <mo>⌊</mo><mfrac>
+          <mrow><mn>−2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>−</mo> <mi>g</mi> <mo>+</mo> <mn>2</mn></mrow>
+          <mrow><mn>4</mn></mrow>
+        </mfrac><mo>⌋</mo>
+      </mrow>
+    </math>
+  </p>
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>y</mi> <mo>=</mo>
-        <mo>⌈</mo><mfrac>
-          <mrow><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi></mrow>
-          <mrow><mn>8</mn></mrow>
-        </mfrac><mo>⌉</mo>
+        <mo>⌊</mo><mfrac>
+          <mrow><mi>u</mi> <mo>+</mo> <mn>1</mn></mrow>
+          <mrow><mn>2</mn></mrow>
+        </mfrac><mo>⌋</mo>
       </mrow>
     </math>
   </p>
@@ -385,17 +397,17 @@
   <p>
     <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mi>y</mi> <mo>=</mo>
-        <mn>2</mn><mo>&#x2062;</mo><mo>⌈</mo><mfrac>
-          <mrow><mn>4</mn><mo>&#x2062;</mo><mi>b</mi> <mo>+</mo> <mn>2</mn><mo>&#x2062;</mo><mi>r</mi> <mo>+</mo> <mi>g</mi></mrow>
-          <mrow><mn>16</mn></mrow>
-        </mfrac><mo>⌉</mo>
+        <mn>2</mn><mo>&#x2062;</mo><mo>⌊</mo><mfrac>
+          <mrow><mi>u</mi> <mo>+</mo> <mn>2</mn></mrow>
+          <mrow><mn>4</mn></mrow>
+        </mfrac><mo>⌋</mo>
       </mrow>
     </math>
   </p>
 </figure>
 
 <p>
-  Using these formula you can express exactly half of what 15-bit RGB allows;
+  Using these formulas you can express exactly half of what 15-bit RGB allows;
   16384 out of 32768 colours (50%), and 8192 for YJK+YAE (25%). Each
   representable RGB value maps to one unique YJK value and vice versa. If you
   want to keep things simple, stop here and stick to these 16384 colours.
@@ -432,7 +444,7 @@
       <mrow><mi>b</mi> <mo>=</mo>
         <mi>clamp</mi><mo>&#x2061;</mo><mrow><mo>(</mo><mrow><mo>⌊</mo>
         <mfrac>
-          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi></mrow>
+          <mrow><mn>5</mn><mo>&#x2062;</mo><mi>y</mi> <mo>−</mo> <mn>2</mn><mo>&#x2062;</mo><mi>j</mi> <mo>−</mo> <mi>k</mi> <mo>+</mo> <mn>2</mn></mrow>
           <mrow><mn>4</mn></mrow>
         </mfrac> <mo>⌋</mo><mo>,</mo>
         <mn>0</mn><mo>,</mo> <mn>31</mn></mrow><mo>)</mo></mrow>
@@ -442,8 +454,8 @@
 </figure>
 
 <p>
-  As a side effect of this clipping, 2884 colours which could not be represented
-  by the previous YJK formulas become available. For example, take the colour
+  As a side effect of this clipping, 2884 colours become available which could
+  not be represented by the previous YJK formulas. For example, take the colour
   (0, 24, 31). Without clipping this could not be expressed, since applying the
   previous RGB to YJK to RGB formula will yield (0, 24, 32). Due to the clipping
   of the blue component though, this colour is available to us after all.
@@ -614,14 +626,14 @@
   blue is effectively only 4-bit, in YJK+YAE effectively 3-bit. Had Yamaha
   gone for YUV, green would have gotten the least resolution, while it is the
   most visible colour, causing more banding in it. From this perspective, YJK
-  spends its bits more effectively on the colours our eye perceive best.
+  spends its bits more effectively on the colours our eyes perceive best.
 </p>
 
 <p>
-  A final note on this; the Yamaha V9990 VDP has both an YJK and an YUV mode,
-  so on that VDP you can use the mode of your choosing. The YUV mode works
-  identical to YJK on the V9958 but with the weights for the G and B components
-  swapped. The weights do not perfectly match the real Y’UV but it’s pretty close.
+  A final note; the Yamaha V9990 VDP has both an YJK and an YUV mode, so on that
+  VDP you can use the mode of your choosing. The YUV mode works identical to YJK
+  on the V9958 but with the weights for the G and B components swapped. The
+  weights do not perfectly match the real Y’UV but it’s pretty close.
 </p>
 
 <p>Relevant links:</p>

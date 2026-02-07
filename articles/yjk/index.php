@@ -491,12 +491,12 @@
 
 
 <figure class="floatright">
-  <a href="http://tomseditor.com/gallery/i/51671/house-by-windship"><img src="house.png" /></a>
+  <a href="https://tomseditor.com/gallery/i/51671"><img src="house.png" /></a>
   <figcaption>House by windship, rearranged by FRS (SC12)</figcaption>
 </figure>
 
 <figure class="floatright">
-  <a href="http://tomseditor.com/gallery/i/40372/midnight-skyhigh-by"><img src="books.png" /></a>
+  <a href="https://tomseditor.com/gallery/i/40371"><img src="books.png" /></a>
   <figcaption title="おじいちゃんのほこりっぽい本が好き">I like grandpa’s dusty books by 京典, rearranged by FRS (SC12)</figcaption>
 </figure>
 

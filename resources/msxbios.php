@@ -49,9 +49,9 @@ Registers: AF, HL
 <pre>Address  : #000C
 Function : Reads the value of an address in another slot
 Input    : A  - ExxxSSPP  Slot-ID
-           │        ││└┴─ Primary slot number (00-11)
-           │        └┴─── Secondary slot number (00-11)
-           └───────────── Expanded slot (0 = no, 1 = yes)
+                │   ││└┴─ Primary slot number (00-11)
+                │   └┴─── Secondary slot number (00-11)
+                └──────── Expanded slot (0 = no, 1 = yes)
            HL - Address to read
 Output   : A  - Contains the value of the read address
 Registers: AF, C, DE

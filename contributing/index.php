@@ -24,8 +24,8 @@ a certain subject, or digitize some documents, or making editorial changes
 yourself, we’d really appreciate it. Submitting changes to the MAP’s source code
 usually expedites the process of getting things online :).</p>
 
-<p>The <a href="https://hg.sr.ht/~grauw/map">MAP source code</a> is stored
-in a <a href="http://www.selenic.com/mercurial/">Mercurial</a> repository. There
+<p>The <a href="https://github.com/grauw/map">MAP source code</a> is stored
+in a <a href="https://git-scm.com/">Git</a> repository. There
 is <a href="/contributing/repository.php">a tutorial</a> explaining how to get
 the sources and start making changes.</p>
 
@@ -37,7 +37,7 @@ in a browser that is not Internet Explorer.</p>
 <h2>Tutorials</h2>
 
 <ul>
-	<li><a href="/contributing/repository.php">The MAP Mercurial repository</a></li>
+	<li><a href="/contributing/repository.php">The MAP Git repository</a></li>
 	<li><a href="/contributing/documents.php">Document structure and syntax</a></li>
 </ul>
 
